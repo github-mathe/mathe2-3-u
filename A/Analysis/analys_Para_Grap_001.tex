@@ -1,0 +1,113 @@
+\Aufgabe[e]{Tangenten}{
+\begin{abc}
+\item Bestimmen Sie die Geradengleichungen (in der Form $ax+by=c$) der Tangenten an den Nullstellen
+der Funktionen 
+$$\varphi_1(x)=x^3-2x^2-5x+6, \qquad \varphi_2(x)=x^2 \text{ und } \varphi_3(x)=\left\{\begin{array}{lll}
+\sqrt x& \quad & \text{ f\"ur } x\geq 0\\
+-\sqrt{-x}& \quad & \text{ f\"ur } x<0\end{array}\right..
+$$
+
+\item Geben Sie alle Punkte ($x-$Werte) an, in denen die Tangenten von $f(x)=x^2$ und $g(x)=x^3$ parallel sind. 
+
+\item Stellen Sie den Verlauf der beiden vektorwertigen Funktionen 
+$$\vec v(t)=\begin{pmatrix} t\\ \varphi_3(t)\end{pmatrix} \qquad\text{ mit $\varphi_3(t)$ aus
+Aufgabenteil \textbf{a)}}$$
+und 
+$$\vec w(s)=\begin{pmatrix}s\cdot|s|\\s\end{pmatrix}.$$
+im selben Graphen dar. \\
+Berechnen Sie -- wo m\"oglich -- die Ableitungen beider Funktionen $\vec v(t)$ und $\vec
+w(s)$. \\
+
+\textbf{Hinweis}: Die Funktion $\vec w(s)$ l\"asst sich analog zu $\varphi_3(t)$ mit Hilfe einer
+Fallunterscheidung auch ohne die Betragsfunktion darstellen. 
+
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item \begin{iii}
+\item Eine Nullstelle der Funktion $\varphi_1(x)$ ist $x_1=1$. Mittels Horner-Schema erh\"alt man
+das Restpolynom: 
+$$\begin{array}{r|r|r|r|r}
+   &   1     &  -2 &  -5  &  6  \\\hline
+1  &\setminus&   1 &  -1  & -6  \\\hline
+   &   1     &  -1 &  -6  &  0  \\\end{array}$$
+F\"ur weitere Nullstellen muss also gelten 
+$$1x^2-1x-6=0\qquad\Rightarrow\qquad x_{2/3}=\left\{\begin{array}{r}-2\\3\end{array}\right..$$
+Die Ableitung der Funktion liefert die Steigung der Tangenten. An den Nullstellen $x_1,\, x_2$ und
+$x_3$ hat man  
+$$\varphi_1'(x)=3x^2-4x-5\,\Rightarrow\, \varphi_1'(1)=-6,\, \varphi_1'(-2)=15,\, \varphi_1'(3)=10.$$
+Damit sind die Tangentengeraden gegeben durch:
+\begin{align*}
+x_1=1:&\qquad& y&=-6x+6&\,\Rightarrow\, &&6x+y&=6\\
+x_2=-2:&\qquad& y&=15x+30&\,\Rightarrow\, &&15x-y&=-30\\
+x_3=3:&\qquad& y&=10x-30&\,\Rightarrow\, &&10x-y&=30\\
+\end{align*}
+\item $\varphi_2(x)$ hat nur die Nullstelle $x_0=0$. Die Ableitung $\varphi_2'(x)=2x$ hat dort den
+Wert Null, so dass die Tangente durch 
+$$y=0$$
+gegeben ist. 
+\item Die Funktion $\varphi_3(x)$ hat nur die Nullstelle $\varphi_0=0$. Dort ist $\varphi_3$ nicht
+differenzierbar: 
+\begin{align*}
+\frac{\varphi_3(x)-\varphi(0)}{x-0}&=\left\{\begin{array}{lll}
+\frac{\sqrt{x}-0}x,&\quad&x>0\\
+\frac{-\sqrt{-x}-0}x,&&x<0\end{array}\right.\\
+&=\left\{\begin{array}{lll}
+\frac{1}{\sqrt x},&\quad&x>0\\
+\frac{-\sqrt{-x}-0}{-(\sqrt{-x})^2},&&x<0\end{array}\right.\\
+&=\frac 1{\sqrt{|x|}}\underset{x\to 0}{\longrightarrow}\infty. 
+\end{align*}
+Die Steigung der Funktion ist dort also unendlich und sie hat die senkrechte Tangente: 
+$$x=0.$$
+\end{iii}
+\item Die beiden Funktionen haben im Punkt $x$ parallele Tangenten, wenn ihre Ableitungen dort denselben Wert annehmen: 
+$$f'(x)=g'(x)\,\Leftrightarrow\, 2x=3x^2$$
+Dies ist f\"ur $x=0$ oder f\"ur $x=\frac 23$ der Fall.
+\item Die Funktionsgraphen beider Funktionen stimmen \"uberein. 
+\end{abc}
+\begin{center}
+\begin{pspicture}(-4,-2)(4,2)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](-4,-2)(4,2)
+\psparametricplot[plotstyle=curve, plotpoints=100]
+{0}{4}
+{t
+t sqrt}
+\psparametricplot[plotstyle=curve, plotpoints=100]
+{-4}{0}
+{t
+t neg sqrt neg}
+
+\psparametricplot[plotpoints=100, plotstyle=curve]
+{-2}{2}
+{t t mul sqrt t mul
+t}
+\end{pspicture}
+\end{center}
+In Aufgabenteil \textbf{a)} wurde bereits gezeigt, dass $\varphi_3(t)$ und damit auch $\vec v(t)$ an der Stelle $t=0$ nicht differenzierbar ist. In allen anderen Punkten hat man: 
+$$\vec v'(t)=\begin{pmatrix}\frac{\d t}{\d t}\\ \varphi_3'(t)\end{pmatrix}=\begin{pmatrix}1\\\frac{1}{2\sqrt{|t|}}\end{pmatrix}.$$
+Durch die Umparametrisierung der Kurve hat man eine differenzierbare Funktion $\vec w(s)$ mit
+\begin{align*}
+\vec w'(s)&=\begin{pmatrix}2s\\1\end{pmatrix}&\text{ f\"ur } s>0\\
+\vec w'(s)&=\begin{pmatrix}-2s\\1\end{pmatrix}&\text{ f\"ur } s<0
+\end{align*}
+F\"ur $s=0$ ergibt sich f\"ur die erste Komponente $w_1(s)$: 
+\begin{align*}
+\frac{w_1(s)-w_1(0)}{s-0}&=\left\{\begin{array}{lll}\frac{s^2-0}{s}&\quad&\text{ f\"ur }s>0\\
+\frac{-s^2-0}{s}&\quad&\text{ f\"ur }s<0\end{array}\right.\\
+&=\left\{\begin{array}{lll}{s}&\quad&\text{ f\"ur }s>0\\
+{-s}&\quad&\text{ f\"ur }s<0\end{array}\right.\\
+&\underset{s\to 0 }\longrightarrow 0
+\end{align*}
+Damit hat man 
+$$\vec w'(0)=\begin{pmatrix}0\\1\end{pmatrix}$$
+und insgesamt
+$$\vec w'(s)=\begin{pmatrix}2|s|\\1\end{pmatrix}.$$
+
+}
+
+\ErgebnisC{AufganalysParaGrap001}
+{
+\textbf{a)} Nullstellen: $\varphi_1(1)=\varphi_1(-2)=\varphi(3)=0$, $\varphi_2(0)=0$, $\varphi_3(0)=0$
+}

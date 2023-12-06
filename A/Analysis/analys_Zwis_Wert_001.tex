@@ -1,0 +1,31 @@
+\Aufgabe[f]{Zwischenwertsatz}{
+Ein Auto f\"ahrt eine Strecke von $400\text{km}$ in genau f\"unf Stunden (was einer
+Durchschnittsgeschwindigkeit $\bar v=80\text{km/h}$ entspricht). Gibt es einen zusammenh\"angenden
+Zeitabschnitt von exakt einer Stunde, in welchem das Auto eine Strecke von genau $80\text{km}$
+gefahren ist?\\
+\textbf{Hinweis}: Betrachten Sie die Funktion $f(t):=x(t+1)-x(t),\quad t \in [0,\, 4]$, wobei das Auto
+nach der Zeit von $t$ Stunden die Strecke von $x(t)$ Kilometern zur\"uckgelegt hat. Wenden Sie den
+Zwischenwertsatz an. 
+}
+\Loesung{
+Die Funktion $f(t)=x(t+1)-x(t)$ gibt die Strecke an, die das Auto im Zeitintervall $[t,\, t+1]$
+zur\"ucklegt. Den gesuchten Zeitabschnitt, in dem das Auto 80km f\"ahrt, gibt es also, wenn es ein
+$t_0\in [0,4]$ gibt mit $f(t_0)=80$. \\
+Mit $x(\cdot)$ ist auch $f(\cdot)$ als Summe stetiger Funktionen stetig. \\
+Wenn gelten w\"urde $f(t)<80$ f\"ur alle $t\in [0,4]$, so w\"are die insgesamt zur\"uckgelegte
+Strecke des Autos: 
+$$400=x(5)=f(0)+f(1)+f(2)+f(3)+f(4)<5\cdot 80 = 400,$$
+was nicht m\"oglich ist. Ebenso w\"are f\"ur $f(t)>80$ f\"ur alle $t\in [0,4]$:
+$$400=x(5)=f(0)+f(1)+f(2)+f(3)+f(4)>5\cdot 80 = 400,$$
+was auch nicht m\"oglich ist. Also liegt das Maximum der Funktion $f$ mindestens bei $80$ und das
+Minimum h\"ochstens bei $80$:
+$$\underset{t\in[0,4]}\min f(t)\leq 80\leq \underset{t\in[0,4]}\max f(t).$$
+Nun kann der Zwischenwertsatz angewendet werden:  Es gibt ein $t_0\in [0,4]$ mit 
+$$f(t_0)=80.$$
+Damit ist das geforderte einst\"undige Zeitintervall gegeben durch $[t_0,t_0+1]$. 
+}
+
+\ErgebnisC{AufganalysZwisWert001}
+{
+Ja. 
+}

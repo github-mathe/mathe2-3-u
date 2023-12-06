@@ -1,0 +1,78 @@
+\Aufgabe[e]{Kurvendiskussion, Taylorentwicklung}{
+Gegeben sei die Funktion 
+$$f(x)=\EH{-{x^2/2}}(2x-3).$$
+\begin{abc}
+\item Bestimmen Sie den Definitionsbereich von $f$. 
+\item Bestimmen Sie die Nullstellen der Funktion $f$. 
+\item Bestimmen Sie eine Asymptote von $f$, also eine Gerade $g(x)=a+bx$ mit 
+$$\underset{x\to\pm\infty}\lim(f(x)-g(x))=0.$$
+\item Bestimmen Sie die kritischen Punkte der Funktion $f$ und charakterisieren Sie diese \textbf{ohne} Berechnung der zweiten Ableitung. 
+\item Geben Sie die Taylorentwicklung in den Extrempunkten bis zum Grad 2 an. 
+\item Skizzieren Sie die Funktion, die Asymptote, sowie die Taylorapproximationen. 
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Die Funktion $f$ ist auf ganz $\R$ definiert. 
+\item Die einzige Nullstelle der Funktion ist $x_0=\frac 32$. 
+\item Die Funktion $g(x)=0$ ist Asymptote der Funktion $f(x)$: 
+\begin{align*}
+\underset{x\to\pm \infty}\lim (f(x)-g(x))=&\underset{x\to\pm\infty}\lim (\EH{-x^2/2}(2x-3)-0)\\
+=&\underset{x\to\pm\infty}\lim \frac{2x-3}{\EH{x^2/2}}\\
+=&\underset{x\to\pm\infty}\lim \frac{2}{x\EH{x^2/2}},\qquad\text{(L'Hospital)}\\
+=&0
+\end{align*}
+\item Kritische Punkte sind Nullstellen der ersten Ableitung von $f$: 
+\begin{align*}
+&&0\overset{!}=& f'(x)=\EH{-x^2/2}(-x(2x-3)+2)=\EH{-x^2/2}(-2x^2+3x+2)\\
+\Leftrightarrow&&0=& x^2-\frac 32 x -  1\\
+\Leftrightarrow&&x_{1,2}=& \frac 3 4 \pm \sqrt{\frac 9{16}+1}=\left\{\begin{array}{r}2\\-\frac 12\end{array}\right.
+\end{align*}
+Da die Funktion $f(x)$ zwischen den beiden kritischen Punkten $x_1$ und $x_2$ bei $x_0$ eine Nullstelle hat und links davon negativ und rechts von $x_0$ positiv ist und sich asymptotisch der $x$-Achse ann\"ahert, muss in $x_1=2$ ein Maximum und in $x_2=\frac 12$ ein Minimum liegen. 
+\item Zur Bestimmung der Taylorpolynome wird die zweite Ableitung von $f$ ben\"otigt: 
+$$f''(x)=\EH{-x^2/2}(2x^3-3x^2-2x-4x+3)=\EH{-x^2/2}(2x^3-3x^2-6x+3)$$
+Die Taylor-Polynome in den beiden Extrempunkten sind damit
+\begin{align*}
+\text{in } x_1=2: \quad T_{2;2}(x)=&f(x_1)+\frac{f'(x_1)}{1!}(x-x_1)+\frac{f''(x_1)}{2!}(x-x_1)^2\\
+=& \EH{-2} + 0 + \frac{\EH{-2}\cdot (-5)}{2}(x-2)^2=\EH{-2}\left( 1-\frac 52(x-2)^2\right)\\
+\text{in } x_2=-1/2: \quad T_{2;-1/2}(x)=&f(x_2)+\frac{f'(x_2)}{1!}(x-x_2)+\frac{f''(x_2)}{2!}(x-x_2)^2\\
+=& \EH{-1/8}(-4)+0+5\EH{-1/8}\frac{\left(x+\frac 12\right)^2}2\\
+=& \EH{-1/8}\left( -4+\frac {5}2\left(x+\frac 12\right)^2\right)
+\end{align*}
+\item \quad\\
+\end{abc}
+\begin{center}
+%\psset{xunit=2cm, yunit=2cm, runit=1cm}
+\begin{pspicture}(-4,-4)(4,1)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](-4,-4)(4,1)
+\psline(-4,0)(4,0)%Asymptote
+\psplot[plotpoints=200, plotstyle=curve, linecolor=lightgray]
+{0}{4}
+{2.718 2 neg exp 1 2.5 neg x 2 neg add 2 exp mul add mul}
+\put(3.5,-.6){$T_{2;2}$}
+\put(.2,-3.2){$T_{2;-1/2}$}
+\psplot[plotpoints=200, plotstyle=curve, linecolor=lightgray]
+{-2}{1}
+{2.718 .125 neg exp 4 neg  13 8 div x .5 add 2 exp mul add mul}
+
+\psplot[plotpoints=200, plotstyle=curve]%Funktion
+{-4}{4}
+{2.718 x 2 exp neg .5 mul exp 2 x mul 3 neg add mul}
+
+\psdot(2,.135)
+\psdot(1.5,0)
+\psdot(-.5,-3.53)
+\end{pspicture}
+
+\end{center}
+
+
+}
+
+\ErgebnisC{AufganalysTiskTayl01a}
+{
+zu \textbf{e)}: $T_{2;2}(x)=\EH{-2}\left( 1-\frac 52(x-2)^2\right)$\\
+$T_{2;-1/2}(x)= \EH{-1/8}\left( -4+\frac {5}2\left(x+\frac 12\right)^2\right)$
+}

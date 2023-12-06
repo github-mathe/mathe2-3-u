@@ -1,0 +1,208 @@
+\Aufgabe[e]{Lineare Gleichungssysteme}{
+Infolge eines Lecks wurde der Pumpenraum eines Schiffes vollständig geflutet.
+Bewerten Sie die resultierende Veränderung der Schwimmlage, in dem Sie die Änderung in Tiefgang $T$, 
+Krängungswinkel $\phi$ und Trimmwinkel $\psi$ berechnen. 
+
+Die Flutung des Pumpenraums bedeutet für das Schiff dabei eine zusätzliche Gewichtslast $\Delta F_g$, sowie ein zusätzliches äußeres 
+Krängungsmoment $\Delta M_\phi$ und ein zusätzliches äußeres Trimmmoment $\Delta M_\psi$. 
+Der Zusammenhang zwischen Änderung im Tiefgang $\Delta T$,
+Änderung im Krängungswinkel $\Delta \phi$ und Änderung im Trimmwinkel $\Delta \psi$ in Folge dieser Lasten kann über die folgenden Gleichungen beschrieben werden
+
+\begin{align*}
+\rho g \: A_w \:  \Delta T \: + \: \rho g \: (A_w  y_w) \: \Delta \phi 
+ \: &= \: \Delta F_g,  \\
+\rho g \: (A_w y_w) \: \Delta T \: + \: D \: (\frac{I_{w,xx} \: \rho g}{D} + z_B - z_G) \: \Delta \phi,
+\: &= \: \Delta M_\phi \\
+D \: (\frac{I_{w,yy}\: \rho g}{D} + z_B - z_G) \: \Delta \psi \: &= \: \Delta M_\psi.
+\end{align*}
+
+\bigskip
+{\mbox{} \hfill \textbf{\textit{\Large Bitte wenden!}}}
+\newpage
+Gehen Sie wie folgt vor:
+
+\begin{abc}
+\item Ersetzen Sie in den oben stehenden Gleichungen die Tiefgangsänderung $\Delta T$ durch die Variable $x_1$, die Änderung im Krängungswinkel 
+$\Delta \phi$ durch die Variable $x_2$ und die Änderung im Trimmwinkel $\Delta \psi$ durch die Variable $x_3$.
+\item Stellen Sie das dadurch definerte Lineare Gleichungssystem für die Variablen $x_1, x_2$ und $x_3$ in Matrix-Vektor-Schreibweise der Form
+
+$$
+\vec A \vec x \: = \: \vec b \qquad \text{mit } \vec x =
+\begin{pmatrix}
+x_1 \\ x_2 \\ x_3
+\end{pmatrix} \: \: \text{und} \:\:  \vec b = \begin{pmatrix}
+\Delta F_g \\ \Delta M_\phi \\ \Delta M_\psi
+\end{pmatrix}
+$$
+
+dar.
+
+\item Bringen Sie das Lineare Gleichungssystem vor dem Einsetzen der Werte in Zeilen-Stufenform.
+\item Rechnen Sie alle Werte der Tab. \ref{tab:my_label} in das internationale Einheitensystem (m, N, s, kg usw.) um.
+\item Setzen Sie, nach der Umrechnung in das internationale Einheitensystem, in die Zeilen-Stufenform die in Tab. \ref{tab:my_label} gegebenen Größen ein.
+\item Lösen Sie das resultierende Lineare Gleichungssystem und bestimmen Sie die resultierende Änderung von Tiefgang $\Delta T$, Krängungswinkel
+$\Delta \phi$ und Trimmwwinkel $\Delta \psi$.
+\end{abc}
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+\hline \\        $\rho$ & Dichte von Seewasser & 1025 $\Big [\frac{\text{kg}}{\text{m}^3}\Big ]$    \\ \hline
+         $g$ & Erdbeschleunigung & 9.81 $\Big [\frac{\text{m}}{\text{s}^2}\Big ]$ \\ \hline
+         $A_w$ & Wasserlinienfläche & 4208 $[\text{m}^2]$ \\ \hline
+             $y_w$ & Schwerpunkt der Wasserlinienfläche in seitlicher Richtung $y$ & -0.125 [m] \\ \hline
+        $I_{w,xx}$ & Flächenträgheitsmoment der Wasserlinienfläche um Längenachse & 680 000 [m$^4$] \\ \hline
+        $I_{w,yy}$ & Flächenträgheitsmoment der Wasserlinienfläche um Seitenachse & 10 500 000 [m$^4$] \\ \hline
+        $z_B$ & Höhe des Verdrängungsschwerpunkt über Kiel & 4.87 [m] \\ \hline 
+    $z_G$ & Höhe des Gewichtsschwerpunkt über Kiel & 85.12 [m] \\ \hline 
+    $D$ & Verdrängung (= Gewicht) des Schiffes & 21898.9 [t] \\ \hline
+        $\Delta F_g$ & Zusätzliche Gewichtslast durch Leck &  1250 [kN]\\ \hline
+            $\Delta M_\phi$ & Zusätzliches Krängungsmoment durch Leck & 10000 [kNm] \\ \hline
+                $\Delta M_\psi$ & Zusätzliches Trimmmoment durch Leck & 32000 [kNm] \\ \hline
+    \end{tabular}
+    \caption{Charakteristische Schiffsgrößen}
+    \label{tab:my_label}
+\end{table}
+}
+
+\Loesung{
+\begin{abc}
+\item Ersetzen Sie in den oben stehenden Gleichungen die Tiefgangsänderung $\Delta T$ durch die Variable $x_1$, die Änderung im Krängungswinkel 
+$\Delta \phi$ durch die Variable $x_2$ und die Änderung im Trimmwinkel $\Delta \psi$ durch die Variable $x_3$.
+
+\begin{align*}
+\rho g \: A_w \:  x_1 \: + \: \rho g \: (A_w  y_w) \: x_2
+ \: &= \: \Delta F_g  \\
+\rho g \: (A_w y_w) \: x_1 \: + \: D \: (\frac{I_{w,xx} \: \rho g}{D} + z_B - z_G) \: 	x_2
+\: &= \: \Delta M_\phi \\
+D \: (\frac{I_{w,yy}\: \rho g}{D} + z_B - z_G) \: x_3 \: &= \: \Delta M_\psi  
+\end{align*}
+
+\item Darstellung in Matrix-Vektor Schreibweise:
+
+$$ \begin{pmatrix}
+\rho g \: A_w & \rho g \: (A_w  y_w)  & 0 \\
+\rho g \: (A_w  y_w)  &  D \: (\frac{I_{w,xx} \: \rho g}{D} + z_B - z_G) & 0 \\
+0 & 0 & D \: (\frac{I_{w,yy}\: \rho g}{D} + z_B - z_G) 
+\end{pmatrix} \begin{pmatrix}
+x_1 \\ x_2 \\ x_3 
+\end{pmatrix} \: = \: \begin{pmatrix}
+\Delta F_g \\ \Delta M_\phi \\ \Delta M_\psi
+\end{pmatrix}
+$$
+
+\item Zeilen-Stufenform:
+
+%\begin{tiny}
+{\fontsize{9}{10} \selectfont
+\begin{align*}
+\begin{pmatrix}
+\rho g \: A_w & \rho g \: (A_w  y_w)  & 0 \\
+0  &  D \: (\frac{I_{w,xx} \: \rho g}{D} + z_B - z_G) - \frac{\rho g \: (A_w  y_w)}{\rho g \: A_w } \: \rho g \: (A_w  y_w) & 0 \\
+0 & 0 & D \: (\frac{I_{w,yy}\: \rho g}{D} + z_B - z_G) 
+\end{pmatrix} \begin{pmatrix}
+x_1 \\ x_2 \\ x_3 
+\end{pmatrix} \: \\
+= \: \begin{pmatrix}
+\Delta F_g \\ \Delta M_\phi - \frac{\rho g \: (A_w  y_w)}{\rho g \: A_w} \: \Delta F_g \\ \Delta M_\psi
+\end{pmatrix}
+\end{align*}
+%\end{tiny}
+}
+
+Dies lässt sich vereinfachen zu 
+
+%\begin{tiny}
+
+{\fontsize{11}{10} \selectfont
+\begin{align*}
+\begin{pmatrix}
+\rho g \: A_w & \rho g \: (A_w  y_w)  & 0 \\
+0  &  D \: (\frac{I_{w,xx} \: \rho g}{D} + z_B - z_G) - \rho g \: (A_w  y_w^2) & 0 \\
+0 & 0 & D \: (\frac{I_{w,yy}\: \rho g}{D} + z_B - z_G) 
+\end{pmatrix} \begin{pmatrix}
+x_1 \\ x_2 \\ x_3 
+\end{pmatrix} \: \\
+= \: \begin{pmatrix}
+\Delta F_g \\ \Delta M_\phi - y_w \: \Delta F_g \\ \Delta M_\psi
+\end{pmatrix}
+\end{align*}
+%\end{tiny}
+}
+
+und 
+
+
+$$ \begin{pmatrix}
+\rho g \: A_w & \rho g \: (A_w  y_w)  & 0 \\
+0  &  1 & 0 \\
+0 & 0 & 1
+\end{pmatrix} \begin{pmatrix}
+x_1 \\ x_2 \\ x_3 
+\end{pmatrix} \: = \: \begin{pmatrix}
+\Delta F_g \\ \frac{\Delta M_\phi - y_w \: \Delta F_g}{D \: (\frac{I_{w,xx} \: \rho g}{D} + z_B - z_G) - \rho g \: (A_w  y_w^2)} \\ \frac{\Delta M_\psi}{D \: (\frac{I_{w,yy}\: \rho g}{D} + z_B - z_G) } 
+\end{pmatrix}
+$$
+
+\item Umrechnung in das internationale Einheitensystem
+
+    \centering
+    \begin{tabular}{|c|c|c|}
+\hline \\        $\rho$ & Dichte von Seewasser & 1025 $\Big [\frac{\text{kg}}{\text{m}^3}\Big ]$    \\ \hline
+         $g$ & Erdbeschleunigung & 9.81 $\Big [\frac{\text{m}}{\text{s}^2}\Big ]$ \\ \hline
+         $A_w$ & Wasserlinienfläche & 4208 $[\text{m}^2]$ \\ \hline
+             $y_w$ & Schwerpunkt der Wasserlinienfläche in seitlicher Richtung $y$ & -0.125 [m] \\ \hline
+        $I_{w,xx}$ & Flächenträgheitsmoment der Wasserlinienfläche um Längenachse & 680 000 [m$^4$] \\ \hline
+        $I_{w,yy}$ & Flächenträgheitsmoment der Wasserlinienfläche um Seitenachse & 10 500 000 [m$^4$] \\ \hline
+        $z_B$ & Höhe des Verdrängungsschwerpunkt über Kiel & 4.87 [m] \\ \hline 
+    $z_G$ & Höhe des Gewichtsschwerpunkt über Kiel & 85.12 [m] \\ \hline 
+    $D$ & Verdrängung (= Gewicht) des Schiffes & 21 898 900 [kg] \\ \hline
+        $\Delta F_g$ & Zusätzliche Gewichtslast durch Leck &  1 250 000 [N]\\ \hline
+            $\Delta M_\phi$ & Zusätzliches Krängungsmoment durch Leck & 10 000 000 [Nm] \\ \hline
+                $\Delta M_\psi$ & Zusätzliches Trimmmoment durch Leck & 32 000 000 [Nm] \\ \hline
+    \end{tabular}
+
+\item Nach Einsetzen der Werte aus Tab. \ref{tab:my_label}:
+
+$$ \begin{pmatrix}
+42 312 492 \text{[N/m]}  & -5 289 061.5 \text{[N]}  & 0 \\
+0  & 1  & 0 \\
+0 & 0 & 1  
+\end{pmatrix} \begin{pmatrix}
+x_1 \\ x_2 \\ x_3 
+\end{pmatrix} \: = \: \begin{pmatrix}
+1250 \: 1000 \text{[N]} \\ 0.002 \text{[rad]} \\ 0.00031 \text{[rad]}
+\end{pmatrix}
+$$
+
+Als Lösung erhält man schließlich
+
+$$
+\begin{pmatrix}
+\Delta T \\ \Delta \phi \\ \Delta \psi
+\end{pmatrix} = \begin{pmatrix}
+0.03 \text{m} \\
+0.11^\circ \\
+0.035^\circ
+\end{pmatrix}
+$$
+\end{abc}
+}
+
+\ErgebnisC{LGS}
+{
+$$
+\begin{pmatrix}
+\Delta T \\ \Delta \phi \\ \Delta \psi
+\end{pmatrix} = \begin{pmatrix}
+0.03 \\
+0.11 \\
+0.035
+\end{pmatrix}
+\quad 
+\begin{bmatrix}
+\text{m}\\\text{radians}\\\text{radians}
+\end{bmatrix}
+$$
+}

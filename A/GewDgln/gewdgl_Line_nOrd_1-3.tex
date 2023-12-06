@@ -1,0 +1,163 @@
+\Aufgabe[e]{Lineare Differentialgleichungen $n$-ter Ordnung}
+{
+Bestimmen Sie die allgemeinen L\"osungen der folgenden
+Differentialgleichungen. Falls Anfangswerte gegeben sind, ermitteln Sie auch die L\"osung des Anfangswertproblems. 
+\begin{abc}
+\item $y^{\prime\prime} + 6y^\prime + 8y = 0$,
+\item $y^{\prime\prime} + 2 y^\prime + 5 y  = 17 \, \sin (2x)$.
+\item $y^{\prime\prime}(x) - 2 y^\prime(x) - 3y(x) = 4 \EH{x}, \quad y(0) = 0, 
+         \quad y'(0) = 6,$
+%\item \textbf{R} $y^{\prime\prime}(x)+4y^\prime(x)+4y(x)=4 \EH{-2x}, \quad y(0)=1 ,\quad
+%  y^\prime(0)=0$.
+  \item $y^{\prime\prime}(x)+5y^\prime(x)+6y(t)=3\EH{3x}$, 
+       % (x+2)(x+3) keine Resonanz
+%  \item \textbf{R} $y^{\prime\prime}(x)-2y^\prime(x)+y(x)=4\EH x$, 
+%	% (x-1)^2 Resonanz
+  \item $y^{\prime\prime}(x)-y^\prime(x)-2y(x)= 4x\EH{x}$. 
+	%(x+1)(x-2) keine Resonanz
+\item  $y^{\prime\prime\prime}+y^{\prime\prime}-y^\prime-y=3\EH{-2x}$,
+
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Das charakteristische Polynom 
+$p(\lambda) = \lambda^2+6\lambda+8$ hat die Nullstellen $\lambda_1=-2$ und $\lambda_2=-4$.
+Damit ist
+$$ y(x) = c_1 \EH{-2x} + c_2 \EH{-4x} \ \text{ mit } c_1,c_2 \in \R . $$
+
+\item Das charakteristische Polynom 
+$p(\lambda)=\lambda^2+2\lambda+5$ hat die Nullstellen $\lambda_{1/2}=-1\pm\sqrt{1-5}
+=-1\pm 2i$. Damit hat man das reelle Fundamentalsystem
+$$ \big\{ \EH{-x} \cos(2x), \EH{-x} \sin(2x) \big\}. $$
+Um die Partikul\"arl\"osung der inhomogenen Gleichung zu finden gibt es zwei Möglichkeiten:
+
+\textbf{Reeller Ansatz}\\
+Ein Ansatz f\"ur eine Partikul\"arl\"osung ist 
+$$y_p(x)=A\cos(2x)+B\sin(2x).$$
+Einsetzen in die Differentialgleichung liefert: 
+\begin{align*}
+17\sin(2x)\overset !=& 
+-4A\cos(2x)-4B\sin(2x)-4A\sin(2x)+4B\cos(2x)+5A\cos(2x)+5B\sin(2x)\\
+=& (-4A+4B+5A)\cos(2x) + (-4B-4A+5B)\sin(2x).
+\end{align*}
+Koeffizientenvergleich führt dann zum linearen Gleichungssystem f\"ur $A$ und $B$: 
+$$\begin{array}{rrl}
+\cos(2x):&A+4B&=0\\
+\sin(2x):&-4A+B&=17\end{array}
+$$
+Mit der L\"osung $B=1$ und $A=-4$ haben wir die Partikul\"arl\"osung 
+$$y_p(x)=-4\cos(2x)+\sin(2x)$$
+ 
+\textbf{Alternativ: Komplexer Ansatz}: \\
+Der Ansatz f\"ur eine Partikul\"arl\"osung ist 
+$$y_p(x)=\operatorname{Im}(b\EH{i2x})$$
+
+Einsetzen in die Differentialgleichung liefert: 
+$$b((-4)\EH{i2x}+4i\EH{i2x}+5\EH{i2x})\overset != 17\EH{i2x}
+$$
+Daraus folgt $b=\dfrac{17}{1+4i}=1-4i.$
+Damit haben wir die Partikul\"arl\"osung 
+$$y_p(x)=\operatorname{Im}((1-4i)\cdot(\cos(2x)+i\sin(2x)))=-4\cos(2x)+\sin(2x)$$
+
+
+Die Gesamtl\"osung lautet also
+$$ y(x) = \sin(2x)-4\cos(2x) + c_1 \EH{-x} \cos(2x) + c_2  \EH{-x} \sin(2x). $$
+\item Die Nullstellen des charakteristischen Polynoms
+$p(\lambda)=\lambda^2-2\lambda-3$ sind $\lambda_1=-1$ und $\lambda_2=3$. 
+Eine Partikul\"arl\"osung der inhomogenen Gleichung berechnet man mit
+dem Ansatz $y_p(x)=ae^x$, es folgt
+$ -4 a e^x \stackrel{!}{=}4e^x$ und damit $a=-1$. Die allgemeine L\"osung
+ist 
+$$ y_{allg}(x) = - e^x + c_1 \EH{-x} + c_2 \EH{3x} \ \text{ mit } c_1,c_2 \in \R .$$
+Aus den Anfangsbedingungen $y(0)=-1+c_1+c_2 \stackrel{!}{=} 0$
+und $y^\prime(0) = -1 - c_1 + 3c_2 \stackrel{!}{=} 6$ folgt das lineare 
+Gleichungssystem
+$$ \begin{array}{rcrl}
+   c_1 & + & c_2 & = 1, \\
+   -c_1 & + & 3c_2 & = 7 
+   \end{array} $$
+mit L\"osung $c_2=2$ und $c_1=-1$. Damit ist 
+$$ y_{AWP}(x) = -e^x-\EH{-x}+2\EH{3x}. $$
+
+%\item Die Nullstelle von $p(\lambda)=\lambda^2+4\lambda+4$ ist
+%$\lambda=-2$, dies ist eine doppelte Nullstelle. Als Ansatz f\"ur die
+%Partikul\"arl\"osung muss man 
+%$y_p(x)=ax^2 \EH{-2x}$ nehmen, denn man hat Resonanz der Ordnung 2. 
+%Mit $y_p^\prime(x) = a \EH{-2x} \big( 2x-2x^2\big)$
+%und $y_p^{\prime\prime}(x) = a \EH{-2x} \big(2-8x+4x^2\big)$
+%folgt
+%$2a \EH{-2x} \stackrel{!}{=} 4 \EH{-2x}$ und damit $a=2$. 
+%Dies liefert die allgemeine L\"osung
+%$$ y_{allg}(x) = \big( 2x^2 + c_1 x + c_2 \big) \EH{-2x}
+%   \ \text{ mit } c_1,c_2 \in \R. $$
+%Die Anfangsbedingungen  $y(0)=c_2 \stackrel{!}{=} 1$ und
+%$y^\prime(0) = c_1-2c_2 \stackrel{!}{=} 0$ liefern $c_2=1$ und $c_1=2$ 
+%und damit die L\"osung
+%%$$ y_{AWP}(x) = \big( 2x^2 + 2x + 1 \big) \EH{-2x} . $$ 
+\item Man berechnet zuerst die L\"osungen der homogenen Gleichung
+$$ y^{\prime\prime}+5y^\prime+6y=0. $$
+Das charakteristische Polynom
+$p(\lambda)=\lambda^2+5\lambda+6$ hat die Nullstellen $\lambda_1=-2$ und 
+$\lambda_2=-3$. Ein Fundamentalsystem ist 
+$\{ \EH{-2x},\EH{-3x}\}$. Nun braucht man noch eine spezielle L\"osung
+der inhomogenen Gleichung. Diese berechnet man mit dem Ansatz
+$y_p(x)=a \EH{3x}$ mit $a \in \R$. 
+Einsetzen in die inhomogene DGl liefert
+$(9+15+6)a\EH{3x}=3\EH{3x}$, also $a=1/10$.
+Die allgemeine L\"osung der
+Gleichung ist
+$$ y(x) = c_1 \EH{-2x}+c_2\EH{-3x}+\frac{1}{10} \EH{3x}
+   \text{ mit } c_1,c_2 \in \R . $$
+%\item Aus $p(\lambda)=\lambda^2-2\lambda+1=0$ folgt $\lambda_{1/2}=1$ (doppelte 
+%Nullstelle). Damit hat man das Fundamentalsystem
+%$\{ e^x, xe^x \}$.  F\"ur die partikul\"are L\"osung muss man nun den
+%Ansatz $y_p(x)=a x^2 e^x$ machen, denn es liegt Resonanz der Ordnung 
+%$2$ vor. Es ist $y_p^\prime(x)=a(2x+x^2)e^x$ und
+%$y_p^{\prime\prime}(x)=a(2+4x+x^2)e^x$.
+%Eingesetzt in die inhomogene DGL erhält man 
+%$$ ae^x(2+4x+x^2-2(2x+x^2)+x^2 )= 4 e^x, $$
+%$$2ae^x=4 e^x$$
+%woraus $a=2$ folgt. Die allgemeine L\"osung der Gleichung ist
+%$$ y(x) = \big(c_1 + c_2 x + 2x^2\big) e^x  \text{ mit } c_1,c_2 \in \R . $$
+\item Das Polynom $p(\lambda)=\lambda^2-\lambda-2$ hat die Nullstellen
+$\lambda_1=2$ und $\lambda_2=-1$, dies ergibt das Fundamentalsystem
+$\{\EH{2x},\EH{-x}\}$. Der Ansatz f\"ur die Partikul\"arl\"osung ist
+$y_p(x)=(ax+b) e^x$. Mit $y_p^\prime(x)=(ax+a+b)e^x$
+und $y_p^{\prime\prime}=(ax+2a+b)e^x$ folgt
+$$ \EH{x}(ax+2a+b-(ax+a+b)-2(ax+b))=4x\EH{x} $$
+$$ -2ax+a-2b=4x $$
+Koeffizientenvergleich liefert dann $a=-2$ und $2b=a$, $b=-1$. Damit hat man die allgemeine 
+L\"osung 
+$$ y(x) = c_1 \EH{2x}+c_2\EH{-x}-(2x+1)e^x  \text{ mit } c_1,c_2 \in \R. $$
+\item Das charakteristische Polynom ist 
+$p(\lambda) = \lambda^3+\lambda^2-\lambda-1$. Eine Nullstelle kann man raten, 
+zum Beispiel $\lambda_1=1$. Polynomdivision oder Anwendung des
+Horner--Schemas liefert dann
+$$ p(\lambda) = (\lambda-1)\big(\lambda^2+2\lambda+1\big), $$
+damit ist $\lambda_2=-1$ eine weitere, und zwar doppelte, Nullstelle.
+Folglich hat die homogene Gleichung das Fundamentalsystem
+$$ \big\{ e^x, \EH{-x}, x\EH{-x} \big\}. $$
+Zur Berechnung einer Partikul\"arl\"osung benutzt man den Ansatz
+$y_p(x) = a \EH{-2x}$. Einsetzen in die Differentialgleichung liefert
+$$ a \EH{-2x} \big(-8+4+2-1 \big) \stackrel{!}{=} 3 \EH{-2x} $$
+und damit $a=-1$. Die allgemeine L\"osung ist also
+$$ y(x) = - \EH{-2x} + c_1 \EH{x} + c_2 \EH{-x} + c_3 x \EH{-x} 
+   \ \text{ mit } c_1,c_2,c_3 \in \R. $$
+
+\end{abc} 
+}
+
+
+\ErgebnisC{AufggewdglLinenOrd001}
+{
+
+b) $ y(x) = \sin(2x)-4\cos(2x) + c_1 \EH{-x} \cos(2x) + c_2  \EH{-x} \sin(2x)$
+c) $y_{AWP}(x) = -e^x-\EH{-x}+2\EH{3x}$\\
+%e) $y(x) = \big( 2x^2 + 2x + 1 \big) \EH{-2x}$
+d) $y(x) = c_1 \EH{-2x}+c_2\EH{-3x}+\frac{1}{10} \EH{3x}$
+%g) $y(x) = \big(c_1 + c_2 x + 2x^2\big) e^x$
+e) $y(x) = c_1 \EH{2x}+c_2\EH{-x}-(2x+1)e^x$
+f) $y(x) = - \EH{-2x} + c_1 \EH{x} + c_2 \EH{-x} + c_3 x \EH{-x}$\\
+}

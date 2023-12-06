@@ -1,0 +1,62 @@
+\Aufgabe[e]{Regel von L'Hospital}{
+Berechnen Sie mit Hilfe der Regel von L'Hospital die Grenzwerte
+\begin{tabbing}
+\hspace*{1em} \= a) $ \ \underset{x\to 0}\lim \dfrac{x^2 \sin x}{\tan x-x}$\,,
+\hspace*{8em} \= b) 
+    $\underset{x\rightarrow 0}\lim \dfrac{\ln(\EH{x}-x)}{\ln(\cos x)}$\,, \\[1ex]
+\> c) $\underset{x\rightarrow \infty}\lim x(2\arctan x - \pi)$\,,
+\> d) $\underset{x\rightarrow 1}\lim \dfrac{x^2-1}{x^{x}-1}$\,. 
+\end{tabbing}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Da sowohl Z\"ahler, als auch Nenner gegen Null konvergieren
+$$\underset{x\to 0}\lim (x^2\sin x)=0=\underset{x\to 0}\lim (\tan x - x),$$
+darf der Satz von L'Hospital angewendet werden: 
+\begin{align*}
+\underset{x\to 0}\lim \frac{x^2 \sin x}{\tan x-x} =& \underset{x\to 0}\lim \frac{2x\sin x + x^2\cos
+x}{\frac 1{\cos^2 x}-1} = \underset{x\to 0}\lim \frac{2x \sin x \cos^2 x + x^2\cos^3 x}{1-\cos^2
+x}\\
+=&\underset{x\to 0}\lim \frac{2\sin x + 2x\cos x + 2x \cos x - x^2\sin x}{2(\cos x)^{-3}\sin x}\\
+&\qquad\text{ (Erneut gehen Z\"ahler und Nenner gegen 0)}\\
+=& \underset{x\to 0}\lim \frac{2\cos x + 4\cos x -4x\sin x -2x\sin x -x^2\cos x}{6(\cos
+x)^{-4}\sin^2 x + 2(\cos x)^{-2}}
+\end{align*}
+Der Z\"ahler dieses Bruches geht gegen $6$, der Nenner gegen $2$, also ist insgesamt
+$$\underset{x\to 0}\lim \frac{x^2\sin x}{\tan x-x} = \frac 6 2 =3$$
+
+\item Auch hier kann die Regel von L'Hospital angewendet werden, da Z\"ahler und Nenner gegen Null gehen:
+\begin{align*}
+\lim_{x \to 0} \frac{\ln(\EH{x}-x)}{\ln(\cos x)}=& \lim_{x \to 0} \frac{\frac{\EH{x}-1}{\EH{x} - x}
+}{\frac{-\sin x}{\cos x}}\\
+=&\lim_{x\to 0} \frac{\EH{x} \cos x - \cos x}{-\EH{x} \sin x + x \sin x }\\
+&\qquad\text{ (Erneut gehen Z\"ahler und Nenner gegen 0)}\\
+=&\lim_{x\to 0} \frac{\EH{x} \cos x -\EH{x} \sin x + \sin x}{-\EH{x} \sin x - \EH{x} \cos x + \sin x +
+x\cos x}=\frac 1 {-1}=-1
+\end{align*}
+
+\item Das Produkt $x(2\arctan x - \pi)$ kann in einen Quotienten umgeformt werden, dessen Z\"ahler
+und Nenner jeweils gegen Unendlich gehen, danach kann die Regel von L'Hospital angewendet werden: 
+\begin{align*}
+ \lim\limits_{x \to \infty} x(2\arctan x - \pi)
+  =& \lim\limits_{x \to \infty} \frac{2\arctan x - \pi}{x^{-1}}
+  = \lim\limits_{x \to \infty} \frac{\dfrac{2}{1+x^2}}{-x^{-2}}\\
+  =& -\lim\limits_{x \to \infty} \frac{2x^2}{1+x^2}\quad\text{(Z\"ahler und Nenner gehen gegen
+  $\infty$)}\\
+=& -\lim\limits_{x\to \infty} \frac{4x}{2x}=-2
+\end{align*}
+
+
+\item Da Z\"ahler und Nenner gegen Null konvergieren kann man die Regel von L'Hospital
+  anwenden. Danach folgt mit  $x^x = \EH{x \ln x}$:
+$$ \lim_{x \to 1} \dfrac{x^2-1}{x^{x}-1} 
+   = \lim_{x \to 1} \dfrac{2x}{ (1+\ln x) \EH{x \ln x}} = 2\,.$$
+\end{abc}
+}
+
+\ErgebnisC{AufganalysReglLhos001}
+{
+\textbf{a)} $3$, \textbf{b)} $-1$, \textbf{c)} $-2$, \textbf{d)} $2$
+}

@@ -1,0 +1,47 @@
+\Aufgabe[e]{Stationäre Punkte}{
+Gegeben sei die Funktion $$f(x,y) := \frac1y - \frac1x - 4x + y.$$ Finde alle stationären Punkte und bestimme, ob sie lokale Minima, Maxima oder Sattelpunkte sind.
+}
+\Loesung{
+Die stationären Punkte sind die Lösungen des folgenden Gleichungssystems%
+\begin{eqnarray*}
+\frac{\partial}{\partial x} f(x,y) = 0 \quad&\Rightarrow& \quad \frac{1}{x^2} - 4 = 0 \\\
+\frac{\partial}{\partial y} f(x,y) = 0 \quad&\Rightarrow& \quad -\frac{1}{y^2} + 1 = 0
+\end{eqnarray*}
+%
+Die Lösungen sind $x_{1,2} = \pm \frac12$ und $y_{1,2} = \pm 1$.
+
+Es gibt also 4 stationäre Punkte, nämlich $(\frac{1}{2}, 1), (\frac{1}{2}, -1), (-\frac{1}{2}, 1), (-\frac{1}{2}, -1)$.
+
+Die Hessische Matrix ist:
+$$
+\begin{pmatrix}
+f_{xx}(x,y) & f_{xy}(x,y) \\
+f_{xy}(x,y) & f_{yy}(x,y)
+\end{pmatrix}
+=
+\begin{pmatrix}
+-\frac{2}{x^3} & 0 \\\
+0 & \frac{2}{y^3}
+\end{pmatrix}.
+$$
+
+Charakterisierung der stationären Punkte:
+$$
+\boldsymbol{x}_1 = \begin{pmatrix} \frac{1}{2} \\\ 1 \end{pmatrix}, \quad \begin{pmatrix} -16 & 0 \\\ 0 & 2 \end{pmatrix}, \quad \mbox{Sattelpunkt}
+$$
+%
+$$
+\boldsymbol{x}_2 = \begin{pmatrix} \frac{1}{2} \\ -1 \end{pmatrix}, \quad \begin{pmatrix} -16 & 0 \\\ 0 & -2 \end{pmatrix}, \quad \mbox{Maximum}
+$$
+%
+$$
+\boldsymbol{x}_3 = \begin{pmatrix} -\frac{1}{2} \\ 1 \end{pmatrix}, \quad \begin{pmatrix} 16 & 0 \\\ 0 & 2 \end{pmatrix}, \quad \mbox{Minimum}
+$$
+%
+$$
+\boldsymbol{x}_4 = \begin{pmatrix} -\frac{1}{2} \\ -1 \end{pmatrix}, \quad \begin{pmatrix} 16 & 0 \\\ 0 & -2 \end{pmatrix}, \quad \mbox{Sattelpunkt}
+$$
+
+\rule{360pt}{1pt}
+\cleardoublepage
+}

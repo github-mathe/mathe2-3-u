@@ -1,0 +1,140 @@
+\Aufgabe[e]{Taylor-Polynom}{
+\begin{abc}
+\item Geben Sie das Taylorpolynom $n$-ter Ordnung der folgenden Funktionen um den angegebenen
+Entwicklungspunkt $x_0$ an: 
+\begin{iii}
+\item $f(x)=\sin(x)\cdot \cos(x)$ um $x_0=0$, $n=4$
+\item $g(x)=\cos(x)$ um $x_0=\pi/2$, $n=4$
+\item $h(x)=\EH{1-x}(x^2-2x)$ um $x_0=1$, $n=2$
+\end{iii}
+\item Geben Sie die Nullstellen der Funktionen sowie der Taylor-Polynome im Intervall $[0,5]$ an.
+\item Skizzieren Sie die Funktionen und deren Taylor-Polynome. 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item \begin{iii}
+\item Zun\"achst werden die ersten vier Ableitungen ermittelt: 
+\begin{align*}
+f(x)=& \sin x \cos x=\frac 12 \sin(2x),\, &f'(x)=& \cos(2x),\,&f''(x)=-2\sin(2x)\\
+f'''(x)=&-4\cos(2x),\,&f^{(4)}(x)=&8\sin(2x)
+\end{align*}
+Damit ist das Taylorpolynom 
+\begin{align*}
+T_4(x)=&\sum\limits_{k=0}^4 \frac{f^{(k)}(0)}{k!}(x-0)^k\\
+=&0+\frac 1{1!} x - 0-\frac{4}{3!}x^3+0=x-\frac 2 3 x^3.
+\end{align*}
+\item Die Ableitungen von $g(x)$ sind: 
+\begin{align*}
+g(x)=&\cos x ,\, & g'(x)=&-\sin x ,\, & g''(x)=&-\cos x\\
+g'''(x)=& \sin x,\,& g^{(4)}(x)=& \cos x
+\end{align*}
+Damit hat man dann
+\begin{align*}
+T_4(x)=&\sum\limits_{k=0}^4 \frac{g^{(k)}(\pi/2)}{k!}\left(x-\frac \pi 2\right)^k\\
+=&0 - \frac 11 \left( x-\frac \pi 2\right) +0 +\frac 1{6} \left( x-\frac \pi 2\right)^3 +0\\
+=& -\left( x-\frac \pi 2 \right) +\frac 16 \left( x-\frac \pi 2\right)^3.
+\end{align*}
+\item Es ist
+\begin{align*}
+h(x)=& \EH{1-x}(x^2-2x)\\
+h'(x)=& \EH{1-x}(-x^2+2x+2x-2)=\EH{1-x}(-x^2+4x-2)\\
+h''(x)=&\EH{1-x}(x^2-4x+2-2x+4)=\EH{1-x}(x^2-6x+6),
+\end{align*}
+und damit
+$$T_2(x)=-1+(x-1)+\frac 12 (x-1)^2.$$
+\end{iii}
+\item \begin{iii}
+\item Die Nullstellen im Intervall $[0,\,5]$ liegen bei: 
+\begin{align*}
+f(x)=&0 \text{ f\"ur } x\in\left\{0,\,\frac \pi 2,\, \pi,\, \frac 32 \pi\right\}\\
+T_4(x)=&0\text{ f\"ur } x\in \left\{0,\, \sqrt{\frac 32}\right\}
+\end{align*}
+\item 
+\begin{align*}
+g(x)=&0 \text{ f\"ur } x\in\left\{\frac \pi 2,\, \frac 32 \pi\right\}\\
+T_4(x)=&0\text{ f\"ur } x\in \left\{\frac \pi 2,\, \frac \pi 2 + \sqrt 6\right\}
+\end{align*}
+\item 
+\begin{align*}
+h(x)=&0 \text{ f\"ur } x\in\left\{0,\, 2\right\}\\
+T_2(x)=&0\text{ f\"ur } x\in \{\sqrt 3\}.
+\end{align*}
+\end{iii}
+\item \quad
+\end{abc}
+{\qquad \textbf{i)}}
+\begin{center}
+\psset{xunit=2cm, yunit=2cm, runit=1cm}
+\begin{pspicture}(0,-1)(5,1)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](0,-1)(5,1)
+\psplot[plotpoints=100, plotstyle=curve]
+{0}{5}
+{x 57.296 mul sin x 57.296 mul cos mul}
+
+\psplot[plotpoints=100, plotstyle=curve, linestyle=dashed]
+{0}{1.6}
+{x 3 exp .6666 mul neg x add}
+
+\psdot(0,0)
+\psdot(1.5708,0)
+\psdot(3.14159,0)
+\psdot(4.7324,0)
+\psdot(1.225,0)
+\put(1.8,-1.5){$T_4(x)$}
+\put(2.7,.8){$f(x)$}
+
+\end{pspicture}
+\end{center}
+{\qquad \textbf{ii)}}
+\begin{center}
+\psset{xunit=2cm, yunit=2cm, runit=1cm}
+\begin{pspicture}(0,-2)(5,1)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](0,-2)(5,1)
+\psplot[plotpoints=100, plotstyle=curve]
+{0}{5}
+{x 57.296 mul cos}
+
+\psplot[plotpoints=100, plotstyle=curve, linestyle=dashed]
+{0}{4.4}
+{x 1.571 neg add neg .16666 x 1.571 neg add 3 exp mul add}
+
+\psdot(1.571,0)
+\psdot(1.571,0)
+\psdot(4.717,0)
+\psdot(4.0203,0)
+\put(7.8,1.5){$T_4(x)$}
+\put(9,-1){$f(x)$}
+
+\end{pspicture}
+\end{center}
+{\qquad \textbf{iii)}}
+\begin{center}
+\psset{xunit=2cm, yunit=2cm, runit=1cm}
+\begin{pspicture}(0,-2)(5,1)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](0,-2)(5,1)
+\psplot[plotpoints=100, plotstyle=curve]
+{0}{5}
+{2.7183 1 x neg add exp x x mul 2 neg x mul add mul}
+
+\psplot[plotpoints=100, plotstyle=curve, linestyle=dashed]
+{0}{2.2}
+{2 neg x add .5 x 1 neg add 2 exp mul add}
+
+\psdot(1,-1)
+\psdot(0,0)
+\psdot(2,0)
+\psdot(1.732,0)
+\put(4.5,1.7){$T_2(x)$}
+\put(6,1){$f(x)$}
+
+\end{pspicture}
+\end{center}
+}
+
+\ErgebnisC{AufganalysTaylEntw001}
+{
+{\textbf{ i)}} $T_4(x)=x-2x^3/3$, {\textbf{ ii)}} $T_4(x)=-(x-\pi/2)+1/6\cdot (x-\pi/2)^3$\\
+{\textbf{ iii)}} $T_2(x)=-1+(x-1)+1/2\cdot (x-1)^2$
+}

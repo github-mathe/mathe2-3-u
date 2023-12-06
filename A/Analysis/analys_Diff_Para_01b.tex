@@ -1,0 +1,106 @@
+\Aufgabe[e]{Differentiation}{
+\begin{abc}
+\item Geben Sie Konstanten $b,\, c,\, d\in\R$ an, damit die Funktion 
+$$
+g(x)=\left\{\begin{array}{lll}
+b x^3+cx^2+d& \quad & \text{ f\"ur } x\leq 1\\
+\ln x &&\text{ f\"ur } x>1\end{array}\right.
+$$
+auf $\R$ zweimal differenzierbar ist. \\
+Ist $g(x)$ f\"ur diese Wahl auch dreimal differenzierbar?
+\item \"Uberpr\"ufen Sie, dass die Funktion 
+$$  f:\R \to \R, \quad f(x) = \begin{cases}
+     x \sin(1/x) & \text{ f\"ur } x \ne 0 , \\ 0 & \text{ f\"ur } x=0 
+  \end{cases} $$
+in $x=0$ stetig ist, aber \textit{nicht } differenzierbar. \\
+\textbf{Hinweis: } Betrachten Sie zur Untersuchung der Differenzierbarkeit die Folge $(x_n)_{n\in \N}$ mit $x_n=\frac{1}{n\pi+\pi/2}$.
+\item Die Funktion 
+$$ f:\R \to \R, \quad f(x) = \begin{cases}
+    x^2 \sin(1/x) & \text{ f\"ur } x \ne 0 , \\
+       0 & \text{ f\"ur } x=0 \end{cases} $$
+ist in $x=0$ differenzierbar. Ist die Ableitung dort stetig? Hinweis: Betrachten Sie die Folge $(x_n)_{n\in \N}$ mit $x_n=\frac{1}{2n\pi}$.
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Außerhalb des kritischen Punktes $x=1$ hat man 
+$$g'(x)=\left\{\begin{array}{lll}3bx^2+2cx&\quad & \text{ f\"ur } x< 1\\
+\frac 1x&&\text{ f\"ur }x>1\end{array}\right.$$
+sowie
+$$g''(x)=\left\{\begin{array}{lll}6bx+2c&\quad & \text{ f\"ur } x< 1\\
+-\frac 1{x^2}&&\text{ f\"ur }x>1\end{array}\right.$$
+Da die Funktion zweimal differenzierbar sein soll, m\"ussen $g(x)$ und $g'(x)$ stetig sein, im Punkt
+$x=1$ muss also gelten: 
+$$g(1)=b+c+d=\ln 1=0 \text{ und } g'(1)=3b+2c=\frac 11=1.$$
+Aus der zweiten Relation erh\"alt man $c=\frac {1-3b}2$. \\
+Die linksseitige zweite Ableitung im Punkt $x=1$ ist 
+\begin{align*}
+g''_-(1)&=\underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim \frac{g'(x)-g'(1)}{x-1}
+= \underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim \frac{3bx^2+2cx-1}{x-1}\\
+&= \underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim \frac{3bx^2+(1-3b)x-1}{x-1}
+= \underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim \frac{3b(x^2-x)+x-1}{x-1}\\
+& = \underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim (3bx+1)=3b+1
+\end{align*}
+und die rechtsseitige zweite Ableitung: 
+\begin{align*}
+g''_+(1)&=\underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{g'(x)-g'(1)}{x-1}
+= \underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{\frac 1x-1}{x-1}\\
+&= \underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{1-x}{x(x-1)}
+ = \underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \left(-\frac 1x\right)=-1
+\end{align*}
+Beide Grenzwerte m\"ussen \"ubereinstimmen, damit $g''(1)$ sinnvoll definiert ist, also gilt
+$$b=\frac{-2}3\,\Rightarrow \, c=\frac 32\,\Rightarrow\, d=-b-c=\frac{-5}6.$$
+Man hat dann 
+$$g''(x)=\left\{\begin{array}{lll}
+-4x+3&\quad &\text{ f\"ur }x<1\\
+-1&&\text{ f\"ur } x=1\\
+-\frac 1{x^2}&&\text{ f\"ur } x>1\end{array}\right.$$
+Die linksseitige Ableitung dieser Funktion im Punkt $x=1$ ist 
+\begin{align*}
+g'''_-(1)&=\underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim \frac{g''(x)-g''(1)}{x-1}
+= \underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim \frac{-4x+3-(-1)}{x-1}\\
+&= \underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim \frac{-4x+4}{x-1}
+= \underset{\tiny\begin{array}{l}x\to 1\\x<1\end{array}}\lim \left( -4 \frac{x-1}{x-1}\right)
+ = -4
+\end{align*}
+und die rechtsseitige Ableitung: 
+\begin{align*}
+g'''_+(1)&=\underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{g''(x)-g''(1)}{x-1}
+= \underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{-\frac 1{x^2}-(-1)}{x-1}\\
+&= \underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{x^2-1}{x^2(x-1)}
+ = \underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{x+1}{x^2}=2
+\end{align*}
+Da die beiden Werte nicht \"ubereinstimmen ($-4\neq 2$), ist $g''$ im Punkt $x=1$ nicht
+differenzierbar. 
+\item  Die Funktion ist stetig in $x=0$, denn $|\sin(1/x)| \le 1$
+  und somit ist $|f(x)-f(0)|=|f(x)| \le |x| \underset{x \to 0}{\longrightarrow} 0$. \\
+  Der Differenzenquotient in $x_0=0$ ist
+  $$ Q(x) := \dfrac{f(x)-f(x_0)}{x-x_0} = \dfrac{1}{x} f(x)=\sin(1/x). $$
+  Dieser Ausdruck konvergiert \textbf{nicht} f"ur $x \to 0$.
+  Setzt man zum Beispiel $x_n = \dfrac{1}{n \pi+\pi/2}$, dann gilt 
+  $x_n \underset{n \to \infty}{\longrightarrow} 0$ und
+ $$Q(x_n)=\sin(n \pi+\pi/2)=\left\{\begin{array}{rl}
++1,\,&\text{ f\"ur gerade }n\\
+-1,\,&\text{ f\"ur ungerade }n
+\end{array}\right.$$
+\item  Der Differenzenquotient in $x_0=0$ ist
+ $$ Q(x) := \dfrac{f(x)-f(x_0)}{x-x_0} = \dfrac{1}{x} f(x)=x\sin(1/x). $$
+ Dies konvergiert f"ur $x \to 0$ gegen $0$, wie schon in Teil a) gezeigt
+ wurde. Damit ist $f$ in $x_0=0$ differenzierbar und $f^\prime(0)=0$. 
+ Die Ableitung f"ur $x \ne 0$ ist
+ $$ f^\prime(x)= 2x \sin(1/x) + x^2 \cos(1/x) \left(-\dfrac{1}{x^2}\right)
+   = 2x \sin(1/x) - \cos(1/x) . $$
+ Sie konvergiert nicht in $x=0$. Sei dazu $x_n=\frac
+   1{2n\pi}\underset{n\rightarrow \infty}\longrightarrow 0$. Damit gilt
+$$f'(x_n)=\frac 1{2n\pi} \sin(2n\pi) - \cos(2n\pi)=1\neq f'(0),$$
+also ist $f'$ nicht stetig in Null. 
+\end{abc}
+}
+
+%\newcounter{AufganalysDiffRech004}
+%\setcounter{AufganalysDiffRech004}{\theAufg}
+%\Ergebnis{\subsubsection*{Ergebnisse zu Aufgabe \arabic{Blatt}.\arabic{AufganalysDiffRech004}:}
+%
+%}

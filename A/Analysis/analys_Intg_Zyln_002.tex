@@ -1,0 +1,117 @@
+\Aufgabe[e]{Kreiszylinder}
+{
+Berechnen Sie das Volumen der Schnittmenge 
+\begin{iii}
+\item zweier Kreiszylinder um die $z-$ und die $y$-Achse. 
+\item[v] dreier Kreiszylinder um die $x-$, die $y-$ und die $z-$Achse. 
+\end{iii}
+Die Zylinder haben jeweils den Radius 1.
+}
+
+\Loesung{
+\begin{iii}
+\item $B_2$ beschreibe die Schnittmenge der beiden Zylinder um die $z-$ und die $y-$Achse. Die Skizze
+  zeigt ein Viertel des betrachteten Volumens. \\
+\begin{pspicture}(-3,-2)(3,3)
+\put(2.8,.1){$x$}
+\put(-.3,2.6){$z$}
+\put(2.2,2.2){$y$}
+
+\psellipticarc[fillstyle=solid, fillcolor=lightgray, linewidth=2pt](0,0)(2,1){0}{180}
+
+
+%\pscircle[linecolor=darkgray](.9,.9){2}
+%\psline[linecolor=darkgray](0,2)(.9,2.9)
+%\psline[linecolor=darkgray](0,-2)(.9,-1.1)
+\psarc[linecolor=black, linewidth=2pt, fillstyle=solid, fillcolor=lightgray](0,0){2}{0}{180}
+\pscurve[linewidth=2pt, showpoints=false, fillstyle=solid, fillcolor=lightgray]
+(   2.00000,   0.00000)
+(   2.00000,   0.99186)
+(   1.90000,   1.86408)
+(   1.67942,   2.51147)
+(   1.23362,   2.85594)
+(   0.53903,   2.85594)
+(  -0.22058,   2.51147)
+(  -0.95358,   1.86408)
+(  -1.57157,   0.99186)
+(  -2.00000,   0.00000)
+
+\psarc[linecolor=black, linewidth=2pt](0,0){2}{0}{180}
+\psellipse[linewidth=2pt](0,0)(2,1)
+\psline[linecolor=black, linewidth=2pt](.9,.9)(.9,2.9)(0,2)
+\psline[linecolor=black]{->}(0,-2)(0,3)
+\psline[linecolor=black]{->}(-2,-2)(2.1,2.1)
+\psline[linecolor=black]{->}(-3,0)(3,0)
+\psline[linecolor=black, linewidth=2pt](-2,0)(2,0)
+
+%\pscircle{2}(0,0)
+%\pscircle{2}(1.4,1.4)
+%\psline(0,2)(1.4,2)
+\end{pspicture}\quad\\
+ Der Integrationsbereich f\"ur die $r-$ und die $\varphi-$Variable (in Zylinderkoordinaten) beschreibt
+  den Einheitskreis in zwei Dimensionen (in der Skizze zur H\"alfte grau markiert). Dadurch ist der
+  Integrationsbereich auf jeden Fall im ersten Zylinder (um die $z-$Achse) enthalten. \\
+Der Integrationsbereich in $z-$Richtung h\"angt von $x$ und $y$ ab. Er wird durch den zweiten
+Zylinder (um die $y$-Achse) eingeschr\"ankt:
+$$z^2+x^2\leq 1\,\Rightarrow \, |z|\leq \sqrt{1-x^2}=\sqrt{1-r^2\cos^2\varphi}.$$
+Insgesamt hat man so f\"ur das Volumen von $B_2$:
+\begin{align*}
+V_2=&\int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^1\int\limits_{z=-\sqrt{1-r^2\cos^2\varphi}}^{+\sqrt{1-r^2\cos^2\varphi}}
+1 \cdot r\d z\d r \d\varphi=\int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^1
+2r\sqrt{1-r^2\cos^2\varphi}\d r\d\varphi\\
+=& \int\limits_{\varphi=0}^{2\pi}\left[\frac
+  {-2}{3\cos^2\varphi}\left(1-r^2\cos^2\varphi\right)^{3/2}\right]_{r=0}^1\d\varphi\text{\qquad
+  (Beachte die Kettenregel)}\\
+=& \int\limits_{\varphi=0}^{2\pi}\frac{-2}{3\cos^2\varphi}\left(
+(1-\cos^2\varphi)^{3/2}-1\right)\d\varphi
+=\frac 23 \int\limits_{\varphi=0}^{2\pi}\frac{1-|\sin\varphi|^3}{\cos^2\varphi}\d\varphi\\
+=&\frac 43 \int\limits_0^\pi \frac{1-\sin^3\varphi}{\cos^2\varphi}\d\varphi\text{\qquad (Der
+  Integrand ist $\pi$-periodisch)}\\
+=& \frac 43\left( \left[(1-\sin^3\varphi)\tan\varphi\right]_0^\pi - \int\limits_0^\pi
+(-3\sin^2\varphi\cos\varphi)\tan\varphi\d \varphi\right)\\
+=& \frac 43\int\limits_0^\pi 3\sin^3\varphi\d\varphi= 4 \int\limits_0^\pi
+(\sin\varphi-\cos^2\varphi\sin\varphi)\d\varphi\\
+=& 4 \left[ -\cos\varphi + \frac 13\cos^3\varphi\right]_0^\pi=\frac {16}3
+\end{align*}
+\item Nun wird aus dem oben beschriebenen Volumen noch der Bereich ausgeschnitten, der nicht in dem
+  Zylinder um die $x-$Achse 
+$$y^2+z^2=0$$
+liegt. Der Integrationsbereich f\"ur $r$ und $\varphi$ bleibt wie vorher. Der
+$z-$Integrationsbereich wird jedoch weiter eingeschr\"ankt auf
+$$|z|\leq \text{min}\left\{\sqrt{1-x^2},\, \sqrt{1-y^2}\right\}=\left\{\begin{array}{ll}
+\sqrt{1-x^2}=:z_x&\text{ f\"ur }x^2>y^2\\
+\sqrt{1-y^2}=:z_y&\text{ f\"ur }x^2\leq y^2
+\end{array}\right..$$
+Diese Fallunterscheidung f\"uhrt zu einer Unterteilung des Integrals:
+\begin{align*}
+V_3=\int\limits_{B_3}\d(x,y,z)=4\cdot \int\limits_{r=0}^1\left(
+\int\limits_{\varphi=0}^{\pi/4}\int\limits_{z=-z_x}^{+z_x}\d z\d\varphi +
+\int\limits_{\varphi=\frac{\pi}4}^{\pi/2}\int\limits_{z=-z_y}^{+z_y}\d z \d \varphi\right)r\d r
+\end{align*}
+Beide Teilintegrale treten jeweils viermal auf, da der Integrationsbereich in allen vier Quadranten
+  gleich aussieht. 
+
+Weiter ergibt sich, unter Nutzung der obigen Integration bez\"uglich $z$ und $r$:
+\begin{align*}
+V_3=& 4 \left( \frac 23\int\limits_{\varphi=0}^{\pi/4}
+\frac{1-|\sin\varphi|^3}{\cos^2\varphi}\d\varphi + \frac 23 \int\limits_{\varphi=\frac\pi
+  4}^{\pi/2}\frac{1-|\cos\varphi|^3}{\sin^2\varphi}\d\varphi\right)\\
+=& \frac 83 \Bigl( \left[\tan\varphi
+  (1-\sin^3\varphi)\right]_0^{\pi/4}+\int\limits_0^{\pi/4}\tan\varphi\cdot
+3\sin^2\varphi\cos\varphi\d\varphi +\\
+&\quad +\left[-\cot\varphi(1-\cos^3\varphi)\right]_{\pi/4}^{\pi/2}+\int\limits_{\pi/4}^{\pi/2}\cot\varphi\cdot
+3\cos^2\varphi\sin\varphi\d\varphi\Bigr)\\
+=& \frac 83\Bigl( \left( 1-\frac 1{2^{3/2}}\right) + 3\left[-\cos\varphi+\frac
+  13\cos^3\varphi\right]_0^{\pi/4}+ \\
+&\quad + \left( 1 - \frac 1{2^{3/2}}\right) + 3\left[\sin\varphi - \frac 13
+  \sin^3\varphi\right]_{\pi/4}^{\pi/2}\Bigr)\\
+=& \frac 83\left( \frac{2\sqrt 2-1}{\sqrt 2} + 3 \left[\frac{-1}{\sqrt 2} + \frac{1}{3\sqrt
+    2^3}+\frac 23\right]+3\left[\frac{2}3 - \frac 1{\sqrt 2}+ \frac{1}{3\sqrt 2^3}\right]\right)\\
+=& \frac 83 \left( \frac{2\sqrt 2-1}{\sqrt 2} + 4 - 3\sqrt 2 + \frac 1{\sqrt 2}\right)=8(2-\sqrt 2).
+\end{align*}
+\end{iii}
+}
+
+\ErgebnisC{analysIntgZyln002}{
+\textbf{i)} $\frac{16}3$, \textbf{ii)} $3(2-\sqrt 2)$
+}

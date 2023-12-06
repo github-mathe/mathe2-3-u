@@ -1,0 +1,42 @@
+
+\ProvidesPackage{KopfKlausur}
+
+\usepackage[%
+colorlinks=true,
+pdftitle={\Kurs},
+pdfsubject={\TYPE{} \BLATT{} (\Trimester{} \Jahr)},
+pdfauthor={\PROFESSOR},
+pdfpagemode={UseOutlines},pdfstartview={Fit},
+linkcolor=black,urlcolor=blue]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\KopfUndLogo}{
+	\begin{minipage}{0.66\linewidth}
+		\href{http://www.hsu-hh.de/}{\large Helmut-Schmidt-Universität} \newline
+		\href{http://www.hsu-hh.de/}{\large Universität der Bundeswehr Hamburg} \newline
+		\href{http://www.hsu-hh.de/}{\large Fakultät für Maschinenbau} \vspace*{0.5\baselineskip} \newline
+		\href{http://www.hsu-hh.de/}{\large \textbf{\PROFESSOR}} \newline
+		\href{http://www.hsu-hh.de/}{\large \textbf{\ASSISTANT}} \vspace*{0.5\baselineskip} \newline
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.33\linewidth}
+		\raggedleft
+		\vspace*{-.5cm}
+		\includegraphics[height=74pt]{HSU_RGB}
+	\end{minipage}
+	\mbox{}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\uebheader}[4]{
+%	\KopfUndLogo \newline
+%	{\large \textbf{#1 \hfill Blatt #2}} \vspace*{0.5\baselineskip}\newline
+%	{\large #3 \hfill #4} \vspace*{0.5\baselineskip}\newline
+%}
+\newcommand{\uebheader}[4]{
+	\KopfUndLogo \newline
+	{\large \textbf{#1 \hfill Alte Klausuraufgaben}} \vspace*{0.5\baselineskip}\newline
+	%{\large \textbf{#1 \hfill Klausur 17.03.2022}} \vspace*{0.5\baselineskip}\newline
+	{\large #3 \hfill #4} \vspace*{0.5\baselineskip}\newline
+}
+

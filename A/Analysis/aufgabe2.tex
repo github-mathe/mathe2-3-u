@@ -1,0 +1,73 @@
+\Aufgabe[e]{~} {
+\begin{abc}
+ \item Zeigen Sie anhand der Definition der Konvergenz, dass gilt
+\[
+\lim_{n\rightarrow \infty} \dfrac{2n^2+n-12}{n^2-8} = 2\,.
+\]
+
+\item Zeigen Sie: Konvergiert $\{a_{n}\}_{n\in\N}$ gegen $a$, so konvergiert 
+auch $\{|a_{n}|\}_{n\in\N}$ gegen $|a|$.
+
+\item Gilt die Umkehrung von b)? Begr\"unden Sie Ihre Aussage mit einem
+  Beweis oder einem Gegenbeispiel.
+
+\end{abc}
+
+
+
+}
+
+
+\Loesung{
+\bigskip
+\textbf{L\"osung}
+
+\smallskip
+\textbf{Zu a)} Die Aussage \glqq $a_n$ konvergiert gegen $a$\grqq\ bedeutet: F\"ur jedes 
+$k\in \N > 0$ existiert ein $N=N(k)\in \R$, so dass f\"ur alle $n > N$ gilt, dass 
+$|a_n-a| < 10^{-k}$. F\"ur $n\in \N$ gilt:
+$$
+a_n := \dfrac{2n^2+n-12}{n^2-8} = \dfrac{2(n^2-8)+(n+4)}{n^2-8} = 2 + 
+\dfrac{n+4}{n^2-8}\,.
+$$
+Damit folgt
+\begin{align*}
+|a_n - 2| & =  \left|\dfrac{n+4}{n^2-8}\right| \stackrel{\mbox{f\"ur }n\geq 3}{=} 
+\dfrac{n+4}{n^2-8} = \dfrac{n+4}{n^2-16+8}\\[3ex]  & \stackrel{\mbox{f\"ur }n\geq 5}{<}  
+\dfrac{n+4}{n^2-16} = \dfrac{n+4}{(n+4)(n-4)} = \dfrac{1}{n-4} \,.
+\end{align*}
+Sei nun $k\in \N$ vorgegeben. Es gilt 
+\[
+\frac{1}{n-4} = 10^{-k} \qquad \Longleftrightarrow \qquad n = 10^k +4\,.
+\]
+Ist $N(k):=4+10^k$, dann gilt insbesondere f\"ur alle $n > N(k)$: 
+\[
+ |a_n-2|< 10^{-k}\,. 
+\]
+Damit ist ist Behauptung bewiesen. 
+
+
+\bigskip
+\textbf{Zu b)} Die Aussage \glqq $a_n$ konvergiert gegen $a$\grqq\ bedeutet: F\"ur jedes 
+$k\in \N$ gibt es ein $N(k)\in \R$, so dass f\"ur alle $n > N$ gilt, dass $|a_n-a| < 
+10^{-k}$. Wegen 
+\[
+||a_n|-|a|| \le |a_n-a|\,,
+\]
+gilt f\"ur jedes $k\in \N$, dass das dazugeh\"orige $N(k)$ und jedes $n > N$ auch 
+\[
+||a_n|-|a|| <  10^{-k}
+\] 
+erf\"ullt, d.h.\ $|a_n|$ konvergiert gegen $|a|$.
+
+
+\bigskip
+\textbf{Zu c)} Die Umkehrung gilt nicht, zum Beispiel gilt f\"ur $a_n=(-1)^n$ sicher 
+$|a_n|=1\to 1$, aber $(-1)^n$ ist nicht konvergent.
+
+}
+
+\ErgebnisC{aufgabe2}
+{
+\textbf{c)} Betrachten Sie $a_n=(-1)^n$. 
+}

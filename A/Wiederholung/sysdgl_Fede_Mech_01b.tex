@@ -1,0 +1,197 @@
+\Aufgabe[e]{Gekoppelte Schwingung}
+{
+Zu untersuchen ist das unten skizzierte mechanische System aus zwei durch eine Feder
+  (Federkonstante $D$) verbundene Massen $m_1$ und $m_2$. Die beiden Massen sind im Schwerefeld der
+  Erde ($\vec g$)  an F\"aden der L\"ange $l$ so aufgeh\"angt, dass die Feder entspannt ist, wenn
+  beide F\"aden senkrecht sind ($\varphi_1=\varphi_2=0$). F\"ur kleine Auslenkungen der Massen um
+  die Winkel $\varphi_1$ bzw. $\varphi_2$ ergibt der Impulserhaltungssatz:
+\begin{align*}
+m_1l\ddot \varphi_1=& - m_1\varphi_1 g + Dl(\varphi_2-\varphi_1)\\
+m_2l\ddot \varphi_2=& -m_2\varphi_2 g + Dl(\varphi_1-\varphi_2).
+\end{align*}
+\begin{center}
+\begin{pspicture}(0,0)(5,4)
+\psline[fillstyle=vlines](0,3.5)(0,4)(4,4)(4,3.5)(0,3.5)
+\psline(.5,3.5)(1.5,.67)
+\psline(3.5,3.5)(4,.54)
+\psline[linecolor=gray](.5,3.5)(.5,2)
+\psline[linecolor=gray](3.5,3.5)(3.5,2)
+\psline
+  (1.50000,  0.67000)
+  (1.69231,  0.66000)
+  (1.88462,  0.45000)
+  (2.07692,   0.84000)
+  (2.26923,   0.43000)
+  (2.46154,   0.82000)
+  (2.65385,   0.41000)
+  (2.84615,   0.80000)
+  (3.03846,   0.39000)
+  (3.23077,   0.78000)
+  (3.42308,   0.37000)
+  (3.61538,   0.56000)
+  (3.80769,   0.55000)
+  (4.00000,   0.54000)
+          
+\pscircle[fillstyle=solid](1.5,.67){.3}
+\pscircle[fillstyle=solid](4, .54){.4}
+\psarc(.5,3.5){1}{270}{290}
+\psarc(3.5,3.5){1}{270}{280}
+\put(.8,2.9){$\varphi_1$}
+\put(3.7,2.8){$\varphi_2$}
+\put(1.3,.6){$m_1$}
+\put(3.8,.5){$m_2$}
+\put(1.3,1.8){$l$}
+\put(2.8,.9){$D$}
+
+\end{pspicture}
+\end{center}
+%\end{figure}
+Durch den \"Ubergang von den Auslenkungen $\varphi_1,\,\varphi_2$ und deren Geschwindigkeiten $\dot\varphi_1,\, \dot\varphi_2$ zu $\vec y =
+(\varphi_1,\, \dot\varphi_1,\, \varphi_2,\, \dot\varphi_2)^\top$ 
+l\"asst sich das obige (Differential-)Gleichungssystem schreiben als 
+$$
+\dot{ \vec y}  = \vec A \vec y \text{ mit }\vec A 
+= \begin{pmatrix} 
+0&1&0&0\\
+-\left(\frac gl+\frac D{m_1}\right)&0&\frac D{m_1}&0\\
+0&0&0&1\\
+\frac{D}{m_2}&0&-\left(\frac{g}l+\frac D{m_2}\right)&0\end{pmatrix}.
+$$
+\begin{abc}
+\item Bestimmen Sie die Eigenfrequenzen des Systems. Die Eigenfrequenzen sind die Imagin\"arteile der komplexen Eigenwerte der Systemmatrix $\vec A$. 
+\item Bestimmen Sie auch die Eigenvektoren zu den ermittelten Eigenwerten. 
+\item Nehmen Sie nun an, dass der Realteil eines Eigenvektors die jeweilige \textit{Eigenschwingung} des Systems beschreibt: Die erste und dritte Komponente (Beachte $\vec y=(\varphi_1,\,\dot \varphi_1,\, \varphi_2,\, \dot \varphi_2)^\top$) geben jeweils den Maximalausschlag des jeweiligen Pendels an. \\
+Beschreiben Sie anhand der Eigenvektoren die beiden Eigenschwingungen. 
+\end{abc}
+
+}
+\Loesung{
+\begin{abc}
+
+\item Mit $\alpha=\frac gl$ und $\delta_j=\frac D{m_j}$ f\"ur $j=1,2$ haben wir das
+charakteristische Polynom:
+\begin{align*}
+p(\lambda)=&\det\begin{pmatrix}
+-\lambda         &         1  &            0  &       0\\
+-\alpha-\delta_1 & -\lambda   &   \delta_1   &       0\\
+          0      &         0  &  -\lambda     &       1\\
+\delta_2        &         0  & -\alpha-\delta_2& -\lambda
+\end{pmatrix}\\
+=& -\lambda\det\begin{pmatrix}
+ -\lambda   &   \delta_1   &       0\\
+         0  &  -\lambda     &       1\\
+        0  & -\alpha-\delta_2& -\lambda
+\end{pmatrix} - 1\cdot \det \begin{pmatrix}
+-\alpha-\delta_1 &   \delta_1   &       0\\
+          0      &  -\lambda     &       1\\
+\delta_2        & -\alpha-\delta_2& -\lambda
+\end{pmatrix}\\
+=& \lambda^2\det\begin{pmatrix}
+  -\lambda     &       1\\
+-\alpha-\delta_2& -\lambda
+\end{pmatrix} +\\
+&+\lambda  \det \begin{pmatrix}
+-\alpha-\delta_1&       0\\
+\delta_2        & -\lambda
+\end{pmatrix}+1\cdot \det\begin{pmatrix}
+-\alpha-\delta_1 &   \delta_1     \\
+\delta_2        & -\alpha-\delta_2
+\end{pmatrix}\\
+=& \lambda^2(\lambda^2 +\alpha+\delta_2) + \lambda^2(\alpha+\delta_1)
++(\alpha+\delta_1)(\alpha+\delta_2)-\delta_1\delta_2\\
+=& (\lambda^2)^2 + 2 \frac{\alpha+\delta_1 + \alpha+\delta_2}{2} \lambda^2 + \alpha^2 + \alpha(\delta_1+\delta_2).
+\end{align*}
+F\"ur seine Nullstellen (mit $p(\lambda)=0$) gilt:
+\begin{align*}
+&&\lambda^2=&-\frac{2\alpha+\delta_1+\delta_2}2 \pm \sqrt{\frac{(2\alpha+\delta_1+\delta_2)^2}4
+- \alpha^2-\alpha(\delta_1+\delta_2)}\\
+&&=& \frac{-2\alpha -\delta_1-\delta_2 \pm \sqrt{\delta_1^2+\delta_2^2+2\delta_1\delta_2
+}}2=\frac{-2\alpha-(\delta_1+\delta_2)\pm (\delta_1+\delta_2)}2\\
+\Rightarrow&&\lambda_{1,2}=&\pm \imag\sqrt\alpha,\, \lambda_{3,4}=\pm \imag \sqrt{\alpha+\delta_1+\delta_2}.
+\end{align*}
+Die Eigenfrequenzen des Systems sind damit 
+$$\omega_1=\sqrt\alpha=\sqrt{\frac gl} \text{  und
+} \omega_2=\sqrt{\alpha+\delta_1+\delta_2}=\sqrt{\frac gl + \frac D{m_1}+\frac D{m_2}}.$$
+\item Ein Eigenvektor $\vec v_1$ zu $\lambda_1$ ist gegeben durch das Gleichungssystem 
+$$(\vec A- \lambda_1\vec E)\vec v_1=0,$$
+ also durch 
+ $$\begin{array}{rrrr|r|l}
+-\imag\sqrt \alpha         &         1  &            0  &       0  &   0  & \text{ 2. Zeile + $\imag\sqrt \alpha\cdot$ 1. Zeile            }\\
+-\alpha-\delta_1 & -\imag\sqrt \alpha   &   \delta_1   &       0   &   0 & \text{1. Zeile             }\\
+          0      &         0  &  -\imag\sqrt \alpha     &       1  &   0 & \text{4. Zeile +  $\imag\sqrt \alpha\cdot$ 3. Zeile }\\
+\delta_2        &         0  & -\alpha-\delta_2& -\imag\sqrt \alpha &   0 & \text{3. Zeile     }\\\hline
+
+-\delta_1   & 0       & \delta_1    & 0         & 0& \text{ +$\delta_1/\delta_2\cdot$ 3. Zeile}\\
+-\imag\sqrt\alpha& 1  &        0    & 0         & 0& \text{              }\\
+\delta_2    & 0       &-\delta_2    & 0         & 0& \text{              }\\
+        0   & 0       &-\imag\sqrt\alpha& 1     & 0& \text{              }\\\hline
+
+0           & 0       & 0           & 0         & 0& \text{              }\\
+-\imag\sqrt\alpha& 1  &        0    & 0         & 0& \text{              }\\
+\delta_2    & 0       &-\delta_2    & 0         & 0& \text{              }\\
+        0   & 0       &-\imag\sqrt\alpha& 1     & 0& \text{              }\\
+\end{array}$$
+
+Daraus ergibt sich $\vec v_1 = (1,\, \imag\omega_1,\, 1,\, \imag\omega_1)^\top$. \\
+Wegen $\lambda_2=\overline{\lambda_1}$ und weil die Matrix $\vec A$ reell ist, ist 
+$$\vec v_2=\overline{\vec v_1}= \begin{pmatrix}1\\-\imag\omega_1\\1\\-\imag \omega_1\end{pmatrix}$$ ein Eigenvektor zu $\lambda_2$. \\
+%Realteil und Imagin\"arteil von $\EH{i\omega_1 t}\vec v_1$ ergeben die ersten beiden
+%Fundamentall\"osungen des Systems:
+%$$\vec y_1(t) = \begin{pmatrix}\cos(\omega_1
+%t)\\-\omega_1\sin(\omega_1t)\\\cos(\omega_1t)\\-\omega_1\sin(\omega_1t)\end{pmatrix}
+%\text{ und } \vec
+%y_2(t)=\begin{pmatrix} \sin(\omega_1t)\\\omega_1\cos(\omega_1t)\\\sin(\omega_1t)\\\omega_1\cos(\omega_1t)\end{pmatrix}.$$
+F\"ur die zweite Eigenfrequenz $\omega_2$ ergibt sich 
+$$\begin{array}{rrrr|r|l}
+-\imag\omega_2  &         1  &            0  &       0  &   0  & \text{ 2. Zeile + $\imag\omega_2\cdot$ 1. Zeile            }\\
+-\alpha-\delta_1 & -\imag\omega_2   &   \delta_1   &       0   &   0 & \text{1. Zeile             }\\
+          0      &         0  &  -\imag\omega_2     &       1  &   0 & \text{4. Zeile +  $\imag\omega_2\cdot$ 3. Zeile }\\
+\delta_2        &         0  & -\alpha-\delta_2& -\imag\omega_2 &   0 & \text{3. Zeile     }\\\hline
+
+\omega_2^2-\alpha-\delta_1 & 0   &   \delta_1   &       0   &   0 & \text{                     }\\
+-\imag\omega_2  &         1  &            0  &       0  &   0  & \text{                 }\\
+\delta_2        &         0  & -\alpha-\delta_2+\omega_2^2&  0 &   0 & \text{             }\\
+          0      &         0  &  -\imag\omega_2     &       1  &   0 & \text{                  }\\\hline
+
+\delta_2 & 0   &   \delta_1   &       0   &   0 & \text{                     }\\
+-\imag\omega_2  &         1  &            0  &       0  &   0  & \text{                 }\\
+\delta_2        &         0  & \delta_1 &  0 &   0 & \text{             }\\
+          0      &         0  &  -\imag\omega_2     &       1  &   0 & \text{                  }\\\hline
+
+
+\end{array}$$
+Daraus erh\"alt man den Eigenvektor $v_3= (1,\, \imag\omega_2,\, -\delta_2/\delta_1,\, -\imag\omega_2\delta_2/\delta_1)^\top$
+zu $\lambda_3=\omega_2$ und den Eigenvektor 
+$$\vec v_4=\overline{\vec v_3}=\begin{pmatrix}1\\-\imag \omega_2\\-\delta_2/\delta_1\\\imag\omega_2\delta_2/\delta_1\end{pmatrix}$$
+zu $\lambda_4=\overline{\lambda_3}$. 
+
+%und die beiden fehlenden Fundamentall\"osungen des Systems:
+%$$\vec y_3(t) = \begin{pmatrix}
+%\cos(\omega_2t)\\-\omega_2\sin(\omega_2t)\\-\frac{\delta_2}{\delta_1}\cos(\omega_2t)\\\frac{\delta_2}{\delta_1}\omega_2\sin(\omega_2t)\end{pmatrix}
+%\text{ und } \vec
+%y_4(t)=\begin{pmatrix} \sin(\omega_2t)\\\omega_2\cos(\omega_2t)\\-\frac{\delta_2}{\delta_1}\sin(\omega_2t)\\-\frac{\delta_2}{\delta_1}\omega_2\cos(\omega_2t)\end{pmatrix}.$$
+\item Wir gehen wieder zu den urspr\"unglichen Unbekannten 
+$\vec\varphi=(\varphi_1,\,\varphi_2)^\top$ \"uber und erhalten die folgenden Eigenschwingungen:
+\begin{iii}
+\item $\vec \varphi_1(t)=(\alpha\cos(\omega_1t)
++ \beta\sin(\omega_1t))\begin{pmatrix}1\\1\end{pmatrix}$. Dies beschreibt eine
+gleichphasige Schwingung beider Pendel. \\
+Da beide Amplituden (Komponenten des Vektors) positiv sind, schlagen beide Pendel gleichzeitig in dieselbe Richtung aus. \\
+Die Feder bleibt immer entspannt. \\
+\item
+$\vec \varphi_2(t)=(\gamma\cos(\omega_2t)+\delta\sin(\omega_2t))\begin{pmatrix}1\\-\frac{\delta_2}{\delta_1}\end{pmatrix}.$
+Dies beschreibt eine gegenphasige Schwingung beider Pendel. \\
+Beide Amplituden haben ein unterschiedliches Vorzeichen, also schlagen die Pendel jeweils in unterschiedliche Richtungen aus. \\
+Das Verh\"altnis beider Amplituden ist so groß, dass der Schwerpunkt beider Massen stets im selben Punkt liegt.  
+\end{iii}
+\end{abc}
+
+
+}
+\ErgebnisC{AufgsysdglFedeMech001}
+{
+Eigenwerte:
+$\lambda_{1,2}=\pm \imag\sqrt\alpha,\, \lambda_{3,4}=\pm \imag \sqrt{\alpha+\delta_1+\delta_2}$
+mit $\alpha=g/l$, $\delta_j=D/m_j$\\
+Eigenfrequenzen: $\omega_1=\sqrt{\alpha}$, $\omega_2=\sqrt{\alpha+\delta_1+\delta_2}$\\
+}

@@ -1,0 +1,103 @@
+\Aufgabe[e]{alte Klausuraufgabe}
+{
+Gegeben sei die Funktion 
+$$g: \R^2\rightarrow \R, \quad \text{ mit } g(x,y)=(y-x^2)(y-2x^2). $$
+\begin{abc}
+\item Zeigen Sie, dass die Funktion $g(x,y)$ auf allen Geraden durch den Ursprung $(0,0)$ lokale Minima hat.
+\item Hat die Funktion $g(x,y)$ im Ursprung ein lokales Minimum?\\
+\textbf{Hinweis}: Untersuchen Sie die Funktion l\"angs der Kurve $\vec q(t)=(t,3t^2/2)^\top$.
+
+\item Berechnen Sie das Taylor-Polynom zweiten Grades der Funktion 
+$g(x,y)$ im Punkt $(1,1)$. 
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Eine Gerade durch den Ursprung kann durch $\vec k(t)=(at,bt)^\top,\quad t\in\R$ parametrisiert werden. 
+Der Funktionsverlauf l\"angs dieser Geraden ist dann 
+$$\varphi(t)=g(\vec k(t))=(bt-a^2t^2)(bt-2a^2x^2)=2a^4t^4-3a^2bt^3+b^2t^2$$
+mit $\varphi'(t)=8a^4t^3-9a^2bt^2+2b^2t$ und $\varphi''(t)=24a^4t^2-18a^2b^2t+2b^2$. \\
+Wegen $\varphi'(0)=0$ und $\varphi''(0)=2b^2>0$ liegt f\"ur $b\neq 0$ ein Minimum der Funktion im Ursprung vor. \\
+Falls $b=0$ und $a\neq 0$ ist, hat man 
+$\varphi(t)=2a^4t^4$. Auch diese Funktion hat im Ursprung ihr Minimum. 
+\item N\"ahert man sich dem Ursprung auf der Kurve $\vec q(t)=(t,3t^2/2)^\top,\qquad t\in\R$, hat man 
+$$\psi(t)=g(\vec q(t))=\left(\frac{3t^2}2-t^2\right)\left( \frac{3t^2}2 - 2t^2\right)=\frac 12 \cdot \left( -\frac 12\right)t^4=-\frac{t^4}4<0 \text{ f\"ur }t>0.$$
+In jeder Umgebung von $(0,0)^\top$ hat man also auch Funktionswerte $g(x,y)<0$. Im Ursprung kann also kein Minimum vorliegen. 
+\item Wir ben\"otigen die ersten beiden Ableitungen von $g(x,y)$: 
+\begin{align*}
+g(x,y)=& (y-x^2)(y-2x^2)&\Rightarrow&&g(1,1)=&0\\
+\nabla g(x,y)=& \begin{pmatrix}-2x(y-2x^2)-4x(y-x^2)\\ (y-2x^2)+(y-x^2)\end{pmatrix} &\Rightarrow&& \nabla g(1,1)=& \begin{pmatrix} 2\\-1\end{pmatrix}\\
+\vec H_g(x,y)=& \begin{pmatrix}-2y+12x^2-4y+12x^2 & -6x\\
+-6x& 2\end{pmatrix} &\Rightarrow&& \vec H_g(1,1)=&\begin{pmatrix} 18&-6\\-6&2\end{pmatrix}
+\end{align*}
+Das Taylorpolynom ist damit 
+\begin{align*}
+T_2(x,y)=&g(1,1)+\nabla g(1,1)\cdot \begin{pmatrix}x-1\\y-1\end{pmatrix} + \frac 12 (x-1,y-1)\vec H_g(1,1)\begin{pmatrix}x-1\\y-1\end{pmatrix} \\
+=& 2(x-1)-(y-1) + 9(x-1)^2+(y-1)^2-6(x-1)(y-1).
+\end{align*}
+\end{abc}
+\textbf{Zusatz\"uberlegungen zum Sattelpunkt $(0,0)$}: 
+Es werden die \"Aquipotentiallinien $f(x,y)=0$ betrachtet: 
+\begin{align*}
+&&f(x,y)=&0\\
+\Leftrightarrow&& 0=& (y-x^2)(y-2x^2)&&\\
+\Leftrightarrow && y=&x^2\text{ oder } y=2x^2&&
+\end{align*}
+Diese teilen die Ebene in vier Bereiche $A,\, B,\, C,\, D$. (siehe Skizze)
+\begin{center}
+\begin{pspicture} (-2,-1)(2,8)
+%\psgrid(-2,-1)(2,8)
+\psline[fillstyle=solid, fillcolor=gray, linecolor=gray](-2,4)(-2,-1)(2,-1)(2,4)
+\psplot[plotpoints=200, plotstyle=curve, fillstyle=solid, fillcolor=white]
+{-2}{2}
+{x x mul}
+\psplot[plotpoints=200, plotstyle=curve, fillstyle=solid, fillcolor=gray]
+{-2}{2}
+{2 x mul x mul}
+\put(.1,2.1){$A$}
+\put(-.6,-.6){$C$}
+\put(-1.8,3.6){$B$}
+\put(1.5,3.6){$D$}
+\psline{->}(-2,0)(2,0)
+\psline{->}(0,-1)(0,8)
+\put(1.7,.1){$x$}
+\put(.1,7.6){$y$}
+\psdot(0,1)
+\psdot(-1,1.5)
+\psdot(1,1.5)
+\psdot(0,-1)
+\psline[fillstyle=solid, fillcolor=white, linecolor=white]
+(-.3,1.1)(.5,1.1)(.5,1.4)(-.3,1.4)
+\put(-.3,1.1){$(0,1)$}
+\psline[fillstyle=solid, fillcolor=white, linecolor=white]
+(-0.5 , 1.6 )
+(-1.9 , 1.6 )
+(-1.9 , 1.9 )
+(-0.5 , 1.9 )
+\put(-1.9,1.6){$(-1,3/2)$}
+\psline[fillstyle=solid, fillcolor=white, linecolor=white]
+( 0.6 , 1.6 )
+( 1.7 , 1.6 )
+( 1.7 , 1.9 )
+( 0.6 , 1.9 )
+\put(.6,1.6){$(1,3/2)$}
+\psline[fillstyle=solid, fillcolor=white, linecolor=white]
+(0.1 , -1.0  )
+(1.1 , -1.0  )
+(1.1 , -0.6  )
+(0.1 , -0.6  )
+\put(0.1,-.9){$(0,-1)$}
+
+
+\end{pspicture}
+\end{center}
+Da $f(x,y)$ stetig ist, ist die Funktion in jedem dieser Bereiche jeweils \"uberall gr\"oßer oder \"uberall kleiner Null. Wir pr\"ufen die Vorzeichen an einzelnen Punkten nach: 
+\begin{align*}
+A: &\quad& f(0,1)=& 1>0&&\\
+B: &\quad& f(-1,3/2)=& -\frac 14<0&&\\
+C: &\quad& f(0,-1)=& 1>0&&\\
+D: &\quad& f(1,3/2)=& -\frac 14<0&&
+\end{align*}
+Da nun jede Umgebung $U$ des Punktes $(0,0)^\top$ Teile aller vier Mengen $A,\, B,\, C$ und $D$ enth\"alt, nimmt die Funktion $f(x,y)$ auch in $U$ stets beide Vorzeichen an. Dies entspricht aber genau der Definition eines Sattelpunktes.
+}
+

@@ -1,0 +1,93 @@
+\Aufgabe[e]{Kurvendiskussion}{\label{KurvDisk002}
+\begin{abc}
+\item  Gegeben sei die Funktion
+$$	f(x) = \dfrac{x^2+3\,x}{1-x}.$$
+\begin{iii}
+	\item Geben Sie den maximalen Definitionsbereich der Funktion \ $f$ \ an.
+	
+	\item Bestimmen Sie die Nullstellen der Funktion.
+	
+	\item Bestimmen Sie die kritischen Punkte für die Extrema der Funktion und deren Funktionswerte.
+	
+	\item Bestimmen Sie die (nicht vertikale) Asymptote der Funktion, d.\,h. diejenige Gerade \ $g(x) = a+b\,x$\, für die 
+$$	\lim\limits_{x\rightarrow\pm\infty} \big(f(x)-g(x)\big)= 0$$
+ist.
+
+  \item Skizzieren Sie die Funktion.
+\end{iii}
+\item Gegeben sei die Funktion
+$$	g\,:\,\R\rightarrow\R\,:\,x\rightarrow \big(x^2-4\big)^2\cdot\EH{-x} .$$
+Bestimmen Sie alle relativen Minima und Maxima der Funktion \ $g$ \ \textbf{ohne} die zweite Ableitung zu berechnen.
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item
+\begin{iii}
+	\item Der maximale Definitionsbereich ist \ $\mathcal D = \R\backslash\left\{1\right\}$\,.
+	
+	\item Die Nullstellen der Funktion sind \ $x_{\text N_1} = -3 \text{ und } x_{\text N_2} = 0$\,.
+	
+	\item Die kritischen Punkte sind die Nullstellen der ersten Ableitung. Aus
+$$	f'(x) = \frac{(2x+3)(1-x)+(x^2+3x)}{(1-x)^2}= \dfrac{-x^2+2\,x+3}{(1-x)^2}=0  $$
+  folgt
+$$
+  x_{\text K_1}= -1\text{ mit } f(-1)=-1 \text{ und } x_{\text K_2}= 3\text{ mit } f(3)=-9\ .
+$$
+  	
+	\item Aus  $f(x) = -x-4+\dfrac{4}{1-x}$  folgt, dass  $g(x)=-x-4$  die Asymptote ist.
+\item \quad\\
+\end{iii}
+\end{abc}
+\begin{center}	
+\psset{unit=0.5cm}
+\begin{pspicture}(-5,-16)(7,6)
+
+\psgrid[griddots=8,subgriddiv=0](-5,-16)(7,6)
+\psline[linestyle=dashed](-5,1)(7,-11)
+\psline[linestyle=dashed](1,-16)(1,6)
+
+\pscircle*(-3,0){0.1}
+\pscircle*(-1,-1){0.1}
+\pscircle*(-0,0){0.1}
+\pscircle*(3,-9){0.1}
+\psplot[plotpoints=100, plotstyle=curve]
+{-5}{.63}
+{
+x x mul 3 x mul add 1 x neg add div
+}
+\psplot[plotpoints=100, plotstyle=curve]
+{1.37}{7}
+{
+x x mul 3 x mul add 1 x neg add div
+}
+
+\end{pspicture}
+
+\end{center}
+
+Bei \ $(-1,-1)$ \ handelt es sich also um ein (lokales) Minimum, bei \ $(3,-9)$ \ um ein Maximum.
+\begin{abc}\setcounter{enumi}{1}
+\item Da die Funktion nirgends negativ ist, sind die Nullstellen automatisch lokale Minima: \ $x_{\text {min}_{1,2}} = \pm 2$\,. 
+
+Die Nullstellen der ersten Ableitung sind die kritischen Punkte. Aus
+$$
+	g'(x) = 4x\,(x^2-4)\,\EH{-x}-(x^2-4)^2\,\EH{-x} = (-x^2+4x+4)(x^2-4)\,\EH{-x}=0  
+$$
+folgt
+$$
+	x_{1,2} =\pm 2 \text{ und } x_{3,4} = 2\pm\sqrt 8.
+$$
+Die ersten beiden kritischen Punkte sind die schon bekannten Nullstellen und die beiden anderen sind
+Maxima, da ein einfacher kritischer Punkt zwischen zwei Minima nur ein Maximum sein kann und die
+Funktion für \ $x\rightarrow\infty$ \ gegen \ 0 \ geht.
+\end{abc}
+}
+
+\ErgebnisC{AufganalysKurvDisk002}
+{
+\textbf{a)}\textbf{ii)} $0,\, -3$, 
+\textbf{iii)} -1,\, 3, 
+\textbf{iv)} $g(x)=-x-4$
+}

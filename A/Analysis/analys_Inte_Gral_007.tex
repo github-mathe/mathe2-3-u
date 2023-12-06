@@ -1,0 +1,64 @@
+\Aufgabe[e]{Fr\"uhere Klausuraufgabe}
+{
+\begin{abc}
+\item Berechnen Sie die Integrale
+$$I=\int\limits_0^{\pi}(\sin x)\cdot  \EH{2\cos x}\d x \qquad\text{ und } \qquad
+J=\int\limits_{1}^2 (t^3-2t)\EH{3t^2}\d t.$$
+\item Berechnen Sie das Integral $\displaystyle\int_{B}\sqrt{x^2+y^2}\d x \d y$, wobei $B$ der Kreisring in der $(x,y)-$Ebene mit Mittelpunkt $(0,0)^\top$, Innenradius $a$ und Außenradius $b$ (mit $0<a<b$) ist. 
+\item Berechnen Sie das Integral $$\iiint_D  \EH{5z+3y+2x}\d x \d y \d z$$
+\"uber dem  Gebiet $D=\left\{(x,y,z)^\top\Bigl| x,y,z\geq 0\text{ und }5z+3y+2x\leq 2\Bigr.\right\}.$%Onlineaufgabe
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Im ersten Integral substituieren wir 
+$$u(x)=2\cos x, \qquad \d u = -2\sin x \d x. $$
+Eingesetzt ergibt das
+\begin{align*}
+I=& \int\limits_0^{\pi} \sin x \EH{2\cos x}\d x \\
+=& -\frac 12 \int\limits_{u(0)}^{u(\pi)}\EH{u}\d u=-\frac 12 \left[ \EH
+  u\right]_{u=2}^{-2}=\frac{\EH 2 - \EH {-2}}2=\sinh(2).
+\end{align*}
+Zur Berechnung des zweiten Integrals integrieren wir partiell:
+\begin{align*}
+J=& \int\limits_{1}^2 \underbrace{(t^2-2)}_{u}\underbrace{t
+  \EH{3t^2}}_{v'}=\Bigl[\underbrace{(t^2-2)}_{u}\underbrace{\left(\frac 1
+    6\EH{3t^2}\right)}_{v}\Bigr]_{1}^2- \int\limits_{1}^2\underbrace{2t}_{u'}\underbrace{\frac 16
+  \EH{3t^2}}_v\d t\\
+=& \frac 13 \EH{12}+ \frac 1 6 \EH{3} - \left.\frac 2{36}\EH{3t^2}\right|_{1}^2
+=\frac {\EH 3}6\left( 2\EH 9 + 1\right) + \frac 1 {18}\left( \EH 3 - \EH {12}\right)\\
+=& \frac{\EH 3}{18}\left( 5\EH 9 +4\right).
+\end{align*}
+\item Es bietet sich eine Berechnung in Polarkoordinaten an: 
+\begin{align*}
+\int\limits_B\sqrt{x^2+y^2}\d x \d y = & \int\limits_{\varphi=0}^{2\pi } \int\limits_{r=a}^br r\d
+  r \d\varphi
+= 2\pi \frac{b^3-a^3}3.
+\end{align*}
+\item Wir integrieren in kartesischen Koordinaten, wobei zu beachten ist, dass die
+Integrationsgrenzen f\"ur $z$ von $x$ und $y$ abh\"angen und die f\"ur $y$ von $x$. Deswegen ist die
+Integrationsreihenfolge -- nachdem sie einmal gew\"ahlt wurde -- festgelegt. Die oberen Integrationsgrenzen
+resultieren aus der Ebenengleichung $2x+3y+5z=2$:
+\begin{align*}
+\int\limits_D \EH{5z+3y+2x}\d(x,y,z)&=\int\limits_{x=0}^1\EH{2x}\int\limits_{y=0}^{\frac{2-2x}3}\EH{3y}\int\limits_{z=0}^{\frac{2-2x-3y}5}\EH{5z}\d
+z \d y \d x\\
+&= \int\limits_{x=0}^1\EH{2x}\int\limits_{y=0}^{\frac{2-2x}3}\EH{3y}\left[ \frac{\EH{5z}}5\right]_{z=0}^{\frac{2-2x-3y}5} \d
+y \d x\\
+&= \frac
+15 \int\limits_{x=0}^1\EH{2x}\int\limits_{y=0}^{\frac{2-2x}3}\EH{3y}\left( \EH{2-2x-3y}-1\right) \d y \d x\\
+&= \frac 15 \int\limits_{x=0}^1\EH{2x}\left[\EH{2-2x} y
+- \frac{\EH{3y}}3\right]_{y=0}^{\frac{2-2x}3} \d x\\
+&= \frac 1{15}\int\limits_{x=0}^1\left( \EH 2 (2-2x) - \EH 2 +\EH{2x}\right)\d x\\
+&= \frac 1{15}\left[ \EH 2 (x-x^2) + \frac 12 \EH{2x}\right]_{x=0}^1
+ = \frac {\EH 2 - 1}{30}
+\end{align*}
+\end{abc}
+}
+
+
+\ErgebnisC{analysInteGral007}
+{
+\textbf{ a)} $I = \sinh(2)$, $J= \frac{\EH 3}{18}(5\EH 9 +4)$, 
+\textbf{ b)} $\frac{2\pi(b^3-a^3)}3$, 
+\textbf{ c)} $\EH{ }\sinh(1)/6$
+}

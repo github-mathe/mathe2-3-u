@@ -1,0 +1,60 @@
+\Aufgabe[e]{Lineare Differentialgleichung}
+{
+Gegeben sei das Anfangswertproblem für \ $u(t)$
+$$	u'' + 4\,u' +3\,u = 12\cdot\Big(1-h(t-2)\Big)\ ,\quad u(0)=u'(0)=0$$
+wobei \ $h(t)$ \ die Heaviside--Funktion ist.
+
+
+\textbf{a)} \ Bestimmen Sie die Lösung mit Hilfe der Laplace--Transformation.
+
+\textbf{b)} \ Geben Sie die Lösung in den Bereichen  $0\le t < 2$  und  $ 2\le t$ ohne Verwendung der Heaviside--Funktion an und fassen Sie die Terme sinnvoll zusammen.
+
+}
+
+\Loesung{
+\begin{abc}
+\item Die Laplace--Transformation des AWPs ergibt
+	\[
+	s^2\,U(s) +4s\,U(s)+3\,U(s) = \frac{12}{s}\cdot\Big(1-\EH{-2s}\Big)\ .
+\]
+Die Laplace--Transformierte der Lösung ergibt sich damit zu
+	\[
+	U(s) = \frac{12}{s\cdot(s+3)\cdot(s+1)}\cdot\Big(1-\EH{-2s}\Big) = \left(\frac 4s + \frac{2}{s+3} + \frac{-6}{s+1}\right) \cdot\Big(1-\EH{-2s}\Big)\ .
+\]
+
+Die Rücktransformation ergibt die gesuchte Lösung
+	\[
+	u(t) = 4+2\,\EH{-3\,t}-6\,\EH{-t} - h(t-2)\cdot\Big(4+2\,\EH{-3\,(t-2)}-6\,\EH{-(t-2)}\Big) \ .
+\]
+
+\item	\[
+	u(t) = \left\{\begin{array}{ccl}
+	       4+2\,\EH{-3\,t}-6\,\EH{-t} & \text{für} & 0\le t < 2 \\
+	       \\
+	       \left(2-2\,\EH6\right)\cdot \EH{-3\,t} + \left(-6+6\,\EH2\right)\cdot\EH{-t} & \text{für} & 2\le t
+	       \end{array}\right.\ .
+\]
+\end{abc}
+\psset{xunit=1cm, yunit=1cm, runit=1cm}
+\begin{pspicture}(-1,-1)(5,4)
+\psgrid[subgriddiv=1,griddots=10,gridlabels=.3](0,0)(5,4)
+\psline{-}(2,0)(2,4)
+\psplot[plotpoints=200, plotstyle=curve]
+{0}{2}
+{
+4 2 2.72 3 neg x mul exp mul add 6 neg 2.72 x neg exp mul add
+}
+
+\psplot[plotpoints=200, plotstyle=curve]
+{2}{5}
+{ 
+2 2 neg 2.72 6 exp mul add 2.72 3 neg x mul exp mul 6 neg 6 2.72 2 exp mul add 2.72 x neg exp mul add
+}
+
+\end{pspicture}
+
+}
+
+\ErgebnisC{AufglaplacldglKlLp001}{
+$4+2\,\EH{-3\,t}-6\,\EH{-t} - h(t-2)\cdot\Big(4+2\,\EH{-3\,(t-2)}-6\,\EH{-(t-2)}\Big)$
+}

@@ -1,0 +1,69 @@
+\Aufgabe[e]{Differenzieren}{
+Berechnen Sie folgende Aufgaben:
+	\[
+	\begin{array}{rclccl}
+	\textbf{i)}   & & f(t):=(2t+1)^4\cdot\sin(3t) & & \text{gesucht:} & f'''(t) \\
+	\\
+	\textbf{ii)}  & & g(t):=t^4\cdot\cos(3t)\cdot\EH{-2t} & & \text{gesucht:} & g''(t) \\
+	\\
+	\textbf{iii)} & & h(t):= \dfrac{2t^2-2t+1}{3t-2} & & \text{gesucht:} & h'''(t) \\
+	\end{array}
+\]
+
+\textbf{Hinweis:} \ Vergessen Sie nicht die Ergebnisse (auch die Zwischenergebnisse) sinnvoll zusammenzufassen!
+
+}
+
+\Loesung{
+\textbf{i)} \ Mit der Leibniz--Regel gilt:
+	\[
+	\begin{array}{rcl}
+	f'''(t) &=& -27\cdot(2t+1)^4\cos(3t)-3\cdot4\cdot2\cdot9\cdot(2t+1)^3\sin(3t)\\
+	& & \quad + 3\cdot12\cdot4\cdot3\cdot(2t+1)^2\cos(3t) + 24\cdot8\cdot(2t+1)\sin(3t)\\
+	& = & \Big[192\,(2t+1)-216\,(2t+1)^3\Big]\sin(3t)+\Big[432\,(2t+1)^2-27\,(2t+1)^4\Big]\cos(3t)\ .
+	\end{array}
+\]
+
+
+\textbf{ii)} \ Mit der Ableitungsregel für Mehrfachprodukte gilt:
+	\[
+	\begin{array}{crcl}
+	 & g(t) &=& t^4\cdot\cos(3t)\cdot\EH{-2t} \\[1ex]
+	 \,\Rightarrow\, & g'(t) & = & 4\,t^3\cdot\cos(3t)\cdot\EH{-2t} - 3\,t^4\cdot\sin(3t)\cdot\EH{-2t} -2\,t^4\cdot\cos(3t)\cdot\EH{-2t}\\
+	& &=& \Big[\big(4\,t^3-2\,t^4\big)\cos(3t) -3\,t^4\,\sin(3t)\Big]\EH{-2t} \\[2ex]
+	\,\Rightarrow\, & g''(t) &=& \Big[\big(12t^2-16t^3-5t^4\big)\cos(3t)+\big(-24t^3+12t^4\big)\sin(3t)\Big]\EH{-2t}\ .
+	\end{array}
+\]
+
+
+\textbf{iii)}
+
+1. Lösungsweg: Direkte Anwendung der Quotientenregel:
+  \[
+  \begin{array}{crcl}
+  & h(t) &=& \dfrac{2t^2-2t+1}{3t-2} \\
+  \\
+  \,\Rightarrow\, & h'(t) &=& \dfrac{(4t-2)\cdot(3t-2)-(2t^2-2t+1)\cdot3}{(3t-2)^2} \ =\ \dfrac{6t^2-8t+1}{(3t-2)^2}\\
+  \\
+  \,\Rightarrow\, & h''(t) &=& \dfrac{(12t-8)\cdot(3t-2)^2-(6t^2-8t+1)\cdot(3t-2)6}{(3t-2)^4} \ =\ \dfrac{10}{(3t-2)^3}\\
+  \\
+  \,\Rightarrow\, & h'''(t) &=& \dfrac{-90}{(3t-2)^4}\ . 
+  \end{array}
+\]
+
+
+2. Lösungsweg: Zun\"achst den ganzrationalen Anteil abdividieren und dann differenzieren:
+	\[
+	h(t)=\dfrac{2t^2-2t+1}{3t-2} = \dfrac{2t}{3} - \dfrac{2}{9}+\dfrac 59\dfrac{1}{3t-2}
+\]
+	\[
+	\,\Rightarrow\, h'(t)=\dfrac 23-\dfrac{5}{3(3t-2)^2} \,\Rightarrow\, h''(t)=\dfrac{10}{(3t-2)^3} \,\Rightarrow\, h'''(t)=\dfrac{-90}{(3t-2)^4}\ .
+\]
+
+}
+\ErgebnisC{Ergwz-2013-3-1}
+{
+$f'''(t)= \Big[192\,(2t+1)-216\,(2t+1)^3\Big]\sin(3t)+\Big[432\,(2t+1)^2-27\,(2t+1)^4\Big]\cos(3t)$\\
+$g''(t) = \Big[\big(12t^2-16t^3-5t^4\big)\cos(3t)+\big(-24t^3+12t^4\big)\sin(3t)\Big]\EH{-2t}$\\
+$h'''(t)= \dfrac{-90}{(3t-2)^4}$
+}

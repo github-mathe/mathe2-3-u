@@ -1,0 +1,34 @@
+\Aufgabe[e]{Wegableitungen} {
+Gegeben sind die Funktionen
+$$f(x,y)=\EH x \cdot \sin y\text{ und }\vec g(t)=(t^3,\, 1+t^2)^\top$$
+aus denen sich die Funktion $h(t)=f(\vec g(t))$ ergibt. 
+\begin{abc}
+\item Berechnen Sie $h'(t)$ durch explizites Einsetzen und anschließendes (eindimensionales)
+Ableiten nach $t$. 
+\item Berechnen Sie $h'(t)$ mit Hilfe der Kettenregel. 
+\end{abc}
+
+}
+
+
+\Loesung{
+\begin{abc}
+\item \begin{align*}
+h'(t)=&\frac{\d }{\d t} \left( f(t^3,1+t^2)\right)
+=\frac{\d }{\d t}\left( \EH{t^3}\cdot \sin(1+t^2)\right)\\
+=& 3t^2\EH{t^3}\cdot \sin(1+t^2)+\EH{t^3}\cdot 2t\cos(1+t^2)\\
+=&\left(3t\sin(1+t^2)+2\cos(1+t^2)\right)t\EH{t^3}
+\end{align*}
+\item \begin{align*}
+h'(t)=& \bigl(\nabla f(\vec g(t))\bigr)^\top \vec g'(t)=\bigl(\EH {g_1(t)} \sin (g_2(t)),\, \EH {g_1(t)} \cos
+(g_2(t)) \bigr) \begin{pmatrix} 3t^2\\2t\end{pmatrix}\\
+=& \EH{t^3}\sin(1+t^2)\cdot 3t^2 + \EH{t^3}\cos(1+t^2)\cdot 2t\\
+=&(3t\sin(1+t^2)+2\cos(1+t^2))t\EH{t^3}
+\end{align*}
+\end{abc}
+}
+
+\ErgebnisC{AufganalysWegAblt001}
+{
+$h'(t)=t\EH{(t^3)}\bigl( 3t\sin(t+t^2)+2\cos(1+t^2)\bigr)$
+}

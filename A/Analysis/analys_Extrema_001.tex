@@ -1,0 +1,48 @@
+\Aufgabe[e]{Stationäre Punkte}{
+Gegeben sei die Funktion $$f(x,y) = x^3+x^2y-y^2-4y.$$ Finde alle stationären Punkte und bestimme, ob sie lokale Minima, Maxima oder Sattelpunkte sind.
+}
+\Loesung{
+Die stationären Punkte sind die Lösungen des folgenden Gleichungssystems%
+\begin{eqnarray*}
+\frac{\partial}{\partial x} f(x,y) = 0 \quad&\Rightarrow& \quad x(3x+2y)= 0 \\\
+\frac{\partial}{\partial y} f(x,y) = 0 \quad&\Rightarrow& \quad x^2-2y-4= 0
+\end{eqnarray*}
+%
+Die erste Gleichung ist für $x=0$ und für $3x+2y=0$ erfüllt, d.h. wenn $x=0$ oder wenn $y=-\frac32 x$. In beiden Fällen wird der $y$-Wert durch die zweite Gleichung im System bestimmt.
+\begin{enumerate}
+\item Fall $x=0$: Aus der zweiten Gleichung ergibt sich $0-2y-4=0$, d.h. \ $y=-2$. Der erste kritische Punkt ist $\vec P_1 = (0,-2)$.
+\item Fall $y=-\frac32 x$. Setzt man dies in die zweite Gleichung ein, erhält man $x^2-2(-\frac32 x) - 4 =0$. Dies ergibt
+$$
+x^2+3x-4=0 \longrightarrow (x-1)(x+4)=0.
+$$
+Die Lösungen sind $x=1$ und $x=-4$. Die beiden weiteren kritischen Punkte sind dann: $\vec P_2=(1,-\frac32)$ und $\vec P_3=(-4, 6)$.
+\end{enumerate}
+
+Zusammengefasst lauten die drei kritischen Punkte
+$$
+\vec P_1 = (0,-2),\qquad \vec P_2 = (0,-\frac32), \qquad \vec P_3 = (-4,6).
+$$
+
+Die Hessische Matrix ist:
+$$
+H=
+\begin{pmatrix}
+f_{xx}(x,y) & f_{xy}(x,y) \\
+f_{xy}(x,y) & f_{yy}(x,y) 
+\end{pmatrix}
+=
+\begin{pmatrix}
+6x+2y & 2x \\
+2x & -2
+\end{pmatrix}.
+$$
+
+
+Charakterisierung der stationären Punkte:
+\begin{align*}
+\boldsymbol{P}_1 &= \begin{pmatrix} 0 \\\ -2 \end{pmatrix}, \quad \begin{pmatrix} -4 & 0 \\\\ 0 & -2 \end{pmatrix}, \quad h_{11}<0, \det(H)=8>0 \rightarrow \mbox{Maximum}\\
+\boldsymbol{P}_2 &= \begin{pmatrix} 1 \\\ -\frac32 \end{pmatrix}, \quad \begin{pmatrix} 3 & 2 \\\ 2 & -2 \end{pmatrix}, \quad h_{11}>0, \det(H)=-10<0 \rightarrow \mbox{Sattelpunkt}\
+\boldsymbol{P}_3 &= \begin{pmatrix} -4 \\\ 6 \end{pmatrix}, \quad \begin{pmatrix} -12 & -8 \\\ -8 & -2 \end{pmatrix}, \quad h_{11}<0, \det(H)=-40<0 \rightarrow \mbox{Sattelpunkt}
+\end{align*}
+
+}

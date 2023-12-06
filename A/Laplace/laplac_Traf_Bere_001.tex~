@@ -1,0 +1,50 @@
+\Aufgabe[e]{Laplace-Transformierte}
+{
+Berechnen Sie die Laplace-Transformierte von $f(t)=\sqrt{t}$: 
+$$F(s):=\int\limits_0^\infty\EH{-st}\cdot\sqrt{t}\d t.$$
+{\bf Hinweise}:
+\begin{itemize}
+\item Substituieren Sie $u=\sqrt t$. 
+\item Spalten Sie $u^2$ in $u\cdot u$ auf und integrieren Sie partiell. 
+\item Das Quadrat des verbleibenden Integrals k\"onnen Sie l\"osen, indem Sie Polarkoordinaten einführen.
+\end{itemize}
+}
+
+\Loesung{
+Mit der Substitution \ $u=\sqrt{t} \ \Rightarrow \ \text dt=2\,u\,\text du$ \ erhält man
+	\[
+	F(s) = \int\limits_{0}^{\infty} \EH{-s\,u^2}\cdot u\cdot 2\,u\ \text du = -\dfrac{1}{s}\cdot\int\limits_{0}^\infty  u\cdot(-2s u)\,\EH{-s\,u^2}\ \text du\ .
+\]
+
+Die partielle Integration ergibt
+	\begin{align*}
+	F(s) & = -\dfrac{1}{s}\left(u\EH{-s\,u^2}\Big|_0^\infty - \int\limits_{0}^\infty  
+\EH{-s\,u^2}\ \text du\right)\\[1ex]
+& =-\dfrac{1}{s}\left(0-0 - \int\limits_{0}^\infty  
+\EH{-s\,u^2}\ \text du\right)\\[1ex]
+&  = \dfrac{1}{s}\cdot\int\limits_{0}^\infty  \EH{-s\,u^2}\ \text du  \ .
+\end{align*}
+
+Mit Quadrieren erhält man
+  \[
+  \big(F(s)\big)^2 \ = \ \dfrac{1}{s}\,\int\limits_{0}^\infty \EH{-s\,x^2}\ \text dx 
+                   \cdot \dfrac{1}{s}\,\int\limits_{0}^\infty \EH{-s\,y^2}\ \text dy \ = \ 
+                   \dfrac{1}{s^2}\,\int\limits_{0}^\infty  \int\limits_{0}^\infty  \EH{-s\,(x^2+y^2)}\ \text dx\,\text dy 
+\]
+und durch Übergang zu Polarkoordinaten
+  \[
+  \big(F(s)\big)^2 \ = \ \dfrac{1}{s^2}\,\int\limits_{0}^\infty  \int\limits_{0}^{\pi/2} \EH{-s\,r^2}\ r\,\text d\phi\,\text dr \ = \
+         \dfrac{1}{s^2}\cdot\dfrac{\pi}{2}\cdot \left[\frac{-1}{2\,s}\,\EH{-s\,r^2}\right]_0^\infty \ = \ \dfrac{\pi}{4\,s^3} \ .
+\]
+Damit ist 
+	\[
+	\underline{\underline{\ F(s) = {\cal L}\left(\sqrt{t}\right) = \sqrt{\dfrac{\pi}{4\,s^3}}\ }}\ .
+\]
+}
+
+
+
+\ErgebnisC{AufglaplacTrafBere001}
+{
+$F(s)=\sqrt{\frac{\pi}{4s^3}}\,.$
+}

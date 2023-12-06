@@ -1,0 +1,69 @@
+\Aufgabe[e]{Laplace-Transformierte}
+{
+Berechnen Sie die Laplace-Transformierte der folgenden Funktionen: 
+\begin{abc}
+\item $f_1(t)=\left\{\begin{array}{ll}
+A&\text{ f\"ur }0\leq t\leq t_0\\
+A\EH{-2(t-t_0)}&\text{ sonst}
+\end{array}\right.$ mit festem $A\in\R$. 
+\item $f_2(t)=\left\{\begin{array}{ll}
+0&\text{ f\"ur }0\leq t< a\\
+A&\text{ f\"ur }a\leq t< b\\
+0&\text{ sonst}
+\end{array}\right.$ mit festen $0<a<b$ und $A\in\R$. 
+\item $f_3(t)=\left\{\begin{array}{ll}
+t&\text{ f\"ur }0\leq t\leq 3\\
+3&\text{ f\"ur } t>3
+\end{array}\right.$ 
+\item $f_4(t)=\left\{\begin{array}{ll}
+\sin t&\text{ f\"ur } t\leq \pi\\
+0&\text{ f\"ur } t>\pi
+\end{array}\right.$. 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item \begin{align*}
+\cL\{f_1(t)\}=& \int\limits_0^\infty \EH{-st}f_1(t)\d t = \int\limits_0^{t_0}\EH{-st}A \d t
++ \int\limits_{t_0}^\infty A\EH{-2(t-t_0)-st}\d t\\
+=&\dfrac{A}{-s}\cdot\EH{-st}\Big|_0^{t_0}+\dfrac{A}{-s-2}\cdot\EH{(-s-2)t+2t_0}\Big|_{t_0}^{\infty}\\
+=& \dfrac{A(1-\EH{-st_0})}{s} + \dfrac{A\EH{-st_0}}{2+s}=\dfrac As - \dfrac{2A\EH{-st_0}}{s^2+2s}
+\end{align*}
+\item $\cL\{f_2(t)\} =  \int\limits_a^bA\EH{-st}\d t = \dfrac{A(\EH {-as} - \EH {-bs})}{s}$
+\item \begin{align*}
+\cL\{f_3(t)\} =& \int\limits_0^3 t\EH{-st}\d t + \int\limits_3^\infty 3\EH{-st}\d t 
+= \left. t\dfrac{\EH{-st}}{-s}\right|_0^3-\int\limits_0^3\dfrac{\EH{-st}}{-s}\d t
++ \left. \dfrac{3\EH{-st}}{-s}\right|_3^\infty\\
+=& -\dfrac{3\EH{-3s}}s -\left. \dfrac{\EH{-st}}{s^2}\right|_0^3+\dfrac{3\EH{-3s}}{s}
+= \dfrac{-\EH{-3s}+1}{s^2}
+\end{align*}
+\item 
+\textbf{1.Lösungsweg:}(komplexe Zahlen)
+\begin{align*}
+&&\cL\{f_4(t)\} =& \int\limits_0^\pi\EH{-st}\sin t \d t =\int\limits_0^\pi\Imag(\EH{-st+it}) \d t\\
+&&=&\Imag\left(\dfrac{\EH{-st+it}}{-s+i}\right)\Big|_0^\pi=\Imag\left(\dfrac{(-s-i)\EH{-st+it}}{s^2+1}\right)\Big|_0^\pi\\
+&&= & \dfrac{\EH{-st}}{s^2+1}\cdot\Imag((-s-i)(\cos t+i\sin t))\Big|_0^\pi=\dfrac{\EH{-st}}{s^2+1}\cdot(-\cos t-s\sin t))\Big|_0^\pi \\
+\Rightarrow&&  =  & \frac {\EH{-s\pi}+1}{1+s^2}
+\end{align*}
+
+\textbf{2.Lösungsweg:} (zweifache partielle Integration)
+\begin{align*}
+&&\cL\{f_4(t)\} =& \int\limits_0^\pi\EH{-st}\sin t \d t 
+= \bigl.-\cos t \EH{-st}\bigr|_0^\pi -\int\limits_0^\pi s\cos t \EH{-st}\d t \\
+&&= & \EH{-s\pi}+1 - \bigl. s\sin t \EH{-st}\bigr|_0^\pi - \int\limits_0^\pi s^2\sin t \EH{-st}\d t \\
+&&= & \EH{-s\pi}+1  - s^2\cdot\cL\{f_4(t)\} \\
+\Rightarrow&& \cL\{f_4(t)\} =  & \frac {\EH{-s\pi}+1}{1+s^2}
+\end{align*}
+\end{abc}
+}
+
+
+
+\ErgebnisC{AufglaplacTrafBere003}
+{
+\textbf{ a)} $\frac As - \frac{2A\EH{-st_0}}{s^2+2s}$, 
+\textbf{ b)} $\frac{A(\EH{-as}-\EH{-bs}}{s}$, 
+\textbf{ c)} $\frac{1-\EH{-3s}}{s^2}$,
+\textbf{ d)} $\frac{1+\EH{-s\pi}}{1+s^2}$
+}

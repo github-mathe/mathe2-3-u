@@ -1,0 +1,46 @@
+\Aufgabe[e]{Uneigentliche Integrale}{
+\"Uberpr\"ufen Sie, ob die folgenden uneigentlichen Integrale existieren (d. h. einen endlichen Wert annehmen). Berechnen Sie f\"ur das dritte Beispiel den Wert des Integrals. 
+\begin{align*}
+  I_1&=\int\limits_{1}^\infty \frac{\sin \frac 1{x^2}}{x^2}\d x\\
+  I_2&=\int\limits_{0}^1\frac{\cos x^2}{1-x}\d x \\
+  I_3&= \int\limits_{0}^\infty\frac{\arctan x}{x^2+1}\d x
+\end{align*}
+}
+
+\Loesung{
+\begin{itemize}
+\item Das erste Integral hat einen endlichen Wert, man kann seinen Wert nach oben absch\"atzen, indem man den Integranden durch eine gr\"oßere Funktion ersetzt: 
+\begin{align*}
+I_1&= \int\limits_{1}^\infty \frac {\sin \frac 1{x^2}}{x^2}\d x 
+\leq \int\limits_1^\infty \left|\frac{\sin \frac 1{x^2}}{x^2}\right|\d x \\
+&\leq \int\limits_1^\infty \left|\frac{1}{x^2}\right|\d x \text{ \qquad (weil $|\sin(1/x^2)|\leq 1$)}\\
+&= \left[\frac{-1}{x}\right]_1^\infty = \lim_{b\to\infty} \frac{-1}{b}- \frac{-1}{1}
+= 1
+\end{align*}
+Damit hat $I_1$ einen endlichen Wert, der an dieser Stelle jedoch nicht berechnet werden soll. 
+\item Das zweite Integral wird nach unten abgesch\"atzt, indem man die Integrandenfunktion durch eine geringere Funktion absch\"atzt: 
+\begin{align*}
+I_2&= \int\limits_0^1\frac{\cos{x^2}}{1-x}\d x\\
+&\geq \int\limits_0^1\frac{\cos 1}{1-x}\d x\text{ \qquad (weil $\cos$ auf dem Intervall $[0,1]$ monoton f\"allt)}\\
+&= \cos 1\Bigl[ -\ln|1-x|\Bigr]_0^1 = \cos 1\cdot \left(- \lim_{b\to 1}\ln|1-b| - (-\ln|1-0|)\right)=\infty
+\end{align*}
+Damit hat auch das Integral $I_2$ keinen endlichen Wert. 
+\item F\"ur den Integranden $f(x)=\frac{\arctan x}{1+x^2}$ des dritten Integrals kann man mittels partieller Integration eine Stammfunktion ermittelt werden: 
+\begin{align*}
+&&F(x)&= \int\limits_0^x f(t)\d t 
+= \int\limits_0^x \underbrace{\arctan t}_{u(t)} \underbrace{\frac 1{1+t^2}}_{v'(t)}\d t\\
+&&&= \Bigl.\underbrace{\arctan t}_{u(t)} \underbrace{\arctan t}_{v(t)}\Bigr|_{0}^x - \int\limits_0^x \underbrace{\frac 1 {1+t^2}}_{u'(t)} \underbrace{\arctan t}_{v(t)}\d t\\
+&&&= \arctan^2 x - F(x)\\
+\Rightarrow && 2F(x)&= \arctan^2 x\\
+\Rightarrow && F(x)&= \frac{\arctan^2 x}2
+\end{align*}
+Den Wert des Integrals $I_3$ erh\"alt man dann durch den Grenz\"ubergang: 
+$$I_3= \lim_{b\to \infty} F(b)-F(0) = \frac 12 \left( \frac \pi 2\right)^2 - 0 = \frac{\pi^2}8.$$
+\end{itemize}
+}
+
+\ErgebnisC{analysPartBrch006}
+{
+$I_3= \lim_{b\to \infty} F(b)-F(0) = \frac 12 \left( \frac \pi 2\right)^2 - 0 = \frac{\pi^2}8$
+}
+

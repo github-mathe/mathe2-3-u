@@ -1,0 +1,67 @@
+\Aufgabe[e]{Station\"are Punkte} {
+ Gegeben sei die Funktion
+$$
+f(x,y) =  ax^2 + 2xy + ay^2-ax-ay
+$$
+Bestimmen Sie diejenigen $a\in \R$, f\"ur welche die Funktion 
+$f$ relative Maxima, relative Minima und Sattelpunkte besitzt und geben Sie 
+diese an. 
+}
+
+\Loesung{
+In station\"aren Punkten  muss der Gradient der Funktion Null werden: 
+\begin{align*}
+&\vec 0= \nabla f(x,y)=\begin{pmatrix} 2ax+2y-a\\2x+2ay-a\end{pmatrix}\\
+&\begin{array}{rr|r|l}
+2a     &    2 &     a& \\
+2      &   2a &     a&  \text{wir vertauschen die 1. und 2. Zeile}\\\hline
+2      &   2a &     a&  \\
+2a     &    2 &     a& -a\cdot\text{ 1. Zeile}\\\hline
+2     &    2a &     a  & : 2\\
+0     &    2-2a^2 &     a  &  : (2-2a^2), \text{ f\"ur }a^2\neq 1\\\hline
+1     &    a & \frac a 2  & \\
+0 &    1 & \frac{a(1-a)}{2(1-a^2)}\\
+\end{array}
+\end{align*}
+Dann ist 
+\begin{align*}
+y &= \frac{a(1-a)}{2(1+a)(1-a)} = \frac{a}{2(1+a)}\\
+x &= \frac{a}{2} - a \cdot \frac{a}{2(1+a)} = \frac{a(1+a-a)}{2(1+a)} = \frac{a}{2(1+a)}\,.
+\end{align*}
+
+F\"ur $a\neq \pm 1$ liegt der einzige kritische Punkt der Funktion also bei 
+$$\vec x_0 = \begin{pmatrix} \frac{ a}{2(1+a)}\\ \frac{a}{2(1+a)}\end{pmatrix}. 
+$$
+F\"ur $a=+1$ hat das obige Gleichungssystem die L\"osung $(t,\frac 12 -t)$ ($t\in\R$). \\
+F\"ur $a=-1$ hat das Gleichungssystem keine L\"osung und damit $f$ keinen station\"aren Punkt. \\
+Zur Charakterisierung der station\"aren Punkte ben\"otigen wir die Hesse-Matrix: 
+$$\vec H_f(x,y)=\begin{pmatrix} 2a& 2\\ 2 & 2a\end{pmatrix}.$$
+Ihre Determinante ist \(\det (\vec H_f) = 4 (a^2-1)\).
+Wir unterscheiden zun\"achst die drei F\"alle: 
+\begin{iii}
+\item $-1<a<1$: F\"ur die Determinante gilt \(\det(\vec H_f) < 0\). Da die Determinante aus dem Produkt der Eigenwerte berechnet wird, folgt daraus, dass die Eigenwerte verschiedene Vorzeichen haben. $\vec H_f$ ist indefinit und $\vec x_0$ ist ein
+Sattelpunkt. 
+\item $a<-1$: F\"ur die Determinante gilt \(\det(\vec H_f) > 0\). Daraus folgt, dass die Eigenwerte gleiches Vorzeichen haben. Da die Spur \(\operatorname{Sp}(\vec H_f) = 4 a\)  in diesem Fall negativ ist, sind die beiden Eigenwerte negativ. Also ist $\vec H_f$  negativ definit und die Funktion $f$ hat ein Maximum in $\vec x_0$. 
+\item $1<a$: Sowohl die Determinante, als auch die Spur sind positiv. Deswegen sind beide Eigenwerte positiv und bei $\vec x_0$ ist ein Minimum. 
+\end{iii}
+F\"ur $a=1$ gilt \(\det(\vec H_f)=0\), also ist mindestens ein Eigenwert gleich Null. In diesem Fall gilt \[f(x,y) = x^2+2xy+y^2-x-y = (x+y)^2 - (x+y) = \left(x+y-\frac12\right)^2 - \frac14\,.\]
+In allen station\"are Punkten $(t,\, \frac 12 -t)^\top$ ist der quadratische Term \((x+y-\frac12)^2\) gleich Null, aber in allen anderen Punkten ist er positiv. Deshalb liegt in diesen station\"aren Punkten ein Minimum vor. Diese Punkte
+befinden sich auf einer Geraden, auf der $f$ konstant ist. \\
+Insgesamt besitzt die Funktion $f$ also 
+\begin{itemize}
+\item f\"ur $a<-1$ ein Maximum in $\vec x_0=\frac a{2(1+a)}(1,1)^\top$. 
+\item f\"ur $a=-1$ keinen station\"aren Punkt. 
+\item f\"ur $-1<a<1$ einen Sattelpunkt in $\vec x_0=\frac a{2(1+a)}(1,1)^\top$. 
+\item f\"ur $a=1$ die Minimalstellen $(t,\, \frac 12 - t)^\top$, $t\in\R$. 
+\item f\"ur $1<a$ ein Minimum in $\vec x_0=\frac a{2(1+a)}(1,1)^\top$. 
+\end{itemize}
+}
+
+\ErgebnisC{AufganalysExtrNdim004}
+{
+{
+F\"ur $a\neq \pm 1$ ist der station\"are Punkt $\frac a{2(1+a)}(1,1)^\top$. F\"ur $a=1$ gibt es
+mehrere station\"are Punkte. 
+}
+}
+

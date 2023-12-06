@@ -1,0 +1,46 @@
+\Aufgabe[e]{Lokale Extrema in 2 Dim.}
+{
+Gegeben sei die Funktion $f\in {\text{Abb}}\,(\R^2,\R)$ mit
+\[
+f(x,y)= (x+y)^2-4\,(x+y-2)+y^3-3y .
+\]
+Bestimmen Sie alle station\"aren (kritischen) Punkte dieser Funktion und geben Sie
+an, ob es sich dabei um lokale Minima, Maxima oder Sattelpunkte handelt, oder ob
+der Charakter des station\"aren Punktes nicht durch die Hesse--Matrix entschieden 
+werden kann.
+}
+\Loesung{
+Die station\"aren Punkte erh\"alt man aus
+\[
+	\textbf{grad}\,f(x,y) = \begin{pmatrix}
+	                        2\,(x+y)-4 \\
+	                        2\,(x+y)-4 +3\,y^2-3
+	                        \end{pmatrix} = \begin{pmatrix}  0 \\ 0 \end{pmatrix} 
+\]
+zu \ $P_1 = (3,-1)$ \ und \ $P_2 = (1,1)$. Die Hesse--Matrix der Funktion 
+\ $f$ \ lautet:
+\[
+	\vec{H}_f(x,y) = \begin{pmatrix}
+	                     2 & & 2 \\
+	                     2 & & 2+6\,y
+	                     \end{pmatrix}\,.
+\]
+Für den Punkt \ $P_1$ \ ergibt sich damit
+\[
+	\vec{H}_f(3,-1) = \begin{pmatrix} 2 & 2 \\ 2 & -4 \end{pmatrix} 
+	\quad \Longrightarrow \lambda_1 \cdot \lambda_2 = \det(\vec H_f) = -12 < 0\ ,                   
+\]
+Damit haben die Eigenwerte verschiedene Vorzeichen und es handelt sich um einen Sattelpunkt. Entsprechend erh\"alt man für den 
+Punkt \ $P_2$, dass 
+	\[
+	\vec{H}_f(1,1) = \begin{pmatrix} 2 & 2 \\ 2 & 8\end{pmatrix} 
+	\quad \Longrightarrow \lambda_1 \cdot \lambda_2 = \det(\vec H_f) = 12 > 0,\, \operatorname{Sp}(\vec H_f) = 10 > 0\,.                   
+\]
+Damit sind beide Eigenwerte positiv und es handelt sich um ein Minimum.
+}
+
+
+\ErgebnisC{Aufgb-2011A-K-A4a}
+{
+Die station\"aren Punkte lauten  $P_1 = (3,-1)$ und $P_2 = (1,1)\,.$
+}

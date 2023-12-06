@@ -1,0 +1,22 @@
+\Aufgabe[e]{Masse einer Halbkugel}
+{
+Berechnen Sie die Masse einer Halbkugel mit Mittelpunkt $(0,0,0)^\top$, Radius $a>0$ sowie $z\geq 0$ und der Massendichte
+$$\rho(x,y,z)=\frac{z}{\sqrt{x^2+y^2}}.$$
+\textbf{Hinweis}: Die Masse $M$ eines K\"orpers $K$ mit Massendichte $\rho(\vec x)$ ergibt sich aus
+$$M=\int\limits_{K}\rho(\vec x)\d \vec x.$$
+}
+
+\Loesung{
+Es bietet sich die Rechnung in Kugelkoordinaten an. Wegen der Bedingung $z\geq 0$ wird $\theta$ auf
+das Intervall $[0,\, \pi/2]$ eingeschr\"ankt. 
+\begin{align*}
+M=& \int\limits_{\theta=0}^{\pi/2}\int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^a\rho\cdot
+r^2\sin\theta \d r \d\varphi\d\theta
+=
+\int\limits_{\theta=0}^{\pi/2}\int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^a\frac{r\cos\theta}{r\sin\theta}r^2\sin\theta
+\d r \d\varphi\d\theta\\
+=& \frac {a^3}3\cdot 2\pi \int\limits_{\theta=0}^{\pi/2}\cos\theta\d\theta = \frac{2\pi a^3}3.
+\end{align*}
+}
+\ErgebnisC{halbkugel}
+{$M=2\pi a^3/3$}

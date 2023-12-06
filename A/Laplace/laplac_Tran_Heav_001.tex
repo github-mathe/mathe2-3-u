@@ -1,0 +1,36 @@
+\Aufgabe[e]{Heaviside-Funktion}
+{
+Gesucht ist die Laplace--Transformierte von
+$$
+	f(t) := h(t-2)\cdot t^2 \ ,
+$$
+wobei \ $h$ \ die Heaviside--Funktion ist.
+
+\textbf{a)} \ Mit Hilfe der Integraldarstellung der Definition.
+
+\textbf{b)} \ Mit Hilfe des Verschiebungssatzes und der Tabelle der Laplace--Transformierten.
+}
+
+\Loesung{
+\textbf{a)}
+	\[
+	F(s) = \int\limits_{2}^{\infty} \EH{-s\,t}\,t^2\ \text dt = \left[-\left(\frac{t^2}{s}+\frac{2\,t}{s^2}+\frac{2}{s^3}\right)\cdot\EH{-s\,t}\right]_2^\infty = \left(\frac{4}{s}+\frac{4}{s^2}+\frac{2}{s^3}\right)\cdot\EH{-2\,s}\ .
+\]
+
+\textbf{b)} \ Für den Verschiebungssatz
+	\[
+	{\cal{L}}\Big( f(t-a)\cdot h(t-a)\Big) = F(s)\cdot\EH{-a\,s}\ ,\ \ a>0\ ,
+\]
+ muss die Funktion erst umgeschrieben werden:
+	\[
+	t^2 = (t-2)^2+4(t-2)+4 \ .
+\]
+Damit erhält man die Laplace--Transformierte
+	\[
+	{\cal{L}}\Big(\big( (t-2)^2+4(t-2)+4\big)\cdot h(t-2)\Big) = \left(\frac{2}{s^3}+\frac{4}{s^2}+\frac{4}{s}\right)\cdot\EH{-2\,s}
+\]
+}
+
+\ErgebnisC{laplacTranHeav001}{
+$\left(\frac{2}{s^3}+\frac{4}{s^2}+\frac{4}{s}\right)\cdot\EH{-2\,s}$
+}

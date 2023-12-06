@@ -1,0 +1,52 @@
+\Aufgabe[f]{Differentialgleichungssystem}
+{
+Die Matrix $\vec A\in{\R}^{(3,3)}$ und die Vektoren $\vec{v},\,\vec{w},\,\vec{z}\in{\R}^3$ seien wie folgt gegeben:
+$$\vec A=\begin{pmatrix} 5 & 1 & -3 \\
+      4 & 4 & -4 \\ 1 & 1 & 1\end{pmatrix},\;\;
+\vec{v}:=\begin{pmatrix}1\\2\\1\end{pmatrix},\,
+\vec{w}:=\begin{pmatrix}1/2\\1/2\\a\end{pmatrix},\,
+\vec{z}:=\begin{pmatrix}1\\0\\1\end{pmatrix}.$$
+
+\begin{itemize}
+\item
+Offenbar gilt \ $\vec A\vec{v}= 4\vec{v}$\,. Berechnen Sie
+$$\mbox{(i)}\quad\mbox{$\lambda\in{\R}$ so, dass \ $\vec A\vec{z}=\lambda\,\vec{z}$ \ gilt},\qquad
+\mbox{(ii)}\quad\mbox{die Spur \ Sp$(\vec A)$ \ von \ $\vec A$}.$$
+Bestimmen Sie mit diesen Ergebnissen alle Eigenwerte der Matrix \ $\vec A$.
+
+(Selbstverständlich sollen Sie \textbf{nicht} das charakteristische Polynom bestimmen und lösen!)
+
+\item Berechnen Sie \ $a\in{\R}$ \ so, dass \ $(\vec A-4\vec E)\vec{w}=\vec{v}$ \ gilt. Bestimmen Sie nun alle Haupt-- und Eigenvektoren von \ $\vec A$\,.
+
+\item Bestimmen Sie die allgemeine Lösung \ $\vec{y}(t)$ \ des DGl--Systems
+$$\vec{y}{\,'}(t)=\vec A\vec{y}(t),\quad t\in {\R}\,.$$   
+\end{itemize}
+}
+\Loesung{
+\textbf{Zu a)} i) \ Man berechnet ohne Schwierigkeit
+$$\vec A\vec{z}=(2,0,2)^\top =2 \vec{z},\quad \mbox{also}\quad \fbox{$\lambda=2$.}$$
+
+ii) \ Es gilt \ ${\rm Sp}\,(\vec A)= 10$.
+
+Mit den schon bekannten Eigenwerten \ \fbox{$\lambda_1:=4$}, \fbox{$\lambda_2=2$} \ folgt noch \ $\lambda_3={\rm Sp}\,(\vec A)- \lambda_1-\lambda_2$\,, also\  \fbox{$\lambda_3=4\ .$}
+
+
+\textbf{Zu b)} Die Gleichung
+  \[
+  (\vec A-4\vec E)\vec{w} = \begin{pmatrix} 1 & 1 & -3\\ 4 & 0 & -4 \\ 1 & 1 & -3  \end{pmatrix}\, 
+                               \begin{pmatrix} 1/2 \\ 1/2 \\ a  \end{pmatrix} = 
+                               \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} -a \begin{pmatrix} 3 \\ 4 \\ 3 \end{pmatrix} = 
+                               \vec{v}-a \begin{pmatrix} 3 \\ 4 \\3 \end{pmatrix} \stackrel{!}{=}\vec{v}
+\]
+führt auf \ \fbox{$a=0$\,.}
+
+Mit diesem Wert \ ($a=0$) \ erfüllt \ $\vec w$ \ die Hauptvektorgleichung, ist also ein \textbf{Hauptvektor 2.~Stufe} zum Eigenwert \ $\lambda=4$\,.
+
+
+Eigenvektoren sind \ $\vec{v}$ \ zum EW \ $\lambda=4$ \ sowie \ $\vec{z}$ \ zum EW \ $\lambda=2$.
+
+
+\textbf{Zu c)} \ Die allgemeine Lösung des DGl--Systems lautet
+$$\fbox{$\displaystyle
+\vec{y}(t)=\EH{2t}C_1\,\vec{z}+\EH{4t}\,\big(C_2\,\vec{v}+C_3(\vec{w}+t\vec{v})\big),\quad C_k\in{\R}\,.$}$$
+}

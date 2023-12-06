@@ -1,0 +1,47 @@
+\Aufgabe[e]{~}{
+ Es sei 
+$$
+\mathrm{sign} \,(x) := \left\{\begin{array}{@{}r@{\,}c@{\,}l} 1 &\quad \text{f\"ur }\,& x>0\\[1ex] 0& \quad\text{f\"ur }\,& x= 0\\[1ex] -1 &\quad\text{f\"ur }\,& x<0  \end{array}\right.
+$$
+Gegeben sei die Funktion $f\in { Abb}\,(\R,\R)$ mit $f(x) = \dfrac{x}{2} + \mathrm{sign}\, (x)$. Skizzieren Sie $f$. Ist $f$ auf $I= [-1,2]$ Riemann-integrierbar? Begr\"unden Sie Ihre Antwort und bestimmen Sie gegebenenfalls das zugeh\"orige Riemann-Integral.
+% \end{itemize}
+}
+
+\Loesung{
+\begin{center}
+\begin{pspicture}(-2,-2)(3,3)
+%\psgrid(-2,-2)(3,3)
+\psline[fillstyle=solid, fillcolor=lightgray, linecolor=lightgray](0,0)(-1,0)(-1,-1.5)(0,-1)(0,0)
+\psline[fillstyle=solid, fillcolor=lightgray, linecolor=lightgray](0,0)(2,0)(2,2)(0,1)(0,0)
+\psplot[plotpoints=100,plotstyle=curve]
+{-2}{0}{
+.5 x mul -1 add
+}
+\psplot[plotpoints=100,plotstyle=curve]
+{0}{3}{
+.5 x mul 1 add
+}
+
+\psline{->}(-2,0)(3,0)
+\psline{->}(0,-2)(0,3)
+\psline(-.1,1)(.1,1)
+\psline(1,-.1)(1,.1)
+\put(2.7, .1){$x$}
+\put(1,-.3){$1$}
+\put(-.3, 1){$1$}
+\put(.1,2.7){$f(x)$}
+\end{pspicture}
+\end{center}
+Nach einem Satz aus der Vorlesung (Satz 3.96) ist $f$ auf $[-1,2]$ Riemann-integrierbar, da $f$ auf $[-1,0]$ und auf $[0,2]$ jeweils Riemann-integrierbar ist. Es gilt
+$$
+I = \int_{-1}^0 \left(\dfrac{x}{2} -1 \right) \: \mathrm{d}x + \int_{0}^2 \left(\dfrac{x}{2} +1 \right) \: \mathrm{d}x =   \left.\left(\dfrac{x^2}{4} -x \right)\right|_{-1}^0 +  \left.\left(\dfrac{x^2}{4} +x \right)\right|_{0}^2 = \dfrac{7}{4} \,.
+$$
+}
+
+
+% \ErgebnisC{b-2013-K-A1}{
+% 
+% }
+
+
+

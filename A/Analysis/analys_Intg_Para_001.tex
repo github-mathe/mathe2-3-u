@@ -1,0 +1,212 @@
+\Aufgabe[e]{Parametrisierung von Integrationsbereichen}
+{
+Gegeben seien die folgenden drei K\"orper im $\R^3$: 
+\begin{itemize}
+\item ein Quader $Q=\{\vec x\in\R^3|\, 0\leq x_1\leq 1,\, 0\leq x_2\leq 1,\, -3\leq x_3\leq 3\}$
+\item eine Kugel $K=\{\vec x\in\R^3|\, \norm{\vec x}\leq 1\}$
+\item ein Zylinder $Z=\{\vec x\in\R^3|\, x_1^2+x_2^2\leq 1,\ 0\leq x_3\leq 3\}$
+\end{itemize}
+Skizzieren und parametrisieren Sie die Schnittmenge eines jeden einzelnen dieser K\"orper mit den beiden folgenden Mengen: 
+$$M_1=\{\vec x\in\R^3|\, 0\leq \vec x_3\},\, M_2=\{\vec x|\,3x_1\leq x_3\}.$$ 
+D. h. geben Sie die Integrationsgrenzen der zugeh\"origen Volumenintegrale \"uber die Bereiche $Q\cap M_1,\, Q\cap M_2,\, K\cap M_1,\, \hdots$ an.
+ 
+}
+
+\Loesung{
+$M_1$ beschreibt den oberen Halbraum $z\geq 0$. $M_2$ beschreibt die Menge der Punkte oberhalb der Ebene $z=3x$. F\"ur die Schnittmengen mit den drei K\"orpern hat man jeweils: 
+\begin{itemize}
+\item F\"ur den Quader: 
+\begin{align*}
+Q\cap M_1=&\{\vec x\in \R^3|\, 0\leq x_1\leq 1,\, 0\leq x_2\leq 1,\, 0\leq x_3\leq 3\}\\
+Q\cap M_2=&\{\vec x\in \R^3|\, 0\leq x_1\leq 1,\, 0\leq x_2\leq 1,\, 3x_1\leq x_3\leq 3\}
+\end{align*}
+F\"ur $Q\cap M_2$ muss man keine Fallunterscheidung der $x_3$-Grenzen vornehmen, da die Obergrenze des Quaders ($z=3$) die Ebene $3y=z$ nur an der Kante des Quaders schneidet. 
+\begin{center}
+\begin{pspicture}(-5,-5)(5,5)
+
+\psline[linewidth=1pt, linecolor=lightgray, fillstyle=solid, fillcolor=lightgray]
+(0,0)
+(1,0)
+(1.70711,0.70711)
+(   1.70711,   3.70711)
+(0.70711,0.70711)
+(0,0)
+
+\psline[linewidth=2pt, linecolor=black]
+(0,0)
+(1,0)
+(1.70711,0.70711)
+(.70711,.70711)
+(0,0)
+
+\psline[linewidth=1pt, linecolor=gray, fillstyle=solid, fillcolor=gray]
+(0,0)
+(.70711,.70711)
+(1.70711,3.70711)
+(0.70711,3.70711)
+(0,3)
+(0,0)
+
+\psline[linewidth=2pt, linecolor=black]
+(0,0)
+(.70711,.70711)
+(1.70711,3.70711)
+(1,3)
+(0,0)
+
+\psline[linewidth=2pt]
+(   0.00000,  -3.00000)
+(   1.00000,  -3.00000)
+(   1.00000,   3.00000)
+(   0.00000,   3.00000)
+(   0.00000,  -3.00000)
+(   0.70711,  -2.29289)
+
+\psline[linewidth=2pt]
+(   0.70711,  -2.29289)
+(   1.70711,  -2.29289)
+(   1.70711,   3.70711)
+(   0.70711,   3.70711)
+(   0.70711,  -2.29289)
+
+\psline[linewidth=2pt](   1.00000,  -3.00000)(   1.70711,  -2.29289)
+\psline[linewidth=2pt](   1.00000,   3.00000)(   1.70711,   3.70711)
+\psline[linewidth=2pt](   0.00000,   3.00000)(   0.70711,   3.70711)
+
+\psline[linecolor=black]{->}(-5,0)(5,0)
+\psline[linecolor=black]{->}(0,-4)(0,5)
+\psline[linecolor=black]{->}(-2,-2)(3,3)
+\put(5,.1){$x$}
+\put(3,3.1){$y$}
+\put(.1,5){$z$}
+
+\end{pspicture}
+\end{center}
+
+\item F\"ur die Kugel: 
+\begin{align*}
+K\cap M_1=&\Bigl\{\vec x\in \R^3|\, -1\leq x_1\leq +1,\, -\sqrt{1-x_1^2}\leq x_2\leq +\sqrt{1-x_1^2},\, 0\leq x_3\leq \sqrt{1-x_2^2-x_3^2}\Bigr\}
+\end{align*}
+Die zweite Schnittmenge $K\cap M_2$ besteht aus zwei Bereichen: 
+$B_1$ der Bereich, der von oben durch die Kugeloberfl\"ache und von unten durch die Ebene $3x=z$ begrenzt wird. \\
+$B_2$, der von oben und von unten durch die Kugeloberfl\"ache begrenzt wird, da die Ebenbe dort außerhalb der Kugel liegt. \\
+F\"ur die Schnittkurve der Kugeloberfl\"ache $x^2+y^2+z^2=1$ mit der Ebene $3x=z$ gilt
+\begin{align*}
+&&x^2+y^2+9x^2=&1\\
+\Leftrightarrow&&x=&\pm\sqrt{\frac{1-y^2}{10}}
+\end{align*}
+Damit darf $y$ nur Werte zwischen $-1$ und $+1$ annehmen.\\
+$B_1$ l\"asst sich somit parametrisieren als
+\begin{align*}
+B_1=&\Bigl\{\vec x\in \R^3|\, -1\leq x_2\leq 1,\, -\sqrt{\frac{1-x_2^2}{10}}\leq x_1\leq \sqrt{\frac{1-x_2^2}{10}},\\
+&\qquad \,3x_1\leq x_3\leq \sqrt{1-x_1^2-x_2^2}\Bigr\}\\
+\end{align*}
+F\"ur den zweiten Teil von $K\cap M_2$ ergibt sich
+\begin{align*}
+B_2=&\Bigl\{\vec x\in \R^3|\, -1\leq x_2\leq 1,\, -\sqrt{1-x_2^2}\leq x_1\leq -\sqrt{\frac{1-x_2^2}{10}},\\
+&\qquad \,-\sqrt{1-x_1^2-x_2^2}\leq x_3\leq \sqrt{1-x_1^2-x_2^2}\Bigr\}\\
+\end{align*}
+
+Eine Parametrisierung in Kugelkoordinaten, deren $z$-Achse ($\tilde z$ in der Skizze) senkrecht auf der Ebene $3x=z$ steht, w\"are f\"ur diesen K\"orper deutlich einfacher. Die entsprechende Rotation um die $y$-Achse wird durch die (orthogonale) Matrix 
+$$\Vec R = \frac 1{\sqrt{10}}\begin{pmatrix}
+1 &0 &-3 \\
+0 &\sqrt{10} & 0 \\
+3 &0 & 1 
+\end{pmatrix}$$
+beschrieben. Damit ergibt sich dann
+\begin{align*}
+\vec x(r,\theta,\varphi)=&\frac 1{\sqrt{10}}\begin{pmatrix}
+1 &0 &-3 \\
+0 &1 & 0 \\
+3 &0 & 1 
+\end{pmatrix}\begin{pmatrix}r\sin\theta\cos\varphi\\r\sin\theta\sin\varphi\\r\cos\theta\end{pmatrix}\\
+=& \frac r{\sqrt 10} \begin{pmatrix}
+\sin\theta\cos\varphi-3\cos\theta\\
+\sin\theta\sin\varphi\\
+3\sin\theta\cos\varphi+\cos\theta
+\end{pmatrix}
+\end{align*}
+und weiter
+$$K\cap M_2=\left\{\vec x(r,\theta,\varphi)|\, 0\leq r\leq 1,\, 0\leq \theta\leq \pi/2,\, 0\leq \varphi\leq 2\pi\right\}.$$     
+
+\begin{center}
+\begin{pspicture}(-5,-3)(5,3.5)
+
+\psellipticarc[linecolor=black, linewidth=2pt](0,0)(2,2){0}{180}
+\psellipse[linecolor=black, linewidth=2pt](0,0)(2,1.1)
+\psellipticarc[linecolor=black, linewidth=2pt](0,0)(.8,2){55}{238}
+
+\psline[linecolor=black]{->}(-5,0)(5,0)
+\psline[linecolor=black]{->}(0,-2)(0,3)
+\psline[linecolor=black]{->}(-2,-3)(2,3)
+\put(5,.1){$x$}
+\put(2,3.1){$y$}
+\put(.1,3){$z$}
+\put(2,2){$K\cap M_1$}
+\end{pspicture}
+\end{center}
+\begin{center}
+\begin{pspicture}(-5,-3)(5,3.5)
+
+%\psellipticarc[linecolor=black, linewidth=2pt](0,0)(2,2){70}{250}
+%\psellipticarc[linecolor=black, linewidth=2pt](0,0)(2,1.1){57}{235}
+%\psellipticarc[linecolor=black, linewidth=2pt](0,0)(.8,2){0}{360}
+\rput{60}(0,0){
+\psellipticarc[linecolor=black, linewidth=2pt](0,0)(2,2){0}{180}
+\psellipse[linecolor=black, linewidth=2pt](0,0)(2,1.1)
+\psellipticarc[linecolor=black, linewidth=2pt](0,0)(.8,2){-56}{124}
+%\psellipse[linecolor=black, linewidth=2pt](0,0)(2,.45)
+\psline{->}(0,0)(0,4)
+}
+\psarc(0,0){0.5}{90}{152}
+\put(-.6,.4){$\vec R$}
+\put(-3.5,1.5){$\tilde z$}
+
+
+
+
+\psline[linecolor=black]{->}(-5,0)(5,0)
+\psline[linecolor=black]{->}(0,-2)(0,3)
+\psline[linecolor=black]{->}(-2,-3)(2,3)
+\put(5,.1){$x$}
+\put(2,3.1){$y$}
+\put(.1,3){$z$}
+\put(2,2){$K\cap M_2$}
+\end{pspicture}
+\end{center}
+\item F\"ur den Zylinder nutzen wir die Parametrisierung in Zylinderkoordinaten 
+$$\vec x(r,\varphi,z)=\begin{pmatrix} r\cos\varphi\\r\sin\varphi\\z\end{pmatrix}$$
+Die erste Menge $Z\cap M_1$ stimmt mit dem Zylinder \"uberein. 
+\begin{align*}
+Z=Z\cap M_1=&\left\{\vec x(r,\varphi,z)|0\leq r\leq 1,\, 0\leq \varphi\leq 2\pi,\, 0\leq z\leq 3\right\}\\
+Z\cap M_2=& \left\{\vec x(r,\varphi,z)|0\leq r\leq 1,\, 0\leq \varphi\leq 2\pi,\, z_0(r,\varphi)\leq z\leq 3\right\}
+\end{align*}
+Dabei ber\"ucksichtigt $z_0(r,\varphi)$, dass die Ebene $3x=z$ den Zylinderboden in der Mitte schneidet. Dies f\"uhrt dazu, dass f\"ur positive $x$ die Untergrenze des Integrationsbereichs von der Ebene beschrieben wird und f\"ur  negative $x$ durch den Zylinderboden $z=0$: 
+$$z_0(r,\varphi)=\left\{\begin{array}{ll}
+0,& \text{ f\"ur } \frac{\pi}2 \leq \varphi\leq \frac{3\pi}2\\
+3r\cos(\varphi),&\text{ sonst }
+\end{array}.\right.$$
+\end{itemize}
+\begin{center}
+\begin{pspicture}(-5,-3)(5,5)
+
+\psellipticarc[linecolor=lightgray, fillcolor=lightgray, fillstyle=solid](0,0)(1,.6){80}{240}
+\psline[fillstyle=solid, fillcolor=lightgray, linecolor=lightgray](-1,0)(0,0)(1,3)(-1,3)(-1,0)
+\rput{71}(0,0){\psellipticarc[linecolor=black, linewidth=2pt, fillstyle=solid, fillcolor=lightgray](0,0)(3.1,.2){-17}{165}}
+\psellipse[linecolor=black, linewidth=2pt](0,0)(1,.6)
+\psellipse[linecolor=black, linewidth=2pt, fillstyle=solid, fillcolor=lightgray](0,3)(1,.6)
+\psline[linecolor=black, linewidth=2pt](1,0)(1,3)
+\psline[linecolor=black, linewidth=2pt](-1,0)(-1,3)
+\psline[linecolor=black]{->}(-5,0)(5,0)
+\psline[linecolor=black]{->}(0,-2)(0,3)
+\psline[linecolor=black]{->}(-2,-3)(3,4.5)
+\put(5,.1){$x$}
+\put(3,4.6){$y$}
+\put(.1,3){$z$}
+\put(2,2){$Z\cap M_2$}
+\end{pspicture}
+\end{center}
+
+}
+
+%\ErgebnisC{analysIntgZyln002}{}

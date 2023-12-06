@@ -1,0 +1,37 @@
+\Aufgabe[e]{Taylor--Entwicklung in 2 Dim.}{
+Gegeben seien \ $f:\R^2 \to \R$  \ mit \ $f(x,y)=\EH{xy}+x+y$ \ und \ $\vec{a}=\dfrac{1}{5}\begin{pmatrix}{-4}\\{3}\end{pmatrix}$\,.
+
+\begin{itemize}
+\item[ a)] Bestimmen Sie das Taylorpolynom 2. Grades von \ $f$ \ für den Entwicklungspunkt \ $(0,0)$\,.
+  
+\item[ b)] Bestimmen Sie die Richtungsableitung \ $\partial$$_{\vec a}$$\,f$ \ von \ $f$ \ in Richtung \  $\vec{a}$ \ im Punkt \ $(0,0)$\,. 
+\end{itemize}
+}
+
+\Loesung{
+\textbf{a)} \ Mit den partiellen Ableitungen 
+  \[
+  \begin{array}{rclcl}
+  f_x & = & y\,\EH{xy}+1 & \Rightarrow  & f_x(0,0)=1\ , \\
+  f_y & = & x\,\EH{xy}+1 & \Rightarrow  & f_y(0,0)=1\ , \\
+  f_{xx} & = & y^2\,\EH{xy} & \Rightarrow  & f_{xx}(0,0)=0\ , \\
+  f_{xy} & = & xy\,\EH{xy}+\EH{xy} & \Rightarrow  & f_{xy}(0,0)=1\ , \\
+  f_{yy} & = & x^2\,\EH{xy} & \Rightarrow  & f_{yy}(0,0)=0
+  \end{array}
+\]
+folgt
+$$
+T_{f,2}(x,y)\ =\ 1+x+y+\frac{2}{2}xy\ =\ 1+x+y+xy\ . 
+$$
+
+\bigskip
+\textbf{b)} \ Es ist 
+$$ \frac{\partial f}{\partial \vec{a}}(0,0)\ =\ \langle \nabla f(0,0) , \vec{a}\rangle \ =\ f_x(0,0) \cdot a_1+f_y(0,0)\cdot a_2\ =\ a_1+a_2\ =\ -\dfrac{1}{5}\ . 
+$$
+}
+
+% \ErgebnisC{dummy}
+% {
+% 
+% }
+

@@ -1,0 +1,67 @@
+\Aufgabe[e]{AWP und $\delta$--Distribution}
+{
+Ein mechanisches Pendel werde durch das folgende Anfangswertproblem beschrieben
+	\[
+	u''(t) + 2\,u'(t)+5\,u(t) = f(t)\ ,\quad u(0)=2\ ,\ \ u'(0)=-2 \ .
+\]
+$u''(t)$ steht nach dem zweiten Newtonschen Gesetz f\"ur die Beschleunigung einer Masse. Der Term $5u(t)$ modelliert ein repulsives Potential (Federkraft) und der Term $2u'(t)$ die D\"ampfung des Systems. Das Pendel befindet sich zum Zeitpunkt $t=0$ am Ort $u(0)=2$ und hat die Geschwindigkeit $u'(0)=-2$.   
+\begin{itemize}
+\item[a)]  Bestimmen Sie mit Hilfe der Laplace--Transformation die L\"osung des AWPs f\"ur $f(t) = 0$, $t>0$. (Es wirken keine \"außeren Kr\"afte.)
+\item[b)]  Bestimmen Sie den Zeitpunkt $t_0$ des ersten Nulldurchgangs, d.h.\ $u(t_0)=0$, der L\"osung aus Teil a)\,.
+\item[c)]  Zum Zeitpunkt $t_0$ aus Teil b) wird ein $\delta$--Impuls $f(t) 
+=\alpha\cdot\delta(t-t_0)$ so auf das System ausge\"ubt, dass das System anschließend in Ruhe ist. \\
+Dies modelliert ein starres Hindernis, auf welches das Pendel (nicht elastisch) aufprallt, so dass die Bewegung sofort endet. \\
+Wie groß muss die Impulsst\"arke $\alpha$ sein?
+\end{itemize}
+}
+\Loesung{
+\textbf{Zu a)}  Die Laplace--Transformation des AWPs ergibt mit \ $\mathcal L\big(u(t)\big)=\mathcal U(s)$\,:
+	\[
+	s^2\,\mathcal U-2\,s+2+2\cdot\big[s\,\mathcal U-2\big]+ 5\,\mathcal U = 0 \,\Rightarrow\, \mathcal U(s) = \frac{2(s+1)}{(s+1)^2+2^2} \ .
+\]
+Die R\"ucktransformation ergibt die L\"osung des AWPs
+\[
+\boxed{\ u_{\text{AWP}}(t) = 2\,\EH{-t}\cdot \cos(2t)\ }\ .
+\]
+  
+\bigskip
+\textbf{Zu b)} Aus \ $2\,t_0=\pi/2$ \ erh\"alt man \ $\boxed{\ t_0=\pi/4\ }$\,.
+
+\bigskip
+\textbf{Zu c)} Das inhomogene lineare AWP lautet
+\[
+	u''(t) + 2\,u'(t)+5\,u(t) = \alpha\cdot\delta(t-\pi/4) \ .
+\]
+Die Laplace--Transformation ergibt
+	\[
+	s^2\,\mathcal U-2\,s+2+2\cdot\big[s\,\mathcal U-2\big]+ 5\,\mathcal U = \alpha\,\EH{-s\cdot\pi/4} 
+\] 
+und nach \ $\mathcal U(s)$ \ aufgel\"ost:
+ \[
+	\mathcal U(s) = \frac{2(s+1)}{(s+1)^2+2^2}+\EH{-s\cdot\pi/4}\cdot\frac{\alpha}{(s+1)^2+2^2}\ .
+\]
+Die R\"ucktransformation ergibt
+	\[
+\begin{array}{rcl}
+	u_{\text{AWP}}(t) & = & 2\,\EH{-t}\cdot \cos(2t) + \dfrac{\alpha}{2}\cdot\EH{-(t-\pi/4)}\cdot\sin\big(2(t-\frac\pi 4)\big)\cdot h(t-\frac \pi 4) \\
+	\\
+	& = & \EH{-t}\cdot\Big\{ 2\,\cos(2t) + \dfrac{\alpha}{2}\cdot\EH{\pi/4}\cdot\Big[\sin(2t)\,\cos(\frac \pi 2)\\[3ex]
+            & & \qquad \quad -\cos(2t)\,\sin(\frac \pi 2)\Big]\cdot h(t-\frac \pi 4)\Big\} \\
+	\\
+	& = & \EH{-t}\,\cos(2t)\cdot\Big\{2-\dfrac \alpha 2\,\EH{\pi/4}\cdot h(t-\frac \pi 4)\Big\}
+\end{array}
+\]
+Damit die L\"osung f\"ur \ $t\ge t_0$ \ verschwindet, muß \ $2=\dfrac \alpha 2\,\EH{\pi/4}$ \ sein, der $\delta$--Implus also die St\"arke
+\[
+ \boxed{\ \alpha = 4\,\EH{-\pi/4}\ }
+\]
+haben.
+}
+
+\ErgebnisC{AufglaplacDeltDist003}
+{
+\textbf{a)} $u_{\text{AWP}}(t) = 2\,\EH{-t}\cdot \cos(2t)$, \textbf{b)} $t_0=\pi/4$, 
+\textbf{c)} $\alpha = 4\,\EH{-\pi/4}$.
+}
+
+

@@ -1,0 +1,62 @@
+\Aufgabe[e]{Umkehrfunktion}{
+\begin{abc}
+\item Differenzieren Sie die folgenden Funktionen: 
+\begin{iii}
+\item $f_1(x)=3x^4 (\ln x)^2 \,,$
+\item $f_2(x)=x^{x+\ln x}$\,, $x>0$\,, 
+\item $f_3(x) = \mbox{arcsin}_{\mathrm{H}}x + \mbox{arcsin}_{\mathrm{H}}\left(2x\sqrt{1-x^2}\right)- 3 \,\mbox{arcsin}_{\mathrm{H}}x\,,$ $|x|\leq \frac{\sqrt{2}}{2}$\,.
+ \end{iii}
+\item Gegeben sei die Funktion
+$$ f(x) = e^{x} + 2x . $$
+\begin{iii}
+\item Zeigen Sie, dass $f:\R \to \R$ umkehrbar ist.
+\item Bestimmen Sie die Ableitungen $g^\prime(1)$ und $g^{\prime\prime}(1)$ der Umkehrfunktion 
+$$g=f^{-1}.$$ 
+\end{iii}
+\end{abc}
+}
+
+
+\Loesung{
+\textbf{Zu a)} Es gilt:
+\begin{itemize}
+\item[i)] \qquad 
+$f_1'(x) = 3\cdot 4 x^3(\ln x)^2 + 3 x^4\cdot 2\ln x \cdot \dfrac{1}{x}=6x^3\ln x(2\ln x+1)\,,$
+\item[ii)] \qquad
+$\begin{array}[t]{r@{\;}c@{\;}l}
+f_2(x) & = & x^{x+\ln x} = \exp\left((x+\ln x)\cdot \ln x\right)\,,\\[3ex]
+f_2'(x) & = & \exp\left((x+\ln x)\cdot \ln x\right) \cdot \left[\left(1+\dfrac{1}{x}\right)\ln x + (x + \ln x)\cdot \dfrac{1}{x}\right]\\[2ex]
+ & = & \left(1+\ln x + \dfrac{2}{x}\ln x\right)\cdot x^{x+\ln x}\,,
+\end{array}
+$
+\item[iii)] \qquad $\begin{array}[t]{r@{\;}c@{\;}l}
+f_3'(x) & = & \dfrac{1}{\sqrt{1-x^2}} + \dfrac{2\sqrt{1-x^2}+2x\cdot \dfrac{1}{2}\cdot \dfrac{-2x}{\sqrt{1-x^2}}}{\sqrt{1-4x^2(1-x^2)}} - \dfrac{3}{\sqrt{1-x^2}}\\[3ex]
+& = & - \dfrac{2}{\sqrt{1-x^2}} + \dfrac{2\sqrt{1-x^2}- \dfrac{2x^2}{\sqrt{1-x^2}}}{1-2x^2}\\[3ex] 
+& = & - \dfrac{2}{\sqrt{1-x^2}} + \dfrac{2-4x^2}{(1-2x^2)\sqrt{1-x^2}} = 0\,,
+\end{array}
+$\\[1ex]
+d.h.\ $f_3$ ist konstant. 
+\end{itemize}
+
+\bigskip
+\textbf{Zu b)}\\[1ex]
+i) Die Funktion $f:\R \to \R$ ist streng monoton steigend, denn $x \mapsto 2x$ und $x \mapsto e^x$
+ sind beide streng monoton steigend. \\
+Außerdem ist $\lim\limits_{x \to -\infty} f(x) = - \infty$ und
+ $\lim\limits_{x \to +\infty} f(x) = +\infty$.\\
+Also werden von der stetigen Funktion $f(x)$ alle reellen Werte angenommen. Wegen der Monotonie
+ wird jeder Wert nur genau ein Mal angenommen und die Funktion $f(x)$ ist umkehrbar. 
+
+\vspace*{1ex}
+ii) Es ist $f(0)=e^0+2 \cdot 0=1$, also hat man $x_0=0$ und $y_0=f(x_0)=1$. Mit den Formeln f\"ur die Ableitung der Umkehrfunktion aus der Vorlesung und den Ableitungen
+$f^\prime(x)=e^x+2$ sowie $f^{\prime\prime}(x)=e^x$ folgt 
+$$ g^\prime(1)=\dfrac{1}{f^\prime(0)}=\dfrac{1}{3} 
+   \text{ und } 
+   g^{\prime\prime}(1)=-\dfrac{f^{\prime\prime}(0)}{(f^\prime(0))^3}
+	= -\dfrac{1}{27}\,. $$
+
+}
+
+%\ErgebnisC{analysUmkeFunk004}
+%{
+%}

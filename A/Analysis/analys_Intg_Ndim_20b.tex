@@ -1,0 +1,141 @@
+\Aufgabe[e]{Alte Klausuraufgabe}{
+\begin{abc}
+\item Berechnen Sie das Integral $\iint_D\frac{x^2}{y^2}\d x\d y$, wobei 
+$D$ den von den Geraden $x=2$, $y=x$ und der Hyperbel $xy=1$ begrenzten Bereich 
+des $\R^2$ bezeichne.
+ 
+%\item Berechnen Sie das Integral 
+%$$
+%I = \int_{B} x^2 \d B\,.
+%$$
+%Dabei ist $B$ jener Bereich, der von den beiden Zylindern $x^2+z^2=1$ und $x^2 
+%+ y^2 = 1$ \ eingeschlossen wird. 
+
+\item Gegeben sei der K\"orper
+$$ 
+K = \big\{ (x,y,z) \in \R^3 \, | \, x^2+y^2-z^2 \le 1, \ -1 \le z \le 2 \big\} 
+\,. 
+$$
+Skizzieren Sie den K\"orper und berechnen Sie dessen Volumen.
+
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Der Integrationsbereich hat die folgende Gestalt: \\
+\end{abc}
+\begin{center}
+\begin{pspicture}(-1,-1)(3,3)
+\psline{->}(0,-1)(0,3)
+\psline{->}(-1,0)(3,0)
+\put(.1,2.6){$y$}
+\put(2.6,.1){$x$}
+
+\psplot[plotpoints=100, plotstyle=curve, fillstyle=solid, fillcolor=gray]
+{1}{2}
+{
+1 x div
+}
+
+\psline[fillstyle=solid, fillcolor=gray, linecolor=gray](1,1)(2,.5)(2,2)(1,1)
+
+\psplot[plotpoints=100, plotstyle=curve]
+{.35}{3}
+{
+1 x div
+}
+\put(.5,2.5){$xy=1$}
+\psline(2,-1)(2,3)
+\put(2.1,1.6){$x=2$}
+\psline(-1,-1)(3,3)
+\put(2.6,2.2){$x=y$}
+
+\end{pspicture}
+\end{center}
+
+$D$ ist Normalbereich bez\"uglich $x$,
+$$
+D =\left\{\begin{pmatrix}x\\y\end{pmatrix}\in\R^2: \frac{1}{x}\leq y \leq x\text{,}\quad 1\leq x\leq 
+2\right\}\,.
+$$
+Es gilt
+\begin{align*}
+\iint_D\frac{x^2}{y^2}\d x\d y &= \int_1^2\left(\int_{1/x}^x 
+\frac{x^2}{y^2}\d 
+y\right)\d x\\[1ex]
+ &= \int_1^2 x^2 \cdot \left[\frac{-1}{y}\right]_{y = 1/x}^{y=x} \d x\\[1ex]
+ &= \int_1^2 \left(-x+x^3\right)\d x = \frac{9}{4}\,.
+\end{align*}
+\begin{abc}\setcounter{enumi}{1}
+%\item Der Bereich $B$ ist ein Normalbereich mit
+%$$
+%-\sqrt{1-x^2}\leq z \leq \sqrt{1-x^2}\,, \qquad -\sqrt{1-x^2}\leq y \leq 
+%\sqrt{1-x^2}\,, \qquad -1 \leq x \leq 1\,.
+%$$
+%Damit folgt
+%\begin{align*}
+%I & = \int_{x=-1}^{1}  \int_{y=-\sqrt{1-x^2}}^{y=\sqrt{1-x^2}} 
+%\int_{z=-\sqrt{1-x^2}}^{z=\sqrt{1-x^2}} x^2 \d z \d y\d x\\[3ex] 
+%& =  2 \int_{x=-1}^{1}  \int_{y=-\sqrt{1-x^2}}^{y=\sqrt{1-x^2}} x^2 
+%\sqrt{1-x^2} 
+%\d y\d x \\[3ex]
+%& = 4 \int_{x=-1}^{1} x^2 \sqrt{1-x^2} \sqrt{1-x^2}\d x = 4 \int_{x=-1}^{1} 
+%(x^2-x^4) \d x\\[3ex]
+%& = 8 \left(\dfrac{1}{3}- \dfrac{1}{5}\right) = \boxed{\dfrac{16}{15}\,.}
+%\end{align*}
+
+\item Die Ungleichung in der Definition des Integrationsgebietes
+ l\"asst sich schreiben als 
+$$ x^2+y^2 \le 1 + z^2. $$
+Skizze: 
+
+\end{abc}
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\psline{->}(-3,0)(3,0)
+\put(2.6,.1){$x$}
+\psline{->}(0,-2)(0,3)
+\put(.1,2.7){$z$}
+
+\psline{->}(-3,-.8)(3,.8)
+\put(2.75,.9){$y$}
+
+\psparametricplot[plotpoints=100, plotstyle=curve]
+{-1}{2}
+{
+1 t t mul add sqrt
+t
+}
+\psparametricplot[plotpoints=100, plotstyle=curve]
+{-1}{2}
+{
+1 t t mul add sqrt neg
+t
+}
+
+\psellipse(0,-1)(1.44,.4)
+\psellipse(0,2)(2.24,.6)
+\psellipse(0,0)(1,.27)
+\end{pspicture}
+\end{center}
+Das Volumen berechnet man in Zylinderkoordinaten, 
+$$ x = r \cos \varphi, \quad \ y = r \sin \varphi, \quad z = z . $$
+Die zugeh\"orige Funktionaldeterminante ist $ \left| 
+\dfrac{\partial(x,y,z)}{\partial(r,\varphi,z)}\right| = r$. Das Volumen ist:
+\begin{align*}
+  \int_{z=-1}^2 \int_{\varphi = 0}^{2\pi} \int_{r=0}^{\sqrt{1+z^2}}
+	r \, \d r \d\varphi \d z
+  & =  \int_{z=-1}^2 2\pi \frac{1+z^2}{2} \d z\\[2ex]
+  & = \pi \left( 3 + \left[ \frac{z^3}{3} \right]_{z=-1}^2 \right) \\[2ex]
+  & =  \pi \left( 3 + \frac{8}{3} + \frac{1}{3} \right) =  6 \pi\,.
+\end{align*}
+}
+
+\ErgebnisC{analysIntgNdim020}
+{
+a) $9/4$, b) %$16/15$, c) 
+$6\pi$
+}

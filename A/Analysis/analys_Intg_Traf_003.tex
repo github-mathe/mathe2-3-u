@@ -1,0 +1,224 @@
+\Aufgabe[e]{Transformationsformel} {
+\begin{abc}
+\item Berechnen Sie 
+$$	I := \int\limits_{\vec D}  \dfrac{x^6-2x^5y-x^4y^2+4x^3y^3-x^2y^4-2xy^5+y^6+32x+32y}{64}  \d (x,y),$$
+wobei der Bereich $\vec D$ von den Geraden 
+\begin{align*}
+y&=-x-4,\qquad& y&=x-2,\qquad& y&= 4-x\qquad\text{ und }&y&=x-6
+\end{align*}
+eingeschlossen wird. \\
+F\"uhren Sie Ihre Berechnungen zun\"achst in kartesischen Koordinaten durch. \\
+Berechnen Sie $I$ anschließend in den Koordinaten 
+$$\begin{pmatrix}u\\v\end{pmatrix}  = \frac 12\begin{pmatrix}x+y\\x-y\end{pmatrix}.$$
+\item Berechnen Sie f\"ur den Bereich $B$, der von der Kurve $r=\varphi,\, 0\leq \varphi\leq \pi$
+(in Polarkoordinaten) und der $x$-Achse eingeschlossen wird, das Integral 
+$$J:=\int\limits_{B}\frac{x}{\sqrt{x^2+y^2}}\d B.$$
+F\"uhren Sie Ihre Rechnung in \textbf{ Polarkoordinaten} durch.
+\item Berechnen Sie das Integral 
+$$I_E=\int\limits_{E}x^2\d (x,y),$$
+wobei der Integrationsbereich eine Ellipse ist: 
+$$E=\Bigl\{ \begin{pmatrix}x\\y\end{pmatrix}\in\R^2|\, x^2+\frac{y^2}4 \leq 1\Bigr\}$$
+\textbf{Hinweis}: Nutzen Sie die gestreckten Polarkoordinaten 
+$$\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix} r\cos(\varphi)\\2r\sin(\varphi)\end{pmatrix}$$.
+\end{abc}
+}
+
+
+\Loesung{
+\textbf{ a)} Zun\"achst skizzieren wir den Integrationsbereich $\vec D$: 
+\begin{center}
+\psset{xunit=1cm, yunit=1cm, runit=1cm}
+\begin{pspicture}(-2,-6)(6,2)
+\psgrid[subgriddiv=1,griddots=10,gridlabels=.3](-2,-6)(6,2)
+\psline[fillstyle=solid, fillcolor=gray, linewidth=1pt, linecolor=black]
+(-1,-3)(3,1)(5,-1)(1,-5)(-1,-3)
+\put(2,-2){$\vec D$}
+\put(5.7,-5.8){$x$}
+\put(-1.9,1.5){$y$}
+\psline[linestyle=dashed](-1,-6)(-1,-3)
+\psline[linestyle=dashed](1,-6)(1,-1)
+\psline[linestyle=dashed](3,-6)(3,1)
+\psline[linestyle=dashed](5,-6)(5,-1)
+\end{pspicture}
+\end{center}
+\qquad\\
+Wir parametrisieren $\vec D$ als Normalbereich bez\"uglich $x$: 
+\begin{align*}
+\vec D =& \{(x,y)^\top|\, -4-x\leq y\leq -2+x,\, -1\leq x\leq 1\}\cup \\
+&\cup\{(x,y)^\top|\,-6+x\leq y\leq -2+x,\, 1\leq x\leq 3\}\cup\\
+&\cup \{(x,y)^\top|\, -6+x\leq y\leq 4-x,\, 3\leq x\leq 5\}.
+\end{align*}
+Das Integral l\"asst sich in zwei Teilintegrale zerlegen: 
+$$I=\int\limits_{\vec D}f_1(x,y)\d(x,y) + \int\limits_{\vec D}f_2(x,y)\d(x,y)=:I_1+I_2$$
+mit $f_1(x,y)=\dfrac{x^6-2x^5y-x^4y^2+4x^3y^3-x^2y^4-2xy^5+y^6}{64}\text{ und }
+f_2(x,y)=\frac{x+y}2$.
+
+Das einfachere Integral von beiden ist $I_2$: 
+\begin{align*}
+I_2=& \int\limits_{x=-1}^1\int\limits_{y=-4-x}^{-2+x} \frac {x+y}2 \d y  \d x
++ \int\limits_{x=1}^3\int\limits_{y=-6+x}^{-2+x} \frac{x+y}2 \d y \d x
++ \int\limits_{x=3}^5\int\limits_{y=-6+x}^{4-x}\frac{x+y}2 \d y \d x\\
+=& \frac 14\left( \int\limits_{-1}^1 \left[(x+y)^2\right]_{y=-4-x}^{-2+x}\d x
++ \int\limits_{1}^3\left[(x+y)^2\right]_{y=-6+x}^{-2+x} \d x
++ \int\limits_{3}^5\left[(x+y)^2\right]_{y=-6+x}^{4-x}\right)\\
+=& \frac 14 \left( \int\limits_{-1}^3(-2+2x)^2\d x - \int\limits_{-1}^1(-4)^2\d x
+- \int\limits_{1}^5(-6+2x)^2\d x + \int\limits_{3}^54^2\d x\right)\\
+=& \frac 1{4}\left( \frac 43\left.(-1+x)^3\right|_{-1}^3 - 32 - \frac
+43 \left.(-3+x)^3\right|_{1}^5+32\right)=\frac{16-16  }{3}=0
+\end{align*}
+Also ist $I=I_1$. Wir vereinfachen zun\"achst die Darstellung von $f_1(x,y)$. Hierf\"ur kann man
+wegen $f_1(t,t)=0$ den Linearfaktor $(x-y)$ abspalten: 
+%$$\begin{array}{rrrrrrrrrrrrrrrrrrr}
+%(x^6&-2x^5y&-x^4y^2&   +4x^3y^3&-x^2y^4&-2xy^5&+y^6&):(x-y)=& x^5 &-x^4 y &-2x^3y^2&+2x^2y^3&+xy^4&- y^5\\
+% x^6&-x^5y &         &        &       &      &   &                                      \\
+%    &-x^5y &         &        &       &      &   &                                      \\
+%    &-x^5y &+x^4y^2  &        &       &      &   &                                      \\
+%    &      &-2x^4y^2 &        &       &      &   &                                      \\
+%    &      &-2x^4y^2 &+2x^3y^3&       &      &   &                                      \\
+%    &      &         &2x^3y^3 &       &      &   &                                      \\
+%    &      &         &2x^3y^3 &-2x^2y^4      &   &                                      \\
+%    &      &         &        &x^2y^4 &      &   &                                      \\
+%    &      &         &        &x^2y^4 &-xy^5 &   &                                      \\
+%    &      &         &        &       & -xy^5&   &                                      \\
+%    &      &         &        &       &- xy^5&+ y^6 &                                   \\
+%    &      &         &        &       &      &  0&                                      \\
+%\end{array}$$
+$$x^6-2x^5y-x^4y^2 +4x^3y^3-x^2y^4-2xy^5+y^6=(x-y)\cdot(x^5 -x^4 y -2x^3y^2+2x^2y^3+xy^4- y^5)$$
+Auch vom Restpolynom l\"asst sich der Linearfaktor $(x-y)$ abspalten
+$$f_1(x,y)=\frac 1{64}(x-y)^2(x^4-2x^2y^2+y^4)$$
+und eine weitere Zerlegung ergibt: 
+$$f_1(x,y)=\frac 1{64}(x-y)^2(x^2-y^2)^2=\frac 1{64}(x-y)^4(x+y)^2.$$
+Dies f\"uhrt auf das Integral
+\begin{align*}
+I=I_1=&  \int\limits_{x=-1}^1\int\limits_{y=-4-x}^{-2+x} \left( \frac{x+y}2\right)^2 \left( \frac{x-y}2\right)^4
+ \d y \d x +\\
+&+ \int\limits_{x=1}^3\int\limits_{y=-6+x}^{-2+x} \left( \frac{x+y}2\right)^2 \left( \frac{x-y}2\right)^4
+ \d y \d x+\\
+&+  \int\limits_{x=3}^5\int\limits_{y=-6+x}^{4-x} \left( \frac{x+y}2\right)^2 \left( \frac{x-y}2\right)^4
+ \d y \d x
+\end{align*}
+Daraus ergibt sich mittels partieller Integration
+\begin{align*}
+I=& \frac 1{64}\Bigl(\int\limits_{x=-1}^1\Bigl[-(x+y)^2\frac{(x-y)^5}5
+- \frac{2(x+y)(x-y)^6}{5\cdot 6} - \frac{2(x-y)^7}{5\cdot 6\cdot 7}\Bigr]_{y=-4-x}^{-2+x}\d x +\\
+&\qquad\qquad +\int\limits_{x=1}^3\Bigl[\hdots\Bigr]_{y=-6+x}^{-2+x}\d x
++ \int\limits_{x=3}^5\Bigl[\hdots\Bigr]_{y=-6+x}^{4-x}\d x\Bigr)\\
+=&\frac{1}{64}\Bigl( \int\limits_{-1}^3\Bigl[-(-2+2x)^2\frac{2^5}5-\frac{2(-2+2x)2^6}{30}-\frac{2\cdot
+ 2^7}{210}\Bigr]\d x+ \\
+& \qquad - \int\limits_{-1}^1\Bigl[ -(-4)^2\frac{(4+2x)^5}5 - \frac{2(-4)(4+2x)^6}{30}-\frac{2(4+2x)^7}{210}\Bigr]\d x+\\
+&\qquad -\int\limits_{1}^5\Bigl[ -(-6+2x)^2\frac{6^5}5
+- \frac{2(-6+2x)6^6}{30}-\frac{2\cdot 6^7}{210}\Bigr]\d x+\\
+&\qquad + \int\limits_{3}^5\Bigl[ -4^2\frac{(2x-4)^5}5-\frac{2\cdot 4 \cdot
+ (2x-4)^6}{30}-\frac{2\cdot (2x-4)^7}{210}\Bigr]\d x\Bigr)
+\end{align*}
+und weiter
+\begin{align*}
+I=& 2\int\limits_{-1}^3\Bigl[-\frac{(-1+x)^2}5-\frac{(-1+x)}{15}-\frac{1}{105}\Bigr]\d x + \\
+& - 2\int\limits_{-1}^1\Bigl[ -4\frac{(2+x)^5}5 + \frac{2(2+x)^6}{15}-\frac{(2+x)^7}{105}\Bigr]\d x+\\
+& -2\int\limits_{1}^5\Bigl[ -(-3+x)^2\frac{3^5}5- \frac{(-3+x)3^6}{15}-\frac{3^7}{105}\Bigr]\d x+\\
+& + 2\int\limits_{3}^5\Bigl[ -\frac{4(x-2)^5}5-\frac{2 \cdot (x-2)^6}{15}-\frac{(x-2)^7}{105}\Bigr]\d
+x\\
+=&\frac 25 \Bigl( \left[-\frac{(-1+x)^3}3 - \frac{(-1+x)^2}{6} - \frac{-1+x}{21}\right]_{-1}^3 + \\
+&\qquad -\left[ -\frac{2(2+x)^6}{3}  +\frac{2(2+x)^7}{21} - \frac{(2+x)^8}{21\cdot 8}\right]_{-1}^1
++ \\
+&\qquad + \left[ \frac{3^5(-3+x)^3}{3} + \frac{3^5(-3+x)^2}{2} + \frac{3^6(-3+x)}{7}\right]_{1}^5+\\
+&\qquad + \left[-\frac{2(x-2)^6}{3} - \frac{2(x-2)^7}{21} - \frac{(x-2)^8}{8\cdot
+21}\right]_3^5\Bigr)\\
+=& \frac 25 \Bigl( \left[-\frac{16}3-\frac{4}{21} \right] - \left[-\frac{2\cdot 3^6-2}3
++ \frac{2\cdot 3^7-2}{21}-\frac{3^8-1}{21\cdot 8}\right] + \\
+&\qquad + \left[3^4\cdot 2^4+\frac{3^6\cdot 4}{7}\right] + \left[ -\frac{2(3^6-1)}3
+- \frac{2(3^7-1)}{21}-\frac{3^8-1}{8\cdot 21}\right]\Bigr)\\
+=& \frac 25 \Bigl( \frac{-16-2+2}3+\frac{-4+2+2}{21}+3^5\left( 2-2\right)+\frac{-2\cdot 3^6+4\cdot
+3^6-2\cdot 3^6}{7}+\\
+&\qquad + \frac{3^8-1-3^8+1}{8\cdot 21}+2^4\cdot 3^4\Bigr)\\
+=& \frac 25 \Bigl( -\frac{16}3 +2^4\cdot 3^4\Bigr) = \frac{32}5\cdot \frac {3^5-1}3 = \frac{64\cdot 121}{15}=\frac{7744}{15}
+\end{align*}
+
+Die Geraden, die das Integrationsgebiet $\vec D$ beranden, werden von der angegebenen Koordinatentransformation 
+$$\vec x(u,v)=\begin{pmatrix}u+v\\u-v\end{pmatrix}$$
+zu achsenparallelen Geraden: 
+\begin{align*}
+y&= -x-4&\quad&\Rightarrow&\quad&&u-v&=-u-v-4&\quad&\Rightarrow&\quad&&u&=-2\\
+y&=x-2&&\Rightarrow&&&u-v&=u+v-2&&\Rightarrow&&&v&=1\\
+y&=4-x&&\Rightarrow&&&u-v&=4-u-v&&\Rightarrow&&&u&=2\\
+y&=x-6&&\Rightarrow&&&u-v&=u+v-6&&\Rightarrow&&&v&=3. 
+\end{align*}
+Damit hat das transformierte Integrationsgebiet die einfache Gestalt eines achsenparallelen Rechtecks
+$$\tilde{\vec D}=[-2,2]\times[1,3].$$
+\begin{center}
+\psset{xunit=1cm, yunit=1cm, runit=1cm}
+\begin{pspicture}(-3,0)(3,4)
+\psgrid[subgriddiv=1,griddots=15,gridlabels=.3](-3,0)(3,4)
+\psline[fillstyle=solid, fillcolor=gray, linewidth=1pt, linecolor=black]
+(-2,1)(2,1)(2,3)(-2,3)(-2,1)
+\put(0.4,1.4){$\tilde{\vec D}$}
+\put(2.7,.2){$u$}
+\put(-2.9,3.5){$v$}
+\end{pspicture}
+\end{center}
+\qquad\\
+F\"ur die Anwendung der Transformationsformel ben\"otigen wir außerdem die Determinante der
+Jacobi-Matrix der Transformation $\vec x(u,v)$: 
+$$\det \vec x'(u,v) = \det \begin{pmatrix}1 & 1 \\ 1 & -1\end{pmatrix} = -2.$$
+Das Integral berechnet sich damit zu: 
+\begin{align*}
+I&=\int\limits_{\tilde D} f(x(u,v),y(u,v))|-2|\d(u,v)\\
+&=\frac 1{32}\int\limits_{\tilde D} \Bigl( (u+v)^6 - 2(u+v)^5(u-v) - (u+v)^4(u-v)^2+4((u+v)(u-v))^3
++ \\
+&\qquad\qquad\qquad  - (u+v)^2(u-v)^4 - 2 (u+v)(u-v)^5 + (u-v)^6 + 32(u+v+u-v)\Bigr)\d(u,v)\\
+&= \frac 1{32}\int\limits_{v=1}^3 \int\limits_{u=-2}^2\Bigl( 2(u^6+15u^4v^2+15u^2v^4+v^6) - 2(u+v)^4(u^2-v^2) -
+(u+v)^2(u^2-v^2)^2+ \\
+&\qquad\qquad\qquad  +4(u^2-v^2)^3- (u^2-v^2)^2(u-v)^2 - 2 (u^2-v^2)(u-v)^4 + 64 u\Bigr)\d u \d v\\
+&=\frac 1{8}\int\limits_{v=1}^3\left( \frac{2^7}7+3v^22^5+5v^42^3+v^6\cdot 2\right)\d v + \\
+&\quad + \frac 1{32}\int\limits_{v=1}^3\int\limits_{u=-2}^2
+(u^2-v^2)\Bigl( 
+-4(u^4+6u^2v^2+v^4)-2(u^2+v^2)(u^2-v^2)+4(u^2-v^2)^2\Bigr) \d u \d v + 0\\
+&= \frac {\frac {256}7 + (3^3-1)\cdot 2^5 + 2^3(3^5-1)+\frac{2(3^7-1)}7}{8} + \\
+&\quad + \frac 1{16}\int\limits_{v=1}^3\int\limits_{u=-2}^2(u^2-v^2)\left(
+-u^4-16u^2v^2+v^4\right)\d u \d v\\
+&= \frac{128+3^7-1}{4\cdot 7} + 26\cdot 4 + 3^5-1 + \\
+&\quad +\frac 1{8}\int\limits_{v=1}^3\int\limits_{u=0}^2\left( -u^6-15u^4v^2+17u^2v^4-v^6\right)\d
+u \d v\\
+&= \frac{127+3^7}{4\cdot 7}+ 103+3^5 + \frac 1{8}\int\limits_{v=1}^3\left(
+-\frac{2^7}7-3\cdot 2^5v^2 + \frac {17}3\cdot 2^3v^4-2v^6\right)\d v\\
+&= \frac{127+3^7}{4\cdot 7}+ {103+3^5} + \frac 1{8}\left(
+-\frac{2^8}7-2^5(3^3-1) + \frac {17}{15}\cdot 2^3(3^5-1)-\frac{2}7(3^7-1)\right)\\
+&= \frac{127+3^7-2^7-3^7+1}{4\cdot 7}+{103+3^5} -4\cdot 26+\frac{17\cdot 242}{15}\\
+&= 0 + {346} - 104 + \frac{17\cdot 242}{15}
+= \frac{242\cdot 15+17\cdot 242}{15} - 13 = \frac{242\cdot 32}{15} 
+= \frac{7744}{15}.
+\end{align*}
+
+
+
+\textbf{ b)}  Der angegebene Bereich l\"asst sich besser in Polarkoordinaten parametrisieren als in
+kartesischen: 
+$$\tilde B = \{(r,\varphi)\in\R^2|\, 0\leq r\leq \varphi,\, 0\leq \varphi\leq \pi\}.$$
+Die Determinante der Jakobimatrix der Koordinatentransformation 
+$$\begin{pmatrix}u(r,\varphi)\\y(r,\varphi)\end{pmatrix}=\begin{pmatrix}r\cos\varphi\\r\sin\varphi\end{pmatrix}$$ 
+ist
+$$\det \begin{pmatrix}\cos\varphi&-r\sin\varphi\\ \sin\varphi&r\cos\varphi\end{pmatrix}=
+r\cos^2\varphi + r\sin^2\varphi=r.$$
+Damit berechnet sich das Integral zx:
+\begin{align*}
+J=& \int\limits_{\tilde B} \frac{r\cos \varphi}{\sqrt{r^2\cos^2\varphi+ r^2\sin^2\varphi}}|r|\d
+(r,\varphi)
+= \int\limits_{\varphi=0}^\pi \int\limits_{r=0}^\varphi r\cos\varphi \d r
+d\varphi=\int\limits_{\varphi=0}^\pi \frac 12 \varphi^2\cos\varphi\d\varphi\\
+=& \left.\frac {\varphi^2}2 \sin\varphi\right|_0^\pi
+- \int\limits_0^\pi \varphi \sin\varphi \d\varphi = 0-\left.\varphi(-\cos\varphi)\right|_{0}^\pi
+- \int\limits_0^\pi \cos\varphi\d\varphi = -\pi +0=-\pi. 
+\end{align*}
+\textbf{c)} Das Integral ergibt sich zu
+\begin{align*}
+I_E=& \int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^1 r^2\cos^2(\varphi)\cdot 2r\d r\d \varphi\\
+=& \int\limits_{\varphi=0}^{2\pi}\left.\frac{r^4}2\right|_{r=0}^1 \cos^2(\varphi)\d \varphi\\
+=& \int\limits_{\varphi=0}^{2\pi}\cos^2(\varphi)\d \varphi \cdot \frac 12
+= \frac\pi 2.
+\end{align*}
+}
+
+\ErgebnisC{analysIntgTraf003}
+{
+\textbf{a)} $\frac{3872}{15}$,\, \textbf{b)} $-\pi$,\, \textbf{c)} $\pi/2$
+}

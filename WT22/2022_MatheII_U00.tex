@@ -1,0 +1,71 @@
+
+\input{header}
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l}Dr.\ Frank Gimbel\\Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2022}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{Mathematik II}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{0}
+\newcommand{\TOPIC}{Wiederholung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+%  \setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+ \setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+
+\textbf{Einführende Bemerkungen}
+
+\begin{itemize}
+\item Dieses Übungsblatt enthält Aufgaben angelehnt an die Klausuraufgaben.
+\item Achten Sie darauf, dass Sie die Notation beherschen und die Aufgaben sauber Niederschreiben.
+\item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
+\item Die mit einem Stern *) markierten (Teil-)Aufgaben werden im ISA-Kurs behandelt,  
+k\"onnen und sollen aber auch von den Studierenden bearbeitet werden, die nicht am ISA-Kurs teilnehmen. 
+Bitte laden Sie Ihre Lösungen im ILIAS hoch.
+\end{itemize}
+
+\ruleBig
+
+%Mathe II Blatt 0
+\input{../A/Wiederholung/Klausur_Matrizen.tex}
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\input{../A/Wiederholung/Klausur_LGS.tex}
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\input{../A/Wiederholung/Klausur_Geometrie.tex}
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\input{../A/Wiederholung/Klausur_Eigenwerte.tex}
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\input{../A/Wiederholung/Klausur_Unterraum.tex}
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\input{../A/Wiederholung/Klausur_Kompl_Zahlen.tex}
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\input{../A/Wiederholung/Funktionen.tex}
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\input{../A/Wiederholung/Vektorwertige_Lin_Abb.tex}
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\ifthenelse{\boolean{mitErg}}{
+\ruleBig
+\Ergebnisse}{}
+
+
+\end{twocolumn}
+\end{document}

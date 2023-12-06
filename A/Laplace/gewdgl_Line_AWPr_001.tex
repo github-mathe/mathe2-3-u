@@ -1,0 +1,100 @@
+\Aufgabe[e]{Anfangswertprobleme zu linearen Differentialgleichungen $n$-ter Ordnung}
+{
+Gegeben seien die folgenden Anfangswertprobleme: 
+\begin{abc}
+\item $y^{\prime\prime}(t) - 2 y^\prime(t) - 3y(t) = 4 \EH{t}, \quad y(0) = 0, 
+         \quad y'(0) = 6,$
+\item $y^{\prime\prime}(t)+4y^\prime(t)+4y(t)=4 \EH{-2t}, \quad y(0)=1 ,\quad
+  y^\prime(0)=0$.
+\end{abc}
+Bestimmen Sie die L\"osungen jeweils mit Hilfe des Exponentialansatzes \textbf{und} zus\"atzlich mit Hilfe der Laplace-Transformation. 
+}
+
+\Loesung{
+Zun\"achst die L\"osung mittels Exponentialansatz: \\
+\begin{abc}
+\item Die Nullstellen des charakteristischen Polynoms
+$p(\lambda)=\lambda^2-2\lambda-3$ sind $\lambda_1=-1$ und $\lambda_2=3$. 
+Eine Partikul\"arl\"osung der inhomogenen Gleichung berechnet man mit
+dem Ansatz $y_p(t)=ae^t$, es folgt
+$ -4 a e^t \stackrel{!}{=}4e^t$ und damit $a=-1$. Die allgemeine L\"osung
+ist 
+$$ y_{allg}(t) = - e^t + c_1 \EH{-t} + c_2 \EH{3t} \ \text{ mit } c_1,c_2 \in \R .$$
+Aus den Anfangsbedingungen $y(0)=-1+c_1+c_2 \stackrel{!}{=} 0$
+und $y^\prime(0) = -1 - c_1 + 3c_2 \stackrel{!}{=} 6$ folgt das lineare 
+Gleichungssystem
+$$ \begin{array}{rcrl}
+   c_1 & + & c_2 & = 1, \\
+   -c_1 & + & 3c_2 & = 7 
+   \end{array} $$
+mit L\"osung $c_2=2$ und $c_1=-1$. Damit ist 
+$$ y_{AWP}(t) = -e^t-\EH{-t}+2\EH{3t}. $$
+
+\item Die Nullstelle von $p(\lambda)=\lambda^2+4\lambda+4$ ist
+$\lambda=-2$, dies ist eine doppelte Nullstelle. Als Ansatz f\"ur die
+Partikul\"arl\"osung muss man 
+$y_p(t)=at^2 \EH{-2t}$ nehmen, denn man hat Resonanz der Ordnung 2. 
+Mit $y_p^\prime(t) = a \EH{-2t} \big( 2t-2t^2\big)$
+und $y_p^{\prime\prime}(t) = a \EH{-2t} \big(2-8t+4t^2\big)$
+folgt
+$2a \EH{-2t} \stackrel{!}{=} 4 \EH{-2t}$ und damit $a=2$. 
+Dies liefert die allgemeine L\"osung
+$$ y_{allg}(t) = \big( 2t^2 + c_1 t + c_2 \big) \EH{-2t}
+   \ \text{ mit } c_1,c_2 \in \R. $$
+Die Anfangsbedingungen  $y(0)=c_2 \stackrel{!}{=} 1$ und
+$y^\prime(0) = c_1-2c_2 \stackrel{!}{=} 0$ liefern $c_2=1$ und $c_1=2$ 
+und damit die L\"osung
+$$ y_{AWP}(t) = \big( 2t^2 + 2t + 1 \big) \EH{-2t} . $$ 
+\end{abc}
+Nun die L\"osung mit Hilfe der Laplace-Transformation: 
+\begin{abc}
+\item Die Laplace-Transformation der Differentialgleichung ergibt
+\begin{align*}
+&&\sL\{4\EH{t}\}=&\sL\{y''(t)-2y'(t)-3y(t)\}\\
+\Rightarrow&&\frac{4}{s-1}=&s^2Y(s)-y'(0)-sy(0)-2(sY(s)-y(0))-3Y(s)\\
+&&=&s^2Y(s)-6-2sY(s)-3Y(s)
+\end{align*}
+Die L\"osung im Bildbereich ist dann
+\begin{align*}
+Y(s)=&\frac 1{s^2-2s-3}\cdot \left( \frac 4{s-1}+6\right)\\
+=& \frac{6s-2}{(s-1)(s-3)(s+1)}
+\end{align*}
+Diese l\"asst sich mittels Partialbruchzerlegung darstellen als 
+\begin{align*}
+Y(s)=& \frac{-1}{s-1} + \frac{2}{s-3} + \frac{-1}{s+1}
+\end{align*}
+und die R\"ucktransformation ergibt die L\"osung des Anfangswertproblems: 
+\begin{align*}
+y(t)=& -\sL^{-1}\left\{\frac{1}{s-1}\right\} + 2 \sL^{-1}\left\{\frac 1{s-3}\right\} -\sL^{-1}\left\{\frac 1{s+1}\right\}\\
+=& - \EH{t} + 2 \EH{3t}-\EH{-t}
+\end{align*}
+\item Die Laplace-Transformation der Differentialgleichung ergibt
+\begin{align*}
+&&\sL\{4\EH{-2t}\}=&\sL\{y''(t)+4y'(t)+4y(t)\}\\
+\Rightarrow&&\frac{4}{s+2}=&s^2Y(s)-y'(0)-sy(0)+4(sY(s)-y(0))+4Y(s)\\
+&&=&s^2Y(s)-s+4sY(s)-4+4Y(s)
+\end{align*}
+Die L\"osung im Bildbereich ist dann
+\begin{align*}
+Y(s)=&\frac 1{s^2+4s+4}\cdot \left( \frac 4{s+2}+s+4\right)\\
+=& \frac{s^2+6s+12}{(s+2)^3}
+\end{align*}
+Diese l\"asst sich mittels Partialbruchzerlegung darstellen als 
+\begin{align*}
+Y(s)=& \frac{1}{s+2} + \frac{2}{(s+2)^2} + \frac{4}{(s+2)^3}
+\end{align*}
+und die R\"ucktransformation ergibt die L\"osung des Anfangswertproblems: 
+\begin{align*}
+y(t)=& \EH{-2t}+2t\EH{-2t}+4\frac{t^2\EH{-2t}}{2}
+= \EH{-2t}(1+2t+2t^2)
+\end{align*}
+\end{abc}
+ 
+}
+
+
+\ErgebnisC{gewdglLineAWPr001}
+{
+a) $y(t) = -e^t-\EH{-t}+2\EH{3t}$\\
+b) $y(t) = \big( 2t^2 + 2t + 1 \big) \EH{-2t}$
+}

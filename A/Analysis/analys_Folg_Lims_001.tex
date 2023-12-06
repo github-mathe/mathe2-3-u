@@ -1,0 +1,151 @@
+\Aufgabe[e]{Folgenkonvergenz}{
+Untersuchen Sie die nachfolgenden Folgen auf Konvergenz und bestimmten Sie -- wenn m\"oglich -- den
+Grenzwert: 
+\begin{align*}
+a_n=& \frac{2n^2+3n}{2n^2+7}&&&b_n=&\frac{2n^3-2}{5n^2-1}\\
+c_n=& \frac{2n^2+7n+(-1)^n}{5n+2} - \frac{2n^3-2}{5n^2-1},&\qquad\qquad&&d_n=& \left( 1 + \frac
+1{\sqrt n}\right)^n\\
+e_n =& n\left( \sqrt{n^2+1}-\sqrt{n^2-1}\right)&&& f_n=&\left( 1 + \frac x n \right)^n\text{ (mit ganzzahligem $x$)}\\
+g_n=& \left( \frac{n-1}{n+1}\right)^{n+1} &&&&
+\end{align*}
+\textbf{Hinweise}: \\
+- Setzen Sie voraus, dass $f_n$ konvergiert und ermitteln Sie den Grenzwert. \\
+- Benutzen Sie zur Untersuchung von $g_n$ das Ergebnis f\"ur $f_n$.
+}
+
+\Loesung{
+\begin{abc}
+\item Der Bruch wird zun\"achst mit dem Kehrwert der h\"ochsten auftretenden $n$-Potenz ($1/n^2$) erweitert:
+\begin{align*}
+a_n=& \frac {2 + \frac 3{n}}{2+\frac 7{n^2}} 
+\end{align*}
+Die beiden Ausdr\"ucke $\frac 3n$ und $\frac 7{n^2}$, die noch von $n$ abh\"angen, konvergieren
+beide gegen Null, damit konvergieren Z\"ahler und Nenner jeweils gegen $2$ und man hat insgesamt: 
+\begin{align*}
+a_n=& \frac{2+\frac 3n}{2+\frac
+7{n^2}}\overset{n\rightarrow \infty}\longrightarrow \frac{2+\underset{n\rightarrow \infty}\lim \frac
+3n}{2+\underset{n\rightarrow\infty}\lim \frac 7{n^2}}=\frac {2+0}{2+0}=1.
+\end{align*}
+
+\item Da die $n$-Potenz des Z\"ahlers gr\"oßer als die des Nenners ist, nehmen wir an, dass $b_n$
+divergiert. Um dies zu zeigen, sch\"atzen wir ab: 
+\begin{align*}
+b_n=& \frac{2n^3-2}{5n^2-1}= \frac{\frac 25 (5n^2 -1)n + \frac 25\cdot n -2 }{5n^2-1}= \frac 25 n
++ \underbrace{\frac{2n-10}{25n^2-5}}_{\geq 0 \text{ f\"ur }n\geq 5}\\
+\geq& \frac 25 n \underset{n\rightarrow \infty}\longrightarrow \infty
+\end{align*}
+Also ist $b_n$ gr\"o\ss er als die divergente Folge $\frac 25 n$ und divergiert ebenfalls. 
+
+\item Der Ausdruck f\"ur $c_n$ wird zun\"achst auf einen Bruchstrich gebracht und dann mit dem
+Kehrwert der h\"ochsten $n$-Potenz ($1/n^3$) erweitert: 
+\begin{align*}
+c_n=& \frac{(2n^2+7n+(-1)^n)(5n^2-1)-(2n^3-2)(5n+2)}{(5n+2)(5n^2-1)}\\
+=& \frac{31n^3+(5\cdot(-1)^n-2)n^2+ 3n-(-1)^n+4}{25n^3+10n^2-5n-2}\\
+=& \frac{31 + \frac{5\cdot(-1)^n-2}{n} + \frac 3{n^2} + \frac{4-(-1)^n}{n^3}}{25
++ \frac{10}n-\frac{5}{n^2} - \frac 2{n^3}}\underset{n\rightarrow\infty}\longrightarrow \frac
+{31}{25}
+\end{align*}
+Alle Ausdr\"ucke, die noch von $n$ abh\"angen, haben die Form $\frac z{n^l}$, wobei $z$ entweder
+konstant oder zumindest beschr\"ankt ist, deswegen konvergieren diese Ausdr\"ucke $z/n^l$ gegen
+Null. \\
+Bringt man beide Ausdr\"ucke nicht auf einen Hauptnenner, kann man nichts weiter \"uber die
+Konvergenzeigenschaften sagen, da die einzelnen Br\"uche divergieren. (siehe $b_n$)
+\item Wir zeigen, dass $d_n$ durch eine divergente Folge nach unten abgesch\"atzt werden kann und
+folgern die Divergenz von $d_n$: F\"ur $n\geq 2$ gilt 
+\begin{align*}
+d_n=& \left( 1 + \frac
+1{\sqrt{n}}\right)^n=\left(1+\frac 1{\sqrt n}\right)^2\cdot \left( 1+\frac 1{\sqrt{n}}\right)^{n-2}\\
+=& \left( 1+ \frac{2}{\sqrt n}+\frac 1n\right)\left(1+\frac 1{\sqrt n}\right)\cdot \left(1+\frac 1{\sqrt n}\right)^{n-3}\\
+=& \left( 1+ \frac 2{\sqrt n}+\frac 1n+\frac 1{\sqrt n}+\frac 2n+\frac 1{n\sqrt n}\right)\left( 1+\frac 1{\sqrt n}\right)^{n-3}\\
+=& \left( 1+\frac{3}{\sqrt n}+\hdots\right)\left( 1+\frac 1{\sqrt n}\right)^{n-3}\\
+\geq& 1+\frac{n}{\sqrt n}\\
+%&\sum\limits_{j=0}^n\begin{pmatrix}n\\j\end{pmatrix} \left( \frac
+%1{\sqrt n}\right)^j =1 + n\cdot \frac 1 {\sqrt n}
+%+ \sum\limits_{j=2}^n\begin{pmatrix}n\\j\end{pmatrix} \left( \frac 1{\sqrt n}\right)^j 
+\end{align*}
+Die Ungleichung gilt, da die wegfallenden Summanden auf jeden Fall positiv sind, also kann man absch\"atzen:
+\begin{align*}
+d_n\geq & 1 + \frac n{\sqrt n} = 1 + \sqrt n\underset{n\rightarrow \infty}\longrightarrow \infty
+\end{align*}
+Damit muss auch f\"ur $d_n$ gelten $\underset{n\rightarrow \infty }\lim d_n = \infty$. 
+\item Wir erweitern den Ausdruck f\"ur die Folge $e_n$ mit $(\sqrt{n^2+1}+\sqrt{n^2-1})$ um die
+dritte binomische Formel anzuwenden: 
+\begin{align*}
+e_n=& \frac{n(\sqrt{n^2+1}-\sqrt{n^2-1})(\sqrt{n^2+1}+\sqrt{n^2-1})}{\sqrt{n^2+1}+\sqrt{n^2-1}}
+= \frac{n(\sqrt{n^2+1}^2-\sqrt{n^2-1}^2)}{\sqrt{n^2+1}+\sqrt{n^2-1}}\\
+=& \frac{n(n^2+1-n^2+1)}{\sqrt{n^2+1}+\sqrt{n^2-1}}
+= \frac{2n}{\sqrt{n^2+1}+\sqrt{n^2-1}}
+\end{align*}
+Erweitern mit dem Kehrwert der h\"ochsten $n$-Potenz $\frac 1n$ liefert nun
+$$e_n=\frac 2{\sqrt{1+\frac 1{n^2}}+ \sqrt{1-\frac 1{n^2}}}\underset{n\to\infty}\longrightarrow \frac{2}{1+1}=1.$$
+\item Im ersten Schritt werden nur $x>0$ zugelassen. \\
+Der Vollst\"andigkeit halber \"uberpr\"ufen wir zun\"achst als Erg\"anzung der Aufgabenstellung, dass die Folge $f_n$ konvergiert, dies geschieht in zwei
+Schritten und unter Nutzung der Bernoulli-Ungleichung
+$$(1+y)^m\geq 1+my\qquad\qquad \text{ f\"ur }m\in\N\text{ und } y\geq -1$$
+\begin{iii}
+\item Die Folge $f_n$ steigt monoton: 
+\begin{align*}
+&&\frac{f_{n+1}}{f_n}=& \frac{\left(1+\frac x{n+1}\right)^{n+1}}{\left(1+\frac xn\right)^n}
+= \left( \frac{1+\frac x{n+1}}{1+\frac xn}\right)^{n+1}\left( 1+\frac x{n}\right)\\
+&&=&\left( 1+\frac{-\frac{x}n+\frac x{n+1}}{1+\frac xn}\right)^{n+1} \left( 1 + \frac x{n}\right)
+= \left( 1 + \frac{-x}{(n+x)(n+1)}\right)^{n+1}\cdot \frac{n+x}{n}\\
+&&\geq&\left(1+(n+1)\cdot \frac{-x}{(n+x)(n+1)}\right)\cdot \frac{n+x}{n}\qquad\qquad\text{(Bernoulli-Ungleichung)}\\
+&&=&\frac{n+x-x}{n+x}\cdot \frac{n+x}n=1\\
+\Rightarrow&&f_{n+1}\geq & f_n
+\end{align*}
+\item Die Folge $f_n$ ist beschr\"ankt:\\
+Wegen der Monotonie muss lediglich gezeigt werden, dass $f_n$ eine obere Schranke besitzt: 
+\begin{align*}
+&&1 + \frac x n<& 1 + \frac {2x}n\\
+&&\leq&\left( 1 + \frac 1 n\right)^{2x} \qquad\qquad\text{(Bernoulli-Ungleichung)}\\
+\Rightarrow&&\left( 1 + \frac xn\right)^n\leq& \left( 1 + \frac 1n\right)^{2x\cdot n}\\
+&&=& \left[\left( 1 + \frac 1n \right)^n\right]^{2x}\underset{n\to\infty}{\longrightarrow}\EH{2x}
+\end{align*}
+Damit ist $f_n$ begrenzt durch eine konvergente Folge und somit selbst auch beschr\"ankt. 
+\end{iii}
+Als beschr\"ankte, monotone Folge muss $f_n$ auch konvergieren. \\
+
+F\"ur $x> 0$ l\"asst sich $f_n$ umformen zu 
+\begin{align*}
+f_n=&\left( 1 + \frac x n \right)^n=\left( \left( 1 + \frac{1}{n/x}\right)^{n/x}\right)^x
+\end{align*}
+$f_n$ hat mit $n_k=k\cdot x$ die konvergente Teilfolge 
+$$f_{n_k}=\left( \left( 1+\frac 1 {k\cdot x/x}\right)^{kx/x}\right)^x=\left(\left( 1 + \frac 1
+k\right)^k\right)^x \underset{k\rightarrow \infty}\longrightarrow e^x.$$
+Wenn also $f_n$ konvergiert muss der Grenzwert mit dem der Teilfolge \"ubereinstimmen und es gilt
+$$\underset{n\rightarrow \infty}\lim f_n = e^x.$$
+
+Der Fall negativer $x<0$ l\"asst sich mit Hilfe des Falls $x>0$ behandeln: 
+Wir untersuchen dazu mit $y=-x>0$ die Folge
+$$h_n:=f_n\cdot \left( 1 + \frac y n\right)^n=\left( \left( 1-\frac yn\right) \left( 1 + \frac
+yn\right)\right)^n=\left( 1-\frac{y^2}{n^2}\right)^n.$$
+Es gilt einerseits $h_n<1$. Andererseits liefert die Bernoulli-Ungleichung zumindest f\"ur $n>y$: 
+$$h_n \geq 1 -n\cdot \frac{y^2}{n^2}=1-\frac{y^2}{n}\underset{n\to\infty}\longrightarrow 1.$$
+Wegen dieser beiden Ungleichungen muss $h_n$ konvergieren:
+$$\underset{n\to\infty}\lim h_n = 1.$$
+Nach Definition von $h_n$ ist 
+$$f_n=\frac{h_n}{\left( 1 + \frac y n\right)^n}.$$
+Z\"ahler und Nenner dieses Ausdruckes konvergieren und somit konvergiert auch $f_n$: 
+$$\underset{n\to\infty}{\lim} f_n = \frac{\underset{n\to\infty}\lim
+h_n}{\underset{n\to\infty}\lim \left( 1 + \frac yn\right)^n}=\frac 1 {\EH y} = \EH{-y}=\EH x.$$
+F\"ur $x=0$ hat man ohnehin 
+$$\underset{n\to\infty}\lim f_n = \underset{n\to\infty}\lim 1^n=1=\EH 0.$$
+Es gilt also f\"ur alle $x\in\Z$:
+$$\underset{n\to\infty}\lim f_n = \EH{x}.$$
+\item Es ist 
+\begin{align*}
+g_n = \left(\frac{n+1-2}{n+1}\right)^{n+1} = \left( 1 + \frac{-2}{n+1}\right)^{n+1}.
+\end{align*}
+Also ist $g_n=f_{n+1}$ mit $x=-2$ und es gilt
+$$\underset{n\rightarrow \infty}\lim g_n = \underset{n\rightarrow \infty}\lim f_n = \EH{-2}.$$
+\end{abc}
+}
+
+\ErgebnisC{alalysFolgLims001}{
+$a_n\underset{n\to\infty}\longrightarrow 1$, 
+$b_n\underset{n\to\infty}\longrightarrow \infty$,
+$c_n\underset{n\to\infty}\longrightarrow \frac{31}{25}$,
+$d_n\underset{n\to\infty}\longrightarrow \infty$,
+$e_n\underset{n\to\infty}\longrightarrow 1$, 
+$f_n\underset{n\to\infty}\longrightarrow \EH{x}$, 
+}

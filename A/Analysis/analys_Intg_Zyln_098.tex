@@ -1,0 +1,28 @@
+\Aufgabe[e]{Zylinderkoordinaten}
+{
+Skizzieren Sie den K\"orper $K$, der in Zylinderkoordinaten durch folgende Bedingungen charakterisiert
+wird: 
+$$\tilde K = \left\{(r,\varphi,z)|\, {\varphi}\leq  2\pi r\leq \sqrt{\varphi},\,
+0\leq z\leq \frac{r\varphi}{2\pi}\right\}$$
+Berechnen Sie das Volumen des K\"orpers $K$. 
+}
+
+\Loesung{
+Die Grenzen f\"ur $z$ und $r$ h\"angen von $\varphi$ ab. Die Grenzen f\"ur das $\varphi$-Integral
+ergeben sich aus der Bedingung $\varphi\leq 2\pi r\leq \sqrt \varphi$. Diese ist nur erf\"ullbar
+f\"ur $0\leq \varphi\leq 1$. \\
+Somit hat $K$ das Volumen
+\begin{align*}
+V=&\int\limits_{\varphi=0}^{1} \int\limits_{r=\varphi/(2\pi)}^{\sqrt\varphi/(2\pi)}\int\limits_{z=0}^{r\varphi/(2\pi)}r\d
+z\d r \d \varphi\\
+=& \int\limits_{\varphi=0}^1\int\limits_{r=\frac{\varphi}{2\pi}}^{\frac{\sqrt\varphi}{2\pi}}
+r\frac{r\varphi}{2\pi}\d r\d \varphi\\
+=& \frac{1}{48\pi^4}\int\limits_{\varphi=0}^1\left( \varphi^{5/2}-\varphi^4\right)\d \varphi\\
+=& \frac{1}{48\pi^4}\left(\frac 27 - \frac 15\right)=\frac{3}{35\cdot 48\pi^4}
+= \frac{1}{560\pi^4}
+\end{align*}
+}
+\ErgebnisC{analysIntgZyln098}
+{
+$\frac 1{560\pi^4}$
+}

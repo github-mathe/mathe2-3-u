@@ -1,0 +1,66 @@
+\Aufgabe[e]{Stetige Fortsetzung}{
+\begin{abc}
+\item Untersuchen Sie, ob die folgenden reellen Funktionen im Punkt $x=0$ stetig sind oder stetig
+fortgesetzt werden k\"onnen. 
+\begin{align*}
+f_1(x)=& |x|,\quad & f_2(x)=& \frac{x}{|x|},\quad& f_3(x)=&\frac{x^3}{|x|},\quad
+&f_4(x)=&\frac{x^2}{|x|^2}
+\end{align*}
+\item Bestimmen Sie die Definitionsl\"ucken der Funktionen
+\begin{align*}
+g(x)=&\frac{2x^3-12x^2+18x}{x^3-9x}
+\end{align*}
+In welchen dieser L\"ucken ist die Funktion stetig fortsetzbar?
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item 
+\begin{iii}
+\item Sei also $x_n$ eine beliebige Nullfolge, dann ist gem\"aß Funktionsdefinition
+$$\underset{n\to\infty}\lim |f_1(x_n)-f(0)|= \underset{n\to\infty}\lim |x_n-0|= 0$$ 
+und damit auch 
+$$\underset{x\to 0} f_1(x)=f_1(0).$$
+Also ist $f_1$ in $x=0$ stetig. 
+\item Die Funktion $f_2$ ist in $x=0$ nicht definiert. Um sie stetig fortzusetzen, m\"usste die
+Folge $f_2(x_n)$ f\"ur eine beliebige Nullfolge $x_n$ konvergieren. Um dies zu widerlegen, w\"ahlen
+wir die Nullfolge $x_n=\frac{(-1)^n}{n}$. Damit gilt: 
+$$f_2(x_n)=\frac{x_n}{|x_n|}=\frac{(-1)^n\cdot 1/n}{1/n}=(-1)^n.$$
+Diese Folge $f_2(x_n)$ konvergiert sicher nicht. Damit ist $f_2$ nicht stetig fortsetzbar in $x=0$.
+\item Die Funktion $f_3$ ist ebenfalls in $x=0$ nicht definiert, sie l\"asst sich jedoch durch 
+$$f_3(0):=0$$
+stetig fortsetzen. Sei daf\"ur eine beliebige Nullfolge $x_n$. Damit gilt dann: 
+$$|f_3(x_n)-f_3(0)|=\left|\frac{x_n^3}{|x_n|}-0\right|
+= \frac{|x_n|^3}{|x_n|}=|x_n|^2\underset{n\rightarrow\infty}\longrightarrow 0.$$
+Also konvergiert die Folge $f_3(x_n)$ gegen $f_3(0)$ und die Funktion ist stetig. 
+\item Die Funktion $f_4$ ist nicht definiert f\"ur $x=0$. Setzt man jedoch $f_4(0)=1$, so erh\"alt
+man $f_4(x)=1$ f\"ur alle $x\in\R$. Also hat man $f_4$ stetig fortgesetzt. 
+\end{iii}
+In den beiden F\"allen $f_3$ und $f_4$ wurden die Definitionsbereiche der Funktionen durch das
+stetige Fortsetzen im Nullpunkt erweitert. Damit erh\"alt man formal eine neue Funktion. 
+\item Die Definitionsl\"ucken der Funktion $g$ sind gegeben durch die Nullstellen des Nenners: 
+$$x^3-9x=0\quad\Leftrightarrow\quad x_1=0\vee x_2=3\vee x_3=-3.$$
+Der Z\"ahler l\"asst sich schreiben als 
+$$2x^3-12x^2+18x=2\cdot (x-0) \cdot (x-3)^2.$$
+Damit hat man dann
+$$g(x)=\frac{2\cdot (x-0)\cdot (x-3)^2}{(x-0)(x-3)(x-(-3))}=\frac{2(x-3)}{x+3}.$$
+Man kann also die Definitionsl\"ucken $x_1=0$ und $x_2=3$ durch 
+$$g(0)=-2 \text{ und } g(3)=0$$
+beheben. Bei $x_3=-3$ hat man einerseits f\"ur
+$y^-_j=-3-1/j\underset{j\rightarrow\infty}\longrightarrow -3$:
+$$g(y^-_j)=\frac{2\left( -3-1/j-3\right)}{-3-1/j+3}=2\frac{6+1/j}{1/j}=12j+2>2 $$
+und andererseits f\"ur $y^+_j=-3+1/j\underset{j\rightarrow\infty}\longrightarrow -3$:
+$$g(y^+_j)=\frac{2\left( -3+1/j-3\right)}{-3+1/j+3}=2\frac{-6+1/j}{1/j}=-12j+2<-10.$$
+Wenn jede einzelne dieser Folgen einen Grenzwert h\"atte, so w\"urden diese wegen der Schranken $2$
+und $-10$ jedenfalls nicht \"ubereinstimmen. Also kann man $g$ im Punkt $x=-3$ nicht stetig
+fortsetzen. \\
+\end{abc}
+}
+
+\ErgebnisC{AufganalysStetIgkt01a}
+{
+\textbf{a)} stetig, nicht stetig fortsetzbar, stetig fortsetzbar, stetig fortsetzbar\\
+\textbf{b)} $g$ ist stetig forstetzbar in $0$ und $+3$ und nicht stetig fortsetzbar in $-3$. \\
+
+}

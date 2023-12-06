@@ -1,0 +1,98 @@
+\Aufgabe[e]{Ebenen und Geraden}{
+Gegeben seien die folgenden Ebenen.
+\begin{align*}
+\vec E_1 &= \frac{2}{3} x_1 - \frac{2}{3} x_2 - \frac{1}{3} x_3 = -3\\
+\vec E_2 &= x_1 - x_2 + 2x_3 = 0
+\end{align*}
+
+\begin{abc}
+\item Geben Sie die Ebenen $\vec E_1$ und $\vec E_2$ in Hesse-Normalform an.
+\item Erklären Sie, wann eine Ebene ein Unterraum ist. Argumentieren Sie, warum die Ebenen $\vec E_1$ 
+      und $\vec E_2$ ein Unterraum des $\mathbb{R}^3$ sind oder nicht.
+\item Bestimmen Sie die orthogonale Projektion $\vec P_{\vec E_2}$. 
+\item Bestimmen Sie den Abstand des Punktes $(1,1,1)^\top$ zur Ebene $\vec E_1$.
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Die Hessesche Normalform l\"asst sich aus der gegebenen Gleichung ableiten, indem man den Ausdruck auf der linken Seite als Skalarprodukt auffasst: 
+\begin{align*}
+\vec E_1:&& \frac 23 x_1-\frac 23 x_2-\frac 13 x_3=& -3\\
+&\Leftrightarrow& \skalar{\vec n_1,\vec x}=& -3\\
+&&\text{ mit } \vec n_1=&\begin{pmatrix}2/3\\-2/3\\-1/3\end{pmatrix} \text{ und } \vec x=\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}.
+\end{align*}
+Die rechte Seite kann ebenfalls als Skalarprodukt geschrieben werden, indem man links einen Punkt der Ebene einsetzt, etwa $\vec p_1=(0,0,9)^\top$: 
+\begin{align*}
+\vec E_1:&\quad&\skalar{\vec x,\vec n_1}=&-3= \skalar{\vec p_1,\vec n_1}\\
+&\Leftrightarrow&\skalar{\vec x-\vec p_1,\vec n_1}=& 0\qquad\text{\textbf{(HNF)}}
+\end{align*}
+Zu beachten ist, dass der Vektor $\vec n_1$ bereits normiert ist: 
+$$\norm{\vec n_1}=\sqrt{\left( \frac 23\right)^2 + \left( -\frac 23\right)^2+\left( -\frac 13\right)^2}=1$$
+F\"ur die Ebene $\vec E_2$ erh\"alt man mit $\vec p_2=\vec 0$ und $\vec n_2=\begin{pmatrix}1\\-1\\2\end{pmatrix}$ die Hessesche Normalform:  
+$$
+\vec E_2=\left\{\vec x\in\R^3|\, \skalar{\vec x-\vec p_2,\vec n_2}=0\right\}.
+$$
+F\"ur weitere Anwendungen empfiehlt es sich jedoch auch hier einen normierten Normalenvektor zu w\"ahlen, also 
+$$\vec n_{2,0}=\frac{\vec n_2}{\norm{\vec n_2}}=\frac 1{\sqrt 6}\begin{pmatrix}1\\-1\\2\end{pmatrix}.$$
+Damit ist dann
+$$\vec E_2=\left\{\vec x\in\R^3|\, \skalar{\vec x-\vec p_2,\vec n_{2,0}}=0\right\}.$$
+\item Unterr\"aume des Vektorraumes $\R^3$ sind nichtleere Teilmengen $\vec U\subset \R^3$ des Vektorraumes, f\"ur deren beliebige Elemente $\vec u,\, \vec v\in \vec U$ mit einer beliebigen Zahl $\lambda \in\R$ gilt: 
+$$\vec u+\lambda \vec v\in \vec U.$$
+F\"ur eine Ebene $\vec E$ mit Hessescher Normalform $\skalar{\vec x-\vec p,\vec n}=0$ muss also mit $\vec u,\,\vec v\in\vec E$ und $\lambda\in\R$ gelten 
+\begin{align*}
+0\overset!=& \skalar{\vec u+\lambda \vec v-\vec p,\vec n}\\
+=& \underbrace{\skalar{\vec u -\vec p,\vec n}}_{=0,\, \text{da }\vec u\in\vec E}+\lambda \underbrace{\skalar{\vec v,\vec n}}_{=\skalar{\vec p,\vec n},\, \text{da }\vec v\in\vec E}\\
+=&\lambda\skalar{\vec p,\vec n}
+\end{align*}
+Da diese Bedingung f\"ur alle $\lambda$ gelten muss, gilt
+$$\skalar{\vec p,\vec n}=0.$$
+Da f\"ur $\vec p$ ein beliebiger Punkt der Ebene gew\"ahlt werden kann, ist dies bereits eine g\"ultige Hessesche Normalform der Ebene (mit $\vec p=\vec 0$): 
+$$\vec E: \, \skalar{\vec x,\vec n}=0.$$
+Insgesamt folgt daraus, dass eine Ebene $\vec E\subset \R^3$ immer dann ein Unterraum des $\R^3$ ist, wenn sie den Nullpunkt enth\"alt. \\
+Dies ist f\"ur $\vec E_2$ der Fall und f\"ur $\vec E_1$ nicht. \\
+Die letzten beiden S\"atze h\"atten (auch ohne die vorherige Herleitung) als L\"osung der Aufgabe gen\"ugt. 
+\item Um die orthogonale Projektion auf den Unterraum $\vec E_2$ zu bestimmen \textbf{k\"onnte} man eine Orthonormalbasis $\vec v_1,\vec v_2$ des Unterraumes bestimmen und daraus die Projektionsmatrix $\vec P_{\vec E_2}$ berechnen: 
+$$\vec P_{\vec E_2}=\vec v_1\otimes \vec v_1 + \vec v_2\otimes \vec v_2.$$
+Da wir aber einen Normalenvektor der Ebene kennen, geht es schneller, einen alternativen Weg zu w\"ahlen: \\
+Der gesamte Raum $\R^3$ l\"asst sich schreiben als direkte Summe der Ebene und ihres Orthogonalraumes: 
+$$\R^3=\vec E_2 \oplus \vec E_2^{\perp}$$
+Dabei ist $\vec E_2^{\perp}=\text{span}\{\vec n_2\}.$
+Ein Vektor $\vec x\in\R^3$ l\"asst sich also aufteilen in Komponenten $\vec x_{E_2}\in \vec E_2$ und $\vec x^\perp\in\vec E_2^\perp$: 
+$$\vec x=\vec x_{E_2}+\vec x^\perp.$$
+Diese beiden Komponenten sind gerade die Projektionen in den jeweiligen Unterraum
+$$\vec x_{E_2}=\vec P_{\vec E_2} \vec x\text{ und } \vec x^\perp = \vec P_{\vec E_2^\perp} \vec x = (\vec n_{2,0}\otimes \vec n_{2,0}) \vec x.$$
+Daraus ergibt sich dann: 
+\begin{align*}
+\vec P_{\vec E_2} \vec x=&\vec x - \vec P_{\vec E_2^\perp}\vec x \\
+=& (\vec E_3 - \vec n_{2,0}\otimes \vec n_{2,0})\vec x\\
+=& \left( \begin{pmatrix} 1&0&0\\0&1&0\\0&0&1\end{pmatrix}-\frac 16 \begin{pmatrix}1\\-1\\2\end{pmatrix}(1,\,-1,\, 2)\right) \vec x\\
+=& \left( \begin{pmatrix} 1&0&0\\0&1&0\\0&0&1\end{pmatrix}-\frac 16 \begin{pmatrix}1&-1&2\\-1&1&-2\\2&-2&4\end{pmatrix}\right) \vec x\\
+=& \frac 16 \begin{pmatrix}5&1&-2\\1&5&2\\-2&2&2\end{pmatrix}\vec x.
+\end{align*}
+Wichtig ist hierbei, dass $\vec n_{2,0}$ eine ON-Bais von $\vec E_2^\perp$ ist, dass also der normierte Vektor $\vec n_{2,0}$ genutzt wird. \\
+
+\begin{pspicture}(-5,-5)(5,5)
+\psline{->}(0,0)(1,2)
+\put(.6,1){$\vec x$}
+\psline[linewidth=2pt](-5,-1)(5,1)
+\put(4.5,1.0){$\vec E$}
+\psline[linewidth=2pt,linecolor=lightgray](-1,5)(1,-5)
+\put(-.9,4.5){$\vec E^\perp$}
+\psline[linewidth=2pt,linecolor=gray]{->}(0,0)(-.35,1.73)
+\put(-.8,1.5){$\vec x^\perp$}
+\psline[linewidth=2pt]{->}(0,0)(-.20,.98)
+\put(-.4,.5){$\vec n$}
+\psline[linewidth=2pt, linecolor=gray]{->}(0,0)(1.35,0.27)
+\put(1,-.1){$\vec P_{\vec E_2} \vec x$}
+\psline[linestyle=dashed](1.35,0.27)(1,2)(-.35,1.73)
+
+\end{pspicture}
+\item Der Abstand $d$ des Punktes $\vec q=(1,1,1)^\top$ zur Ebene $\vec E_1$ ergibt sich, indem man den Punkt in die Gleichung der Hesseschen Normalform (mit normiertem Vektor $\vec n_1$!) einsetzt: 
+$$d=\left| \skalar{\vec q-\vec p_1,\vec n_{1}}\right|=\left|\skalar{\begin{pmatrix}1\\1\\-8\end{pmatrix},\begin{pmatrix}2/3\\-2/3\\-1/3\end{pmatrix}}\right|
+= \frac 83.$$
+Der Betrag wurde gebildet, da geometrische Abst\"ande immer positiv sind. 
+\end{abc}
+
+}

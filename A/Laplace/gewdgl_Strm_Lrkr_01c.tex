@@ -1,0 +1,127 @@
+\Aufgabe[e]{LR-Kreis mit Hilfe der Laplace-Transformation}
+{
+Ein Stromkreis habe einen Widerstand von \ $R=0.8$ Ohm \ und eine Selbstinduktion von \ $L=4$ Henry\,. Bis zur Zeit \ $t_0=0$ \ fließe kein Strom. Dann wird eine Spannung von \ $U=5$ Volt \ angelegt. Nach $5$ Sekunden wird
+die Spannung abgeschaltet. Gesucht ist der Stromverlauf \
+$I(t)$ \ für \ $0 \le t \le 5$ \ und \ $t > 5$. 
+%\begin{abc}
+%\item Ermitteln  Sie $I(t)$ als L\"osung eines Anfangswertproblems. \\
+%\textbf{Hinweis}: L\"osen Sie \textit{ zwei } Anfangswertprobleme, wobei Sie den Anfangswert $I(5)$ des zweiten AWP als Funktionswert der L\"osung des ersten AWP erhalten.
+%\item
+Ermitteln Sie $I(t)$ mit Hilfe der Laplace-Transformation. 
+%\end{abc} 
+
+\textbf{Hinweis}: In diesem Stromkreis gilt $L\dot I(t) + RI(t)=U(t)$ mit
+$$U(t)=5\cdot(1-h(t-5))=\left\{\begin{array}{ll}
+5,&0\leq t\leq 5\\
+0,& t>5
+\end{array}.\right.$$
+mit der Heaviside-Funktion $h(t)$. 
+}
+
+\Loesung{
+%\begin{enumerate}\renewcommand{\labelenumi}{\textbf{\alph{enumi})}}
+%\item Es gilt die Differentialgleichung
+%\[
+%  L\dot{I}(t)+RI(t)=U(t)
+%\]
+%
+%Die L\"osung der homogenen Gleichung $L\dot I_h(t)+RI_h(t)=0$ ergibt sich durch% Einsetzen des Exponentialansatzes
+%$$I_h(t)=A\EH{\lambda t} \text{ mit } \dot I_h(t)=\lambda\cdot A\EH{\lambda t}:$$
+%\begin{align*}
+%&&L\lambda\cdot A \EH{\lambda t} + R A\EH{\lambda t}=& 0\\
+%\Rightarrow && L\lambda + R=& 0&\text{ f\"ur } A\neq 0\\
+%\Rightarrow && \lambda=& - \frac{R}L=-\frac 15.
+%\end{align*}
+%Es m\"ussen nun beide Anfangswertprobleme betrachtet werden: 
+%\begin{itemize}
+%\item $0\leq t\leq 5$: Inhomogene Differentialgleichung $L\dot I(t)+RI(t)=5$ mit $I(0)=0$. \\
+%Eine Partikul\"arl\"osung der inhomogenen Differentialgleichung ist 
+%$$I_p(t)=\frac 5 R= \frac{5}{0.8}=\frac{25}4, $$
+%denn damit gilt $L\dot I_p(t)+RI_p(t)=0 + R\frac{5}R=5.$\\
+%Die allgemeine L\"osung der inhomogenen Differentialgleichung ist die Summe der Partikul\"arl\"osung der inhomogenen Gleichung und der allgemeinen L\"osung der homogenen Gleichung: 
+%$$I_{\text{allg},1}(t)= I_h(t)+I_p(t) = A_1\EH{\lambda t} + \frac{25}4.$$
+%Eingesetzt in die Anfangsbedingung $I(0)=0$ ergibt sich damit
+%\begin{align*}
+%&&A_1\EH{0} + \frac {25}4 = & 0 \qquad \Rightarrow A_1=-\frac{25}4.
+%\end{align*}
+%\item $t>5$: Das zweite Anfangswertproblem ist bereits homogen, hat also die L\"osung 
+%$$I_{\text{allg},2}(t)=A_2\EH{\lambda t}.$$
+%Die Anfangsbedingung ergibt sich mit Hilfe der L\"osung des ersten AWP zu 
+%\begin{align*}
+%&&I_{\text{allg}, 1}(5)=-\frac{25}4\EH{\lambda \cdot 5}+\frac{25}4 \overset!=& I_{\text{allg},2}(5)=A_2\EH{\lambda\cdot 5}\\
+%\Rightarrow&& A_2=& -\frac{25}4 + \frac{25}4\EH{-5\lambda} = \frac{25}4\left( \EH{-5\lambda}-1\right)=\frac{25}4\left(\EH{ }-1\right)
+%\end{align*}
+%\end{itemize}
+%Das Zusammentragen beider L\"osungen f\"uhrt dann auf 
+%$$I_{AWP}(t)=\frac{25}4\cdot \left\{\begin{array}{ll}
+%(1-\EH{-t/5}), & 0\leq t \leq 5\\
+%(\EH{ }-1)\EH{-t/5}, & t>5
+%\end{array}\right.$$
+%Anmerkung: F\"ur die Rechnung wurde auf die Angabe der physikalischer Einheiten verzichtet. Da alle Gr\"oßen in SI-Einheiten gegeben waren, sind auch die Ergebnisse in SI-Einheiten, die Stromst\"arke ist hier also in Ampere gegeben. \\
+%Dieser Stromverlauf ist im folgenden skizziert: 
+%\item
+%%%%%%%%%
+Es sei $Y(s)$ die Laplace-Transformierte des Stroms $I(t)$. Damit gilt
+\begin{align*}
+&& \sL\{L\dot I(t)+RI(t)\}=& \sL\{U(t)\}\\
+\Rightarrow&& L (sY(s)-\underbrace{I(0)}_{=0})+ R Y(s) =& 5\cdot \sL\{1-h(t-5)\}\\
+&&=& 5\left( \frac 1s - \frac{\EH{-5s}}s\right)\\
+\end{align*}
+Diese (algebraische) Gleichung hat die L\"osung
+$Y(s)=\dfrac{5(1-\EH{-5s})}{s(sL+R)}=\dfrac{25(1-\EH{-5s})}{4s(5s+1)}$. \\
+Vor der eigentlichen R\"ucktransformation betrachten wir zun\"achst
+\begin{align*}
+\frac 1{s(5s+1)} = & \frac{1}s-\frac{5}{5s+1}
+=& \mathcal{L}\left\{  1 - \EH{-t/5}\right\}
+\end{align*}
+Daraus ergibt sich dann 
+\begin{align*}
+I(s)=& \frac{25}4\sL^{-1}\left\{\frac{1-\EH{-5s}}{s(5s+1)}\right\}\\
+=& \frac{25}4\left( 1-\EH{-t/5} - \left(1-\EH{-(t-5)/5}\right)h(t-5)\right)\\
+=&\frac{25}4\cdot \left\{\begin{array}{ll}
+(1-\EH{-t/5}), & 0\leq t \leq 5\\
+(\EH{ }-1)\EH{-t/5}, & t>5
+\end{array}\right.. 
+\end{align*}
+
+%\end{enumerate}
+\begin{center}
+\psset{xunit=.5cm}
+\begin{pspicture}(-1,-2)(20,8)
+\psgrid[subgriddiv=0, gridcolor=lightgray](-1,-1)(20,8)
+\psline{->}(-1,0)(20,0)
+\psline{->}(0,-1)(0,8)
+\put(9.5,-.4){$t/s$}
+\put(.2,7.6){$I/A$}
+\psplot[plotpoints=100, plotstyle=curve, linecolor=lightgray]
+{0}{20}
+{
+25 4 div 1 2.7183 x -.2 mul exp neg add mul
+}
+\psplot[plotpoints=100, plotstyle=curve]
+{0}{5}
+{
+25 4 div 1 2.7183 x -.2 mul exp neg add mul
+}
+
+\psplot[plotpoints=100, plotstyle=curve]
+{5}{20}
+{
+25 4 div 2.7183 -1 add 2.7183 x -.2 mul exp mul mul 
+}
+
+\psline[linestyle=dashed, linecolor=lightgray](0,6.25)(20,6.25)
+\put(-.4,6.2){$\frac{25}4$}
+\end{pspicture}
+\end{center}
+Dieser Stromverlauf ist plausibel. W\"urde die Spannung bei $5V$ bleiben, w\"urde sich asymptotisch (f\"ur $t\to\infty$) eine Stromst\"arke von $I=\frac {25}4A$ einstellen (graue Kurve). Stattdessen f\"allt der Strom nach f\"unf Sekunden exponentiell ab und wird f\"ur $t\to\infty$ ganz verschwinden. 
+
+}
+
+\ErgebnisC{gewdglStrmLrkr01c}
+{
+$$I(t)=\frac{25}4\cdot \left\{\begin{array}{ll}
+(1-\EH{-t/5}), & 0\leq t \leq 5\\
+(\EH{ }-1)\EH{-t/5}, & t>5
+\end{array}\right.$$
+}

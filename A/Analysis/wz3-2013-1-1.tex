@@ -1,0 +1,37 @@
+\Aufgabe[e]{Fehlersuche}{
+Behauptung:
+	\[
+	\int\limits_{-2}^{2} x^2\;\text dx = 0\;
+\]
+Beweis: \ Mit der Substitution \ \ $t = x^2 \,\Rightarrow\, \text dt = 2x\,\text dx$ \ \ gilt:
+	\[
+	\int\limits_{-2}^{2} x^2\;\text dx = \dfrac 12 \int\limits_{-2}^{2} x\cdot 2x\;\text dx = \dfrac 12 \int\limits_{4}^{4} \sqrt{t}\;\text dt = 0\;.
+\]
+Wo steckt der Fehler?
+}
+
+\Loesung{
+Der Fehler liegt bei der \glqq naiven\grqq\ Ersetzung von \ $x$ \ durch \ $\sqrt{t}$\;. Die Umkehrung von \ $t=x^2$ \ ist:
+	\[
+	\begin{array}{lcl}
+	x = -\sqrt t & \text{für} & x<0 \\
+	x = +\sqrt t & \text{für} & x\geq 0 
+	\end{array} \;.
+\]
+Damit gilt
+	\[
+	\begin{array}{rcl}
+	\int\limits_{-2}^{2} x^2\;\text dx & = & \dfrac 12\int\limits_{-2}^{0} x\cdot 2x\;\text dx + \dfrac 12\int\limits_{0}^{2} x\cdot 2x\;\text dx \\
+	& & \\
+	& = & \dfrac 12\int\limits_{4}^{0} -\sqrt{t}\;\text dt + \dfrac 12\int\limits_{0}^{4} +\sqrt{t}\;\text dt \\
+	& & \\
+	& = &  \int\limits_{0}^{4} \sqrt{t}\;\text dt \;=\; \left[\dfrac 23\,t^{3/2}\right]_0^4 \;=\; \dfrac 23\cdot 8 \;=\; \dfrac{16}{3}\ ,
+	\end{array}
+\]
+was das richtige Ergebnis ist.
+}
+
+% \ErgebnisC{wz-2013-1-1}
+% {
+% 
+% }

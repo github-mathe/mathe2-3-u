@@ -1,0 +1,33 @@
+\Aufgabe[e]{Laplace-Transformation}
+{
+Berechnen Sie die Laplace-Transformation $ {\mathcal L}\{f(t)\}$ der folgenden Funktionen:
+\begin{iii}
+\begin{multicols}{2}
+\item $f(t) = 1$,
+\item $f(t) = t$,
+\item $f(t) = t^2$,
+\item $f(t) = t^3$,
+\item $f(t) = e^{-at}$,
+\item $f(t) = e^{-at}\cdot t$,
+\item ${\mathcal L}\{f'(t)\}$, for a generic $f(t)$,
+\item ${\mathcal L}\{f''(t)\}$, for a generic $f(t)$.
+\end{multicols}
+\end{iii}
+}
+\Loesung{
+Diese Laplace-Transformationen müssen durch Anwendung der Definition und Bestimmung der Integrale berechnet werden. Hier sind die Ergebnisse:
+\begin{iii}
+\item $\mathcal{L}\{1\} = \dfrac{1}{s}$,
+\item $\mathcal{L}\{t\} = \dfrac{1}{s^2}$,
+\item $\mathcal{L}\{t^2\} = \dfrac{2}{s^3}$,
+\item $\mathcal{L}\{t^3\} = \dfrac{3!}{t^4}$,
+\item $\mathcal{L}\{e^{-at}\} = \frac{1}{s+a}$,
+\item $\mathcal{L}\{e^{-at}\cdot t\} = \dfrac{1}{(s+a)^2}$,
+\item $\mathcal{L}\{f'(t)\} = sF(s) - f(0)$,
+\item $\mathcal{L}\{f''(t)\} = s^2F(s) - sf(0) - f'(0)$.
+\end{iii}
+}
+
+\ErgebnisC{Laplace001}
+{
+}

@@ -1,0 +1,208 @@
+\Aufgabe[e]{Bereichsintegrale} {
+Berechnen Sie 
+\begin{itemize}
+\item[\textbf{a)}] $	I := \int\limits_D  x^2\,y+x \ \d \vec x \text{ mit } D := [-2,2]\times[1,3]\ .$
+\item[\textbf{b)}] $J:= \int\limits_G x \d (x,y)$ mit dem durch die Kurven \\
+$$x=0,\, y=2x \text{ und } y=\frac1a\,x^2+a\ ,\ a>0$$
+berandeten Fl\"achenst\"uck G. 
+\item[\textbf{c)}] Betrachten Sie das zweifache Integral
+$$ I:= \int_{x=1}^2 \int_{y=4/x^2}^{4/x} 
+  x y^2 \EH {x^2y^2/4} \, \text{d} y \, \text{d} x + 
+  \int_{x=2}^4 \int_{y=1}^{4/x} 
+  x y^2 \EH {x^2y^2/4} \, \text{d} y \, \text{d} x . $$
+\begin{itemize}
+\item[i)] Skizzieren Sie den Integrationsbereich und vertauschen Sie die 
+Integrationsreihenfolge.
+\item[ii)] Berechnen Sie das Integral.
+\end{itemize} 
+\end{itemize}
+}
+
+
+\Hints{
+\textbf{zu c)} Die Integrationsbereiche \textcolor{blue}{$B_1$} und \textcolor{red}{$B_2$} beider Einzelintegrale sind in folgender Skizze blau und rot markiert. Die $y$-Grenzen h\"angen von $x$ ab und speziell die untere $y$-Grenze wird f\"ur beide Bereiche durch unterschiedliche Funktion beschrieben. ($y=\frac{4}{x^2}$ und $y=1$)\\
+Das \"Andern der Integrationsreihenfolge entspricht dem Drehen der Skizze (rechts).  \\
+Nun werden die Ober und Untergrenzen f\"ur $x$ in beiden Integrationsbereichen von der jeweils selben Funktion ($y$-abh\"angig) beschrieben. Daher kann man nun beide Integrale zusammenfassen. 
+\begin{center}
+\begin{pspicture}(0,-1)(6,5)
+%\psgrid(0,0)(5,5)
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt, fillstyle=solid, fillcolor=blue]
+{1}{4.5}
+{
+4 x 2 exp div
+}
+
+\psline[fillstyle=solid, fillcolor=red, linewidth=0](2,1)(4,1)(2.8,2)(2,2)(2,1)
+
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt, fillstyle=solid, fillcolor=white]
+{1}{4}
+{
+4 x div
+}
+
+\psline[linewidth=1.pt, linecolor=white, fillstyle=solid, fillcolor=white](2,0)(4.5,0)(4.5,1)(2,1)(2,0)
+\psline[linewidth=1.5pt](0,1)(5,1)
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt]
+{1}{4.5}
+{
+4 x 2 exp div
+}
+
+\put(3.6,.5){$y=\frac 4{x^2}$}
+\put(.1,.7){$y=1$}
+\put(2.6,1.7){$y=\frac 4x$}
+
+\psgrid[subgriddiv=0](0,0)(5,4)
+\psline{<->}(0,4.5)(0,0)(5.5,0)
+\put(5.1,.1){$x$}
+\put(.1,4.1){$y$}
+
+\end{pspicture}
+\qquad
+\begin{pspicture}(0,-1)(5,6)
+%\psgrid(0,0)(5,5)
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt, fillstyle=solid, fillcolor=blue]
+{.1975}{4}
+{
+2 x sqrt div
+}
+
+\psline[fillstyle=solid, fillcolor=red, linewidth=0](1,2)(1,4)(2,2.8)(2,2)(1,2)
+
+
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt, fillstyle=solid, fillcolor=white]
+{1}{4}
+{
+4 x div
+}
+
+\psline[linewidth=1.pt, linecolor=white, fillstyle=solid, fillcolor=white]
+(0,2)(0,4.5)(1,4.5)(1,2)(0,2)
+\psline[linewidth=1.5pt](1,0)(1,5)
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt]
+{.1975}{4}
+{
+2 x sqrt div
+}
+
+\put(-.6,2.5){$y=\frac 4{x^2}$}
+\put(.1,.7){$y=1$}
+\put(2.6,1.7){$y=\frac 4x$}
+
+\psgrid[subgriddiv=0](0,0)(4,5)
+\psline{<->}(0,5.5)(0,0)(4.5,0)
+\put(4.1,.1){$y$}
+\put(.1,5.1){$x$}
+\psline[linewidth=2pt]{->}(-1.7,2)(-.5,2)
+\put(-1.7,1.6){Drehen}
+\end{pspicture}
+
+\end{center}
+
+}
+
+\Loesung{
+\begin{itemize}
+\item[\textbf{Zu a)}] \begin{align*}
+  I  = & \int\limits_1^3\ \int\limits_{-2}^{2} \left( x^2\,y+x\right) \d x\ \d y
+   = \int\limits_1^3\ \left[\frac{x^3}{3}\,y+\frac{x^2}{2}\right]_{x=-2}^2 \ \d y \\
+   = & \frac{16}{3}\cdot\int\limits_1^3\ y \ \d y
+   =  \frac{16}{3}\cdot 4  = \boxed{\frac{64}{3}\ .}
+\end{align*}
+
+\textbf{Anmerkung:} \ Man hätte den Summanden \ $x$ \ gleich weglassen können, da eine ungerade
+  Funktion über einen symmetrischen Bereich integriert immer \ Null \ ergibt.
+\item[\textbf{Zu b)}] Es werden zunächst die Schnittpunkte der Parabel mit der Geraden bestimmt:
+$$
+\frac{1}{a}x^2 + a = 2x \quad \Rightarrow \quad (x-a)^2 = 0 \quad \Rightarrow \quad x_{1/2}=a\,.
+$$  
+Die Kurven berühren sich somit im Punkt $P=(a,2a)$. 
+\end{itemize}
+\begin{center}
+\psset{xunit=1.8cm, yunit=1.8cm, runit=1cm}
+\begin{pspicture}(0,0)(3,5)
+\psgrid[subgriddiv=1,griddots=20,gridlabels=.3](0,0)(3,5)
+\psline[fillstyle=solid, fillcolor=gray, linewidth=1pt, linecolor=white]
+(0,0)(2,4)(0,2)(0,0)
+\psplot[plotpoints=200, plotstyle=curve, fillstyle=solid, fillcolor=white]
+{0}{2.0}
+{x x mul 2 div 2 add} %a=2
+\psline
+(0,2)(0,0)(2,4)
+\psline{-}(0,0)(2.5,5)
+\psline{-}(0,0)(0,3)
+\psplot[plotpoints=200, plotstyle=curve]
+{0}{2.45}
+{x x mul 2 div 2 add} %a=2
+\psdot(0,0)
+\psdot(2,4)
+\psdot(0,2)
+\put(.2,4.8){$y=\frac {x^2}a+a$}
+\put(.05,2.6){$x=0$}
+\put(.7,1.1){$y=2x$}
+\end{pspicture}
+\end{center}
+Somit ergibt sich für den Integralwert:
+\begin{align*}
+J& = \ \iint_G x \d  (x,y)  = \int_{x=0}^a x \int_{y=2x}^{\frac{1}{a}x^2 + a} \d \, y\d  x \
+ =  \int_{x=0}^a x \left(\dfrac{1}{a}x^2 + a -2 x\right) \d  x\\
+& = \int_{x=0}^a \left(\dfrac{1}{a}x^3 + ax -2 x^2\right) \d  x
+ = \left[\dfrac{1}{4a} x^4 + \dfrac{1}{2}ax^2 - \dfrac{2}{3}x^3\right]_{0}^a \\[2ex]
+& = \dfrac{1}{4} a^3+\dfrac{1}{2} a^3 -\dfrac{2}{3} a^3  = \boxed{\dfrac{1}{12} a^3\,.}\\
+\end{align*}
+
+\textbf{Zu c)}
+\begin{center}
+\begin{pspicture}(0,-1)(5,5)
+%\psgrid(0,0)(5,5)
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt, fillstyle=solid, fillcolor=lightgray]
+{1}{4.5}
+{
+4 x 2 exp div
+}
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt, fillstyle=solid, fillcolor=white]
+{1}{4}
+{
+4 x div
+}
+
+\psline[linewidth=1.pt, linecolor=white, fillstyle=solid, fillcolor=white](2,0)(4.5,0)(4.5,1)(2,1)(2,0)
+\psline[linewidth=1.5pt](0,1)(5,1)
+\psplot[plotpoints=100, plotstyle=curve, linewidth=1.5pt]
+{1}{4.5}
+{
+4 x 2 exp div
+}
+
+\put(3.6,.5){$y=\frac 4{x^2}$}
+\put(.1,.7){$y=1$}
+\put(2.6,1.7){$y=\frac 4x$}
+
+\psgrid[subgriddiv=0](0,0)(5,4)
+
+
+\end{pspicture}
+
+\end{center}
+Mit $y = \dfrac{4}{x^2} \Rightarrow x = \dfrac{2}{\sqrt{y}}$ und 
+$y=\dfrac{4}{x} \Rightarrow x=\dfrac{4}{y}$ erh\"alt man den Integrationsbereich
+$$ 
+D = \left\{ (x,y) \, | \, 1 \le y \le 4,
+	\dfrac{2}{\sqrt{y}} \le x \le \dfrac{4}{y} \right\}. 
+$$
+Das Integral ist 
+$$  I = \int_1^4 \int_{2/\sqrt{y}}^{4/y} x y^2 \, \EH{x^2y^2/4} \, \text{d}x \text{d}y$$ 
+mit dem Integralwert 
+\begin{align*}
+  I & =   \int_1^4 \left[ 2 \EH{x^2 y^2 /4} \right]_{x=2/\sqrt{y}}^{4/y} \text{d}y
+  = \int_1^4 \big[ 2 \EH 4-2\EH y \big] \text{d}y \\[2ex]
+  & =  6 \EH 4-2\EH 4+2\EH{ } =  4 \EH 4+2\EH{ }.
+\end{align*}
+
+}
+
+\ErgebnisC{AufganalysIntgNdim001}
+{
+{{\textbf{Zu a)}} $\frac{64}{3}$, {\textbf{Zu b)}} $\dfrac{1}{12} a^3$, {\textbf{Zu c)}} $4 \EH 4+2\EH{ }$
+}
+}

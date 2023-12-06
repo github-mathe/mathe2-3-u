@@ -1,0 +1,72 @@
+\Aufgabe[e]{Extremwerte}{
+\begin{abc}
+\item Ermitteln Sie die kritischen Punkte der Funktion
+\begin{align*}
+f(x,y)=& (1+2x-y)^2 + (2-x+y)^2 + (1+x-y)^2
+\end{align*}
+und bestimmen Sie, ob es sich um Maxima, Minima oder Sattelpunkte handelt. 
+\item Ermitteln Sie ebenso die kritischen Punkte der Funktionen 
+\begin{align*}
+g(x,y,z)=& x^2+xz+y^2\\
+h(x,y)=& (y^2-x^2)\EH{\frac{x^2+y^2}{2}}
+\end{align*}
+und bestimmen Sie, ob es sich um Maxima, Minima oder Sattelpunkte handelt. 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Die kritischen Punkte sind die Nullstellen des Gradienten der Funktion $f$: 
+\begin{align*}
+&&0\overset !=& \nabla f(x,y)=\begin{pmatrix} 4(1+2x-y)-2(2-x+y)+2(1+x-y)\\ 
+-2(1+2x-y)+2(2-x+y)-2(1+x-y)\end{pmatrix}\\
+&&=& \begin{pmatrix}2+12x-8y,\, -8x+6y\end{pmatrix}^\top\\
+\Rightarrow&&x=&-\frac 32,\, y=-2.
+\end{align*}
+Die Hesse-Matrix der Funktion in diesem Punkt ist 
+$$\vec H_f=\begin{pmatrix}12&-8\\-8&6\end{pmatrix}.$$
+Ihre Eigenwerte ergeben sich als Nullstellen des charakteristischen Polynoms: 
+$$0=(12-\lambda)(6-\lambda)-64=\lambda^2-2\cdot
+9\lambda+8\, \Rightarrow\, \lambda_{\pm}=9\pm \sqrt{73}>0.$$
+Sie sind beide positiv, also ist $\vec H_f$ positiv definit und im Punkt $(-3/2,\, -2)$ liegt ein lokales Minimum der Funktion
+$f$. 
+\item Gradient und Hesse-Matrix der Funktion $g$ ergeben sich zu: 
+\begin{align*}
+\nabla g(x,y,z)=& (2x+z,\, 2y,\, x)^\top\\
+\vec H_g=& \begin{pmatrix}2& 0& 1\\ 0& 2& 0\\ 1 & 0 & 0\end{pmatrix}
+\end{align*}
+Die einzige Nullstelle von $\nabla g$ liegt bei $(x,y,z)^\top=\vec 0$. \\
+Die Matrix $\vec H_g$ ist indefinit: 
+$$(1,0,0)\vec H_g\begin{pmatrix}1\\0\\0\end{pmatrix}=2,\, (1,0,-2)\vec
+H_g\begin{pmatrix}1\\0\\-2\end{pmatrix}=-2,$$
+also hat die Funktion $g$ im Ursprung einen Sattelpunkt. \\
+
+Gradient und Hesse-Matrix der Funktion $h$ sind 
+\begin{align*}
+\nabla h(x,y)=&\EH{\frac{x^2+y^2}2}\begin{pmatrix} -2x+x(y^2-x^2)\\ 2y+y(y^2-x^2)\end{pmatrix}\\
+\vec H_h=& \EH{\frac{x^2+y^2}2}\left(\begin{array}{r}-2+y^2-x^2-2x^2-2x^2+x^2(y^2-x^2)\\
+-2xy+2xy+xy(y^2-x^2)\end{array}\right.\\
+&\qquad\qquad\qquad\qquad\left.\begin{array}{r} 2xy-2xy+xy(y^2-x^2)\\
+2+3y^2-x^2+2y^2+y^2(y^2-x^2)\end{array}\right)\\
+=& \EH{\frac{x^2+y^2}2} \begin{pmatrix}-2-5x^2+y^2+x^2(y^2-x^2)&xy(y^2-x^2)\\xy(y^2-x^2)&2+5y^2-x^2+y^2(y^2-x^2)\end{pmatrix}
+\end{align*}
+Die kritischen Punkte sind Nullstellen von $\nabla h$, f\"ur diese gilt: 
+\begin{align*}& x(-2+y^2-x^2)=0\text{ und }y(2+y^2-x^2)=0\\
+\Leftrightarrow&\quad\qquad\bigl(x=0\text{ und }y=0\bigr)\\
+&\text{ oder }\bigl(x=0 \text{ und }2+y^2-x^2=0\bigr)\\
+&\text{ oder
+}\bigl(-2+y^2-x^2=0\text{ und }y=0\bigr)\\
+&\text{ oder } \bigl(-2+y^2-x^2=0\text{ und }2+y^2-x^2=0\bigr)\\
+\Leftrightarrow& (x,y)^\top=(0,0)^\top.
+\end{align*}
+Der einzige kritische Punkt ist also $(0,0)^\top$. Dort ist die Hesse-Matrix
+$$H_h(0,0)=\begin{pmatrix}-2&0\\0&2\end{pmatrix}.$$
+Diese Matrix ist indefinit, also handelt es sich um einen Sattelpunkt. 
+
+\end{abc}
+}
+
+\ErgebnisC{AufganalysExtrNdim001}
+{
+\textbf{ a)} $f$: $(-3/2,-2)^\top$, $g$: $(0,0,0)^\top$, $h$: $(0,0)^\top$
+}

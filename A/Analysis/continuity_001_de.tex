@@ -1,0 +1,83 @@
+\Aufgabe[e]{Stetigkeit}{
+Betrachten Sie die Funktion $y=f(x)$ mit
+\begin{align*}
+f(x) = 
+\begin{cases}
+\frac{1}{x} \quad &\text{ für } x \in (-\infty, -1],\\
+\frac{3}{x} \quad &\text{ für } x \in (-1,0),\\
+\frac{x^2-1}{x-1}  \quad &\text{ für } x \in [0,1) \cup (1,\infty),\\
+3  \quad &\text{ für } x = 1.
+\end{cases}
+\end{align*}
+
+und deren Graphen
+
+\centering
+\tikzset{
+  jumpdot/.style={mark=*,solid},
+  excl/.append style={jumpdot,fill=white},
+  incl/.append style={jumpdot,fill=black},
+}
+\begin{tikzpicture}
+    \begin{axis}[
+     axis lines=middle,clip=false,
+            xmin=-4.5,xmax=4.5, ymin=-5,ymax=5,
+            xticklabel style={black},
+            xlabel=$x$,
+            ylabel=$y$]
+    \addplot[domain=-5:-1,samples=200,red]{1/x};
+    \addplot[domain=-1:-0.5,samples=200,red]{3/x};
+    \addplot[incl] coordinates {(-1,-1)};
+    \addplot[excl] coordinates {(-1,-3)};
+    \addplot[domain=0:3,samples=200,red]{(x^2-1)/(x-1)};
+    \addplot[incl] coordinates {(0,1)};
+    \addplot[excl] coordinates {(1,2)};
+    \addplot[incl] coordinates {(1,3)};
+    \end{axis}
+  \end{tikzpicture}
+%
+\begin{abc}
+\item Finden Sie alle Werte an denen die Funktion unstetig ist.
+\item Begründen Sie für jeden dieser Werte,  weshalb die formale Definition der Stetigkeit verletzt ist.
+\item Klassifizieren Sie jede der Untetigkeitsstellen als \textbf{Sprungstelle}, \textbf{hebbare Unstetigkeit} oder \textbf{Polstelle}.
+\end{abc}
+}
+\Loesung{
+Die Funktion ist unstetig bei
+\begin{iii}
+\item $x = -1$,
+\item $x = 0$,
+\item $x = 1$.
+\end{iii}
+\begin{iii}
+\item
+Die Funktion ist unstetig für 
+$x=-1$. Diese Unstetigkeit entspricht einer Sprungstelle, da
+die links- und rechtsseitigen Grenzwerte existieren (sprich, auf einen endlichen Wert konvergieren), diese aber nicht übereinstimmen:
+$$
+\lim_{x \to -1^-} f(x) = \lim_{x \to -1^-} \frac{1}{x} = -1,
+$$
+$$
+\lim_{x \to -1^+} f(x) = \lim_{x \to -1^+} \frac{3}{x} = -3.
+$$
+\item
+Die Funktion ist unstetig bei $x=0$. Dies ist eine Polstelle, da der
+linksseitiger Grenzwert nicht existiert.
+$$
+\lim_{x \to 0^-} f(x) = \lim_{x\to 0^-} \frac{3}{x} = -\infty,
+$$
+$$
+\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \frac{x^2-1}{x-1} = \lim_{x\to 0^+} x+1 =1.
+$$
+%
+\item
+Die Unstetigkeit bei $x =1$ ist hebbar, da deren links- und rechtsseitige Grenzwerte existieren und übereinstimmen
+$$
+\lim_{x \to 1^-} f(x) = \lim_{x \to 1^-} \frac{x^2-1}{x-1} = \lim_{x\to 1^-} x+1 =2,
+$$
+$$
+\lim_{x \to 1^+} f(x) = \lim_{x \to 1^+} \frac{x^2-1}{x-1} = \lim_{x\to 1^+} x+1 =2,
+$$
+jedoch vom Funktionswert $f(1) = 3$ an der Stelle abweichen. 
+\end{iii}
+}

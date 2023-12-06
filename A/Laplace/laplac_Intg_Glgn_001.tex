@@ -1,0 +1,29 @@
+\Aufgabe[e]{Integralgleichungen mit Laplace--Transformation}
+{
+Bestimmen Sie die L\"osung $y(t)$ (mit \ $t\ge 0$) der Integralgleichung 
+	\[
+	y(t) = t^2 + \int\limits_{0}^{t} y(\tau)\,\sin(t-\tau)\ \text d\tau\,.
+\]
+}
+\Loesung{
+ Die Laplace--Transformation der Integralgleichung ergibt mit \ ${\cal L}\big(y(t)\big) = Y(s)$
+ sowie
+$$\int\limits_0^ty(\tau)\sin(t-\tau)\d \tau = \cL(y(t)*\sin(t))=\cL(y(t))\cdot \cL(\sin(t))$$
+die Gleichung im Frequenzraum:
+	\[
+	\begin{array}{cl}
+	& Y(s) = \dfrac{2}{s^3} + Y(s)\cdot\dfrac{1}{s^2+1}\\
+	\\
+	\Rightarrow & \left(1-\dfrac{1}{s^2+1}\right)\,Y(s) =\dfrac{2}{s^3} \,\Rightarrow\, Y(s) = \dfrac{2(s^2+1)}{s^3\cdot s^2} = \dfrac{2}{s^3}+\dfrac{2}{s^5} \\
+	\\ 
+	\Rightarrow & \underline{\underline{\ y(t) = t^2 + \dfrac{t^4}{12}\ }}\ .
+	\end{array}
+\]
+
+
+}
+
+\ErgebnisC{AufglaplacIntgGlgn001}
+{
+$y(t)=t^2+t^4/12$.
+}

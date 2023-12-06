@@ -1,0 +1,79 @@
+%Identisch mit analys_Diff_Ndim_001.tex
+\Aufgabe[e]{Partielle Ableitungen}{
+Bestimmen Sie alle ersten und zweiten partiellen Ableitungen der folgenden reellen Funktionen und geben Sie jeweils die ersten und zweiten Ableitungen in Matrixschreibweise an: 
+\[
+\begin{array}{rclcrcl}
+\mathbf{i)} &  & f(x,y)=\,\text{e}^{2\,xy^2} & \;\;\;\;\; & \mathbf{ii)} & & g(x,y)=x^2\,\sin (2x+y) \\ 
+&  &  &  &  &  &  \\ 
+\mathbf{iii)} &  & h(x,y)=\sin (2x)\,\cos (3y) &  & \mathbf{iv)} &  & k(x,y,z)=x\,y^2\,z^3\\
+&  &  &  &  &  &  \\ 
+\mathbf{v)} &  & j(u,v)=\dfrac{uv}{uv-1}
+\end{array}
+\]
+}
+
+\Loesung{
+\textbf{Anmerkungen:} 
+
+\textbf{1.} \ Die Ableitung (Gradient) einer Funktion mehrer Variablen ist ein Vektor (Spaltenvektor): 
+\begin{align*}
+   f(x,y,...) &\Rightarrow f'(x,y,...) = \Big(\partial_x f\ ,\ \partial_y\,f\ ,\ ...\,\Big)=(\nabla
+   f(x,y,\hdots))^\top\\
+&\Rightarrow  f''(x,y,\hdots)=\vec H(x,y,\hdots)=\begin{pmatrix}
+\partial_{xx} f & \partial_{xy} f & \ldots \\ 
+\partial_{yx} f & \partial_{yy} f & \ldots \\ 
+\ldots& \ldots & \ldots
+\end{pmatrix}
+\end{align*}
+
+\textbf{2.} \ Wenn die 2. partiellen Ableitungen \textbf{stetig} sind, dann ist die Hesse--Matrix \
+   $\vec H(x,y,...)$ \ symmetrisch.
+
+
+\begin{iii}
+\item \begin{align*}
+\nabla f(x,y)=&\left( 2\,y^2\,e^{2xy^2}\;,\;4\,xy\,e^{2xy^2}\right)^\top\\
+\vec H_f(x,y)=&\begin{pmatrix}
+4\,y^4\,e^{2xy^2} & (4\,y+8\,x\,y^3)\,e^{2xy^2} \\ 
+(4\,y+8\,x\,y^3)\,e^{2xy^2} & (4\,x+16\,x^2\,y^2)\,e^{2xy^2}
+\end{pmatrix}
+\end{align*}
+\item \begin{align*}
+\nabla g(x,y)=&\Big( 2\,x\,\sin (2x+y)+2\,x^2\,\cos(2x+y)\;,\;x^2\,\cos (2x+y)\Big)^\top \\
+\vec H_g(x,y)=&\small{\begin{pmatrix}
+(2-4\,x^2)\,\sin (2x+y)+8\,x\,\cos (2x+y)) & 2\,x\,\cos (2x+y)-2\,x^2\,\sin
+(2x+y) \\ 
+2\,x\,\cos (2x+y)-2\,x^2\,\sin (2x+y) & -x^2\,\sin (2x+y)
+\end{pmatrix}}
+\end{align*}
+\item \begin{align*}
+\nabla h(x,y)=&\Big( 2\,\cos (2x)\,\cos (3y)\;,\;-3\,\sin(2x)\,\sin (3y)\Big)^\top\\
+\vec H_h(x,y)=&\begin{pmatrix}
+-4\,\sin (2x)\,\cos (3y) & -6\;\cos (2x)\,\sin (3y) \\ 
+-6\;\cos (2x)\,\sin (3y) & -9\,\sin (2x)\,\cos (3y)
+\end{pmatrix}
+\end{align*}
+\item \begin{align*}
+\nabla k(x,y,z)=&\big(y^2\,z^3\;,\;2\,x\,y\,z^3\;,\;3\,x\,y^2\,z^2\big)^\top\\
+\vec H_k(x,y,z)=&
+\begin{pmatrix}
+0 & 2\,y\,z^3 & 3\,y^2\,z^2 \\ 
+2\,y\,z^3 & 2\,x\,z^3 & 6\,x\,y\,z^2 \\ 
+3\,y^2\,z^2 & 6\,x\,y\,z^2 & 6\,x\,y^2\,z
+\end{pmatrix}
+\end{align*}
+\item \begin{align*}
+\nabla j(u,v) =& \dfrac{1}{(uv-1)^2}\cdot\big( -v\ ,\ -u\big)^\top\ ,\qquad\\
+\vec H_j(u,v) =&  \dfrac{1}{(uv-1)^3}\cdot\begin{pmatrix}
+2\,v^2 & uv+1 \\
+uv +1  & 2\,u^2 
+\end{pmatrix}
+\end{align*}
+\end{iii}
+}
+
+% \ErgebnisC{dummy}
+% {
+% 
+% }
+

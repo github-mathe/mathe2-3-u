@@ -1,0 +1,39 @@
+\Aufgabe[e]{Regel von L'Hospital}{
+Berechnen Sie mit Hilfe der Regel von L'Hospital die Grenzwerte
+\begin{align*}
+A=\underset{x\rightarrow 0}\lim \,  \left(\frac{\tan x}{x}\right),\quad&&
+B=\underset{x\rightarrow 0}\lim \, \left(\frac{1-\cosh x}{x^3}\right),\quad&&
+C=\underset{x\rightarrow 1}\lim \, \left(\frac{\ln x}{\sin(\pi x)}\right)
+\end{align*}
+}
+
+\Loesung{
+Es gilt $\underset{x\to 0}\lim \tan x = \underset{x\to0}\lim x =0$, also darf der
+Satz von L'Hospital angewendet werden: 
+\begin{align*}
+A=& \underset{x\to0}\lim \frac{\tan x}x = \underset{x\to 0}\lim \frac {\frac 1{\cos^2
+x}}{1} = 1. 
+\end{align*}
+F\"ur $B$ gehen Z\"ahler und Nenner gegen Null ($\underset{x\rightarrow 0}\lim \cosh x = 1$), also kann auch hier der Satz von L'Hospital
+angewendet werden: 
+\begin{align*}
+B=&\underset{x\to 0}\lim \frac {1-\cosh x}{x^3} = \underset{x\to 0}\lim \frac{-\sinh x}{3x^2}\text{
+(erneut ist }\underset{x\rightarrow 0}\lim \sinh x = \underset{x\to 0}\lim x^2=0)\\
+=&\underset{x\to 0}\lim \frac{-\cosh x}{6x}= \begin{cases} -\infty \quad &\text{, f\"ur } x > 0 \text{ (rechtsseitiger Grenzwert)}\\ \infty \quad &\text{, f\"ur } x < 0 \text{ (linksseitiger Grenzwert)}\end{cases}.
+\end{align*}
+F\"ur $C$ gilt wiederum $\underset{x\to 1}\lim \ln x = \underset{x\to 1}\lim\sin(\pi x)=0$, also
+kann auch hier der Satz von L'Hospital angewendet werden: 
+\begin{align*}
+C=& \underset{x\rightarrow 1}\lim \frac{\ln x }{\sin(\pi x)} = \underset{x\to 1}\lim \frac{\frac
+1x}{\pi \cos (\pi x)}\\
+=& \underset{x\to 1}\lim \frac{1}{\pi x\cos (\pi x)}=-\frac 1{\pi}.
+\end{align*}
+
+}
+
+\ErgebnisC{AufganalysReglLhos002}
+{
+$A=1$, $B=\pm \infty$, $C=-1/\pi$
+}
+
+

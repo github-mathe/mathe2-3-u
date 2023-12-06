@@ -1,0 +1,102 @@
+\Aufgabe[e]{Sekantensteigung}{
+\begin{abc}
+\item Gegeben ist der Funktionsgraph der Funktion $f$. 
+\end{abc}
+\begin{center}
+\psset{xunit=2cm, yunit=2cm}
+\begin{pspicture}(0,-1)(3,3)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](0,-1)(3,3)
+\psplot[plotpoints=100,plotstyle=curve,linewidth=1pt]
+{0}{3}
+{x x mul -2 x mul add}
+\end{pspicture}
+\end{center}
+Zeichnen Sie an den Punkten 
+$$(x_j,y_j) \text{ mit } x_j=j, \, y_j=f(x_j)\text{ f\"ur } j=0,1,2,3$$
+Steigungsdreiecke mit $\Delta x=1$ an den Funktionsgraphen und berechnen Sie aus $x$- und $y$-Achsenabschnitt die
+Sekantensteigung $s(x_j)$. \\
+Wiederholen Sie dies f\"ur $\Delta x=\frac 12$ und f\"ur $\Delta x=\frac 14$. 
+Skizzieren Sie die so berechneten Steigungswerte im zweiten Graphen. \\
+
+\begin{center}
+
+\begin{pspicture}(0,-2)(3,4)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](0,-2)(3,4)
+
+
+\end{pspicture}
+\end{center}
+\begin{abc}\setcounter{enumi}{1}
+\item Berechnen Sie die Ableitung der Funktion $f(x)=x^2-2x$ anhand der Definition als Grenzwert eines
+Differenzenquotienten. Skizzieren Sie auch diese im zweiten Graphen. 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Zun\"achst werden die Steigungsdreiecke eingezeichnet. Dabei ist zu beachten, dass f\"ur $x=3$ das
+Steigungsdreieck nach links gezeichnet wird, da rechts des Punktes der Funktionsverlauf nicht
+gegeben ist. Daher stimmen f\"ur $\Delta x=1$ die Steigungsdreiecke in den Punkten $x_2$ und
+$x_3$ \"uberein. 
+\begin{center}
+\psset{xunit=2cm, yunit=2cm}
+\begin{pspicture}(0,-1)(3,3)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](0,-1)(3,3)
+\psplot[plotpoints=100,plotstyle=curve,linewidth=1pt]
+{0}{3}
+{x x mul -2 x mul add}
+\psline(0,0 )(1,-1)(1,0)(0,0)
+\psline(1,-1)(2,0)(2,-1)  (1,-1)
+\psline(2,0 )(3,3)(3,0)(2,0)
+%delta x = 1/2
+\psline(   0.00000,  0.00000)(   0.50000,  -0.75000)(   0.00000,  -0.75000)(   0.00000,   0.00000)
+\psline(   1.00000, -1.00000)(   1.50000,  -0.75000)(   1.00000,  -0.75000)(   1.00000,  -1.00000)
+\psline(   2.00000,  0.00000)(   2.50000,   1.25000)(   2.00000,   1.25000)(   2.00000,   0.00000)
+\psline(   3.00000,  3.00000)(   2.50000,   1.25000)(   3.00000,   1.25000)(   3.00000,   3.00000)
+                                                                                 
+                                                                                 
+%delta x=1/4                                                                     
+\psline(   0.00000,   0.00000)(   0.2500,  -0.43750)(   0.0000, -0.43750)(   0.0000,   0.00000)
+\psline(   1.00000,  -1.00000)(   1.2500,  -0.93750)(   1.0000, -0.93750)(   1.0000,  -1.00000)
+\psline(   2.00000,   0.00000)(   2.2500,   0.56250)(   2.0000,  0.56250)(   2.0000,   0.00000)
+\psline(   3.00000,   3.00000)(   2.7500,   2.06250)(   3.0000,  2.06250)(   3.0000,   3.00000)
+\end{pspicture}
+\end{center}
+Daraus lassen sich die $y$-Differenzen ablesen: 
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c}
+&\multicolumn{2}{c|}{$\Delta x=1$}&\multicolumn{2}{c|}{$\Delta x=\frac 12$}&\multicolumn{2}{c}{$\Delta
+x=\frac 14$}\\[1ex]\hline
+$x_j$& $\Delta y_j$ & $s(x_j)$& $\Delta y_j$& $s(x_j)$& $\Delta y_j$&
+$s(x_j)$\\[1ex]\hline
+   0&  -1.0& -1.0&  -0.8& -1.6&  -0.4& -1.6\\
+   1&   1.0&  1.0&   0.3&  0.6&   0.1&  0.4\\
+   2&   3.0&  3.0&   1.3&  2.6&   0.6&  2.4\\
+   3&   3.0&  3.0&   1.8&  3.6&   0.9&  3.6\\
+\end{tabular}\\
+
+
+\begin{pspicture}(0,-2)(3,5)
+\psgrid[subgriddiv=5,griddots=1,gridlabels=.3](0,-2)(3,4)
+\psline[showpoints=true](0,-1)(1,1)(2,3)(3,3)
+\psline[showpoints=true](0,-1.6)(1,.6)(2,2.6)(3,3.6)
+\psline[showpoints=true](0,-1.6)(1,.4)(2,2.4)(3,3.6)
+\psline[linecolor=gray](0,-2)(3,4)
+\end{pspicture}
+
+\end{center}
+\item Die Ableitung von $f(x)$ ergibt sich zu: 
+\begin{align*}
+f'(x)&=\underset{t\to 0}\lim\frac{f(x+t)-f(x)}{t}
+= \underset{t\to x}\lim \frac {(x+t)^2-2(x+t)-(x^2-2x)}{t}\\
+&= \underset{t\to x}\lim \frac {2xt+t^2-2t}{t}
+= \underset{t\to x}\lim \left(  2x+t-2\right) = 2x-2
+\end{align*}
+Diese Funktion ist oben in grau eingezeichnet. 
+\end{abc}
+}
+
+\ErgebnisC{analysAbltSekn001}
+{
+\textbf{b)} $f'(x)=2x-2$
+}

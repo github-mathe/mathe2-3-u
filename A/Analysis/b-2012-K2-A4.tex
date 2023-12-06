@@ -1,0 +1,83 @@
+\Aufgabe[e]{Newton-Verfahren}
+{
+Gegeben seien die beiden Kurven in der oberen Halbebene
+\[
+	(y-3)^2-x=3 \text{ und } xy=4\ ,\ \ y\ge 0\ .
+\]
+\begin{itemize}
+\item[a)] Skizzieren Sie die beiden Kurven und lesen Sie aus Ihrer Skizze eine 
+nicht-ganzzahlige Näherung für den Schnittpunkt ab.
+\item[b)] Um den Schnittpunkt numerisch zu bestimmen, f\"uhren Sie \textbf{einen} 
+Iterationsschritt mit dem \textbf{zweidimensionalen} Newton--Verfahren durch, 
+wobei Sie den Punkt \ $(x_0,y_0):=(1,5)\in\N^2$ \  als Startwert benutzen.
+\item[c)] Hat sich die Näherung durch den Newtonschritt aus Teil b) gegen\"uber 
+dem Startwert \ $(x_0,y_0)$ \ verbessert\,? Kurze Begründung!
+\end{itemize}
+}
+\Loesung{
+\textbf{Zu a)} \\
+	
+
+\begin{center}
+\begin{pspicture}(-4,0)(6,6)
+\psgrid[subgriddiv=5,subgridcolor=gray,gridcolor=black,gridlabels=.3](-4,0)(6,6)
+\psplot[plotpoints=100,plotstyle=curve]
+{.7}{6}
+{4 x div}
+
+\psparametricplot[plotpoints=100,plotstyle=curve]
+{0}{6}
+{t -3 add 2 exp -3 add
+t}
+
+\end{pspicture}\\
+\end{center}
+
+
+Der Schnittpunkt der beiden Kurven liegt in der Nähe von \ $(x,y)=(0.80\,,\,4.9)$\,.
+
+\bigskip
+\textbf{Zu b)} \ Der Startwert sei \ $(x_0\,,\,y_0)=(1,5)$\,. Das nichtlineare 
+Gleichungssystem ist
+\[
+	\vec f(x,y)=\begin{pmatrix} (y-3)^2-x-3 \\ xy-4 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}\ .
+\]
+Damit ist die Matrix der ersten partiellen Ableitungen
+\[
+	\vec J_{\vec f}(x,y) = \begin{pmatrix} -1 & 2y-6 \\ y & x \end{pmatrix}\ .
+\]
+Der erste Newton--Schritt lautet mit eingesetzten Zahlenwerten
+\begin{align*}
+\begin{pmatrix} x_1 \\ y_1 \end{pmatrix} & = \begin{pmatrix} 1 \\ 5 \end{pmatrix} + \vec{\Delta x}
+\end{align*}
+Dabei ist $\vec{\Delta x}$ L\"osung des Gleichungssystems
+$$\vec J_{\vec f}(\vec x_0)\vec{\Delta x}=-\vec f(\vec x_0):$$
+$$\begin{array}{rr|l|l}
+-1 & 4 & 0\\ 
+5 & 1 & -1 & + 5\times I\\\hline
+
+-1 & 4 & 0\\ 
+0 &21 & -1 
+\end{array}$$
+Daraus ergibt sich $\vec{\Delta x}=\frac 1{21}\begin{pmatrix}-4\\-1\end{pmatrix}$
+und damit 
+$$\vec x_1=\begin{pmatrix}1\\5\end{pmatrix}-\frac{1}{21}\begin{pmatrix}4\\1\end{pmatrix} = \dfrac{1}{21}\begin{pmatrix}17\\104\end{pmatrix}.$$
+
+
+\bigskip
+\textbf{Zu c)} Die (euklidische) Norm des Funktionswertes ist kleiner geworden: \ 
+ \[
+\vec f(x_0,y_0) =  \begin{pmatrix} 0 \\ 1 \end{pmatrix} \,, \qquad  
+\vec f(x_1\,,\,y_1) = \begin{pmatrix} 0.0023 \\ 0.0091 \end{pmatrix} \ .
+\]
+
+\medskip
+Alternativ: Ja, denn die verbesserte Näherung liegt viel dichter an dem aus der 
+Zeichnung abgelesenen Wert als die Ausgangsnäherung.
+}
+
+
+\ErgebnisC{Aufgb-2011A-K-A3}
+{
+\textbf{Zu b)} $\text D\, \vec f(x,y) = \begin{pmatrix} -1 & 2y-6 \\ y & x \end{pmatrix}\ .$
+}

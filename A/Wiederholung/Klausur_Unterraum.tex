@@ -1,0 +1,52 @@
+\Aufgabe[e]{Unterr\"aume}{
+Gegeben sei ein Vektorraum $\vec V \subset \mathbb{R}^n$ und eine Menge $\vec U \subset \mathbb{R}^n$
+\begin{abc}
+\item Welche Bedingungen muss $\vec U$ erf\"ullen, damit $\vec U$ ein Untervektorraum von $\vec V$ ist?
+\item Was ist die Dimension eines Unterraumes?
+\item Wie ist eine Basis definiert? Wie bestimmt man eine Basis?
+\item Erkl\"aren Sie den Begriff lineare Unabh\"angigkeit.
+\item Was ist eine Linearkombination? 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Es muss gelten $\vec U \subset \vec V$, das heißt die Menge $\vec U$ muss Teilmenge von $\vec V$ sein.\\
+      Weiterhin muss $\vec U$ selbst ein Vektorraum sein. Das heißt $\vec U$ muss folgende Eigenschaften erf\"ullen.
+      \begin{iii}
+        \item $\vec 0 \in \vec U $
+        \item $\vec u_1 + \vec u_2 \in \vec U \quad \text{ f\"ur } \vec u_1 , \vec u_2 \in \vec U$
+        \item $\lambda \vec u \in \vec U \quad \text{ f\"ur } \vec u \in \vec U \text{ und } \lambda \in \mathbb{R}$
+      \end{iii}
+      
+\item Die Dimension eines Unterraumes wird durch die Anzahl der Vektoren einer Basis von $\vec U$ bestimmt. 
+      Dabei gilt dim($\vec U$)$\leq$ dim($\vec V$). Ist dim($\vec U$) = dim($\vec V$), so ist $\vec U$ = $\vec V$.
+
+\item Ein System von Vektoren $\mathcal=\left\{ \vec v_1,...,\vec v_n\right\}$ eines Vektorraumen $\vec V$ hei$\ss$t Basis von $\vec V$ genau dann, wenn
+      \begin{iii}
+      \item $\left\{\vec v_1,..., \vec v_n\right\}$  linear unabh\"angig
+      \item $\vec V$ = span$\lbrace \vec v_1,...,\vec v_n \rbrace$. \\
+      \end{iii}
+      Das bedeutet, dass jeder Vektor aus $\vec V$ eindeutig als Linearkombination der Basisvektoren
+      geschrieben werden kann. Die Basis ist ein maximales linear unabh{\"a}ngiges System, d.h. es kann kein
+      Vektor hinzugef{\"u}gt werden, ohne dass die Vektoren linear abh{\"a}ngig werden. Die Basis ist ebenfalls
+      ein minimales linear unabh{\"a}ngiges System, d.h. es kann kein Vektor weggelassen werden, ohne dass der
+      gesamte Vektorraum $\vec V$ mit Hilfe der Vektoren erzeugt werden kann. \\
+      
+      Um eine Basis zu bestimmen, werden die Vektoren z.B. des Unterraumes $\vec U$ zeilenweise in eine Matrix
+      geschrieben. Es wird der Gau{\ss}-Algorithmus auf die Matrix angewendet, um die Zeilenstufenform zu
+      erzeugen. Die Nichtnullzeilen der Zeilenstufenform bilden dann eine Basis von $\vec U$. Der Rang der
+      Matrix entspricht der Dimension von $\vec U$.
+
+\item Eine Menge von Vektoren sind linear abh{\"a}ngig, wenn sich mindestens einer der Vektoren als    
+      Linearkombination der anderen darstellen l{\"a}sst. Zudem hei{\ss}en die Vektoren $\vec v_1,...,\vec v_n$ 
+      linear abh{\"a}ngig, falls es $\lambda_1,...,\lambda_n \in \mathbb{R}$ gibt, die nicht alle gleich Null 
+      sind, so dass $\lambda_1 \vec v_1 +...+ \lambda_n \vec v_n = \vec 0$ gilt.
+% Zudem gilt, dass der Nullvektor als Linearkombination der Vektoren $\lambda_1 \vec v_1 +...+ \lambda \vec v_n = \vec 0$ mit $\lambda \in \mathbb{K}$ nur erzeugt werden 
+%kann, wenn mindestens ein $\lambda$ ungleich Null ist.      
+
+
+\item Eine Linearkombination ist eine Summe von Vektoren, wobei jeder Vektor mit einer Zahl $\lambda \in \mathbb{R}$ skaliert wird, z.B. \\
+$\vec v = \lambda_1 \vec v_1 + \lambda_2 \vec v_2$.
+\end{abc}
+}

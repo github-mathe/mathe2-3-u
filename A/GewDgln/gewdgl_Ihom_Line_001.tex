@@ -1,0 +1,200 @@
+\Aufgabe[e]{Inhomogene lineare Differentialgleichungen}
+{
+Bestimmen Sie von folgenden inhomogenen linearen Differentialgleichungen mit konstanten Koeffizienten jeweils die allgemeine reelle L\"osung, indem Sie zun\"achst die zugeh\"orige homogene lineare Differentialgleichung allgemein l\"osen und eine spezielle (partikul\"are) L\"osung der inhomogenen linearen Differentialgleichung mit Hilfe von geeigneten Ans\"atzen bestimmen.
+
+
+\begin{abc}
+\item[e] \ \ \ \ $y''(x)-5\,y'(x)+6\,y(x)=r_{k}(x)$ \ \ mit 
+\[
+\mathbf{i)}\;\;r_{1}=108\,x^{2}\;,\;\;\;\;\;\mathbf{ii)}\;\;r_{2}=7\,\EH{3x}\;,\;\;\;\;\;\mathbf{iii)}\;\;r_{3}=18+14\,\EH{3x}\;. 
+\]
+
+\item[e]  \ \ \ \ $y'''(x)+25\,y'(x)=s_{k}(x)$ \ \ mit 
+\begin{align*}
+\mathbf{i)} &  & s_{1}=&150\,x\;, & \;\;\;  
+\mathbf{ii)} &  & s_{2}=&\sin(x)\;, \\ 
+\mathbf{iii)} &  & s_{3}=&\sin (5x)-200\,x\;, &  
+\mathbf{iv)} &  & 
+s_{4}=&6\,\sin (3x)\,\cos (2x)\;.
+\end{align*}
+\textbf{Hinweis}: F\"ur $\alpha,\beta\in\R$ gilt $\sin(\alpha+\beta)+\sin(\alpha-\beta)=2\sin\alpha\cos\beta$. 
+\item[e]  \ \ \ \ $y''(x)-2\,y'(x)=t_{k}(x)$ \ \ mit 
+\[
+\mathbf{i)}\;\;t_{1}=4\,\EH{2x}\;,\;\;\;\;\;\mathbf{ii)}\;\;t_{2}=\cosh (2x)\;. 
+\]
+%\item[e]  Geben Sie einfache Inhomogenit\"aten (St\"orfunktionen) an, f\"ur die es keine Faustregelans\"atze gibt.
+\end{abc}
+}
+\Loesung{
+\begin{enumerate}
+\item[\textbf{a)}]  Zun\"achst die zugeh\"orige homogene lineare Differentialgleichung:
+
+Die charkt. Gl. ist:\ \ \ \ $\lambda ^{2}-5\lambda +6=0 \,\Rightarrow\,  \lambda_{1}=2\;,\;\;\lambda_{2}=3\;.$%
+\[
+\Rightarrow \;\;\;\;\underline{\;y_{\text{h}}(x)=a\,\text{e}^{2x}+b\,\EH{3x}\;,\;\;a,b\in \Bbb{R}\;}\;. 
+\]
+
+\textbf{i)} \ Faustregelansatz: 
+\[
+y_{\text{p}}=A+B\,x+C\,x^{2} \,\Rightarrow\,  ;y_{\text{p}}'=B+2C\,x \text{ und } y_{\text{p}}''=2C\;. 
+\]
+
+Einsetzen in die Differentialgleichung: 
+\[
+2C-5\cdot \left( B+2C\,x\right) +6\cdot \left( A+B\,x+C\,x^{2}\right)=108\,x^{2}\;. 
+\]
+
+Koeffizientenvergleich: 
+\[
+\begin{array}{rrrrrrrrrrr}
+1: &  & 2\,C -  5\,B  +  6\,A  =  0 &  &  \\ 
+x: &  & -10\,C  +  6\,B   =  0 &  &  \\ 
+x^{2}: &   &6\,C =  108 &  & \,\Rightarrow\,  C=18\;,\;\;B=30\;\;A=19\;.
+\end{array}
+\]
+
+Partikul\"are L\"osung der inhomogen linearen Differentialgleichung: 
+\[
+\Rightarrow \;\;\;\;\underline{\;y_{\text{p}}(x)=19+30\,x+18\,x^{2}\;}\;. 
+\]
+
+Allgemeine L\"osung der inhomogen linearen Differentialgleichung: 
+\[
+\,\Rightarrow\,  \underline{\underline{\;y(x)=y_{\text{h}}+y_{\text{p}}=a\,\EH{2x}+b\,\EH{3x}+19+30\,x+18\,x^{2}\;,\;\;a,b\in \Bbb{R}\;}}\;. 
+\]
+
+
+\textbf{ii)}\ \ Faustregelansatz:\ \ \ $y_{\text{p}}=A\,x\,\EH{3x}$\ \ \ \glqq$x$--spendieren\grqq.
+
+Eingesetzt: \ \ $$\big((6A+9A\,x)-5\cdot (A+3A\,x)+6\cdot A\,x\big)\cdot \,\EH{3x}=7\,\EH{3x} \,\Rightarrow\,  A=7 \text{ und } 0=0\ .$$
+
+Partikul\"are L\"osung: \ \ $\underline{\;y_{\text{p}}(x)=7x\,\EH{3x}\;}\;.$
+
+Allgemeine L\"osung: \ \ $\underline{\underline{\;y(x)=y_{\text{h}}+y_{\text{p}} = a\,\EH{2x}+b\,\EH{3x}+7x\,\EH{3x}\;,\;\;a,b\in \mathbb{R}\;}}\;.$
+
+
+\textbf{iii)}\ \ Faustregelans\"atze f\"ur beide Summanden der Inhomogenit\"at einzeln.
+
+Ansatz f\"ur \ $r=18$\ :\ \ \ \ $y_{\text{p}_{1}}=A \,\Rightarrow\,  \underline{\;y_{\text{p}_{1}}(x)=3\;}\;.$
+
+F\"ur\ \ $r=14\,\EH{3x}$\ \ ergibt sich nach ii) : \ \ \ $\underline{\;y_{\text{p}_{2}}(x)=14x\,\EH{3x}\;}\;.$
+
+Allgemeine L\"osung: \ \ \ $\underline{\underline{\;y(x)=y_{\text{h}}+y_{\text{p}_{1}}+y_{\text{p}_{2}} = a\,\EH{2x}+b\,\EH{3x}+3+14x\,\EH{3x}\;,\;\;a,b\in \mathbb{R}\;}}\;.$
+
+
+\item[\textbf{b)}]  Das charakteristische Polynom der Differentialgleichung ist $\lambda^3+25\lambda$ mit den Nullstellen $\lambda_1=0$, $\lambda_{2/3}=\pm 5\imag$. Die zugeh\"orige homogene lineare Differentialgleichung hat damit die allgemeine (reelle) L\"osung 
+\[
+\underline{\;y_{\text{h}}(x)=a\,\cos (5x)+b\,\sin (5x)+c\;,\;\;\;a,b,c\in \mathbb{R}\;}\;. 
+\]
+
+\textbf{i)} \ Faustregelansatz:\ \ \ $y_{\text{p}}=A\,x+B\,x^{2}$ \ (\glqq$x$--spendieren\grqq). Einsetzen in die Differentialgleichung ergibt
+\begin{align*}
+&&&y'''(x)+25y'(x)\\
+&&=& 0 + 25(A+2Bx) \overset!= 150 x\\
+\Rightarrow && A=&0,\, B=3\\
+\Rightarrow&& y_{\text{p}}=&3\,x^{2}\\
+\Rightarrow&& y(x)=& y_{\text{h}}+y_{\text{p}} = 
+a\,\cos(5x)+b\,\sin(5x)+c+3\,x^{2}\;,\;\;\;a,b,c\in \mathbb{R}
+\end{align*}
+
+\textbf{ii)} 
+
+\textbf{1. L\"osungsweg} 
+
+\ Faustregelansatz:\ \ \ $y_{\text{p}}(x)=\operatorname{Im}(A\cdot\EH{ix}) $
+
+Einsetzen in die Differentialgleichung: 
+\[A\cdot(i^3+25i)\cdot\EH{ix}=\EH{ix}\Rightarrow\, A=\dfrac{1}{-i+25i}=\dfrac{1}{24i}=\dfrac{-i}{24}\]
+
+Somit gilt 
+\[y_{\text{p}}=\operatorname{Im}\left(\dfrac{-i}{24}\cdot(\cos(x)+i\sin(x))\right)=-\dfrac{1}{24}\,\cos (x)\]
+
+\textbf{2. L\"osungsweg} 
+
+\ Faustregelansatz:\ \ \ $y_{\text{p}}=A\,\cos(x)+B\,\sin(x) \,\Rightarrow\,  \underline{\;y_{\text{p}}(x)=-\dfrac{1}{24}\,\cos (x)\;}\;.$
+Einsetzen in die Differentialgleichung ergibt
+\begin{align*}
+&&&y'''(x)+25y'(x)\\
+&&=& A\sin(x) -B\cos(x) + 25(-A\sin(x)+B\cos(x)) \overset!= \sin(x)\\
+\Rightarrow && -24A=&1,\, 24B=0\\
+\Rightarrow&& y_{\text{p}}=&-\frac 1{24}\cos(x)
+\end{align*}
+
+Beide Wege liefern dann die allgemeine L\"osung
+
+\[
+\Rightarrow \;\;\;\;\underline{\underline{\;y(x)=y_{\text{h}}+y_{\text{p}} = 
+a\,\cos(5x)+b\,\sin(5x)+c-\dfrac{1}{24}\,\cos (x)\;,\;\;\;a,b,c\in \mathbb{R}\;}}\;. 
+\]
+
+\textbf{iii)} \ Faustregelans\"atze f\"ur beide Summanden einzeln:
+
+Ansatz f\"ur \ $s=\sin(5x)=\operatorname{Im}(\EH{i5x})$ :
+\ \ $y_{\text{p}_{1}}=\operatorname{Im}(Ax\EH{i5x})$\ (\glqq$x$--spendieren\grqq) liefert nach Einsetzen in die DGL
+
+\[A\cdot(3\cdot(5i)^2\cdot\EH{i5x}+x\cdot(5i)^3\cdot\EH{i5x}+25\cdot(\EH{i5x}+x\cdot5i\cdot\EH{i5x}))=\EH{i5x}\]
+\[A\cdot(-75-125ix+25+125ix)=1\Rightarrow\ A=\dfrac{1}{-50}\]
+\[\Rightarrow\ y_{\text{p}_{1}}=\operatorname{Im}\left(\dfrac{1}{-50}x\EH{i5x}\right)=-\dfrac{1}{50}\,x\,\sin(5x)\]
+
+Alternativ kann mann den Ansatz \ \ $Ax\,\cos(5x)+Bx\,\sin (5x)$ \ benutzen.
+Einsetzen in die Differentialgleichung ergibt
+\begin{align*}
+&&&y'''(x)+25y'(x)\\
+&&=& -3\cdot 25A\cos(5x)+125Ax\sin(5x) -3\cdot 25 B\sin(5x) -125 B x\cos(5x)+ \\
+&& & + 25(A\cos(5x)-5Ax\sin(5x)+ B\sin(5x)+5Bx\cos(5x)) \overset!= \sin(5x)\\
+\Rightarrow &&\sin(5x)=& (-75A+25 A) \cos(5x) + (-75B+25B)\sin(5x)\\
+\Rightarrow && A=&0,\, B=-\frac 1{50}\\
+\Rightarrow&& y_{\text{p1}}=&-\frac 1{50}\sin(x)
+\end{align*}
+
+F\"ur \ $s=-200$ \ ergibt sich die spezielle L\"osung nach i) zu \ \ $\underline{\;y_{\text{p}_{2}}=-4\,x^{2}\;}\;.$
+\[
+\underline{\underline{\;y(x)=y_{\text{h}}+y_{\text{p}_{1}}+y_{\text{p}_{2}} = a\,\cos(5x)+b\,\sin(5x)+c-\dfrac{1}{50}\,x\,\sin(5x)-4\,x^{2}\;,\;\;\;a,b,c\in \mathbb{R}\;}}\;. 
+\]
+
+\textbf{iv)} \ Die Inhomogenit\"at ist \ \ $s_{4}=6\,\sin (3x)\,\cos(2x)=3\,\big(\sin (x)+\sin (5x)\big)\;.$
+
+Nach ii) und iii) ist damit die spezielle L\"osung:\ \ \ \ $\underline{\;y_{\text{p}} = -\dfrac{1}{8}\,\cos (x)-\dfrac{3}{50}\,x\,\sin(5x)\;}\;.$%
+\[
+\underline{\underline{\;y(x)=y_{\text{h}}+y_{\text{p}}=a\,\cos (5x)+b\,\sin (5x)+c-\dfrac{1}{8}\,\cos (x)-\dfrac{3}{50}\,x\,\sin(5x)\;,\;\;\;a,b,c\in \Bbb{R}\;}}\;. 
+\]
+
+\item[\textbf{c)}]  Das charakteristische Polynom $\lambda^2-2\lambda$ hat die Nullstellen $\lambda_1=0,\, \lambda_2=2$. Damit ist die allgemeine L\"osung der zugeh\"origen homogenen linearen Differentialgleichung 
+\[
+\underline{\;y_{\text{h}}(x)=a\,+b\,\EH{2x}\;,\;\;\;a,b\in \mathbb{R}\;}\ . 
+\]
+
+
+\textbf{i)} \ Faustregelansatz \ \ $y_{\text{p}}=A\,x\;\EH{2x}$ \ (\glqq$x$--spendieren\grqq)$ \,\Rightarrow\,  \underline{\;y_{\text{p}} = 2\,x\,\EH{2x}\;}\;.$%
+\[
+\Rightarrow \;\;\;\;\underline{\underline{\;y(x)=y_{\text{h}}+y_{\text{p}} = 
+a\,+b\,\EH{2x}+2\,x\,\EH{2x}\;,\;\;\;a,b\in \mathbb{R}\,.}} 
+\]
+
+\textbf{ii)}\ \ Die Inhomogenit\"at ist \ \ $t_{2}= \cosh(2x)=\dfrac{1}{2}\,\EH{2x}+\dfrac{1}{2}\,\EH{-2x}\;.$
+
+Faustregelans\"atze f\"ur beide Summanden einzeln:
+
+F\"ur \ $t=\dfrac{1}{2}\,\EH{2x}$\ \ ergibt sich nach i) \ \underline{\;$y_{\text{p}_{1}}(x)=\dfrac{1}{4}\,x\,\EH{2x}\;$}$\;.$
+
+Ansatz f\"ur \ $t=\dfrac{1}{2}\,\EH{-2x}$ : \ \ $y=A\,\EH{-2x}\;\;$(\textbf{kein} \glqq$x$--spendieren\grqq\,!)$ \,\Rightarrow\,  \underline{\;y_{\text{p}_{2}}=\dfrac{1}{16}\,\EH{-2x}\;}\;.$%
+\[
+\Rightarrow \;\;\;\;\underline{\underline{\;y(x) = y_{\text{h}}+y_{\text{p}_{1}}+y_{\text{p}_{2}} = a\,+b\,\EH{2x}+\dfrac{1}{4}\,x\,\EH{2x}+\dfrac{1}{16}\,\EH{-2x}\;,\;\;\;a,b\in \mathbb{R}\;}} 
+\]
+
+
+%\item[\textbf{d)}]  Keine Faustregelans\"atze gibt es z.\,B. f\"ur Terme wie 
+%\[
+%\ln (x)\;,\;\;\;\sqrt{x}\;,\;\;\;\dfrac{1}{x}\;,\;\;\;\sin(x^{2})\;,\;\;\;\tan (x)\;. 
+%\]
+\end{enumerate}
+}
+
+
+\ErgebnisC{AufggewdglIhomLine001}
+{
+L\"osungen der homogenen Gleichungen: 
+a) $a\EH{2x}+b\EH{3x}$\,,  
+b) $a\cos(5x)+b\sin(5x)+c$\,,\\ 
+c) $a+b\EH{2x}$\,.
+}

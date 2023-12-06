@@ -1,0 +1,94 @@
+\Aufgabe[e]{Umkehrfunktion}{
+\begin{abc}
+\item[e] Geben Sie zu den folgenden Funktionen an, in welchem Bereich sie umkehrbar sind, geben Sie im Punkt
+$(0,f_j(0))$ den Wert der Ableitung von $f_j^{-1}(x)$ an. 
+\begin{align*}
+f_1(y)=& y^3-3y\\
+f_2(y)=& \frac{y^2+3y}{1-y}
+\end{align*}
+\item Gegeben seien die Funktionen 
+$$g_3(x)=\tan(x),\qquad g_4(x)=\EH{x^2+2x-8},\qquad g_5(x)=\cosh(x),\qquad g_6(x)=\frac 1{x^2+2}.$$
+Bestimmen Sie zun\"achst die Ableitungen $g_j'(x)\, (j=3,4,5,6)$ dieser Funktionen. \\
+Ermitteln Sie daraus mit Hilfe von Satz 3.38 (Ableitung der Umkehrfunktion) die Ableitung der
+Umkehrfunktionen $f_j(y)=g_j^{-1}(x)\,(j=3,4,5,6)$. (Es gilt $f_j(g_j(x))=x$.)\\
+%\begin{align*}
+%f_3(y)=\arctan(y),&\quad&f_4^{-1}(x)=\EH{x^2+2x-8},& \quad & f_5(y)=\mathrm{Ar\, cosh} y ,&\quad& f_6(y)=\sqrt{\frac 1 y -2}
+%\end{align*}
+Geben Sie auch f\"ur jede Funktion an, in welchem Bereich die Umkehrfunktion erkl\"art ist. 
+\end{abc}
+
+
+}
+
+
+\Loesung{
+\begin{abc}
+\item \begin{iii}
+\item Die Ableitung der ersten Funktion ist $f_1'(y)=3y^2-3$, diese wird Null bei $y=\pm 1$. Im
+Intervall $[-1,1]$ ist $f_1$ also streng monoton und damit umkehrbar.\\
+Die Ableitung der Umkehrfunktion bei $(0,f_1(0))=(0,0)$ ist 
+$$(f_1^{-1})'(0)=\frac 1{f_1'(0)}=\frac 1{-3}=-\frac 13.$$
+\item Wie schon in Aufgabe 1 festgestellt, ist die Funktion $f_2$ im Invervall $[-1,1[$ streng monoton
+steigend und damit umkehrbar. Die Ableitung wurde dort ebenfalls berechnet und es ist
+$$f_2'(0)=3 \text{ und }f_2(0)=0.$$
+Also ist die Ableitung der Umkehrfunktion im Ursprung 
+$$(f_2^{-1})'(0)=\frac 1{f_2'(0)}=\frac 13.$$
+\end{iii}
+\item \begin{iii}\setcounter{enumii}{2}
+\item Die Funktion $g_3(x)=\tan(x)$ ist auf dem Intervall $]-\pi/2,\pi/2[$ umkehrbar. Ihre Umkehrfunktion ist 
+$$f_4=\arctan:\, \R\rightarrow ]-\pi/2,\pi/2[.$$
+Zun\"achst folgt mit der Quotientenregel 
+$$g_3'(x)=\left(\frac{\sin(x)}{\cos(x)}\right)'=\frac{\cos^2(x)+\sin^2(x)}{\cos^2(x)}=\frac
+1{\cos^2(x)}.$$
+Die Ableitung von $f_4(y)=\arctan(y)$ ergibt sich daraus mit Hilfe des angegebenen Satzes: 
+\begin{align*}
+\arctan'(y)=&\left.\frac 1{\tan'(x)}\right|_{x=\arctan(y)}\\
+=&\left.\frac 1{\frac 1{\cos^2(x)}}\right|_{x=\arctan(y)}
+= \left.\frac 1{\frac{\sin^2(x)}{\cos^2(x)}+\frac{\cos^2(x)}{\cos^2(x)}}\right|_{x=\arctan(y)}\\
+=& \left.\frac 1{\tan^2(x) + 1}\right|_{x=\arctan(y)}
+=\frac 1 {\tan^2(\arctan(y))+1}\\
+=&  \frac 1{1+y^2}.
+\end{align*}
+\item Die Ableitung der Funktion $g_4(x)$ ist 
+$$g_4'(x)=(2x+2)\EH{x^2+2x-8}.$$
+Sie ist gr\"oßer Null f\"ur $x>-1$, also ist die Funktion 
+$$g_4: [-1,\infty[\rightarrow [\EH{-9},\infty[$$
+invertierbar. \\
+Dort ist mit Satz 3.38
+$$f_4'(y)=\frac{1}{g_4'(f_4(y))}=\left.\frac{\EH{8-x^2-2x}}{2x+2}\right|_{x=f_4(y)} =\left.\frac{1}{g_4(x)(2x+2)}\right|_{x=f_4(y)}$$
+und außerdem ist $f_4(y)=\sqrt{\ln y +9}-1$ f\"ur $y\geq\EH {-9}$.
+Insgesamt hat man damit
+$$f_4'(y)=\frac{1}{2y\sqrt{\ln y + 9}}.$$
+\item Der $\cosh$ ist auf der rechten reellen Halbgraden $[0,\infty[$ umkehrbar und hat die
+Ableitung
+$$g_5'(x)=\sinh(x).$$
+Damit hat man f\"ur 
+$$f_5=\text{Ar cosh}:[1,\infty[\rightarrow [0,\infty[$$ 
+die Ableitung
+\begin{align*}
+\text{Ar cosh}'(y)=&\frac 1{\cosh'(\text{Ar cosh}y)}=\frac{1}{\sinh(\text{Ar cosh}y)}\\
+=& \frac 1{\sqrt{\cosh^2(\text{Ar cosh}y)-1}}=\frac 1{\sqrt{y^2-1}}.
+\end{align*}
+Man beachte, dass wegen $x=\text{Ar cosh} y>0$ gilt: $\sinh x = +\sqrt{\cosh^2x-1}$. 
+\item Die Funktion $g_6(x)=\frac 1{2+x^2}$ hat die Ableitung
+$$g_6'(x)=\frac{-2x}{(2+x^2)^2}.$$
+F\"ur $x>0$ ist $g_6'(x)<0$. Also ist $g_6$ dort monoton fallend und invertierbar mit 
+$$g_6:[0,\infty[\rightarrow \left]0,\frac 12\right]$$
+bzw. 
+$$f_6:\left]0,\frac 12\right]\rightarrow[0,\infty[,\quad f_6(y)=\sqrt{\frac 1 y -2}.$$
+Die Ableitung der Umkehrfunktion ergibt sich zu 
+\begin{align*}
+f_6'(y)=&\frac 1{g_6'(f_6(y))}=-\left.\frac{(2+x^2)^2}{2x}\right|_{x=f_6(y)}\\
+=& -\frac{\left( 2 + 1/y-2\right)^2}{2\sqrt{1/y-2}}=-\frac{1}{2\sqrt{y^3-2y^4}}.
+\end{align*}
+\end{iii}
+\end{abc}
+
+
+}
+
+\newcounter{AufganalysUmkeFunk001}
+\setcounter{AufganalysUmkeFunk001}{\theAufg}
+\Ergebnis{\subsubsection*{Ergebnisse zu Aufgabe \arabic{Blatt}.\arabic{AufganalysUmkeFunk001}:}
+\textbf{ a)} $f_1^{-1}(0)=-1/3$, $f_2^{-1}(0)=1/3$
+}

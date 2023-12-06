@@ -1,0 +1,77 @@
+\Aufgabe[e]{Mehrdimensionale Kettenregel}
+{
+%\begin{abc}
+%\item Berechnen Sie die Ableitung der Funktion $g(t) := f\big(x(t),y(t)\big)$ \ nach \ $t$ \ sowohl direkt als auch mit Hilfe der mehrdimensionalen Kettenregel: 
+%$$
+%  f(x,y) = x^3 y^2 \text{ mit } x(t)=\EH t \text{ und } y(t)=t^4.
+%$$
+%\item 
+Berechnen Sie mit Hilfe der Kettenregel die Jacobi-Matrix der Funktion 
+$$\vec h(x,y,z)=\vec h_2(\vec h_1(x,y,z))$$
+ mit 
+$$\vec h_1(x,y,z)=\begin{pmatrix} 3xz+2y\\4y^2+\frac{1}{3}x^3z\end{pmatrix}\text{ und } 
+\vec h_2(u,v)=\begin{pmatrix}
+\cos(2u-3v)\\\frac{1}{2}u+\frac{3}{2}v^2\\4v+u\end{pmatrix}. $$
+%\end{abc}
+}
+\Loesung{
+%\begin{abc}
+%\item Die direkte Ableitung von
+%  \[
+%   g(t) = f(\EH t,t^4) = \EH{3t} t^8 
+%\]
+%ergibt
+%  \[
+%   g'(t) = \EH{3t} \big( 3t^8+8t^7 \big) = \EH{3t}\, t^7 \,(3t+8)\ .
+%\]
+%   
+%Die Ableitung mit der mehrdimensionalen Kettenregel ergibt
+%\begin{align*}
+%  \frac{d}{d t} f\big(x(t),y(t)\big)
+%  & = \frac{\partial f}{\partial x}(x,y)\cdot \frac{\partial x}{\partial t} 
+%     + \frac{\partial f}{\partial y}(x,y)\cdot \frac{\partial y}{\partial t} 
+%     \\[1ex]
+%  & = 3\,x^2y^2 \cdot \EH t + 2\,x^3 y \cdot 4 t^3 \\[1ex]
+%  & = 3\,\EH{2t} t^8 \EH t + 2\,\EH{3t} t^4 \cdot 4 t^3 = \EH{3t}\, t^7\, (3t+8)\ .
+%\end{align*}
+%\item 
+Wir berechnen zun\"achst die Jacobi-Matrizen der einzelnen Funktionen: 
+\begin{align*}
+\vec J_{\vec h_1}(x,y,z)=& \begin{pmatrix} 3z& 2 & 3x\\ zx^2& 8y & \frac{1}{3}x^3\end{pmatrix}\\
+\vec J_{\vec h_2}(u,v)=& 
+\begin{pmatrix} 
+ -2\sin(2u-3v)& 3\sin(2u-3v)\\ 
+ \frac{1}{2} & 3v\\ 
+ 1 & 4
+ \end{pmatrix}, 
+\end{align*}
+und daraus mit Hilfe der Kettenregel die Ableitung der Funktion $\vec h$: 
+\begin{align*}
+\vec J_{\vec h}(x,y,z)=& \vec J_{\vec h_2}(\vec h_1)\vec J_{\vec h_1}(x,y,z)\\
+=& \begin{pmatrix} 
+ -2\sin(a) &  3\sin(a)\\ 
+ \frac{1}{2} & 12y^2+x^3z\\
+ 1 & 4
+\end{pmatrix} 
+\begin{pmatrix}
+3z& 2 & 3x\\
+zx^2& 8y & \frac{1}{3}x^3
+\end{pmatrix}\\
+=& \begin{pmatrix} 
+(x^2-2)3z\sin(a) & (6y-1)4\sin(a) & (x^2-6)x\sin(a)\\
+\frac{3}{2}z+12x^2y^2z+x^5z^2 & 1+96y^3+8x^3yz & \frac{3}{2}x+4x^3y^2+\frac{1}{3}x^6z\\
+z(3+4x^2) & 32y+2 & x(3+\frac{4}{3}x^2)
+ \end{pmatrix}\,,
+\end{align*}
+mit $a :=  6xz+4y-12y^2-x^3z\,.$
+%\end{abc}
+
+}
+
+
+\ErgebnisC{AufganalysKettNdim0021}
+{
+$\vec J_{\vec h_1}(x,y,z)= \begin{pmatrix}3z& 2 & 3x\\ zx^2& 8y & \frac{1}{3}x^3 \end{pmatrix}$, 
+$\vec J_{\vec h_2}(u,v)= \begin{pmatrix}-2\sin(2u-3v)& 3\sin(2u-3v)\\ \frac{1}{2} & 3v\\ 1 & 4 \end{pmatrix}$
+}
+

@@ -1,0 +1,43 @@
+\Aufgabe[e]{Integration in Kugelkoordinaten} {
+Berechnen Sie
+$$I=\int\int\limits_B\int \frac 1{\sqrt{x^2+y^2+z^2}}\d(x,y,z), $$
+wobei $B$ das Innere der Kugel $x^2+y^2+z^2+2Ry=0$ ist. \\
+
+\textbf{Hinweis}: Verwenden Sie die Kugelkoordinaten
+$$\begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix}r\sin\varphi\sin\theta\\r\cos\theta\\r\cos\varphi\sin\theta\end{pmatrix}.$$
+}
+
+\Loesung{
+Zun\"achst wird der Rand des Bereiches $B$ untersucht: 
+$$0=x^2+y^2+z^2+2Ry = x^2+(y+R)^2+z^2-R^2.$$
+$B$ ist also eine Kugel mit Radius $R$ um den Mittelpunkt $(0,-R,0)$. 
+In den gegebenden Kugelkoordinaten hat man dann folgende Integrationsbereiche: 
+\begin{itemize}
+\item $\varphi\in[0,2\pi]$, da die Kugel $B$ rotationssymmetrisch bez\"uglich der $y$-Achse ist und
+$\varphi$ einen Winkel um eben diese Achse beschreibt. 
+\item $\theta\in[\frac \pi 2,\pi]$, da die Kugel $B$ im negativen $y$-Bereich liegt. 
+\item An den Grenzen f\"ur $r$ soll gelten 
+\begin{align*}
+&&0=& x^2+y^2+z^2+2Ry\\
+&&=& r^2\sin^2 \varphi \sin^2\theta + r^2\cos^2\theta + r^2\cos^2\varphi\sin^2\theta + 2Rr\cos\theta\\
+&&=& r^2\sin^2\theta + r^2\cos^2\theta + 2Rr\cos\theta=r^2+2Rr\cos\theta\\
+\Rightarrow && r=&0\text{ oder }r=-2R\cos\theta (>0, \text{ da $\cos\theta<0$)}
+\end{align*}
+Der Integrationsbereich ist also $r\in[0,\, -2R\cos\theta]$. 
+\end{itemize}
+Das Integral berechnet sich damit zu 
+\begin{align*}
+I=& \int\limits_{\varphi=0}^{2\pi}\int\limits_{\theta=\pi/2}^\pi \int\limits_{r=0}^{-2R\cos\theta} \frac
+1r \, r^2\sin\theta\d r \d \theta \d\varphi\\
+=& 2\pi \int\limits_{\theta=\pi/2}^\pi \frac{(-2R\cos\theta)^2}2 \sin\theta \d \theta =
+4\pi R^2 \left.\frac{-\cos^3\theta}{3}\right|_{\pi/2}^\pi
+= \frac{4\pi R^2}3.
+\end{align*}
+}
+
+\ErgebnisC{AufganalysIntgKuko002}
+{
+{
+$I=\frac{4\pi R^2}3$
+}
+}

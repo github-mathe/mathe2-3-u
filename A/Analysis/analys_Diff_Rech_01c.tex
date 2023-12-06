@@ -1,0 +1,79 @@
+\Aufgabe[e]{Differenzieren}{
+Bestimmen Sie jeweils die erste Ableitung. Zur Kontrolle sind die Werte der Ableitung an
+Kontrollpunkten angegeben. (Eventuell notwendige Beschr\"ankungen des Definitionsgebietes sind nicht angegeben.) 
+\begin{align*}
+f_1(t)&=3t^4-4t+7                           \,,&\quad  &&                       
+f_2(t)&=(2t-3)^4                            \,,&\quad  &&                              
+f_3(t)&=t^3\,(t+3)^4                                   \\ 
+f_4(t)&=3\,\cos(2t)                          \,,&\quad  &&
+f_5(t)&=\sin ^2(3t)                          \,,&\quad  &&
+f_6(t)&=\tan(2-t/2)                                     \\
+f_7(t)&=\dfrac{2t-3}{(t+2)^3}               \,,&\quad  && 
+f_8(t)&=\dfrac{4t\,\sin (t)}{\cos (2t)}     \,,&\quad  && 
+f_9(t)    =& t^2\EH{\sqrt t}                           \\ 
+f_{10}(t)    =& \sqrt{t\sqrt{t\sqrt t}}      \,,&\quad  &&
+f_{11}(t)    =& \EH{\frac 1{1+t^2}}          \,,&\quad  &&
+f_{12}(t)    =& \tan(t)                                 \\
+f_{13}(t)    =& \frac{t+\cos(t)\sin(t)}{2}  \,,&\quad  && 
+f_{14}(t) =& \frac{t^2-t+2}{2t+3}            \,,&\quad  &&
+f_{15}(t) =& \frac{\sin^2(t)}{\cos(t)}       
+\end{align*}                                             
+}
+
+\Loesung{
+\begin{align*}
+f_1'(t)  & =  3\cdot 4 \cdot t^3 -4=12t^3-4\,,\\[1ex]
+f_2'(t)  & =  4\cdot (2t-3)^3\cdot 2=8(2t-3)^3\,,\\[1ex]
+f_3'(t)  & =  3t^2\cdot (t+3)^4+t^3\cdot 4 (t+3)^3\\
+& = t^2(t+3)^3\bigl( 3(t+3)+4t\bigr) = 
+t^2(t+3)^3(7t+9)\,,\\[1ex]
+f_4'(t)  & =  3\cdot 2 \cdot (-\sin(2t)) = -6\sin(2t)\,,\\[1ex]
+f_5'(t)  & =  2\sin(3t)\cdot 3\cos(3t) = 6\sin(3t)\cos(3t)\,,\\[1ex]
+f_6'(t)  & =  \frac 1{\cos^2(2-t/2)}\cdot \left(-\frac 
+12\right)=\frac{-1}{2\cos^2(2-t/2)}\,,\\[1ex]
+f_7'(t)  & =  \frac{2(t+2)^3-(2t-3)\cdot 
+3(t+2)^2}{(t+2)^6}=\frac{13-4t}{(t+2)^4}\,,\\[1ex]
+f_8'(t)  & =  \frac{(4t\cos (t) + 4 \sin(t))\cos(2t)-4t\sin(t)\cdot 2 
+(-\sin(2t))}{\cos^2(2t)}\\
+&= \frac{4}{\cos^2(2t)}\cdot \left( t\cos(t) \cos(2t) + \sin(t)\cos(2t)+2t\sin(t)\sin(2t)\right)\\
+&= \frac 4{\cos^2(2t)} \cdot\left( t\cos^3(t) - t\cos(t)\sin^2(t) + \cos^2(t)\sin(t)-\sin^3(t) +
+4t\sin^2(t)\cos(t)\right)\\
+&= \frac 4{\cos^2(2t)} \cdot\left( t\cos^3(t)+3t\cos(t)\sin^2(t)+\sin(t)-3\sin^3(t)\right)\\
+&=\frac 4{\cos^2(2t)} \cdot \left( 3t\cos(t)-2t\cos^3(t) + \sin(t)-3\sin^3(t)\right)\\
+f_9   '(t) =& 2t \EH{\sqrt t} + t^2\frac 1{2\sqrt t}\EH{\sqrt t}\\
+f_{10}   '(t) =& \frac d{dt}\left( t^{7/8}\right) = \frac 78t^{-1/8}=\frac 7{8\sqrt[8]t}\\
+f_{11}   '(t) =& \EH{\frac 1{1+t^2}} \cdot \frac{-2t}{(1+t^2)^2}\\
+f_{12}   '(t) =& \frac{d}{dt}\left( \frac{\sin t}{\cos t} \right) = \frac{\cos t \cos t - (-\sin
+t) \sin t}{\cos^2 t} = \frac 1{\cos^2 t}\\ 
+f_{13}   '(t) =& \frac 12 + \frac 12 \left( -\sin t \sin t + \cos t\cos t\right) = \frac 12\left(
+1-\sin^2t+\cos^2 t\right) = \cos^2 t
+\end{align*}
+\begin{align*}
+f_{14}'(t) =& \frac{(2t-1)(2t+3)-2\cdot(t^2-t+2)}{(2t+3)^2} = \frac {2t^2+6t-7}{(2t+3)^2}\\
+f_{15}'(t) =& \frac d{dt}\left( \tan t \cdot \sin t \right) = \frac 1{\cos^2 t}\sin t + \tan t \cos
+t = \frac{\tan t }{\cos t} + \sin t 
+\end{align*}
+
+}
+
+\ErgebnisC{AufganalysDiffRech01c}
+{
+\begin{align*}
+f_1'(2) =&    92                      ,\,&\quad&& 
+f_2'(2) =&    8                       ,\,&\quad&& 
+f_3'(2) =&    11500                   ,\, \\     
+f_4'(\pi/3) =& -3\sqrt 3              ,\,&\quad&&
+f_5'(\pi/3) =& 0                      ,\,&\quad&&
+f_6'(4+2\pi) =& -1/2                  ,\, \\     
+f_7'(2)=& 5/256                       ,\,&\quad&&
+f_8'(\pi/3)=&\frac{20\pi}3-4\sqrt 3   ,\,&\quad&&
+f_9'(4)  =&12\EH{2}                   ,\, \\     
+f_{10}'(256)=&\frac 7{16}             ,\,&\quad&&
+f_{11}'(2)=&-\frac{4\EH{1/5}}{25}     ,\,&\quad&&                
+f_{12}'(\pi/3)=&4                     ,\, \\     
+f_{13}'(\pi/3)=&\frac 14              ,\,&\quad&&
+f_{14}'(2)=&\frac{13}{49}             ,\,&\quad&&
+f_{15}'(\pi/3)=&\frac{5\sqrt 3}2         
+\end{align*}                         
+                                     
+}                                    

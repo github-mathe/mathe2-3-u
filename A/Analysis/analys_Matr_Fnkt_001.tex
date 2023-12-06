@@ -1,0 +1,96 @@
+\Aufgabe[e]{Vektor- und Matrixwertige Funktionen}{
+Gegeben seien
+\begin{align*}
+\vec A(t) =& \begin{pmatrix} t&t^2\\\sqrt t& t^5\end{pmatrix},& \quad &&\vec B(t)=& \begin{pmatrix}\sin
+t & \cos t\\ \EH{t}& \cosh t\end{pmatrix}\,,\\
+\vec c(t)=& \left(t^3,\, \sqrt{t^5},\, \frac 1t\right)^\top,&&&\vec d(t) =
+& \left( \EH{-t^2},\, \sin(\sqrt t),\, \tanh(t/2)\right)^\top.
+\end{align*}
+Berechnen Sie 
+\begin{abc}
+\item $\frac d{dt}\Bigl( \vec A(t)\vec B(t)\Bigr)$ und
+\item $\frac d{dt}\Bigl( \vec c(t)\times \vec d(t)\Bigr)$
+\end{abc}
+auf die folgenden beiden Arten: 
+\begin{itemize}
+\item Indem sie vor der Differentiation die Produkte $\vec A\vec B$ bzw. $\vec c\times \vec d$
+bilden und die Ergebnisfunktionen ableiten. 
+\item Indem Sie zun\"achst die Ableitungen der einzelnen Funktionen bilden und diese dann gem\"aß
+einer Produktregel verrechnen. 
+\end{itemize}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Zun\"achst ist
+\begin{align*}
+&&\Vec A \Vec B =& \begin{pmatrix} t\sin t +t^2\EH{t} & t\cos t +t^2 \cosh t\\
+\sqrt t \sin t + t^5\EH{t} & \sqrt t \cos t + t^5 \cosh t\end{pmatrix}\\
+\Rightarrow && &\frac{d}{dt}\left( \vec A(t)\vec B(t)\right) \\
+&&=& \begin{pmatrix}
+\sin t + t\cos t + (2t+t^2)\EH{t} & \cos t -t\sin t + 2t \cosh t + t^2 \sinh t\\
+\frac {\sin t}{2\sqrt t} + \sqrt t \cos t + (5t^4+t^5)\EH{t} & \frac{\cos t}{2\sqrt t} -\sqrt t \sin
+t +5t^4\cosh t + t^5 \sinh t \end{pmatrix}\,.
+\end{align*}
+Ebenso ist 
+\begin{align*}
+\vec A'(t)=& \begin{pmatrix} 1 & 2t\\\frac 1 {2\sqrt t} & 5t^4\end{pmatrix}\\
+\vec B'(t)=& \begin{pmatrix} \cos t & -\sin t\\ \EH t & \sinh t\end{pmatrix}\\
+\frac{d}{dt}\left( \vec A(t)\vec B(t)\right)=&\vec A'(t)\vec B(t)+\vec A(t) \vec B'(t)\\
+=& \begin{pmatrix} \sin t + 2t\EH t & \cos t + 2t\cosh t \\
+\frac{\sin t }{2\sqrt t} + 5t^4\EH t & \frac{\cos t }{2\sqrt t} + 5t^4\cosh t\end{pmatrix}\\
+&+ \begin{pmatrix}
+t\cos t + t^2 \EH t &      -t\sin t +t^2\sinh t\\
+\sqrt t \cos t + t^5\EH t & -\sqrt t \sin t + t^5\sinh t\end{pmatrix}\\
+=& \begin{pmatrix}
+\sin t + t \cos t + (2t+t^2)\EH t    & \cos t - t \sin t +2t \cosh t + t^2 \sinh t\\
+\frac{\sin t }{2\sqrt t} + \sqrt t \cos t + (5t^4+t^5)\EH t & \frac{\cos t }{2\sqrt t } -\sqrt
+t \sin t + 5 t^4 \cosh t + t^5 \sinh t \end{pmatrix}\,.
+\end{align*}
+
+\item Das Vektorprodukt von $\vec c$ und $\vec d$ ist
+\begin{align*}
+&&\vec c(t)\times \vec d(t) =& \begin{pmatrix}t^{5/2}\tanh(t/2)-\frac{\sin(\sqrt t)}t\\
+\frac{\EH {-t^2}}t-t^3\tanh\frac t2\\
+t^3\sin(\sqrt t)-t^{5/2}\EH {-t^2}\end{pmatrix}\\
+\Rightarrow&&\frac d{dt} (\vec c(t)\times \vec d(t)) =& \begin{pmatrix}
+\frac 12 t^{3/2}\left( 5\tanh\frac t2 + \frac t{\cosh^2(t/2)}\right) +\frac{\sin(\sqrt
+t)}{t^2}-\frac{\cos(\sqrt t)}{2\sqrt t \, t}\\
+\EH{-t^2}\left( -2 - \frac 1{t^2}\right) -3t^2\tanh \frac t 2 - \frac {t^3}{2\cosh^2\frac t2}\\
+3t^2\sin(\sqrt t) + \frac{t^{5/2}}{2}\cos(\sqrt t) - \EH{-t^2}\left( \frac 52 t^{3/2}-2t^{7/2}\right)
+\end{pmatrix}.
+\end{align*}
+Durch separates Differenzieren ergibt sich 
+\begin{align*}
+&&\vec c'(t) =& \begin{pmatrix}3t^2\\\frac 52 t^{3/2}\\-\frac 1{t^2}\end{pmatrix},\, 
+\vec d'(t)=  \begin{pmatrix} 
+-2t\EH{-t^2}\\
+\frac{\cos(\sqrt t)}{2\sqrt t}\\ 
+\frac{1}{2\cosh^2\frac t 2}\end{pmatrix}\\
+\Rightarrow && &\vec c'(t)\times \vec d(t) + \vec c (t) \times \vec d'(t)\\
+&&= & \begin{pmatrix}
+\frac {5t^{3/2}\tanh\frac t2}{2}  +\frac{\sin(\sqrt t)}{t^{2}}\\
+\frac{-\EH{-t^2}}{t^2}-3t^2\tanh\frac t2\\
+3t^2\sin(\sqrt t) -\frac 52t^{3/2}\EH {-t^2}
+\end{pmatrix} + \begin{pmatrix}
+\frac{t^{5/2}}{2\cosh^2\frac t2} - \frac{\cos(\sqrt t)}{2t^{3/2}}\\
+-2\EH{-t^2}-\frac{t^3 }{2\cosh^2\frac t2} \\
+\frac{t^{5/2}\cos\sqrt t}{2} +2t^{7/2}\EH{-t^2}\end{pmatrix}\,.
+\end{align*}
+\end{abc}
+}
+
+\ErgebnisC{AufganalysMatrFnkt001}
+{
+{ a)} $\begin{pmatrix}
+t\cos t + t^2 \EH{t}+\sin t + 2t\EH{t} & -t\sin t + t^2 \sinh t + \cos t + 2t\cosh t\\
+\sqrt t \cos t + t^5\EH{t} + \frac {\sin t}{2\sqrt t } + 5t^4\EH{t}&
+-\sqrt t \sin t + t^5\sinh t + \frac{\cos t}{2\sqrt t}  + 5 t^4\cosh t\end{pmatrix}.$\\
+{ b)} $\begin{pmatrix} \frac 52 t^{3/2}\tanh \frac t2 + \frac{t^{5/2}}{2\cosh^2 \frac t2} - \frac{\cos \sqrt
+t}{2t^{3/2}}+\frac{\sin\sqrt t}{t^2}\\
+-2\EH{-t^2}-\frac{\EH{-t^2}}{t^2}-3t^2\tanh\frac t2-\frac{t^3}{2\cosh^2 \frac t2}\\
+ 3t^2\sin\sqrt t +\frac{t^{5/2}\cos\sqrt t}{2} - \frac 52 t^{3/2}\EH{-t^2}+2t^{7/2}\EH{-t^2}
+\end{pmatrix}$
+
+}

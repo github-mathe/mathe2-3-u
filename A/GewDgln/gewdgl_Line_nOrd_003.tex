@@ -1,0 +1,79 @@
+\Aufgabe[e]{Lineare Differentialgleichungen $n$-ter Ordnung}
+{
+Bestimmen Sie die allgemeinen L"osungen der folgenden
+Differentialgleichungen:
+\begin{abc}
+\item $y^{(4)} + 4y = 0$,
+\item $y^{(4)} + 2y''' + y'' = 12 x$,
+\item $y^{\prime\prime}+4y^\prime+5y=8\sin t$,
+\item $y^{\prime\prime}-4y^\prime+4y=\EH{2x}$.
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Es ist $p(\lambda)=\lambda^4+4$, die Nullstellen sind\ 
+$\lambda_\ell = \sqrt{2} \EH{i (2\ell+1) \pi / 4}$ f\"ur $\ell=0,1,2,3$,
+also $$\lambda_0=1+i, \lambda_1=-1+i, \lambda_2=-1-i, \lambda_3=1-i$$
+Ein reelles Fundamentalsystem ist
+$$\{ e^x \cos x, e^x \sin x, \EH{-x} \cos x, \EH{-x} \sin x \}$$ 
+Die allgemeine L\"osung lautet also
+$$ y(x) = c_1 e^x \cos x + c_2 e^x \sin x + c_3 \EH{-x} \cos x 
+   + c_4 \EH{-x} \sin x \text{ mit } c_1,c_2,c_3,c_4 \in \R . $$
+
+\item Das Polynom $p(\lambda)=\lambda^4+2\lambda^3+\lambda^2$ hat die Nullstellen\newline
+$\lambda_{1/2}=0$ (doppelte Nullstelle), $\lambda_{3/4}=-1$ (ebenfalls doppelt).\newline
+Ein Fundamentalsystem ist also $\{ 1,x,\EH{-x},x\EH{-x}\}$.\newline
+F\"ur die Partikul\"arl\"osung ist der Ansatz $y_p(x)=(ax+b)x^2=ax^3+bx^2$
+sinnvoll.  $$y_p^\prime(x)=3ax^2+2bx,
+y_p^{\prime\prime}(x)=6ax+2b, y_p^{(3)}(x)=6a \text{ und } 
+y_p^{(4)}(x)=0$$ Eingesetzt in die DGL:
+$$ 0 + 12a + 6ax+2b
+   = 12x $$
+Koeffizientenvergleich liefert dann $a=2$, $b=-6a=-12$. Die allgemeine L\"osung der Gleichung
+ist 
+$$ y(x)=c_1 + c_2 x + c_3 \EH{-x} + c_4 x \EH{-x} - 12 x^2 + 2x^3
+  \text{ mit } c_1,c_2,c_3,c_4 \in \R. $$
+
+\item Das Polynom $p(\lambda)=\lambda^2+4\lambda+5$ hat die Nullstellen
+$$\lambda_1=-2+i, \lambda_2=-2-i$$
+Die homogene Lösung ist dann
+$$y_h=C_1\EH{-2t+it}+C_2\EH{-2t-it}= \EH{-2t}(C_1(\cos t+i\sin t)+C_2(\cos t-i\sin t))$$
+$$= \EH{-2t}(c_1\cos t+c_2 \sin t ),\text{ wobei } C_1=\overline{C_2}=\dfrac{ic_1+c_2}{2}$$
+Eine Partikul\"arl\"osung berechnet man f\"ur die rechte Seite
+$8\sin t=\operatorname{Im}(8 \EH{it})$ mit dem Ansatz $y_p(t) =\operatorname{Im}( a \EH{it})$.\newline
+Man erh\"alt durch Einsetzen in die DGL
+$$a(-1+4i+5)\EH{it}=8\EH{it}\Rightarrow a=\dfrac{2}{1+i}=1-i$$
+Damit ist $$y_p(t)=\operatorname{Im}((1-i) \EH{it})= \operatorname{Im}\big((1-i) (\cos t+i\sin t)\big) = \sin t -\cos t$$
+eine Partikul\"arl\"osung .
+Die allgemeine L\"osung der Gleichung ist
+$$ y(t) = \EH{-2t} ( c_1 \cos t + c_2 \sin t) + \sin t - \cos t. $$
+
+\item Es ist $p(\lambda)=\lambda^2-4\lambda+4=(\lambda-2)^2$.\newline
+Das Polynom hat die doppelte Nullstelle $\lambda=2$.\newline
+Ein Fundamentalsystem ist daher
+$\{ \EH{2x}, x \EH{2x}\}$.\newline
+Mit dem Ansatz $y_p(x)=ax^2 \EH{2x}$ folgt
+$$y_p^\prime(x)=a (2x^2+2x) \EH{2x},\ y_p^{\prime\prime}(x)=a (4x^2+8x+2) \EH{2x}$$
+Das Einsetzen in die DGL liefert somit
+$$a\EH{2x}(4x^2+8x+2-8x^2-8x+4x^2)=\EH{2x}$$
+Daraus folgt $a=1/2$. \newline
+Die allgemeine L\"osung lautet
+$$ y(x) = \left(c_1+c_2x+\frac{1}{2}x^2\right) \EH{2x} 
+  \text{ mit } c_1,c_2 \in \R. $$
+
+
+
+\end{abc} 
+}
+
+
+\ErgebnisC{AufggewdglLinenOrd003}
+{
+Partikul\"are L\"osungen:
+a) $0$, \, 
+b) $-12x^2+2x^3$,\, 
+c) $\sin t-\cos t$,\, 
+d) $\frac 12 x^2\EH{2x}$
+}

@@ -1,0 +1,105 @@
+\Aufgabe[e]{Normalschwingungen}{
+Man betrachte das System von zwei gleichen Massenpunkten $m_1=m_2=m$, die durch eine elastische Feder mit einer Federkonstante $c$ gekoppelt sind, siehe Bild.
+
+\begin{center}
+\resizebox{0.25\textwidth}{!}{\input{../A/Wiederholung/two_masses.pdf_t}}
+\end{center}
+%
+
+Von besonderer Bedeutung sind die sogenannten Normalschwingungen, bei denen beide Massen
+harmonisch mit der gleichen Winkelfrequenz $\omega$ entlang der Systemachse
+(x-Achse) schwingen. Die Koordinaten $x_1$ und $x_2$ beschreiben die momentane Lage der Massen. 
+Sie sind periodische Funktionen der Zeit und erfüllen das folgende Differentialgleichungssystem
+
+\renewcommand\theequation{\arabic{equation}}
+\begin{align}
+\label{eqsys}
+\begin{split}
+m \ddot x_1 &= -c (x_1-x_2),\\
+m \ddot x_2 &= -c (x_2-x_1).
+\end{split}
+\end{align}
+
+Die beiden Lösungskomponenten haben die Form $x_k = A_k \operatorname{e}^{i\omega\,t}$, wobei $A_k \in \mathbb C$ und $i$ die imaginäre Einheit ist. Es gilt dann
+$$
+\ddot {\vec x} = -\omega^2 \vec x
+$$
+%
+und das Gleichungssystem \eqref{eqsys} kann so geschrieben werden
+\renewcommand*{\arraystretch}{1.5}
+\begin{align}
+\label{ew}
+\underbrace{
+\begin{pmatrix}
+-\frac{c}{m} & ~~\frac{c}{m}\\
+\frac{c}{m} & -\frac{c}{m}
+\end{pmatrix}
+}_{\vec A}
+\begin{pmatrix}
+x_1\\x_2
+\end{pmatrix}
+= -\omega^2
+\begin{pmatrix}
+x_1\\x_2
+\end{pmatrix}.
+\end{align}
+Dieses System definiert die Schwingungen der beiden Massen. Die Schwingungsdauer ist im Fall $\omega > 0$
+$$
+T = \frac{2\pi}{\omega}\quad [s].
+$$
+Ist $\omega = 0$, gibt es keine Schwingung und keine Schwingungsdauer.
+%
+Durch die Substitution $\lambda = -\omega^2$ wird \eqref{ew} zu einem Eigenwertproblem transformiert
+\begin{equation}
+\label{lambda}
+\vec A \vec x = \lambda \vec x.
+\end{equation}
+
+Man betrachtet dieses Eigenwertproblem für $c=0.5\,\, [N/m]$ und $m=200\,\, [g]$.
+\begin{itemize}
+\item Man schreibe die Matrix des Systems \eqref{lambda} im internationalen Einheitensystem.
+\item Man bestimme die Eigenwerte des Systems, $\lambda_1\,\, [s^{-2}]$ und $\lambda_2\,\, [s^{-2}]$.
+\item Man bestimme die Eigenvektoren des Systems.
+\item Man bestimme die Schwingungsdauer der beiden Eigenschwingungen $T_1 = \frac{2\pi}{\omega_1}\,\, [s]$ und $T_2 = \frac{2\pi}{\omega_2}\,\,[s]$.
+\end{itemize}
+}
+
+\Loesung{
+\begin{itemize}
+\item
+Systemmatrix:
+\begin{align*}
+A = \begin{pmatrix}
+-5/2 & 5/2\\
+5/2 & -5/2
+\end{pmatrix}.
+\end{align*}
+
+\item
+Eigenwerte:
+\begin{align*}
+\lambda_1 &= -5\\
+\lambda_2 &= 0.
+\end{align*}
+
+\item
+Eigenvektoren
+\begin{align*}
+\vec x_1 &= (1, -1)^T\\
+\vec x_2 &= (1, 1)^T
+\end{align*}
+
+\item
+Eigenfrequenzen und Schwingungsdauer
+\begin{align*}
+\omega_1 &= \sqrt{5}\\
+\omega_2 &= 0.
+\end{align*}
+
+$T_1 = 2\pi/w_1 = 2\pi/\sqrt{5}$.
+
+$T_2$ kann nicht definiert werden, da $w_2=0$.
+\end{itemize}
+
+
+}

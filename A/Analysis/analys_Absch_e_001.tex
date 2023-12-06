@@ -1,0 +1,28 @@
+\Aufgabe[e]{Taylor-Entwicklung in einer Variablen}{
+Bestimmen Sie die Taylor-Entwicklung zweiter Ordnung der Exponentialfunktion $\operatorname{e}^x$ 
+um den Punkt $x_0 = 0$ in dem Intervall $0\leq x\leq 1$ einschlie\ss lich des Restgliedtermes.
+Zeigen Sie damit die Absch\"atzung:
+$$
+\operatorname{e} \leq 3.
+$$
+}
+
+\Loesung{
+Wir beginnen mit der Taylor-Entwicklung der Exponentialfunktion in dem Intervall $0\leq x \leq 1$:
+$$
+\operatorname{e}^x = 1 + x + \frac{1}{2}x^2 + \frac{\operatorname{e}^\xi}{3!} x^3, 
+$$
+mit $0\leq\xi \leq1$.
+
+Da die Exponentialfunktion monoton steigend ist und $\xi\le 1$, gilt $\operatorname{e}^\xi \leq \operatorname{e}^1$. 
+Daher gilt die folgende Absch\"atzung
+$$
+\operatorname{e}^x \leq 1 + x + \frac{1}{2}x^2 + \frac{\operatorname{e}}{3!}x^3,
+$$
+f\"ur $0\leq x \leq 1$. Der obige Ausdruck an der Stelle $x=1$ ausgewertet f\"uhrt zu
+\begin{align*}
+\operatorname{e} &\leq 1 + 1 + \frac{1}{2} + \frac{\operatorname{e}}{6}, \\ 
+\frac{5}{6}\operatorname{e} &\leq \frac{5}{2},\\
+\operatorname{e} &\leq 3.\\
+\end{align*}
+}

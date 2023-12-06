@@ -1,0 +1,90 @@
+\Aufgabe[e]{Schwerpunkt und Tr\"agheitsmoment einer Kreisscheibe}
+{
+Gegeben sei die Kreisscheibe
+$$K =\{\vec x\in \R^2|\quad \norm{\vec x}_2\leq 2\}$$
+mit der Massendichte $\rho(x,y)=x^2+4$. 
+\begin{abc}
+\item Berechnen Sie die Masse $M=\int\limits_K\rho(\vec x)\d \vec x$ der Kreisscheibe. F\"uhren Sie
+  die Rechnung in kartesischen Koordinaten durch. 
+\item Berechnen Sie ebenso den Schwerpunkt 
+$$\vec s=\frac 1 M \int\limits_K \rho(\vec x)\vec x \d \vec x.$$
+F\"uhren Sie die Rechnung in Polarkoordinaten \\
+$\vec x(r,\varphi)=(r\cos \varphi,\,r\sin\varphi)^\top$ aus. 
+\item Berechnen Sie das Tr\"agheitsmoment bez\"uglich der $x$-Achse
+$$\Theta_y = \int\limits_K \rho(x,y)y^2\d (x,y).$$
+\end{abc}
+\textbf{Hinweise}: \begin{itemize}
+\item F\"ur $\alpha\in\R$ gelten die folgenden Zusammenh\"ange: 
+\begin{align*}
+\cos(2\alpha)=&\cos^2(\alpha)-\sin^2(\alpha)=2\cos^2(\alpha)-1\\
+\sin(2\alpha)=&2\sin(\alpha)\cos(\alpha)\\
+\sin^2(\alpha)+\cos^2(\alpha)=& 1.\\
+\end{align*}
+\item F\"ur Aufgabenteil \textbf{a)} kann die Substitution $x=2\sin(u)$ hilfreich sein.
+\end{itemize} 
+}
+
+\Loesung{
+\begin{abc}
+\item Das Integrationsgebiet wird definiert durch 
+$$2\geq \norm{\vec x }_2=\sqrt{x^2+y^2}.$$
+Wir stellen dies nach $y$ um: 
+\begin{align*}
+&&4\geq& x^2+y^2\\
+\Rightarrow&&4-x^2\geq& y^2\\
+\Rightarrow&&\sqrt{4-x^2}\geq& y\text{ und } -\sqrt{4-x^2}\leq y\\
+\end{align*}
+Die zul\"assigen $x$-Werte sind damit durch $-2\leq x\leq 2$ gegeben. Das Integral f\"ur die Masse
+ist nun
+\begin{align*}
+M=& \int\limits_K\rho(\vec x)\d x
+= \int\limits_{x=-2}^2\int\limits_{y=-\sqrt{4-x^2}}^{+\sqrt{4-x^2}}(x^2+4)\d y\d x\\
+=& \int\limits_{x=-2}^2(x^2+4)\left[+\sqrt{4-x^2}-(-\sqrt{4-x^2})\right]\d x\\
+=& 2\int\limits_{x=-2}^2(x^2+4)\sqrt{4-x^2}\d x.
+\end{align*}
+Dieses Integral l\"asst sich durch die Substitution 
+$$x=2\sin u, \, \d x = 2 \cos u \d u,\, u\in[-\pi/2,\pi/2]$$ 
+umformen zu
+\begin{align*}
+M=&2\int\limits_{u=-\frac \pi 2}^{\frac \pi 2}(4\sin^2 u + 4)\sqrt{4-4\sin^2 u}\cdot 2 \cos u \d u\\
+=& 32\int\limits_{u=-\frac \pi 2}^{\frac \pi 2}(\sin^2 u + 1)\cos u \cos u\d u
+= 32\int\limits_{u=-\frac \pi 2}^{\frac \pi 2}\Bigl( (\sin u \cos u)^2 +\cos^2 u\Bigr)\d u\\
+=& 32 \int\limits_{u=-\frac \pi 2}^{\frac \pi 2}\Bigl( \left( \frac 12 \sin(2u)\right)^2 + \frac
+12(\cos^2 u+1-\sin^2 u)\Bigr)\d u\\
+=& 32\int\limits_{u=-\frac \pi 2}^{\frac \pi 2}\Bigl( \frac{\sin^2( 2u)+1-\cos^2(2u)}8 + \frac
+{\cos(2u)+1}2\Bigr)\d u\\
+=& 32\int\limits_{u=-\frac \pi 2}^{\frac \pi 2}\Bigl( \frac{1-\cos(4u)}8
++ \frac{\cos(2u)+1}2\Bigr)\d u=32\cdot \left[ \frac {5u}8
+- \frac{\sin(4u)}{32}+ \frac{\sin(2u)}4\right]_{-\frac{\pi}2}^{\frac \pi 2}\\
+=& 20\pi
+\end{align*}
+\item Die Rechnung in Polarkoordinaten ist einfacher. Wir belassen die Gleichung in ihrer
+vektoriellen Form:
+\begin{align*}
+\vec s=& \frac 1M \int\limits_K\rho(\vec
+x)\begin{pmatrix}r\cos\varphi\\r\sin\varphi\end{pmatrix}\d\vec x
+= \frac
+1M \int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^2(r^2\cos^2\varphi+4)\begin{pmatrix}r\cos\varphi\\r\sin\varphi\end{pmatrix}
+r\d r \d \varphi\\
+=& \frac 1M \int\limits_{\varphi=0}^{2\pi}\left(  \left( \frac{2^5}5\cos^2\varphi +
+4\frac{2^3}3\right)\begin{pmatrix}\cos\varphi\\\sin\varphi\end{pmatrix}\right)\d \varphi\\
+=& \frac{32}{5M}\int\limits_{0}^{2\pi}\begin{pmatrix}\cos^3\varphi\\\cos^2\varphi\sin\varphi\end{pmatrix}\d\varphi,\quad \text{Der zweite Teil wird Null, wegen $\int\limits_{\varphi=0}^{2\pi}\cos(\varphi)\d \varphi =0$.}\\
+=& \frac{32}{5M}\int\limits_{0}^{2\pi}\begin{pmatrix}\cos\varphi
+- \cos\varphi\sin^2\varphi\\\cos^2\varphi\sin\varphi\end{pmatrix}\d\varphi\\
+=&\frac{32}{5M}\left.\begin{pmatrix}\sin\varphi-\frac{\sin^3\varphi}3\\-\frac{\cos^3\varphi}3\end{pmatrix}\right|_0^{2\pi}=\begin{pmatrix}0\\0\end{pmatrix}.
+\end{align*}
+Dieses Ergebnis war zu erwarten, da die Massendichte nicht von $y$ abh\"angt und bez\"uglich $x$
+symmetrisch ist ($\rho(x)=\rho(-x)$). 
+\item Alternativ zur obigen Integrationsreihenfolge  integrieren wir hier zuerst nach  $\varphi$: 
+\begin{align*}
+\Theta_y=& \int\limits_0^2\int\limits_0^{2\pi}(r^2\cos^2\varphi+4)(r\sin\varphi)^2r\d\varphi\d r\\
+=&\int\limits_0^2\int\limits_0^{2\pi}\Bigl(r^4\cos^2\varphi\sin^2\varphi +4r^2\sin^2\varphi\Bigr)\d\varphi
+r\d r\\
+=& \int\limits_0^2\left( r^4\int\limits_0^{2\pi}\frac 14 \sin^2(2\varphi) \d \varphi +4r^2\pi\right)r\d r\\
+=&\int\limits_0^2\left( \frac 14 r^5 \pi + 4\pi r^3\right)\d r= \frac \pi
+4\cdot \frac{2^6}6+\pi \cdot 2^4\\
+=&\pi\left( \frac 83+16\right)=\frac{56\pi}3.
+\end{align*}
+\end{abc}
+}
+%\ErgebnisC{analysIntg2dim002}{}

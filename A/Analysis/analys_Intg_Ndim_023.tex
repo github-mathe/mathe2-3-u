@@ -1,0 +1,38 @@
+\Aufgabe[e]{Volumenintegrale} {
+Berechnen Sie 
+$$
+\int_V \frac{\operatorname{e}^{-x^2-y^2}}{1+z^2} \d x \d y \d z
+$$ 
+mit 
+$$
+V=\{(x,y,z)\in\R^3: \; z\geq 0\}\text{.}
+$$
+\textbf{Hinweise}: \begin{itemize}
+\item Es empfiehlt sich die Rechnung in Zylinderkoordinaten. 
+\item Der Integrationsbereich ist unendlich groß. Dadurch treten uneigentliche Integrale auf. 
+\end{itemize}
+}
+
+\Loesung{
+Es werden Zylinderkoordinaten $(r,\varphi,z)$ verwandt: $x=r\cos \varphi$, $y=r \sin \varphi$, $z=z$. Dann gilt
+$$
+\left|\frac{\partial(x,y,z)}{\partial(r,\varphi,z)}\right| = r\,.
+$$
+Es folgt
+$$
+V' = \{(r,\varphi,z):\quad r\in[0,\infty)\text{,}\quad \varphi \in [0,2\pi]\text{,}\quad z \in [0,\infty) \}
+$$
+\begin{align*}
+\int_V \frac{\operatorname{e}^{-x^2-y^2}}{1+z^2} \d x \d y \d z &= \int_{V'} \frac{\operatorname{e}^{-r^2}}{1+z^2}r \d r \d \varphi \d z\\[1ex]
+&= \int_0^{2\pi}\left( \int_0^{\infty}\left( \int_0^{\infty} \frac{\operatorname{e}^{-r^2}r}{1+z^2} \d r\right)\d z \right)\d \varphi\\[1ex]
+&= \int_0^{2\pi}\left( \int_0^{\infty}\left[ \frac{-\operatorname{e}^{-r^2}}{2(1+z^2)} \right]_0^{\infty} \d z \right)\d \varphi\\[1ex]
+&= \int_0^{2\pi}\left( \int_0^{\infty} \frac{1}{2(1+z^2)} \d z \right)\d \varphi\\[1ex]
+&= \int_0^{2\pi}\left[\frac{1}{2}\arctan z\right]_0^{\infty}\d\varphi \\[1ex]
+&= \int_0^{2\pi} \frac{\pi}{4}\d \varphi = \frac{\pi^2}{2}\,.
+\end{align*}	
+}
+
+\ErgebnisC{AufganalysIntgtNdim023}
+{
+$V= \frac{\pi^2}{2}$.
+}

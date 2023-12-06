@@ -1,0 +1,66 @@
+\Aufgabe[e]{LR-Kreis}
+{
+Ein Stromkreis habe einen Widerstand von \ $R=0.8$ Ohm \ und eine Selbstinduktion von \ $L=4$ Henry\,. Bis zur Zeit \ $t_0=0$ \ fließe kein Strom. Dann wird eine Spannung von \ $U=5$ Volt \ angelegt. Nach $5$ Sekunden wird
+die Spannung abgeschaltet. Berechnen Sie den Stromverlauf \
+$I(t)$ \ für \ $0 \le t \le 5$ \ und \ $t > 5$. \\ 
+\textbf{Hinweis}: In diesem Stromkreis gilt $L\dot I(t) + RI(t)=U(t)$
+}
+
+\Loesung{
+Es gilt gilt die Differentialgleichung
+\[
+  L\dot{I}(t)+RI(t)=U(t)
+\]
+
+Für \ $0\leq t\leq 5$ \ gilt \ $U(t)=5$\,. Die Trennung der Variablen führt zu
+\[
+  \int \frac{dI}{U-R I}=\int \frac{1}{L} \,dt,\Rightarrow
+   -\frac{1}{R}\ln | U-RI(t)| =\frac{1}{L}t + c_1\,, \;\;    c_1 \in \R\,. 
+\]
+Auflösen nach $I(t)$ liefert (mit $c_2=\EH{c_1}$)
+\[
+  U-RI(t)=c_2 e^{-Rt/L}
+\] 
+und somit
+$$
+   I(t)=\frac{1}{R} \big( U-c_2 e^{-Rt/L} \big)\,.
+$$
+
+Einsetzen der Anfangsbedingung \ $I(0)=0$ \ ergibt \ $c_2=U$ \ und
+$$
+  I(t)=\frac{U}{R}\big(1-e^{-R/Lt}\big)\,.
+$$
+Einsetzen der gegebenen Zahlenwerte ergibt die Lösung
+$$ 
+  I(t) = 6.25\, \big(1-e^{-0.2 t}\big) \text{ f\"ur } 0 < t < 5\,. 
+$$
+
+
+Im Zeitraum \ $t>5$ \ ist $U(t)=0$ \ und der Anfangsstrom ist
+$$
+I(5)=I_0=6.25\,\big(1-e^{-1}\big)\ .
+$$
+Die Lösung der Differentialgleichung ist
+$$
+  \int \frac{dI}{I}=-\int\limits \frac{R}{L}dt\Rightarrow  \ln |I(t)|=-\frac{R}{L}t+c_3
+$$ 
+und damit
+$$
+  I(t)= c_4 e^{-Rt/L}\ .$$
+Aus \ $I(t_0)=I_0$ \ folgt 
+$$
+ I(t) = I_0 e^{-R(t-t_0)/L}\ .
+$$
+Einsetzen der Zahlenwerte ergibt die Lösung 
+$$ 
+I(t) = 6.25 \big(1-e^{-1}\big) e^{-0.2 (t-5)} \text{ f\"ur } t > 5\ . 
+$$
+}
+
+
+\ErgebnisC{gewdglStrmLrkr001}{
+$I(t)=\left\{\begin{array}{ll}
+6.25\, \big(1-e^{-0.2 t}\big)& \text{ f\"ur } 0 < t < 5\\
+6.25 \big(1-e^{-1}\big) e^{-0.2 (t-5)}& \text{ f\"ur } t > 5
+\end{array}\right.$
+}

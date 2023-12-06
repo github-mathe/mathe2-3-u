@@ -1,0 +1,78 @@
+
+\input{header}
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l}Dr.\ Frank Gimbel\\Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2022}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{Mathematik II}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{3}
+\newcommand{\TOPIC}{Differentialrechnung, Kurvendiskussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+% \setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%
+ \setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+
+\textbf{Einführende Bemerkungen}
+
+\begin{itemize}
+\item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
+\item Die mit einem Stern *) markierten (Teil-)Aufgaben entfallen in diesem Trimester. Stattdessen werden einzelne Online-Aufgaben im ILIAS-Kurs kenntlich gemacht, zu denen Sie dort Ihre L\"osungswege zur Korrektur hochladen k\"onnen. 
+\item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
+\end{itemize}
+
+\ruleBig
+
+%Mathe II Blatt 3
+
+\input{../A/Analysis/analys_Diff_Rech_01c.tex} 
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Para_Grap_001.tex} 
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Diff_Para_01c.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Regl_Lhos_002.tex} 
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Kurv_Disk_002.tex} 
+\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
+
+\input{../A/Analysis/analys_maxima_minima_002_DE.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
+
+\input{../A/Analysis/analys_Satl_Bahn_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
+
+\input{../A/ILIAS.tex}
+
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\ifthenelse{\boolean{mitErg}}{
+\ruleBig
+\Ergebnisse}{}
+
+
+\end{twocolumn}
+\end{document}

@@ -1,0 +1,100 @@
+\Aufgabe[e]{~}{
+\begin{itemize}
+\item[a)]  Bestimmen Sie drei verschiedene (reelle) Nullstellen der Ableitung der Funktion 
+\[
+f\,:\,\mathbb{R\longrightarrow R}\,,\, f(x)=\int_{0}^{x^{3}}\text{e}^{t^{4}}\cdot (t^{2}-t-2)\;{d}t\;. 
+\]
+\textbf{Hinweis}: Das Integral \textbf{nicht} berechnen!
+\item[b)] Gegeben seien die Funktionen (Das Integral \textbf{nicht} berechnen!) 
+$$
+F(x):=\int_0^x\frac{\sinh t^2}{t^2}\,\text{e}^{t^2}\,dt,\qquad G(x):=\text{e}^{-2x^2},\quad x\in \R \,.
+$$
+Berechnen Sie den Grenzwert $\displaystyle\lim_{x\to\infty}G(x)\cdot F(x)$. \\
+\textbf{Hinweis}: Regel von L'Hospital.
+\item[c)] Bestimmen Sie die \textbf{reelle} Partialbruchzerlegung von $$\ f(x)=\dfrac{1}{(x-1)(x^2+x+1)}\,.$$
+\end{itemize}
+}
+
+\Loesung{
+\textbf{L\"osung}\\[1ex]
+\textbf{Zu a)} Mit dem Hauptsatz der Differential-- und Integralrechnung und der Kettenregel folgt: 
+\[
+\begin{array}{lll}
+\displaystyle \left( \int_{0}^{\;x^{3}}\text{e}^{t^{4}}\cdot (t^{2}-t-2)\;\text{d}t\right)' & = & 
+\left( \text{e}^{(x^{3})^{4}}\cdot \left( (x^{3})^{2}-(x^{3})-2\right)
+\right) \cdot 3\,x^{2} \\ 
+&  &  \\ 
+& = & 3\,\text{e}^{x^{12}}\cdot x^{2}\cdot \left( x^{6}-x^{3}-2\right)
+\end{array}
+\]
+Der erste Term wird nie Null, d.h. die Nullstellen sind die Nullstellen der beiden letzten Terme: 
+\[
+x=0\;\text{(doppelt)}\;,\;\;x=-1\;,\;\;x=\sqrt[3]{2}\;. 
+\]
+
+
+\bigskip
+\textbf{Zu b)} Wir betrachten als Erstes 
+\[f(t)=\frac{\sinh t^2}{t^2}\,\text{e}^{t^2}= \frac{\left(\text{e}^{t^2}-\text{e}^{-t^2}\right)\cdot \text{e}^{t^2}}{2t^2} = \frac{\text{e}^{t^2} -1}{2t^2}\]
+\[\lim_{x\to0} f(t) \overset{\text{l'Hosp.}}{=} \lim_{x\to0} \frac{4t\text{e}^{2t^2}}{4t} = 1\]
+\[\lim_{x\to\infty} f(t) \overset{\text{l'Hosp.}}{=} \lim_{x\to\infty} \text{e}^{2t^2} = + \infty\]
+Die Funktion \(f(t)\) ist positiv f\"ur \(t\in(0,\infty)\). Dadurch entspricht \(F(x)\) der Fl\"ache zwischen dem Funktionsgraphen von \(f(t)\), der \(t\)-Achse und den Geraden \(t=0\) und \(t=x\).
+Da f\"ur \(t\to\infty\) die Funktion \(f(t)\) uneingeschr\"ankt w\"achst, gilt auch f\"ur die Fl\"ache \(\underset{{x\to\infty}}\lim F(x) = \infty\).
+\begin{center}
+\begin{pspicture}(-2,0)(3,4)
+%\psgrid(-2,0)(3,4)
+\psline[fillstyle=solid, fillcolor=lightgray, linecolor=lightgray, linewidth=0.0](0,0)(2.2,0)(2.2,1.3064)(0,.1)(0,0)
+\psplot[plotpoints=100,plotstyle=curve, fillstyle=solid, fillcolor=white, linecolor=white]
+{-.01}{2.2}{
+2.7183 x x mul exp 2.7183 x x mul neg exp neg add 20 div x x mul div
+}
+\psplot[plotpoints=100,plotstyle=curve]
+{-.01}{2.5}{
+2.7183 x x mul exp 2.7183 x x mul neg exp neg add 20 div x x mul div
+}
+
+\psline{->}(-2,0)(3,0)
+\psline{->}(0,0)(0,4)
+\psline(2.2,-.1)(2.2,.1)
+\put(2.7, .1){$t$}
+\put(2.2,-.3){$x$}
+\put(.1,3.7){$f(t)$}
+\put(2.6,0.6){$F(x)$}
+\psline(2,.3)(2.6,.7)
+\end{pspicture}
+\end{center}
+Mit dem Grenzwert
+\[\lim_{x\to\infty}G(x) = \text{e}^{-2x^2} = \lim_{x\to\infty} \frac{1}{\text{e}^{2x^2}} = 0\]
+ist der Ausdruck \(\underset{x\to\infty}\lim G(x)\cdot F(x)= 0 \cdot \infty\) unbestimmt. Wir behandeln ihn mit der Regel von l'Hospital:
+\begin{align*}
+\lim_{x\to\infty}G(x)\cdot F(x) & =\lim_{x\to\infty}\frac{F(x)}{\frac1{G(x)}}
+=\lim_{x\to\infty}\frac{F'(x)}{4x\text{e}^{2x^2}}\\[2ex]
+& =\lim_{x\to\infty}\frac{\sinh x^2}{4x^3\text{e}^{x^2}}
+= \lim_{x\to\infty}\frac{\frac{1}{2}\,(\text{e}^{x^2}-\text{e}^{-x^2})}{4x^3\text{e}^{x^2}}\\[2ex]
+& =\lim_{x\to\infty}\frac{1-\text{e}^{-2x^2}}{8x^3}=0\,.
+\end{align*}
+
+
+\bigskip
+\textbf{Zu c)} Der Faktor $x^2+x+1$ hat keine reellen Nullstellen und kann deshalb nicht in Linearfaktoren zerlegt werden (zumindest nicht in $\R$). Deshalb verwendet man den Ansatz
+$$ 
+f(x)=\dfrac{1}{(x-1)(x^2+x+1)} = \dfrac{A}{x-1} + \dfrac{Bx+C}{x^2+x+1}. 
+$$
+Durch Multiplikation mit dem Hauptnenner erh\"alt man
+\[ 1 = A(x^2+x+1)+(Bx+C)(x-1)\]
+
+Einsetzen der reellen Nullstelle des Hauptnenners in die Gleichung liefert 
+f\"ur \(x=1\) die Gleichung \(1 = 3\cdot A \Rightarrow A = \frac13\) und Koeffizientenvergleich f\"ur \(x^2\) liefert \(0 = A+B \Rightarrow B = -\frac13\). Nun w\"ahlen wir noch \(x = 0\) und erhalten \( 1=A-C  \Rightarrow C =A-1=-\frac23\,.\)\\
+
+Damit ist
+$f(x)= \dfrac{1}{3(x-1)}-\dfrac{x+2}{3(x^2+x+1)}$. 
+
+}
+
+
+% \ErgebnisC{b-2013-K-A1}{
+% 
+% }
+
+
+

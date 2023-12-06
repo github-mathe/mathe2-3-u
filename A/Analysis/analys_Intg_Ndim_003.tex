@@ -1,0 +1,74 @@
+\Aufgabe[e]{Fl\"acheninhalt, Rotationsk\"orper} {
+\begin{abc}
+\item Skizzieren Sie den Bereich $B\subset\C$ mit 
+$$B=\left\{ |z+\bar z| + |z-\bar z|\leq 4\right\}\cap \left\{ 0\leq \Real (z)\leq 1\right\}$$
+in der Gauß'schen Ebene. 
+\item Interpretieren Sie $B$ als Teilmenge des $\R^2$ und berechnen Sie den Fl\"acheninhalt. 
+\item Berechnen Sie ebenso den Schwerpunkt $\vec x_s$ des Bereichs $B$. 
+\item Berechnen Sie das Volumen des Rotationsk\"orpers, der durch Rotation von $B$ um die $y$-Achse
+entsteht. 
+\end{abc}
+}
+\Loesung{
+{ a)} Eine Zahl $z=x+\imag y\in B$ muss zum einen in dem Streifen $0\leq x\leq 1$ enthalten sein,
+zum anderen muss die folgende Ungleichung erf\"ullt sein: 
+\begin{align*}
+4\geq&|z+\bar z| + |z-\bar z|=2 |x| + 2 |y|.
+\end{align*}
+Beide Bereiche sowie deren Schnittmenge $B$ sind im folgenden skizziert: 
+\begin{center}
+\psset{xunit=1.3cm, yunit=1.3cm, runit=1cm}
+\begin{pspicture}(-5,-5)(5,5)
+\psline[linecolor=gray, fillcolor=lightgray, fillstyle=solid, linewidth=0]
+(0,-5)(2,-5)(2,5)(0,5)(0,-5)
+\psline(0,-5)(0,5)
+\psline(1,-5)(1,5)
+\psline[fillstyle=solid, fillcolor=gray]
+(-4,0)(0,-4)(4,0)(0,4)(-4,0)
+\psline[fillstyle=solid, fillcolor=darkgray]
+(0,-4)(2,-2)(2,2)(0,4)(0,-4)
+\psgrid[subgriddiv=1,griddots=20,gridlabels=0](-5,-5)(5,5)
+\psdot(2,0)
+\put(.1,2.8){$\imag$}
+\psdot(0,2)
+\put(2.8,.1){$1$}
+\psdot(0,0)
+\put(.1,.1){$0$}
+\put(.1,6.0){$0\leq \Real\, z\leq 1$}
+\put(-4.05,.3){$|z+\bar z|+|z-\bar z|\leq 4$}
+\put(.3,1){$B$}
+\end{pspicture}
+\end{center}
+\begin{abc}
+\setcounter{enumi}{1}
+\item Die Integrationsgrenzen f\"ur $B\subset \R^2$ sind 
+$$ B=\{(x,y)^\top\in\R^2|\, x-2\leq y\leq 2-x\text{ und } 0\leq x\leq 1\}.$$
+Damit ist der Fl\"acheninhalt
+$$A=\int\limits_B \d y \d x = \int\limits_0^1\int\limits_{x-2}^{2-x}\d y \d
+x=\int \limits_0^1(4-2x)\d x = 4-1=3.$$
+\item Der Schwerpunkt $(x_s,\, y_s)^\top$ ergibt sich zu 
+\begin{align*}
+x_s=&\frac 1 A \cdot \int\limits_B x \d y \d x
+ = \frac 13 \int\limits_0^1 x\int\limits_{x-2}^{2-x}\d y \d x\\
+=& \frac 13 \int\limits_0^1 (4x-2x^2)\d x = \frac 13 \left[2x^2 - \frac 23 x^3\right]_0^1\\
+=& \frac {4}{9}\\
+y_s=& \frac 1A \cdot \int\limits_B y \d y \d x
+ = \frac 13 \int\limits_0^1 \int\limits_{x-2}^{2-x}y\d y \d x\\
+=& \frac 13 \int\limits_0^1 \left[\frac {y^2}2\right]_{x-2}^{2-x} \d x
+= \frac 1{6} \int\limits_0^10\d x=0
+\end{align*}
+Der Schwerpunkt liegt also bei $\vec x = (4/9,\, 0)^\top$. 
+\item Das Volumen des Rotationsk\"orpers um die $y$-Achse ergibt sich (in Zylinderkoordinaten) zu: 
+\begin{align*}
+V=& \int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^1\int\limits_{z=r-2}^{2-r}1 r\d z\d \d r\varphi\\
+=& 2\pi\int\limits_{r=0}^1[(2-r)-(r-2)]r\d r = 2\pi\int\limits_{r=0}^1(4r-2r^2)\d r\\
+=& 2\pi \left[\frac{4r^2}2-\frac{2r^3}3\right]_{r=0}^1 = \frac{8\pi}3.
+\end{align*}
+\end{abc}
+
+}
+
+\ErgebnisC{analysIntgNdim003}{
+\textbf{a)} $B$ ist ein Trapez, dessen Grundseite in der $y$-Achse enthalten ist. \\
+\textbf{d)} $\frac {8\pi}3$
+}

@@ -1,0 +1,61 @@
+\Aufgabe[e]{lokale Extrema in 3 Dimensionen}{
+Gegeben sei die Funktion 
+	\[
+	f\,:\,\R^3\to\R\,:\,(x,y,z)\rightarrow \frac{2\,y^3}{3}+x^2-2\,xy+xz-x-z+1\ .
+\]
+
+Bestimmen Sie die stationären (kritischen) Punkte der Funktion und bestimmen Sie deren Charakteristik.
+
+\textbf{Hinweis:} \ Die Nullstellen des charakteristischen Polynoms sind praktisch nur numerisch zu bestimmen. Die Vorzeichen der Eigenwerte erhält man aber sehr leicht aus einer einfachen Kurvendiskussion oder Skizze.
+}
+
+\Loesung{
+Die stationären Punkte sind die Nullstellen des Gradienten
+	\[
+	\textbf{grad}\,f(x,y,z) = \begin{pmatrix} 
+	2 x-2 y+z-1 \\ 2 y^2-2 x \\ x-1 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
+\]
+Aus der dritten Komponente folgt \ $x=1$ \ und damit aus der zweiten \ $y=\pm1$ \ und aus der ersten die zugehörigen $z$--Werte. Die stationären Punkte sind
+	\[
+	\vec p_1 = (1,1,1)^\top \text{ und } \vec p_2 = (1,-1,-3)^\top\ .
+\]
+
+Die Hesse--Matrix der Funktion \ $f$ \ ist
+	\[
+	\textbf{H}_f(x,y,z) = \begin{pmatrix} 2 & -2 & \ 1 \\ -2 & 4\,y & 0 \\ 1 & 0 & 0 \end{pmatrix}.
+\]
+
+Für den Punkt \ $\vec p_1$ \ erhält man das charaketristische Polynom
+	\[
+	P(\lambda)=\det\big(\textbf{H}_f(1,1,1)-\lambda\vec E\big) = 
+	\det\begin{pmatrix} 2-\lambda & -2 & \ 1 \\ -2 & 4-\lambda & 0 \\ 1 & 0 & 0-\lambda \end{pmatrix} = 
+	-\lambda^3+6\,\lambda^2-3\,\lambda-4 \ .
+\]
+Dies Polynom hat keine glatten Nullstellen. Eine exakte Bestimmung k\"onnte zum Beispiel mit dem
+Newton--Verfahren erfolgen. \\
+F\"ur die Frage nach der Charakteristik des station\"aren Punktes ben\"otigt man aber nur die Vorzeichen,
+die leicht aus einer sehr groben Kurvendiskussion zu entnehmen sind. Mit
+	\[
+	P(-1) = 6\ ,\ \ P(0) =-4\ ,\ \ P(2)=6 \text{ und } P(t) \rightarrow-\infty \text{
+        f\"ur } t\rightarrow\infty
+\]
+erhält man nach dem Zwischenwertsatz einen negativen und zwei positive Nullstellen, d.\,h. es handelt sich um einen Sattelpunkt.
+
+
+Entsprechend erhält man für den zweiten stationären Punkt \ $\vec p_2$ \ das charakteristische Polynom
+	\[
+	P(\lambda) = -\lambda^3-2\,\lambda^2+13\,\lambda+4 
+\]
+Seine station\"aren Punkte liegen bei $\lambda$ mit 
+$$0\overset!= P'(\lambda)=-3\lambda^2-4\lambda+13\,\Leftrightarrow \, \lambda_\pm=\frac
+{-2 \pm \sqrt{43}}3.$$
+Da gilt $\lim_{\lambda\to\infty}P(\lambda)=-\infty$ liegt bei $\lambda_+>0$ ein Maximum vor, dessen
+Wert wegen $P(0)=4>0$ gr\"oßer Null ist: $P(\lambda_+)>0$. Rechts davon liegt eine Nullstelle des
+Polynoms. Aufgrund der Monotonie von $P$ im Intervall $[\lambda_-,\lambda_+]$ liegen die weiteren
+Nullstellen im Negativen. Es handelt sich bei dem stationären Punkt also auch um einen Sattelpunkt. 
+}
+
+\ErgebnisC{analysExtrNdim002}{
+$\vec p_1 = (1,1,1)^\top,\,  \vec p_2 = (1,-1,-3)^\top$
+}
+

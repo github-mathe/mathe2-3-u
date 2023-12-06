@@ -1,0 +1,83 @@
+\Aufgabe[e]{Funktionenlimes}{
+\begin{abc}
+\item Gegeben sei die Funktion
+$$
+f(x):=\frac{x^3+|x+1|+{\mathrm{sign}}\,(x+1)}{{\mathrm{sign}}\,x},\;x\in D(f):=\R\,.
+$$
+Bestimmen Sie $\lim\limits_{x\to 0+}f(x)$, $\lim\limits_{x\to 0-}f(x)$, $\lim\limits_{x\to (-1)+}f(x)$ und $\lim\limits_{x\to (-1)-}f(x)$.  
+\item Gegeben sei die Funktion
+$$
+f(x) = \dfrac{\sinh x}{\cosh(ax)}\,, \quad a\in \R\,.
+$$
+Bestimmen Sie $\lim\limits_{x\rightarrow \pm \infty}f(x)$. \\
+\textbf{Hinweise}: \\
+- Mit der zun\"achst als bekannt vorausgesetzten Exponentialfunktion $\EH{x}$ gilt 
+$$\sinh x:= \frac{e^x-e^{-x}}2\qquad\text{ und }\qquad \cosh x:=\frac{e^x + e^{-x}}2.$$
+- Die Signum-Funktion liefert das Vorzeichen des Argumentes: 
+$$\sign(z)=\left\{\begin{array}{ll}
++1&, z\geq 0\\
+-1&, z<0
+\end{array}\right.$$
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item \begin{iii}
+\item F\"ur $x>0$ gilt $\sign(x)=\sign(1+x)=1$ sowie $|x+1|=x+1$, damit gilt
+$$\underset{x\to 0+}\lim f(x)= \underset{x\to 0+}\lim (x^3+x+1+1)=2.$$
+\item F\"ur $-1<x<0$ gilt $\sign(x)-1$, $\sign(1+x)=1$ sowie $|x+1|=x+1$, damit gilt
+$$\underset{x\to 0-}\lim f(x)= \underset{x\to 0-}\lim \frac{x^3+x+1+1}{-1}=-2.$$
+\item F\"ur $-1<x<0$ gilt $\sign(x)=-1$, $\sign(1+x)=1$ sowie $|x+1|=x+1$, damit gilt
+$$\underset{x\to (-1)+}\lim f(x)= \underset{x\to (-1)+}\lim \frac{x^3+x+1+1}{-1}=0.$$
+\item F\"ur $x<-1$ gilt $\sign(x)=\sign(1+x)=-1$ sowie $|x+1|=-(x+1)$, damit gilt
+$$\underset{x\to (-1)-}\lim f(x)= \underset{x\to (-1)-}\lim \frac{x^3-x-1-1}{-1}=2.$$
+\end{iii}
+\item Die Funktion $f(x)$ ist eine ungerade Funktion: 
+$$f(-x)=\frac{\sinh(-x)}{\cosh(ax)} = \frac{\EH{-x}-\EH{-(-x)}}{\EH{-ax}+\EH{-(-ax)}}
+= -\frac{\EH{x}-\EH{-x}}{\EH{ax}+\EH{-ax}}=-f(x)$$
+Daher ist $\underset{x\to-\infty}\lim f(x)=-\underset{x\to+\infty}\lim f(x)$ und es gen\"ugt einen der beiden
+Grenzwerte zu berechnen. \\
+Es wird vorausgesetzt, dass $\EH x$ stetig ist und dass gilt $\underset{x\to\infty}\lim \EH{x}=\infty$, somit kann man den
+Funktionsgrenzwert durch die Substitution $z=\EH{x}$ bestimmen: 
+\begin{align*}
+\underset{x\to\infty}\lim f(x)=& \underset{x\to\infty}\lim \frac{\EH x-\EH{-x}}{\EH{ax}+\EH{-ax}}
+= \underset{z\to\infty}\lim \frac{z-\frac 1z}{z^a+\frac 1{z^a}}\\
+=& \underset{z\to\infty}\lim \left( \frac{z}{z^a}\cdot \frac{1-\frac 1{z^2}}{1+\frac{1}{z^{2a}}}\right)
+\end{align*}
+Der Grenzwert des ersten Bruches ist 
+$$\underset{z\to\infty}\lim \frac z{z^a}=\underset{z\to\infty}\lim z^{1-a}=\left\{\begin{array}{ll}
+\infty,& a<1\\
+1,&a=1\\
+0,&a>1\end{array}\right..
+$$
+F\"ur den zweiten Bruch hat man 
+$$\underset{z\to\infty}\lim \frac{1-\frac 1{z^2}}{1+\frac{1}{z^{2a}}}=\left\{\begin{array}{ll}
+0,& a<0\\
+\frac 12,& a=0\\
+1,& a>0\end{array}\right..$$
+Insgesamt ergibt sich daraus: 
+$$\underset{x\to\infty}\lim f(x)=\left\{\begin{array}{ll}
+\infty,& 0\leq a<1\\
+1,& a=1\\
+0,& a>1
+\end{array}\right.
+$$
+F\"ur $a<0$ hat man 
+$$\underset{x\to\infty}\lim
+f(x)=\underset{z\to \infty}\lim \left( \frac{z}{z^{-a}}\cdot \frac{1-\frac 1{z^2}}{z^{2a}+1}\right)
+=\left\{\begin{array}{ll}
+0,&a<-1\\
+1,&a=-1\\
+\infty,&-1<z<0\end{array}\right..
+$$
+
+
+\end{abc}
+}
+
+\ErgebnisC{analysFunkLims001}
+{
+\textbf{a)} $\underset{x\to 0\pm}\lim f(x)=\pm 2$, $\underset{x\to{-1}\pm}\lim f(x)=1\pm (-1)$\\
+\textbf{b)} $\underset{x\to \infty}\lim f(x)= \left\{\begin{array}{ll}0,&|a|>1\\1,&|a|=1\\\infty,&|a|<1\end{array}\right.$
+}

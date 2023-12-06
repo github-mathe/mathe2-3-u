@@ -1,0 +1,35 @@
+\Aufgabe[e]{Uneigentliche Integrale} {
+Welche der folgenden uneigentlichen Integrale besitzen einen endlichen Wert? Bestimmen Sie den Wert dieser Integrale. 
+\begin{align*}
+\text{ a)} &\quad&&\int\limits_0^1 \frac 1{x^{1/4}} \,\d x &\qquad&&\text{
+b)}&\quad&&\int\limits_0^1 \frac 1x \,\d x\\
+\text{ c)} &\quad&&\int\limits_0^{1/\pi} \frac 1{x^2}\sin \frac 1x\,\d x&\qquad&&\text{
+d)}&\quad&&\int\limits_0^\infty 2x\EH{-x^2}\,\d x
+\end{align*}
+}
+
+
+\Loesung{
+\begin{abc}
+\item Dieses Integral existiert: 
+$$\int\limits_0^1 x^{-\frac14}\,\d x = \lim_{a\to0}\int\limits_a^1 x^{-\frac14} \,\d x =\lim_{a\to0}\left(\frac 43 \left. x^{\frac34}\right|_{a}^1\right)= \frac 43 \lim_{a\to0} (1-a^{3/4})=\frac 43. $$
+\item Dieses Integral existiert nicht:
+$$\int\limits_0^1 \frac 1 x \,\d x = \lim_{a\to0} \int\limits_a^1 \frac 1 x \,\d x = \lim_{a\to0}\left(\bigl. \ln |x|\bigr|_a^1\right) =\lim_{a\to 0}(\ln 1 -  \ln a)=+\infty.$$
+\item Hier ist 
+$$\int\limits_{0}^{1/\pi}\frac 1{x^2}\sin \frac 1x \,\d x = \lim_{a\to0} \int\limits_{a}^{1/\pi}\frac 1{x^2}\sin \frac 1x \,\d x =\lim_{a\to0} \left.\cos\frac1x \right|_{a}^{1/\pi}=\underset{a\to 0}\lim \left(\cos(\pi)- \cos\frac 1{a}\right).$$
+Der Grenzwert existiert nicht, da $\cos(1/a)$ f\"ur $a\to 0$ immer wieder alle Werte zwischen $-1$
+und $+1$ annimmt. Also existiert auch kein Wert f\"ur das Integral. 
+\item Dieses Integral existiert: 
+\begin{align*}\int\limits_0^\infty 2x \EH{-x^2}\,\d x 
+&= \lim_{a\to\infty}\int\limits_0^a 2x \EH{-x^2}\,\d x=\lim_{a\to \infty}\left(\left. -\EH{-x^2}\right|_0^a\right)\\
+&=\underset{a\to \infty}\lim \left(-\EH{-a^2}+\EH{0}\right)=0+1=1.\end{align*}
+\end{abc}
+
+}
+
+%\newcounter{AufganalysUeigIntg001}
+%\setcounter{AufganalysUeigIntg001}{\theAufg}
+%\Ergebnis{\subsubsection*{Ergebnisse zu Aufgabe \arabic{Blatt}.\arabic{AufganalysUeigIntg001}:}
+%
+%}
+

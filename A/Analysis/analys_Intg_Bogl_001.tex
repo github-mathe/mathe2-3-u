@@ -1,0 +1,57 @@
+\Aufgabe[e]{Bogenl\"ange} {
+Die Bogenl\"ange des Graphen einer stetig differenzierbaren Funktion $f:\, [a,b]\rightarrow \R$ auf dem Interval $[a,b]$ wird
+definiert als 
+$$L=\int\limits_a^b\sqrt{1+(f'(x))^2}\,\d x.$$
+Berechnen Sie die Bogenl\"ange der folgenden Funktionen:
+\begin{abc}
+\item $ f_1(x)=\sqrt{4-x^2}$ auf $[-2,2]$
+\item $f_2(x)= x^2$ auf $[0,b]$
+\end{abc}
+
+}
+
+
+\Loesung{
+\begin{abc}
+\item \begin{align*}
+L_1&= \int\limits_{-2}^2\sqrt{1+\left( \frac{-x}{\sqrt{4-x^2}}\right)^2}\,\d x
+=\int\limits_{-2}^2\sqrt{\frac{4-x^2+x^2}{4-x^2}}\,\d x\\
+&= \int\limits_{-2}^2\frac 2{\sqrt{4-x^2}}\,\d x = 2\lim_{a\to2}\int\limits_{0}^a\frac 2{\sqrt{4-x^2}}\,\d x
+\end{align*}
+Wir behandeln dabei das uneigentliche Integral als Grenzwert und nutzen die Symmetrie aus.
+
+Weiter berechnen wir das unbestimmte Integral \(\int\frac 2{\sqrt{4-x^2}}\,\d x\) mit der Substitution $x=2\sin \varphi$ f\"ur $-\frac\pi 2 \leq \varphi\leq \frac \pi 2, \,\d x=2\cos\varphi \,\d \varphi$.
+\begin{align*}
+\int\frac{2}{\sqrt{4-4\sin^2\varphi}}2\cos\varphi\,\d \varphi
+&=\int \frac 1{|\cos \varphi|}\cdot
+2\cos \varphi \,\d \varphi\\
+& = \int 2 \,\d \varphi \quad(\cos\varphi\geq 0\text{ f\"ur }-\frac\pi 2 \leq \varphi\leq \frac \pi 2)\\
+&= 2\varphi+C= 2 \arcsin\left(\frac x2\right)+ C
+\end{align*}
+
+\begin{align*}
+ L_1 &= 2\lim_{a\to2}\int\limits_{0}^a\frac 2{\sqrt{4-x^2}}\,\d x = 2\lim_{a\to2}2 \left[\arcsin\left(\frac x2\right)\right]_0^a \\
+ & = 4 \lim_{a\to2}\arcsin\left(\frac a2 \right) = 4 \arcsin(1) = 2 \pi
+\end{align*}
+
+
+\item \begin{align*}
+L_2&=\int\limits_0^b\sqrt{1+(2x)^2}\,\d x \quad\text{(substituiere $2x=\sinh t$, $\,\d x = \frac12\cosh t\,\d t $)}\\
+&= \int\limits_0^{t_0}\sqrt{1+\sinh^2t}\cdot \frac 12 \cosh t \,\d t \quad(t_0=\text{Arsinh }(2b))\\
+&=\frac 12 \int\limits_0^{t_0} \cosh^2 t \,\d t \overset{\text{(*)}}{=}\frac 12\cdot \left.\frac{t
++\sinh t \cosh t}2\right|_{0}^{t_0}=\frac{t_0 + \sinh t_0\cdot  \sqrt{1+\sinh^2 t_0}}4\\
+&= \frac{\text{Arsinh }(2b) + 2b \cdot\sqrt{1+4b^2}}4
+\end{align*}
+\end{abc}
+(*) wegen 
+\begin{align*}\int \cosh^2(t) \,\d t &= \int \left(\dfrac{\text{e}^{t}+\text{e}^{-t}}{2}\right)^2 \,\d t = \int \dfrac{\text{e}^{2t}+2+\text{e}^{-2t}}{4} \,\d t \\
+&= \dfrac 14 \left( \dfrac{\text{e}^{2t}}{2}+ \dfrac{\text{e}^{-2t}}{2} +2t\right)+C 
+= \dfrac 12 \left(\dfrac{\left(\text{e}^t -\text{e}^{-t}\right)\cdot \left(\text{e}^t +\text{e}^{-t}\right)}{4} +t \right) + C\\
+&= \dfrac 12 \left(\sinh(t) \cdot \cosh(t) +t\right) + C.\end{align*}
+}
+
+%\newcounter{AufganalysIntgBogl001}
+%\setcounter{AufganalysIntgBogl001}{\theAufg}
+%\Ergebnis{\subsubsection*{Ergebnisse zu Aufgabe \arabic{Blatt}.\arabic{AufganalysIntgBogl001}:}
+%
+%}

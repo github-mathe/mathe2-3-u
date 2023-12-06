@@ -1,0 +1,130 @@
+\Aufgabe[e]{Matrizen}{
+Gegeben seien folgende Matrizen und Vektoren
+\begin{center}
+\begin{align*}
+% 3x3 unit\"ar
+&\vec A = 
+    \frac{1}{\sqrt 2} \begin{pmatrix} 
+    \operatorname{i} & 0 & -\operatorname{i} \\
+    \operatorname{i} & 0 & \operatorname{i}\\
+    0 & \sqrt{2} & 0\end{pmatrix}
+     , \,
+% 4x2
+&\vec B = \begin{pmatrix}
+    \operatorname{i} & 1\\
+    -1 & -\operatorname{i}\\
+    0 & 1\\
+    2\operatorname{i} & 1
+    \end{pmatrix}\, , \,
+% 2x2 orthogonal
+&\vec C = \begin{pmatrix}
+    \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+    -\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+    \end{pmatrix}\, , \\
+% 4x4 symmetrisch
+&\vec D = \begin{pmatrix}
+    1 & 2 & 3 & 4\\
+    2 & 1 & 5 & 6\\
+    3 & 5 & 1 & 7\\
+    4 & 6 & 7 & 1
+    \end{pmatrix}\, , \,
+% 3x2
+&\vec E = \begin{pmatrix}
+    1 & 1\\
+    1 & 0\\
+    0 & 1
+    \end{pmatrix} \, , \,
+%
+&\vec F = \begin{pmatrix}
+    0 & \operatorname{i}\\
+    -\operatorname{i} & 0
+    \end{pmatrix}\\
+% v_1 , v_2 
+&\vec v_1 = \begin{pmatrix}
+    \operatorname{i} \\ 1 - 2\operatorname{i} \\ 3
+    \end{pmatrix}\, , \,
+&\vec v_2 = \begin{pmatrix}
+    1 -\operatorname{i} \\ -2 \\ -2 + \operatorname{i}
+    \end{pmatrix}
+\end{align*}
+\end{center}
+\begin{abc}
+\item Welche Matrixprodukte und Matrix-Vektorprodukte sind definiert? (Zur Übung können Sie alle 
+      Produkte berechnen.)
+\item Erkl\"aren Sie die Begriffe unit\"ar, hermitesch, symmetrisch, orthogonal anhand der gegebenen Matrizen.
+\item Bestimmen Sie die Transponierte, Adjungierte und komplex Konjungierte von $\vec B$
+\item Bestimmen Sie die Skalarprodukte $\langle \vec v_1,\vec v_2 \rangle$ und $\langle \vec v_2,\vec v_1 \rangle$.
+\item Bestimmen Sie das Matrixprodukt $\vec E \vec C$.
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Zwei Matrizen $\vec M_1\in \mathbb{K}^{n\times m}$ und $\vec M_2 \in \mathbb{K}^{k\times l}$ k\"onnen miteinander
+      multipliziert werden, wenn $m = k$. Das bedeutet die Anzahl der Spalten von $\vec M_1$ entspricht der Anzahl der Zeilen
+      von $\vec M_2$. Das bedeutet die m\"oglichen Matrix-Matrix-Produkte sind: 
+      $$
+      \vec A \vec E, \vec B \vec C, \vec D \vec B, \vec E \vec C, \vec B \vec F, \vec C \vec F, \vec E \vec F, \vec F \vec C
+      $$
+      sowie die Matrix-Vektor-Produkte 
+      $$
+      \vec A \vec v_1 \text { und } \vec A \vec v_2
+      $$
+\item Die Matrix $\vec A$ ist unit\"ar, da $\vec A^* \vec A = \vec E$. Das heißt, die Adjungierte von $\vec A$ ist die Inverse von $\vec A$.\\
+      Die Matrix $\vec C$ ist orthogonal, da $\vec C^T \vec C = \vec E$. Das heißt, die Transponierte von $\vec C$ ist die Inverse von $\vec C$.\\
+      Die Matrix $\vec D$ ist symmetrisch, da $\vec D^T = \vec D$. Das heißt, die Transponierte von $\vec D$ ist die Matrix $\vec D$ selbst.\\
+      Die Matrix $\vec F$ ist hermitesch, da $\vec F^* = \vec F$. Das heißt, die Adjungierte von $\vec F$ ist die Matrix $\vec F$ selbst.
+\item Die Transponierte von $\vec B$ ist
+      $$
+      \vec B^T = \begin{pmatrix}
+                 \operatorname{i} & -1 & 0 & 2\operatorname{i}\\
+                 1 & -\operatorname{i} & 1 & 1
+                 \end{pmatrix}.
+      $$
+      Die Adjungierte von $\vec B$ ist
+      $$
+      \vec B^* = \begin{pmatrix}
+                 -\operatorname{i} & -1 & 0 & -2\operatorname{i}\\
+                 1 & \operatorname{i} & 1 & 1
+                 \end{pmatrix}.
+      $$
+      Die komplex Konjungierte von $\vec B$ ist
+      $$
+      \vec{\overline B} = \begin{pmatrix}
+               -\operatorname{i} & 1\\
+               -1 & \operatorname{i}\\
+               0 & 1\\
+               -2\operatorname{i} & 1
+               \end{pmatrix}.
+      $$
+\item Bei dem Skalarprodukt mit komplexen Vektoren ist zu beachten, dass der erste Vektor komplex konjugiert werden muss
+      \begin{align*}
+      \langle \vec v_1,\vec v_2 \rangle &= \overline{\vec v}_1^T \vec v_2\\
+        &= \begin{pmatrix} - \operatorname{i} ,& 1+2\operatorname{i}, &3\end{pmatrix} \begin{pmatrix}1-\operatorname{i} \\-2\\-2+\operatorname{i} \end{pmatrix} \\
+        &= -9-2\operatorname{i}
+      \end{align*}
+      Vertauscht man die beiden Vektoren, ist das Ergebnis das komplex konjugierte.
+      \begin{align*}
+      \langle \vec v_2,\vec v_1 \rangle = \overline{\langle \vec v_1,\vec v_2 \rangle} = -9 + 2\operatorname{i}
+      \end{align*}
+\item 
+      \begin{align*}
+      \vec E \vec C = 
+      \begin{pmatrix}
+        1 & 1\\
+        1 & 0\\
+        0 & 1
+      \end{pmatrix}
+      \begin{pmatrix}
+        \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+        -\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+      \end{pmatrix}
+      = \frac{\sqrt{2}}{2}\begin{pmatrix}
+      0 & 2\\
+      1 & 1\\
+      -1 & 1
+      \end{pmatrix}
+      \end{align*}
+\end{abc}
+}

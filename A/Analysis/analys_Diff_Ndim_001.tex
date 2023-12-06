@@ -1,0 +1,67 @@
+%Identisch mit wz-2013-6-4.tex
+\Aufgabe[e]{Partielle Ableitungen} {
+Bestimmen Sie zu  jeder der folgenden Funktionen $\varphi:\R^n\rightarrow \R$ die ersten und zweiten Ableitungen
+$$\begin{pmatrix}\frac{\partial \varphi}{\partial x_1}\\\vdots\\\frac{\partial \varphi}{\partial
+x_n}\end{pmatrix},\qquad \begin{pmatrix}\frac{\partial^2 \varphi}{\partial x_1\partial
+x_1}&\hdots& \frac{\partial^2\varphi}{\partial x_1 \partial x_n}\\
+\vdots&\ddots&\vdots\\
+\frac{\partial^2 \varphi}{\partial x_n\partial x_1}&\hdots&\frac{\partial^2 \varphi}{\partial
+x_n\partial x_n}\end{pmatrix}.$$
+\begin{align*}
+f(x,y)=& \EH{2xy^2}&\qquad&&g(x,y)=& x^2\sin(2x+y)\\
+h(x,y)=& \sin(2x)\cos(3y)&&&k(x,y,z)=&xy^2z^3\\
+l(x,y)=&\frac{xy}{xy-1}
+\end{align*}
+
+
+}
+
+
+\Loesung{
+\begin{align*}
+\nabla f(x,y)=& (2y^2\EH{2xy^2},\, 4xy\EH{2xy^2})^\top\\
+\left( \frac{\partial^2 f}{\partial x_i\partial x_j}\right) =
+& \begin{pmatrix}4y^4\EH{2xy^2}&(4y+8xy^3)\EH{2xy^2}\\
+(4y+8xy^3)\EH{2xy^2}& (4x+16x^2y^2)\EH{2xy^2}\end{pmatrix}\\
+\nabla g(x,y)=& (2x\sin(2x+y)+2x^2\cos(2x+y),\, x^2\cos(2x+y))^\top\\
+\left( \frac{\partial^2 g}{\partial x_i\partial x_j}\right) =
+& \Bigl(\begin{matrix}2\sin(2x+y)+8x\cos(2x+y)-4x^2\sin(2x+y)&\hdots\\
+2x\cos(2x+y)-2x^2\sin(2x+y)&\hdots\end{matrix}\Bigr.\\
+&\qquad\qquad\qquad\qquad\Bigl.\begin{matrix}\hdots& 2x\cos(2x+y)-2x^2\sin(2x+y)\\
+\hdots& -x^2\sin(2x+y)\end{matrix}\Bigr)\\
+\nabla h(x,y)=& (2\cos(2x)\cos(3y),\, -3\sin(2x)\sin(3y))^\top\\
+\left( \frac{\partial^2 h}{\partial x_i\partial x_j}\right) =
+& \begin{pmatrix}-4\sin(2x)\cos(3y)& -6\cos(2x)\sin(3y)\\
+-6\cos(2x)\sin(3y)& -9\sin(2x)\cos(3y)\end{pmatrix}\\
+\nabla k(x,y,z)=& (y^2z^3,\, 2xyz^3,\, 3xy^2z^2)^\top\\
+\left( \frac{\partial^2 k}{\partial x_i\partial x_j}\right) =
+& \begin{pmatrix}
+ 0       &  2yz^3  &  3y^2z^2  \\
+ 2yz^3   &  2xz^3  &  6xyz^2   \\
+ 3y^2z^2 &  6xyz^2 &  6xy^2z   \end{pmatrix}\\
+\nabla l(x,y)=& \left( \frac{y(xy-1)-y\cdot xy}{(xy-1)^2},\, \frac{x(xy-1)-x\cdot
+ xy}{(xy-1)^2}\right)^\top
+=\left( \frac{-y}{(xy-1)^2},\, \frac{-x}{(xy-1)^2}\right)^\top\\
+\left( \frac{\partial^2 l}{\partial x_i\partial x_j}\right) =
+& \begin{pmatrix}
+\frac{2y^2}{(xy-1)^3}& \frac{-(xy-1)^2-(-y)\cdot 2(xy-1)\cdot x}{(xy-1)^4}\\
+\frac{1+xy}{(xy-1)^3}& \frac{2x^2}{(xy-1)^3}
+\end{pmatrix}
+=\frac 1{(xy-1)^3}\begin{pmatrix}
+2y^2&1+xy\\
+1+xy&2x^2
+\end{pmatrix}
+\end{align*}
+}
+
+\ErgebnisC{AufganalysDiffNdim001}
+{
+\begin{align*}
+\nabla f(x,y)=& (2y^2\EH{2xy^2},\, 4xy\EH{2xy^2})^\top\\
+\nabla g(x,y)=& (2x\sin(2x+y)+2x^2\cos(2x+y),\, x^2\cos(2x+y))^\top\\
+\nabla h(x,y)=& (2\cos(2x)\cos(3y),\, -3\sin(2x)\sin(3y))^\top\\
+\nabla k(x,y,z)=& (y^2z^3,\, 2xyz^3,\, 3xy^2z^2)^\top\\
+\nabla l(x,y)=& =\left( \frac{-y}{(xy-1)^2},\, \frac{-x}{(xy-1)^2}\right)^\top
+\end{align*}
+
+}

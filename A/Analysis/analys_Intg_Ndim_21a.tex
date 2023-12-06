@@ -1,0 +1,27 @@
+\Aufgabe[e]{Fr\"uhere Klausuraufgabe }{
+Berechnen Sie die Integrale
+\begin{iii}
+\item $I_1={\displaystyle \int\limits_0^1 }(2x-1)\cosh(x)\d x$,
+\item $I_2={\displaystyle \int}\dfrac{\sin(x) \EH{\tan x}}{\cos^3(x)}\d x$ %\qquad f\"ur $-\pi/2<x<\pi/2$.
+\end{iii}
+}
+
+\Loesung{
+ \begin{iii}
+\item Partielles Integrieren ergibt
+\begin{align*}
+I_1=& \int\limits_0^1(2x-1)\cosh(x)\d x\\
+=& \left[(2x-1)\sinh(x)\right]_0^1-\int\limits_0^1 2\sinh(x)\d x\\
+=& \sinh(1)-2\cosh(1)+2
+= \frac 12\left( \EH{}- \EH{-1}-2\EH{}-2\EH{-1}+4\right)\\
+=& \frac {4-\EH{}- 3\EH{-1}}2.
+\end{align*}
+\item Wir substituieren zun\"achst $u=\tan x$, $\d u = \frac{\d x}{\cos^2 x}$ und integrieren dann partiell: 
+\begin{align*}
+I_2=& \int u\EH{u}\d u = u\EH u - \int \EH u\d u\\
+=& (u-1)\EH u +C = (\tan(x)-1)\EH{\tan(x)} + C.
+\end{align*}
+\end{iii}
+}
+
+

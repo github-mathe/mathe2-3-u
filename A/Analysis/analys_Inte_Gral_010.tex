@@ -1,0 +1,69 @@
+\Aufgabe[e]{}{
+\begin{abc}
+\item \textbf{zur partiellen Integration}
+$$
+	\int u(t)\cdot v'(t)\ \d t\ =\ u(t)\cdot v(t) - \int u'(t)\cdot v(t)\  \d t 
+$$
+
+
+Berechnen Sie Stammfunktionen der beiden Funktionen
+$$
+	\textbf{i)} \  (2t-1)\,\cos(t), \qquad \textbf{ii)} \  \big(t^2+t-5\big)\,\EH {t/2}. 
+$$
+\item \textbf{zur Substitution}
+$$
+	\int f\big(g(t)\big)\cdot g'(t)\  \d t\ =\ \int f(z)\ \d z \text{ mit } z =
+        g(t)\ ,\ \ \d z = g'(t)\,\d t\
+$$
+
+
+Berechnen Sie Stammfunktionen von 
+$$	
+	\textbf{i)} \  4\,t\,\EH{t^2}\  \qquad \textbf{ii)} \  \dfrac{1}{\sqrt t}\,\EH{\sqrt t}\  .
+$$
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item \begin{iii}
+\item Mit \ \ $u(t)=(2t-1)\,,\ u'(t)=2$ \ \ und \ \ $v'(t)=\cos(t)\,,\ v(t)=\sin(t)$ \ \ erhält man
+$$
+	\int (2t-1)\,\cos(t)\,\d t\ =\ (2t-1)\sin(t) - \int 2\sin(t)\ \d t\ = \ (2t-1)\sin(t) + 2\cos(t) + C\ .
+$$
+
+\item Mit \ $u(t)=t^2+t-5\,,\ u'(t)=2t+1$ \ und \ $v'(t)=\EH {t/2}\,,\ v(t)=2\,\EH {t/2}$ \ f\"ur die erste partielle Integration und mit \ $u(t)=4t+2\,,\ u'(t)=4$\ und \ $v'(t)=\EH {t/2}\,,\ v(t)=2\,\EH {t/2}$\ f\"ur die zweite erhält man
+	\[\begin{array}{rcl}
+	  \int \big(t^2+t-5\big)\,\EH {t/2}\ \d t & = & \big(t^2+t-5\big)\,2\,\EH {t/2} - \int
+          (2t+1)\,2\,\EH {t/2}\ \d t \\[2ex]
+	  & = & \big(2\,t^2+2\,t-10\big)\,\EH {t/2}-(4t+2)\,2\,\EH {t/2} + \int 4\cdot 2\,\EH
+               {t/2}\ \d t \\[2ex]
+	  & = & \big(2\,t^2-6\,t-14\big)\,\EH {t/2} + 16\,\EH {t/2} + C\\[2ex]
+	  & = & \big(2\,t^2-6\,t+2\big)\,\EH {t/2} + C\ .
+	\end{array}
+\]
+\end{iii}
+
+\item\begin{iii} 
+\item Mit \ \ $z=t^2$ \ \ und \ \ $\d z=2\,t\ \d t$ \ \ erhält man
+	\[
+	\int 4\,t\,\EH{t^2}\ \d t\ =\ \int 2\,\EH z\ \d z\ =\ 2\,\EH z + C\ =\ 2\,\EH{t^2} + C\ .
+\]
+
+\item Mit \ \ $z=\sqrt t$ \ \ und \ \ $\d z= \dfrac{1}{2\sqrt t}\,\d t$ \ \ erhält man
+	\[
+	\int \dfrac{1}{\sqrt t}\,\EH{\sqrt t}\ \d t\ =\ 2\int \EH z\ \d z\ =\ 2\EH z + C\ =\ 2\EH{\sqrt t} + C\ .
+\]
+\end{iii}
+\end{abc}
+}
+
+ \ErgebnisC{analysInteGral010}
+ {
+ \textbf{a)i)} $(2t-1)\sin(t) + 2\cos(t)$, 
+ \textbf{a)ii)} $2(t^2-3t+1)\EH{t/2}$, 
+ \textbf{b)i)} $2\EH{t^2}$, 
+ \textbf{b)ii)} $2\EH{\sqrt t}$
+ }
+
+

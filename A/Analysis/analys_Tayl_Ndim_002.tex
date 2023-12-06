@@ -1,0 +1,91 @@
+\Aufgabe[f]{Taylor-Entwicklung} {
+\begin{abc}
+\item Geben Sie zu der Funktion 
+$$f(x,y)=x \sin(xy)$$
+die Taylor-Entwicklung ersten Grades $T_1(\vec x)$ um den Punkt $\vec x_0=(1,0)^\top$ an. 
+\item Berechnen Sie $f(\vec x)$ und $T_1(\vec x)$ an der Stelle $\vec x=(0,1)^\top$. Berechnen Sie
+außerdem den Fehler der Taylor-Approximation $T_1(\vec x)-f(\vec x)$. 
+\item Geben Sie mit Hilfe des Lagrange-Restgliedes eine Absch\"atzung f\"ur den Fehler
+$$\left|f(\vec x)-T_1(\vec x)\right|$$
+an. 
+\end{abc}
+\textbf{Hinweis}: F\"ur das Restglied erhalten Sie einen Ausdruck der Form 
+$$(3\theta-2)\cos(\theta^2-\theta) + \frac 12 (3\theta^3-7\theta^2+5\theta-1)\cos(\theta^2-\theta)$$
+mit $0\leq \theta\leq 1$. 
+Diesen Ausdruck k\"onnen Sie absch\"atzen, indem Sie die Extrema der beiden Vorfaktoren ($3\theta-2$
+und $\frac 12 (3\theta^3-7\theta^2+5\theta-1)$) auf dem Intervall $[0,1]$ und eine obere Schranke
+der Kosinus- bzw. Sinus-Funktion bestimmen. 
+}
+
+
+\Loesung{
+\begin{abc}
+\item Der Wert der Funktion selbst sowie der der ersten Ableitung im Punkt $\vec x_0=(1,0)^\top$ sind:
+\begin{align*}
+f(x,y)=&x\sin(xy)&\quad\Rightarrow&\quad&f(1,0)=&0\\
+\nabla f(x,y)=& (\sin(xy)+xy\cos(xy),\, x^2\cos(xy))^\top&\Rightarrow&&\nabla f(1,0)=& (0,\, 1)^\top.
+\end{align*}
+Damit ergibt sich die Taylor-Summe (mit $\vec x = (x,y)^\top$):
+$$T_1(\vec x)=f(\vec x_0) + \skalar{\nabla f(\vec x_0),\, (\vec x - \vec x_0)}= 0
++ \skalar{(0,\, 1)^\top,\, (x-1,\, y-0)^\top}=y.$$
+\item An der Stelle $\vec x=(0,1)^\top$ hat man dann 
+\begin{align*}
+f(0,1)=& 0\\
+T_1(0,1)=& 1\\
+f(0,1)-T_1(0,1)=& -1.
+\end{align*}
+\item Die Lagrange-Darstellung des Fehlers ist 
+\begin{align*}
+&&f(\vec x)-T_1(\vec x)=& \frac 1{2!} (\skalar{\vec x-\vec x_0,\, \nabla})^2 f(\vec x_0+\theta(\vec
+x-\vec x_0)) \text{ mit }\theta\in [0,1]\\
+\Rightarrow&&|f(\vec x)-T_1(\vec x)|=& \frac 12 \Bigl|
+(\skalar{(-1,1)^\top,\, \nabla})^2f(1-\theta,\, \theta)\Bigr|\\
+&&=&\frac 12 \left| \left( \frac{\partial^2}{\partial x^2}-2\frac{\partial^2}{\partial x\partial y}
++ \frac{\partial^2}{\partial y^2}\right)f(1-\theta,\theta)\right|
+\end{align*}
+Wir berechnen zun\"achst die zweiten partiellen Ableitungen von $f$:
+\begin{align*}
+\frac{\partial^2 f}{\partial x^2}(x,y)=& y\cos(xy)+y\cos(xy)-xy^2\sin(xy)=2y\cos(xy)-xy^2\sin(xy)\\
+\frac{\partial^2 f}{\partial y^2}(x,y)=& -x^3\sin(xy)\\
+\frac{\partial^2 f}{\partial x\partial y}(x,y)=& 2x\cos(xy)-x^2y\sin(xy)
+\end{align*}
+und setzen ein:
+\begin{align*}
+|f(\vec x)-T_1(\vec x)|=& \frac 12 \Bigl|
+ 2\theta\cos(\theta(1-\theta))-(1-\theta)\theta^2\sin(\theta-\theta^2) +\\
+&\qquad\quad -2\bigl( 2 (1-\theta)\cos(\theta-\theta^2)-
+ (1-\theta)^2\theta\sin(\theta-\theta^2) \bigr)+ \\
+&\qquad\qquad\qquad-(1-\theta)^3\sin(\theta-\theta^2)\Bigr|\\
+=& \frac 12\Bigl| (2\theta-4(1-\theta))\cos(\theta-\theta^2)+\\
+&\qquad\quad +
+ (1-\theta)(-\theta^2-2\theta^2+2\theta-1-\theta^2+2\theta)\sin(\theta-\theta^2)\Bigr|\\
+\leq& \frac 12 \Bigl( 2 \cdot |3\theta-2||\cos(\theta-\theta^2)| + \\
+&+|1-\theta|\cdot |-4\theta^2+4\theta-1|\cdot |\sin(\theta-\theta^2)|\Bigr)
+\end{align*}                             
+Da sowohl Kosinus und Sinus als auch $1-\theta$ betraglich stets kleiner als 1 sind, m\"ussen nur
+noch die Extrema von $|3\theta-2|$ und
+$|(1-\theta)\cdot(-4\theta^2+4\theta-1)|=|4\theta^3-8\theta^2+5\theta-1|$ auf dem Intervall $[0,1]$
+ermittelt werden:\\
+Das Maximum von $|3\theta-2|$ ist $2$. \\
+Das Maximum des zweiten Koeffizienten $\varphi(\theta)=4\theta^3-8\theta^2+5\theta-1$ liegt entweder an den Intervallgrenzen $\theta=0$ oder
+$\theta=1$ oder an einem kritischen Punkt der Funktion, also an einer Nullstelle der Ableitung: 
+\begin{align*}
+&&0\overset !=&\frac{d}{d\theta}(4\theta^3-8\theta^2+5\theta-1)=12\theta^2-16\theta+5\\
+\Rightarrow&& \theta_{1,2}=& \frac 23\pm \sqrt{\frac 49-\frac{5}{12}}=\frac{2}3 \pm \frac
+14 \in\left\{\frac 5{12},\, \frac {11}{12}\right\}.
+\end{align*}
+Insgesamt ist also 
+\begin{align*}
+|\varphi(\theta)|\leq&\text{max }\{|\varphi(0)|,\, |\varphi(1)|,\, |\varphi(5/12)|,\, |\varphi(11/12)|\}\\
+=&\text{max }\{1,\, 0,\, 7/432,\, 25/432\}=1.
+\end{align*}
+Insgesamt ergibt sich so die Fehlerabsch\"atzung:
+$$|f(\vec x)-T_1(\vec x)|\leq \frac 12 \left( 2\cdot 2  + 1\right)=\frac 52.$$
+Diese Absch\"atzung ist mehr als doppelt so groß wie der in Aufgabenteil \textbf{b)} ermittelte tats\"achliche Fehler. 
+\end{abc}
+}
+
+\ErgebnisC{AufganalysTaylNdim002}
+{
+$T_1(x,y)=y$
+}

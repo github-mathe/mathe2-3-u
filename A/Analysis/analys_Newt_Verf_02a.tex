@@ -1,0 +1,59 @@
+\Aufgabe[e]{Newton-Verfahren}
+{
+Gegeben sei die Funktion 
+$$f(x)=x^3+2x^2-15x-36.$$
+\begin{abc}
+\item Bestimmen Sie alle lokalen Extrema der Funktion $f(x)$. 
+\item Begr\"unden Sie, weshalb $f$ zwei Nullstellen besitzt. 
+\item F\"uhren Sie das Newton-Verfahren mit der Funktion $f$ zwei mal durch.  
+W\"ahlen Sie im ersten Durchlauf den Startwert $x_0=1$ und
+im  zweiten Durchlauf $x_0=-1$. F\"uhren Sie jeweils drei Iterationsschritte durch. 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Die Ableitung der Funktion $f$ ist
+$$f'(x)=3x^2+4x-15.$$
+Ihre Nullstellen 
+$$x_{1/2}=\frac{-2\pm\sqrt{49}}3=\left\{\begin{array}{l}5/3\\-3\end{array}\right.$$
+sind die station\"aren Punkte der Funktion $f$. \\
+Die zweite Ableitung der Funktion ist $f''(x)=6x+4$ und wegen 
+$$f''(x_1)=14>0\text{ und } f''(x_2)=-14<0$$
+liegt bei $(x_1,f(x_1))=(5/3,-1372/27)$ ein Minimum und bei 
+$(x_2,f(x_2))=(-3,0)$ ein Maximum der Funktion $f$ vor. 
+\item Da $f$ links der Maximalstelle $x_2=-3$ (die auch Nullstelle ist) sowie rechts der
+Minimalstelle $x_1=5/3$ streng monoton steigt, und sonst streng monoton f\"allt, besitzt $f$
+lediglich die Nullstelle $x_2$ sowie (wegen $f(x_1)<0$) eine weitere Nullstelle rechts von $x_1$. 
+\item Mit der oben berechneten Ableitung $f'(x)=3x^2+4x-15$  lautet die Iterationsvorschrift f\"ur das Newton-Verfahren: 
+$$x_{k+1}=x_k-(f'(x_k))^{-1}\cdot f(x_k).$$
+F\"ur die gegebenen Startwerte sind die ersten drei Iterationsschritte:\\
+
+
+\begin{tabular}{r|r|r}
+$k$&$x_k$    & $f(x_k)$\\\hline
+ 0 & 1.0000  &  -48.0000 \\
+ 1 & -5.0000 &  -36.0000 \\
+ 2 & -4.1000 &   -9.8010 \\
+ 3 & -3.5850 &   -2.5955 \\
+\end{tabular}
+\qquad\qquad
+\begin{tabular}{r|r|r}
+$k$&$x_k$    & $f(x_k)$\\\hline
+    0 &  -1.00000 &  -20.00000 \\
+    1 &  -2.25000 &  -3.51562  \\
+    2 &  -2.64894 &  -0.81945  \\
+    3 &  -2.82923 &  -0.19916  \\
+\end{tabular}\\
+
+Obwohl der erste Startwert $x_0=1$ dichter an der Nullstelle $x=4$ der Funktion liegt, konvergiert
+das Verfahren trotzdem gegen die Nullstelle $x=-3$. \\
+Um die Nullstelle $x=4$ dennoch zu korrekt zu
+finden, muss $x_0$ geeignet gew\"ahlt werden. 
+\end{abc}
+}
+
+\ErgebnisC{analysNewtVerf002}{
+Es ist $f(-3)=f(4)=0$.} 
+ 
+ 

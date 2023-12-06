@@ -1,0 +1,48 @@
+\Aufgabe[e]{Positive Definitheit}{
+\begin{abc}
+\item Berechnen Sie die Eigenwerte der Matrizen
+$$
+\vec A = \begin{pmatrix}-3& 0& 1\\ 0& -1 &0\\ 1&0&-3\end{pmatrix},\qquad
+\vec B= \begin{pmatrix} 4/3& \sqrt 5/3    \\ \sqrt 5/3    & 7/6\end{pmatrix} \qquad
+\text{ und }\qquad\vec C=\begin{pmatrix}0& 1\\ 1&0 \end{pmatrix}
+$$
+\item Welche der Matrizen sind positiv oder negativ definit, welche sind indefinit?
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item \begin{iii}
+\item Das charakteristische Polynom der Matrix $\vec A$ ist:
+\begin{align*}
+\det(\vec A-\lambda\vec E)=&\det\begin{pmatrix}
+-3-\lambda&0&1\\0&-1-\lambda&0\\1&0&-3-\lambda\end{pmatrix}\\
+=&(-3-\lambda)^2(-1-\lambda)-(-1-\lambda)
+\end{align*}
+und seine Nullstellen 
+$$\lambda_1=-1,\, \lambda_2=-2,\, \lambda_3=-4$$
+sind die Eigenwerte der Matrix $\vec A$. 
+\item Das charakteristische Polynom der Matrix $\vec B$ ist
+$$\det(\vec B-\lambda \vec E)=\left(\frac 43 -\lambda\right)\left( \frac
+76-\lambda\right)-\frac{5}9$$
+und seine Nullstellen
+$$\lambda_{1,2}=\frac 54\pm \sqrt{\frac{25}{16}+\frac 59-\frac{14}{9}}=\frac{5\pm 3}4\in\{2,\,
+1/2\}$$
+ sind die Eigenwerte von $\vec B$. 
+\item Es gilt $\vec C\begin{pmatrix}1\\1\end{pmatrix}=\begin{pmatrix}1\\1\end{pmatrix}$ und $\vec
+C\begin{pmatrix}1\\-1\end{pmatrix}=\begin{pmatrix}-1\\1\end{pmatrix}=-1\cdot \begin{pmatrix}1\\-1\end{pmatrix}$. \\
+
+Also hat $\vec C$ die Eigenwerte $1$ und $-1$. 
+\end{iii}
+\item Alle drei Matrizen sind symmetrisch. \\
+Zudem sind die Eigenwerte von $\vec A$  negativ, also ist $\vec A$ negativ definit. \\
+Die Eigenwerte von $\vec B$ sind alle  positiv, also ist $\vec B$  positiv definit. \\
+$\vec C$ besitzt einen positiven und einen negativen Eigenwert, ist also indefinit. 
+\end{abc}
+}
+
+\ErgebnisC{AufglinalgPosiDefi002}
+{
+\textbf{ a)} $\vec A$: $-1,\, -2,\, -4$, $\vec B$: $1/2,\, 2$, $\vec C$: $-1,\, 1$
+
+}

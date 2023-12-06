@@ -1,0 +1,78 @@
+\Aufgabe[e]{Integration}
+{
+ Bestimmen Sie jeweils eine Stammfunktion:
+\begin{itemize}
+\item[\textbf{a)}] $$I_a := \int \frac{4x^4}{x^4-1} \text{d}x\,.$$
+\item[\textbf{b)}] $$I_b := \int (1+3x^2)\cdot\ln(x^3) \text{d}x\,.$$
+\item[\textbf{c)}] $$I_c := \int \sin(\sqrt{x}) \text{d}x\,.$$
+\item[\textbf{d)}] $$I_d := \int \sin(2x)\cdot\e^x \text{d}x\,.$$
+\end{itemize}
+}
+
+
+\Loesung{
+
+\textbf{a)} Die Partialbruchzerlegung des Integranden ergibt
+
+\begin{equation*}
+\frac{4x^4}{x^4-1} = 4+ \frac{1}{x-1} - \frac{1}{x+1} - \frac{2}{x^2+1}.
+\end{equation*}
+
+Damit ist
+ 
+ \begin{equation*}
+ \begin{aligned}
+ I_a & = \int 4+ \frac{1}{x-1} - \frac{1}{x+1} - \frac{2}{x^2+1} \d  x \\[1ex]
+ & = 4x + \ln \left| x-1 \right| - \ln \left| x+1 \right| - 2\arctan(x) .
+ \end{aligned}
+ \end{equation*}
+ \bigskip
+
+\textbf{b)} Mit partieller Integration erhält man
+
+ \begin{equation*}
+ \begin{aligned}
+ I_b & = 3 \int \left( 1+3x^2\right)  \cdot \ln (x) \d  x\\[1ex]
+ & = 3 \left[ \left( x+x^3\right) \ln (x) - \int \frac{x+x^3}{x} \d  x\right] \\[1ex]
+ & = 3 \left[ \left( x+x^3\right) \ln (x) - x - \frac{x^3}{3} \right] \\[1ex]
+ & = \left( 3x + 3x^3\right) \ln (x) - 3x - x^3 .
+ \end{aligned}
+ \end{equation*}
+
+(Falls man ohne Umformung partiell integriert, erhält man $ I_2 = (x+x^3) \ln (x^3) - 3x - x^3$.) 
+\bigskip
+
+\textbf{c)}
+ Mit der Substitution $ \quad t=\sqrt{x} \quad \Rightarrow \quad 2t \d  t = \d  x \quad $ erhält man
+
+ \begin{equation*}
+ \begin{aligned}
+ I_c & = \int 2t \cdot \sin(t) \d  t\\[1ex]
+ & = -2t \cos (t) - \int -2 \cos (t) \d  t \\[1ex]
+ & = -2t \cos (t) + 2\sin(t) \\[1ex]
+ & = -2 \sqrt{x} \cos (\sqrt{x}) + 2 \sin (\sqrt{x}).
+ \end{aligned}
+ \end{equation*}
+\bigskip
+
+\textbf{d)} Zweimalige partielle Integration ergibt
+ 
+ \begin{equation*}
+ \begin{aligned}
+ \int \sin(2x) \cdot \operatorname{e}^x \d  t & = \sin(2x) \cdot \operatorname{e}^x - \int 2 \cos(2x) \cdot \operatorname{e}^x \d  x \\[1ex]
+ & = \sin(2x) \cdot \operatorname{e}^x - 2 \cos(2x) \cdot \operatorname{e}^x - 4 \int \sin(2x) \cdot \operatorname{e}^x \d  x .
+ \end{aligned}
+ \end{equation*} 
+ 
+ Daraus folgt
+ 
+ \begin{equation*}
+ I_d = \int \sin(2x) \cdot \operatorname{e}^x \d  t = \frac{1}{5} \sin(2x) \cdot \operatorname{e}^x - \frac{2}{5} \cos(2x) \operatorname{e}^x .
+ \end{equation*}
+
+}
+
+% \ErgebnisC{Aufgb-Zeuge-2013Nov-K-A4}
+% {
+% 
+% }

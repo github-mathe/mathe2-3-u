@@ -1,0 +1,41 @@
+\Aufgabe[e]{Bereichsintegrale}{
+Gegeben sei das Doppelintegral
+	\[
+	I := \int\limits_{-1}^{1}\ \int\limits_{y-1}^{1-y} \dfrac{y+x^3}{4} \ \ \text dx\ \text dy\ .
+\]
+\begin{itemize}
+	\item[ a)] Skizzieren Sie den von den Grenzen beschriebenen Teilbereich der $x$-$y$--Ebene.
+	
+	\item[ b)] Berechnen Sie das Integral. 
+\end{itemize}
+}
+\Loesung{
+\textbf{a)}
+Der Bereich ist durch die Geraden $x=y-1\Rightarrow y=x+1$ und $x=1-y\Rightarrow y=x+1$, sowie durch die Geraden $y=-1$ und formal auch $y=1$, eingeschlossen.
+Das ist ein Dreieck:
+\begin{center}
+\begin{pspicture}(-3,-2)(3,2)
+\psgrid(-3,-2)(3,2)
+\psline[linewidth=2pt](-2,-1)(2,-1)(0,1)(-2,-1)
+\end{pspicture}
+\end{center}
+
+\textbf{b)}
+	\[
+	I = \int\limits_{-1}^{1}\ \int\limits_{y-1}^{1-y} \dfrac{y}{4} \ \ \text dx\ \text dy + \int\limits_{-1}^{1}\ \int\limits_{y-1}^{1-y} \dfrac{x^3}{4} \ \ \text dx\ \text dy\ .
+\]
+Der zweite Summand ist Null, da eine in \ $x$ \ ungerade Funktion über einen zur $y$--Achse symmetrischen Bereich integriert wird (aber auch ohne Beachtung der Symmetrie ist die Berechnung einfach!). 
+
+Damit ist
+\begin{align*}
+	I =& \int\limits_{-1}^{1}\ \dfrac{y}{4} \ \int\limits_{y-1}^{1-y} 1 \ \ \text dx\ \text dy=\int\limits_{-1}^{1}\ \dfrac{y}{4}\cdot \Big[x\Big]_{x=y-1}^{1-y}  \ \ \text dx \\ 
+	  =& \int\limits_{-1}^{1}\ \dfrac{y}{4} \cdot \Big((1-y)-(y-1)\Big) \ \text dy \\ 
+	  =& \int\limits_{-1}^{1}\ \dfrac{y-y^2}{2} \ \text dy\ = \ -\dfrac{1}{3}\ .
+\end{align*}
+
+}
+
+\ErgebnisC{AufganalysIntgNdim013}
+{
+$I=-1/3$.
+}

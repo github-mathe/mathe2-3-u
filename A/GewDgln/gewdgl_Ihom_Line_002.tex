@@ -1,0 +1,58 @@
+\Aufgabe[e]{Differentialgleichungen erster Ordnung}
+{
+\begin{abc}
+	\item Klassifizieren Sie die Differentialgleichung 1. Ordnung
+	\[
+	u'(t) = \frac{-2\,u(t)}{t} + 5\,t^2 \ ,\ \ t > 0 \ ,
+\]
+und bestimmen Sie dann alle Lösungen der Differentialgleichung.
+
+  \item Lösen Sie das Anfangswertproblem für \ $t>0$
+	\[
+	u'(t) =\left(\frac{2\,u(t)}{t}\right)^2 +\frac{u(t)}{t} \ ,\ \ \ u(1)=-2\ .
+\]
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Klassifikation: explizit, linear, variable Koeffizienten, inhomogen. 
+
+(Hinweis: Mindestens die 3 letzten Eigenschaften müssen benannt sein!)
+
+Die homogene lineare Dgl. \ $u'(t) = -2\,u(t)/t$ \ ist eine trennbare Dgl. 
+	\[
+	\int \frac{1}{u}\ \text du = \int \frac {-2}{t}\ \text dt \Rightarrow u_h(t) = \frac{c}{t^2}\ .
+\]
+Die Lösung der inhomogen linearen Dgl. erhält man mit dem Produktansatz 
+\[u_{allg}(t)= c(t)/t^2\,.\] Das Einsetzen in die inhomogene Gleichung ergibt 
+	\[
+	\frac{-2}{t^3}\cdot c(t) + c'(t)\cdot\frac1{t^2} = \dfrac{-2\,\frac{c(t)}{t^2}}{t} + 5\,t^2\Rightarrow c'(t) = 5\,t^4 \ .
+\] 
+Die Integration ergibt die Funktion $c(t)$ und dann die allgemeine Lösung
+	\[
+	c(t) = t^5+ C\Rightarrow  
+	\underline{\underline{\ u_{allg}(t) = t^3+\frac{ C}{t^2}\ }}\ .
+\]
+
+
+
+\item Die Substitution \ $z(t) = u(t)/t$ \ ergibt $u(t)=tz(t),\;u'(t)=z(t)+tz'(t).$
+Eingesetzt in die Dgl. erhält man
+	\[
+	z+tz' = \big(2\,z\big)^2 + z\Rightarrow
+	z' = \frac{4\,z^2}{t} \ .
+\]
+Die trennbare Dgl. für \ $z(t)$ \ hat die Lösung \ $z(t) = -1/(4\,\ln(t)+C)$\,. Rücksubstitution ergibt die allgemeine Lösung 
+	\[
+	u(t) = z(t)\cdot t = \frac{-t}{4\,\ln(t)+C}\ .
+\]
+Einsetzen der Anfangswerte ergibt \ $C=1/2$ \ und damit die Lösung des AWPs zu
+	\[
+	\underline{\underline{\ u_{\text{AWP}}(t) = \frac{-2\,t}{8\,\ln(t)+1} \ }}\ .
+\]
+\end{abc}
+}
+
+\ErgebnisC{AufggewdglIhomLine002}{
+\textbf{a)} $u(t)=t^3+\frac C{t^2}$, \textbf{b)} $u(t)=\frac{-t}{4\,\ln(t) + C}$
+}

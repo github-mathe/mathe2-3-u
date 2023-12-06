@@ -1,0 +1,147 @@
+\Aufgabe[]{}{
+Gegeben seien 
+$$\vec A=\begin{pmatrix}
+  -7&  -5&   6\\
+   9&   8&  -9\\
+   0&   1&  -1
+\end{pmatrix},\quad \vec
+g(x)=\begin{pmatrix}x\,\EH{-x}\\\EH{-x}\\(x+1)\EH{-x}\end{pmatrix}\quad \text{ und } \quad \vec y_0=\begin{pmatrix}1\\0\\2\end{pmatrix}.$$
+Zu untersuchen ist das Anfangswertproblem  
+$$\vec y'(x)=\vec A \vec y(x)+\vec g(x)\quad \text{ mit } \vec y(0)=\vec y_0.$$
+\textbf{Hinweis}: Ein Eigenwert der Matrix $\vec A$ ist $\lambda=2$. 
+\begin{abc}
+\item Bestimmen Sie ein Fundamentalsystem des zugeh\"origen homogenen Problems. 
+\item Bestimmen Sie die L\"osung des inhomogenen Anfangswertproblems. 
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Die Eigenwerte der Matrix $\vec A$ ergeben sich aus dem charakteristischen Polynom: 
+\begin{align*}
+&&0=& \det\begin{pmatrix}-7-\lambda &-5 & 6 \\ 9 & 8-\lambda & -9\\ 0 & 1 &-1-\lambda\end{pmatrix}\\
+&&=&(-7-\lambda)\det\begin{pmatrix}8-\lambda&-9\\1&-1-\lambda\end{pmatrix}
+-9\det\begin{pmatrix}-5&6\\1&-1-\lambda\end{pmatrix}\\
+&&=&(-7-\lambda)((8-\lambda)(-1-\lambda)+9)-9(-5(-1-\lambda)-6)\\
+&&=&(-7-\lambda)(\lambda^2-7\lambda+1)-9(5\lambda-1)\\
+&&=&-\lambda^3+3\lambda+2
+\end{align*}
+Ein Eigenwert ist $\lambda_1=-1$: 
+$$\begin{array}{r|r|r|r|r}
+            &   -1    &    0   &     3   &     2  \\\hline
+            &\setminus&    1   &    -1   &    -2  \\\hline
+\lambda=-1  &   -1    &    1   &     2   &     0  
+\end{array}$$
+Die verbliebenen Eigenwerte ergeben sich als Nullstellen des Restpolynoms \\
+$-\lambda^2+\lambda+2$: 
+$$\lambda_{2/3}=\frac 12\pm\sqrt{\frac 14+2}=\left\{\begin{array}{l}2\\-1\end{array}\right..$$
+Die Eigenvektoren ergeben sich aus dem jeweiligen charakteristischen
+Gleichungssystem: 
+\begin{align*}
+\lambda_2=2:&&\begin{array}{rrr|l|l}
+-9&-5 & 6 & 0 \\
+9 & 6 & -9& 0 & + I\\
+ 0& 1 & -3& 0\\\hline
+-9&-5 & 6 & 0 \\
+0 & 1 & -3& 0 &    \\
+ 0& 1 & -3& 0&-II\\\hline
+-9&-5 & 6 & 0 \\
+0 & 1 & -3& 0 &    \\
+ 0& 0 &  0& 0&   \\
+\end{array}&\Leftarrow&&\vec v_2= \begin{pmatrix}-1\\ 3\\1\end{pmatrix}\\
+\lambda_1=\lambda_3=-1 :&&\begin{array}{rrr|l|l}
+-6&-5 & 6 & 0 & \\
+9 & 9 & -9& 0 & +3/2\times \,I\\
+ 0& 1 &  0& 0\\\hline
+-6&-5 & 6 & 0 & \\
+0 &3/2&  0& 0 &\\
+ 0& 1 &  0& 0\\
+\end{array}&\Leftarrow&&\vec v_1= \begin{pmatrix}1\\0    \\1\end{pmatrix}\\
+\end{align*}
+Weitere linear unabh\"angige Eigenvektoren gibt es nicht. Es muss also ein Hauptvektor ermittelt werden, dieser ist L\"osung des Gleichungssystems 
+$$(\vec A-(-1)\vec E)\vec w=\vec v_1:$$
+$$\begin{array}{rrr|l|l}
+-6&-5 & 6 & 1 & \\
+9 & 9 & -9& 0 & +3/2\times \,I\\
+ 0& 1 &  0& 1\\\hline
+-6&-5 & 6 & 1 & \\
+0 &3/2&  0&3/2&\\
+ 0& 1 &  0& 1\\
+\end{array}\,\Leftarrow\,\vec w= \begin{pmatrix}0\\1    \\1\end{pmatrix}
+$$
+Ein  Fundamentalsystem ist damit gegeben durch 
+\begin{align*}
+\vec y_1=&\EH{\lambda_1x}\vec v_1=\EH{-x}\begin{pmatrix}1\\0\\1\end{pmatrix},\,\\
+\vec y_2=&\EH{\lambda_1x}(\vec w + x\vec v_1)=\EH{-x}\begin{pmatrix}x\\1\\1+x\end{pmatrix},\,\\
+\vec y_3=&\EH{\lambda_2x}\vec v_2=\EH{2x}\begin{pmatrix}-1\\ 3\\1\end{pmatrix}.
+\end{align*}
+\item Eine Fundamentalmatrix des Systems ergibt sich aus dem Fundamentalsystem: 
+$$\vec Y(x)=\left( \vec y_1,\, \vec y_2,\, \vec y_3\right)
+=\begin{pmatrix}
+\EH{-x} & x\EH{-x} & -\EH{2x}\\
+0       & \EH{-x}  & 3 \EH{2x}\\
+\EH{-x} & (1+x)\EH{-x} & \EH{2x}
+  \end{pmatrix}.$$
+An der Stelle $x=0$ hat man
+$$\vec Y(0)=\begin{pmatrix}
+1 & 0 &-1\\
+0 & 1 & 3\\
+1 & 1 & 1\end{pmatrix}
+$$
+Um $\vec Y(0)^{-1}\vec g(t)$ und $\vec Y(0)^{-1}\vec y(0)$ zu ermitteln wird das zugeh\"orige Gleichungssystem gel\"ost: 
+$$\begin{array}{rrr|l|l|l}
+1 & 0 & -1 & t\EH{-t}     & 1       \\
+0 & 1 & 3  & \EH{-t}      & 0      \\
+1 & 1 & 1  & (t+1)\EH{-t} & 2 & - I\\\hline
+
+1 & 0 & -1 & t\EH{-t}     & 1   \\
+0 & 1 & 3  & \EH{-t}      & 0   \\
+0 & 1 & 2  & \EH{-t}      & 1   & - II\\\hline
+
+1 & 0 & -1 & t\EH{-t}     & 1  \\
+0 & 1 & 3  & \EH{-t}      & 0  \\
+0 & 0 &-1  &     0        & 1  & \\
+
+\end{array}$$
+L\"osung des Systems ist 
+$$\vec Y(0)^{-1}\vec g(t)=\begin{pmatrix}
+t\EH{-t}\\
+\EH{-t}\\
+0
+\end{pmatrix}
+$$
+und 
+$$\vec Y(0)^{-t}\vec y(0)=\begin{pmatrix}
+0\\
+3\\
+-1\end{pmatrix}.$$
+Damit ergibt sich dann die L\"osung des Anfangswertproblems zu: 
+\begin{align*}
+&\vec y_{AWP}(x)\\
+=&\vec Y(x)\vec Y(0)^{-1}\vec y(0)+\int\limits_{t=0}^x\vec Y(x-t)\vec Y(0)^{-1}\vec g(t)\d t\\
+=& \vec Y(x)\begin{pmatrix}0\\3\\-1\end{pmatrix} + \\
+&+\int\limits_{t=0}^x\begin{pmatrix}
+\EH{-(x-t)} & (x-t)\EH{-(x-t)}    & -\EH{2(x-t)}  \\
+   0        &      \EH{-(x-t)}    & 3\EH{2(x-t)}  \\
+\EH{-(x-t)} & (1+x-t)\EH{-(x-t)}    &  \EH{2(x-t)}
+\end{pmatrix}
+\EH{-t}\begin{pmatrix}
+t\\1\\0\end{pmatrix}\d t\\
+=&3\EH{-x}(\vec w+x\vec v_1) - \EH{2x}\vec v_2 + \\
+&+\EH{-x}\int\limits_{t=0}^x
+\begin{pmatrix}
+x\\
+1\\
+1+x
+\end{pmatrix}\d t\\
+=& \EH{-x}\begin{pmatrix}
+0+x\\
+1+0\\
+1+x\end{pmatrix}-\EH{2x}\begin{pmatrix}
+-1\\3\\1\end{pmatrix}
++ x\EH{-x}\begin{pmatrix}x\\1\\1+x\end{pmatrix}\\
+=& \EH{-x}\begin{pmatrix}x^2+x\\x+1\\x^2+2x+1\end{pmatrix} + \EH{2x}\begin{pmatrix} 1\\-3\\-1\end{pmatrix}
+\end{align*}
+\end{abc}
+}

@@ -1,0 +1,138 @@
+\Aufgabe[e]{Differenzieren}{
+\begin{abc}
+\item Bestimmen Sie jeweils die erste Ableitung. (Eventuell notwendige Beschr\"ankungen des Definitionsgebietes sind nicht angegeben.) 
+\begin{align*}
+f_9(t)=&\sinh(t)-\cosh(2t)                          ,&\qquad  &&  
+f_{10}(t)=&(t-3)^4\,\sinh(t),                        \\            
+f_{11}(t)=&t^2\,\text{e}^{-2t}\,\sin (3t)            ,&\qquad  && 
+f_{12}(t)=&\sqrt{t}\,\text{e}^{2t},                   \\           
+f_{13}(t)=&\sin ^3\left( \text{e}^{2t^2}+t^5\right)   ,&\qquad  &&  
+f_{14}(t)=&\sqrt{2\,t^2+1},                            \\            
+f_{15}(t)=&\ln (t)-\ln (5t)                            ,&\qquad  && 
+f_{16}(t)=&\ln (t^2)-\ln (t^5).                         \\           
+\end{align*}
+\textbf{Hinweis: }Es gilt $\dfrac{d}{dx}(\ln(x))=\dfrac 1x$. 
+\item Bestimmen Sie die vierte Ableitung folgender Funktionen, wobei Sie das geeignete Zusammenfassen von Termen nicht vergessen sollten. 
+\begin{align*}
+f_{17}(t)=&(t-3)^4-(2t+1)^5    ,&\qquad  && 
+f_{18}(t)=&(t+1)\,\sin (2t)    \\            
+f_{19}(t)=&(t^3-1)\,\text{e}^{2t}     ,&\qquad  && 
+f_{20}(t)=&\sin (3t)\,\text{e}^{-t}   \\           
+\end{align*}
+\textbf{Hinweis: }Nutzen Sie gegebenen Falls die Leibniz-Regel zur Berechnung h\"oherer Ableitungen. Diese hat dieselbe Gestalt wie der binomische Lehrsatz:  
+\begin{align*}
+(f(t)\cdot g(t))^{(n)}=&\sum\limits_{k=0}^n\begin{pmatrix}n\\k\end{pmatrix}f^{(k)}(t)\cdot g^{(n-k)}(t)\\
+\text{Z. B. f\"ur } n=2: \, (f(t)\cdot g(t))''=& f(t)g''(t)+2f'(t)g'(t)+f''(t)g(t)
+\end{align*}
+\item Bestimmen Sie die\ $n$--te Ableitung folgender Funktionen. 
+\begin{align*}
+f_{21}(t)=&\sin (3t)        ,&\qquad  && 
+f_{22}(t)=&t\,\text{e}^{2t} \\           
+f_{23}(t)=&t\cdot \cos (t) ,&\qquad  && 
+f_{24}(t)=&t\,\ln (2t)     \\           
+\end{align*}
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item 
+\begin{align*}
+f_9'(t)= & \cosh(t) - 2\sinh(2t)\\
+f_{10}'(t)= & 4(t-3)^3\sinh(t)+(t-3)^4\cosh(t)\\
+f_{11}'(t)= & 2t\EH{-2t}\sin(3t)+t^2(-2\EH{-2t})\sin(3t)+t^2\EH{-2t}\cdot 3\cos(3t)\\
+=& t\EH{-2t}\bigl( 2(1-t)\sin(3t) +3t\cos(3t)\bigr)\\
+f_{12}'(t)= & \frac{1}{2\sqrt t} \EH{2t} + \sqrt t \cdot 2 \EH{2t} = \frac{1+4t}{2\sqrt t} \EH{2t}\\
+f_{13}'(t)= & 3\sin^2\left( \EH{2t^2}+t^5\right)\cdot \cos\left( \EH{2t^2}+t^5\right)\cdot \left( 4t\EH{2t^2}+5t^4\right)\\
+f_{14}'(t)= & \frac{4t}{2\sqrt{2t^2+1}}\\
+f_{15}'(t)= & \frac 1 t - \frac{5}{5t}=0\\
+f_{16}'(t)= & \frac d{dt} (\ln (t^2)-\ln (t^5)) = \frac d{dt}(2\ln t - 5 \ln t) = \frac{-3}{t}
+\end{align*}
+\item 
+\begin{align*}
+f_{17}^{(4)}= & 4\cdot 3 \cdot 2 \cdot 1 - 2^4\cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot (2t+1)\\
+=& 24\cdot \left( 1 - 80 (2t+1)\right) = -24(160t+79)\\
+f_{18}^{(4)}= &\left( \frac d{dt}\right)^3\left( \sin(2t)+(t+1)2\cos(2t)\right)\\
+=&-8\cos(2t)+ 2\left( \frac d{dt}\right)^2\left( \cos(2t)-2(t+1)\sin(2t)\right)\\
+=& -8\cos(2t) -8\cos(2t) -4  \frac d{dt}\left( \sin(2t)+2(t+1)\cos(2t)\right)\\
+=& -16\cos(2t) -8\cos(2t) -8\cos(2t)+16(t+1)\sin(2t)\\
+=&-32\cos(2t)+16(t+1)\sin(2t)\\
+f_{19}^{(4)}= &\left( \frac d{dt}\right)^3\left( (3t^2+2(t^3-1))\EH{2t}\right)\\
+=& \left( \frac d{dt}\right)^2\left((6t+6t^2+2(3t^2+2(t^3-1)))\EH{2t}\right)\\
+=& \left( \frac d{dt}\right)^2\left( (4t^3+12t^2+6t-4)\EH{2t}\right) \\
+=& \frac d{dt} \left((12t^2+24t+6+8t^3+24t^2+12t-8)\EH{2t}\right)\\
+=& (24t + 24 + 24t^2 + 48t+12+24t^2+48t+12+16t^3+48t^2+24t-16)\EH{2t}\\
+=& (16t^3+96t^2+144t+32)\EH{2t}\\
+f_{20}^{(4)}= &\left( \frac d{dt}\right)^3\left( 3\cos(3t)\EH{-t}-\sin(3t)\EH{-t}\right)\\
+=& \left( \frac d{dt}\right)^2\left((-9\sin(3t)-3\cos(3t)-3\cos(3t)+\sin(3t))\EH{-t}\right)\\
+=& \left( \frac d{dt}\right)^2\left( (-8\sin(3t)-6\cos(3t))\EH{-t}\right) \\
+=& \frac d{dt} \left((-24\cos(3t)+8\sin(3t)+18\sin(3t)+6\cos(3t))\EH{-t}\right) \\
+=& \frac d{dt} \left((-18\cos(3t)+26\sin(3t))\EH{-t}\right)\\
+=&(54\sin(3t)+18\cos(3t)+78\cos(3t)-26\sin(3t))\EH{-t} \\
+=& (28\sin(3t)+96\cos(3t))\EH{-t}
+\end{align*}
+\item \begin{iii}
+\item Jedes Ableiten der Funktion $f_{21}$ f\"uhrt wegen der inneren Ableitung aus der Kettenregel
+zu einem Faktor $3$. Außerdem ergibt jedes zweite Ableiten der \"außeren Funktion (immer die
+Ableitung einer $\cos$-Funktion) einen weiteren Faktor $(-1)$. Die \"außere Funktion wird nach gradzahligem
+Ableiten zu einem Sinus, bei ungradzahligen Ableitungen zu einem Kosinus. Insgesamt ergibt sich
+also: 
+$$f_{21}^{(n)}(t)=\left\{\begin{array}{lll}
+3^n \sin(3t)&\quad&\text{ f\"ur } n=4k+0\, (k\in\N_0)\\
+3^n \cos(3t)&\quad&\text{ f\"ur } n=4k+1\, (k\in\N_0)\\
+-3^n \sin(3t)&\quad&\text{ f\"ur } n=4k+2\, (k\in\N_0)\\
+-3^n \cos(3t)&\quad&\text{ f\"ur } n=4k+3\, (k\in\N_0)
+\end{array}\right.$$
+\item Die erste Ableitung von $f_{22}$ ist
+$$f_{22}'(t)=\EH{2t}+2t\EH{2t}=\EH{2t} + 2 f_{22}(t).$$
+Setzt man dies sukzessive fort, ergibt sich
+\begin{align*}
+f_{22}^{(n)}(t)=&n\cdot 2^{n-1} \EH{2t} + 2^n f_{22}(t)\\
+=&\left( n\cdot 2^{n-1} + 2^n\cdot t\right)\EH{2t}=(n+2t)2^{n-1}\EH{2t}
+\end{align*}
+\item Die ersten vier Ableitungen von $f_{23}$ sind: 
+\begin{align*}
+f_{23}(t)=&
+t\cdot \cos(t),\quad&f_{23}'(t)=&\cos(t)-t\sin(t)\\
+f_{23}''(t)=&-2\sin(t)-t\cos(t),\quad&f_{23}'''(t)=&-3\cos(t)+t\sin(t),\\
+f_{23}^{(4)}(t)=&4\sin(t)+t\cos(t),\quad&f_{23}^{(5)} =& 5\cos(t)-t\sin(t)
+\end{align*}
+Daraus ergibt sich f\"ur $n\geq 1$:
+$$f_{23}^{(n)} = \left\{\begin{array}{lll}
++n\cos(t)-t\sin(t) &\, & \text{ f\"ur } n=4k+1\, (k\in\N_0)\\
+-n\sin(t)-t\cos(t) &\, & \text{ f\"ur } n=4k+2\, (k\in\N_0)\\
+-n\cos(t)+t\sin(t) &\, & \text{ f\"ur } n=4k+3\, (k\in\N_0)\\
++n\sin(t)+t\cos(t) &\, & \text{ f\"ur } n=4k+4\, (k\in\N_0)
+\end{array}\right..
+$$
+\item Die ersten beiden Ableitungen von $f_{24}$ sind
+\begin{align*}
+f_{24}'(t)=& \ln (2t) + t\cdot \frac 2{2t} = \ln (2t)+1\\
+f_{24}''(t)=& \frac 1 t .
+\end{align*}
+Alle weiteren Ableitungen ($n=2,3,\hdots$) ergeben sich zu 
+$$f_{24}^{(n)}(t)=(-1)\cdot(-2)\cdot \hdots\cdot (-(n-2)) t^{-(n-1)}=(-1)^{n}(n-2)!t^{-(n-1)}.$$
+\end{iii}
+\end{abc}
+
+}
+
+\ErgebnisC{AufganalysDiffRech001}
+{
+\textbf{a)} $
+f_9'(2) \approx      -50.818   ,\,
+f_{10}'(2) \approx  -10.745     ,\,
+f_{11}'(2) \approx   0.2315     ,\,
+f_{12}'(2) \approx   173.73     ,\,
+f_{13}'(2) \approx -2039.7  ,$\\
+$f_{14}'(2) =    4/3       ,\, 
+f_{15}'(2) =   0          ,\, 
+f_{16}'(2) =    -3/2
+$\\
+\textbf{b)} $
+f_{17}^{(4)}=  -24(160t+79),\, 
+f_{18}^{(4)}= -32\cos(2t)+16(t+1)\sin(2t),\, 
+f_{19}^{(4)}=  (16t^3+96t^2+144t+32)\EH{2t},$\\
+$f_{20}^{(4)}=  (28\sin(3t)+96\cos(3t))\EH{-t}$
+
+}

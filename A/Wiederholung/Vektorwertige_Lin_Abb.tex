@@ -1,0 +1,89 @@
+\Aufgabe[f]{Vektorwertige Funktionen}{
+Gegeben sei die vektorwertige Funktion $\vec f : \mathbb{R}^2 \to \mathbb{R}^2$ durch
+
+\begin{align*}
+\vec f(x_1 , x_2) = \begin{bmatrix} x_1 + 2x_2 \\ -x_1 + x_2\end{bmatrix}
+\end{align*}
+
+Zeigen Sie, dass die Funktion $\vec f$ bijektiv ist und bestimmen Sie die Inverse.
+}
+
+\Loesung{
+Die Abbildung $\vec f : \mathbb{R}^2 \to \mathbb{R}^2$ kann äquivalent über die Matrix-Vektor Multiplikation $\vec A \vec x$ der Form
+
+$$
+\vec A \vec x = \begin{bmatrix}
+1 & 2 \\ -1 & 1
+\end{bmatrix} \begin{pmatrix}
+x_1 \\ x_2
+\end{pmatrix}
+$$
+
+dargestellt werden. \\ \\
+%
+%
+%
+Die inverse Abbildung ist entsprechend über die zu der Matrix $\vec A$ inverse Matrix $\vec A^{-1}$ gegeben, die sich für eine $2\times 2$-Matrix mittels
+
+\begin{align}
+\label{eq_inv}
+\vec A^{-1} = \frac{1}{\text{det}(\vec A)} \begin{bmatrix}
+a_{22} & -a_{21} \\ -a_{12} & a_{11}
+\end{bmatrix}
+\end{align}
+%
+%
+%
+berechnen lässt. \\ \\
+%
+%
+Bevor die Inverse bestimmt wird, sollte erst geprüft werden, wann und unter welchen Umständen die Inverse existiert. Dazu gibt es die folgenden Interpretationen,
+deren Bedeutungen zueinander jedoch äquivalent sind:
+
+\begin{iii}
+\item $\vec f(\vec x)$ ist bijektiv
+\item $\vec A$ hat vollen Rang
+\item $\vec A$ ist regulär
+\item $\text{det}(\vec A) \neq 0$
+\item In Gl. (\ref{eq_inv}) wird nicht durch 0 geteilt
+\end{iii}
+
+Da die Determinante ohnehin benötigt wird, berechnen wir diese zuerst mit
+
+$$
+\text{det}(\vec A) = a_{11} \cdot a_{22} - a_{21} \cdot a_{12} = 1 \cdot 1 - (-1) \cdot 2 = 3 \neq 0 \qquad \forall \vec x \in \mathbb{R} 
+$$
+
+Dementsprechend wurde gezeigt, dass die Inverse $\vec A^{-1}$ existiert und somit $\vec f(x)$ bijektiv ist. Die Inverse $\vec A^{-1}$ ergibt sich nach Gl. (\ref{eq_inv}) 
+zu
+
+$$
+\vec A^{-1} =  \frac{1}{\text{det}(\vec A)} \begin{bmatrix}
+a_{22} & -a_{21} \\ -a_{12} & a_{11}
+\end{bmatrix} 
+= \frac{1}{3} \begin{bmatrix}
+1 & -2 \\ 1 & 1
+\end{bmatrix}
+$$
+
+Wir prüfen dies, indem wir Inverse mit der ursprünglichen Abbildung multiplizieren.
+
+$$
+\vec A^{-1} \vec A = \frac{1}{3} \begin{bmatrix}
+1 & -2 \\ 1 & 1
+\end{bmatrix} 
+\begin{bmatrix}
+1 & 2 \\ -1 & 1
+\end{bmatrix} =
+\frac{1}{3} \begin{bmatrix}
+3 & 0 \\ 0 & 3
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 \\ 0 & 1
+\end{bmatrix} = \vec I
+$$
+
+Dies bestätigt das berechnete Ergebnis.
+
+Alternativ kann die Inverse mit dem Gauß-Algorithmus berechnet werden.
+}
+

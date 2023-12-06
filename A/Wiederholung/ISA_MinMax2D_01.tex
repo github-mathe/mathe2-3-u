@@ -1,0 +1,78 @@
+\Aufgabe[e]{Dimensionierung eines Behälters}{
+Ein oben offener Behälter mit rechteckigem Querschnitt soll ein Fassungsvermögen von $10\, m^3$ haben und aus dünnem Blech hergestellt werden.
+Berechnen Sie die Abmessungen des Behälters, wenn so wenig Metall wie möglich verwendet werden soll.
+
+}
+
+\Loesung{
+$A$ sei die Gesamtfläche des Metalls, das für die Herstellung des Behälters verwendet wird, und $x$ und $y$ seien die Länge und Breite und $z$ die Höhe. Dann
+ist 
+$$
+A = \underbrace{2xz + 2yz}_{\text{4 Seitenflächen}} + \underbrace{xy}_{\text{Bodenfl\"ache}}.
+$$
+Außerdem gilt
+$$
+xyz = 10
+$$
+weil das Volumen 10 $m^3$ beträgt. Daraus folgt, dass 
+$$
+z = \frac{10}{xy}. 
+$$
+Setzt man dies in die Formel für $A$ ein, ergibt sich $A$ als Funktion von $x$ und $y$:
+\begin{align*}
+A(x,y) &= 2x \frac{10}{xy} + 2y \frac{10}{xy} + xy\\
+  &= \frac{20}{y} + \frac{20}{x} + xy.
+\end{align*}
+%
+Um die Fläche zu minimieren, finden wir die Minima der Funktion $A$.
+%
+Dazu berechnen wir den Gradienten von $A$ und finden seine Nullstellen, die die kritischen Punkte der Funktion $A(x,y)$ sind
+
+\begin{align*}
+A'_x(x,y) = -\frac{20}{x^2}+y,\\
+A'_y(x,y) = -\frac{20}{y^2}+x.
+\end{align*}
+%
+Die kritischen Punkte sind die Punkte $\vec P = (x,y)^\top$, welche das nichtlineare System
+\begin{align*}
+-\frac{20}{x^2}+y = 0,\\
+-\frac{20}{y^2}+x = 0
+\end{align*}
+erfüllen.
+Aus der zweiten Gleichung ergibt sich
+$$x = \frac{20}{y^2},$$ was nach Einsetzen in die erste Gleichung ergibt
+$$y - \frac{20}{(20/y^2)^2} = 0$$
+%
+oder
+$$
+y ( 1 - \frac{y^3}{20}) = 0.
+$$
+%
+Da die Nullstelle $y = 0$ offensichtlich nicht mit einem Volumen von $10\, m^3$ vereinbar ist, verwerfen wir $y = 0$ und schließen, dass $y = 20^{1/3} = 2.714$ [$m$].
+%
+Aus $x = 20/y^2$ ergibt sich $x = 2.714$ [$m$]. 
+%
+Um $z$ zu finden, verwenden wir $z = 10/xy$, so dass $z = 1.357$ [$m$] ist.
+
+Wir müssen nun zeigen, dass diese Werte tatsächlich ein Minimum ergeben.
+
+Die Charakterisierung des kritischen Punktes wird anhand der Diskriminante gemacht. Wir berechnen die zweiten Ableitungen:
+\begin{align*}
+A''_{xx}(x,y) &= \frac{40}{x^3},\\
+A''_{xy}(x,y) &= 1,\\
+A''_{yy}(x,y) &= \frac{40}{y^3}
+\end{align*}
+und die Diskriminante im Punkt $\vec P = (2.714, 2.714)^\top$
+$$
+\Delta(\vec P) = A''_{xx}(\vec P) \, A''_{yy}(\vec P) - (A''_{xy}(\vec P))^2 = 3 > 0.
+$$
+Da auch $A''_{xx}(\vec P)>0$ gilt, ist der Punkt $\vec P$ ein Minimum.
+
+Der Behälter hat eine Länge von 2.714 $m$, eine Breite von 2.714 $m$ und eine Höhe von 1.357 $m$. Die tatsächliche Fläche des verwendeten Metalls beträgt dann 22.1 $m^2$.
+
+}
+
+\ErgebnisC{AufgZugstab}
+{
+Der Behälter hat eine Länge von 2.714 $m$, eine Breite von 2.714 $m$ und eine Höhe von 1.357 $m$. Die tatsächliche Fläche des verwendeten Metalls beträgt dann 22.1 $m^2$.
+}

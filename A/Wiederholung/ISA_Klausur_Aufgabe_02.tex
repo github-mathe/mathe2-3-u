@@ -1,0 +1,87 @@
+\Aufgabe[e]{Dimensionierung eines Behälters}{
+Ein oben offener Behälter mit rechteckigem Querschnitt soll aus 6 $m^2$ Dünnblech hergestellt werden.
+Man bestimme die Abmessungen des Behälters so, dass das Volumen maximiert wird.
+}
+
+\Loesung{
+$A$ sei die Gesamtfläche des Metalls, das für die Herstellung des Behälters verwendet wird, und $x$ und $y$ seien die Länge und Breite und $z$ die Höhe. Dann
+ist 
+$$
+A = \underbrace{2xz + 2yz}_{\text{4 Seitenflächen}} + \underbrace{xy}_{\text{Bodenfl\"ache}} = 6.
+$$
+Außerdem gilt
+$$
+V = xyz
+$$
+Daraus folgt, dass 
+$$
+V = xy \frac{6-xy}{2x+2y}
+$$
+Um das Volumen zu maximieren, finden wir die Maxima der Funktion $V$.
+%
+Dazu berechnen wir den Gradienten von $V$ und finden seine Nullstellen, die die kritischen Punkte der Funktion sind
+
+\begin{align*}
+V'_x(x,y) = -y^2\frac{x^2+2xy-6}{2(x+y)^2} = 0,\\
+V'_y(x,y) = -x^2\frac{y^2+2xy-6}{2(x+y)^2} = 0.
+\end{align*}
+%
+Der erste kritischer Punkt ist der Punkt $(0,0)^\top$, der aber ein leeres Volumen ergibt und ist somit zu eliminieren.
+
+Die andere kritischen Punkte sind die Punkte $\vec P = (x,y)^\top$, welche das nichtlineare System
+\begin{align*}
+\frac{x^2+2xy-6}{2(x+y)^2} = 0,\\
+\frac{y^2+2xy-6}{2(x+y)^2} = 0
+\end{align*}
+erfüllen.
+
+Aus der ersten Gleichung ist
+$$
+2xy = 6 - x^2.
+$$
+Setzt man diesen Term in die zweite Gleichung ein, erhält man
+$$
+y^2-x^2 = 0,
+$$
+was die folgenden zwei Lösungen hat
+\begin{align*}
+y &= x,\\
+y &=-x.
+\end{align*}
+Die Lösung $y=-x$ ist nicht gültig, weil die Abmessungen des Behälters positiv sein müssen. Es bleibt die Lösung $y=x$ übrig, die, wenn sie in die erste Gleichung eingesetzt wird, ergibt
+$$
+x^2+2x^2-6 = 0,
+$$
+was die beiden Lösungen hat
+\begin{align*}
+x &= \sqrt{2},\\
+x & = -\sqrt{2}
+\end{align*}
+und wieder muss die negative Lösung eliminiert werden. Damit bleibt $y= \sqrt{2} = x$ und aus der Beziehung.
+$$
+z = \frac{6-xy}{2x+2y}
+$$
+folgt
+$$
+z = \frac{\sqrt{2}}{2}.
+$$
+Das maximale Volumen ist dann
+$$
+V = \sqrt{2}\,\sqrt{2}\,\frac{\sqrt{2}}{2} = \sqrt{2}.
+$$
+
+
+
+
+
+
+
+
+
+
+}
+
+\ErgebnisC{AufgZugstab}
+{
+Der Behälter hat eine Länge von $\sqrt{2}$ $m$, eine Breite von $\sqrt{2}$ $m$ und eine Höhe von $\sqrt{2}$ $m$. Das maximale Volumen ist XXX.
+}

@@ -1,0 +1,326 @@
+\Aufgabe[e]{Systeme homogener linearer Differentialgleichungen}
+{
+Bestimmen Sie die allgemeinen reellen Lösungen und gegebenenfalls auch die Lösungen des Anfangswertproblems der folgenden Systeme von homogenen linearen Differentialgleichungen mit konstanten Koeffizienten. Benutzen Sie dazu die Matrizenschreibweise.
+ 
+\begin{iii}
+\item $ \left\{\begin{array}{rlll}
+x'(t) & =\,4\,x(t)+5\,y(t) & , & x(0)=3\;, \\ 
+y'(t) & =-x(t)-2\,y(t) & , & y(0)=1\;
+\end{array}\right.$
+\item $ \left\{\begin{array}{rlll}
+x'(t) & =3\,x(t)-5\,y(t) & , & x(0)=-20\;, \\ 
+y'(t) & =5\,x(t)-3\,y(t) & , & y(0)=-24\;
+\end{array}\right.$
+\item $ \left\{\begin{array}{rlll}
+x'(t) & =2\,x(t)-5\,y(t)\;, \\ 
+y'(t) & =\;\;\,x(t)+4\,y(t)\;.
+\end{array}\right.$
+\end{iii}
+}
+
+\Loesung{
+\begin{iii}
+\item  Das Differentialgleichungssystem: \ \ $\begin{pmatrix} x(t) \\ y(t) \end{pmatrix}' = \begin{pmatrix} 4 & 5 \\ -1 & -2 \end{pmatrix}\begin{pmatrix} x(t) \\ y(t) \end{pmatrix}$ \ \ hat die charakteristische Gleichung 
+\[
+\det\begin{pmatrix} 4-\lambda & 5 \\ -1 & -2-\lambda \end{pmatrix} = \lambda^{2}-2\,\lambda-3 = 0 \,\Rightarrow\, \lambda_{1}=-1\;,\;\;\lambda_{2}=3\ . 
+\]
+
+Eigenvektor zum Eigenwert \ $\lambda_{1}=-1$\ : 
+\[
+\begin{pmatrix} 5 & 5 \\ -1 & -1 \end{pmatrix}\begin{pmatrix} v_{1} \\ v_{2} \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \,\Rightarrow\, v_{1}=-v_{2} \quad \text{also z.\,B.}\quad
+\vec{v} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}\ . 
+\]
+
+Eigenvektor zum Eigenwert \ $\lambda_{2}=3$\ : 
+\[
+\begin{pmatrix} 1 & 5 \\ -1 & -5 \end{pmatrix} \begin{pmatrix} w_{1} \\ w_{2} \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \,\Rightarrow\, w_{1}=-5w_{2} \quad\text{also z.\,B.}\quad \vec{v} =\begin{pmatrix} -5 \\ 1 \end{pmatrix} \;. 
+\]
+
+Damit lautet die allgemeine Lösung 
+\[
+\underline{\;\begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = a\,\begin{pmatrix} -1 \\ 1 \end{pmatrix} \EH{-t} + b\,\begin{pmatrix} -5 \\ 1 \end{pmatrix} \EH{3t}\;,\;\;a,b\in\R\;}\;. 
+\]
+
+Einsetzen der Anfangswerte\ \ $x(0)=3$\ \ und\ \ $y(0)=1$\ : 
+\[
+\begin{pmatrix}
+3 \\ 
+1
+\end{pmatrix} =a\begin{pmatrix}
+-1 \\ 
+1
+\end{pmatrix} + b\,\begin{pmatrix}
+-5 \\ 
+1
+\end{pmatrix}
+\,\Rightarrow\, a=2\;,\;\;b=-1\ . 
+\]
+Lösung des Anfangswertproblems: 
+\[
+\underline{\underline{\;\begin{pmatrix} x(t) \\ y(t) \end{pmatrix}_{\text{AWP}} = \begin{pmatrix} -2 \\ 2 \end{pmatrix} \EH{-t} + 
+\begin{pmatrix} 5 \\ -1 \end{pmatrix}\EH{3t}\ }}\ . 
+\]
+
+
+\item  Das Dgl.--System:\ \ \ $\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}' = \begin{pmatrix}
+3 & -5 \\ 
+5 & -3
+\end{pmatrix}\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}
+ $\ \ \ hat die charakteristische Gleichung 
+\[
+\det \begin{pmatrix}
+3-\lambda & -5 \\ 
+5 & -3-\lambda
+\end{pmatrix}
+ =\lambda ^{2}+16=0 \,\Rightarrow\, \lambda _{1,2}=\pm 4\,
+\text{i}\;. 
+\]
+
+Eigenvektor zum Eigenwert \ $\lambda _{1}=4\,\imag$\ : 
+\[
+\begin{pmatrix}
+3-4\,\text{i} & -5 \\ 
+5 & -3-4\,\text{i}
+\end{pmatrix}\begin{pmatrix}
+v_{1} \\ 
+v_{2}
+\end{pmatrix}=\begin{pmatrix}
+0 \\ 
+0
+\end{pmatrix} \,\Rightarrow\, \text{z.\,B.}\quad 
+\vec{v}=\begin{pmatrix}
+5 \\ 
+3
+\end{pmatrix} + \begin{pmatrix}
+0 \\ 
+-4
+\end{pmatrix} \,\text{i}\ . 
+\]
+
+Der Eigenvektor zum Eigenwert \ \ $\lambda _{2}=\bar{\lambda}_{1}$ \ ist \ 
+$
+\vec{w}=\overline{\vec{v}}$\ , somit ist die Menge aller komplexen Lösungen wie folgt beschrieben:
+
+\[\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}=c_1\EH{4it}\vec{v}+c_2\EH{-4it}\vec{w},\quad c_1,c_2\in\mathbb{C}\]
+
+Eine komplexe Lösung ist 
+\begin{align*}
+\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}  &=  \left[ \begin{pmatrix}
+5 \\ 
+3
+\end{pmatrix}+\begin{pmatrix}
+0 \\ 
+-4
+\end{pmatrix} \,\text{i}\right] \cdot \,\text{e}^{\text{i}\,4t} \\ 
+ = & \left[ \begin{pmatrix}
+5 \\ 
+3
+\end{pmatrix} + \begin{pmatrix}
+0 \\ 
+-4
+\end{pmatrix} \,\text{i}\right] \cdot \big[\cos (4t)+\,\text{i}\,\sin (4t)\big] \\ 
+ = & \left[ \begin{pmatrix}
+5 \\ 
+3
+\end{pmatrix} \cos (4t)-\begin{pmatrix}
+0 \\ 
+-4
+\end{pmatrix} \sin (4t)\right] +\,\text{i\thinspace }\left[ \begin{pmatrix}
+5 \\ 
+3
+\end{pmatrix} \sin (4t)+
+\begin{pmatrix}
+0 \\ 
+-4
+\end{pmatrix}
+ \cos (4t)\right] \;.
+\end{align*}
+Da der Real-- und Imaginärteil unabhängige Lösungen des Dgl.--Systems sind, lautet die allgemeine (reelle) Lösung 
+\begin{align*}
+\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}
+  = & a\cdot \left[  
+\begin{pmatrix}
+5 \\ 
+3
+\end{pmatrix}
+ \cos (4t)+ 
+\begin{pmatrix}
+0 \\ 
+4
+\end{pmatrix}
+ \sin (4t)\right] +b\cdot \left[  
+\begin{pmatrix}
+5 \\ 
+3
+\end{pmatrix}
+ \sin (4t)+ 
+\begin{pmatrix}
+0 \\ 
+-4
+\end{pmatrix}
+ \cos (4t)\right] \\ 
+ = &  
+\begin{pmatrix}
+5a \\ 
+3a-4b
+\end{pmatrix}
+ \cos (4t)+ 
+\begin{pmatrix}
+5b \\ 
+4a+3b
+\end{pmatrix}
+ \sin (4t)\;,\;\;a,b\in \R\;.
+\end{align*}
+
+Aus den Anfangswerten $x(0)=-20\;,\;\;y(0)=-24\;$ folgt $a=-4$  und $b=3$.
+
+Lösung des Anfangswertproblems: 
+\[
+\underline{\underline{\; 
+\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}
+ _{\text{AWP}}= 
+\begin{pmatrix}
+-20 \\ 
+-24
+\end{pmatrix}
+ \cos (4t)+ 
+\begin{pmatrix}
+15 \\ 
+-7
+\end{pmatrix}
+ \sin (4t)\;}}\;. 
+\]
+
+
+\item  Das Dgl.--System:\ \ \ $
+\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}
+ '=
+\begin{pmatrix}
+2 & -5 \\ 
+1 & 4
+\end{pmatrix}
+\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}
+ $\ \ \ hat die Eigenwerte und Vektoren 
+\[
+\lambda _{1,2}=3\pm 2\,\text{i\ \ ,\ \ \ }
+\vec{v}_{1}=\begin{pmatrix}
+-5 \\ 
+1
+\end{pmatrix}
++\begin{pmatrix}
+0 \\ 
+2
+\end{pmatrix}
+ \,\text{i}\;\;,\;\;\vec{v}_{2}=\overline{\vec{v}}_{1}\;. 
+\]
+Analog zu ii) ergibt sich damit 
+\begin{align*}
+\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}\\
+&= \left[\begin{pmatrix} -5 \\1\end{pmatrix}
++ \begin{pmatrix}0\\2\end{pmatrix}\imag \right] \EH{(3+2\imag)t}\\
+=& \left[\begin{pmatrix} -5 \\1\end{pmatrix}
++ \begin{pmatrix}0\\2\end{pmatrix}\imag \right] \EH {3t}(\cos(2t) + \imag \sin(2t))\\
+=& \begin{pmatrix} -5 \cos(2t)\\\cos(2t)-2\sin(2t)\end{pmatrix} \EH{3t}
++ \begin{pmatrix}-5\sin(2t)\\\sin(2t)+2\cos(2t)\end{pmatrix}\EH{3t}\,\imag
+\end{align*}
+und daraus als Linearkombination von Real- und Imagin\"arteil die allgemeine L\"osung:
+\begin{align*}
+\begin{pmatrix} x(t)\\y(t)\end{pmatrix}
+ =\,\text{e}^{3t}\cdot \left[  
+\begin{pmatrix}
+-5a \\ 
+a+2b
+\end{pmatrix}
+ \cos (2t)+ 
+\begin{pmatrix}
+-5b \\ 
+-2a+b
+\end{pmatrix}
+ \sin (2t)\right] \;,\;\;a,b\in \R.
+\end{align*}
+\newline
+
+Alternativ kann man die Eigenvektoren als
+\[\vec{v}_{1}=\begin{pmatrix}
+-1+2i \\ 1
+\end{pmatrix},
+\;\vec{v}_{2}=\overline{\vec{v}}_{1}\;. 
+\]
+
+wählen.
+Die allgemeine komplexe Lösung lautet dann
+
+\begin{align*}
+\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}
+= c_1\begin{pmatrix} -1+2\imag \\1\end{pmatrix}
+ \EH{(3+2\imag)t}+c_2 \begin{pmatrix} -1-2\imag \\1\end{pmatrix}
+ \EH{(3-2\imag)t}\qquad\\
+= \begin{pmatrix} -c_1+2\imag c_1 \\c_1\end{pmatrix}
+\EH {3t}(\cos(2t) + \imag \sin(2t))+\begin{pmatrix} -c_2-2\imag c_2 \\c_2\end{pmatrix}
+\EH {3t}(\cos(2t) - \imag \sin(2t))\\
+= \EH{3t}\left(\cos(2t)\begin{pmatrix} -(c_1+c_2) +2\imag(c_1-c_2)\\c_1+c_2\end{pmatrix} 
++ \sin(2t)\begin{pmatrix}-\imag(c_1-c_2)-2(c_1+c_2)\\\imag(c_1-c_2)\end{pmatrix}\right)
+\end{align*}
+
+Mit \(a=c_1+c_2\) und \(b=i(c_1-c_2)\) folgt für \(c_1=\overline{c_2}\)   \(a,b\in\mathbb{R}\).
+Somit erhät man eine andere Form für die allgemeine Lösung des DGL Systems:
+\[\begin{pmatrix}
+x(t) \\ 
+y(t)
+\end{pmatrix}
+=\EH{3t}\left(\cos(2t)\begin{pmatrix} -a +2b\\a\end{pmatrix} 
++ \sin(2t)\begin{pmatrix}-b-2a\\b\end{pmatrix}\right)\]
+
+\end{iii}
+}
+
+\ErgebnisC{AufgsysdglSystLoes001}
+{
+\textbf{i)} $ \begin{pmatrix} x(t)\\y(t)\end{pmatrix} = a\begin{pmatrix}-1\\1\end{pmatrix} \EH{-t} +
+b\begin{pmatrix} -5\\1\end{pmatrix}\EH{3t}$, 
+\textbf{ii)} $\begin{pmatrix} x(t)\\y(t)\end{pmatrix} = \begin{pmatrix}5a\\3a-4b\end{pmatrix} \cos(4t) +
+\begin{pmatrix} 5b\\ 4a+3b\end{pmatrix}\sin(4t)$, 
+\textbf{iii)} $\begin{pmatrix} x(t)\\y(t)\end{pmatrix}
+ =\,\text{e}^{3t}\cdot \left[  
+\begin{pmatrix}
+-5a \\ 
+a+2b
+\end{pmatrix}
+ \cos (2t)+ 
+\begin{pmatrix}
+-5b \\ 
+-2a+b
+\end{pmatrix}
+ \sin (2t)\right]$
+}
+

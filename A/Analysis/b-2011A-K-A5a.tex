@@ -1,0 +1,61 @@
+\Aufgabe[e]{Newton-Verfahren}
+{
+Zur Berechnung eines kritischen Punktes der Funktion
+\[f \left( x , y \right) = 
+\int_0^x \left(\frac{\sin\left(\pi t \right)}{\pi t} - \frac{1}{3}\right)\: 
+\mathrm{d}t+\frac{1}{\pi^2}\sin\left(\pi \frac{x}{y}\right)\]
+soll das Newton-Verfahren angewandt werden.  
+Bestimmen Sie mit Hilfe \linebreak[4] \textbf{eines Schrittes} des 
+Newton-Verfahrens eine N\"aherung f\"ur einen kritischen Punkt von $f$ in der N\"ahe von 
+\(\left(1,2\right)\). \\[0.5ex] \textbf{Hinweis:} Es gibt keine geschlossene 
+Darstellung des Integrals.
+}
+\Loesung{
+Mit dem Newton-Verfahren einen kritischen Punkt anzun\"ahern bedeutet, die Nullstellen des Gradienten anzun\"ahern.
+Die Iterationsvorschrift lautet dann
+$$
+\vec x^{k+1} = \vec x^k - \vec J^{-1}_{\nabla f}(\vec x^k) \cdot \nabla f(\vec x^k)
+$$
+Wir w\"ahlen den Startvektor $\vec x^0 = (1,2)^T$.
+Der Gradient ergibt sich aus den ersten partiellen Ableitungen:
+\[f_{x}=\frac{\sin\left(\pi x\right)}{\pi x}-\frac{1}{3}+\frac{1}{\pi y}\cos\left(\pi \frac{x}{y}\right)\,,\]
+\[f_{y}=\frac{-x}{\pi y^2}\cos\left(\pi \frac{x}{y}\right).\]
+Es gilt dann:
+$$
+\nabla f(1,2) = \begin{pmatrix}-\dfrac{1}{3}\\[2ex] 0\end{pmatrix}.
+$$
+Die Jacobi-Matrix des Gradienten, ergibt sich dann aus den zweiten partiellen Ableitungen:
+\[f_{xx}=\frac{\cos\left(\pi x \right)}{x}-\frac{\sin\left(\pi x \right)}{\pi x^2}-\frac{1}{y^2}\sin\left(\pi \frac{x}{y}\right)\,,\]
+\[f_{xy}=\frac{-1}{\pi y^2}\cos\left(\pi \frac{x}{y}\right)+\frac{x}{y^3}\sin\left(\pi \frac{x}{y}\right)\,,\]
+\[f_{yy}=\frac{2x}{\pi y^3}\cos\left(\pi \frac{x}{y}\right)-\frac{x^2}{y^4}\sin\left(\pi \frac{x}{y}\right).\]
+Damit erhalten wir die Jacobi-Matrix 
+$$
+\vec J_f (1,2) = \begin{pmatrix}\dfrac{-5}{4}&\dfrac{1}{8}\\[2ex] \dfrac{1}{8}&\dfrac{-1}{16}\end{pmatrix}
+$$
+Es gilt dann:
+\begin{align*}
+\vec x^1 &= \vec x^0 \underbrace{- \vec J^{-1}_{\nabla  f}(\vec x^0) \cdot \nabla f(\vec x^0)}_{\vec{\Delta x}}
+\end{align*}
+mit der L\"osung $\vec{\Delta x}$ des linearen Gleichungssystems 
+$$\vec{J}_{\nabla \vec f}(\vec x^0)\vec{\Delta x}=-\nabla f(\vec x^0):$$
+$$\begin{array}{rr|r|l}
+\dfrac{-5}{4} & \dfrac{1}{8}   & \dfrac 13 &   \\[2ex]
+\dfrac{1}{8}  & \dfrac{-1}{16} &  0        & + \frac 1{10}\times I\\[2ex]\hline
+
+\dfrac{-5}{4} & \dfrac{1}{8}   & \dfrac 13 &   \\[2ex]
+    0         & \dfrac{-4}{80} & \dfrac 1{30}&                    
+
+\end{array}$$
+Daraus ergibt sich 
+$$\vec{\Delta x}=\begin{pmatrix}-1/3\\-2/3\end{pmatrix}$$ 
+und damit
+$$ \vec x^1=\begin{pmatrix}1\\2\end{pmatrix} - \frac 13\begin{pmatrix}1\\2\end{pmatrix} =  \begin{pmatrix}\dfrac{2}{3}\\[2ex] \dfrac{4}{3}\end{pmatrix}.$$
+
+}
+
+
+\ErgebnisC{Aufgb-2011A-K-A5a}
+{
+$f_{x}=\frac{\sin\left(\pi x\right)}{\pi x}-\frac{1}{3}+\frac{1}{\pi y}\cos\left(\pi \frac{x}{y}\right)\,,
+f_{y}=\frac{-x}{\pi y^2}\cos\left(\pi \frac{x}{y}\right)\,.$
+}

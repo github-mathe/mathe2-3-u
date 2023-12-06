@@ -1,0 +1,73 @@
+\Aufgabe[]{}{
+Gegeben sei das Anfangswertproblem
+%$$u''(t)-2u'(t)+u(t)=t+\cos(t)\cdot h(t-\pi)$$
+$$u''(t)-2u'(t)+u(t)=\cos(t)\cdot h(t-\pi)$$
+mit $u(0)=0$ und $u'(0)=0$. Dabei ist $h(t)$ die Heaviside-Funktion. 
+\begin{abc}
+\item Zeigen Sie, dass die L\"osung des Anfangswertproblems im Bildbereich der Laplace-Transformation die folgende Gestalt hat:
+%$$U(s)=\left( \frac 1{s^2} - \frac{s}{1+s^2}\EH{-s\pi}\right) \frac 1{(s-1)^2}$$
+$$U(s)=- \frac{s\, \EH{-s\pi}}{(1+s^2)(s-1)^2}$$
+\item Bestimmen Sie die L\"osung der Differentialgleichung $u(t)$ im Urbildbereich.
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Die Laplace-Transformierte des Anfangswertproblems ist
+%$$s^2U(s)-2sU(s)+U(s)=\frac 1{s^2}+\sL\{\cos(t)\cdot h(t-\pi)\}.$$
+$$s^2U(s)-2sU(s)+U(s)=\sL\{\cos(t)\cdot h(t-\pi)\}.$$
+F\"ur die Transformation des letzten Terms wird der Verschiebungssatz angewendet:
+\begin{align*}
+\sL\{\cos(t)\cdot h(t-\pi)\}=&\sL\{\cos(t-\pi+\pi)\cdot h(t-\pi)\}=\sL\{\cos(t+\pi)\}\EH{-s\pi}\\
+=& \sL\{-\cos(t)\}\EH{-s\pi}=\frac{-s}{1+s^2}\EH{-s\pi}.
+\end{align*}
+Damit ist die transformierte Differentialgleichung:
+%$$U(s)(s^2-2s+1)=\frac 1{s^2}-\frac{s}{1+s^2}\EH{-s\pi}.$$
+$$U(s)(s^2-2s+1)=-\frac{s}{1+s^2}\EH{-s\pi}.$$
+Die L\"osung im Bildbereich ist
+%$$U(s)=\frac 1{(s-1)^2}\left( \frac 1{s^2}-\frac{s}{1+s^2}\EH{-s\pi}\right).$$
+$$U(s)=-\frac{s}{(1+s^2)(s-1)^2}\EH{-s\pi}.$$
+\item Die R\"ucktransformation ergibt
+%\begin{align*}
+%u(t)=&\sL^{-1}\left\{\frac 1{(s-1)^2s^2}\right\} - \sL^{-1}\left\{\frac{s}{(s-1)^2(1+s^2)}\EH{-s\pi}\right\}\\
+%\end{align*}
+\begin{align*}
+u(t)=& - \sL^{-1}\left\{\frac{s}{(s-1)^2(1+s^2)}\EH{-s\pi}\right\}
+\end{align*}
+%Die Partialbruchzerlegung der beiden Terme ergibt
+%\begin{align*}
+%&&\frac 1{(s-1)^2s^2}=& \frac{A  }{s-1} + \frac{ B }{(s-1)^2} + \frac{C  }{s}+\frac{D  }{s^2}\\
+%&&=& \frac{(A+C)s^3+(-A+B-2C+D)s^2+(C-2D)s+D}{(s-1)^2s^2}\\
+%\Rightarrow&&A+C=&0,\, -A+B-2C+D=0,\, C-2D=0,\, D=1\\
+%\Rightarrow&&D=&1,\, C=2,\, A=-2,\, B=A+2C-D=1
+%\end{align*}
+%und
+Die Partialbruchzerlegung des Bruches ergibt
+\begin{align*}
+&&&\frac{s}{(s-1)^2(1+s^2)}\\
+&&=& \frac{E}{s-1}+\frac{F}{(s-1)^2}+\frac{G+Hs}{1+s^2}\\
+&&=& \frac{(E+H)s^3+(-E+F+G-2H)s^2+(E-2G+H)s-E+F+G}{(s-1)^2(1+s^2)}\\
+\Rightarrow&&E+H=&0,\, -E+F+G-2H=0,\, E-2G+H=1,\, -E+F+G=0\\
+\Rightarrow&&H=&0,\, E=0,\, G=-\frac 12,\, F=\frac 12
+\end{align*}
+Damit ist dann
+\begin{align*}
+u(t)=&%\sL^{-1}\left\{ \frac{-2}{s-1}+\frac 1{(s-1)^2}+\frac 2{s}+\frac 1{s^2}\right\} + 
+-\frac 12 \sL^{-1}\left\{ \left( \frac 1 {(s-1)^2}-\frac 1{1+s^2}\right)\EH{-\pi s}\right\}\\
+=& %-2\EH t + t\EH t+2 +t + 
+-\frac 12 \left[t\EH t-\sin(t)\right]_{t\leftarrow t-\pi}h(t-\pi)\qquad\text{ (Verschiebungssatz)}\\
+=&% (t-2)\EH t + 2 + t +
+ -\frac 12\left[ (t-\pi)\EH{t-\pi}-\sin(t-\pi)\right] h(t-\pi)\\
+=& %(t-2)\EH t + 2+t + 
+-\frac 12\left[ (t-\pi)\EH{t-\pi}+\sin(t)\right]h(t-\pi)\\
+=&\left\{\begin{array}{ll}
+0&\text{ f\"ur } t\leq \pi\\
+-\frac{1}2\left[(t-\pi)\EH{t-\pi}+\sin(t)\right]&\text{ f\"ur } t>\pi.
+\end{array}\right.
+\end{align*}
+
+\end{abc}
+}
+
+
+
+

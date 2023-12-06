@@ -1,0 +1,105 @@
+\Aufgabe[e]{Partialbruchzerlegung}{
+Berechnen Sie mit Hilfe der Partialbruchzerlegung die unbestimmten
+Integrale folgender Funktionen:
+\begin{tabbing}
+\hspace*{1em} \= a) $\displaystyle f(x)=\dfrac{x^2-x-1}{(x-1)(x-2)(x-3)}$, 
+\hspace*{1em} \= b) $\displaystyle f(x)=\dfrac{x^2}{(x-3)^3}$, \\[1ex]
+ \> c) $\displaystyle f(x)=\dfrac{x^2+1}{(x+1)(x-2)^2}$,
+ \> d) $\displaystyle f(x)=\dfrac{1}{(x-1)(x^2+x+1)}$.
+\end{tabbing}
+}
+
+
+\Loesung{
+\textbf{Zu a)} Die Funktion $f$ l\"asst sich darstellen als
+\[f(x) = \dfrac{x^2-x-1}{(x-1)(x-2)(x-3)}
+  = \dfrac{A}{x-1} + \dfrac{B}{x-2} + \dfrac{C}{x-3} \,.\]
+
+Durch Multiplikation mit dem Hauptnenner erh\"alt man
+  \[
+   x^2-x-1=A(x-2)(x-3)+B(x-1)(x-3)+C(x-2)(x-1)
+  \]
+Einsetzen der Nullstellen des Hauptnenners in die Gleichung liefert:\\
+f\"ur \(x=1:\quad -1=A\cdot (-1)\cdot(-2) \Rightarrow A=-\frac12\)\\
+f\"ur \(x=2:\quad B = -1 \)\\
+f\"ur \(x=3:\quad 5 = C\cdot 2 \Rightarrow C = \frac52\,.\)\\
+  
+Es folgt
+\[ \int f(x)\,\d x =-\dfrac{1}{2} \ln |x-1| - \ln |x-2| + \dfrac{5}{2} \ln |x-3| + C\,.\]
+
+
+\bigskip
+\textbf{Zu b)} Die Funktion $f$ l\"asst sich darstellen als
+\[ f(x)=\frac{x^2}{(x-3)^3}=\frac{A}{x-3}+\frac{B}{(x-3)^2} 
++\frac{C}{(x-3)^3}\,.\]
+
+Durch Multiplikation mit dem Hauptnenner erh\"alt man
+\[x^2 = A(x-3)^2+B(x-3)+C\]
+Es folgt
+Einsetzen der Nullstelle des Hauptnenners in die Gleichung liefert f\"ur \(x=3\) den Wert \(C=9\) und Koeffizientenvergleich f\"ur \(x^2\) liefert \(A=1\). Nun w\"ahlen wir noch \(x=4\) und erhalten die Gleichung \(16 = A+B+C \Rightarrow B = 16\).
+\[\int f(x) \,\d x =\ln |x-3| - \dfrac{6}{x-3} - \dfrac{9}{2(x-3)^2} + C\,.\]
+
+\bigskip
+\textbf{Zu c)} Hier existiert eine Partialbruchzerlegung der Form
+\[ f(x) = \dfrac{x^2+1}{(x+1)(x-2)^2} = \dfrac{A}{x+1} +  \dfrac{B}{x-2}
+  + \dfrac{C}{(x-2)^2}\,.\]
+ 
+Durch Multiplikation mit dem Hauptnenner erh\"alt man
+ \[x^2+1 = A(x-2)^2+B(x+1)(x-2)+C(x+1)\]
+ 
+Einsetzen der Nullstellen des Hauptnenners in die Gleichung liefert:\\
+f\"ur \(x=-1:\quad 2 = A\cdot 9 \Rightarrow A = \frac29\)\\
+f\"ur \(x=2:\quad 5 = C \cdot 3 \Rightarrow C = \frac53\,.\)\\
+
+Mithilfe des Koeffizientenvergleichs f\"ur die Potenz \(x^2\) erh\"alt man \(1 = A+ B \Rightarrow B = 1- A = \frac79\).
+ 
+Folglich ist 
+\[f(x)=\frac{2}{9(x+1)}+\frac{7}{9(x-2)} +\frac{5}{3(x-2)^2}\,, \] 
+und
+\[\int f(x) \,\d x=\frac{2}{9} \ln |x+1| +\frac{7}{9} \ln|x-2|
+  - \frac{5}{3(x-2)} + C\,.\]
+
+\bigskip
+\textbf{Zu d)} Der Faktor $x^2+x+1$ hat hier keine reellen Nullstellen und kann
+deshalb nicht in Linearfaktoren zerlegt werden (zumindest nicht in $\R$).
+Deshalb benutzt man den Ansatz
+\[ f(x)=\dfrac{1}{(x-1)(x^2+x+1)} = \dfrac{A}{x-1} + \dfrac{Bx+C}{x^2+x+1}\,.\]
+
+Durch Multiplikation mit dem Hauptnenner erh\"alt man
+\[ 1 = A(x^2+x+1)+(Bx+C)(x-1)\]
+
+Einsetzen der reellen Nullstelle des Hauptnenners in die Gleichung liefert 
+f\"ur \(x=1\) die Gleichung \(1 = 3\cdot A \Rightarrow A = \frac13\) und Koeffizientenvergleich f\"ur \(x^2\) liefert \(0 = A+B \Rightarrow B = -\frac13\). Nun w\"ahlen wir noch \(x = 0\) und erhalten \( 1=A-C  \Rightarrow C =A-1=-\frac23\,.\)\\
+
+Damit ist
+$f(x)= \dfrac{1}{3(x-1)}-\dfrac{x+2}{3(x^2+x+1)}$. 
+Das Integral \"uber $\dfrac{x+2}{x^2+x+1}$ berechnet man mit der 
+Substitution $u=x+\dfrac{1}{2}$, 
+\begin{align*}
+\int \dfrac{x+2}{x^2+x+1} \d x & = \int \dfrac{x+2}{(x+\frac 12)^2 + \frac34} \,\d x \\
+  & = \int \dfrac{u+\frac{3}{2}}{u^2+\frac{3}{4}} \d u \\
+  & = \frac 12 \int \frac{2u}{u^2+\frac 34}\d u + \frac 32 \int\frac{1}{u^2+\frac 34}\d u \\
+  & = \frac 12 \ln \left|u^2+\frac 34\right| + \frac 32 \cdot \frac 43\int \frac 1{\frac{4u^2}3+1}\d
+  u, \quad \text{substituiere }z=2u/\sqrt 3\\
+  & = \frac 12 \ln \left|u^2+\frac 34\right| + \sqrt 3\int \frac 1{z^2+1}\d z\\
+  & = \frac 12 \ln \left|u^2+\frac 34\right| + \sqrt 3\arctan(z) + C\\
+  & = \dfrac{1}{2} \ln\left|u^2+\frac{3}{4}\right| + \sqrt{3}
+   \arctan  \left(\frac{2u}{\sqrt3}  \right) + C \\
+  & = \frac 12 \ln(x^2+x+1) + \sqrt3 \arctan\left(\dfrac{2x+1}{\sqrt3}\right) + C
+\end{align*}
+Damit gilt
+\[ \int f(x)\,\d x=\dfrac{1}{3} \ln |x-1|-\dfrac{1}{6} \ln (x^2+x+1)
+   - \dfrac{1}{\sqrt{3}} \arctan \dfrac{2x+1}{\sqrt{3}} + C\,.\]
+}
+
+\ErgebnisC{analysPartBrch005}
+{
+\begin{abc}\item $-\dfrac{1}{2} \ln |x-1| - \ln |x-2| + \dfrac{5}{2} \ln |x-3| + C$
+\item $\ln |x-3| - \dfrac{6}{x-3} - \dfrac{9}{2(x-3)^2} + C$
+\item $\frac{2}{9} \ln |x+1| +\frac{7}{9} \ln|x-2|
+  - \frac{5}{3(x-2)} + C$
+\item $\dfrac{1}{3} \ln |x-1|-\dfrac{1}{6} \ln (x^2+x+1)
+   - \dfrac{1}{\sqrt{3}} \arctan \dfrac{2x+1}{\sqrt{3}} + C$
+\end{abc}
+
+}

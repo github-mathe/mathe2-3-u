@@ -1,0 +1,84 @@
+\Aufgabe[e]{Kurvendiskussion}{
+Bestimmen Sie den maximalen Definitionsbereich, die Symmetrie, alle Nullstellen, sowie Art und Lage
+der kritischen Punkte und Wendepunkte der rellen Funktion
+$$  f(x) =x \sqrt{16-x^2}.$$
+
+}
+
+\Loesung{
+\begin{iii}
+\item Der maximale Definitionsbereich ist \ $D = [-4,4]$ .
+\item Die Funktion \ $f$ \ ist ungerade bzw. punktsymmetrisch zum Ursprung:
+$$
+  f(x) = x\sqrt{16-x^2} = -(-x)\sqrt{16-(-x)^2}=-f(-x)\ .
+$$
+\item  Die Nullstellen sind 
+\begin{align*}
+&&0=& x \sqrt{16-x^2}\\
+\Leftrightarrow&&x=&0\,\text{ oder }\, 16=x^2\\
+\Leftrightarrow&&x\in& \{0,\, 4,\, -4\}
+\end{align*}
+\item Kritische Punkte liegen bei $x\in D$ mit: 
+\begin{align*}
+&&0=& f'(x) = \sqrt{16-x^2}-\frac{x\cdot x}{\sqrt{16-x^2}}=\frac{16-2x^2}{\sqrt{16-x^2}}\\
+\Leftrightarrow &&\pm 4 =& \sqrt 2 x \quad\Leftrightarrow \quad x=\pm 2\sqrt{2}
+\end{align*}
+Die Funktion $f$ selbst hat an den Grenzen des Definitionsbereiches $D$ sowie im Ursprung den Wert
+$f(0)=f(\pm 4)=0$ 
+F\"ur alle anderen $x>0$ ist $f(x)>0$. Also muss im Punkt $x=+2\sqrt 2$ das absolute (und damit auch
+ein relatives) Maximum $f(2\sqrt 2)=8$ der Funktion liegen. \\
+Mit der Symmetrie der Funktion folgt, dass in $x=-2\sqrt 2$ ein Minimum $f(-2\sqrt 2)=-8$ liegt. 
+\item  Wendepunkte und Konvexität:\\
+Zun\"achst ist 
+\begin{align*}
+f''(x)=& \frac{-4x\sqrt{16-x^2}-(16-2x^2)\cdot (-2x)\frac 12(16-x^2)^{-1/2}}{16-x^2}\\
+=& \frac{-4x(16-x^2)+x(16-2x^2)}{(16-x^2)^{3/2} }\\
+=& \frac{2x^3-48x}{(16-x^2)^{3/2}}
+\end{align*}
+Die einzige reelle Nullstelle des Z\"ahlers im Definitionsbereich $]-4,4[$ ist $x=0$ und es gilt
+$$
+   f''(x)=	\begin{cases}
+					>0 & \text{für }x \in ]-4,0[\\
+					<0 & \text{für }x \in ]0,4[ 
+				\end{cases}
+$$
+Also liegt in $(0,0)$ ein Wendepunkt, links davon ist $f$ konvex und rechts davon konkav. \\
+
+\unitlength1cm
+\begin{picture}(2.5,9)
+\put(5.5,4){\begin{picture}(0,0)\unitlength1cm
+\thinlines
+\put( -4.5,0){\vector(1,0){10}}
+\multiput( -4 , -0.1)(1,0){9}{\line(0,1){0.2}}
+\put(.9,-0.4){{ 1}}
+\put( 0,-4.25){\vector(0,1){8.75}}
+\multiput( -0.1,-4)(0,1){9}{\line(1,0){0.2}}
+\put(-0.5,.9){{ 2}}
+
+\thicklines
+\bezier{200}( -4.000, -0.002)( -4.000, -2.748)( -3.333, -3.685)
+\bezier{200}( -3.333, -3.685)( -3.047, -4.089)( -2.667, -3.975)
+\bezier{200}( -2.667, -3.975)( -2.365, -3.885)( -2.000, -3.464)
+\bezier{200}( -2.000, -3.464)( -1.697, -3.114)( -1.333, -2.514)
+\bezier{200}( -1.333, -2.514)( -1.041, -2.032)( -0.667, -1.315)
+\bezier{200}( -0.667, -1.315)( -0.445, -0.891)(  0.000,  0.000)
+\bezier{200}(  0.000,  0.000)(  0.445,  0.891)(  0.667,  1.315)
+\bezier{200}(  0.667,  1.315)(  1.041,  2.032)(  1.333,  2.514)
+\bezier{200}(  1.333,  2.514)(  1.697,  3.114)(  2.000,  3.464)
+\bezier{200}(  2.000,  3.464)(  2.365,  3.885)(  2.667,  3.975)
+\bezier{200}(  2.667,  3.975)(  3.047,  4.089)(  3.333,  3.685)
+\bezier{200}(  3.333,  3.685)(  4.000,  2.748)(  4.000,  0.002)
+
+\end{picture}}
+\end{picture}
+
+\end{iii}
+}
+
+\ErgebnisC{AufganalysKurvDisk001}
+{
+$D(f)= [-4,4]$, $f$ ist ungerade, Nullstellen: $x=0,\pm 4$, Extrema bei $x=\pm 2\sqrt 2$, \\
+Wendepunkt
+bei $x=0$
+
+}

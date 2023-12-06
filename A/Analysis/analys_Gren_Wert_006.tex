@@ -1,0 +1,117 @@
+\Aufgabe[e]{Definition of limit}{
+\begin{abc}
+\item Recapitulate the definition of limit and show that the sequence $a_n = \displaystyle\frac{1}{n}$ has the limit $a=0$, i.e.\ $\forall k \in \N$ there is a number $N\in \mathbb R$ such that for all $n\in \N$ with $n>N$ it holds $|a_n-a|< 10^{-k}$.
+\item Compute the limit $a = \lim\limits_{n\rightarrow \infty}a_n$ of the following sequences and specify which rule for the limit has been used for the computation (e.g.\ addition or product rule, sandwich theorem, product of bounded and zero sequence etc.):
+%\setlength{\columnsep}{0.2cm}
+%\begin{multicols}{2}
+%\begin{iii}
+%\item $a_n=\dfrac{n^2+5n}{3n^2+1}$.
+%\item $a_n=\log_{10}(10n^2-2n)-\log_{10}(n^2+1)$.
+%\item $a_n=\dfrac{(n+1)!}{n!-(n+1)!}$.
+%\item $a_n=\left(1+\dfrac{1}{n}\right)^{3n}$.
+%\item $a_n=\dfrac{\cos{n}}{n}$.
+%\item $a_n=\sqrt{n+1}-\sqrt{n}$.
+%\item $a_n=\dfrac{2^n}{n!}$.
+%\end{iii}
+%\end{multicols}
+	$$
+	\begin{array}{lllll}
+	\textbf{i)} & a_n = \dfrac{n^2+5n}{3n^2+1} & &
+	\textbf{ii)} &a_n = \log_{10}(10n^2-2n)-\log_{10}(n^2+1)\\
+	& & & &\\
+	\textbf{iii)} & a_n=\dfrac{(n+1)!}{n!-(n+1)!} & &
+	\textbf{iv)} & a_n=\left(1+\dfrac{1}{n}\right)^{3n}\\
+	& & & &\\
+	\textbf{v)} & a_n=\dfrac{\cos{n}}{n} & &
+	\textbf{vi)} & a_n=\sqrt{n+1}-\sqrt{n} \\
+	& & & &\\
+	\textbf{vii)} & a_n=\dfrac{2^n}{n!} 
+	\end{array}
+        $$
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item
+It has to be shown that for all $k \in \N$ there is a $N \in \mathbb R$, such that
+\begin{align*}
+|n^{-1} - 0| < 10^{-k}, \, \forall n>N.
+\end{align*}
+Take $N =10^k$.
+\item
+It has been shown above that the limit
+\begin{align*}
+\lim\limits_{n\rightarrow\infty} \frac{1}{n} = 0.
+\end{align*}
+Adapting the result obtined in {\textbf a)}) it is also 
+\begin{align*}
+\lim\limits_{n\rightarrow\infty} \frac{1}{n^\alpha} = 0, \, \text{ for all } \alpha \in \mathbb R, \, \alpha > 0.
+\end{align*}
+We use also the continuity of some functions in the exercises, which is assumed as given.
+\begin{iii}
+\item
+Dividing numerator and denominator of the two terms by $n^2$
+\begin{align*}
+\dfrac{1 + \frac{5}{n}}{3+\frac{1}{n^2}}
+\end{align*}
+	The limit of the nominator is 1 and the limit of the denominator is 3. The quotient rule for limits yields the limit $a=\frac{1}{3}$.
+\item
+\begin{align*}
+\log_{10}(10n^2-2n)-\log_{10}(n^2+1) &= \log_{10} {\frac{10n^2-2n}{n^2+1}}\\
+&= \log_{10} {\frac{10-\frac{2}{n^2}}{1+\frac{1}{n^2}}}.
+\end{align*}
+Using the product and addition rule you can show the limit of the sequence $b_n = \frac{10n^2-2n}{n^2+1}$
+\begin{align*}
+b = \lim\limits_{n\rightarrow \infty} {\frac{10-\frac{2}{n^2}}{1+\frac{1}{n^2}}}=10.
+\end{align*}
+Since the function $\log_{10}(x)$ is continuous in its domain, i.e.\ for $x>0$, the limit is
+\begin{align*}
+a = \lim\limits_{n\rightarrow \infty}\log_{10} b_n = \log_{10} b = 1.
+\end{align*}
+\item
+Manipulating the factorial function it is
+\begin{align*}
+\frac{(n+1)!}{n!-(n+1)!} = \frac{(n+1)n!}{n!-(n+1)n!} = \frac{(n+1)}{-n} = -(1+\frac{1}{n}).
+\end{align*}
+Using the addition rule, the limit is
+\begin{align*}
+a = \lim\limits_{n\rightarrow \infty}\frac{(n+1)!}{n!-(n+1)!} = \lim\limits_{n\rightarrow \infty}-(1+\frac{1}{n}) = -1.
+\end{align*}
+\item
+It is
+\begin{align*}
+\left(1+\dfrac{1}{n}\right)^{3n} = \left(\left(1+\dfrac{1}{n}\right)^n\right)^3
+\end{align*}
+The limit of the sequence $b_n = \left(1+\dfrac{1}{n}\right)^n$ is
+\begin{align*}
+b = \lim\limits_{n\rightarrow \infty}\left(1+\dfrac{1}{n}\right)^n = \operatorname{e}.
+\end{align*}
+The product rule gives
+\begin{align*}
+\lim\limits_{n\rightarrow \infty} b_n^3 = \lim\limits_{n\rightarrow \infty} b_n \lim\limits_{n\rightarrow \infty} b_n \lim\limits_{n\rightarrow \infty} b_n = b^3 = \operatorname{e}^3.
+\end{align*}
+It can be also used the continuity of the function $x^3$ to show the same result.
+\item
+The sequence
+\begin{align*}
+a_n = \frac{\cos{n}}{n}
+\end{align*}
+can be interpreted as the product $a_n = b_n c_n$ of a bounded sequence $b_n = \cos{n}$ and a zero sequence $c_n = \frac{1}{n}$. Therefore, the product is a zero sequence and the limit is $a=0$.
+\item
+It is
+\begin{align*}
+\sqrt{n+1}-\sqrt{n} &= \frac{\left(\sqrt{n+1}-\sqrt{n}\right) \left(\sqrt{n+1}+\sqrt{n}\right)}{\sqrt{n+1}+\sqrt{n}}\\
+&=\frac{1}{\sqrt{n+1}+\sqrt{n}} = \frac{\frac{1}{\sqrt{n}}}{\sqrt{1+\frac{1}{n}}+1.
+\end{align*}
+Using the product and addition rule we get the linit $a=0$.
+\item
+The sequence $a_n = \dfrac{2^n}{n!}$ can be bounded from above (for $n>3$) and below in the following way
+\begin{align*}
+0 \leq \frac{2^n}{n!} = \frac{\overbrace{2\cdot 2\cdot 2\dots 2}^{n}}{1\cdot 2\cdot 3\dots n} \leq \frac{2}{1}\cdot \frac{2}{2}\cdot \underbrace{\frac{2}{3}\cdot\frac{2}{4}\dots\frac{2}{n-1}}_{\leq 1} \cdot \frac{2}{n} \leq \frac{4}{n}.
+\end{align*}
+Since it is bounded from above and below by two zero sequences, the sandwich theorem gives the limit $a=0$.
+\end{iii}
+\end{abc}
+}
+

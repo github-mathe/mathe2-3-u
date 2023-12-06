@@ -1,0 +1,50 @@
+\Aufgabe[e]{Definitionsbereich der Lösung einer Dgl.}
+{
+\begin{abc}
+\item Bestimmen Sie die allgemeine Lösung der Differentialgleichung 
+\[
+y'(x)=2\,x\,y^2 
+\]
+und die spezielle Lösung für den Anfangswert \ $y(0)=4$\ .
+
+Wie groß ist der maximale Definitionsbereich dieser Lösung\thinspace ?\\
+\item Bestimmen Sie die allgemeine Lösung der Differentialgleichung
+	\[
+	\cos(x)\cdot y'(x) = \sin(x)\cdot y(x).
+\]
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Die Dgl. ist vom trennbaren Typ 
+\[
+	\int\frac{\text dy}{y^2} = \int2x\ \text dx \,\Rightarrow\, \frac{y^{-1}}{-1} = x^2+ C \quad\vee\quad y=0
+\]
+und hat die allgemeine Lösung 
+\[
+\underline{\;y(x)=\frac{-1}{x^2+C}\;\;,\;\;\;\;C\in\mathbb{R}\;\quad \text{bzw. } y=0} 
+\]
+
+Der Anfangswert \ $y(0)=4$ \ ergibt mit \ $C=-\frac{1}{4}$ \ die Lösung 
+\[
+\underline{\;y_{\text{AWP}}(x)=\frac{-1}{x^{2}-\frac{1}{4}}\;}\;. 
+\]
+Die Lösung ist nur im Bereich \ $\frac{-1}{2}<x<\frac{1}{2}$ \ definiert und hat an den Rändern bei \ $x=\pm \frac{1}{2}$ \
+Polstellen.
+
+\item L\"osen der hom. lin. DGl. \ 
+$$
+\cos(x)\cdot y'(x) = \sin(x)\cdot y(x)$$ 
+durch Trennung der Veränderlichen:
+	\[
+	\int\frac{\text dy}{y} = \int\frac{\sin(x)}{\cos(x)}\ \text dx \,\Rightarrow\, \ln(|y|) = -\ln\big(|\cos(x)|\big)+\tilde C \quad\vee\quad y=0
+\]
+also
+  \[ y(x) = \frac{C}{\cos(x)},C\in\mathbb{R}\ .
+\]
+\end{abc}
+}
+\ErgebnisC{gewdglDglnDefb001}{
+\textbf{a)} $y_{\text{AWP}}(x)=\frac{-1}{x^{2}-\frac{1}{4}}$,\, \textbf{b)} $y(x) = \frac{C}{\cos(x)}$
+}

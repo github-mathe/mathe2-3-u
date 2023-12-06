@@ -1,0 +1,64 @@
+\Aufgabe[e]{Newton-Verfahren}{
+Gegeben sei die Funktion 
+$$f(x)=  17 x^3 - 468 x^2 + 2849 x -2294.$$
+\begin{abc}
+\item Skizzieren Sie die Funktion im Intervall $-5\leq x \leq 20$.  
+\item F\"uhren Sie mindestens zwei Schritte des Newton-Verfahrens mit dem Startwert $x_0=13$ f\"ur die Funktion $f(x)$ durch. 
+\item Skizzieren Sie im Funktionsgraphen die berechneten Iterationen $x_0,\, x_1,\, x_2,\,\hdots$. 
+\end{abc}
+}
+
+\Loesung{
+\textbf{ a)/c)}\\
+\begin{center}
+\psset{xunit=.5cm, yunit=1cm, runit=1cm}
+\begin{pspicture}(-5,-3)(20,2)
+\psgrid[subgriddiv=2,griddots=1,gridlabels=.3](-5,-3)(20,2)
+\psplot[plotpoints=200, plotstyle=curve]
+{-5}{20}
+{
+  17 x mul -468 add x mul 2849 add x mul -2294 add 10000 div
+}
+\put(7,-1.4){$\dfrac{f(x)}{10000}$}
+\psline(-5,0)(20,0)
+\psline[showpoints=true, linecolor=gray]
+(   13.0000,   .0000)
+(   13.0000,  -.7000)
+(    3.0000,   .0000)
+(    3.0000,   .2500)
+(   -2.0000,  0.0000)
+(   -2.0000, -1.0000)
+(    0.0304,   .0000)
+(    0.0304,  -.2207)
+(    0.8131,   .0000)
+(    0.8131,  -.0277)
+(    0.9440,   .0000)
+(    0.9440,  -.0007)
+(    0.9476,  -.0000)
+(    0.9476,  -.0000)
+\end{pspicture}
+\end{center}
+\textbf{b)} Das Newtonverfahren mit der Iterationsvorschrift: 
+$$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)},\qquad n=0,1,2,\hdots$$
+ergibt
+\begin{center}
+\begin{tabular}{r|r|r|r|r}
+ \multicolumn{1}{c|}{$n$}&  \multicolumn{1}{c|}{$x_n$}&  \multicolumn{1}{c|}{$f(x_n)$}&  \multicolumn{1}{c|}{$f'(x_n)$}&  \multicolumn{1}{c}{$-f(x_n)/f'(x_n)$}\\\hline
+0 &  13.0000   &  -7000.0000 &  -700 & -10.0000000 \\
+1 &   3.0000   &   2500.0000 &   500 &  -5.0000000 \\
+2 &  -2.0000   & -10000.0000 &  4925 &   2.0304568 \\
+3 &   0.0304   &  -2207.6621 &  2821 &   0.7827090 \\
+4 &   0.8131   &   -277.6091 &  2122 &   0.1308489 \\
+5 &   0.9440   &     -7.2647 &  2011 &   0.0036127 \\
+6 &   0.9476   &     -0.0055 &  2008 &   0.0000027 \\
+7 &   0.9476   &             &       &  
+\end{tabular}
+\end{center}
+
+}
+
+%\ErgebnisC{AufganalysNewtVerf003}
+%{
+%
+%}
+

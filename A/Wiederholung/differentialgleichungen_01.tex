@@ -1,0 +1,68 @@
+\Aufgabe[e]{Differentialgleichungen}{
+\begin{abc}
+\item
+Es sei das folgende Anfangswertproblem für $y(t)$ gegeben
+$$
+y''(t)+3y'(t)+2y(t)= 1-h(t-1),\quad\quad y(0)=0,\ y'(0)=1.
+$$
+Berechnen Sie die Lösung mit Hilfe der Laplace-Transformation. Drücken Sie die Lösung in den Bereichen $0\leq t< 1$ und $t\ge 1$ ohne die Heaviside-Funktion aus.
+%
+\item Es sei das folgende Anfangswertproblem für $u(t)$ gegeben
+$$
+u''(t)+4u'(t)+4u(t)= %4t+
+8e^{-2t},\quad\quad u(0)=2,\ y(0)=2.
+$$
+Berechnen Sie die Lösung mit Hilfe des Exponentialansatzes.
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+        \item Mit $\mathcal{L}\{y(t)\}=Y(s)$ ist die Laplace-Transformation des AWP
+        \begin{eqnarray*}
+        s^2Y(s)-1+3(sY(s))+2Y(s)&=&\dfrac{1}{s}-\dfrac{e^{-s}}{s}\\
+        Y(s)(s^2+3s+2)&=&\dfrac{1}{s}-\dfrac{e^{-s}}{s}+\dfrac{s}{s}\\
+                                &=&\dfrac{1}{(s+1)(s+2)}\cdot\left(\dfrac{1+s-e^{-s}}{s}\right)\\
+                                &=&\dfrac{1+s}{(s+1)(s+2)s}-\dfrac{e^{-s}}{(s+1)(s+2)s}\\
+                                &=&\dfrac{1}{(s+2)s}-\dfrac{e^{-s}}{(s+1)(s+2)s}
+        \end{eqnarray*}
+        Durch Partialbruchzerlegung des ersten und zweiten Terms erhält man
+        \begin{eqnarray*}
+        \dfrac{1}{s(s+2)}&=&\dfrac{1}{2}\dfrac{1}{s}-\dfrac{1}{2}\dfrac{1}{s+2}\\
+        \dfrac{1}{s(s+2)(s+1)}&=&\dfrac{1}{2}\dfrac{1}{s}+\dfrac{1}{2}\dfrac{1}{s+2}-\dfrac{1}{s+1}
+        \end{eqnarray*}
+        Daraus folgt,
+        \begin{eqnarray*}
+        Y(s)&=&\dfrac{1}{2}\dfrac{1}{s}-\dfrac{1}{2}\dfrac{1}{s+2}-\left(\dfrac{1}{2}\dfrac{1}{s}+\dfrac{1}{2}\dfrac{1}{s+2}-\dfrac{1}{s+1}\right)e^{-s}\\
+        \mathcal{L}^{-1}\{Y(s)\}&=&\mathcal{L}^{-1}\left\{\dfrac{1}{2}\dfrac{1}{s}-\dfrac{1}{2}\dfrac{1}{s+2}\right\}- \mathcal{L}^{-1}\left\{\left(\dfrac{1}{2}\dfrac{1}{s}+\dfrac{1}{2}\dfrac{1}{s+2}-\dfrac{1}{s+1}\right)e^{-s}\right\}\\
+        y(t)&=&\dfrac{1}{2}-\dfrac{1}{2}e^{-2t}-\left(\dfrac{1}{2}+\dfrac{1}{2}e^{-2(t-1)}-e^{-(t-1)}\right)h(t-1)\\
+        y(t)&=&\begin{cases}
+                \dfrac{1}{2}-\dfrac{1}{2}e^{-2t} & 0\leq t<1\\[10pt]
+                -\dfrac{e^{-2t}}{2}(1+e^2)+e^{-(t-1)}& t\geq 1
+                \end{cases}
+        \end{eqnarray*}
+
+        \item Das charakteristische Polynom ist
+        $$
+        \lambda^2+4\lambda+4=0\Rightarrow \lambda_{1,2}=-2.
+        $$
+        Die Lösung der homogenen Differentialgleichung lautet also
+        $$
+        u_h(t)=(c_1+c_2t)e^{-2t}
+        $$
+        Wir raten eine bestimmte Lösung gemäß der rechten Seite
+        \begin{align*}
+        8e^{-2t}&\Rightarrow u_{p}=Ct^2e^{-2t} & &\Rightarrow u_{p}=4t^2e^{-2t}
+        \end{align*}
+        Die allgemeine Lösung lautet
+        $$
+        u(t)=u_h(t)+u_{p}(t)=(c_1+c_2t+4t^2)e^{-2t}.
+        $$
+        Aus $u(0)=2$ folgt $ c_1=2$ und aus $u'(0)=2$ folgt $c_2=6$ also,
+        $$
+        u(t)=(2+6t+4t^2)e^{-2t}.
+        $$
+
+\end{abc}
+
+}

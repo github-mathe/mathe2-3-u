@@ -1,0 +1,92 @@
+\Aufgabe[e]{Schnittfl\"achenberechnung} {
+
+\begin{abc}
+\item Gegeben sei ein Kreis $K\subset\R^2$ mit Radius $R=1$ und Fl\"acheninhalt $A=\pi$. 
+\begin{iii}
+\item Welche Kantenl\"ange $2L$ hat ein Quadrat $Q$ mit demselben Fl\"acheninhalt $A=\pi$? 
+\item Die Mittelpunkte beider Fl\"achen (Kreis und Quadrat) befinden sich im Koordinatenursprung. Stellen Sie das Integral (inklusive Grenzen) zur Berechnung des Fl\"acheninhaltes $A_{K\cap Q}$ der Schnittmenge $K\cap Q$ auf.
+\item[v]Berechnen Sie das Integral $A_{K\cap Q}$. 
+\end{iii} 
+\item Gegeben sei nun eine Kugel $B\subset \R^3$ mit Radius $R=1$ und Volumen $V=\dfrac{4\pi}3$. \\
+Welche Kantenl\"ange $2L_3$ hat ein W\"urfel $W$ mit demselben Volumen $V=\dfrac{4\pi} 3$?\\
+Berechnen Sie  das Volumen der Schnittmenge $W\cap B$. 
+\end{abc}
+
+}
+
+
+\Loesung{
+\begin{abc}
+\item\begin{iii}
+\item Die Kantenl\"ange ist $2L=\sqrt{A}=\sqrt \pi$, die halbe Kantenl\"ange ist damit $L=\frac{\sqrt \pi}2$. \\
+\begin{pspicture}(-2,-3)(2,3)
+\psgrid(-2,-2)(2,2)
+\pscircle(0,0){1}
+\psline(-0.89,-0.89)(0.89,-0.89)(0.89,0.89)(-0.89,0.89)(-0.89,-0.89)
+
+\end{pspicture}
+\item Die zu berechnende Fl\"ache l\"asst sich in kartesischen Koordinaten (als Normalbereich bez\"uglich $x$) parametrisieren: \\
+Die zul\"assigen $x$-Werte sind $-L\leq x\leq L$. \\
+Die zul\"assigen $y$-Werte h\"angen dann von der $x$-Position ab: $y_-(x)\leq y\leq y_+(x)$. \\
+Da die Fl\"ache symmetrisch bez\"uglich der $x$-Achse ist, gilt $y_-(x)=-y_+(x)$. 
+Weiterhin ist $y_+(x)$ im linken und rechten Teil des Integrationsbereiches durch die Kreiskurve $x^2+y^2=1$ gegeben und in der Mitte durch $y=L$. Der Wechsel zwischen beiden Kurven erfolgt am Schnittpunkt der beiden: 
+\begin{align*}
+&&x^2+y^2=&1\text{ und }  y=L\\
+\Rightarrow&&x^2+L^2=1\\
+\Rightarrow&&x=&\pm \sqrt{1-L^2}
+\end{align*}
+Es ist also $y_+(x)=\left\{\begin{array}{ll}
+L&\text{, f\"ur $-\sqrt{1-L^2}\leq x\leq \sqrt{1-L^2}$}\\
+\sqrt{1-x^2}&\text{, sonst}
+\end{array}\right.$. \\
+Der gesuchte Fl\"acheninhalt ist damit 
+\begin{align*}
+A_{K\cap Q}=&\int\limits_{x=-L}^L\int\limits_{y=-y_+(x)}^{y_+(x)}\d y\d x.
+\end{align*}
+\item Es ist
+\begin{align*}
+A_{K\cap Q}=&\int\limits_{x=-L}^L\int\limits_{y=-y_+(x)}^{y_+(x)}\d y\d x\\
+=& \int\limits_{x=-L}^{-\sqrt{1-L^2}}\int\limits_{y=-\sqrt{1-x^2}}^{\sqrt{1-x^2}}\d y \d x + \int\limits_{x=-\sqrt{1-L^2}}^{\sqrt{1-L^2}}\int\limits_{y=-L}^L\d y\d x + \int\limits_{x=\sqrt{1-L^2}}^L\int\limits_{y=-\sqrt{1-x^2}}^{\sqrt{1-x^2}}\d y \d x\\
+=& \int\limits_{x=-L}^{-\sqrt{1-L^2}}2\sqrt{1-x^2}\d x + \int\limits_{x=-\sqrt{1-L^2}}^{\sqrt{1-L^2}}2L\d x + \int\limits_{x=\sqrt{1-L^2}}^L2 \sqrt{1-x^2}\d x\\
+\end{align*}
+Eine Stammfunktion f\"ur $\sqrt{1-x^2}$ erh\"alt man durch die Substitution $\sin(t)=x$, $\d x=\cos(t)\d t$: 
+\begin{align*}
+\int\sqrt{1-x^2}\d x =& \int \sqrt{1-\sin^2(t)}\cos(t)\d t = \int\cos^2(t)\d t = \dfrac{\sin(t)\cos(t) +t}2\\
+=&\dfrac{x\sqrt{1-x^2}+\arcsin(x)}2
+\end{align*}
+Dies f\"uhrt zu 
+\begin{align*}
+A_{K\cap Q}=& 2\left.\dfrac{x\sqrt{1-x^2}+\arcsin(x)}2\right|_{x=-L}^{-\sqrt{1-L^2}}+
+4L\sqrt{1-L^2}+\\
+&+2\left.\dfrac{x\sqrt{1-x^2}+\arcsin(x)}2\right|_{x=\sqrt{1-L^2}}^L\\
+=& -2\sqrt{1-L^2}\sqrt{1-\sqrt{1-L^2}^2}+\\
+&-2\arcsin\sqrt{1-L^2}+2L\sqrt{1-L^2}+2\arcsin(L) + 4L\sqrt{1-L^2}\\
+=& -2\sqrt{1-L^2}L-2\arcsin\sqrt{1-L^2}+2L\sqrt{1-L^2}+2\arcsin(L)+4L\sqrt{1-L^2}\\
+=& 2\arcsin(L)-2\arcsin\sqrt{1-L^2}+4L\sqrt{1-L^2}\\
+=& 2(\arcsin(L)-\arccos(L))+4L\sqrt{1-L^2}
+\end{align*}
+\end{iii}
+\item Die halbe Kantenl\"ange ist $L_3=\frac 12 \sqrt[3]{\frac {4\pi} 3}=\sqrt[3]{\frac{\pi}{6}}$.\\
+Das gesuchte Volumen $V_{W\cap B}$ ist das Volumen der Kugel $B$ von der sechs gleichgroße Kappen abgeschnitten werden. Jede dieser Kappen entsteht durch das Schneiden einer W\"urfelkante mit der Kugel. Wir berechnen Das Volumen $V_h$ der Kappe  $+z$-Richtung. F\"ur deren Radius $R_h$  gilt $R_h^2+L_3^2=1\,\Rightarrow \, R_h=\sqrt{1-L_3^2}$. Das Volumen berechnet sich damit in Zylinderkoordinaten: 
+\begin{align*}
+V_h=& \int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^{R_h}\int\limits_{z=L_3}^{\sqrt{1-r^2}}r\d z\d r \d\varphi\\
+=& 2\pi \int\limits_{r=0}^{R_h}(r\sqrt{1-r^2}-L_3r)\d r\\
+=& 2\pi \left[ \frac{-\sqrt{1-r^2}^3}3-\frac{L_3r^2}2\right]_{r=0}^{R_h}\\
+=& 2\pi \left( \frac 13-\frac{\sqrt{1-R_h^2}^3}3 - \frac{L_3R_h^2}2\right)
+= \frac \pi 3\left( 2-2\sqrt{1-R_h^2}^3-3L_3R_h^2\right)\\
+=& \frac \pi 3 \left( 2-2L_3^3-3L_3(1-L_3^2)\right)
+= \frac \pi 3\left( 2+L_3^3-3L_3\right)
+= \frac\pi 3\left( 2 + \frac \pi 6 - 3 \sqrt[3]{\frac \pi 6}\right).
+\end{align*}
+Damit ergibt sich dann das Volumen des Schnittk\"orpers zu 
+\begin{align*}
+V_{B\cap W}=& V_B-6V_h=\frac{4\pi}3-2\pi\left(2+\frac \pi 6 - 3\sqrt[3]{\frac \pi 6}\right)\\
+=& \frac{-8\pi}3-\frac{\pi^2}3+6\pi\sqrt[3]{\frac\pi 6}
+= \frac{\pi}3\left( 3\sqrt[3]{36\pi}-8-\pi\right).
+\end{align*}
+\end{abc}
+}
+\ErgebnisC{analysIntgNdim040}{
+\textbf{a)} $L=\sqrt{\pi}/2$, $A_{K\cap Q}=2\arcsin(L)-2\arccos(L)+4L\sqrt{1-L^2}$\\
+\textbf{b)} $L_3=\sqrt[3]{\pi/6}$, $V_{B\cap W}=\frac{\pi}3\left( 3\sqrt[3]{36\pi}-8-\pi\right)$.
+}

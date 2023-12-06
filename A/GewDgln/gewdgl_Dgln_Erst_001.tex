@@ -1,0 +1,77 @@
+\Aufgabe[e]{Differentialgleichungen 1. Ordnung}
+{
+Bestimmen Sie die allgemeine Lösung folgender Differentialgleichungen: 
+\begin{align*}
+\mathbf{i)} &  & y'(x)=(2\,x+3\,y+4)^{-4}-\frac 23\\
+\mathbf{ii)} &  & u'(t)=\sqrt{\dfrac tu}+\dfrac ut\;,\;\;t>0\;.
+\\ 
+\mathbf{iii)} &  & w'(s)=\dfrac 2s\,w+15\,s^4\;\;.
+\end{align*}
+}
+
+
+\Loesung{
+\textbf{i)} \ \ Mit der Substitution \ $z(x) = 2\,x+3\,y(x)+4$ \ erhält man
+\[
+	y(x) = \dfrac{z(x)-2\,x-4}{3} \Rightarrow y'(x)=\frac13(z'(x)-2)
+\]
+Eingesetzt in die Dgl, ergibt sich
+	\[
+	z'(x)-2 = 3\left(z^{-4}-\frac 23\right)\ .
+\]
+Daraus folgt 
+\[
+	\dfrac{\text d z}{\text d x} =3z^{-4}\ .
+\]
+
+Trennung der Variablen:
+	\[
+	\int z^4\ \text dz = \int 3\ \text dx \Rightarrow \frac{z^5}{5} = 3\,x+c \Rightarrow z(x) = (15\,x+C)^{1/5} \text{ mit } C=5c\in\R\ .
+\]
+Rücksubstitution:
+	\[
+	y(x) = \frac{\left( 15\,x+C\right) ^{1/5}-2x-4}3\ .
+\]
+
+\textbf{ii)} \ \ Mit der Substitution \ $z(x) = \dfrac{u(t)}{t}$ \ erhält man
+\[u(t)=tz(t)\Rightarrow u'(t)=z(t)+tz'(t)
+	\]
+Einsetzen in die Dgl liefert dann
+
+	\[
+	z+tz' = \frac{1}{\sqrt{z}}+z\quad\Rightarrow\quad z'= \frac{1}{t\,\sqrt{z}}
+\]
+Trennung der Variablen:
+	\[
+	\int \sqrt{z}\ \text dz = \int \frac 1t\ \text dt \Rightarrow \frac23\,z^{3/2} = \ln|t| + c \Rightarrow z(t) = \left(\frac{3\,\ln|t|}{2}+C\right)^{2/3} \text{ mit } C = \frac{3\,c}{2}\in\R\ .
+\]
+Rücksubstitution:
+	\[
+	\frac{u(t)}{t} = \left(\frac{3\,\ln|t|}{2}+C\right)^{2/3} \Rightarrow u(t) = t\cdot \left(\dfrac{3\,\ln(t)}2+C\right)^{2/3} \text{ mit } C\in\R,\;t>0 .
+\]
+
+\textbf{iii)} \ \ Zunächst löst man die homogene lin. Dgl.:
+
+\[w'(s)=\dfrac 2s\,w\]
+
+	\[w_{\text h}(s) = C\cdot\EH{\left(\int \tfrac 2s\ \text ds\right)} = C\cdot\EH{2\,\ln|s|} = C \EH{\ln(s^2)}= C\,s^2\ .
+\]
+Damit erhält man den Produktansatz für die inhomogen lin. Dgl. \ $w(s) = z(s)\,s^2$\,
+Mit $w'(s) = z'\,s^2 + z\cdot2\,s $ wird die inhomogene Gleichung wie folgt umgeformt:
+	\[
+	 z'\,s^2 + z\,2\,s =\frac 2s\,z\,s^2 + 15\,s^4 \Rightarrow z' = 15\,s^2 \Rightarrow z = 5\,s^3+C\ .
+\]
+Damit erhält man die Lösung
+	\[
+	w(s) = C\,s^2+5\,s^5\ .
+\]
+}
+
+\ErgebnisC{AufggewdglDglnErst001}{
+\begin{iii}
+\item $\frac{\left( 15\,x+C\right) ^{1/5}-2x-4}3$
+\item $\left(\frac{3\,\ln|t|}{2}+C\right)^{2/3} \Rightarrow u(t) = t\cdot \left(\dfrac{3\,\ln(t)}2+C\right)^{2/3}$
+\item $C\,s^2+5\,s^5$
+\end{iii}
+}
+

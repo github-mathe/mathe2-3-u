@@ -1,0 +1,221 @@
+\Aufgabe[v]{Interpolation}{
+Gesucht ist ein Polynom vierten Grades 
+$$p(x)=a_0 + a_1 x + a_2x^2+a_3x^3+a_4 x^4$$
+mit folgenden Eigenschaften:
+\begin{itemize}
+\item Der Funktionswert bei $0$ ist $p(0)=0$. 
+\item $p$ hat ein Minimum bei $(1,-1)$. 
+\item $p$ hat einen Sattelpunkt bei $(2,0)$. 
+\end{itemize}
+\begin{abc}
+\item Geben Sie die Bedingungen, die der Koeffizientenvektor  $(a_0,\hdots,\, a_4)^\top$ erf\"ullen
+muss, in Form eines linearen Gleichungssystems an. (Es sollten sich sechs lineare Gleichungen mit
+f\"unf Unbekannten ergeben.)
+\item Berechnen Sie den Rang der Koeffizientenmatrix und der erweiterten Koeffizientenmatrix. Ist
+das Gleichungssystem l\"osbar?
+\item Welchen Wert $p(0)$ muss die Funktion bei $0$ annehmen, damit das System doch l\"osbar ist?
+\item L\"osen Sie das so ge\"anderte Gleichungssystem. 
+\item Skizzieren Sie die Funktion $p(x)$. 
+\end{abc}
+
+}
+
+
+\Loesung{
+\begin{abc}
+\item Die angegebenen Eigenschaften der Funktion ergeben folgende Bedingungen:
+\begin{align*}
+p(0)=0                   &               &                          &\,\Rightarrow\,& a_0
+          =& 0\\
+p(1)=-1 \text{ minimal } &\,\Rightarrow\,& p(1)=-1,\, p'(1)=0       &\,\Rightarrow\,& a_0+a_1+a_2+a_3+a_4  =& -1\\
+                         &               &                          &               & a_1+2a_2+3a_3+4a_4       =& 0\\
+p(2)=0 \text{ Sattelpkt.}&\,\Rightarrow\,& p(2)=0,\, p'(2)=p''(2)=0 &\,\Rightarrow\,&
+a_0+2a_1+4a_2+8a_3+16a_4 =& 0\\
+                         &               &                          &               & a_1+4a_2+12a_3+32a_4     =& 0\\
+                         &               &                          &               &
+2a_2+12a_3+48a_4     =& 0
+\end{align*}
+Als Matrixgleichung ergibt sich 
+$$\vec A \vec a = \vec b$$
+mit 
+$$\vec A = \begin{pmatrix}
+1  &  0&  0&  0&  0 \\
+1  &  1&  1&  1&  1 \\
+0  &  1&  2&  3&  4 \\
+1  &  2&  4&  8& 16 \\
+0  &  1&  4& 12& 32 \\
+0  &  0&  2& 12& 48 \end{pmatrix}
+\text{ und }\vec b = \begin{pmatrix}
+0\\-1\\0\\0\\0\\0\end{pmatrix}.$$
+\item Der Rang von $\vec A$ ist h\"ochstens 5, da die Matrix nur f\"unf Spalten hat. Die Determinante
+der ersten f\"unf Zeilen der Matrix ist
+\begin{align*}
+\det \begin{pmatrix}
+1  &  0&  0&  0&  0 \\
+1  &  1&  1&  1&  1 \\
+0  &  1&  2&  3&  4 \\
+1  &  2&  4&  8& 16 \\
+0  &  1&  4& 12& 32 \end{pmatrix}
+=& \det\begin{pmatrix}
+  1&  1&  1&  1 \\           
+  1&  2&  3&  4 \\           
+  2&  4&  8& 16 \\           
+  1&  4& 12& 32 \end{pmatrix}=\det \begin{pmatrix}
+ 1 & 0 & 0 & 0\\
+ 1 & 1 & 2 & 3\\
+ 1 & 2 & 6 &14\\
+ 1 & 3 & 11&31\end{pmatrix}\\
+=& \det \begin{pmatrix}
+  1 & 2 & 3\\             
+  2 & 6 &14\\             
+  3 & 11&31\end{pmatrix} = \det\begin{pmatrix}
+  1 & 0 & 0\\           
+  2 & 2 & 8\\           
+  3 &  5&22\end{pmatrix}\\
+=& \det\begin{pmatrix} 2 & 8 \\ 5 & 22\end{pmatrix} = 4\neq 0
+\end{align*}
+Also haben die ersten f\"unf Zeilen den Rang 5 und damit auch 
+$$\Rang \vec A = 5.$$
+Die Determinante der erweiterten Systemmatrix $(\vec A|\vec b)$ ist 
+\begin{align*}
+\det(\vec A|\vec b)=& \det\begin{pmatrix}
+1  &  0&  0&  0&  0 &  0 \\
+1  &  1&  1&  1&  1 & -1 \\
+0  &  1&  2&  3&  4 &  0 \\
+1  &  2&  4&  8& 16 &  0 \\
+0  &  1&  4& 12& 32 &  0 \\
+0  &  0&  2& 12& 48 &  0 \end{pmatrix}= \det \begin{pmatrix}
+  1&  1&  1&  1 & -1 \\           
+  1&  2&  3&  4 &  0 \\           
+  2&  4&  8& 16 &  0 \\           
+  1&  4& 12& 32 &  0 \\           
+  0&  2& 12& 48 &  0 \end{pmatrix}\\
+=& -\det \begin{pmatrix}
+  1&  2&  3&  4  \\           
+  2&  4&  8& 16  \\           
+  1&  4& 12& 32  \\           
+  0&  2& 12& 48  \end{pmatrix} = -\det\begin{pmatrix}
+  1&  2&  3&  4  \\           
+  0&  0&  2&  8  \\           
+  0&  2&  9& 28  \\           
+  0&  2& 12& 48  \end{pmatrix} \\
+=& -\det\begin{pmatrix}
+0&  2&  8  \\              
+2&  9& 28  \\              
+2& 12& 48  \end{pmatrix} = -\det \begin{pmatrix}
+0&  2&  8  \\              
+2&  9& 28  \\              
+0&  3& 20  \end{pmatrix} \\
+=& 2\cdot \det \begin{pmatrix} 2 & 8 \\ 3 & 20\end{pmatrix} = 32\neq 0
+\end{align*}
+Also hat $(\vec A | \vec b)$ Vollrang, $\Rang (\vec A|\vec b)=6$ und wegen 
+$$\Rang \vec A \neq \Rang (\vec A|\vec b)$$
+ist das Gleichungssystem $\vec A \vec a=\vec b$ nicht l\"osbar. 
+\item Der Funktionswert $p(0)=c$ taucht in der oberen rechten Ecke der Matrix $(\vec A|\tilde {\vec  b})$
+auf. Dabei ist $\tilde {\vec b} = (c,-1,0,0,0,0)^\top$. \\
+
+Die Determinante \"andert sich dadurch wie folgt: 
+\begin{align*}
+\det (\vec A|\tilde {\vec b})=& \det(\vec A|\vec b)-c\cdot \det \begin{pmatrix}
+1  &  1&  1&  1&  1  \\
+0  &  1&  2&  3&  4  \\
+1  &  2&  4&  8& 16  \\
+0  &  1&  4& 12& 32  \\
+0  &  0&  2& 12& 48  \end{pmatrix}\\
+=&32-c\cdot \det \begin{pmatrix}
+  1&  2&  3&  4  \\             
+  2&  4&  8& 16  \\             
+  1&  4& 12& 32  \\             
+  0&  2& 12& 48  \end{pmatrix} - c \cdot \det\begin{pmatrix}
+  1&  1&  1&  1  \\             
+  1&  2&  3&  4  \\             
+  1&  4& 12& 32  \\             
+  0&  2& 12& 48  \end{pmatrix}\\
+=& 32 -c\cdot (-32) - c \cdot \det\begin{pmatrix}
+  1&  1&  1&  1  \\             
+  0&  1&  2&  3  \\             
+  0&  3& 11& 31  \\             
+  0&  2& 12& 48  \end{pmatrix}= 32+32c -c\cdot \det\begin{pmatrix}
+  1&  2&  3  \\           
+  3& 11& 31  \\           
+  2& 12& 48  \end{pmatrix}\\
+=& 32+32c-c\cdot \begin{pmatrix} 5 & 22\\ 8 & 42\end{pmatrix}=32-2c
+\end{align*}
+Die Determinante verschwindet also f\"ur $p(0)=c= 16$. Damit gilt dann
+$$\Rang \vec A = \Rang (\vec A|\tilde{\vec b})=5$$
+und das System besitzt eine eindeutige L\"osung. 
+\item Die L\"osung dieses Systems ist
+$$\begin{array}{rrrrr|r|l}
+1  &  0&  0&  0&  0 & 16 & \text{                     }\\
+1  &  1&  1&  1&  1 & -1 & \text{ -1. Zeile           }\\
+0  &  1&  2&  3&  4 &  0 & \text{                     }\\
+1  &  2&  4&  8& 16 &  0 & \text{ -1. Zeile           }\\
+0  &  1&  4& 12& 32 &  0 & \text{                     }\\
+0  &  0&  2& 12& 48 &  0 & \text{                     }\\\hline
+
+1  &  0&  0&  0&  0 & 16 & \text{                     }\\
+0  &  1&  1&  1&  1 &-17 & \text{                     }\\
+0  &  1&  2&  3&  4 &  0 & \text{ -2. Zeile           }\\
+0  &  2&  4&  8& 16 &-16 & \text{ -2$\cdot$ 2. Zeile  }\\
+0  &  1&  4& 12& 32 &  0 & \text{ -2. Zeile           }\\
+0  &  0&  2& 12& 48 &  0 & \text{                     }\\\hline
+
+1  &  0&  0&  0&  0 & 16 & \text{                     }\\
+0  &  1&  1&  1&  1 &-17 & \text{                     }\\
+0  &  0&  1&  2&  3 & 17 & \text{                     }\\
+0  &  0&  2&  6& 14 & 18 & \text{ -2$\cdot$ 3. Zeile  }\\
+0  &  0&  3& 11& 31 & 17 & \text{ -3 $\cdot$ 3. Zeile }\\
+0  &  0&  2& 12& 48 &  0 & \text{ -2$\cdot$ 3. Zeile  }\\\hline
+
+1  &  0&  0&  0&  0 & 16 & \text{                     }\\
+0  &  1&  1&  1&  1 &-17 & \text{                     }\\
+0  &  0&  1&  2&  3 & 17 & \text{                     }\\
+0  &  0&  0&  2&  8 &-16 & \text{ $\cdot 1/2$         }\\
+0  &  0&  0&  5& 22 &-34 & \text{-5/2$\cdot$ 4. Zeile }\\
+0  &  0&  0&  8& 42 &-34 & \text{-4 $\cdot$ 4. Zeile  }\\\hline
+
+1  &  0&  0&  0&  0 & 16 & \text{                     }\\
+0  &  1&  1&  1&  1 &-17 & \text{                     }\\
+0  &  0&  1&  2&  3 & 17 & \text{                     }\\
+0  &  0&  0&  1&  4 & -8 & \text{                     }\\
+0  &  0&  0&  0&  2 &  6 & \text{    $\cdot 1/2$      }\\
+0  &  0&  0&  0& 10 & 30 & \text{-5 $\cdot$ 5. Zeile  }\\\hline
+
+1  &  0&  0&  0&  0 & 16 & \text{                     }\\
+0  &  1&  1&  1&  1 &-17 & \text{                     }\\
+0  &  0&  1&  2&  3 & 17 & \text{                     }\\
+0  &  0&  0&  1&  4 & -8 & \text{                     }\\
+0  &  0&  0&  0&  1 &  3 & \text{                     }\\
+0  &  0&  0&  0&  0 &  0 & \text{                     }
+\end{array}$$
+Es ergibt sich die L\"osung 
+$$\vec a =( 16,\, -48,\, 48,\, -20,\, 3)^\top.$$
+\item \quad\\
+\begin{minipage}{.4\textwidth}
+\psset{xunit=1cm, yunit=.5cm, runit=1cm}
+\begin{pspicture}(-1,-1)(3,17)
+\psgrid[subgriddiv=1,griddots=10,gridlabels=.3](-1,-1)(3,17)
+\psplot[plotpoints=200, plotstyle=curve]
+{0}{3}
+{16 -48 x mul add 48 x mul x mul add -20 x mul x mul x mul add 3 x mul x mul x mul x mul add}
+\psdot(0,16)
+\psdot(1,-1)
+\psdot(2,0)
+\end{pspicture}
+\end{minipage}
+
+\end{abc}
+}
+
+\ErgebnisC{AufganalysIntrPoly001}
+{
+{\textbf{a)}} Die Systemmatrix ist $\Vek A = \begin{pmatrix} 
+1 & 0 & 0 & 0 & 0 \\  
+1 & 1 & 1 & 1 & 1 \\  
+0 & 1 & 2 & 3 & 4 \\  
+1 & 2 & 4 & 8 & 16\\  
+0 & 1 & 4 & 12& 32\\  
+0 & 0 & 2 & 12& 48\\  
+\end{pmatrix}$, die rechte Seite des Systems $\vec b=(0,-1,0,0,0,0)^\top$. 
+\textbf{d)} $\vec a=(16,\, -48,\, 48,\, -20,\, 3)^\top$
+}

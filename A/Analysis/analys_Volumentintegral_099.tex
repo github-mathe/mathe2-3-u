@@ -1,0 +1,34 @@
+\Aufgabe[e]{Transformationsformel f\"ur Volumenintegrale} {
+
+Berechnen Sie 
+$$
+\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\frac{\d x \d y  \d  z}{(x^2+y^2+z^2+1)^2} \text{.}
+$$
+\textit{Hinweis:} Integrieren Sie \"uber eine Kugel $K$ mit Radius $R$ und lassen Sie dann $R$ gegen unendlich wachsen.
+
+}
+
+
+\Loesung{
+
+Die Integration \"uber eine Kugel legt die Einf\"uhrung von Kugelkoordinaten nahe:
+$$
+x= r \sin \vartheta \cos \varphi\,, \quad y = r \sin \vartheta \sin \varphi\,, \quad z = r \cos \vartheta
+$$
+mit $0\leq r\leq R$, $0\leq \varphi \leq 2\pi$ und $0\leq \vartheta \leq \pi$. Es gilt (vgl.\ Vorlesung oder einfaches Nachrechnen):
+$$
+\left|\det\left(\frac{\partial(x,y,z)}{\partial(r,\vartheta,\varphi)}\right)\right| = r^2 \sin \vartheta\,.
+$$
+Damit folgt
+\begin{align*}
+& \int_0^R \left(\int_0^{\pi}\left(\int_0^{2\pi}\frac{1}{(r^2+1)^2}r^2\sin \vartheta \d \varphi\right)\d\vartheta\right) \d r\\[1ex]
+ &\qquad = \int_0^R \frac{2\pi r^2}{(r^2+1)^2}\underbrace{\int_0^{\pi}\sin\vartheta\d \vartheta}_{=2} \d r\\[1ex]
+ &\qquad = 4\pi \int_0^R \frac{r^2 \d r}{(r^2+1)^2}\\[1ex]
+ &\qquad = 4\pi \left[-\frac{r}{2(r^2+1)}+\frac{1}{2}\arctan r\right]_{r=0}^{r=R}\\[1ex]
+ &\qquad = 4\pi \Big[\frac{1}{2}
+ \underbrace{\arctan R}_{\substack{\to \frac{\pi}{2}\\ \text{f\"ur} R\to \infty}}
+ - \underbrace{\frac{R}{2(R^2+1)}}_{\substack{\to 0\\ \text{f\"ur} R\to \infty}}
+ \Big]
+ \xrightarrow[R\to \infty]{} \pi^2\,.
+\end{align*}
+}

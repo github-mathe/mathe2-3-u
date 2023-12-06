@@ -1,0 +1,77 @@
+\Aufgabe[e]{Iterierte Grenzwerte}{
+Berechnen Sie  für folgende Funktionen $f(x,y)$ die Grenzwerte
+  \[
+  \lim\limits_{x\to 0}\ \lim\limits_{y\to 0}\ f(x,y)\,;\quad
+  \lim\limits_{y\to 0}\ \lim\limits_{x\to 0}\ f(x,y)\,;\quad
+  \lim\limits_{\vec{x} \to \vec{0}}\ f(\vec{x}) \text{ mit } \vec{x}:= (x,y)^{\top}\,,
+\] 
+(falls diese existieren):
+\begin{abc}
+\item $f(\vec{x}):= \dfrac{x-y}{x+y}\,, \qquad$
+\item $f(\vec{x}):= \dfrac{x^2y^2}{x^2y^2+(x-y)^2}\qquad$
+\item $f(\vec{x}):= (x+y)\sin\left(\frac 1x\right)\sin\left(\frac 1y\right)\,.$
+\end{abc}
+
+\textbf{Hinweis zu b):} \ Betrachten Sie auch den Fall \ $y=\alpha x$\,, $\alpha \in \R$ .
+}
+
+\Loesung{
+\begin{abc}
+\item Es gilt
+\begin{eqnarray*}
+\lim_{x \to 0}\ \left(\lim_{y \to 0} \frac{x-y}{x+y}\right) &=&\lim_{x \to 0} \frac{x}{x} = \lim_{x \to 0} 1 = 1\,,\\[3ex]
+\lim_{y \to 0}\ \left(\lim_{x \to 0} \frac{x-y}{x+y}\right) &=& \lim_{y \to 0} \frac{-y}{y} = -1\,.
+\end{eqnarray*}
+Die iterierten Grenzwerte sind also verschieden und \ $\lim\limits_{\vec{x} \to \vec{0}} f(\vec{x})$ \ existiert nicht.
+\item Es gilt
+\begin{eqnarray*}
+\lim_{x \to 0}\ \left(\lim_{y \to 0} \frac{x^2y^2}{x^2y^2+(x-y)^2}\right) & = & \lim_{x \to 0} \frac{0}{x^2}\ = \ \lim_{x \to 0} 0 =\ 0\ , \ \  \text{da}\ \ x\neq 0\ \ \\[3ex]
+\lim_{y \to 0}\ \left(\lim_{x \to 0} f(x,y)\right) &=& 0\ , \quad \text{da \ } f(x,y) = f(y,x) \text{\ \ symmetrisch}\,.
+\end{eqnarray*}
+
+Es sei \ $y = \alpha x$\,. Wir n\"ahern uns also dem Punkt \(x=0\) entlang einer Geraden \(y= \alpha x\) an. Dann gilt
+\begin{equation*}
+	\lim_{x \to 0} f(x, \alpha x)= \lim_{x \to 0} \frac{\alpha^2 x^4}{\alpha^2 x^4 + x^2(1-\alpha)^2} =
+						\begin{cases}
+							 1  & \text{für }\alpha=1\,,\\
+  							0 & \text{für } \alpha \neq 1\,.
+						\end{cases}
+\end{equation*}
+Abh\"angig von dem Weg, auf dem wir uns dem Punkt \(\vec{x}=\vec{0}\) ann\"ahern, erh\"alt man unterschiedliche Grenzwerte. Deshalb existiert \ $\lim\limits_{\vec{x} \to \vec{0}} f(\vec{x})$ \ nicht.
+
+\item Es gilt 
+\begin{equation*}
+\lim_{x \to 0}\ \left(\lim_{y \to 0} f(x,y)\right) =\lim_{x \to 0} \sin\left(\frac{1}{x}\right)\left[\lim_{y \to 0} (x+y) \sin\left(\frac{1}{y}\right) \right]\,.
+\end{equation*}
+Der Grenzwert \ $\lim\limits_{y \to 0} (x+y) \sin\left(\frac{1}{y}\right) $ \  existiert nicht und  damit auch \  $\lim\limits_{x \to 0}\ \left( \lim\limits_{y \to 0} f(x,y)\right)$ \ nicht. 
+
+Wegen \ $f(x,y) = f(y,x)$ \ gilt dasselbe für den Grenzwert $ \lim\limits_{y \to 0}\ \left( \lim\limits_{x \to 0} f(x,y)\right)$\,. 
+
+
+Sei \ $\vec x_n=(x_n,y_n)$ \ eine Folge mit \ $\vec{0} \neq \vec{x}_n \in \mathbb{R}^2$\,, dann gilt:
+\[	\vec{x}_n \to \vec{0} \Leftrightarrow \lim_{n \to \infty} \sqrt{x_n^2 + y_n^2} = 0\\[3ex]\]
+
+Mit
+\begin{align*}|x_n+y_n| \leq |x_n| + |y_n| &= \sqrt{(|x_n| + |y_n|)^2}
+= \sqrt{|x_n|^2+|y_n|^2+2|x_n||y_n|}\\[2ex]
+&\leq \sqrt{|x_n|^2+|y_n|^2+|x_n|^2+|y_n|^2} = \sqrt{2}\sqrt{x_n^2+y_n^2}
+\end{align*}
+erhalten wir
+\begin{align*} 0 \leq \lim\limits_{n\to \infty} |x_n+y_n| \leq \sqrt{2} \lim\limits_{n\to\infty} \sqrt{x_n^2+y_n^2} = 0 
+\Rightarrow \lim\limits_{n \to \infty} |x_n+y_n| = 0\,.
+\end{align*}
+
+Somit ist
+\begin{eqnarray*}
+% 	\vec{x}_n \to \vec{0} &\Leftrightarrow& \lim_{n \to \infty} \sqrt{x_n^2 + y_n^2} = 0\\[3ex]
+	&\lim_{n \to \infty} |f(\vec{x}_n)|\ =\  \lim_{n \to \infty} \underbrace{|x_n+y_n|}_{\text{Nullfolge}} \underbrace{|\sin \frac{1}{x_n}|}_{\leq 1} \underbrace{|\sin \frac{1}{y_n}|}_{\leq 1}=0\\[1ex]
+		&\Rightarrow  \lim_{\vec{x} \to \vec{0}} f(\vec{x}) = 0\,.
+\end{eqnarray*}
+\end{abc}
+}
+
+% \ErgebnisC{dummy}
+% {
+% 
+% }
+

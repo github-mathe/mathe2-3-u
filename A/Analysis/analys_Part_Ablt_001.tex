@@ -1,0 +1,68 @@
+\Aufgabe[e]{Partielle Ableitungen} {
+Gegeben sei die Funktion 
+$$ f(x,y)=\left\{\begin{array}{ll} xy\cdot \frac{x^2-y^2}{x^2+y^2}&\text{ f\"ur } (x,y)\neq(0,0)\\
+                                                           0& \text{ sonst }\end{array}\right..$$
+Berechnen Sie $f_{xy}(x,y) $ f\"ur alle $(x,y)^\top\in\R^2$ und
+                                                           untersuchen Sie, wo 
+$$f_{xy}(x,y)=f_{yx}(x,y)$$
+gilt. \\
+Sind die zweiten Ableitungen von $f$ stetig in $(0,0)^\top$?\\
+{ Hinweis}: Berechnen Sie die Ableitungen im Ursprung $(0,0)^\top$ \"uber die
+Grenzwert-Definition. 
+}
+
+
+\Loesung{
+F\"ur $(x,y)^\top\neq (0,0)^\top$ gilt
+\begin{align*}
+f_x(x,y)=&\frac{(3x^2y-y^3)(x^2+y^2)-2x(x^3y-y^3x)}{(x^2+y^2)^2}\\
+=& \frac{x^4y+4x^2y^3-y^5}{(x^2+y^2)^2}\,.
+\end{align*}
+Wegen \(f(x,y) = -f(y,x)\) gilt
+\begin{align*}
+f_y(x,y)=-\partial_1f(y,x)= \frac{x^5-4y^2x^3-y^4x}{(x^2+y^2)^2}\,.
+\end{align*}
+Weiterhin gilt
+\begin{align*}
+f_{xy}(x,y)
+=& \frac{(x^4+12x^2y^2-5y^4)\cdot (x^2+y^2)^2-2(x^2+y^2)\cdot 2y \cdot (x^4y+4x^2y^3-y^5)}{(x^2+y^2)^4}\\
+=&\frac{x^6+9x^4y^2-9x^2y^4-y^6}{(x^2+y^2)^3}
+\end{align*}
+und
+\begin{align*}
+ \quad \quad f_{yx}(x,y)=&\frac{\partial}{\partial x}\Bigl(f_y(x,y)\Bigr)
+ =\frac{\partial}{\partial x} \Bigl( -\partial_1f(y,x)\Bigr)\\
+ =& -\partial_2\partial_1 f(y,x) = \partial_2\partial_1 f(x,y) = 
+ f_{xy}(x,y).
+\end{align*}
+
+Die zweiten Ableitungen sind f\"ur  $(x,y)^\top\neq (0,0)^\top$ stetig, deswegen gilt auch 
+$$f_{xy}(x,y)=f_{yx}(x,y).$$
+Im Ursprung hat man zun\"achst 
+\begin{align*}
+f_x(0,0)=& \underset{h\to 0}\lim\, \frac{f(h,0)-f(0,0)}{h}=\underset{h\to
+0}\lim\, \frac {0-0}{h(h^2+0)}=0\\
+f_y(0,0)=& \underset{h\to 0}\lim\, \frac{f(0,h)-f(0,0)}{h}=\underset{h\to0}\lim\, \frac {0-0}{h(0+h^2)}=0. 
+\end{align*}
+Damit ergibt sich f\"ur die zweite Ableitung 
+\begin{align*}
+f_{xy}(0,0)=&\underset{h\to 0}\lim\, \frac{f_x(0,h)- f_x(0,0)}{h}\\
+=& \underset{h\to 0}\lim\, \left( \frac{1}h \left(\frac{-h^5}{h^4} - 0\right)\right)=\underset{h\to 0}\lim\, \frac{-h^5}{h^5}=-1. 
+\end{align*}
+Vertauscht man die Reihenfolge der Ableitungen, ergibt sich
+\begin{align*}
+f_{yx}(0,0)=&\underset{h\to 0}\lim\, \frac{f_y(h,0)- f_y(0,0)}{h}\\
+=& \underset{h\to 0}\lim\, \left( \frac{1}h \left( \frac{h^5}{h^4} - 0\right)\right)=\underset{h\to 0}\lim\, \frac{h^5}{h^5}=1. 
+\end{align*}
+Also gilt im Ursprung 
+$$f_{xy}(0,0)\neq f_{yx}(0,0).$$
+Die Ableitungen k\"onnen also nicht stetig sein, da die Reihenfolge gem\"a\ss{} Satz von Schwarz sonst egal w\"are. 
+
+}
+
+%\newcounter{AufganalysPartAblt001}
+%\setcounter{AufganalysPartAblt001}{\theAufg}
+%\Ergebnis{\subsubsection*{Ergebnisse zu Aufgabe \arabic{Blatt}.\arabic{AufganalysPartAblt001}:}
+%
+%}
+

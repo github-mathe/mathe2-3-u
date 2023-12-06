@@ -1,0 +1,116 @@
+
+\input{header}
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l}Dr.\ Frank Gimbel\\Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2022}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{FT}
+\newcommand{\Kurs}{Mathematik III}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{2}
+\newcommand{\TOPIC}{Integration}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+%\setboolean{mitLoes}{true}
+
+\newboolean{withHints}
+\setboolean{withHints}{false}
+\setboolean{withHints}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+\setboolean{mitErg}{true}
+
+% % % Hinweise
+\newcommand{\Hints}[1]
+{
+\ifthenelse{\boolean{withHints}}
+{\definecolor{gruen}{rgb}{0.0,.5,.2}
+\color{gruen}
+\subsubsection*{\textcolor{gruen}{Zus\"atzliche Hinweise zu Aufgabe \arabic{Blatt}.\arabic{Aufg}:}}
+		#1
+
+\ruleBig
+\color{black}
+}
+	{}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+\renewcommand{\d }{\mathrm{d}}
+
+\textbf{Einführende Bemerkungen}
+
+\begin{itemize}
+\item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
+\item Die mit einem Stern *) markierten (Teil-)Aufgaben entfallen in diesem Trimester. Stattdessen werden einzelne Online-Aufgaben im ILIAS-Kurs kenntlich gemacht, zu denen Sie dort Ihre L\"osungswege zur Korrektur hochladen k\"onnen. 
+\item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
+\end{itemize}
+
+\ruleBig
+
+%Mathe III Blatt 2
+
+
+
+\input{../A/Analysis/analys_Ueig_Intg_001.tex}
+%\input{../A/Analysis/analys_Intg_Uneg_001.tex}
+
+
+\input{../A/Analysis/analys_Intg_Ndim_023.tex}
+
+\input{../A/Analysis/analys_Intg_Kuko_004.tex}
+
+
+%\input{../A/Analysis/analys_Intg_Ndim_003.tex} -> Blatt 3
+\input{../A/Analysis/analys_Intg_Ndim_017.tex}
+
+%\input{../A/Analysis/analys_Intg_Zyln_002.tex} -> Blatt 3
+
+%\input{../A/GewDgln/gewdgl_Dgln_Defb_001.tex} -> Blatt 3
+
+\input{../A/Analysis/analys_Intg_Para_001.tex}
+
+\input{../A/ILIAS.tex}
+
+
+
+
+%\input{../A/Analysis/b-2011-K-A6.tex} 
+% \input{../A/Analysis/analys_Tayl_Ndim_005.tex}
+
+%\input{../A/Analysis/wz-2013-8-2.tex}
+%\input{../A/Analysis/analys_Regl_Lhos_001.tex} 
+
+%\input{../A/Analysis/analys_Newt_Verf_02a.tex}  %noch erweitern um Taylor-Teilaufgabe 
+
+% \input{../A/Analysis/analys_Kurv_Disk_002.tex}
+
+% \input{../A/Analysis/analys_Kudi_Klau_001.tex} 
+
+%\input{../A/Analysis/analys_Intr_Poly_001.tex}
+
+
+
+
+
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\ifthenelse{\boolean{mitErg}}{
+\ruleBig
+\Ergebnisse}{}
+
+
+\end{twocolumn}
+\end{document}

@@ -1,0 +1,50 @@
+\Aufgabe[e]{Lineare DGl-Systeme 1. Ordnung}
+{
+Die symmetrische Matrix \ $\vec A \in \R^{3,3}$ \ erf\"ulle \ $\vec A \vec{v}_1 = 3 \vec{v}_1$\,, \ $\vec A \vec{v}_2=\vec{v}_2$\,, \ $\det \vec A = 6$ \ mit \ $\vec{v}_1 = (1,0,1)^\top$, \ $\vec{v}_2 = (-1,0,1)^\top$\,.
+\begin{abc}
+\item Zeigen Sie, dass \ $\lambda=2$ \ ein Eigenwert von \ $\vec A$  \ und 
+  $\vec v_3= (0,1,0)^\top$ ein zugeh\"origer Eigenvektor ist. Geben Sie alle Eigenwerte und Eigenvektoren von \ $\vec A$ \ an.
+%\item[b] Bestimmen Sie die Matrix $A$.
+\item L\"osen Sie das Anfangswertproblem
+$$ \dot{\vec{x}}(t) = \vec A \vec{x}(t) , \quad \vec{x}(0) = (1,1,1)^\top\,. $$
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Aus $\vec A\vec v_1 = 3\vec v_1$ folgt dass \ $\vec{v}_1$ \ ein Eigenvektor zum Eigenwert \
+$\lambda_1=3$ und aus $\vec A \vec v_2=1 \vec v_2$, dass $\vec{v}_2$ \ ein Eigenvektor zum
+Eigenwert \ $\lambda_2=1$ \ ist. Der dritte Eigenwert \ $\lambda_3$ \ ergibt sich aus
+$$\det \vec A = \lambda_1 \cdot \lambda_2 \cdot \lambda_3 = 6\,,$$
+zu \ $\lambda_3=2$\,. 
+
+Da \ $\vec A$ \ symmetrisch ist, ist der Eigenraum zu \ $\lambda_3$ \ orthogonal zu \ $\vec{v}_1$ \
+ und \ $\vec{v}_2$\,, dies ist etwa f\"ur $\vec{v}_3=(0,1,0)^\top$ \ erf\"ullt. 
+
+\item  Die allgemeine L\"osung ist
+$$ \vec{x}(t) = c_1 \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \EH{3t}
+    + c_2 \begin{pmatrix} -1 \\ 0\\ 1 \end{pmatrix} \EH t + c_3 \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \EH{2t}\ . 
+$$
+mit \ $c_1,c_2,c_3 \in \R$\,. 
+
+Einsetzen in die Anfangsbedingung liefert
+$$ \begin{pmatrix} 1 & -1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & 0 \end{pmatrix}
+    \begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \ . $$ 
+Mit dem Gauss--Algorithmus folgt
+$$ \left( \begin{array}{rrr|c}
+     1 & -1 & 0 & 1 \\ 0 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \end{array} \right)
+    \Rightarrow\,  \left( \begin{array}{rrr|c}
+     1 & -1 & 0 & 1 \\ 0 & 2 & 0 & 0 \\0 & 0 & 1 & 1  \end{array} \right) $$
+und damit \ $c_3=1$\,, $c_2=0$ \ und \ $c_1=1$\,. 
+
+Damit folgt
+$$ \vec{x}_{\text{AWP}}(t) = \begin{pmatrix} 1 \\ 0 \\ 1\end{pmatrix} \EH{3t} + \begin{pmatrix} 0 \\ 1 \\
+0 \end{pmatrix} \EH{2t}\ . $$
+\end{abc}
+}
+
+\ErgebnisC{AufgsysdglSystLoes004}
+{
+\textbf{b)} $\vec x = (\EH{3t},\EH{2t},\EH{3t})^\top$
+}
+

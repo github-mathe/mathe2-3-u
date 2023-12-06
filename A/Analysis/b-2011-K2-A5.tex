@@ -1,0 +1,44 @@
+\Aufgabe[e]{~}{
+Bestimmen Sie den Fl\"acheninhalt der Fl\"ache, die durch die Gerade $f_1(x)=x+2$ und die Parabel $f_2(x)=4-x^2$ begrenzt wird. 
+}
+
+\Loesung{
+Zun\"achst bestimmt man die Schnittpunkte der beiden Funktionsgraphen, indem man \(f_1(x) = f_2(x)\) l\"ost:
+\[
+ x+2=4-x^2 \Rightarrow x^2+x-2=0 \Rightarrow x=-2 \text{ oder } x=1
+\]
+Die beiden Funktionsgraphen schneiden sich in \(x=-2\) und \(x=1\). 
+Skizziert man die Funktionsgraphen, erkennt man, wie die Fl\"ache von den beiden Funktionsgraphen begrenzt wird, \(f_2(x)\) liegt hierbei \"uber \(f_1(x)\).
+
+
+\begin{center}
+\psset{yunit=1cm}
+\begin{pspicture}(-3,-1)(3,4)
+\psgrid(-3,-1)(3,4)
+\psplot[plotpoints=100,plotstyle=curve]
+{-2.21}{2.21}
+{4 x neg x mul add}
+\psplot[plotpoints=100,plotstyle=curve, fillstyle=solid, fillcolor=lightgray]
+{-2}{1}
+{4 x neg x mul add}
+\psline[showpoints=true](-2,0)(1,3)
+\psline(-3,-1)(2,4)
+\put(2.1,.1){$f_2(x)$}
+\put(1.6,3.3){$f_1(x)$}
+\end{pspicture}
+\end{center}
+
+Die Funktionen schneiden sich lediglich in zwei Punkten, also gibt es nur ein zu
+ber\"ucksichtigendes Fl\"achenst\"uck. Dessen Fl\"acheninhalt wird berechnet, indem man die Differenz der Integrale der beiden Funktionen bestimmt.
+\begin{align*}
+A & = \int\limits_{-2}^1 f_2(x)\,\d x- \int_{-2}^1 f_1(x) \,\d x = \int_{-2}^1 \left(f_2(x)-f_1(x) \right) \,\d x\\[2ex]
+&= \int\limits_{-2}^1(-x^2-x+2) \,\d x = \left[-\dfrac{1}{3} x^3-\dfrac{1}{2}x^2 +2x\right]_{-2}^1
+= \frac 92\,.
+\end{align*}
+
+}
+
+
+\ErgebnisC{b-2011-K2-A5}{
+ $9/2$
+}

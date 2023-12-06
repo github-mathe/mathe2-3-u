@@ -1,0 +1,42 @@
+\Aufgabe[e]{Kurven im $\R^n$}{
+Ein Satellit bewege sich auf der Bahn 
+$$\vec r(t) = \bigl( \sqrt{1+t^2},\, 3t \bigr)^\top$$
+\begin{abc}
+\item Berechnen Sie die Geschwindigkeit $\dot{ \vec r}(t)$ des Satelliten. 
+\item Geben Sie die Grenzwerte (f\"ur $t\rightarrow +\infty$ und f\"ur $t\rightarrow -\infty$)  der
+Bahnrichtung $r_2/r_1$  und Geschwindigkeit $\dot {\vec r}$ des Satelliten an. \\
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Die Geschwindigkeit ist
+$$\dot{\vec r}(t) = \left( \frac{t}{\sqrt{1+t^2}}, 3\right)^\top.$$
+\item Es ist 
+\begin{align*}
+\underset{t\rightarrow \pm \infty}\lim\frac {r_2}{r_1} =
+&\underset{t\to \pm \infty}\lim \frac{3t}{\sqrt{1+t^2}} \\
+=& \underset{t\to \pm\infty}\lim \frac{3\text{ sign}(t)}{\sqrt{\frac 1{|t|^2}+1}}=\pm 3
+\end{align*}
+Die Bahn verl\"auft also asymptotisch in Richtung der beiden Geraden $\Spn\{(1,\pm 3)^\top\}$. \\
+F\"ur die Geschwindigkeit gilt passend dazu 
+$$\underset{t\rightarrow \pm\infty}\lim \dot{\vec r}(t)=(\pm 1,3)^\top.$$
+
+\psset{xunit=1cm, yunit=1cm, runit=1cm}
+\begin{pspicture}(-1,-6)(5,6)
+\psgrid[subgriddiv=1,griddots=10,gridlabels=0](-1,-6)(5,6)
+\psline{-}(2,-6)(0,0)(2,6)
+\parametricplot[plotpoints=200, plotstyle=curve]
+{-4}{4}
+{1 t t mul add sqrt .5 mul  3 t mul .5 mul}
+\end{pspicture}
+
+\end{abc}
+}
+
+
+\ErgebnisC{AufganalysSatlBahn001}
+{
+$\underset{t\to\infty}\lim \frac{r_2(t)}{r_1(t)}=3$, $\underset{t\to\pm\infty}\lim \dot{\vec r}(t)=(\pm 1,3)^\top$
+}

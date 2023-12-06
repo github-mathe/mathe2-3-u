@@ -1,0 +1,138 @@
+\Aufgabe[e]{Laplace-Transformierte}
+{
+\begin{abc}
+\item Berechnen Sie die Laplace-Transformierte 
+$$\mathcal{L}\{f(t)\}=F(s)=\int\limits_{t=0}^\infty \EH{-st}\cdot f(t)\d t$$ der folgenden Funktionen: 
+\begin{iii}
+\begin{multicols}{2}
+\item $f(t) = 1$,
+\item $f(t) = t$,
+\item $f(t) = t^2$,
+\item $f(t) = t^3$,
+\item $f(t) = e^{-at}$,
+\item $f(t) = e^{-at}\cdot t$,
+\item ${\mathcal L}\{g'(t)\}$, f\"ur eine allgemeine (gegebene) Funktion $g(t)$,
+\item ${\mathcal L}\{g''(t)\}$, f\"ur eine allgemeine (gegebene) Funktion $g(t)$.
+\end{multicols}
+\end{iii}
+\textbf{Hinweis}: F\"ur die letzten beiden Aufgaben kann die Laplacetransformierte $G(s)=\sL\{g(t)\}$ der Funktion $g(t)$ als bekannt vorausgesetzt werden. 
+
+\item Berechnen Sie die Laplace-Transformierte von $f(t)=\sqrt{t}$. \\
+\end{abc}
+\textbf{Hinweise}:
+\begin{itemize}
+\item Substituieren Sie $u=\sqrt t$. 
+\item Spalten Sie $u^2$ in $u\cdot u$ auf und integrieren Sie partiell. 
+\item Das Quadrat des verbleibenden Integrals k\"onnen Sie l\"osen, indem Sie Polarkoordinaten einführen.
+\end{itemize}
+}
+
+\Loesung{
+\begin{abc}
+\item Diese Laplace-Transformationen müssen durch Anwendung der Definition und Bestimmung der Integrale berechnet werden. Es wird in der Regel partiell integriert. 
+\begin{iii}
+\item \begin{align*}
+\mathcal{L}\{1\} =& \int\limits_{t=0}^\infty \EH{-st}1 \d t
+= \left[\frac{\EH{-st}}{-s}\right]_{t=0}^\infty\\
+=&  \dfrac{1}{s}
+\end{align*}
+\item \begin{align*}
+\mathcal{L}\{t\} =& \int\limits_{t=0}^\infty \EH{-st}t \d t
+= \left[t\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s\int\limits_{t=0}^\infty \EH{-st}\d t\\
+=& 0 - \left.\frac{\EH{-st}}{-s^2}\right|_{t=0}^\infty
+= \dfrac{1}{s^2}
+\end{align*}
+\item \begin{align*}
+\mathcal{L}\{t^2\}  =& \int\limits_{t=0}^\infty t^2\EH{-st} \d t
+= \left[t^2\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s \int\limits_{t=0}^\infty 2t\EH{-st}\d t\\
+=& 0 + \left[\frac{2t\EH{-st}}{-s^2}\right]_{t=0}^\infty + \frac{2}{s^2}\int\limits_{t=0}^\infty \EH{-st}\d t\\
+=&  0 +\left.\frac{2\EH{-st}}{-s^3}\right|_{t=0}^\infty= \dfrac{2}{s^3}
+\end{align*}
+
+\item \begin{align*}
+\mathcal{L}\{t^3\}  =& \int\limits_{t=0}^\infty t^3\EH{-st} \d t
+= \left[t^3\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s \int\limits_{t=0}^\infty 3t^2\EH{-st}\d t\\
+=& 0 + \left[\frac{3t^2\EH{-st}}{-s^2}\right]_{t=0}^\infty + \frac{3}{s^2}\int\limits_{t=0}^\infty 2t\EH{-st}\d t\\
+=&  0 +\left.\frac{6t\EH{-st}}{-s^3}\right|_{t=0}^\infty+\int\limits_{t=0}^\infty\frac{6\EH{-st}}{s^3}\d t\\
+=& 0 + \left. \frac{6\EH{-st}}{s^4} \right|_{t=0}^\infty = \frac 6{s^4}
+\end{align*}
+
+\item \begin{align*}
+\mathcal{L}\{\EH{-at}\} =& \int\limits_{t=0}^\infty \EH{-st}\EH{-at} \d t
+= \left[\frac{\EH{-(s+a)t}}{-(s+a)}\right]_{t=0}^\infty\\
+=&  \dfrac{1}{s+a}
+\end{align*}
+
+\item \begin{align*}
+\mathcal{L}\{t\EH{-at}\} =& \int\limits_{t=0}^\infty t\EH{-at}\EH{-st} \d t
+= \left[\frac{t\EH{-(s+a)t}}{-(s+a)}\right]_{t=0}^\infty+\frac 1{s+a}\int\limits_{t=0}^\infty \EH{-(s+a)t}\d t \\
+=& 0 + \left.\frac{\EH{-(s+a)t}}{-(s+a)^2}\right|_{t=0}^\infty
+=  \dfrac{1}{(s+a)^2}
+\end{align*}
+
+\item \begin{align*}
+\mathcal{L}\{g'(t)\} =& \int\limits_{t=0}^\infty \EH{-st}g'(t) \d t\\
+\left[\EH{-st}g(t)\right]_{t=0}^\infty - \int\limits_{t=0}^\infty(-s\EH{-st}g(t))\d t\\
+=& 0-g(0)+s\mathcal{L}\{g(t)\}
+= sG(s)-g(0)
+\end{align*}
+
+\item \begin{align*}
+\mathcal{L}\{g''(t)\} =& \int\limits_{t=0}^\infty \EH{-st}g''(t) \d t\\
+=&\left[\EH{-st}g'(t)\right]_{t=0}^\infty - \int\limits_{t=0}^\infty(-s\EH{-st}g'(t))\d t\\
+=& 0-g'(0)+s\mathcal{L}\{g'(t)\}\\
+=& s(sG(s)-g(0))-g'(0) = s^2G(s)-g'(0)-sg(0)
+\end{align*}
+
+\end{iii}
+
+\item Mit der Substitution \ $u=\sqrt{t} \ \Rightarrow \ \text dt=2\,u\,\text du$ \ erhält man
+	\[
+	F(s) = \int\limits_{0}^{\infty} \EH{-s\,u^2}\cdot u\cdot 2\,u\ \text du = -\dfrac{1}{s}\cdot\int\limits_{0}^\infty  u\cdot(-2s u)\,\EH{-s\,u^2}\ \text du\ .
+\]
+
+Partielle Integration ergibt
+	\begin{align*}
+	F(s) & = -\dfrac{1}{s}\left(u\EH{-s\,u^2}\Big|_0^\infty - \int\limits_{0}^\infty  
+\EH{-s\,u^2}\ \text du\right)\\[1ex]
+& =-\dfrac{1}{s}\left(0-0 - \int\limits_{0}^\infty  
+\EH{-s\,u^2}\ \text du\right)\\[1ex]
+&  = \dfrac{1}{s}\cdot\int\limits_{0}^\infty  \EH{-s\,u^2}\ \text du  \ .
+\end{align*}
+
+Durch Quadrieren der Gleichung  erh\"alt man
+  \[
+  \big(F(s)\big)^2 \ = \ \dfrac{1}{s}\,\int\limits_{0}^\infty \EH{-s\,x^2}\ \text dx 
+                   \cdot \dfrac{1}{s}\,\int\limits_{0}^\infty \EH{-s\,y^2}\ \text dy \ = \ 
+                   \dfrac{1}{s^2}\,\int\limits_{0}^\infty  \int\limits_{0}^\infty  \EH{-s\,(x^2+y^2)}\ \text dx\,\text dy 
+\]
+und durch Übergang zu Polarkoordinaten
+  \[
+  \big(F(s)\big)^2 \ = \ \dfrac{1}{s^2}\,\int\limits_{0}^\infty  \int\limits_{0}^{\pi/2} \EH{-s\,r^2}\ r\,\text d\phi\,\text dr \ = \
+         \dfrac{1}{s^2}\cdot\dfrac{\pi}{2}\cdot \left[\frac{-1}{2\,s}\,\EH{-s\,r^2}\right]_0^\infty \ = \ \dfrac{\pi}{4\,s^3} \ .
+\]
+Damit ist 
+	\[
+	 F(s) = {\cal L}\left(\sqrt{t}\right) = \sqrt{\dfrac{\pi}{4\,s^3}} .
+\]
+\end{abc}
+}
+
+
+
+\ErgebnisC{AufglaplacTrafBere01b}
+{
+\textbf{a)}\begin{multicols}{3}
+\begin{iii}
+\item $\dfrac{1}{s}$,
+\item $\dfrac{1}{s^2}$,
+\item $\dfrac{2}{s^3}$,
+\item $\dfrac{3!}{t^4}$,
+\item $\frac{1}{s+a}$,
+\item $\dfrac{1}{(s+a)^2}$,
+\item $ sG(s) - g(0)$,
+\item $ s^2G(s) - sg(0) - g'(0)$.
+\end{iii}
+\end{multicols}
+\textbf{b)}$F(s)=\sqrt{\frac{\pi}{4s^3}}\,.$
+}

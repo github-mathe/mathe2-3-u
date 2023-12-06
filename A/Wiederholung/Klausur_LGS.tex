@@ -1,0 +1,104 @@
+\Aufgabe[e]{Lineare Gleichungssysteme}{
+Gegeben sei das lineare Gleichungssystem
+
+	\[
+		\begin{pmatrix}
+	    ~~-1 &  - & 6  & + &  3 \\
+	  	~2 & + & b+9 & - & 6 \\ 
+	    1 & + & 2b  & - & 2 \\
+		\end{pmatrix} 
+		\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}= \begin{pmatrix} 2 \\ a-4 \\ 2a \end{pmatrix}, \, \ \ a,\, b\in\mathbb{R}\ .
+	\] 
+
+die Stufenform ist gegeben durch
+
+		\begin{center}
+			\begin{tabular}{|l|rrc|c|l|} \hline
+	 			I    & 	--1 & --6   &  3  &   2   &  \\ 
+	 			II'  & 	0   & $b$--3& 0   & $a$   & \\ 
+	 			III''&	0   & 0      &  1 & 2     & III'' = III' - 2II'\\ \hline
+			\end{tabular}
+		\end{center}
+
+\begin{abc}
+\item Geben Sie die Lösungsmenge für $b=3$ und $a=0$ an.
+\item Wie ist das Bild einer Matrix definiert? Bestimmen Sie das Bild der Matrix für $b=3$ und $a=0$.
+\item Wie ist der Kern einer Matrix definiert? Bestimmen Sie den Kern der Matrix für $b=3$ und $a=0$.
+\item Bestimmen Sie jeweils die Dimension von Bild und Kern.
+\end{abc}
+}
+
+\Loesung{
+	\textbf{a)} % a) L\"osungsmenge (unendlich viele)
+	
+	Wir setzen  $b = 3$ und $a = 0$ in die Stufenform ein und erhalten
+        \begin{center}
+            \begin{tabular}{|l|rrc|c|} \hline
+                I    & 	--1 & --6   &  3  &   2  \\ 
+	 			II'  & 	0   & 0     & 0   & 0    \\ 
+	 			III''&	0   & 0     &  1 & 2     \\ \hline
+			\end{tabular}
+		\end{center}
+    Die L\"osungsmenge erhalten wir durch R\"uckw\"artseinsetzen. Aus der dritten Gleichung erhalten
+    wir $x_3 = 2$. Aus der ersten und zweiten Gleichung erhalten wir einen Freiheitsgrad.
+    Wir w\"ahlen $x_2 = t$ f\"ur $t \in \mathbb{R}$. Daraus ergibt sich $x_1 = 4-6t$. Die L\"osungsmenge ist dann
+    $$
+    \mathcal{L} = \left\{\vec x \in \mathbb{R}^3 \mid \vec x = \begin{pmatrix} 4\\0\\2 \end{pmatrix} + t \begin{pmatrix} -6\\1\\0 \end{pmatrix}, t\in\mathbb{R}\right\}.
+    $$
+    
+    \textbf{b)} % b) Bild
+    
+    Das Bild einer Matrix $\vec A$ ist definiert durch die Menge:
+    $$
+        \Bild (\vec A) = \left\{ \vec x \in \mathbb{R}^3 \mid \vec x = \vec A \vec y \, , \, \vec y \in \mathbb{R} \right\}
+    $$
+    Das bedeutet, alle Vektoren $\vec x \in \mathbb{R}$ , die sich als Linearkombination der Spalten von $\vec A$ darstellen lassen, 
+    liegen in $\Bild (\vec A)$. 
+    
+    Das Bild lässt sich bestimmen, indem man den Gauß-Algoritmus auf $A^T$ anwendet. Es ergibt sich die Stufenform:
+            \begin{center}
+            \begin{tabular}{|l|rrc|} \hline
+                I    & 	--1 & 2  & 1   \\ 
+	 			II'  & 	0   & 0  & 0   \\ 
+	 			III''&	0   & 0  & 1 \\ \hline
+			\end{tabular}
+		\end{center}
+    Damit ist die Basis des Bildes gegeben durch die beiden linear unabh\"angigen Zeilenvektoren:
+    $$
+    \mathcal B (\Bild (\vec A)) = \left\{ \begin{pmatrix} -1\\2\\1 \end{pmatrix} ,\begin{pmatrix} 0\\0\\1 \end{pmatrix} \right\}
+    $$
+    Das Bild ergibt sich dann aus allen Linearkombinationen der Basisvektoren. Also
+    $$
+    \Bild (\vec A) = \Spn \left\{ \begin{pmatrix} -1\\2\\1 \end{pmatrix} ,\begin{pmatrix} 0\\0\\1 \end{pmatrix} \right\}
+    $$
+    Die Dimension des Bildes lässt sich aus der Zeilenstufenform ablesen, als Anzahl der Nicht-Nullzeilen oder als 
+    Anzahl der Basisvektoren. Das heißt $\dim(\Bild (\vec A)) = 2$.\\
+    
+    \textbf{c)} % c) Kern
+    
+    Der Kern einer Matrix ist definiert als die Menge aller L\"osungen des homogenen Systems.
+    $$
+    \Kern ( \vec A) = \left\{ \vec x \in \mathbb{R}^3 \mid \vec A \vec x = \vec 0 \right \}
+    $$
+    Nach der Gau\ss -Elimination erhalten wir
+        \begin{center}
+            \begin{tabular}{|l|rrc|c|} \hline
+                I    & 	--1 & --6   &  3  & 0 \\ 
+	 			II'  & 	0   & 0     & 0   & 0 \\ 
+	 			III''&	0   & 0     &  1  & 0 \\ \hline
+			\end{tabular}
+		\end{center}
+    Aus der letzten Zeile erhalten wir $x_3 = 0$. Die zweite Zeile liefert einen Freiheitsgrad $x_2 = t$ mit $t \in \mathbb{R}$.
+    Aus der ersten Zeile erhalten wir schlie\ss lich $x_1 = -6t$.
+    Damit ist der Kern gegeben durch
+    $$
+    \Kern (\vec A) = \left\{\vec x = \begin{pmatrix} -6t\\t\\0 \end{pmatrix} \right\} = \Spn\left\{ \begin{pmatrix} -6\\1\\0 \end{pmatrix} \right\}.
+    $$
+    Die Basis des Kerns ist damit
+    $$
+    \mathcal B (\Kern(\vec A)) = \left\{ \begin{pmatrix} -6\\1\\0 \end{pmatrix} \right\}.
+    $$
+    Die Dimension des Kern entspricht der Anzahl der Nullzeilen oder der Anzahl der Basisvektoren.
+    Dass heißt $\dim(\Kern( \vec A)) =1$.
+
+}

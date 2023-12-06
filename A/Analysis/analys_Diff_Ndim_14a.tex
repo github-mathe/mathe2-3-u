@@ -1,0 +1,39 @@
+\Aufgabe[]{}
+{
+Bestimmen und klassifizieren Sie alle station\"aren Punkte der Funktion 
+$$g(x,y)=3x^2-2xy-\dfrac{y^3}6. $$
+}
+
+\Loesung{
+Die ersten beiden Ableitungen von $g$ sind gegeben durch 
+$$\nabla g(x,y)=\begin{pmatrix}6x-2y\\-2x-y^2/2\end{pmatrix}\text{ und }\vec H_g(x,y)= \begin{pmatrix} 6 & -2\\ -2 & -y\end{pmatrix}.$$
+An den station\"aren Punkten gilt 
+\begin{align*}
+&&\vec 0=&\nabla g(x,y)=\begin{pmatrix}6x-2y\\-2x-y^2/2\end{pmatrix}\\
+\Leftrightarrow&& y=& 3x,\, 9x^2+4x=0\\
+\Leftrightarrow&& (x,y)=& (0,0)\text{ oder } (x,y)=\left( -\frac 49,-\frac43\right)
+\end{align*}
+Um die Punkte zu charakterisieren wird dort die Hessematrix berechnet. Im ersten Punkt ist 
+$$\vec H_g(0,0)=\begin{pmatrix} 6 & -2\\ -2 & 0\end{pmatrix}.$$
+Diese Matrix ist indefinit, denn die Eigenwerte sind:
+$$
+\lambda_1 = 3 + \sqrt{13} > 0 \quad \text{ und } \quad \lambda_2 = 3 - \sqrt{13} < 0 .
+$$
+Alternativ kann man die Indefinitheit zeigen durch
+$$(1,0) \vec H_g(0,0)\begin{pmatrix}1\\0\end{pmatrix} = 6>0$$ 
+und andererseits
+$$(1,2) \vec H_g(0,0)\begin{pmatrix}1\\2\end{pmatrix}=-2<0.$$
+Im Ursprung liegt also ein Sattelpunkt. \\
+Im zweiten Punkt ist 
+$$\vec H_g(-4/9,-4/3)=\begin{pmatrix} 6 & -2\\ -2 & \frac{4}{3}\end{pmatrix}.$$
+Diese Matrix ist diagonaldominant mit positiven Diagonalelementen, also positiv definit, somit liegt im Punkt $(-4/9,-4/3)$  ein Minimum. 
+Die positive Definitheit kann auch \"uber die Eigenwerte gezeigt werden. Die Eigenwerte sind:
+$$
+\lambda_1 = \frac13(11 + \sqrt{85}) > 0 \quad \text{ und } \quad \lambda_2 = \frac13 ( 11 - \sqrt{85}) > 0 .
+$$
+}
+
+
+\ErgebnisC{analysDiffNdim14a}{
+$\vec x_1=(0,0)^\top,\, \vec x_2=(-4/9,-4/3)^\top$
+}

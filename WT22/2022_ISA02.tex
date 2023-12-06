@@ -1,0 +1,52 @@
+
+\input{header}
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l}Dr.\ Frank Gimbel\end{tabular}}
+
+\newcommand{\Jahr}{2022}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{ISA: Ing. Studienkompetenzen}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{3}
+\newcommand{\TOPIC}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+%\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%
+ \setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+
+
+
+
+\input{../A/Wiederholung/sysdgl_Fede_Mech_01b.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+\input{../A/Wiederholung/Taylor_Flugbahn_01.tex}
+
+
+\bigskip
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\ifthenelse{\boolean{mitErg}}{
+\ruleBig
+\Ergebnisse}{}
+
+
+\end{twocolumn}
+\end{document}

@@ -1,0 +1,131 @@
+\Aufgabe[e]{}
+{
+\begin{abc}
+ 
+\item Gegeben sei die Funktion $f(x) = \cos \left(\dfrac{\pi}{2} \sin x\right)$.
+
+\begin{iii}
+ 
+ \item Bestimmen Sie den Definitionsbereich und den Wertebereich von $f$. 
+ 
+ \item Zeigen Sie, dass die Funktion $f$ die Periodizität $\pi$ besitzt, d.h.\ zeigen Sie, dass $f(x+\pi) = f(x)$ für alle $x\in \R$ gilt.
+ 
+ \item Bestimmen Sie alle Nullstellen von $f$.\\[0.5ex]
+ \textbf{Hinweis:} Beachten Sie die Periodizität von $f$.
+ 
+ \item Bestimmen Sie alle Extrema von $f$ und charakterisieren Sie diese.\\[0.5ex]
+ \textbf{Hinweis:} Beachten Sie die Periodizität von $f$.
+ 
+ \item Skizzieren Sie den Graphen von $f$ im Intervall $[-\pi,2\pi]$. 
+ 
+\end{iii}
+
+
+
+\item Bestimmen Sie den Grenzwert 
+\[
+\lim_{x\rightarrow \infty} (x+3)\left(\operatorname e^{2/x}-1\right)\,.
+\]
+
+\end{abc}
+}
+
+
+\Loesung{
+\textbf{Zu a)} 
+\begin{iii}
+\item  Der Wertebereich der Sinusfunktion ist $[-1,1]$. Auf $[-\pi/2,\pi/2]$ 
+nimmt der Kosinus alle Werte von $0$ bis $1$ an. Somit gilt 
+\[
+D(f) =\R \qquad \text{ und } \qquad W(f) = [0,1]\,.
+\]
+
+\medskip
+\item  Es gilt
+\begin{align*}
+ f(x+\pi) &  = \cos \left(\frac{\pi}{2} \sin (x+\pi)\right)\\[1ex]
+ & = \cos \left(-\frac{\pi}{2} \sin x \right)\\[1ex]
+ & = \cos \left(\frac{\pi}{2} \sin x\right)\\[1ex]
+ & = f(x) 
+\end{align*}
+für alle $x\in \R$. Somit hat $f$ die Periode $\pi$. Hinweis: Es lässt sich zeigen, dass $f$ keine kleinere Periode als $\pi$ besitzt. 
+
+\medskip
+\item Aufgrund der Periodizität reicht es aus, die Nullstellen im Intervall $[0,\pi]$ zu bestimmen. Es gilt 
+\begin{align*}
+ f(x) & = \cos \left(\frac{\pi}{2} \sin x\right) = 0 \\[1ex]
+ \Longleftrightarrow \quad \frac{\pi}{2} \sin x & = \frac{\pi}{2} \quad \text{oder} \quad \frac{\pi}{2} \sin x = \frac{3\pi}{2}\,.
+\end{align*}
+Der erste Fall liefert $x=\pi/2$. Der zweite Fall würde $\sin x = 3$ ergeben, was unmöglich ist. Die Menge aller Nullstellen ist somit
+\[
+N = \left\{\frac{\pi}{2} + k\pi \;\; \Big| \;\; k\in \mathbb Z \right\}\,.
+\]
+
+\medskip
+\item Es gilt 
+\[
+f'(x) = - \sin \left(\frac{\pi}{2}\sin x\right)\frac{\pi}{2}\cos x\,.
+\]
+Es folgt 
+\begin{align*}
+ f'(x) & = - \sin \left(\frac{\pi}{2}\sin x\right)\frac{\pi}{2}\cos x = 0 \\[1ex]
+ \Longleftrightarrow \quad \sin \left(\frac{\pi}{2}\sin x\right) & = 0 \quad \text{oder} \quad \cos x = 0\,.
+\end{align*}
+Der erste Fall liefert $x=0$ und $x=\pi$. Der zweite Fall ergibt $x=\pi/2$. Da $f$ nur Werte zwischen $0$ und $1$ annimmt, sind $x_1=(0,1)$ und $x_3=(\pi,1)$ Maxima, während $x_2 = (\pi/2,0)$ Minimum ist. Die Menge aller Maxima ist 
+\[
+E_{\max} = \{(k\pi,1) \mid k\in \mathbb Z \}\,.
+\]
+Die Menge aller Minima ist
+\[
+E_{\max} = \left\{ \left(\frac{\pi}{2}+k\pi,0\right) \mid k\in \mathbb Z \right\}\,.
+\]
+
+\medskip
+\item
+\end{iii}
+\begin{center}
+	\begin{pspicture}(-4,-1)(7,2)
+	\psgrid[griddots=8,subgriddiv=0](-4,-1)(7,2)
+	\psline[linewidth=1.2pt]{->}(-4,0)(7,0)
+	\psline[linewidth=1.2pt]{->}(0,-1)(0,2)
+        \psplot[plotpoints=100, plotstyle=curve]{-4}{7}
+        {
+        x 180 mul 3.14159 div sin 90 mul cos
+        }
+        \psdot(-1.5708,0)
+        \psdot(1.5708,0)
+        \psdot(4.7124,0)
+        \psdot(  -3.14159,   1.00000)
+        \psdot(   0.00000,   1.00000)
+        \psdot(   3.14159,   1.00000)
+        \psdot(   6.283  ,   1.00000)
+        \psdot(  -1.57080,   0.00000)
+        \psdot(   1.57080,   0.00000)
+        \psdot(   4.71239,   0.00000)
+
+%\cos \left(\dfrac{\pi}{2} \sin x\right)$.
+
+
+
+	\end{pspicture} 
+
+%\boxed{\includegraphics[width =0.25\textwidth]{./fig_f.eps}}
+\end{center}
+
+\bigskip
+\textbf{Zu b)} Es gilt 
+\[
+(x+3)\left(\operatorname e^{2/x}-1\right) = \frac{\operatorname 
+e^{2/x}-1}{\dfrac{1}{x+3}} =: \frac{f(x)}{g(x)}
+\]
+mit $\lim_{x\rightarrow \infty} f(x) = 0$ und $\lim_{x\rightarrow \infty} g(x) = 0$. Mit 
+dem Satz von L'Hospital folgt dann
+\begin{align*}
+ \lim_{x\rightarrow \infty} \dfrac{f(x)}{g(x)} & = \lim_{x\rightarrow \infty }
+\dfrac{f'(x)}{g'(x)} = \lim_{x\rightarrow \infty} \dfrac{2\operatorname e^{2/x} 
+(x+3)^2}{x^2} \\[1ex]
+& = \lim_{x\rightarrow \infty} 2\operatorname e^{2/x} \, \lim_{x\rightarrow \infty} 
+\dfrac{(x+3)^2}{x^2} = 2\,.
+\end{align*}
+}
+

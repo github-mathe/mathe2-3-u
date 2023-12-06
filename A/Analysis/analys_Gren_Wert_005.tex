@@ -1,0 +1,44 @@
+\Aufgabe[e]{Grenzwerte monotoner Folgen}{
+Es seien $a_1=\sqrt 2$ und $a_{n+1}=\sqrt{2+a_n}$ f\"ur $n=1,2,3,\hdots$. 
+\"Uberpr\"ufen Sie,
+\begin{abc}
+\item dass $(a_n)$ beschr\"ankt ist, 
+\item dass $(a_n)$ monoton w\"achst und 
+\item gegen die gr\"oßte L\"osung der Gleichung $x^2-x-2=0$ konvergiert. 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Null ist sicher eine untere Schranke f\"ur alle $a_n>0$. Eine obere Schranke ist $2$. Wir untersuchen dazu das Quadrat der Folge und rechnen nach, dass $a_{n}^2\leq 4$ f\"ur alle $n\in\N$:  
+\begin{align*}
+a_{n+1}^2&=2+a_n\overset!\leq 4
+\end{align*}
+Dies ist genau dann erf\"ullt, wenn bereits $a_n\leq 2$ ist. Das ist f\"ur $a_1=\sqrt 2$ der Fall und damit auch f\"ur alle folgenden $a_n$. 
+
+\item Es ist zu zeigen, dass f\"ur alle $n\in\N$ gilt $a_n\leq a_{n+1}$.\\
+\"Aquivalent dazu ist $\dfrac{a_{n+1}^2}{ a_n^2}\geq 1$:  
+\begin{align*}
+\frac{a_{n+1}^2}{a_n^2}
+&\geq \frac{2+a_n}{2a_n} \qquad(\text{wegen }a_n\leq 2)\\
+&= \frac 1{a_n} + \frac 12\geq \frac 12 + \frac 12 = 1\qquad(\text{wegen }a_n\leq 2)
+\end{align*}
+\item Da $a_n$ beschr\"ankt und monoton ist, muss die Folge einen Grenzwert 
+$$a=\underset{n\to\infty}\lim a_n = \underset{n\to\infty}\lim a_{n+1}$$
+besitzen. Mit diesem Grenzwert ist 
+\begin{align*}
+a^2-a-2&= \underset{n\to\infty}\lim a_{n+1}^2 - \underset{n\to\infty}\lim a_{n}-2\\
+&=\underset{n\to\infty}\lim (\sqrt{2+a_n}^2 - a_n)-2\\
+&= \underset{n\to\infty}\lim 2 -2=0
+\end{align*}
+Damit muss $a$ eine Nullstelle des Polynoms $p(x)=x^2-x-2$ sein. \\
+$p(x)$ ist ein Polynom zweiten Grades, besitzt also zwei Nullstellen. Negative Werte nimmt $p(x)$ nur zwischen den beiden Nullstellen an.  Da 
+$$p(a_1)=p(\sqrt 2)=-\sqrt 2<0$$
+ist, liegt $a_1$ zwischen den beiden Nullstellen. Wegen der Monotonie von $(a_n)$ muss es sich bei $a$ also um die gr\"oßere der beiden Nullstellen handeln. 
+\end{abc}
+}
+
+\ErgebnisC{analysGrenWert005}
+{
+\textbf{a)/b)} Es ist z. B. $0<a_n\leq 2$. 
+}

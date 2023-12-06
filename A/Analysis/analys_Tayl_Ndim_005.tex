@@ -1,0 +1,96 @@
+\Aufgabe[f]{Taylor-Entwicklung} {
+Gegeben seien die beiden Funktionen $\R\overset{\vec r}\rightarrow \R^2\overset f \rightarrow \R$
+mit
+\begin{align*}
+f(x,y)=& -\EH{y+1-x^2}\qquad\text{ und }\qquad \vec r(t)=\begin{pmatrix} \cos(\pi\cdot t)\\\ln t
+- \sin^2(\pi\cdot t)\end{pmatrix}.
+\end{align*}
+\begin{abc}
+\item Geben Sie die Taylorentwicklung zweiter Ordnung $T_{2,f}$ der Funktion $f$ um den Punkt $\vec x_0=(1,\,
+0)^\top$ an. 
+\item Geben Sie die Taylorentwicklung zweiter Ordnung $\vec T_{2,r}$ der Funktion $\vec r$ um den Punkt $t_0=1$
+an. (Entwickeln Sie dazu die Komponenten $r_1$ und $r_2$ der Funktion $\vec r=(r_1,r_2)^\top$
+separat.)
+\item Bilden Sie durch Verkettung beider Funktionen die Funktion 
+$$g(t):=f\circ \vec r(t).$$
+\item Verketten Sie ebenso die beiden Taylor-Polynome
+$$\tilde g(t):=T_{2,f}\circ \vec T_{2,r}(t).$$
+\item Vergleichen Sie $g$ und $\tilde g$ und die Taylorpolynome erster Ordung dieser beiden Funktionen. 
+\end{abc}
+}
+
+
+\Loesung{
+\begin{abc}
+\item Die ersten beiden Ableitungen von $f$ ergeben sich zu 
+\begin{align*}
+f(x,y)=& -\EH{y+1-x^2}                                       &\quad \Rightarrow&\quad&f(1,0)=&-1\\
+\vec J_f(x,y)=& -\EH{y+1-x^2}(-2x,\, 1)                      &\Rightarrow&&\vec J_f(1,0)=&(2,-1)\\
+\vec H_f(x,y)=& -\EH{y+1-x^2}\begin{pmatrix} 4x^2-2& -2x\\ -2x  &  1\end{pmatrix}&\Rightarrow&&\vec
+H_{f}(1,0)=&\begin{pmatrix} -2 & 2\\ 2 & -1\end{pmatrix}
+\end{align*}
+und damit ist das Taylorpolynom zweiter Ordnung um den Entwicklungspunkt $(1,0)^\top$: 
+\begin{align*}
+T_{2,f}(x,y)=&f(1,0)+\vec J_f(1,0)\begin{pmatrix}x-1\\y-0\end{pmatrix} + \frac 12 (x-1,\, y-0) \vec
+H_f(1,0) \begin{pmatrix} x-1\\y-0\end{pmatrix}\\
+=& -1 +2(x-1)-y + \frac 12 \left( -2 (x-1)^2 + 2\cdot 2 (x-1)y -1\cdot y^2\right)\\
+=& -1 + 2(x-1)-y - (x-1)^2 + 2 (x-1)y -\frac {y^2}2.
+\end{align*}
+\item F\"ur $\vec r$ ergeben sich die Ableitungen zu
+\begin{align*}
+\vec r(t)=& \begin{pmatrix}\cos(\pi t)\\ \ln t - \sin^2(\pi
+t)\end{pmatrix}&\Rightarrow&\ &\vec r(1)=&\begin{pmatrix}-1\\0\end{pmatrix}\\
+\vec r'(t)=& \begin{pmatrix} -\pi\sin(\pi t)\\ \frac 1 t -2\pi\sin(\pi t)\cos(\pi t)\end{pmatrix} = \begin{pmatrix} -\pi\sin(\pi t)\\ \frac 1 t - \pi \sin(2\pi t)\end{pmatrix}&\Rightarrow&&\vec r'(1)=&\begin{pmatrix}0\\1\end{pmatrix}\\
+\vec r''(t)=& \begin{pmatrix} \pi^2\cos(\pi t)\\ -\frac 1{t^2} -2\pi^2\cos(2\pi t)\end{pmatrix}&\Rightarrow&&\vec r''(t)=& \begin{pmatrix}-\pi^2 \\ -1-2\pi^2\end{pmatrix}
+\end{align*}
+und das Taylorpolynom zu: 
+\begin{align*}
+T_{2,\vec r}=& \vec r(1) + (t-1)\vec r'(1) + \frac 12 (t-1)^2 \vec r''(1)\\
+=& \begin{pmatrix}-1 -\frac 12 \pi^2(t-1)^2\\(t-1)-\frac 12(1+2\pi^2)(t-1)^2\end{pmatrix}.
+\end{align*}
+\item Es ist 
+$$g(t)=-\EH{\ln t - \sin^2(\pi t) + 1 - \cos^2(\pi t)}=-\EH{\ln t }=-t.$$
+\item Die Verkettung der beiden Taylor-Polynome hingegen ergibt: 
+\begin{align*}
+\tilde g(t)=& -1 + 2 \left( -2 -\frac 12 \pi^2 (t-1)^2\right) 
+- (t-1)\left( 1-\frac 12(1+2\pi^2)(t-1)\right) + \\
+&- \left( -2-\frac 12 \pi^2(t-1)^2\right)^2 +\\
+&+ 2 \left( -2-\frac
+12 \pi^2(t-1)^2\right)(t-1)\left( 1 - \frac 12 (1+2\pi^2)(t-1)\right) + \\
+&- \frac 12 (t-1)^2 \left(1-\frac 12(1+2\pi^2)(t-1)\right)^2\\
+=& -9-5(t-1)+\left( 2\pi^2+2\right)(t-1)^2 + \frac12 (t-1)^3 + \left( \frac14 \pi^4 -\frac 18\right)(t-1)^4
+\end{align*}
+\item Anders als man vermuten k\"onnte, ist die exakt ermittelte Funktion $g(t)$ weit weniger
+kompliziert als die N\"aherungsfunktion $\tilde g(t)$. Auch die beiden linearen Taylorpolynome um
+den Punkt $t=1$ unterscheiden sich deutlich: 
+$$T_{1,g}(t)=g(t)=-t,\qquad T_{1,\tilde g}(t)=-9-5(t-1).$$
+Anders w\"are dies, wenn man die Funktion $f$ statt um $\vec x_0=(1,0)^\top$ um den Punkt $\vec
+r(t_0)=(-1,0)^\top$ entwickeln w\"urde. Dann w\"aren zumindest $T_{1,g}$ und $T_{1,\tilde g}$
+identisch, denn 
+\begin{align*}
+T_{2,f}(x,y)=&f(-1,0)+\vec J_f(-1,0)\begin{pmatrix}x+1\\y-0\end{pmatrix} + \frac 12 (x+1,\, y-0) \vec H_f(-1,0) \begin{pmatrix} x+1\\y-0\end{pmatrix}\\
+=& -1 -2(x+1)-y + \frac 12 \left( -2 (x+1)^2 - 2\cdot 2 (x+1)y -1\cdot y^2\right)\\
+=& -1 - 2(x+1)-y - (x+1)^2 - 2 (x+1)y -\frac {y^2}2.
+\end{align*}
+und f\"ur die Verkettung der beiden Polynome h\"atten wir dann
+\begin{align*}
+\tilde g(t)=& -1 - 2 \left( -\frac 12 \pi^2 (t-1)^2\right) 
+- (t-1)\left( 1-\frac 12(1+2\pi^2)(t-1)\right) + \\
+&- \left( -\frac 12 \pi^2(t-1)^2\right)^2 +\\
+&+ 2 \left( -\frac 12 \pi^2(t-1)^2\right)(t-1)\left( 1 - \frac 12 (1+2\pi^2)(t-1)\right) + \\
+&- \frac 12 (t-1)^2 \left(1-\frac 12(1+2\pi^2)(t-1)\right)^2\\
+=& -1-(t-1)+ 2\pi^2(t-1)^2 + \left(2\pi^2+\frac12\right) (t-1)^3+\\
+&- \left(\pi^2+\frac74 \pi^4 +\frac 18\right)(t-1)^4\,.
+\end{align*}
+Somit ist $T_{1,\tilde g} = -1 - (t-1) = -t = T_{1,g}$.
+\end{abc}
+}
+
+\ErgebnisC{AufganalysTaylNdim005}
+{
+$T_{2,f}(x,y)= -1 + 2(x-1)-y - (x-1)^2 + 2 (x-1)y -\frac {y^2}2$\\
+$T_{2,\vec r}= \begin{pmatrix}-1 -\frac 12 \pi^2(t-1)^2\\(t-1)-\frac 12(1+2\pi^2)(t-1)^2\end{pmatrix}$
+
+
+}
+

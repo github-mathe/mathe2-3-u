@@ -1,0 +1,97 @@
+
+\input{header}
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l}Dr.\ Frank Gimbel\\Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2022}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{Mathematik II}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{10}
+\newcommand{\TOPIC}{Integration}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%\setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+\renewcommand{\d }{\mathrm{d}}
+
+\textbf{Einführende Bemerkungen}
+
+\begin{itemize}
+\item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
+\item Die mit einem Stern *) markierten (Teil-)Aufgaben entfallen in diesem Trimester. Stattdessen werden einzelne Online-Aufgaben im ILIAS-Kurs kenntlich gemacht, zu denen Sie dort Ihre L\"osungswege zur Korrektur hochladen k\"onnen. 
+\item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
+\end{itemize}
+
+\ruleBig
+
+%Mathe II Blatt 10
+
+
+
+
+\input{../A/Analysis/analys_Inte_Gral_010.tex}
+
+\input{../A/Analysis/analys_Inte_Gral_001.tex}
+
+\input{../A/Analysis/wz3-2013-1-1.tex}
+
+\input{../A/Analysis/analys_Intg_Ndim_21a.tex}  
+
+\input{../A/Analysis/analys_Part_Brch_005.tex}
+
+\input{../A/Analysis/b-2011-K2-A4.tex} 
+
+\input{../A/Analysis/analys_Intg_Bogl_001.tex} 
+
+\input{../A/ILIAS.tex}
+
+%\input{../A/Analysis/analys_Intg_Ndim_017.tex}
+
+
+
+
+%\input{../A/Analysis/b-2011-K-A6.tex} 
+
+% \input{../A/Analysis/analys_Tayl_Ndim_005.tex}
+
+%\input{../A/Analysis/wz-2013-8-2.tex}
+%\input{../A/Analysis/analys_Regl_Lhos_001.tex} 
+
+%\input{../A/Analysis/analys_Newt_Verf_02a.tex}  %noch erweitern um Taylor-Teilaufgabe 
+
+% \input{../A/Analysis/analys_Kurv_Disk_002.tex}
+
+% \input{../A/Analysis/analys_Kudi_Klau_001.tex} 
+
+%\input{../A/Analysis/analys_Intr_Poly_001.tex}
+
+
+
+
+
+\ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\ifthenelse{\boolean{mitErg}}{
+\ruleBig
+\Ergebnisse}{}
+
+
+\end{twocolumn}
+\end{document}

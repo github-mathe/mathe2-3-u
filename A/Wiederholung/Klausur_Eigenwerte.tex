@@ -1,0 +1,106 @@
+\Aufgabe[e]{Eigenwerte}{
+Gegeben sei die Matrix
+
+\begin{align*}
+\boldsymbol{A}=\begin{pmatrix}
+~~\dfrac23 & ~\dfrac23 & -\dfrac23\\[1em]
+-\dfrac23 & ~\dfrac73 & -\dfrac43\\[1em]
+~~0 & ~0 & ~~1
+\end{pmatrix}.
+\end{align*}
+
+mit dem charakteristischen Polynom
+
+\begin{align*}
+p(\lambda) = (1-\lambda) (\lambda^2-3\lambda+2).
+\end{align*}
+
+Gegeben seien weiterhin die Eigenvektoren 
+		\begin{align*}
+			\boldsymbol{v}_1 &= (-2, 0, 1)^\top,\\
+			\boldsymbol{v}_2 &= (2, 1, 0)^\top, \\
+            \boldsymbol{v}_3 &= (1, 2, 0)^\top.
+		\end{align*}
+\begin{abc}
+\item Bestimmen Sie alle Eigenwerte. 
+\item Zeigen Sie, dass die gegebenen Vektoren Eigenvektoren von $\boldsymbol A$ sind und geben Sie die zugehörigen Eigenwerte an.
+\item Bestimmen Sie die algebraische und geometrische Vielfachheit aller Eigenwerte. 
+      Was sagen die jeweiligen Vielfachheiten \"uber die Eigenwerte und Eigenvektoren aus?
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Das charakteristische Polynom l\"asst sich schreiben als:
+$$
+p(\lambda) = (1-\lambda)^2 (2 - \lambda).
+$$
+Dies kann durch l\"osen der quadratischen Gleichung $\lambda^2-3\lambda+2 = 0$ bestimmt werden.\\
+Damit erhalten wir die Eigenwerte $\lambda_1 = 1$ und $\lambda_2 = 2$.
+\item Ein Eigenvektor muss die Gleichung 
+$$
+\boldsymbol{A} \boldsymbol{v} = \lambda \boldsymbol{v}
+$$
+erf\"ullen.
+Nachrechnen ergibt f\"ur $\boldsymbol{v}_1$
+\begin{align*}
+\begin{pmatrix}
+~~\dfrac23 & ~\dfrac23 & -\dfrac23\\[1em]
+-\dfrac23 & ~\dfrac73 & -\dfrac43\\[1em]
+~~0 & ~0 & ~~1
+\end{pmatrix}
+\begin{pmatrix}
+-2\\0\\1
+\end{pmatrix} = \begin{pmatrix}
+-2\\0\\1
+\end{pmatrix},
+\end{align*}
+f\"ur $\boldsymbol{v}_2$
+
+\begin{align*}
+\begin{pmatrix}
+~~\dfrac23 & ~\dfrac23 & -\dfrac23\\[1em]
+-\dfrac23 & ~\dfrac73 & -\dfrac43\\[1em]
+~~0 & ~0 & ~~1
+\end{pmatrix}
+\begin{pmatrix}
+2\\0\\1
+\end{pmatrix} = 
+\begin{pmatrix}
+2\\0\\1
+\end{pmatrix}
+\end{align*}
+und f\"ur $\boldsymbol{v}_3$
+\begin{align*}
+\begin{pmatrix}
+~~\dfrac23 & ~\dfrac23 & -\dfrac23\\[1em]
+-\dfrac23 & ~\dfrac73 & -\dfrac43\\[1em]
+~~0 & ~0 & ~~1
+\end{pmatrix}
+\begin{pmatrix}
+1\\2\\0
+\end{pmatrix} = \begin{pmatrix}
+2\\4\\0 
+\end{pmatrix}
+= 2 \begin{pmatrix}
+1\\2\\0
+\end{pmatrix}.
+\end{align*}
+Damit ist gezeigt, dass $\boldsymbol{v}_1$ und $\boldsymbol{v}_2$ die Eigenvektoren 
+zu dem Eigenwert $\lambda_1 = 1$ sind und $\boldsymbol{v}_3$ der Eigenvektor zu dem 
+Eigenwert $\lambda_2 = 2$ ist.
+\item
+Die algebraische Vielfachheit eines Eigenwertes l\"asst sich aus dem charakteristischen Polynom
+ablesen. Die algebraische Vielfachheit ist die Vielfachheit der Nullstelle. Das heißt, 
+$$
+\alpha(1) = 2 \,\, \text{ und } \,\, \alpha(2) = 1.
+$$
+Die geometrische Vielfachheit ist gegeben durch die Anzahl der Eigenvektoren zu dem jeweiligen Eigenwert
+beziehungsweise durch die Dimension des jeweiligen Eigenraumes.
+Das heißt,
+$$
+\gamma(1) = 2 \,\, \text{ und } \gamma(2) = 1.
+$$
+\textbf{Beachte: } Die geometrische Vielfachheit ist immer kleiner gleich der algebraischen Vielfachheit.
+\end{abc}
+}

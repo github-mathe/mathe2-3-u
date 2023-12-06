@@ -1,0 +1,121 @@
+\Aufgabe[e]{Umkehrfunktion}{
+Gegeben seien die folgenden Funktionen. Geben Sie den Definitionsbereich an (betrachten Sie dabei den Hauptwert der Funktion) 
+und überprüfen Sie, ob die Funktionen invertierbar sind. Bestimmen Sie jeweils die inverse Funktion.
+\begin{iii}
+\item  
+$f(x)=2x -1 $.
+\item 
+$f(x) = x^\frac{1}{3} $.
+\item 
+$f(x) = (x-1)^\frac{1}{3}$.
+\item 
+$f(x) = \dfrac{x}{x+1}$.
+\item 
+$f(x) = \log_2(x+3)$.
+\item 
+$f(x) = 2+\operatorname{e}^{x-1}$.
+\item 
+$f(x) = \arccos(x^{-2})$.
+\end{iii}
+}
+\Loesung{
+\begin{iii}
+\item Die Funktion $f:\mathbb R \to \mathbb R$, 
+$f(x)=2x -1$ ist bijektiv und daher invertierbar. Um die Umkehrfunktion zu bestimmen, l\"ost man die Gleichung
+$y=\dfrac{x+1}{2}$ f\"ur die Variable $x$. Es gilt
+\begin{align*}
+2x-1 &= y,\\
+2x &= y+1,\\
+x&= \frac{y+1}{2}.
+\end{align*}
+Das Ergebnis erhalten wir durch Vertauschen der Variablennamen. Beide Funktionen sind auf dem Definitionsbereich $\mathbb R$
+definiert.
+\item Die Funktion
+$x^\frac{1}{3}$ ist definiert f\"ur $x\in \mathbb R$. F\"ur die erste Ableitung gilt $\frac{1}{3}x^{-2/3}\ge 0$ f\"ur $x\in \mathbb R$, 
+daher ist die Funktion streng monoton steigend und folglich injektiv. Au\ss erdem ist die Funktion surjektiv auf $\mathbb R$, weil sie nicht beschr\"ankt ist.
+Daher ist die Funktion bijektiv und damit invertierbar. Die Umkehrfunktion $x^3$ hat den gleichen Definitionsbereich $\mathbb R$.
+\item Die Funktion $(x-1)^{1/3}$ ist ebenso wie die vorherige Funktion bijektiv. Die Umkehrfunktion kann berechnet werden durch
+\begin{align*}
+(x-1)^\frac{1}{3} &= y,\\
+x-1 & = y^3,\\
+x = y^3+1
+\end{align*}
+mit dem Definitionsbereich $\mathbb R$.
+\item Die Funktion $\displaystyle \frac{x}{x+1}$ ist definiert f\"ur $\mathbb R \setminus \{-1\}$. Die Funktion hat die Grenzwerte
+$$\lim_{x\to\pm\infty} f(x)=1.$$
+Daher ist sie surjektiv auf dem Wertebereich $(-\infty,1) \cup (1, +\infty)$. Die Funktion $f$ ist eine bijektive Abbildung
+$f: (-\infty,-1) \cup (-1, +\infty)\to(-\infty,1) \cup (1, +\infty)$. Da die Ableitung $$f'(x)=\frac{1}{(x+1)^2} > 0, \quad \mathbb R \setminus \{-1\}$$
+stets positiv ist, ist die Funktion streng monoton steigend auf dem Definitionsbereich.
+Die Umkehrfunktion wird berechnet durch
+\begin{align*}
+\frac{x}{x+1} &= y\\
+x & = (x+1)y\\
+x(1-y) & = y\\
+x &= \frac{y}{1-y},
+\end{align*}
+Die Funktion ist definiert f\"ur $x \in \mathbb R \setminus \{+1\}$.
+\item Die Funktion $\log_2(x+3)$ ist definiert f\"ur $x+3 > 0 \Rightarrow x > -3$. Sie ist streng monoton steigend. Die Abbildung $f: (-3, +\infty) \to \mathbb R$ 
+ist bijektiv.
+Die Umkehrfunktion kann berechnet werden als
+\begin{align*}
+\log_2(x+3) &= y,\\
+2^{\log_2(x+3)} & = 2^y,\\
+x+3 = 2^y,\\
+x = 2^y-3,
+\end{align*}
+Die Funktion ist definiert auf $\mathbb R$ und der Wertebereich ist $(-3, +\infty)$.
+\item Die Funktion $2+\operatorname{e}^{x-1}$ ist definiert auf $x\in \mathbb R$. Die Abbildung $f: \mathbb R \to (2, +\infty)$ ist bijektiv,
+weil die Ableitung stets positiv ist $f'(x) = \operatorname{e}^{x-1} > 0$.
+%
+Die Umkehrfunktion ist
+\begin{align*}
+2+\operatorname{e}^{x-1} &= y\\
+\operatorname{e}^{x-1} & = y-2\\
+\ln{\operatorname{e}^{x-1}}& = \ln{(y-2)}\\
+x & = \ln{(y-2)}+1,
+\end{align*}
+welche definiert ist auf $x\in (2, +\infty)$ und der Wertebereich ist $\mathbb R$.
+\item Die Funktion $\arccos(x)$ ist die Umkehrfunktion von $\cos(x)$, wenn man nur den Hauptwert der Funktion betrachtet. Nach Definition beschr\"anken wir den 
+Definitionsbereich von $\cos(x)$ auf $0 \leq x \leq \pi$, dann ist der Wertebereich $[-1,1]$. Damit ist der Definitionsbereich von $\arccos(x)$ gegeben 
+durch $[-1,1]$ und der Wertebereich ist $[0,\pi]$. F\"ur die Funktion $\arccos(x^{-2})$ ist der Definitionsbereich der Definitionsbereich der 
+zusammengesetzten Funktion. Der Definitionsbereich der inneren Funktion $x^{-2}$ ist $\mathbb R \setminus \{0\}$. Der Definitionsbereich der 
+\"au\ss eren Funktion $\arccos(w)$ wie oben bemerkt, ist $w\in[-1,1]$, daher muss $w:=x^{-2}\geq-1$ gelten, was immer wahr ist. Es gilt
+$x^{-2} \leq 1 \Rightarrow x^2 \ge 1 \Rightarrow x \ge 1 \land x \leq -1$. Der Wertebereich der zusammengesetzten Funktion $\arccos(x^{-2})$ ist $[0,\pi]$, weil das 
+der Wertebereich der \"au\ss eren Funktion ist.\\
+Zu untersuchen bleibt die Monotonie der zusammengesetzten Funktion. Da die Funktion $x^{-2}$ nicht-monoton ist, k\"onnen wir daraus keine Aussage \"uber 
+die Monotonie der zusammengesetzten Funktion treffen. Die Ableitung von $\arccos$ ist
+$$(\arccos(w))' = -\frac{1}{\sqrt{1-w^2}}.$$
+F\"ur die Ableitung der zusammengesetzten Funktion benutzen wir die Kettenregel. Damit erhalten wir die Ableitung
+\begin{align*}
+\left(\arccos(x^{-2})\right)^\prime & = -\frac{1}{\sqrt{1-(x^{-2})^2}}\, (-2 x^{-3}),\\
+& = \frac{2}{\sqrt{1-(x^{-4})}}\, x^{-3},
+\end{align*}
+welche ungerade ist. Daher ist die zusammengesetzte Funktion $\arccos(x^{-2})$ nicht-monoton. Um die Umkehrfunktion zu bestimmen m\"ussen wir den Definitionsbereich
+in zwei Teile teilen, in denen die Funktion jeweils monoton ist. Damit definieren wir zwei Zweige der Funktion. Die Funktion ist monoton, wenn wir sie auf den Definitionsbereich 
+f\"ur den $x$-positiven Zweig auf $[1, \infty)$ einschr\"anken und f\"ur den $x$-negativen Zweig auf $(-\infty, -1]$ einschr\"anken. 
+Die Umkehrfunktion wird berechnet durch
+\begin{align*}
+\arccos(x^{-2}) &= y,\\
+\cos(\arccos{x^{-2}}) & = \cos(y),\\
+x^{-2} & = \cos(y),\\
+x & = \pm \frac{1}{\sqrt{\cos(y)}}.
+\end{align*}
+Durch Vertauschen der Variablennamen erhalten wir die Umkehrfunktion
+$$
+y = \pm \frac{1}{\sqrt{\cos(x)}}.
+$$
+Diese Funktion ist die zusammengesetzte Funktion mit dem Definitionsbereich, der die Bedingungen $$\cos(x)>0$$ und $x\in [0, \pi]$ erf\"ullt. 
+Dies ist der Definitionsbereich f\"ur den Hauptwert von $\cos(x)$. Daraus ergibt sich die Bedingung $x\in [0,\frac{\pi}{2})$.  Der Wertebereich ist der Wertebereich der \"au\ss eren Funktion.
+Also $[1, +\infty]$ f\"ur den positiven Zweig und  $(-\infty, -1]$ f\"ur den negativen Zweig.
+\end{iii}
+}
+
+\ErgebnisC{InverseFunktion}{
+\textbf{i}) $f^{-1}(x)=\dfrac{x+1}{2}.$
+\textbf{ii}) $f^{-1}(x) = x^3.$
+\textbf{iii}) $f^{-1}(x) = x^3+1.$
+\textbf{iv}) $f^{-1}(x) = \dfrac{x}{1-x}.$
+\textbf{v}) $f^{-1}(x) = 2^x-3.$
+\textbf{vi}) $f^{-1}(x) = \ln(x-2) + 1.$
+\textbf{vii}) $f^{-1}(x) = \pm\dfrac{1}{\sqrt{\cos{x}}}.$
+}

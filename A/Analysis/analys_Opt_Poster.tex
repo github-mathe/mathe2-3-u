@@ -1,0 +1,74 @@
+\Aufgabe[e]{Optimierungsproblem}{
+%
+Ein Poster muss mit einer Gesamtfläche von $\bar A = 64000 \text{ mm}^2$ gedruckt werden. Es muss 10 mm Seitenränder und 25 mm obere und untere Ränder haben. Welche Höhe und Breite ergeben die maximale Druckfläche?
+%
+
+}
+
+
+\Loesung{
+%
+Seien $x$ und $y$ die beiden Dimensionen des Plakats und $s$ die Seitenränder und $t$ die oberen und unteren Ränder. Die Gesamtfläche ist $\bar A = 64000 \text{ mm}^2= xy$ mm$^2$. Die gedruckte Fläche beträgt
+\begin{align*}
+A(x) &= (x-2s)(y-2t) \\
+&= (x-2s)\left(\frac{\bar A}{x} -2t\right) \quad (\text{unter Verwendung der Nebenbedingung der Gesamtfläche})\\\
+& = \bar A - \frac{2s}{x} \bar A - 2tx + 4 st \text{ mm}^2.
+\end{align*}
+Um die Fläche zu maximieren, suchen wir die stationären Punkte:
+$$
+A'(x) = 2s\bar A \frac{1}{x^2} -2 t.
+$$
+Die stationären Punkte sind:
+$$
+x_c = \pm \sqrt{\frac{s\bar A}{t}}.
+$$
+Nur der positive Wert ist sinnvoll, da wir nach physikalischen Größen suchen.
+Die zweite Ableitung ist
+$$
+A''(x) = -\frac{4s\bar A}{x^3}
+$$
+die in $x_c$ negativ ist. Daher ist $x_c$ ein lokales Maximum.
+Wir haben also
+$$
+x_c = 160 \text{ mm}
+$$
+und
+$$
+y_c = \frac{\bar A}{x_c} = 400 \text{ mm}.
+$$
+Die maximale Druckfläche beträgt
+$$
+A_{\text{max}} = x_c\, y_c = 32000 \text{ mm}^2.
+$$
+Der Graph der Fläche $A(x)$ ist
+
+\begin{minipage}{\linewidth}
+\centering
+
+\begin{tikzpicture}
+\begin{axis}[
+axis lines=middle,clip=false,
+xmin=-200,
+xmax=800,
+ymin=-10000,
+ymax=50000,
+xticklabel style={black},
+xlabel=$x$,
+ylabel=$y$]
+
+\addplot[domain=18:600,samples=200,blue]{(x-20)*(64000/x-50)}
+node[right,pos=1.,font=\footnotesize]{$A(x)$};
+
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+}
+
+\ErgebnisC{AufganalysOptPoster}
+{
+Die maximale Druckfläche beträgt:
+$
+A_{\text{max}} = 32000 \text{ mm}^2.
+$
+}

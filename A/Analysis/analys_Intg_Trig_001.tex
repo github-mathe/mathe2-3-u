@@ -1,0 +1,68 @@
+\Aufgabe[e]{Bereichsintegral}
+{
+Gegeben sei der Integrationsbereich $B$, der von den beiden Kurven: 
+$$y=\sin(x)\text{\qquad und \qquad} y=\cos(x)$$ im Bereich $0\leq x\leq 2\pi$ 
+komplett eingeschlossen wird. 
+\begin{abc}
+\item Skizzieren Sie den Bereich $B\subset \R^2$. 
+\item Berechnen Sie das Integral 
+$$I=\int\limits_B 2y\d(x,y).$$
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Der Integrationsbereich l\"asst sich mit Hilfe folgender Skizze bestimmen: 
+
+\begin{pspicture}(-1,-2)(8,2)
+%\psgrid(-1,-2)(7,2)
+
+\psplot[plotpoints=100, plotstyle=curve]
+{-1}{8}
+{
+x 180 mul 3.14159 div cos
+}
+\psplot[plotpoints=100, plotstyle=curve]
+{-1}{8}
+{
+x 180 mul 3.14159 div sin
+}
+\psplot[plotpoints=100, plotstyle=curve, fillcolor=lightgray, fillstyle=solid]
+{.7854}{3.927}
+{
+x 180 mul 3.14159 div cos
+}
+\psplot[plotpoints=100, plotstyle=curve, fillcolor=lightgray, fillstyle=solid]
+{.7854}{3.927}
+{
+x 180 mul 3.14159 div sin
+}
+\psline{->}(-1,0)(9,0)
+\psline{->}(0,-2)(0,2)
+\put(8.7,.1){$x$}
+\put(-.6,-.9){$\sin(x)$}
+\put(-.9,1.1){$\cos(x)$}
+\put(2,.1){$B$}
+\psline(.7854,-.1)(.7854,.1)
+\put(.7,-.4){$\frac\pi 4$}
+\psline(3.927,-.1)(3.927,.1)
+\put(3.8,.2){$\frac{5\pi} 4$}
+\psline(7.86,-.1)(7.86,.1)
+\put(7.8,.2){$\frac{5\pi} 2$}
+
+\end{pspicture}
+
+\item Es bietet sich eine Parametrisierung als Normalbereich bez\"uglich $x$ an. Dabei ist zu beachten, dass die untere Grenze des Bereichs $B$ durch $\cos(x)$ gegeben ist und die obere Grenze durch $\sin(x)$. 
+\begin{align*}
+I=&\int\limits_{x=\pi/4}^{5\pi/4}\int\limits_{y=\cos(x)}^{\sin(x)}2y\d y\d x
+= \int\limits_{x=\pi/4}^{5\pi/4}\Bigl.y^2\Bigr|_{y=\cos(x)}^{\sin(x)}\d x\\
+=& \int\limits_{x=\pi/4}^{5\pi/4}(\sin^2(x)-\cos^2(x))\d x
+= \int\limits_{x=\pi/4}^{5\pi/4}(-\cos(2x))\d x\\
+=& \left.-\frac{\sin(2x)}2\right|_{x=\pi/4}^{5\pi/4}
+= \frac 12\left( \sin\frac\pi 2 - \sin\frac{5\pi}2\right) = \frac{1-1}2=0
+\end{align*}
+Dieses Ergebnis konnte man erwarten, da der Integrand $2y$ eine ungerade Funktion bez\"uglich $y$ ist und der Integrationsbereich bez\"uglich der $x$-Achse symmetrisch ist (wenn auch nicht spiegelsymmetrisch). 
+\end{abc}
+}
+\ErgebnisC{analysIntgTrig001}{
+0
+}

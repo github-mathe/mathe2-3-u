@@ -1,0 +1,88 @@
+\Aufgabe[e]{Continuity}{
+Consider the following function $y=f(x)$ with
+\begin{align*}
+f(x) = 
+\begin{cases}
+\frac{1}{x} \quad &\text{ for } x \in (-\infty, -1],\\
+\frac{3}{x} \quad &\text{ for } x \in (-1,0),\\
+\frac{x^2-1}{x-1}  \quad &\text{ for } x \in [0,1) \cup (1,\infty),\\
+3  \quad \text{ for } x = 1.
+\end{cases}
+\end{align*}
+and its graph
+
+\centering
+\tikzset{
+  jumpdot/.style={mark=*,solid},
+  excl/.append style={jumpdot,fill=white},
+  incl/.append style={jumpdot,fill=black},
+}
+\begin{tikzpicture}
+    \begin{axis}[
+     axis lines=middle,clip=false,
+            xmin=-4.5,xmax=4.5, ymin=-5,ymax=5,
+            xticklabel style={black},
+            xlabel=$x$,
+            ylabel=$y$]
+    \addplot[domain=-5:-1,samples=200,red]{1/x};
+    \addplot[domain=-1:-0.5,samples=200,red]{3/x};
+    \addplot[incl] coordinates {(-1,-1)};
+    \addplot[excl] coordinates {(-1,-3)};
+    \addplot[domain=0:3,samples=200,red]{(x^2-1)/(x-1)};
+    \addplot[incl] coordinates {(0,1)};
+    \addplot[excl] coordinates {(1,2)};
+    \addplot[incl] coordinates {(1,3)};
+    \end{axis}
+  \end{tikzpicture}
+%
+\begin{abc}
+\item Find all values for which the function is discontinuous.
+\item For each value of discontinuity, state why the formal definition of continuity does not apply.
+\item Classify each discontinuity as either jump, removable, or infinite.
+\end{abc}
+}
+\Loesung{
+The function is discontinuous in
+\begin{iii}
+\item $x = -1$,
+\item $x = 0$,
+\item $x = 1$.
+\end{iii}
+\begin{iii}
+\item
+The function is discontinuous for $x=-1$. This discontinuity is a jump because
+the half-sided limits exist are finit but are not equal:
+$$
+\lim_{x \to -1^-} f(x) = \lim_{x \to -1^-} \frac{1}{x} = -1,
+$$
+$$
+\lim_{x \to -1^+} f(x) = \lim_{x \to -1^+} \frac{3}{x} = -3.
+$$
+\item
+The function is discontinuous for $x=0$. This discontinuity is an infinite discontinuity
+because the half-sided limit is infinite:
+$$
+\lim_{x \to 0^-} f(x) = \lim_{x\to 0^-} \frac{3}{x} = -\infty,
+$$
+$$
+\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \frac{x^2-1}{x-1} = \lim_{x\to 0^+} x+1 =1.
+$$
+
+\item
+The discontinuity $x =1$ is removable, because the half-sided limits are finite and equal
+but differ from the value $f(1) =3$:
+$$
+\lim_{x \to 1^-} f(x) = \lim_{x \to 1^-} \frac{x^2-1}{x-1} = \lim_{x\to 1^-} x+1 =2,
+$$
+$$
+\lim_{x \to 1^+} f(x) = \lim_{x \to 1^+} \frac{x^2-1}{x-1} = \lim_{x\to 1^+} x+1 =2.
+$$
+\end{iii}
+}
+
+\ErgebnisC{analysGrenWert004}
+{
+\textbf{a)} $x_1 = -1$: Sprungstelle, \\ 
+$x_2 = 0$: Polstelle, \\
+$x_3 = 1$: Hebbare Diskontinuität  
+}

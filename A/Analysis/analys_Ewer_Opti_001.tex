@@ -1,0 +1,50 @@
+\Aufgabe[e]{Optimierungsaufgabe}{
+Ein Elektrizit\"atswerk (E) liegt an einem 400 Meter breiten geradlinig verlaufenden Fluss. Es soll
+eine Leitung zu einem 1800 Meter flussabw\"arts auf der anderen
+Flussseite gelegenen Haus (H) verlegt werden. \\
+Ein Meter Leitung zu Wasser kosten das dreifache eines Meters Leitung zu Land. Welche Leitungsf\"uhrung verursacht die geringsten Kosten?
+\begin{center}
+\psset{xunit=1cm, yunit=1cm, runit=1cm}
+\begin{pspicture}(-1,-1)(10,3)
+%\psgrid[subgriddiv=1,griddots=10,gridlabels=0](-1,-6)(5,6)
+\psline[fillstyle=solid, fillcolor=lightgray, linewidth=0pt, linecolor=black](-1,0)(10,0)(10,2)(-1,2)(-1,0)
+%\psline(-1,0)(10,0)
+%\psline(2,0)(2,0)
+\psline{<->}(0,0)(0,2)
+\psline[linewidth=2pt, linestyle=dashed, linecolor=gray](0,2)(2,2)(5,0)(9,0)
+\psdot(0,2)
+\put(.0,2.1){E}
+\put(.1,1){400m}
+\psdot(9,0)
+\put(8.9,-.4){H}
+\psline{<->}(0,-.5)(9,-.5)
+\put(4,-.4){1800m}
+\psline[linewidth=2pt, linestyle=dashed](0,2)(3,0)(9,0)
+\end{pspicture}
+\end{center}
+}
+
+\Loesung{
+Der g\"unstigse Weg der Leitung wird aus zwei geradlinigen Leiungsabschnitten bestehen, von denen
+einer l\"angs des Flusses verl\"auft und einer den Fluss \"uberquert. (Tats\"achlich wird in diesem
+Modell auch eine Leitung aus drei Abschnitten, die nach einem geradlinigen Leitungsst\"uck auf der Flussseite des
+E-Werkes den Fluss \"uberquert und danach ein weiteres St\"uck auf der Uferseite des Hauses
+verl\"auft, dieselben Kosten verursachen.) 
+Die Kosten der zweigeteilten Leitungstrasse mit $x$ Metern Strecke zu Land betragen: 
+$$K(x)=x+3\cdot\sqrt{400^2+(1800-x)^2}.$$
+Diese Funktion muss minimiert werden, es soll also gelten: 
+\begin{align*}
+&&0&=K'(x)
+= 1+\frac{-3(1800-x)}{\sqrt{400^2+(1800-x)^2}}\\
+\Leftrightarrow&&9(1800-x)^2&=400^2+(1800-x)^2\\
+\Leftrightarrow&&x=&1800- \frac{400}{\sqrt 8}
+ = 200(9-\frac{1}{\sqrt 2}) \approx 1660
+\end{align*}
+Der g\"unstigste Weg verl\"auft also zu etwa 1660 Metern an Land und zu 420 Metern zu Wasser. 
+
+}
+
+\ErgebnisC{analysisEwerOpti001}
+{
+Die Gesamtl\"ange der Stromleitung betr\"agt ca. 2080 Meter. 
+}
