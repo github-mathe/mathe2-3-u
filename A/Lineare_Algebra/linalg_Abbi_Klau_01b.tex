@@ -1,0 +1,78 @@
+\Aufgabe[e]{Lineare Abbildungen}{
+Gegeben seien die linearen Abbildungen $\vec f:\R^3\rightarrow \R^3$ und $\vec g: \R^3\rightarrow \R^2$ durch 
+$$\vec f(x_1,x_2,x_3)=\begin{pmatrix} x_1-x_2\\
+x_1+2x_3\\
+x_1-x_2+x_3\end{pmatrix}\qquad\text{ und }\qquad\vec g(y_1,y_2,y_3)=\begin{pmatrix} y_2-y_3\\
+y_1+y_2-y_3
+\end{pmatrix}.$$
+\begin{abc}
+\item Geben Sie die Matrixdarstellungen der beiden linearen Abbildungen $\vec f$ und $\vec g$
+sowie der Abbildung $\vec h=\vec g\circ \vec f$ an.
+\item Bestimmen Sie mit Hilfe der Matrixdarstellungen aus Aufgabenteil \textbf{a)} $\vec f(1,1,-1)$, $\vec g(1,2,1)$ sowie $\vec h(1,1,-1)$. 
+%\item Bestimmen Sie eine Basis des Kerns von $\vec g$. 
+%\item Bestimmen Sie zudem $\vec f^{-1}(\Kern(\vec g))$. \\
+%\textbf{Hinweis}: Beachten Sie die vorhergehende Teilaufgabe. 
+%\item Geben Sie eine Basis von $\Kern(\vec g\circ \vec f)$ an. 
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Die Abbildungsmatrix  der Abbildung $\vec f$ ist 
+$$\vec A=\begin{pmatrix}
+1  &  -1  &  0  \\
+1  &   0  &  2  \\
+1  &  -1  &  1  
+\end{pmatrix},$$ 
+die der Abbildung $\vec g$: 
+$$\vec B=\begin{pmatrix}
+0 & 1 & -1 \\
+1 & 1 & -1\end{pmatrix}.$$
+Die Abbildung $\vec h$ hat die Darstellung: 
+\begin{align*}
+\vec h(x_1,x_2,x_3)=&\vec g(\vec f(x_1,x_2,x_3))\\
+=& \begin{pmatrix}f_2(x_1,x_2,x_3)-f_3(x_1,x_2,x_3)\\
+f_1(x_1,x_2,x_3)+f_2(x_1,x_2,x_3)-f_3(x_1,x_2,x_3)\end{pmatrix}\\
+=& \begin{pmatrix}
+x_1+2x_3-(x_1-x_2+x_3)\\
+x_1-x_2 + (x_1+2x_3) - (x_1-x_2+x_3)
+\end{pmatrix}
+= \begin{pmatrix}
+x_2+x_3\\
+x_1+x_3
+\end{pmatrix}
+\end{align*}
+Damit hat $\vec h(\vec x)$ die Matrixdarstellung 
+$$\vec C=\begin{pmatrix} 0 &1 & 1\\ 1 & 0 & 1\end{pmatrix}.$$
+
+Alternativ kann man die  Matrix der verketteten Abbildung auch als Produkt der Abbildungsmatrizen berechnen: 
+$$\vec B\vec A = \begin{pmatrix}
+0  &  1  &  1 \\
+1  &  0  &  1\end{pmatrix}.$$
+\item Es sind
+\begin{align*}
+&&\vec f(1,1,-1)=& \vec A\begin{pmatrix} 1\\1\\-1\end{pmatrix}= \begin{pmatrix}0\\-1\\-1\end{pmatrix}\\
+&&\vec g(1,2,1)=& \vec B \begin{pmatrix} 1\\2\\1\end{pmatrix} = \begin{pmatrix}1\\2\end{pmatrix}\\
+&&\vec h(1,1,-1)=& \vec C \begin{pmatrix} 1\\1\\-1\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}.
+\end{align*}
+%\item Gem\"aß Dimensionssatz f\"ur lineare Abbildungen hat der Kern der Abbildung $\vec g$ die Dimension: 
+%$$\dim(\Kern(\vec B))=3-\text{Rang }\vec B = 3-2=1$$
+%Nach der vorhergehenden Aufgabe wird $\Kern (\vec g)$ also aufgespannt durch den Vektor $(0,-1,-1)^\top$. 
+%\item $\vec f^{-1}(\Kern(\vec g))$ ist die Vereinigung der L\"osungsmengen der Gleichungen 
+%$$\vec A \vec x = t\begin{pmatrix}0\\-1\\-1\end{pmatrix},\qquad t\in\R.$$ 
+%Da $\vec A$ den Rang 3 hat, ist dieses Gleichungssystem f\"ur festes $t$ eindeutig l\"osbar. Die L\"osung ist dann (mit Hilfe von Aufgabe \textbf{b)}: 
+%$$\vec x=t\begin{pmatrix}1\\1\\-1\end{pmatrix}$$
+%Folglich ist 
+%$$\vec f^{-1}(\Kern(\vec g))=\Span\{(1,1,-1)^\top\}.$$
+%\item Es ist gerade $\Kern(\vec g\circ \vec f)=\vec f^{-1}(\Kern(\vec g))$. Somit ist $(1,1,-1)^\top$ eine Basis des Kerns von $\vec g\circ \vec f$. 
+\end{abc}
+}
+
+
+\ErgebnisC{linalg_Abbi_Klau_01b}
+{
+\textbf{b)} \begin{align*}
+\vec f(1,1,-1)=& \begin{pmatrix}0\\-1\\-1\end{pmatrix},\, 
+&\vec g(1,2,1)=&  \begin{pmatrix}1\\2\end{pmatrix},\, 
+&\vec h(1,1,-1)=& \begin{pmatrix}0\\0\end{pmatrix}
+\end{align*}
+}

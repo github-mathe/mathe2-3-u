@@ -1,0 +1,100 @@
+\Aufgabe[e]{Methode der kleinsten Quadrate}{
+Gegeben seien die  Messwerte
+\begin{center}
+ \begin{tabular}{c|c|c|c} 
+  $i$ & 1 & 2 & 3 \\\hline
+  $t_i$ & -3 & 1 & 2   \\ \hline
+  $y_i$ &  33 & -3 & -22
+ \end{tabular}
+\end{center}
+\begin{abc}
+\item Es soll ein Polynom $p(x)=a_1 + a_2 x + a_3 x^2$ bestimmt werden, welches diese Messwerte
+  interpoliert: 
+$$p(t_j)=y_j,\qquad j=1,2,3.$$
+\begin{iii}
+\item Geben Sie das lineare Gleichungssystem f\"ur den Koeffizientenvektor \\
+\mbox{$\vec a=(a_1,a_2,a_3)^\top$} an. 
+\item Ermitteln Sie die L\"osung des Gleichungssystems. 
+\end{iii}
+\item Nun soll dasselbe Interpolationsproblem f\"ur ein lineares Polynom\\
+$q(x)=b_1+b_2x$ gel\"ost werden: 
+$$q(t_j)=y_j,\qquad j=1,2,3.$$ 
+\begin{iii}
+\item Ist dieses Problem l\"osbar? (Begr\"unden Sie Ihre Antwort.)
+\item Geben Sie ein Gleichungssystem f\"ur die Koeffizienten $b_1,\, b_2$ an, deren Polynom $q(x)$
+das geforderte Problem bestm\"oglich l\"ost, es soll also gelten: 
+$$\norm{(q(t_1)-y_1,q(t_2)-y_2,q(t_3)-y_3)^\top}_2^2=\text{min!}.$$
+\textbf{Hinweis}: Die L\"osung des Gleichungssystems ist \textbf{ nicht} zu bestimmen. 
+%\item Ermitteln Sie die L\"osung $\vec b=(b_1,b_2,b_3)^\top$ dieses Systems. 
+\end{iii}
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item \begin{iii}
+\item Aus $p(t_j)=y_j, \quad j=1,2,3$ folgen die Gleichungen: 
+$$\begin{array}{rrrrrrrrr}
+ a_1 & - &   3    & a_2 & + &    9    & a_3 &  = & 33  \\
+ a_1 & + &   1    & a_2 & + &    1    & a_3 &  = & -3   \\
+ a_1 & + &   2    & a_2 & + &    4    & a_3 &  = & -22 
+\end{array}$$
+\item Mit Hilfe des Gauß-Algorithmus ergibt sich 
+$$\begin{array}{rrr|r|l}
+1  & - 3    &  9    &  33   & \text{                        }\\
+1  &   1    &  1    &  -3   & -\text{            1. Zeile}\\
+1  &   2    &  4    &  -22  & -\text{ 1. Zeile}\\\hline
+                        
+1  & - 3    &  9    &  33   & \text{                        }\\
+0  &   4    &  -8   &  -36  & \times 1/4                       \\
+0  &   5    & -5    &  -55  &      \times 1/5             \\\hline
+                        
+1  & - 3    &  9    &  33   & \text{                        }\\
+0  &   1    &  -2   &  -9   &                                  \\
+0  &   1    & -1    &  -11  & -\text{ 2. Zeile}\\\hline                           
+
+1  & - 3    &  9    &  33   & \text{                        }\\
+0  &   1    &  -2   &  -9   &                                  \\
+0  &   0    &  1    &  -2   &          
+\end{array}$$
+und daraus die L\"osung 
+$$a_3=-2\, \Rightarrow\, a_2=-13    \,\Rightarrow \,  a_1=12.$$
+\end{iii}
+\item \begin{iii}
+\item Hier ergeben sich die drei Gleichungen 
+$$\begin{array}{rrrrrrrrr}
+ b_1 & - &   3    & b_2 &  = & 33  \\
+ b_1 & + &   1    & b_2 &  = & -3   \\
+ b_1 & + &   2    & b_2 &  = & -22 
+\end{array}$$
+und daraus das Gauß-Tableau mit der Koeffizientenmatrix 
+$$\vec B=\begin{pmatrix}
+1   &  -3  \\
+1   & 1    \\
+1   & 2    
+\end{pmatrix}$$
+$$\begin{array}{rr|r|l}
+1   &  -3   &  33 & \\
+1   & 1     &  -3 & \text{-1. Zeile}\\
+1   & 2     & -22 & \text{-1. Zeile}\\\hline
+
+1   &  -3   &  33 & \\
+0   & 4     & -36 &                 \\
+0   & 5     & -55 & 4\times \text{ 3. Zeile }-5\times\text{ 2. Zeile}\\\hline
+
+1   &  -3   &  33 & \\
+0   & 4     & -36 &                 \\
+0   & 0     & -40 & 
+\end{array}$$
+Aus der letzten Zeile folgt der Widerspruch $0=-40$, also ist das System nicht l\"osbar. 
+\item Dieses Minimierungsproblem wird von der L\"osung der Normalgleichung 
+$$\vec B^\top \vec B \vec b = \vec B^\top \begin{pmatrix}33\\-3\\-22\end{pmatrix}\,\Leftrightarrow\, \begin{pmatrix} 3 & 0 \\ 0 & 14\end{pmatrix}\vec b = \begin{pmatrix}8\\-146\end{pmatrix}$$
+gel\"ost. 
+\end{iii}
+
+
+\end{abc}
+
+
+}
+

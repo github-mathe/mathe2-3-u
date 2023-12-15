@@ -1,0 +1,62 @@
+\Aufgabe[e]{alte Klausuraufgabe}
+{
+\begin{abc} 
+\item Berechnen Sie eine Gleichung der Ebene, die den Punkt mit Ortsvektor \\ $\vec{x}_0 = (2,3,1)^\top$  enth\"alt und den Normalenvektor \ $\vec{n} = \left(\dfrac 4 5,0,-\dfrac 3 5\right)^\top$ \ hat.
+\item Wie viele Ebenen gibt es, die senkrecht auf dem Vektor \ $(-2,1,-2)^\top$ \ stehen und vom Nullpunkt den Abstand \ $d=12$ \ haben? Bestimmen Sie die Gleichungen aller dieser Ebenen.
+%\item In $\R^3$ seien die Vektoren \ $\vec a = (1,-2,1)^\top$ \ und \ $\vec b = (1,\alpha,-1)^\top$, mit \ $\alpha\in \R$, \ gegeben. Bestimmen Sie die Matrix $\vec A$ der linearen Abbildung \ $\vec x \mapsto \vec a \times \vec x$ \ und die Zahl \ $\alpha\in \R$ \ so, dass \ $\vec b \in \mathrm{Bild}\, \vec A$ \ gilt. 
+\end{abc}
+}
+\Loesung{
+\textbf{Zu a)} Man verwendet die \textbf{ Hessesche Normalform} der Ebene. \\
+Da der Vektor $\vec n$ bereits normiert ist gilt $\vec n_0 = \vec n$.
+Die Hessesche Normalform lautet $\langle \vec{n},\vec{x}-\vec{x}_{0}\rangle = 0$. Hier ist
+$\langle \vec{n},\vec{x_{0}}\rangle
+= \dfrac{1}{5} \left\langle \begin{pmatrix}4\\0\\-3\end{pmatrix}, \begin{pmatrix}2\\3\\1\end{pmatrix}\right\rangle
+= \dfrac{5}{5}=1$. Die allgemeine Ebenengleichung  der Ebene ist also
+$$ \dfrac{4}{5} x_{1}-\dfrac{3}{5}x_{3}=1 $$
+oder
+$$ \boxed{4x_{1}-3x_{3}=5\,.}$$
+
+\bigskip
+\textbf{Zu b)}  Die Hessesche Normalform einer der gesuchten Ebenen hat die Gestalt
+$$\skalar{\vec x-\vec p,\vec n_0}=0.$$
+Dabei ist 
+$$\vec{n_0}=\dfrac{1}{\|\vec{n}\|}\vec{n}=\dfrac{1}{3} \begin{pmatrix}-2\\1\\-2\end{pmatrix}$$
+der normierte Normalenvektor der Ebene. 
+Der Abstand eines Punktes $\vec x$ zur Ebene ergibt sich als Betrag des obigen Skalarproduktes. Der
+Abstand zum Ursprung $\vec x=\vec 0$ soll $d=12$ betragen, dies ergibt
+$$12\overset!=\left|\skalar{\vec 0 - \vec p,\vec n_0}\right|=\left| \skalar{\vec p,\vec
+n_0}\right|\,\Rightarrow\, \skalar{\vec p,\vec n_0}=\pm 12.$$
+Aus der Hesseschen Normalform folgen so die beiden m\"oglichen Ebenengleichungen: 
+$$\skalar{\vec x,\vec n_0}=\skalar{\vec p,\vec n_0}\,\Rightarrow\, -\frac 23 x_1 + \frac 13 x_2
+- \frac 23 x_3=\pm 12.$$
+
+\bigskip
+%\textbf{Zu c)} Durch direkte Rechnung ergibt sich
+%$$
+%\vec A \vec x = \begin{pmatrix}1\\ -2 \\ 1 \end{pmatrix} \times \begin{pmatrix}x_1\\ x_2 \\ x_3 \end{pmatrix} =  \begin{pmatrix}-2x_3 -x_2 \\ x_1 - x_3 \\ x_2 + 2x_1 \end{pmatrix} \qquad \Rightarrow \quad \boxed{\vec A =  \begin{pmatrix} 0 & -1 & -2 \\ 1 & 0 & -1\\ 2 & 1 & 0\end{pmatrix}}
+%$$
+%$\vec b$ liegt genau dann in $\text{Bild}\, \vec A$, wenn der Rang der Abbildungsmatrix $\vec A$
+%gleich dem Rang der erweiterten Koeffizientenmatrix $\vec A|\vec b$ ist. Wir f\"uhren zur Ermittlung
+%dieser R\"ange den Gauß-Algorithmus durch: 
+%$$\begin{array}{rrr|r|l}
+%  0   &   -1   &  -2  &   1     &\text{tausche 1. und 2. Zeile  }      \\
+%  1   &    0   &  -1  & \alpha  &                        \\
+%  2   &    1   &   0  &  -1     &-2\times \text{2. Zeile}\\\hline
+%
+%  1   &    0   &  -1  & \alpha    &                        \\
+%  0   &   -1   &  -2  &   1       &                        \\
+%  0   &    1   &   2  &-1-2\alpha &    +    \text{2. Zeile}\\\hline
+%
+%  1   &    0   &  -1  & \alpha    &                        \\
+%  0   &   -1   &  -2  &   1       &                        \\
+%  0   &    0   &   0  &  -2\alpha &  \\
+%\end{array}$$
+%Die beiden R\"ange sind gleich, wenn $\alpha=0$ ist. 
+
+}
+
+\ErgebnisC{linalgEbneAbbi001}
+{
+% $\vec A = \begin{pmatrix}0 & -1 & -2 \\ 1 & 0 & -1\\ 2 & 1 & 0\end{pmatrix}$
+}

@@ -1,0 +1,73 @@
+\Aufgabe[f]{L\"osbarkeit eines LGS}{
+Gegeben seien 
+$$\vec A = \begin{pmatrix}
+  1 &  2 &  1 &  2  \\
+  0 &  1 & -1 &  2  \\
+  1 & -2 &  5 & -6 
+\end{pmatrix}\in\R^{(3,4)}\text{ sowie }
+\vec v=\begin{pmatrix}-1\\4\\1\end{pmatrix}\in\R^3. $$
+Im Folgenden seien $\vec a_1,\, \vec a_2,\, \vec a_3,\, \vec a_4\in\R^3$ die Spaltenvektoren der Matrix
+$\vec A$. 
+\begin{abc}
+\item Man berechne $\Kern(\vec A^\top)$. 
+\item Man bestimme $\dim\Kern(\vec A)$. Welcher Zusammenhang muss zwischen den Komponenten des
+Vektors $\vec b\in \R^3$ bestehen, damit das lineare Gleichungssystem $\vec A\vec x=\vec b$ l\"osbar
+ist? Ist die L\"osung im Existenzfall eindeutig? (Begr\"undung!)
+\item Man zeige $\vec a_1\perp \vec a_2$. Danach berechne man $\Rang(\vec A)$ und bestimme eine
+Orthonormalbasis von $\Bild(\vec A)$. 
+\item Man bestimme in der Menge der besten L\"osungen (im Sinne kleinster Fehlerquadrate) von $\vec
+A \vec x = \vec v$ den Vektor $\vec x_0\in\R^4$ mit kleinster euklidischer L\"ange $\norm {\vec
+x_0}$. 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Der Kern von $\vec A^\top$ ist die L\"osung des folgenden homogenen Gleichungssystems: 
+$$\begin{array}{rrr|r|l}
+  1  &  0  &  1  &  0  &                            \\
+  2  &  1  & -2  &  0  & -2\times\text{ 1. Zeile}   \\
+  1  & -1  &  5  &  0  & -       \text{ 1. Zeile}   \\
+  2  &  2  & -6  &  0  & -2\times\text{ 1. Zeile}   \\\hline
+
+  1  &  0  &  1  &  0  &                            \\
+  0  &  1  & -4  &  0  &                            \\
+  0  & -1  &  4  &  0  & +       \text{ 2. Zeile}   \\
+  0  &  2  & -8  &  0  & -2\times\text{ 2. Zeile}   \\\hline
+
+  1  &  0  &  1  &  0  &                            \\
+  0  &  1  & -4  &  0  &                            \\
+  0  &  0  &  0  &  0  &   \\
+  0  &  0  &  0  &  0  &   \\
+\end{array}$$
+Daraus ergibt sich die L\"osungsmenge
+$$\Kern(\vec A^\top)= \text{span}\{(-1,4,1)^\top\}.$$
+\item Aus der obigen Rechnung ergibt sich $\Rang(\vec A)=2$. Mit der Dimensionsformel f\"ur lineare
+Abbildungen folgt daraus
+$$\dim(\Kern(\vec A))=\dim(\R^4)-\Rang(\vec A)=2.$$
+Um die L\"osbarkeit der Gleichung $\vec A\vec x=\vec b$ zu garantieren, muss gelten $\vec
+b\in\Bild(\vec A)$. $\vec b$ darf also keinen Anteil in $(\Bild(\vec A))^\perp=\Kern(\vec A^\top)$
+haben. Es muss also gelten 
+$$\skalar{\vec b,(-1,4,1)^\top}=0\,\Leftrightarrow\, -b_1 + 4b_2+b_3=0.$$
+Da der Kern von $\vec A$ nicht leer ist, ist die L\"osung von $\vec A \vec x=\vec b$ nicht
+eindeutig. 
+\item Es gilt 
+$$\skalar{\vec a_1,\vec
+a_2}=\skalar{\begin{pmatrix}1\\0\\1\end{pmatrix},\begin{pmatrix}2\\1\\-2\end{pmatrix}}=2+0-2=0\qquad\Rightarrow \qquad \vec
+a_1\perp \vec a_2.$$
+Der Rang von $\vec A$ ist 2, somit bilden die normierten Vektoren 
+$$\vec q_1=\frac{\vec a_1}{\norm{\vec a_1}}=\frac 1{\sqrt
+2}\begin{pmatrix}1\\0\\1\end{pmatrix} \text{ und } \vec q_2=\frac{\vec a_2}{\norm{\vec
+a_2}}=\frac{1}3\begin{pmatrix}2\\1\\-2\end{pmatrix}$$
+eine Orthonormalbasis von $\Bild(\vec A)$. 
+\item Da $\vec v$ nach Aufgabenteil \textbf{b)} in $\Bild(\vec A)^\perp$ enthalten ist, ist der
+Nullvektor $\vec x_0=\vec 0$ eine beste L\"osung der Gleichung $\vec A\vec x=\vec v$ im Sinne kleinster
+Fehlerquadrate. Dieser hat auch die kleinste euklidische L\"ange. 
+
+\end{abc}
+}
+
+%\ErgebnisC{AufglinalgMatrOrth002}
+%{
+%
+%}

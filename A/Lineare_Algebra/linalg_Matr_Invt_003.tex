@@ -1,0 +1,70 @@
+
+\Aufgabe[e]{Symmetrische Matrizen}{
+\begin{abc}
+\item Bestimmen Sie mit Hilfe des Gaußschen Algorithmus die inverse Matrix von
+$$ \Vek  A = \begin{pmatrix}
+	 2 & -1 &  0 \\
+	-1 &  2 & -1 \\
+	 0 & -1 &  2 
+\end{pmatrix}.$$
+
+
+\item  Ist $\Vek A^{-1}$ wieder symmetrisch? Gilt diese Aussage f\"ur beliebige invertierbare symmetrische Matrizen?
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Das Eliminationsverfahren ergibt
+$$\begin{array}{rrr|rrr|l}
+	 2 & -1 &  0 & 1 & 0 & 0 \\      
+	-1 &  2 & -1 & 0 & 1 & 0       & \text{ + 1/2 $\cdot$ 1. Zeile   }\\     
+	 0 & -1 &  2 & 0 & 0 & 1 \\\hline
+
+	 2 & -1 &  0      &  1 & 0 & 0 \\    
+	 0 & \frac 32 & -1&  \frac 12 & 1 & 0\\
+	 0 & -1 &  2      &  0 & 0 & 1       & \text{ + 2/3 $\cdot$ 2. Zeile   }\\\hline
+
+         2 & -1 &  0      &  1 & 0 & 0               & \text{                          }\\    
+	 0 & \frac 32 & -1&  \frac 12 & 1 & 0        & \text{ + 3/4 $\cdot$ 3. Zeile   }\\          
+	 0 & 0 & \frac 43 &  \frac 13 & \frac 23 & 1 & \text{       $\cdot$ 3/4        }\\\hline
+
+	 2 & -1 &  0      &  1 & 0 & 0                      & \text{ + 2/3 $\cdot$ 2. Zeile   }\\
+	 0 & \frac 32 & 0 &  \frac 34 & \frac 64 & \frac 34 & \text{ $\cdot$ 2/3              }\\
+	 0 & 0 & 1 \      &  \frac 14 & \frac 24 & \frac 34 & \text{                          }\\\hline
+
+	 2 & 0 &  0       &  \frac 64 & 1 & \frac 24  & \text{ $\cdot$ 1/2  }\\      
+	 0 & 1 & 0        &  \frac 12 & 1 & \frac 12 \\      
+	 0 & 0 & 1        &  \frac 14 & \frac 12 & \frac 34 \\\hline
+
+	 1 & 0 &  0       &  \frac 34 & \frac 12 & \frac 14 \\ 
+	 0 & 1 & 0        &  \frac 12 & 1 & \frac 12 \\        
+	 0 & 0 & 1        &  \frac 14 & \frac 12 & \frac 34 
+\end{array}$$
+
+Die Inverse Matrix lautet also
+$$ \Vek A^{-1} = \frac 14 \begin{pmatrix}
+	 3 & 2 & 1 \\
+	 2 & 4 & 2 \\
+	 1 & 2 & 3 
+\end{pmatrix}.$$
+
+\item $\Vek A^{-1}$ ist ebenfalls symmetrisch. F\"ur eine beliebige invertierbare symmetrische Matrix 
+$\Vek A=\Vek A^\top$ hat man: 
+$$
+	\Vek A^{-1}\Vek A = \Vek E \Leftrightarrow \Vek A^{\top}\left(\Vek A^{-1}\right)^{\top} = \Vek E^{\top} \Leftrightarrow \Vek A\left(\Vek A^{-1}\right)^{\top} = \Vek E \ ,
+$$
+Da die Inverse einer Matrix aber eindeutig bestimmt ist, muss damit gelten 
+$$ A^{-1} = (A^{-1})^{\top}.$$ 
+Damit ist $A^{-1}$ ebenfalls symmetrisch.
+
+\end{abc}
+}
+
+\ErgebnisC{AufglinalgMatrInvt003}
+{
+\textbf{ a)} $\Vek A^{-1} = \frac 14\begin{pmatrix} 3 & 2 & 1 \\
+	 2 & 4 & 2 \\
+	 1 & 2 & 3 \end{pmatrix}$
+}

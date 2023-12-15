@@ -1,0 +1,73 @@
+\Aufgabe[e]{Orthogonale Projektion, Klausuraufgabe Dez. 2010}{
+Gegeben seien die Matrix $\boldsymbol A \in \R^{(3,3)}$ und die Vektoren
+$\boldsymbol b, \boldsymbol c \in \R^3$ gem\"a\ss{}
+$$
+\boldsymbol A :=
+\begin{pmatrix}
+1 & 0 & \phantom{-}0\\
+0 & 1 & -2\\
+1 & 0 & \phantom{-}0
+\end{pmatrix}\,,\quad
+% 
+\boldsymbol b:=
+\begin{pmatrix}
+-2\\
+\phantom{-}0\\
+\phantom{-}2
+\end{pmatrix}\,,\quad
+% 
+\boldsymbol c :=
+\begin{pmatrix}
+1\\
+1\\
+1
+\end{pmatrix}\,.
+$$
+
+\begin{abc}
+\item Berechnen Sie Orthonormalbasen f\"ur $\operatorname{Kern} \boldsymbol A$ und
+$\operatorname{Bild} \boldsymbol A$.
+
+\item Berechnen Sie die Matrix $\boldsymbol P$ der Orthogonalprojektion auf den
+Unterraum $\operatorname{Bild} \boldsymbol A$.
+
+\item \"Uberpr\"ufen Sie, ob $\boldsymbol b \in (\operatorname{Bild} \boldsymbol A)^\perp$
+erf\"ullt ist. Bestimmen Sie die Orthogonalprojektion von $\boldsymbol b$
+und $\boldsymbol c$ auf $\operatorname{Bild} \boldsymbol A$.
+\end{abc}
+}
+\Loesung{
+Wir setzen $\boldsymbol A=:(\boldsymbol{a}_1,\boldsymbol{a}_2,\boldsymbol{a}_3)$.
+Die offenkundige Relation $\boldsymbol{a}_1\perp\boldsymbol{a}_2$ und die lineare
+Abh"angigkeit von $\boldsymbol{a}_2,\,\boldsymbol{a}_3$ zeigen bereits
+$$\operatorname{Bild} \boldsymbol A= \operatorname{span}\,\Big\{\frac{1}{\sqrt{2}}\,\left(\begin{array}{c}1\\0\\1\end{array}\right),\;
+\left(\begin{array}{c}0\\1\\0\end{array}\right)\Big\}.$$
+Hieraus ergibt sich $\operatorname{Rang}\,\boldsymbol A=2$, also $\operatorname{dim}\operatorname{Kern} \boldsymbol A=1$. Wir l\"osen das homogene
+System $\boldsymbol A\boldsymbol x_h=\boldsymbol 0$ mit dem { Gau\ss{}}--Algorithmus:
+$$(\boldsymbol A,\boldsymbol 0)\quad\Leftrightarrow\quad\begin{array}{rr@{\;}r|r}1&0&0&0\\0&1&-2&0\\1&0&0&0\end{array}
+\quad\Rightarrow\quad\begin{array}{rr@{\;}r|r}1&0&0&0\\0&1&-2&0\\0&0&0&0\end{array}
+\quad\Rightarrow\quad\boldsymbol x_h=\left(\begin{array}{c}0\\2\\1\end{array}\right).$$
+Dies f"uhrt auf
+$$\operatorname{Kern} \boldsymbol A=\operatorname{span}\,\Big\{\frac{1}{\sqrt{5}}\,\left[\begin{array}{c}0\\2\\1\end{array}\right]\Big\}.$$
+
+\medskip
+{ Zu b)} Die gesuchte Orthogonalprojektion berechnet sich gem\"a\ss{}
+$$\boldsymbol P=\frac{1}{2}\,\boldsymbol{a}_1\otimes\boldsymbol{a}_1+\boldsymbol{a}_2\otimes\boldsymbol{a}_2=
+\frac{1}{2}\,\left(\begin{array}{ccc}1&0&1\\0&0&0\\1&0&1\end{array}\right)+
+\left(\begin{array}{ccc}0&0&0\\0&1&0\\0&0&0\end{array}\right)=
+\frac{1}{2}\,\left(\begin{array}{ccc}1&0&1\\0&2&0\\1&0&1\end{array}\right).$$
+
+\medskip
+{ Zu c)} Wegen $\langle\boldsymbol{a}_1,\boldsymbol{b}\rangle=0=\langle\boldsymbol{a}_2,
+\boldsymbol{b}\rangle$ gilt $\boldsymbol{b}\perp\operatorname{Bild} \boldsymbol A$ bzw.\ $\boldsymbol{b}\in (\operatorname{Bild}\,\boldsymbol A)^{\perp}$. Da $\boldsymbol{b}\in (\operatorname{Bild}\,\boldsymbol A)^{\perp}$ gilt, folgt $\boldsymbol P \boldsymbol b = \boldsymbol 0$. Weiter gilt
+$$
+\boldsymbol P \boldsymbol c = \dfrac{1}{2}\begin{pmatrix} 2\\ 2\\ 2 \end{pmatrix} = \begin{pmatrix} 1\\ 1\\ 1 \end{pmatrix}\,.
+$$
+}
+
+\ErgebnisC{linalgOrthogonaleProjektion0052010m1kl1}
+{
+$\boldsymbol P=
+\frac{1}{2}\,\left(\begin{array}{ccc}1&0&1\\0&2&0\\1&0&1\end{array}\right)$
+
+}

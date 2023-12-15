@@ -1,0 +1,136 @@
+\Aufgabe[e]{Matrix-Matrix-Multiplikation}{
+Seien
+$$
+\boldsymbol A =
+\begin{pmatrix}
+2 & -2\\
+3 &  0\\
+1 & -2
+\end{pmatrix}\,,\,\,
+%
+\boldsymbol B =
+\begin{pmatrix}
+ 1 &  1 & 5\\
+-1 &  3 & 2\\
+ 1 &  2 & 3\\
+-2 & -1 & 0
+\end{pmatrix}\,,\,\,
+%
+\boldsymbol C =
+\begin{pmatrix}
+1 & 2 & -1 & 2
+\end{pmatrix}\,,\,\,
+%
+\boldsymbol D =
+\begin{pmatrix}
+ 0\\
+ 1\\
+ 2\\
+-1
+\end{pmatrix}\,.
+$$
+%
+Entscheiden Sie, welche Matrix-Matrix-Produkte möglich sind und berechnen Sie diese.
+
+}
+
+\Loesung{
+Es gilt
+$\boldsymbol A \in \mathbb{R}^{(3,2)}$,
+$\boldsymbol B \in \mathbb{R}^{(4,3)}$,
+$\boldsymbol C \in \mathbb{R}^{(1,4)}$ und
+$\boldsymbol D \in \mathbb{R}^{(4,1)}$.
+
+\medskip
+Daher sind die folgenden Produkte möglich
+$\boldsymbol B \cdot \boldsymbol A$,
+$\boldsymbol C \cdot \boldsymbol B$,
+$\boldsymbol C \cdot \boldsymbol D$ und
+$\boldsymbol D \cdot \boldsymbol C$.
+
+\bigskip
+$$
+\boldsymbol B \cdot \boldsymbol A =
+\begin{pmatrix}
+ 1 &  1 & 5\\
+-1 &  3 & 2\\
+ 1 &  2 & 3\\
+-2 & -1 & 0
+\end{pmatrix}
+%
+\begin{pmatrix}
+2 & -2\\
+3 &  0\\
+1 & -2
+\end{pmatrix}
+=
+\begin{pmatrix}
+10 & -12\\
+ 9 &  -2\\
+11 &  -8\\
+-7 &   4
+\end{pmatrix}\,.
+$$
+
+\bigskip
+$$
+\boldsymbol C \cdot \boldsymbol B =
+\begin{pmatrix}
+1 & 2 & -1 & 2
+\end{pmatrix}
+%
+\begin{pmatrix}
+ 1 &  1 & 5\\
+-1 &  3 & 2\\
+ 1 &  2 & 3\\
+-2 & -1 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+-6 & 3 & 6
+\end{pmatrix}\,.
+$$
+
+
+\bigskip
+$$
+\boldsymbol C \cdot \boldsymbol D =
+\begin{pmatrix}
+1 & 2 & -1 & 2
+\end{pmatrix}
+%
+\begin{pmatrix}
+ 0\\
+ 1\\
+ 2\\
+-1
+\end{pmatrix}
+=
+\begin{pmatrix}
+-2
+\end{pmatrix}\,.
+$$
+
+\bigskip
+$$
+\boldsymbol D \cdot \boldsymbol C =
+\begin{pmatrix}
+ 0\\
+ 1\\
+ 2\\
+-1
+\end{pmatrix}
+%
+\begin{pmatrix}
+1 & 2 & -1 & 2
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0 & 0 & 0\\
+1 & 2 & -1 & 2\\
+2 & 4 & -2 & 4\\
+-1 & -2 & 1 & -2
+\end{pmatrix}\,.
+$$
+
+}

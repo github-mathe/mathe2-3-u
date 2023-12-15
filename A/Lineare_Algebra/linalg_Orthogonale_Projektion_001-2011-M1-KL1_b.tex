@@ -1,0 +1,104 @@
+\Aufgabe[e]{}{
+Gegeben seien die Vektoren
+$$
+\boldsymbol x = \begin{pmatrix} 4 \\ 2 \\ 3 \\ 1 \end{pmatrix}\,,\quad
+\boldsymbol b_1 = \begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}\,,\quad
+\boldsymbol b_2 = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 1 \end{pmatrix}\,,\quad
+\boldsymbol b_3 = \begin{pmatrix} 0 \\ 1 \\ 1 \\ 0 \end{pmatrix}\,.
+$$
+
+\begin{abc}
+\item Bestimmen Sie eine Orthonormalbasis
+$\{ \boldsymbol a_1, \boldsymbol a_2, \boldsymbol a_3 \}$
+von $\boldsymbol U
+= \operatorname{span} \{ \boldsymbol b_1, \boldsymbol b_2, \boldsymbol b_3 \}$.
+Dabei sei
+$\operatorname{span} \{ \boldsymbol b_1 \}
+= \operatorname{span} \{ \boldsymbol a_1 \}$
+und
+$\operatorname{span} \{ \boldsymbol b_2, \boldsymbol b_3 \}
+= \operatorname{span} \{ \boldsymbol a_2, \boldsymbol a_3 \}$.
+\item Pr\"ufen Sie nach, ob der Vektor $\vec x$ im Unterraum $\vec U$ enthalten ist. Vesuchen Sie dazu, den Vektor bez\"uglich der Orthogonalbasis $\vec a_1,\, \vec a_2,\, \vec a_3$ darzustellen. 
+%\item Berechnen Sie die orthogonale Projektion von $\boldsymbol x$ auf $\boldsymbol U$.
+%
+%\item Berechnen Sie den Abstand
+%$\min_{\boldsymbol u \in \boldsymbol U} \| \boldsymbol x - \boldsymbol u \| $
+%von $\boldsymbol x$ zu $\boldsymbol U$.
+\item Geben Sie eine Basis des Orthogonalraumes $\vec U^\perp$ an. 
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Mit dem Schmidt'schen Orthonormalisierungsverfahren folgt: \\
+\begin{eqnarray*} 
+\boldsymbol{a}_{1} & = &\dfrac{1}{\|\boldsymbol{b}_{1}\|}\boldsymbol{b}_{1}
+=\dfrac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}, \\
+\boldsymbol{w}_{2} & = & \boldsymbol{b}_{2}-\langle \boldsymbol{b}_{2},
+\boldsymbol{a}_{1} \rangle 
+\boldsymbol{a}_{1}=\begin{pmatrix} 1 \\ 0 \\ 0 \\ 1 \end{pmatrix}-\dfrac{1}{2}
+\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}
+=\dfrac{1}{2}\begin{pmatrix} 1 \\ -1 \\ 0 \\ 2 \end{pmatrix}, \\
+\boldsymbol{a}_{2} & = & \dfrac{1}{\|\boldsymbol{w}_{2}\|} \boldsymbol{w}_{2}
+=\dfrac{1}{\sqrt{6}}\begin{pmatrix} 1 \\ -1 \\ 0 \\ 2 \end{pmatrix}, \\
+\boldsymbol{w}_{3} & = & \boldsymbol{b}_{3}-\langle \boldsymbol{b}_{3},
+\boldsymbol{a}_{1}\rangle 
+\boldsymbol{a}_{1}-\langle \boldsymbol{b}_{3},\boldsymbol{a}_{2}\rangle 
+\boldsymbol{a}_{2}
+=\begin{pmatrix} 0 \\ 1 \\ 1 \\ 0 \end{pmatrix}-\dfrac{1}{2}
+\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}
+-\dfrac{-1}{6}\begin{pmatrix} 1 \\ -1 \\ 0 \\ 2 \end{pmatrix}
+=\dfrac{1}{6}\begin{pmatrix} -2 \\ 2 \\ 6 \\ 2 \end{pmatrix}, \\
+\boldsymbol{a}_{3} & =& \dfrac{1}{\|\boldsymbol{w}_{3}\|} \boldsymbol{w}_{3}
+=\dfrac{1}{\sqrt{12}}\begin{pmatrix} -1 \\ 1 \\ 3 \\ 1 \end{pmatrix}. 
+\end{eqnarray*}
+
+\item Die Projektion von $\boldsymbol{x}=(4,2,3,1)^{\top}$ auf 
+$\boldsymbol U$ ist gegeben durch 
+\begin{eqnarray*}
+\boldsymbol P \boldsymbol{x}&= & \langle \boldsymbol{x},\boldsymbol{a}_{1}\rangle 
+\boldsymbol{a}_{1}
++\langle \boldsymbol{x},\boldsymbol{a}_{2}\rangle \boldsymbol{a}_{2}
++\langle \boldsymbol{x},\boldsymbol{a}_{3}\rangle \boldsymbol{a}_{3} \\[1ex]
+&= & \dfrac{6}{2}\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}+\dfrac{4}{6}
+\begin{pmatrix} 1 \\ -1 \\ 0 \\ 2 \end{pmatrix}
++\dfrac{8}{12}\begin{pmatrix} -1 \\ 1 \\ 3 \\ 1 \end{pmatrix}
+=\begin{pmatrix} 3 \\ 3 \\ 2 \\ 2 \end{pmatrix}.
+\end{eqnarray*}
+$\vec x$ ist also nicht durch die Basis $\vec a_1,\,\vec a_2,\, \vec a_3$ darstellbar, es gilt $\vec x\neq \vec P\vec x$, damit gilt $\vec x\notin\vec U$. 
+%\item Es gilt
+%$$
+%\min_{\boldsymbol u \in \boldsymbol U} \|\boldsymbol x - \boldsymbol u\| = 
+%\|\boldsymbol x - \boldsymbol P \boldsymbol x\| = 
+%\left\|\begin{pmatrix}1\\-1\\ 1\\ -1 \end{pmatrix}\right\| = \sqrt{4} = 2\,.
+%$$
+%
+\item $\vec U^\perp$ enth\"alt alle Vektoren, die zu allen Vektoren $\vec u\in\vec U$ senkrecht sind. Der Orthogonalraum ist damit die L\"osung des linearen Gleichungssystems 
+$$\skalar{\vec b_1,\vec x}=0,\, \skalar{\vec b_2,\vec x}=0,\, \skalar{\vec b_3,\vec x}=0.$$
+Dies f\"uhrt auf
+$$\begin{array}{rrrr|r|l}
+   1  &  1  &  0  &  0  &  0  &                               \\
+   1  &  0  &  0  &  1  &  0  & -\text{ 1. Zeile}             \\
+   0  &  1  &  1  &  0  &  0  &                               \\\hline
+
+   1  &  1  &  0  &  0  &  0  &                               \\
+   0  & -1  &  0  &  1  &  0  & \\
+   0  &  1  &  1  &  0  &  0  & + \text{ 2. Zeile}            \\\hline
+
+   1  &  1  &  0  &  0  &  0  &                               \\
+   0  & -1  &  0  &  1  &  0  & \\
+   0  &  0  &  1  &  1  &  0  &             \\
+\end{array}$$
+$x_4$ ist frei w\"ahlbar, und die L\"osungsmenge ist: 
+$$\vec U^\perp=\left\{\begin{pmatrix}-t\\t \\-t \\t\end{pmatrix};\, t\in\R\right\}.$$
+
+Damit ist eine Basis von $\vec U^\perp$
+$$
+\mathcal B (\vec U^\perp) = \left\{ \begin{pmatrix} -1\\1\\-1\\1 \end{pmatrix} \right\}.
+$$
+\end{abc}
+}
+
+\ErgebnisC{linalg_Orthogonale_Projektion_001-2011-M1-KL1}
+{
+\textbf{c)} $\vec U^\perp=\text{span}\{(-1,1,-1,1)\}$
+}

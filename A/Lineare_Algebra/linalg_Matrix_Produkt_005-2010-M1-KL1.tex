@@ -1,0 +1,62 @@
+\Aufgabe[e]{Klausuraufgabe Dez. 2010}{
+Gegeben seien
+$$
+\boldsymbol A =
+\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+1 & - \operatorname{i}\\
+\operatorname{i} & -1
+\end{pmatrix}\,,\quad
+% 
+\boldsymbol B =
+\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+\operatorname{i} & 1\\
+1 & \operatorname{i}
+\end{pmatrix}\,,\quad
+% 
+\boldsymbol b =
+\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+0\\
+-2 + 2 \operatorname{i}
+\end{pmatrix}\,.
+$$
+
+\begin{abc}
+\item Berechnen Sie die Matrizenprodukte
+$\boldsymbol A^\ast \boldsymbol A$,
+$\boldsymbol B \boldsymbol B^\ast$,
+$\boldsymbol A \boldsymbol b$,
+$\boldsymbol B^2$,
+$\boldsymbol B^4$,
+$\boldsymbol B^8$.
+
+\item Sind die Matrizen $\boldsymbol A$ und $\boldsymbol B$ symmetrisch,
+hermitesch, orthogonal, unit\"ar oder haben sie keine der genannten Eigenschaften?
+
+\item L\"osen Sie die Gleichungssysteme $\boldsymbol A \boldsymbol x = \boldsymbol b$,
+$\boldsymbol B \boldsymbol y = \boldsymbol b$.
+\end{abc}
+}
+\Loesung{
+\textbf{Zu a)} Es ergibt sich
+$$
+\boldsymbol A^\ast \boldsymbol A = \boldsymbol E_2 \,, \quad \boldsymbol B \boldsymbol B^\ast = \boldsymbol E_2 \,, \quad \boldsymbol A\boldsymbol b = \begin{pmatrix} 1+\operatorname{i}\\ 1-\operatorname{i} \end{pmatrix}\,,$$ 
+$$\boldsymbol B^2 =  \begin{pmatrix} 0 & \operatorname{i} \\ \operatorname{i} & 0\end{pmatrix}\,, \quad \boldsymbol B^4 = -\boldsymbol E_2\,, \quad \boldsymbol B^8 = \boldsymbol E_2\,. 
+$$
+
+\bigskip
+\textbf{Zu b)} $\boldsymbol A$ ist unit\"ar und hermitesch, denn $\boldsymbol A^\ast = \boldsymbol A$ und $\boldsymbol B$ ist unit\"ar.
+
+\bigskip
+\textbf{Zu c)} Es ergibt sich
+$$
+\boldsymbol x = \boldsymbol A \boldsymbol b\,, \quad \boldsymbol y = \boldsymbol B^\ast\boldsymbol b = \begin{pmatrix} -1+\operatorname{i} \\ 1+\operatorname{i} \end{pmatrix}\,.
+$$
+}
+
+% \ErgebnisC{xyz002}
+% {
+% 
+% }

@@ -1,0 +1,97 @@
+\Aufgabe[e]{Ebenen und Normalenvektor}{
+Gegeben sei der Punkt $\vec p = (1,1,0)^\top$ und der Unterraum $\vec U \subset \mathbb R^3$
+\[
+\vec U = \operatorname{span}\left\{\begin{pmatrix} 1\\2\\3\end{pmatrix}, \begin{pmatrix} 1\\-1\\0\end{pmatrix}\right\},
+\]
+
+\begin{abc}
+\item Bestimmen Sie einen Vektor $\vec n$, der zu der Ebene 
+	\[\vec E = \vec p + \vec U\]
+	normal ist.
+\item Gegeben sei die Normalform der Ebene durch
+
+	\[
+	   \langle \vec v, \vec n \rangle = \langle \vec p, \vec n\rangle
+	\]
+	mit einem variablen Vektor $\vec v =(x,y,z)^\top$.
+Leiten Sie aus der Normalform die allgemeine Gleichung der Ebene her.
+\item \"Uberpr\"ufen Sie, ob der Punkt $\vec p_1=(2,2,2)^\top$ auf der Ebene $\vec E$ liegt.
+\item Schreiben Sie die Ebene in der Hesseschen Normalform auf.
+\item Berechnen Sie den Abstand von $\vec E$ zu dem Koordinatenursprung $(0,0,0)^\top$.
+\item Berechnen Sie den Abstand des Punktes $\vec w = (1,2,3)^\top$ zu der Ebene.
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Der Normalenvektor muss gleichzeitig die folgenden Bedingungen f\"ur die
+Orthogonalit\"at erf\"ullen:
+	\begin{align*}
+		\langle \vec n, \vec u_1 \rangle &= 0\\
+		\langle \vec n, \vec u_2\rangle &= 0,
+	\end{align*}
+	mit $\vec u_1=(1,2,3)^\top$ und $\vec u_2=(1,-1,0)^\top$.
+	Die zwei Bedingungen ergeben das Gleichungssystem
+	\begin{align*}
+		x+2y+3z & = 0\\
+		x-y    & = 0,
+	\end{align*}
+	f\"ur die Komponenten des Vektors $\vec n =(x,y,z)^\top$.
+	Die L\"osung des Gleichungssystems ist $\vec n =(1,1,-1)^\top$.
+\item
+Die linke Seite der Gleichung 
+        \[
+           \langle \vec v, \vec n \rangle = \langle \vec p, \vec n\rangle
+        \]
+	f\"ur den Vektor $\vec v = (x,y,z)^\top$ ist
+	\[
+\left \langle \begin{pmatrix} x\\y\\z\end{pmatrix},\begin{pmatrix} 1\\1\\-1\end{pmatrix} \right \rangle= x+y-z,
+	\]
+	die rechte Seite ist
+
+	\[
+\left \langle \begin{pmatrix} 1\\1\\0\end{pmatrix},\begin{pmatrix} 1\\1\\-1\end{pmatrix} \right \rangle = 2.
+	\]
+	Daher ist die allgemeine Gleichung der Ebene
+	\[
+		x+y-z = 2.
+		\]
+	\item Um zu pr\"ufen, ob der Punkt $(2,2,2)^\top$ auf der Ebene liegt, setzen wir die 
+	Koordinaten in die allgemeine Gleichung ein und pr\"ufen, ob diese erf\"ullt ist. In 
+	diesem Fall gilt:
+		\[
+			2+2-2 = 2.	
+		\]
+	Daher liegt der Punkt auf der Ebene.
+	\item Um die Ebene in der Hesseschen Normalform zu schreiben, ben\"otigen wir den 
+	Einheitsnormalenvektor 
+		\[
+			\vec n_0 = \frac{\vec n}{\|\vec n\|} = \frac{1}{\sqrt{3}}\begin{pmatrix} 1\\1\\-1\end{pmatrix}.
+		\]
+	Mithilfe des allgemeinen Vektors $\vec x =(x,y,z)^\top$
+	k\"onnen wir die Hessesche Normalform schreiben als
+		\[
+		\langle \vec x, \vec n_0\rangle	=
+		\left \langle \vec x ,\frac{1}{\sqrt{3}}\begin{pmatrix} 1\\1\\-1\end{pmatrix} \right\rangle = \frac{2}{\sqrt{3}},
+		\]
+	
+% 	Die Hessesche Normalform kann dann geschrieben werden als
+% 		\[
+% 			\frac{1}{\sqrt{3}}(x+y-z) = \frac{2}{\sqrt{3}}.
+% 		\]
+	\item Der Abstand von der Ebene zu dem Koordinatenursprung ist die rechte Seite der 
+	Hesseschen Normalform.
+		\[
+			d(\vec 0, \vec E) = \frac{2}{\sqrt{3}}.
+		\]
+	\item Der Abstand des Punktes $\vec w = (1,2,3)^\top$ zu der Ebenen findet man durch 
+	Einsetzen der Koordinaten von $\vec w$ in die Hessesche Normalform und Berechnen der 
+	Differenz von linker und rechter Seite
+		\[
+			d(\vec w, \vec E)=\langle \vec w, \vec n_0\rangle - \frac{2}{\sqrt{3}} = -\frac{2}{\sqrt{3}}.
+		\]
+\end{abc}
+
+
+}

@@ -1,0 +1,81 @@
+\Aufgabe[e]{Darstellungen von Ebenen im $\R^3$}{
+Gegeben sind die Punkte im $\R^3$ mit den Ortsvektoren 
+$$
+\boldsymbol a = \begin{pmatrix} -1 \\ 0 \\ 1 \end{pmatrix}\,,\quad
+\boldsymbol b = \begin{pmatrix} 0 \\ 0 \\ 2 \end{pmatrix}\,,\quad
+\boldsymbol c = \begin{pmatrix} -1 \\ 2 \\ 0 \end{pmatrix}\,,\quad
+\boldsymbol d = \begin{pmatrix} 1 \\ 2 \\ z \end{pmatrix}\,,\quad
+z \in \R\,.
+$$
+
+\begin{abc}
+\item Geben Sie für die durch $\boldsymbol a$, $\boldsymbol b$ und
+$\boldsymbol c$ aufgespannte Ebene $\boldsymbol E$ im $\R^3$
+\begin{iii}
+\item eine Parameterdarstellung,
+\item eine Hessesche Normalform und
+\item eine allgemeine Ebenengleichung an.
+\end{iii}
+
+\item Bestimmen Sie $z \in \R$ so, dass $\boldsymbol d$ in der Ebene $\boldsymbol E$
+liegt.
+\end{abc}
+}
+\Loesung{
+
+\begin{abc}
+\item \begin{iii}
+\item Zwei m\"ogliche Richtungsvektoren der Ebene werden durch 
+$$\vec b - \vec a=\begin{pmatrix}1\\0\\1\end{pmatrix},\, \vec c-\vec a
+  = \begin{pmatrix}0\\2\\-1\end{pmatrix}$$
+angegeben. Als St\"utzvektor w\"ahlen wir $\vec a$. Damit kann man $\vec E$ schreiben als 
+$$\vec E = \left\{\vec x=\begin{pmatrix}-1\\0\\1\end{pmatrix} +
+  \lambda\begin{pmatrix}1\\0\\1\end{pmatrix}+ \mu \begin{pmatrix}0\\2\\-1\end{pmatrix}\Big|\, \lambda,\mu\in\R\right\}.$$
+
+\item F\"ur eine Darstellung der Ebene in Hessescher Normalform ben\"otigen wir einen
+ Normalenvektor $\vec n$ der Ebene, dieser muss also senkrecht auf den Richtungsvektoren der Ebene
+ stehen. Dies f\"uhrt auf das Gleichungssystem 
+$$\begin{array}{rrr|r|l}
+n_1   &   n_2    &   n_3   & \\\hline
+  1   &  0      &   1     &   0    &                      \\
+  0   &  2      &  -1     &   0    &                      \\
+\end{array}$$
+Die Wahl $n_3=2$ f\"uhrt auf $n_2=1$ und $n_1=-2$. \\
+
+
+Damit ist die Normalform
+\begin{align*}
+ \vec E &= \left\{ \vec x \in  \mathbb{R}^3 \mid \left\langle \vec x, \vec n \right\rangle = \langle \vec a, \vec n\rangle \right\} \\
+    &=\left\{ \vec x \in  \mathbb{R}^3 \mid \left\langle \vec x, \begin{pmatrix} -2\\1\\2 \end{pmatrix} \right\rangle = 4 \right\}.
+\end{align*}
+
+
+F\"ur die Hessesche Normalform muss der Normalenvektor noch normiert werden
+$$
+\|\vec n\| = 3.
+$$
+Damit ist der normierte Normalenvektor 
+$$
+\vec n_0 = \frac{1}{3} \begin{pmatrix} -2\\1\\2 \end{pmatrix}
+$$
+
+Mit diesem Normalenvektor ist eine Hessesche Normalform der Ebene
+$$
+ \vec E = \left\{ \vec x \in  \mathbb{R}^3 \mid \left\langle \vec x, \frac{1}{3}\begin{pmatrix} -2\\1\\2 \end{pmatrix} \right\rangle =\frac{4}{3} \right\}.
+$$
+
+\item Eine allgemeine Ebenengleichung ergibt sich aus der Berechnung des obigen Skalarproduktes: 
+$$0\overset!=\skalar{\vec x-\vec a,\vec n}=-2(x_1+1)+1(x_2-0)+2(x_3-1)\,\Rightarrow\,
+-2x_1+x_2+2x_3=4.$$
+\end{iii}
+\item Wenn $\vec d$ auf der Ebene liegt, m\"ussen seine Koordinaten die allgemeine Ebenengleichung
+erf\"ullen, daraus folgt
+$$-2\cdot 1 + 2 + 2 z=4,$$ 
+dies ergibt den Wert $z=2$. 
+\end{abc}
+}
+
+\ErgebnisC{linalg_Geom_Ebene_001}
+{
+{\textbf{ a)}} z. B. $-2x_1+x_2+2x_3=4$
+}

@@ -1,0 +1,75 @@
+\Aufgabe[e]{Basis von $\mathbb{R}^3$}{
+Welche der folgenden Mengen bilden eine Basis von $\mathbb{R}^3$\, ?
+\setlength{\columnsep}{-6ex}
+\begin{multicols}{2}
+\begin{iii}
+\item $ \mathcal{B}_1 =
+\left\{ \left(\begin{array}{r} 1 \\ 0 \\ 1 \end{array}\right),
+\left(\begin{array}{r} 0 \\ 1 \\ 0 \end{array}\right),
+\left(\begin{array}{r} 1 \\ 1 \\ 1 \end{array}\right) \right\} $
+
+\item $ \mathcal{B}_2 =
+\left\{ \left(\begin{array}{r} 1 \\ 1 \\ 0 \end{array}\right),
+\left(\begin{array}{r} 1 \\ 1 \\ 0 \end{array}\right) \right\}$
+
+\item $ \mathcal{B}_3 =
+\left\{ \left(\begin{array}{r} 1 \\ 1 \\ 1 \end{array}\right),
+\left(\begin{array}{r} 1 \\ 0 \\ 1 \end{array}\right),
+\left(\begin{array}{r} 0 \\ 0 \\ 1 \end{array}\right) \right\} $
+
+\item $ \mathcal{B}_4 =
+\left\{ \left(\begin{array}{r} 1 \\ 1 \\ 0 \end{array}\right),
+\left(\begin{array}{r} 0 \\ 1 \\ 1 \end{array}\right),
+\left(\begin{array}{r} 1 \\ 0 \\ 1 \end{array}\right),
+\left(\begin{array}{r} 1 \\ 1 \\ 1 \end{array}\right) \right\} $
+\end{iii}
+\end{multicols}
+
+}
+
+
+\Loesung{
+\begin{iii}
+
+\item 
+Die Vektoren sind linear abhängig. Das kann man mit der folgenden Beziehung zeigen
+$$
+\left(\begin{array}{r} 1\\ 0\\ 1 \end{array}\right)
++ \left(\begin{array}{r} 0\\ 1\\ 0 \end{array}\right)
+= \left(\begin{array}{r} 1\\ 1\\ 1 \end{array}\right)
+$$
+Daher bilden sie keine Basis von $\mathbb{R}^3$\,.
+
+\item 
+Eine Basis von $\mathbb{R}^3$ hat genau $3$ linear unabhängige Vektoren.
+Da die Menge $\mathcal{B}_2$ nur zwei Vektoren enthält, kann die Menge 
+keine Basis von $\mathbb{R}^3$ bilden.
+
+\item 
+Wir überprüfen, ob die Elemente von $\mathcal B_3$ linear unabhängig sind.
+$$
+c_1\, (1, 1, 1)^\top + c_2\, (1, 0, 1)^\top + c_3\, (0, 0, 1)^\top
+\stackrel{!}{=} \boldsymbol 0\,,\quad
+c_1, c_2, c_3 \in \mathbb{R}\,.
+$$
+% 
+Daraus erhalten wir das lineare Gleichungssystem 
+$$
+\begin{array}{r c r c r c l}
+c_1 &+& c_2 & & &=& 0\,, \\
+c_1 & & & & &=& 0\,, \\
+c_1 &+& c_2 &+& c_3 &=& 0\,.
+\end{array}
+$$
+% 
+Das Gleichungssystem hat mit $c_1=0$, $c_2=0$ und $c_3 = 0$ eine eindeutige
+Lösung. Die drei Vektoren in der Menge $\mathcal{B}_3$ sind also linear 
+unabhängig und bilden daher eine Basis von $\mathbb{R}^3$.
+
+\item
+Eine Basis von $\mathbb{R}^3$ hat genau $3$ linear unabhängige Vektoren.
+Da die Menge $\mathcal{B}_4$ vier Vektoren enthält, kann die Menge 
+keine Basis von $\mathbb{R}^3$ bilden.
+\end{iii}
+
+}

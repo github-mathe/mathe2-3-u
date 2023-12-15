@@ -1,0 +1,179 @@
+\Aufgabe[e]{Vektornormen}{
+Gegeben sind folgende Ausdr\"ucke für
+$\boldsymbol x = (x_1, x_2)^\top \in \R^2$ :
+$$
+\begin{array}{lcl}
+\| \boldsymbol{x} \|_{a} &:=& | x_1 |\,,\\[1ex]
+\| \boldsymbol{x} \|_{b} &:=& | x_1 | \cdot |x_2|\,,\\[1ex]
+\| \boldsymbol{x} \|_{c} &:=& 2\, | x_1 | + \frac{2}{3}\, | x_2|\,.%\\[1ex]
+% \| \boldsymbol{x} \|_{d} &:=& \sqrt{{x_1}^2 - x_1 x_2 + {x_2}^2}\,.
+\end{array}
+$$
+
+\begin{abc}
+\item Welche der Ausdr\"ucke definieren Normen im $\R^2$\,?\\
+Begr\"unden Sie Ihre Aussage durch das \"Uberpr\"ufen der Definition einer Norm. \\
+Falls es sich nicht um eine Norm handelt, geben Sie ein Beispiel an, welches zeigt, dass eine Bedingung
+verletzt ist.\\
+%\textbf{Hinweis}: Nehmen Sie f\"ur $\norm\cdot_d$ an, dass die Dreiecksungleichung erf\"ullt ist. 
+
+\item Skizzieren Sie f\"ur die \textit{Normen} aus \textbf{a)} die
+  Einheitskreise, d.h. die Menge
+$$
+\Big\{ \boldsymbol{x} \in \R^2 \,\Big|\, \| \boldsymbol x \| = 1 \Big\}\,.
+$$
+\end{abc}
+}
+\Loesung{
+\textbf{a)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\smallskip
+$\| \boldsymbol{x} \|_{a} := | x_1 |$ definiert keine Norm.
+Bspw. für $\boldsymbol{u} = (0, 1)^\top$ ist
+$$
+\| \boldsymbol{u} \|_{a} = | 0 | = 0\,,
+$$
+aber $\boldsymbol{u} \neq \boldsymbol 0$. Somit ist die Bedingung der
+Definitheit einer Norm verletzt.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+$\| \boldsymbol{x} \|_{b} := | x_1 | \cdot |x_2|$ definiert keine
+Norm. Bspw. für $\boldsymbol{v} = (0, 1)^\top$ ist
+$$
+\| \boldsymbol{v} \|_{b} = | 0 | \cdot | 1 | = 0\,,
+$$
+aber $\boldsymbol{v} \neq \boldsymbol 0$. Somit ist die Bedingung der
+Definitheit einer Norm verletzt.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+$\| \boldsymbol{x} \|_{c} := 2\, | x_1 | + \frac{2}{3}\, | x_2|$
+definiert eine verallgemeinerte Betragssummennorm im $\R^2$\,.
+% 
+Das Nachrechnen der vier Bedingungen ergibt:
+\begin{iii}
+\item $\| \boldsymbol x \|_c = 2\, |x_1| + \frac{2}{3}\, |x_2| \geq 0$
+ist erfüllt für alle $\boldsymbol x = (x_1, x_2)^\top \in \R^2$\,.
+
+\item Für $\boldsymbol a = (a_1, a_2)^\top \in \R^2$ ist
+$\| \boldsymbol a \|_c = 2\, |a_1| + \frac{2}{3}\, |a_2| \stackrel{!}{=} 0$
+genau dann, wenn $|a_1| = |a_2| = 0$ und somit $\boldsymbol a = (0, 0)^\top$\,.
+
+\item Für $\alpha \in \R$ gilt $\| \alpha\, \boldsymbol{x} \|_c
+= 2\, | \alpha\, x_1 | + \frac{2}{3}\, | \alpha\, x_2 |
+= | \alpha | \cdot (2\, |x_1| + \frac{2}{3}\, |x_2|)
+= | \alpha | \cdot \| \boldsymbol x \|_c$\,.
+
+\item Für die Dreiecksungleichung sei $\boldsymbol x = (x_1, x_2)^\top$ und
+$\boldsymbol y = (y_1, y_2)^\top$, somit
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l}
+\| \boldsymbol{x} + \boldsymbol{y} \|_c
+&=& 2\, | x_1 + y_1 | + \frac{2}{3}\, | x_2 + y_2 |\\[1ex]
+% 
+~ & \leq & 2\, | x_1 | + \frac{2}{3}\, | x_2 | + 2\, | y_1 | + \frac{2}{3}\, | y_2 |\\[1ex]
+% 
+~ &=& \| \boldsymbol x \|_c + \| \boldsymbol y \|_c\,.
+\end{array}
+$$
+\end{iii}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \bigskip
+% Die Bedingungen f\"ur $\norm\cdot_d$ sind im einzelnen: 
+% \begin{iii}
+% \item $ \| \boldsymbol x \|_d =
+% \sqrt{ \left( x_1 - \dfrac{1}{2}\, x_2 \right)^2 + \dfrac{3}{4}\, x_2^2 }\, \geq 0 $
+% f\"ur alle $\boldsymbol x \in \R^2$\,.
+% 
+% \item Die Bedingung $ \| \boldsymbol x \|_d = 0\,
+% \Leftrightarrow \, \boldsymbol x = (0, 0)^\top$
+% lässt sich überprüfen durch
+% $$
+% 0 \stackrel{!}{=} x_1^2 - x_1 x_2 + x_2^2
+% = \left( x_1 - \frac{1}{2}\, x_2 \right)^2 + \frac{3}{4}\, x_2^2\,,
+% $$
+% %
+% somit müssen die Gleichungen
+% $\dfrac{3}{4}\, x_2^2 = 0$ und
+% $\left( x_1 - \dfrac{1}{2}\, x_2 \right)^2 = 0$
+% erfüllt sein, welche nur die Wahl von $x_2 = 0$ und $x_1 = 0$ zulassen.
+% 
+% 
+% \item Für $\alpha \in \R$ ist $ \| \alpha\, \boldsymbol x \|_d
+% = \sqrt{ ( \alpha\, x_1 )^2 - ( \alpha\, x_1 ) ( \alpha\, x_2 ) + ( \alpha\, x_2)^2}
+% = | \alpha |\, \| \boldsymbol x \|_d$\,.
+% 
+% \item Mit $\vec x=(x,y)^\top$ und $\vec u=(u,v)^\top$ soll gelten: 
+% $$\norm{\vec x + \vec u}_d\leq \norm{\vec x}_d + \norm{\vec u}_d$$ oder gleichbedeutend:  
+% \begin{align*}
+% 0\leq&\left(\norm {\vec x}_d + \norm {\vec u}_d\right)^2-\norm{\vec x + \vec u}_d^2
+% = \norm{\vec x}_d^2+\norm{\vec u}_d^2 + 2\norm{\vec x}_d\norm{\vec u}_d - \norm{\vec x+\vec u}_d^2\\
+% =& x^2-xy+y^2+u^2-uv+v^2+2\sqrt{x^2-xy+y^2}\sqrt{u^2-uv+v^2}+ \\
+% &-\left((x+u)^2-(x+u)(y+v)+(y+v)^2\right)\\
+% =& x^2-xy+y^2+u^2-uv+v^2+2\sqrt{(x^2-xy+y^2)(u^2-uv+v^2)}+ \\
+% &-x^2-2xu-u^2+xy+xv+uy+uv-y^2-2yv-v^2\\
+% =&2\sqrt{(x^2-xy+y^2)(u^2-uv+v^2)}  -2xu+xv+uy-2yv\\
+% \end{align*}
+% Diese Ungleichung wiederum l\"asst sich umformen zu 
+% \begin{align*}
+% 2xu-xv-uy+2yv\leq& 2\sqrt{(x^2-xy+y^2)(u^2-uv+v^2)}
+% \end{align*}
+% Diese ist erf\"ullt, wenn die linke Seite kleiner oder gleich Null ist. Falls die linke Seite gr\"oßer als
+% Null ist, ist sie \"aquivalent zu
+% \begin{align*}
+% &&&(2xu-xv-uy+2yv)^2\\
+% &&\leq& 4(x^2-xy+y^2)(u^2-uv+v^2)\\
+% \Leftrightarrow&&
+% &4x^2u^2+4xu(-xv-uy+2yv)+(-xv-uy+2yv)^2\\
+% &&\leq&4(x^2u^2-x^2uv+x^2v^2+(-xy+y^2)(u^2-uv+v^2))\\
+% \Leftrightarrow&&&-4xu^2y+8xuyv+(-xv-uy+2yv)^2\\
+% &&\leq&4(x^2v^2+(-xy+y^2)(u^2-uv+v^2))\\
+% \Leftrightarrow&&&-4xu^2y+8xuyv+x^2v^2-2xv(-uy+2yv)+(-uy+2yv)^2\\
+% &&\leq&4x^2v^2-4xyu^2+4xyuv-4xyv^2+4y^2(u^2-uv+v^2)\\
+% \Leftrightarrow&&&4xuyv-2xv(-uy+2yv)+(-uy+2yv)^2\\
+% &&\leq&3x^2v^2-4xyv^2+4y^2(u^2-uv+v^2)\\
+% \Leftrightarrow&&&6xyuv+u^2y^2-4y^2uv+4y^2v^2\\
+% &&\leq& 3x^2v^2+4y^2(u^2-uv+v^2)\\
+% \Leftrightarrow&&&6xyuv\leq 3x^2v^2+3y^2u^2\\
+% \Leftrightarrow&&&0\leq 3((xv)^2+(yu)^2-2(xv)(yu))=3(xv-yu)^2
+% \end{align*}
+% Diese Bedingung ist stets erf\"ullt, also gilt auch f\"ur $\norm\cdot_d$ die Dreiecksungleichung. 
+% \end{iii}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+\textbf{b)} Skizzen von $\| \boldsymbol x \|_c = 1$:% und
+% $\| \boldsymbol x \|_d = 1$: \\
+\quad\\
+
+
+
+\begin{pspicture}(-2,-2.5)(2,2.5)
+\psgrid(-2,-2)(2,2)
+\psline(-.5,0)(0,-1.5)(.5,0)(0,1.5)(-.5,0)
+\put(.4,.6){\colorbox{white}{$\norm{\vec x}_c=1$}}
+\end{pspicture}
+% \qquad
+% \begin{pspicture}(-2,-2.5)(2,2.5)
+% \psgrid(-2,-2)(2,2)
+% \psparametricplot{0}{360}
+% {t cos 1 t cos t sin mul neg add sqrt div
+% t sin 1 t cos t sin mul neg add sqrt div}
+% 
+% \put(.4,1.5){\colorbox{white}{$\norm{\vec x}_d=1$}}
+% \end{pspicture}
+
+}
+
+\ErgebnisC{linalg_VeMa_Norm_012}
+{
+$\norm\cdot_a$ und $\norm\cdot_b$ sind keine Normen. 
+% Der Nachweis der Dreiecksungleichung f\"ur $\norm\cdot_d$ ist aufwendig. 
+}

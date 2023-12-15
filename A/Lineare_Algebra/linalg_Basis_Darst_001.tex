@@ -1,0 +1,65 @@
+\Aufgabe[e]{Basis des $\R^3$}{
+Gegeben seien die Vektoren
+\begin{equation*}
+\boldsymbol a_1 = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\,,\,\,
+\boldsymbol a_2 = \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix}\,,\,\,
+\boldsymbol a_3 = \begin{pmatrix} 3 \\ 3 \\ \alpha \end{pmatrix}\,,\quad
+\boldsymbol b = \begin{pmatrix} 2 \\ 1 \\ 5 \end{pmatrix}\,,
+\end{equation*}
+$\alpha \in \R$, bezüglich der Standardbasis des $\R^3$\,.
+
+\begin{abc}
+\item F\"ur welche $\alpha\in\R$ bilden $\vec{a}_{1},\vec{a}_{2},\vec{a}_{3}$ eine Basis des $\R^3$?
+
+\item Bestimmen Sie für solch ein $\alpha$ die Komponenten des Vektors $ \boldsymbol b$
+bezüglich der Basis $\boldsymbol a_1, \boldsymbol a_2, \boldsymbol a_3$.
+
+% Geben Sie f\"ur solch ein $\alpha$
+% den Vektor $\boldsymbol b$ bezüglich der Basis $\boldsymbol a_1, \boldsymbol a_2, \boldsymbol a_3$
+% an.
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Da der $\R^{3}$ die Dimension 3 hat, gen\"ugt es zu zeigen, dass die Vektoren
+$\vec{a}_{1},\vec{a}_{2},\vec{a}_{3}$ linear unabh\"angig sind. Wir betrachten also drei Zahlen
+$t_1,\, t_2,\, t_3 \in \R$ mit
+			\begin{equation*}
+				t_1 \vec{a}_1 + t_2 \vec{a}_2 + t_3 \vec{a}_3 = \vec{0}
+			\end{equation*}
+Daraus ergibt sich das folgende lineare Gleichungssystem, das mittels Gau\ss-Algorithmus gel\"ost wird: 
+
+$$\begin{array}{rrr|r|l}
+    1 &    2 &    3        &    0 &\text{                            }\\
+    2 &    1 &    3        &    0 &\text{ $-2 \times$ 1. Zeile       }\\
+    3 &    1 & \alpha      &    0 &\text{ $-3 \times$ 1. Zeile       }\\\hline
+
+    1 &    2 &    3        &    0 &\text{                    }\\
+    0 &   -3 &   -3        &    0 &\text{                    }\\
+    0 &   -5 & \alpha-9    &    0 &\text{ $-5/3\times$ 2. Zeile       }\\\hline
+
+    1 &    2 &    3        &    0 &\text{                    }\\
+    0 &   -3 &   -3        &    0 &\text{                    }\\
+    0 &    0 & \alpha-4    &    0 &\text{        }\\
+\end{array}$$
+
+Dieses Gleichungssystem ist f\"ur  $\alpha=4$ unterbestimmt und hat beliebig viele L\"osungen. F\"ur alle anderen $\alpha$ ist  die einzige L\"osung $t_1=t_2=t_3=0$. Somit kann $\alpha\neq 4$ beliebig gew\"ahlt werden, um eine Basis zu erhalten. W\"ahle im folgenden $\alpha=0$. 
+		\item Man muss nun die Koeffizienten \ $t_{1},t_{2},t_{3}$ \ aus der Darstellung
+			\begin{equation*}
+				\vec{b} = t_1 \vec{a}_1 + t_2 \vec{a}_2 + t_3 \vec{a}_3
+			\end{equation*}
+			berechnen. 
+                        Die obige L\"osung des linearen Gleichungssystems daf\"ur kann wieder verwendet werden, die Zeilenoperationen m\"ussen nun  f\"ur die Eintr\"age von $ \boldsymbol b$ nachgeholt werden:
+                        $$\begin{pmatrix}2\\1\\5\end{pmatrix}\,\rightarrow\,\begin{pmatrix}2\\-3\\-1\end{pmatrix}\,\rightarrow\,\begin{pmatrix}2\\-3\\4\end{pmatrix}$$
+                        R\"uckw\"artseinsetzen ergibt: 
+                        $$t_3=-1,\, t_2=\frac 1{-3}(-3+3\cdot(-1))=2,\, t_1=2-2\cdot 2 - 3 \cdot (-1) = 1.$$
+\end{abc}
+}
+
+\ErgebnisC{linalg_Basis_Darst_001}
+{
+\textbf{a)} $\alpha\neq 4$
+
+\textbf{b)}
+$\vec b=1\vec a_1 + 2\vec a_2 - 1\vec a_3$ f\"ur $\alpha=0$
+}

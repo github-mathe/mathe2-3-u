@@ -1,0 +1,191 @@
+\Aufgabe[e]{Eigenwerte und Eigenvektoren}{
+\begin{abc}
+\item Berechnen Sie die Eigenwerte und Eigenr\"aume der Matrizen\\
+$$\boldsymbol A=\begin{pmatrix}1&-4&-4\\0&3&2\\2&-7&-4\end{pmatrix}, \,
+\boldsymbol B=\begin{pmatrix}1&-4&-4\\0&3&2\\0&-1&0\end{pmatrix}.$$%\text{ und }$$
+% $$ \boldsymbol C = \begin{pmatrix}
+% -1+2\operatorname{i}  & -2+2\operatorname{i}  & -1+\operatorname{i} \\
+% 1-2\operatorname{i}   & 2 -2\operatorname{i}  & 1-\operatorname{i}  \\
+%   2\operatorname{i}   &    2\operatorname{i}  &   \operatorname{i}  \\
+% \end{pmatrix}.$$
+% \item Invertieren Sie -- falls m\"oglich -- die drei Matrizen. 
+% \item Sind die drei Matrizen invertierbar? Begr\"unden Sie Ihre Antwort.
+\item Die Matrix $\boldsymbol M\in \R^{n\times n}$ habe den Eigenwert $\lambda$. \\
+Welchen Eigenwert hat dann $\boldsymbol M + \boldsymbol E_{n}$?
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item \begin{iii} 
+\item Die Eigenwerte von $\boldsymbol A$ ergeben sich zu
+\begin{align*}
+0&\overset != \det \begin{pmatrix}1-\lambda &-4&-4\\0&3-\lambda
+  &2\\2&-7&-4-\lambda\end{pmatrix}\\
+&=(1-\lambda)(3-\lambda)(-4-\lambda)-16+8(3-\lambda)+14(1-\lambda)\\
+&=-\lambda^3-9\lambda+10\\
+\Rightarrow\lambda_1&=1, \quad \lambda_2=-\frac 12 +\operatorname{i}\frac{\sqrt{39}}2,
+\quad \lambda_3 = -\frac12 - \operatorname{i}\frac{\sqrt{39}}2
+\end{align*}
+Eigenvektoren ergeben sich wie \"ublich aus
+\begin{align*}
+(&\boldsymbol A-\lambda_j \boldsymbol E)\boldsymbol v_j\overset != 0\\ &\Rightarrow\boldsymbol v_1=\begin{pmatrix}1\\1\\-1\end{pmatrix},\,
+\boldsymbol v_2=\begin{pmatrix}-8 \\4\\-7+\operatorname{i}\sqrt{39}\end{pmatrix},\,
+\boldsymbol v_3=\begin{pmatrix}-8 \\4\\-7-\operatorname{i}\sqrt{39}\end{pmatrix}
+\end{align*}
+Diese drei Eigenvektoren spannen die zu den jeweiligen Eigenwerten
+geh\"orenden Eigenr\"aume auf. 
+
+\item Die Eigenwerte von $\boldsymbol B$ ergeben sich zu 
+\begin{align*}
+\quad 0&\overset != \det\begin{pmatrix}1-\lambda& -4&-4\\0&3-\lambda&2\\0&-1&-\lambda\end{pmatrix}\\
+&=(1-\lambda)(-3\lambda+\lambda^2+2)\\[2ex]
+\Rightarrow \quad \lambda_1&=\lambda_2=1, \quad \lambda_3=2,
+\end{align*}
+und die Eigenvektoren: 
+\begin{align*}
+&\begin{pmatrix}0&-4&-4\\0&2&2\\0&-1&-1\end{pmatrix}\boldsymbol v_{1/2}=0
+\quad \Leftarrow\boldsymbol v_1 = \begin{pmatrix}0\\1\\-1\end{pmatrix}, \,  \boldsymbol v_2=\begin{pmatrix}1\\1\\-1\end{pmatrix}\\
+&\begin{pmatrix}-1&-4&-4\\0&1&2\\0&-1&-2\end{pmatrix}\boldsymbol v_3=0
+\quad \Leftarrow\boldsymbol v_3=\begin{pmatrix}4\\-2\\1\end{pmatrix}
+\end{align*}
+Die Eigenr\"aume zu den beiden Eigenvektoren sind damit
+$$\boldsymbol U_{\lambda=1} = \operatorname{span}\{\boldsymbol v_1,\,  \boldsymbol v_2\}, \quad \boldsymbol U_{\lambda=2} = \operatorname{span}\{\boldsymbol v_3\}.$$
+% 
+% \item Die Eigenwerte von $\boldsymbol C$ ergeben sich als Nullstellen des charakteristischen Polynoms:
+% \begin{align*}
+% 0\overset !=&\det\begin{pmatrix}
+%      -1+2\operatorname{i}-\lambda &       -2+2\operatorname{i}   & -1+\operatorname{i}   \\
+%      1-2\operatorname{i}          & 2-2\operatorname{i} - \lambda&  1-\operatorname{i}   \\
+%      2\operatorname{i}            &      2\operatorname{i}       &   \operatorname{i}-\lambda
+% \end{pmatrix}\quad (Z_2+Z_1)\\
+% =&\det\begin{pmatrix}
+%      -1+2\operatorname{i}-\lambda &       -2+2\operatorname{i}   & -1+\operatorname{i}   \\
+%      -\lambda          &          - \lambda&        0   \\
+%      2\operatorname{i}            &      2\operatorname{i}       &   \operatorname{i}-\lambda
+% \end{pmatrix}\quad \quad (S_1-S_2)\\
+% =&\det\begin{pmatrix}
+%       1       -\lambda &       -2+2\operatorname{i}   & -1+\operatorname{i}   \\
+%             0          &          - \lambda&        0   \\
+%             0          &      2\operatorname{i}       &   \operatorname{i}-\lambda
+% \end{pmatrix}\\
+% =&(1-\lambda)\cdot (-\lambda)(\operatorname{i}-\lambda)
+% \end{align*}
+% Also sind die Eigenwerte: 
+% $$\lambda\in \{1,\, 0,\, \operatorname{i}\}.$$
+% Die jeweiligen Eigenvektoren ergeben sich als L\"osungen der Gleichungssysteme:
+% $$(\boldsymbol C - \lambda\cdot \boldsymbol E)\boldsymbol v_\lambda=\boldsymbol 0, \quad \lambda\in \{1,\, 0,\, \operatorname{i}\}.$$
+% F\"ur $\lambda = 1$: 
+% $$\begin{array}{rrr|r|l}
+% -2+2\operatorname{i}     &-2+2\operatorname{i}     &-1+\operatorname{i}       & 0 & \text{                              }\\
+% 1-2\operatorname{i}      & 1-2\operatorname{i}     & 1-\operatorname{i}       & 0 & \text{ +1. Zeile                    }\\
+% 2\operatorname{i}        &   2\operatorname{i}     & \operatorname{i}-1       & 0 & \text{ -1. Zeile                    }\\\hline
+% 
+% -2+2\operatorname{i}     &-2+2\operatorname{i}     &-1+\operatorname{i}       & 0 & \text{                              }\\
+%  -1           &-1            &        0      & 0 & \text{                              }\\
+% 2             &   2          &        0      & 0 & \text{  +2$\cdot$ 2. Zeile          }\\\hline
+% 
+% -2+2\operatorname{i}     &-2+2\operatorname{i}     &-1+\operatorname{i}       & 0 & \text{                              }\\
+%  -1           &-1            &        0      & 0 & \text{                              }\\
+% 0             &   0          &        0      & 0 &
+% \end{array}$$
+% $$\Rightarrow \quad  \boldsymbol v_1 = \alpha (1,\, -1,\, 0)^\top, \quad \alpha\in\R.$$
+% 
+% F\"ur $\lambda = 0$: 
+% $$\begin{array}{rrr|r|l}
+% -1+2\operatorname{i}     &-2+2\operatorname{i}     &-1+\operatorname{i}       & 0 & \text{                              }\\
+% 1-2\operatorname{i}      & 2-2\operatorname{i}     & 1-\operatorname{i}       & 0 & \text{ +1. Zeile                    }\\
+% 2\operatorname{i}        &   2\operatorname{i}     & \operatorname{i}         & 0 & \text{ $\cdot (-1+2\operatorname{i})-2\operatorname{i}\cdot$ 1. Zeile }\\\hline
+% 
+% -2+2\operatorname{i}     &-2+2\operatorname{i}     &-1+\operatorname{i}       & 0 & \text{                              }\\
+%   0           & 0            &        0      & 0 & \text{                              }\\
+%       0       & 2\operatorname{i}       & \operatorname{i}         & 0 & \text{                              }
+% \end{array}$$
+% $$\Rightarrow \quad  \boldsymbol v_0 = \alpha (0,\, -1,\, 2)^\top, \quad \alpha\in\R.$$
+% 
+% F\"ur $\lambda = \operatorname{i}$: 
+% $$\begin{array}{rrr|r|l}
+% -1+ \operatorname{i}     &-2+2\operatorname{i}     &-1+\operatorname{i}       & 0 & \text{                              }\\
+% 1-2\operatorname{i}      & 2-3\operatorname{i}     & 1-\operatorname{i}       & 0 & \text{ +1. Zeile                    }\\
+% 2\operatorname{i}        &   2\operatorname{i}     &        0      & 0 & \text{                              }\\\hline
+% 
+% -1+ \operatorname{i}     &-2+2\operatorname{i}     &-1+\operatorname{i}       & 0 & \text{                              }\\
+%  - \operatorname{i}      &  - \operatorname{i}     &        0      & 0 & \text{                              }\\
+% 2\operatorname{i}        &   2\operatorname{i}     &        0      & 0 & \text{  +2$\cdot$ 2. Zeile          }\\\hline
+% 
+% -1+ \operatorname{i}     &-2+2\operatorname{i}     &-1+\operatorname{i}       & 0 & \text{                              }\\
+%  - \operatorname{i}      &  - \operatorname{i}     &        0      & 0 & \text{                              }\\
+%       0       &        0     &        0      & 0 &
+% \end{array}$$
+% $$\Rightarrow \quad  \boldsymbol v_{\operatorname{i}} = \alpha (1,\, -1,\, 1)^\top, \quad \alpha\in\R.$$
+\end{iii}
+Die Eigenr\"aume sind damit 
+$$\boldsymbol U_{1}=\operatorname{span}\{(1,\, -1,\, 0)^\top\},\, \boldsymbol U_0=\operatorname{span}\{(0,\, -1,\, 2)^\top\},\, \boldsymbol U_{\operatorname{i}}
+= \operatorname{span}\{(1,\, -1,\, 1)^\top\}.$$
+% \item Die ersten beiden Matrizen sind invertierbar:
+% $$\begin{array}{rrr|rrr|l}
+%      1 &    -4 &    -4 &     1 &     0 &     0 & \text{                                     }\\
+%      0 &     3 &     2 &     0 &     1 &     0 & \text{                                     }\\
+%      2 &    -7 &    -4 &     0 &     0 &     1 & \text{  -$2\cdot$ 1. Zeile                 }\\\hline
+% 
+%      1 &    -4 &    -4 &     1 &     0 &     0 & \text{  $\cdot 3 + 4\cdot$ 2. Zeile        }\\
+%      0 &     3 &     2 &     0 &     1 &     0 & \text{                                     }\\
+%      0 &     1 &     4 &    -2 &     0 &     1 & \text{  $\cdot 3 - $ 2. Zeile              }\\\hline
+% 
+%      3 &     0 &    -4 &     3 &     4 &     0 & \text{ $\cdot 5$  +$2\cdot$ 3. Zeile       }\\
+%      0 &     3 &     2 &     0 &     1 &     0 & \text{ $\cdot 5$    -3. Zeile              }\\
+%      0 &     0 &    10 &    -6 &    -1 &     3 & \text{                                     }\\\hline
+% 
+%     15 &     0 &     0 &     3 &     18&     6 & \\
+%      0 &    15 &     0 &     6 &     6 &    -3 & \\
+%      0 &     0 &    10 &    -6 &    -1 &     3 & 
+% \end{array}$$
+% Damit ist 
+% $$\boldsymbol A^{-1} = \frac 1 {10}\begin{pmatrix} 
+%      2  &     12 &      4  \\
+%      4  &      4 &     -2  \\
+%     -6  &     -1 &      3   
+% \end{pmatrix}.$$
+% 
+% $$\begin{array}{rrr|rrr|l}
+%      1 &    -4 &    -4 &     1 &     0 &     0 & \text{  -4$\cdot$ 3. Zeile                 }\\
+%      0 &     3 &     2 &     0 &     1 &     0 & \text{  3. Zeile                           }\\
+%      0 &    -1 &     0 &     0 &     0 &     1 & \text{  2. Zeile + 3$\cdot$ 3. Zeile       }\\\hline
+% 
+%      1 &     0 &    -4 &     1 &     0 &    -4 & \text{  +2$\cdot$ 3. Zeile                 }\\
+%      0 &    -1 &     0 &     0 &     0 &     1 & \text{  $\cdot (-1)$                       }\\
+%      0 &     0 &     2 &     0 &     1 &     3 & \text{  $\cdot 1/2$                        }\\\hline
+% 
+%      1 &     0 &     0 &     1 &     2 &     2 &\\
+%      0 &     1 &     0 &     0 &     0 &    -1 &\\
+%      0 &     0 &     1 &     0 &    1/2&   3/2 &
+% \end{array}$$
+% Damit ist 
+% $$\boldsymbol B^{-1} = \begin{pmatrix}1&2&2\\0&0&-1\\ 0&1/2&3/2\end{pmatrix}.$$
+% 
+% $\boldsymbol C$ hat den Eigenwert $\lambda=0$, also ist $\operatorname{Kern}
+% \boldsymbol C \neq \{\boldsymbol 0\}$ und $\boldsymbol C$ nicht invertierbar. 
+
+\item Es gibt also einen Vektor $\boldsymbol v\neq \boldsymbol 0$, mit dem gilt $\boldsymbol M \boldsymbol v=\lambda \boldsymbol
+v$. Daraus folgt  
+$$(\boldsymbol M + \boldsymbol E_n)\boldsymbol v = \boldsymbol M \boldsymbol v + \boldsymbol E_n \boldsymbol v = \lambda\boldsymbol v + 1 \boldsymbol v = (\lambda
++ 1 )\boldsymbol v$$
+also dass $\lambda+1$ Eigenwert von $\boldsymbol M + \boldsymbol E_n$ ist.  
+\end{abc}
+}
+
+\ErgebnisC{linalg_Eign_Wert_002}
+{
+{ a)} $\lambda_A\in \{1,\, -1/2\pm \sqrt{39}/2\operatorname{i}\}$, $\boldsymbol v_{A,1}=(1,1,-1)^\top,\, \boldsymbol
+v_{A,2/3}=(-8,4, -7\pm \sqrt{39}\operatorname{i})^\top$. \\
+$\lambda_B\in\{1,\, 2\}$, $\boldsymbol U_{\lambda=1}=\operatorname{span}\{(0,1,-1)^\top,\, (1,1,-1)^\top\}$, $\boldsymbol
+U_{\lambda=2}=\operatorname{span}\{(4,-2,1)^\top\}$. \\
+% $\lambda_C\in \{0,\, 1,\, \operatorname{i}\}$, $\boldsymbol v_{C,0}=(0,-1,2)^\top$, $\boldsymbol v_{C,1}=(1,-1,0)^\top$,
+% $\boldsymbol v_{C,\operatorname{i}}=(1,-1,1)^\top$.\\
+% { b)} $\boldsymbol B^{-1} = \begin{pmatrix}1&2&2\\0&0&-1\\ 0&1/2&3/2\end{pmatrix}$, $\boldsymbol A^{-1} = \frac 1 {10}\begin{pmatrix} 
+%      2  &     12 &      4  \\
+%      4  &      4 &     -2  \\
+%     -6  &     -1 &      3   
+% \end{pmatrix}.$\\
+{ b)} $\lambda+1$
+
+}

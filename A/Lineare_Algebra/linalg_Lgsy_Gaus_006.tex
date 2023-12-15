@@ -1,0 +1,58 @@
+\Aufgabe[e]{LGS mit Gau\ss{}'schem Algorithmus und kompl. Koeffizienten}{
+Gegeben sei das LGS
+\begin{equation*}
+\begin{pmatrix}
+	(2 + 3 \operatorname{i}) z_1	&+& (1 - 1\operatorname{i}) z_2	\\
+	(3 - 2 \operatorname{i}) z_1	&+& (0 + 2 \operatorname{i}) z_2	\\
+\end{pmatrix}
+=
+\begin{pmatrix}	7 + 6 \operatorname{i}\\
+2 - 9 \operatorname{i}	\end{pmatrix}.
+\end{equation*}
+% 
+Bestimmen Sie die L\"osung mit Hilfe des Gau\ss{}'schen Algorithmus ohne
+Taschenrechner. \newline
+% 
+% \textbf{Hinweis:} Es ist zweckm\"a\ss{}ig, um unn\"otige Divisionen zu vermeiden,
+% durch Multiplikationen mit geeigneten Faktoren zun\"achst die Koeffizienten der
+% ersten Spalte des Schemas gleich zu machen.
+}
+\Loesung{
+\begin{equation*}
+% \Arstr[1.2]
+  \begin{array}{l | r r | r | l }
+% 	\hline
+	\mathrm{I}	 & 2+3\operatorname{i}	& 1-1\operatorname{i}  & 7+6\operatorname{i}& 
+	\text{Ausgangsgleichung} \\
+	\mathrm{II}	 & 3-2\operatorname{i}	& 0+2\operatorname{i}  & 2-9\operatorname{i}& \\
+	\hline
+	\mathrm{I'}	 & 12+5\operatorname{i}	& 1-5\operatorname{i}  & 33+4\operatorname{i}& 
+	\mathrm{I'} = \mathrm{I} \cdot (3-2\operatorname{i})\\
+	\mathrm{II'} & 12+5\operatorname{i}	& -6+4\operatorname{i} & 31-12\operatorname{i}& 
+	\mathrm{II'} = \mathrm{II} \cdot (2+3\operatorname{i})\\
+	\hline
+	\mathrm{I'}	 & 12+5\operatorname{i}	& 1-5\operatorname{i}  & 33+4\operatorname{i}& \\
+	\mathrm{II''}& 0					& -7+9\operatorname{i} & -2-16\operatorname{i}& 
+	\mathrm{II''} = \mathrm{II'} - \mathrm{I'}\\
+% 	\hline
+  \end{array}
+\end{equation*}
+Das R\"uckw\"artsaufl\"osen ergibt
+\begin{equation*}
+	z_2 = \dfrac{-2-16\operatorname{i}}{-7+9\operatorname{i}} = -1+\operatorname{i} \qquad \text{und} \qquad 
+	z_1 = \dfrac{(33+4\operatorname{i}) - 
+(1-5\operatorname{i})\cdot (-1+\operatorname{i})
+}{12+5\operatorname{i}} = 2-\operatorname{i}
+\end{equation*}
+also den L\"osungsvektor
+\begin{equation*}
+	\boldsymbol{z} = \begin{pmatrix}	2-\operatorname{i} \\ -1+\operatorname{i}	\end{pmatrix}
+\end{equation*}
+}
+
+\ErgebnisC{linalg_Lgsy_Gaus_006}
+{
+$
+	\boldsymbol{z} = \begin{pmatrix}	2-\operatorname{i} \\ -1+\operatorname{i}	\end{pmatrix}
+$
+}

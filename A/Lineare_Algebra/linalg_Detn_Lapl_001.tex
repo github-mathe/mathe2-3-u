@@ -1,0 +1,182 @@
+\Aufgabe[e]{Determinanten}{
+Bestimmen Sie die Determinanten folgender Matrizen: 
+\begin{align*}
+\text{ a)}&&\boldsymbol A =& \begin{pmatrix}
+7 & -2 & \;3 & \;0 & \;2 \\ 
+-3 & 0 & 0 & 0 & 2 \\ 
+1 & 2 & 3 & 4 & 5 \\ 
+1 & 0 & 1 & 0 & 1 \\ 
+-2 & 0 & 5 & 0 & 3 \end{pmatrix},\quad& 
+\text{ b)}&&\boldsymbol B=&\begin{pmatrix}
+-2 & 3 & -7 & 8 & \;3 \\ 
+3 & -4 & 1 & 6 & 0 \\ 
+0 & 0 & -3 & -2 & 9 \\ 
+0 & 0 & 0 & 5 & 3 \\ 
+0 & 0 & 0 & 4 & 2\end{pmatrix}\\
+\text{ c)}&&\boldsymbol C = &\begin{pmatrix}
+   2 & -3 & \;0 &  0 \\ 
+  -1 &  4 &  0 &  0 \\ 
+   4 &  1 &  2 & -1 \\ 
+  -5 &  2 &  2 &  3
+\end{pmatrix}\,& \text{ d)}&&
+\boldsymbol D = &\begin{pmatrix}
+3 & 0 & 0 & 4 \\ 
+5 & 2 & 3 & 2 \\ 
+2 & 5 & 7 & 7 \\ 
+4 & 0 & 0 & 6
+\end{pmatrix}.
+\end{align*}
+
+}
+\Loesung{
+Man entwickelt solange nach Spalten oder Zeilen, die möglichst viele Nullen enthalten, bis die verbleibenden Restmatrizen leicht direkt ausgerechnet werden können: 
+
+\begin{align*}
+\det \boldsymbol A =& \det \begin{pmatrix}
+7 & -2 & 3 & 0 & 2 \\ 
+-3 & 0 & 0 & 0 & 2 \\ 
+1 & 2 & 3 & 4 & 5 \\ 
+1 & 0 & 1 & 0 & 1 \\ 
+-2 & 0 & 5 & 0 & 3
+\end{pmatrix} 
+= -4\cdot \det \begin{pmatrix}
+7 & -2 & 3 & 2 \\ 
+-3 & 0 & 0 & 2 \\ 
+1 & 0 & 1 & 1 \\ 
+-2 & 0 & 5 & 3
+\end{pmatrix}\\[1ex]
+=& -4\cdot 2\cdot \det \begin{pmatrix}
+-3 & 0 & 2 \\ 
+1 & 1 & 1 \\ 
+-2 & 5 & 3
+\end{pmatrix}\\[1ex]
+=&-8\cdot \left[ -3\cdot \det \begin{pmatrix}
+1 & 1 \\ 
+5 & 3
+\end{pmatrix} + 2 \cdot \det \begin{pmatrix}
+1 & 1 \\
+-2 & 5%
+\end{pmatrix} \right] \\[1ex]
+=& -8\cdot \left[ -3\cdot (-2)+2\cdot 7\right]=-160\,.
+\end{align*}
+
+% F\"ur die Matrix $\boldsymbol B$ werden passende Spalten- und Zeilenoperationen 
+% angewandt:
+% \begin{align*}
+% \det \boldsymbol B = &\det \begin{pmatrix} 
+% -2 & 3 & -7 & 8 & 3 \\ 
+% 3 & -4 & 1 & 6 & 0 \\ 
+% 0 & 0 & -3 & -2 & 9 \\ 
+% 0 & 0 & 0 & 5 & 3 \\ 
+% 0 & 0 & 0 & 4 & 2
+% \end{pmatrix}\text{ ( $Z_2 \cdot 2$, $Z_5\cdot 5$)}\\
+%  =& \frac 12 \cdot \frac 15 \cdot \det \begin{pmatrix}
+%   -2 &   3 &  -7 &   8 &   3 \\
+%    6 &  -8 &   2 &  12 &   0 \\
+%    0 &   0 &  -3 &  -2 &   9 \\
+%    0 &   0 &   0 &   5 &   3 \\
+%    0 &   0 &   0 &  20 &  10 
+% \end{pmatrix}\text{ ( $Z_2+3\cdot Z_1$, $Z_5-4\cdot Z_4$)}\\
+%  =& \frac 1{10} \cdot \det \begin{pmatrix}
+%   -2 &   3 &  -7 &   8 &   3 \\
+%    0 &   1 & -19 &  36 &   9 \\
+%    0 &   0 &  -3 &  -2 &   9 \\
+%    0 &   0 &   0 &   5 &   3 \\
+%    0 &   0 &   0 &   0 &  -2 
+% \end{pmatrix}\\
+% =&\frac 1{10}\cdot (-2)\cdot 1 \cdot (-3)\cdot 5 \cdot (-2) = -6
+% \end{align*}
+Die Matrix $\boldsymbol B$ ist eine Block-Dreiecksmatrix:
+\begin{align*} \det(\boldsymbol B) &= \begin{pmatrix}
+-2 & 3 & -7 & 8 & \;3 \\ 
+3 & -4 & 1 & 6 & 0 \\ 
+0 & 0 & -3 & -2 & 9 \\ 
+0 & 0 & 0 & 5 & 3 \\ 
+0 & 0 & 0 & 4 & 2\end{pmatrix}
+= \det \begin{pmatrix}-2 & 3\\ 3 & -4\end{pmatrix} \cdot \det(-3) \cdot
+\begin{pmatrix} 5 & 3 \\ 4 & 2\end{pmatrix}\\[2ex]
+& = -1 \cdot (-3)\cdot (-2) = -6\,.
+\end{align*}
+
+Die Matrix $\boldsymbol C$ ist ebenfalls eine Block-Dreiecksmatrix:
+$$\det(\boldsymbol C) = \det \begin{pmatrix} 2 & -3 \\ -1 & 4 \end{pmatrix} \cdot
+\det \begin{pmatrix} 2 & -1 \\ 2 & 3 \end{pmatrix} = 5 \cdot 8 = 40\,.$$
+
+% Ebenso werden die Matrizen $\boldsymbol C$ und $\boldsymbol D$  behandelt:
+% \begin{align*}
+% \det \boldsymbol C =& \det\begin{pmatrix}
+%    2 &  -3 &   0 &   0 \\
+%   -1 &   4 &   0 &   0 \\
+%    4 &   1 &   2 &  -1 \\
+%   -5 &   2 &   2 &   3 
+% \end{pmatrix} (S_3+2\cdot S_4)\\
+% =& \det\begin{pmatrix}
+%    2 &  -3 &   0 &   0 \\
+%   -1 &   4 &   0 &   0 \\
+%    4 &   1 &   0 &  -1 \\
+%   -5 &   2 &   8 &   3 
+% \end{pmatrix} \text{(tausche $S_3$ und $S_4$)}\\
+% =& -  \det\begin{pmatrix}
+%    2 &  -3 &   0 &   0 \\
+%   -1 &   4 &   0 &   0 \\
+%    4 &   1 &  -1 &   0 \\
+%   -5 &   2 &   3 &   8 
+% \end{pmatrix} (Z_1+2\cdot Z_2)\\
+% =& -  \det\begin{pmatrix}
+%    0 &   5 &   0 &   0 \\
+%   -1 &   4 &   0 &   0 \\
+%    4 &   1 &  -1 &   0 \\
+%   -5 &   2 &   3 &   8 
+% \end{pmatrix} \text{(tausche $S_1$ und $S_2$)}\\
+% =& \det\begin{pmatrix}
+%    5 &   0 &   0 &   0 \\
+%    4 &  -1 &   0 &   0 \\
+%    1 &   4 &  -1 &   0 \\
+%    2 &  -5 &   3 &   8 
+% \end{pmatrix} \\
+% =&5\cdot (-1)\cdot (-1)\cdot 8=40
+% \end{align*}
+
+Durch passende Zeilen- und Spaltenvertauschungen kann die Matrix $\boldsymbol D$
+auf Blockdreiecksstruktur gebracht werden.
+\begin{align*}
+\det \boldsymbol D =&\det\begin{pmatrix}
+   3 &   0 &   0 &   4 \\
+   5 &   2 &   3 &   2 \\
+   2 &   5 &   7 &   7 \\
+   4 &   0 &   0 &   6 
+\end{pmatrix} \text{(tausche $Z_1$ und $Z_3$)}\\
+=& - \det\begin{pmatrix}
+   2 &   5 &   7 &   7 \\
+   5 &   2 &   3 &   2 \\
+   3 &   0 &   0 &   4 \\
+   4 &   0 &   0 &   6 
+\end{pmatrix} \text{(tausche $S_1$ und $S_3$)}\\
+=&   \det\begin{pmatrix}
+   7 &   5 &   2 &   7 \\
+   3 &   2 &   5 &   2 \\
+   0 &   0 &   3 &   4 \\
+   0 &   0 &   4 &   6 
+\end{pmatrix} = -1 \cdot 2 = -2 \,.
+% \text{($S_1 \cdot 2$ und $S_3 \cdot 3$)}\\
+% =& \frac 12\cdot \frac 13  \det\begin{pmatrix}
+%   14 &   5 &   6 &   7 \\
+%    6 &   2 &  15 &   2 \\
+%    0 &   0 &   9 &   4 \\
+%    0 &   0 &  12 &   6 
+% \end{pmatrix} \text{($S_1-3\cdot S_2$, $S_3 -2\cdot S_4$)}\\
+% =& \frac 12\cdot \frac 13  \det\begin{pmatrix}
+%   -1 &   5 &  -8 &   7 \\
+%    0 &   2 &  11 &   2 \\
+%    0 &   0 &   1 &   4 \\
+%    0 &   0 &   0 &   6 
+% \end{pmatrix} \text{($S_1-3\cdot S_2$, $S_3-2\cdot S_4$)}\\
+% =&\frac 16 \cdot (-1)\cdot 2 \cdot 1\cdot 6 = -2
+\end{align*}
+
+}
+
+\ErgebnisC{linalg_Detn_Lapl_001}
+{
+$\det \boldsymbol A = -160$, $\det \boldsymbol B = -6$, $\det \boldsymbol C = 40$, $\det \boldsymbol D = -2$
+}

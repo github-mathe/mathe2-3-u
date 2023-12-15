@@ -1,0 +1,225 @@
+\Aufgabe[e]{Matrix-Operationen und Skalarprodukt}{
+Gegeben seien die folgenden Matrizen und Vektoren
+$$
+\boldsymbol A =
+\begin{pmatrix}
+-1 & 2 \\
+1  & 3 
+\end{pmatrix}\,, \quad
+%
+\boldsymbol B =
+\begin{pmatrix}
+1 & 0 & 1\\
+0 & 2 & 1\\
+\end{pmatrix}\,, \quad
+%
+\boldsymbol C =
+\frac{1}{\sqrt{5}}\begin{pmatrix}
+1 & -2\\
+2 & 1
+\end{pmatrix}\,,
+$$
+
+$$
+\boldsymbol d =
+\begin{pmatrix}
+ 1\\
+ 2
+\end{pmatrix}\,, \quad
+%
+\boldsymbol e =
+\begin{pmatrix}
+-1\\
+3
+\end{pmatrix}\,, \quad
+%
+\boldsymbol f =
+\begin{pmatrix}
+ 1\\
+ 3\\
+-1
+\end{pmatrix}\,.
+$$
+
+\begin{abc}
+\item Berechnen Sie die folgenden Ausdrücke
+$\boldsymbol A \boldsymbol B$, \
+$\boldsymbol A - \boldsymbol B$, \
+$\boldsymbol B^T \boldsymbol A$, \
+$\boldsymbol A \boldsymbol B^T$, \
+$\boldsymbol d^T\, \boldsymbol A$, \
+$\boldsymbol B\, \boldsymbol f$, \
+$\boldsymbol C^T \boldsymbol C$, \
+$\boldsymbol e^T\, \boldsymbol f$, \
+$\boldsymbol e\, \boldsymbol f^T$, \
+$\boldsymbol e\, \boldsymbol f^T + \boldsymbol B $.
+Begründen Sie Ihre Antwort, falls der Ausdruck nicht existiert.
+
+\item Berechnen Sie die Skalarprodukte
+$\langle \boldsymbol d, \boldsymbol e \rangle$, \
+$\langle \boldsymbol d - \boldsymbol e, \boldsymbol d \rangle$.
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+% a)
+\item
+\begin{iii}
+\item 
+$$
+\boldsymbol A \boldsymbol B =
+\begin{pmatrix}
+ -1 &  2\\
+  1 &  3
+\end{pmatrix}
+\begin{pmatrix}
+  1 &  0 &  1\\
+  0 &  2 &  1
+\end{pmatrix}
+=
+\begin{pmatrix}
+ -1 &  4 &  1\\
+  1 &  6 &  4
+\end{pmatrix}
+$$
+
+\item Die Differenz $\boldsymbol A - \boldsymbol B$ ist nicht möglich, weil die 
+      Zeilenzahl zwar übereinstimmt, die Spaltenzahl sich aber unterscheidet.
+
+\item
+$$
+\boldsymbol B^T \boldsymbol A =
+\begin{pmatrix}
+ 1  &   0\\
+ 0  &   2\\
+ 1  &   1
+\end{pmatrix}
+%
+\begin{pmatrix}
+-1  &   2\\
+ 1  &   3
+\end{pmatrix}
+=
+\begin{pmatrix}
+-1  &  2\\
+ 2  &  6\\
+ 0  &  5
+\end{pmatrix}\,.
+$$
+
+\item Das Produkt $\boldsymbol A \boldsymbol B^T$ ist nicht möglich,
+weil die Spaltenzahl von $\boldsymbol A$ nicht mit der Zeilenzahl
+von $\boldsymbol B$ übereinstimmt.
+
+\item
+$$
+\boldsymbol d^T\, \boldsymbol A =
+\begin{pmatrix}
+1 & 2
+\end{pmatrix}
+%
+\begin{pmatrix}
+-1 & 2\\
+ 1 & 3
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 8
+\end{pmatrix}\,.
+$$
+
+\item
+$$
+\boldsymbol B\, \boldsymbol f =
+\begin{pmatrix}
+1 & 0 & 1\\
+0 & 2 & 1
+\end{pmatrix}
+%
+\begin{pmatrix}
+1\\
+3\\
+-1
+\end{pmatrix}
+=
+\begin{pmatrix}
+0\\
+5
+\end{pmatrix}\,.
+$$
+
+\item
+$$
+\boldsymbol C^T \boldsymbol C =
+\frac{1}{\sqrt{5}}\begin{pmatrix}
+1 & 2\\
+-2 & 1
+\end{pmatrix}
+%
+\frac{1}{\sqrt{5}}\begin{pmatrix}
+1 & -2\\
+2 & 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}\,.
+$$
+
+\item Das Produkt $\boldsymbol e^T\, \boldsymbol f$ ist nicht möglich,
+weil die Spaltenzahl von $\boldsymbol e^T$ nicht mit der Zeilenzahl von
+ $\boldsymbol f$ übereinstimmt.
+
+\item
+$$
+\boldsymbol e\, \boldsymbol f^T =
+\begin{pmatrix}
+-1\\
+3
+\end{pmatrix}
+%
+\begin{pmatrix}
+1 & 3 & -1
+\end{pmatrix}
+=
+\begin{pmatrix}
+-1 & -3 &  1\\
+ 3 &  9 & -3
+\end{pmatrix}\,.
+$$
+
+\item
+$$
+\boldsymbol e\, \boldsymbol f^T + \boldsymbol B =
+\begin{pmatrix}
+-1 & -3 &  1\\
+ 3 &  9 & -3
+\end{pmatrix} +
+\begin{pmatrix}
+ 1 &  0 &  1\\
+ 0 &  2 &  1
+\end{pmatrix} = 
+\begin{pmatrix}
+ 0 & -3 &  2\\
+ 3 & 11 & -2
+\end{pmatrix}
+$$
+
+\end{iii}
+
+
+% b)
+\item Berechnen Sie die Skalarprodukte
+$\langle \boldsymbol d, \boldsymbol e \rangle$, \
+$\langle \boldsymbol d - \boldsymbol e, \boldsymbol d \rangle$.
+%
+\begin{iii}
+\item $\langle \boldsymbol d, \boldsymbol e \rangle = 5$.
+\item $\langle \boldsymbol d - \boldsymbol e, \boldsymbol d \rangle = 0$.
+\end{iii}
+
+\end{abc}
+
+}

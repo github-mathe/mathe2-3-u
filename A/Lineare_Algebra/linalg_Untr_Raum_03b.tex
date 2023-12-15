@@ -1,0 +1,160 @@
+\Aufgabe[e]{Lineare Unterräume (fr\"uhere Klausuraufgabe)}{
+Der Unterraum $\boldsymbol U \subset \R^3$ werde von den Vektoren
+$$
+\boldsymbol u_1 = \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix}\,,\quad
+\boldsymbol u_2 = \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}\,,\quad
+\boldsymbol u_3 = \begin{pmatrix} 4 \\-1 \\ 2 \end{pmatrix}
+$$
+aufgespannt.
+
+\begin{abc}
+\item Zeigen Sie $\dim \boldsymbol U = 2$ und bestimmen Sie den Unterraum
+  $\boldsymbol U^\perp$.
+
+\item Es sei $\boldsymbol p := (1,0,1)^\top$.
+  Geben Sie die Hessesche Normalform der Hyperebene
+  $\boldsymbol H := \boldsymbol p + \boldsymbol U$ an und bestimmen Sie den
+  Abstand der Ebene $\boldsymbol H$ vom Koordinatenursprung.
+\end{abc}
+}
+\Loesung{
+Im Folgenden bezeichnen wir mit der Abbildung $\langle \cdot, \cdot \rangle$ das
+Standard-Skalarprodukt im $\R^3$ und mit der Abbildung $\| \cdot \|$ die durch
+dieses Skalarprodukt induzierte Norm.
+
+\begin{abc}
+\item  Wir bestimmen zun\"achst $\boldsymbol U^\perp$.
+% 
+Dieser besteht aus allen Vektoren $\boldsymbol x\in \R^3$,
+die orthogonal zu $\boldsymbol u_1$, $\boldsymbol u_2$ und $\boldsymbol u_3$ sind:
+% 
+$$
+\langle \boldsymbol x, \boldsymbol u_1 \rangle = 0\,,\quad
+\langle \boldsymbol x, \boldsymbol u_2 \rangle = 0\quad \text{und}\quad
+\langle \boldsymbol x, \boldsymbol u_3 \rangle = 0\,.
+$$ 
+
+Auf dieses Gleichungssystem wird der Gau\ss{}-Algorithmus angewendet: 
+$$
+\begin{array}{r r r |r|l}
+1 &-1 & 1 & 0 & \\
+2 & 1 & 0 & 0 & -2\times \text{ 1. Zeile}\\
+4 &-1 & 2 & 0 & -4\times \text{ 1. Zeile}\\\hline
+
+1 &-1 & 1 & 0 & \\
+0 & 3 &-2 & 0 &                          \\
+0 & 3 &-2 & 0 & -        \text{ 2. Zeile}\\\hline
+
+
+1 &-1 & 1 & 0 & \\
+0 & 3 &-2 & 0 &                          \\
+0 & 0 & 0 & 0 & \\
+\end{array}\,.
+$$
+
+Die freie Wahl von $x_3=\lambda$ und R\"uckw\"artseinsetzen liefert
+$$
+\boldsymbol x = \lambda \begin{pmatrix} -1/3 \\ 2/3 \\ 1 \end{pmatrix}\,,\quad
+\lambda \in \R\,.\quad
+% 
+\text{Folglich ist}\quad
+% 
+\boldsymbol U^\perp = \operatorname{span}\left\{
+\begin{pmatrix} -1 \\ 2 \\ 3 \end{pmatrix} \right\}\,,
+$$
+und $\dim \boldsymbol U^\perp = 1$.
+
+\medskip
+Mit dem Dimensionssatz f\"ur Orthogonalkomplemente gilt
+$$
+3
+= \dim \R^3
+= \dim \boldsymbol U + \dim \boldsymbol U^\perp
+= \dim \boldsymbol U + 1\,,
+$$
+und somit folgt $\dim \boldsymbol U = 2$.
+
+\bigskip
+\textit{Alternativ} lesen wir $\dim \boldsymbol U = 2$ an der Stufenform des
+Gleichungssystems ab.
+
+% % Original-Lösungsvorschlag (Teil a) mit Kreuzprodukt:
+% % 
+% Wir testen das angegebene Vektorsystem auf lineare Unabh"angigkeit:
+% \[
+% \left(\begin{array}{@{}c@{}}
+% \boldsymbol u_1^{\top}\\
+% \boldsymbol u_2^{\top}\\
+% \boldsymbol u_3^{\top}\end{array}\right)
+% % 
+% \quad\Rightarrow \quad
+% % 
+% \begin{array}{rrr}
+% 1 & 1 & 1\\
+% 1 & 2 & 2\\
+% 5 & 1 & 1
+% \end{array}
+% % 
+% \quad\Rightarrow\quad
+% % 
+% \begin{array}{r@{\;}r@{\;}r}
+% 1 & 1 & 1\\
+% 0 & 1 &1\\
+% 0 & -4 & -4
+% \end{array}
+% % 
+% \quad\Rightarrow\quad
+% % 
+% \begin{array}{rrrr}
+% 1 & 1 & 1 & =: \boldsymbol v_1^{\top}\\
+% 0 & 1 & 1 & =: \boldsymbol v_2^{\top}\\
+% 0 & 0 & 0
+% \end{array}\,.
+% \]
+% Es folgt hieraus
+% \[
+% \boldsymbol U = \operatorname{span}\, \{\boldsymbol v_1, \boldsymbol v_2 \}
+% =  \operatorname{span}\, \left\{
+% \left(\begin{array}{@{}c@{}} 1\\ 1\\ 1\end{array}\right)\,,\,\,
+% \left(\begin{array}{@{}c@{}} 0\\ 1\\ 1\end{array}\right)
+% \right\}\,,\quad
+% % 
+% \dim \boldsymbol U = 2\,.
+% \]
+% Eine auf $\boldsymbol U$ senkrechte Richtung $\boldsymbol{n}$ erh"alt man aus
+% dem Kreuzprodukt
+% \[
+% \boldsymbol{n}
+% = \boldsymbol v_1 \times \boldsymbol v_2
+% % =\left|\begin{array}{ccc}
+% % \boldsymbol e_1&1&0\\ \boldsymbol e_2&1&1\\\boldsymbol e_3&1&1\end{array}\right|
+% = \left(\begin{array}{@{\,}r} 0\\ -1\\ 1\end{array}\right)
+% % 
+% \quad\Rightarrow\quad
+% % 
+% \boldsymbol U^{\perp}
+% = \operatorname{span}\, \{ \boldsymbol{n} \}
+% = \operatorname{span}\, \left\{
+% \left(\begin{array}{@{\,}r} 0\\ -1\\ 1\end{array}\right)
+% \right\}\,.
+% \]
+
+\item Als Normalenvektor der Hyperebene muss ein Basisvektor von $\vec U^\perp$ gew\"ahlt werden: 
+$$\vec n=\begin{pmatrix}-1\\2\\3\end{pmatrix}.$$
+Normieren f\"uhrt auf
+$$\vec n_0=\frac 1{\sqrt{14}}\begin{pmatrix} -1\\2\\3\end{pmatrix}.$$
+Damit und mit $\vec p=(1,0,1)^\top$ ist die Hessesche Normalform von $\vec H$ 
+$$\vec H=\{\vec x\in\R^3|\, \skalar{\vec x-\vec p,\vec n_0}=0\}.$$
+Da die Hessche Normalform einen normierten Normalenvektor $\vec n_0$ enth\"alt, ergibt sich der
+Abstand der Hyperebene zum Koordinatenursprung $\vec 0$ aus dem Skalarprodukt
+$$d(\vec H,\vec 0)=\left|\skalar{\vec 0-\vec p,\vec
+n_0}\right|=\left|\skalar{\begin{pmatrix}-1\\0\\-1\end{pmatrix},\frac 1{\sqrt{14}
+}\begin{pmatrix}-1\\2\\3\end{pmatrix}}\right|=\frac 2{\sqrt{14}}.
+$$
+\end{abc}
+}
+
+\ErgebnisC{linalgUntrRaum03b}
+{
+{\textbf{b)} } $d=2/\sqrt{14}$
+}

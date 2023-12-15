@@ -1,0 +1,119 @@
+% % %Lineare Abbildungen
+\Aufgabe[e]{Lineare Abbildungen}{
+\begin{abc}
+\item Seien \ $\Vek  f:\R^2\rightarrow\R^3$ \ eine lineare Abbildung und \ $\Vek  x_1=(1\,,\
+2)^\top \text{ und } \Vek x_2=(-1\,,\ 2)^\top$ \ zwei Vektoren. Die lineare Abbildung sei durch
+$$\Vek f(\Vek x_1) = \Vek y_1=\begin{pmatrix}-1\\2\\3\end{pmatrix} \text{ und } \Vek f(\Vek x_2)
+= \Vek y_2 = \begin{pmatrix} 5 \\-2\\ 1\end{pmatrix} $$
+definiert.
+
+Bestimmen Sie die Matrix \ $\Vek A$\,, die diese lineare Abbildung beschreibt.
+\item Das Kreuzprodukt f\"ur zwei Vektoren $\Vek a,\, \Vek x\in\R^3$ ist erkl\"art durch 
+$$
+\begin{pmatrix}a_1\\a_2\\a_3\end{pmatrix}\times \begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}:=
+\begin{pmatrix}a_2 x_3-a_3x_2\\a_3 x_1 - a_1 x_3\\ a_1 x_2 - a_2 x_1\end{pmatrix}.$$
+Ist die Abbildung 
+$$\Vek k_a: \, \R^3\to \R^3, \quad  \Vek x \, \mapsto \, \Vek a \times \Vek x$$
+linear?\\
+Falls ja, geben Sie die Abbildungsmatrix bez\"uglich der Standardbasis $\{\Vek e_1,\, \Vek e_2,\, \Vek
+e_3\}$ des $\R^3$ an. 
+
+\item Ist die Abbildung $\vec k_6:\R^6\rightarrow \R^3$
+$$\vec k_6(x_1,x_2,x_3,x_4,x_5,x_6):=\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}\times \begin{pmatrix}x_4\\x_5\\x_6\end{pmatrix}$$
+linear?\\
+Falls nein, wieso nicht?
+\item Zu zwei fest gegebenen Vektoren $\vec a,\, \vec b\in\R^3$ sei das Spatprodukt $\vec s_{\vec a,\vec b}:\R^3\rightarrow \R$
+definiert als
+$$\vec s_{\vec a,\vec b}(\vec x)=\skalar{(\vec a\times\vec x),\,  \vec b}.$$
+Zeigen Sie, dass diese Abbildung linear bez\"uglich des Vektors $\vec x$ ist. 
+\end{abc}
+
+
+}
+
+\Loesung{
+\begin{abc}
+\item Es gilt
+$$
+	\frac 12\left(\Vek x_1-\Vek x_2\right) = \begin{pmatrix}1\\0\end{pmatrix} = \Vek
+	e_1 \in\R^2  \text{ und }
+	\frac 14\left(\Vek x_1+\Vek x_2\right) = \begin{pmatrix} 0 \\ 1 \end{pmatrix} =  \Vek e_2\in\R^2\ .
+$$
+
+Damit ist
+$$
+	\Vek a_1 = \Vek f(\Vek e_1) = \Vek f\Big(\tfrac 12\left(\Vek x_1-\Vek x_2\right)\Big) =
+	\frac 12\Big(\Vek f(\Vek x_1)-\Vek f(\Vek x_2)\Big) =
+	\frac 12\left(\Vek y_1-\Vek y_2\right) = \begin{pmatrix} -3 \\ 2 \\ 1 \end{pmatrix}
+$$
+der erste Spaltenvektor der gesuchten Matrix und
+$$
+	\Vek a_2 = \Vek f(\Vek e_2) = \Vek f\Big(\tfrac 14\left(\Vek x_1+\Vek x_2\right)\Big) =
+	\frac 14\Big(\Vek f(\Vek x_1)+\Vek f(\Vek x_2)\Big) =
+	\frac 14\left(\Vek y_1+\Vek y_2\right) = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}
+$$
+der zweite Spaltenvektor. Die gesuchte Abbildungsmatrix ist also
+$$
+	\Vek A = \begin{pmatrix}
+	-3 & 1 \\
+	 2 & 0 \\
+	 1 & 1 \end{pmatrix} \in \R^{3,2}\ .
+$$
+
+\item Die Abbildung ist linear, denn f\"ur alle $\vec x,\,\vec y\in\R^3$ und $\lambda\in\R$ gilt
+\begin{align*}
+\vec k_a(\vec x+\lambda\vec y)=&\begin{pmatrix}
+a_2(x_3+\lambda y_3)-a_3(x_2+\lambda y_2)\\
+a_3(x_1+\lambda y_1)-a_1(x_3+\lambda y_3)\\
+a_1(x_2+\lambda y_2)-a_2(x_1+\lambda y_1)\end{pmatrix}\\
+=& \begin{pmatrix}
+a_2 x_3+\lambda a_2 y_3-a_3 x_2-\lambda a_3 y_2\\
+a_3 x_1+\lambda a_3 y_1-a_1 x_3-\lambda a_1 y_3\\
+a_1 x_2+\lambda a_1 y_2-a_2 x_1-\lambda a_2 y_1
+\end{pmatrix}
+= \begin{pmatrix}
+a_2 x_3-a_3 x_2+\lambda (a_2 y_3- a_3 y_2)\\
+a_3 x_1-a_1 x_3+\lambda (a_3 y_1- a_1 y_3)\\
+a_1 x_2-a_2 x_1+\lambda (a_1 y_2- a_2 y_1)
+\end{pmatrix}\\
+=&\begin{pmatrix}
+a_2 x_3-a_3 x_2\\
+a_3 x_1-a_1 x_3\\
+a_1 x_2-a_2 x_1
+\end{pmatrix}
++ \lambda\begin{pmatrix}
+a_2 y_3- a_3 y_2\\
+a_3 y_1- a_1 y_3\\
+a_1 y_2- a_2 y_1
+\end{pmatrix}
+= \vec k_a(\vec x ) + \lambda \vec k_a(\vec y)
+\end{align*}
+
+ und die Matrix ist gegeben durch 
+$$\Vek A_a = \begin{pmatrix} 0&-a_3&a_2\\ a_3&0&-a_1\\-a_2&a_1&0\end{pmatrix}. $$
+\item Die Abbildung $\vec k_6$ ist \textit{nicht} linear, denn mit $(x_1,x_2,x_3,x_4,x_5,x_6)=(1,0,0,\,\, 0,1,0)$ und $\lambda=2$ gilt 
+\begin{align*}
+\vec k_6(2(1,0,0,\,\, 0,1,0))=& \vec k_6(2,0,0,\,\, 0,2,0)
+= \begin{pmatrix}2\\0\\0\end{pmatrix}\times \begin{pmatrix}0\\2\\0\end{pmatrix}
+= \begin{pmatrix}0\\0\\4\end{pmatrix}\\
+\neq& \begin{pmatrix}0\\0\\2\end{pmatrix}
+= 2\, \begin{pmatrix}1\\0\\0\end{pmatrix}\times \begin{pmatrix}0\\1\\0\end{pmatrix} 
+= 2\cdot \vec k_6(1,0,0,\,\,0,1,0).
+\end{align*}
+Damit ist die Abbildung $\vec k_6$ nicht linear. 
+\item Die Abbildung $\vec s_{\vec a,\vec b}$ ist linear, denn mit $\vec x,\vec y\in\R^3$ und $\lambda\in\R$ gilt: 
+\begin{align*}
+\vec s_{\vec a,\vec b}(\vec x+\lambda\vec y)=&\skalar{(\vec a\times (\vec x+\lambda\vec y),\, \vec b}\\
+=& \skalar{\vec a\times \vec x + \lambda \vec a\times \vec y,\, \vec b}& \text{ ($\vec k_a$ ist bereits linear)}\\
+=& \skalar{\vec a\times \vec x,\vec b} + \lambda\skalar{\vec a\times \vec y,\vec b}\\
+=& \vec s_{\vec a,\vec b}(\vec x)  + \lambda \vec s_{\vec a,\vec b}(\vec y) 
+\end{align*}
+Damit ist die Abbildung $\vec s_{\vec a,\vec b}$ linear.
+\end{abc}
+}
+
+
+\ErgebnisC{AufglinalgLineAbbi001}
+{
+{\textbf{ a)}} $A=\begin{pmatrix}-3&1\\2&0\\1&1\end{pmatrix}$
+}

@@ -1,0 +1,62 @@
+% % %Grundtypen linearer Gleichungssysteme
+\Aufgabe[e]{Grundtypen linearer Gleichungssysteme}{
+	Überführen Sie die folgenden erweiterten Matrizen in ein lineares Gleichungssystem 
+	und bestimmen Sie die Lösungsmenge.
+\begin{tabbing}
+        \textbf{ a)}\quad $ \left( \begin{array}{c c c | c}
+					1 & 2 & 2 & 1 \\
+					0 & 4 & 1 & -1 \\
+					0 & 0 & 2 & 6
+				\end{array} \right)$\qquad\qquad\= \textbf{ b)}\quad $ \left( \begin{array}{c c c | c}
+					1 & 2 & 2 & 1 \\
+					0 & 4 & 1 & -1 \\
+					0 & 0 & 2 & 6 \\
+					0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0
+				\end{array} \right)$\\
+
+        \textbf{ c)}\quad	$ \left( \begin{array}{c c c c | c}
+					1 & 2 & 2 & 1 & 1 \\
+					0 & 4 & 1 & 3 & -1 \\
+					0 & 0 & 2 & 4 & 6 \\
+					0 & 0 & 0 & 0 & 0
+				\end{array} \right)$\>\textbf{ d)}\quad 
+				$ \left( \begin{array}{c c c c | c}
+					1 & 2 & 2 & 1 & 1 \\
+					0 & 4 & 1 & 3 & -1 \\
+					0 & 0 & 2 & 4 & 6 \\
+					0 & 0 & 0 & 0 & 7
+				\end{array} \right)$\\
+\end{tabbing}
+}
+\Loesung{
+	\begin{abc}
+		\item Das Gleichungssystem hat eine eindeutige L\"osung, die man durch R\"uckw\"artsaufl\"osen ausrechnet:
+			\begin{equation*}
+				x_{3}=\dfrac{6}{2}=3\,; \qquad x_{2}=\dfrac{1}{4}(-1-x_{3})=-1\,; \qquad x_{1}=1-2x_{2}-2x_{3}=-3\,,
+			\end{equation*}
+			also
+			\begin{equation*}
+				\Vek{x} = \begin{pmatrix} -3 \\ -1 \\ 3 \end{pmatrix}
+			\end{equation*}
+		\item Das Gleichungssystem hat dieselbe L\"osung wie dasjenige in a) : $\Vek{x} = \left(-3, -1, 3\right)^\top$.
+		\item Hier kann man $x_{4}$ frei w\"ahlen, also z.B. $x_{4}=t \in \R$. Durch R\"uckw\"artsaufl\"osen folgt dann
+			\begin{equation*}
+			\Arstr[2]
+				\begin{array}{l}
+					x_{3}=\dfrac{1}{2}\left(6-4x_4\right) =3-2t\,; \\
+					x_{2}=\dfrac{1}{4}(-1-x_{3} -3x_4)=-1 -\dfrac{1}{4}t\,; \\
+					x_{1}=1-2x_{2}-2x_{3} - x_4=-3 + \dfrac{7}{2}t\,,
+				\end{array}
+			\end{equation*}
+			Mit dem neuen Parameter $\tau=\dfrac{1}{4}t$ erh\"alt man dann folgende einparametrige Schar von L\"osungen:
+			\begin{equation*}
+				\cL = \left\{\begin{pmatrix} -3 \\ -1 \\ 3 \\ 0 \end{pmatrix} + \tau \begin{pmatrix} 14 \\ -1 \\ -8 \\ 4 \end{pmatrix} \Big\vert \tau \in \R \right\}.
+			\end{equation*}
+		\item Die letzte Zeile des Gleichungssystems lautet $0=7$, das Gleichungssystem ist deshalb nicht l\"osbar.
+	\end{abc}
+}
+\ErgebnisC{AufglinAlg003}
+{
+zu a) $x=(-3;-1;3)^T$
+}

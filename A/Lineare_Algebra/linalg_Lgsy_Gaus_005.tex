@@ -1,0 +1,114 @@
+\Aufgabe[e]{LGS mit Gau\ss{}'schem Algorithmus}{
+\begin{abc}
+\item Bestimmen Sie die L\"osungen des linearen Gleichungssystems
+\begin{equation*}
+	\begin{pmatrix}
+				&   & 3x_2	& + & 2x_3 \\
+		5x_1	&   & 		& + & 6x_3 \\
+		-2x_1	& + & x_2	& - & 2x_3 
+	\end{pmatrix}
+	=
+	\begin{pmatrix}	3 \\ 13 \\ -4 \end{pmatrix}\,.
+\end{equation*}
+
+\item Bestimmen Sie die L\"osungen des linearen Gleichungssystems
+\begin{equation*}
+	\begin{pmatrix}
+				&   & 3y_2	& + & 2y_3 \\
+		  5y_1	&   & 		& + & 6y_3 \\
+		-2y_1	& + & y_2	& - & 2y_3 
+	\end{pmatrix}
+	=
+	\begin{pmatrix}	0 \\ -\frac{13}{2} \\ 3 \end{pmatrix}\,.
+\end{equation*}
+
+\item Bestimmen Sie die L\"osung des LGS mit Hilfe des Gau\ss 'schen Algorithmus:
+\begin{equation*}
+	\begin{pmatrix}
+				&-&	2x_2	&+&	x_3		&+&	x_4	\\
+		4x_1	&+&	3x_2	&-&	2x_3	&+&	2x_4\\
+		2x_1	&+&	x_2		& &			&+&	x_4	\\
+		6x_1	&-&	2x_2	&-&	2x_3	&-&	4x_4\\
+	\end{pmatrix}
+	=
+	\begin{pmatrix}	5 \\ -1 \\ 3 \\ 16	\end{pmatrix}.
+\end{equation*}
+\end{abc}
+}
+\Loesung{
+	\begin{itemize}
+		\item[{ a)/b)}]
+\begin{equation*}
+  \begin{array}{l | r r r | r | r | l }
+% 		\hline
+	\mathrm{I}	 & 0	& 3		& 2		& 3		& 0		& 
+	\text{Ausgangsgleichung} \\
+	\mathrm{II}	 & 5	& 0		& 6		& 13	&\frac{-13}{2}	& \\
+	\mathrm{III} & -2	& 1		& -2	& -4	& 3		& \\
+	\hline
+	\mathrm{III} & -2	& 1		& -2	& -4	& 3		& 
+	\text{Gleichungen I und III vertauscht}\\
+	\mathrm{II}	 & 5	& 0		& 6		& 13	& \frac{-13}{2}	& \\
+	\mathrm{I}	 &  0	& 3		&  2	&  3	& 0		& \\
+	\hline
+	\mathrm{III} & -2	& 1				& -2	& -4	& 3		& \\
+	\mathrm{II'} & 0	&\frac{5}{2}	& 1		& 3		& 1		& 
+	\mathrm{II'} = \mathrm{II} + \frac{5}{2} \cdot \mathrm{III}\\
+	\mathrm{I'}	 & 0	& 3				& 2		& 3		& 0		& 
+	\mathrm{I'} = \mathrm{I}\\
+	\hline
+	\mathrm{III} & -2	& 1			 & -2		  & -4			& 3			   & \\
+	\mathrm{II'} & 0	& \frac{5}{2}& 1		  & 3			& 1			   & \\
+	\mathrm{I''} & 0	& 0			 & \frac{4}{5}& \frac{-3}{5}& \frac{-6}{5} & 
+	\mathrm{I''} = \mathrm{I'} -\frac{6}{5} \cdot \mathrm{II'}\\
+% 	\hline
+  \end{array}
+\end{equation*}
+Durch R\"uckw\"artsaufl\"osen erh\"alt man die beiden L\"osungen zu
+\begin{equation*}
+\boldsymbol{x} = \bigg(\dfrac{7}{2}\,,\, \dfrac{3}{2}\,,\, \dfrac{-3}{4} \bigg)^\top
+\qquad \text{und} \qquad
+\boldsymbol{y} = \bigg( \dfrac{1}{2}\,,\, 1\,,\, \dfrac{-3}{2} \bigg)^\top
+\end{equation*}
+
+\item[{ c)}] Der Gau\ss-Algorithmus ergibt: 
+$$\begin{array}{rrrr|r|l}
+       0 &     -2 &      1 &      1 &      5 &\text{tausche 1. und 3. Zeile}\\ 
+       4 &      3 &     -2 &      2 &     -1 &\text{- 2 $\times$ 3. Zeile  }\\ 
+       2 &      1 &      0 &      1 &      3 &\text{                       }\\ 
+       6 &     -2 &     -2 &     -4 &     16 &\text{- 3 $\times$ 3. Zeile  }\\\hline
+
+       2 &      1 &      0 &      1 &      3 &\text{                       }\\ 
+       0 &      1 &     -2 &      0 &     -7 &\text{                       }\\ 
+       0 &     -2 &      1 &      1 &      5 &\text{+ 2 $\times$ 2. Zeile  }\\ 
+       0 &     -5 &     -2 &     -7 &      7 &\text{+ 5 $\times$ 2. Zeile  }\\\hline
+
+       2 &      1 &      0 &      1 &      3 &\text{                       }\\ 
+       0 &      1 &     -2 &      0 &     -7 &\text{                       }\\ 
+       0 &      0 &     -3 &      1 &     -9 &\text{                       }\\ 
+       0 &      0 &    -12 &     -7 &    -28 &\text{- 4 $\times$ 3. Zeile  }\\\hline
+
+       2 &      1 &      0 &      1 &      3 &\text{                       }\\ 
+       0 &      1 &     -2 &      0 &     -7 &\text{                       }\\ 
+       0 &      0 &     -3 &      1 &     -9 &\text{                       }\\ 
+       0 &      0 &      0 &    -11 &      8 &\text{                       }\\
+%        \hline
+\end{array}$$
+R\"uckw\"artseinsetzen ergibt 
+\begin{align*}
+&&x_4=&-\frac 8{11}\,\Rightarrow\, x_3=-\frac 1 3\left( -9+\frac 8{11}\right) =\frac{91}{33}\\
+\Rightarrow&&x_2=&-7+2\cdot \frac{91}{33}=-\frac{49}{33}\,\Rightarrow\, x_1 = \frac 12\left( 3 + \frac{49}{33}+\frac 8{11}\right) = \frac{86}{33}, 
+\end{align*}
+also $\boldsymbol{x} =
+\dfrac{1}{33} \bigg( 86\,,\, -49\,,\, 91\,,\, -24\bigg)^\top$.
+
+\end{itemize}
+}
+
+\ErgebnisC{linalg_Lgsy_Gaus_005}
+{
+\textbf{a)}\;$\boldsymbol{x} = \bigg(\dfrac{7}{2}\,,\, \dfrac{3}{2}\,,\, \dfrac{-3}{4} \bigg)^\top\,.$
+\textbf{b)}\;$\boldsymbol{y} = \bigg( \dfrac{1}{2}\,,\, 1\,,\, \dfrac{-3}{2} \bigg)^\top\,.$
+\textbf{c)}\;$\boldsymbol{x} =
+\dfrac{1}{33} \bigg( 86\,,\, -49\,,\, 91\,,\, -24\bigg)^\top\,.$
+}

@@ -1,0 +1,107 @@
+\Aufgabe[e]{Vektor- und Matrix-Normen}{
+\begin{abc}
+\item Bestimmen Sie die drei Standard-Normen
+(Betragssummen-, Euklidische- und Maximums-Norm) der Vektoren:
+$$
+\boldsymbol{a} = \begin{pmatrix}	3 \\ -4 \\ 12	\end{pmatrix}\,,\quad
+% 
+\boldsymbol{b} = \begin{pmatrix}	1 \\ 1 \\ 1	\end{pmatrix}\,.
+$$
+
+\item Bestimmen Sie die drei Standard-Normen\\
+(Spaltensummen-, Zeilensummen-, Frobenius-Norm) der Matrizen:
+$$
+\boldsymbol{C} = \begin{pmatrix}	2 & 0 \\ -4 & 3	\end{pmatrix}\,,\quad
+% 
+\boldsymbol{D} = \begin{pmatrix}	3 & 0 \\ 0 & 3	\end{pmatrix}\,.
+$$
+% \item Sind die Vektoren 
+% $$\vec a=\begin{pmatrix} 1\\2\\3\end{pmatrix},\, \vec b=\begin{pmatrix}2\\0\\2\end{pmatrix},\, \vec
+% c=\begin{pmatrix}1\\1\\0\end{pmatrix}$$
+% linear unabh\"angig?
+% \item W\"ahlen Sie den Parameter $t\in\R$ so, dass die Vektoren $\vec a$, $\vec b$ und $\vec
+% d_t=\begin{pmatrix}1\\t\\2\end{pmatrix}$ linear abh\"angig sind. 
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item 
+$$
+\|\boldsymbol{a}\|_{1} = 19\,,\quad
+\|\boldsymbol{a}\|_{2} = 13\,,\quad
+\|\boldsymbol{a}\|_{\infty} = 12\,.
+$$
+$$
+\|\boldsymbol{b}\|_{1} = 3\,,\quad
+\|\boldsymbol{b}\|_{2} = \sqrt{3}\,,\quad
+\|\boldsymbol{b}\|_{\infty} = 1\,.
+$$
+
+\item 
+$$
+\|\boldsymbol{C}\|_{1} = 6\,,\quad
+\|\boldsymbol{C}\|_{\infty} = 7\,,\quad
+\|\boldsymbol{C}\|_{F} = \sqrt{29}\,.\quad
+% \|\boldsymbol{C}\|_{G} = 8\,.
+$$
+$$
+\|\boldsymbol{D}\|_{1} = \|\boldsymbol{D}\|_{\infty} = 3\,,\quad
+\|\boldsymbol{D}\|_{F} = 3\sqrt{2}\,.%\quad
+% \|\boldsymbol{D}\|_{G} = 6\,.
+$$
+% \item Der Gauß-Algorithmus f\"ur die drei Vektoren ($\vec a^\top,\, \vec b^\top,\, \vec c^\top$ in
+% den Zeilen) ergibt: 
+% $$\begin{array}{rrr|l}
+% 1   &   2   &   3   &\text{                  }\\
+% 2   &   0   &   2   &-2\times \text{ 1. Zeile                 }\\
+% 1   &   1   &   0   &- \text{ 1. Zeile                  }\\\hline
+% 
+% 1   &   2   &   3   &\text{                  }\\
+% 0   &  -4   &  -4   &                               \\
+% 0   &  -1   &  -3   &-1/4\cdot \text{ 2. Zeile          }\\\hline
+% 
+% 1   &   2   &   3   &\text{                  }\\
+% 0   &   -4  &  -4   &                                          \\
+% 0   &   0   &  -2   &\\
+% \end{array}$$
+% Es verbleiben drei Zeilen in der Zeilensufenform , damit sind die drei Vektoren linear abh\"angig. 
+% \item Wir f\"uhren den Gauß-Algorithmus f\"ur die drei Vektoren $\vec a,\, \vec b,\, \vec d_t$
+% durch: 
+% $$\begin{array}{rrr|l}
+% 1   &   2   &   3   &\text{                  }\\
+% 2   &   0   &   2   &-2\times \text{ 1. Zeile                 }\\
+% 1   &   t   &   2   &- \text{ 1. Zeile                  }\\\hline
+% 
+% 1   &   2   &   3   &\text{                  }\\
+% 0   &  -4   &  -4   &                                \\
+% 0   &  t-2  &  -1   &+(t-2)/4\cdot \text{ 2. Zeile          }\\\hline
+% 
+% 1   &   2   &   3   &\text{                  }\\
+% 0   &  -4   &  -4   &                                          \\
+% 0   &   0   &-1-(t-2)  &\\
+% \end{array}$$
+% Die Vektoren sind genau dann linear unabh\"angig, wenn die letzte Zeile der Zeilenstufenform
+% verschwindet, wenn also gilt: 
+% $$-1-(t-2)=0\,\Leftrightarrow\, t=1.$$
+\end{abc}
+}
+
+\ErgebnisC{linalg_VeMa_Norm_011}
+{
+$\|\boldsymbol{a}\|_{1} = 19\,,\,\,
+\|\boldsymbol{a}\|_{2} = 13\,,\,\,
+\|\boldsymbol{a}\|_{\infty} = 12\,.$
+
+$\|\boldsymbol{b}\|_{1} = 3\,,\,\,
+\|\boldsymbol{b}\|_{2} = \sqrt{3}\,,\,\,
+\|\boldsymbol{b}\|_{\infty} = 1\,.$
+
+$\|\boldsymbol{C}\|_{1} = 6\,,\,\,
+\|\boldsymbol{C}\|_{\infty} = 7\,,\,\,
+\|\boldsymbol{C}\|_{F} = \sqrt{29}\,.$%,\,\,
+% \|\boldsymbol{C}\|_{G} = 8\,.$
+
+$\|\boldsymbol{D}\|_{1} = \|\boldsymbol{D}\|_{\infty} = 3\,,\,\,
+\|\boldsymbol{D}\|_{F} = 3\sqrt{2}\,.$%\,\,
+% \|\boldsymbol{D}\|_{G} = 6\,.$
+}

@@ -1,0 +1,67 @@
+\Aufgabe[e]{Vektoren}{
+\begin{minipage}[c]{0.55\linewidth}
+Ein Gewicht sei an zwei Seilen angeh\"angt.\newline
+Bestimmen Sie zeichnerisch und rechnerisch die Kr\"afte in den Seilen.\newline
+
+\smallskip
+Dazu m\"ussen Sie den Kraftvektor in zwei Komponenten zerlegen,
+die in die Richtung der Seile zeigen,
+da Seile nur Zugkr\"afte \"ubertragen k\"onnen.
+\end{minipage}
+% 
+\begin{minipage}[c]{0.45\linewidth}
+\begin{pspicture}(-3,-3)(3,3)
+\psline[fillcolor=lightgray,fillstyle=solid,linecolor=lightgray](-3,-3)(-2.6,-3)(-2.6,3)(-3,3)(-3,-3)
+\psline(-2.6,-3)(-2.6,3)
+\psline[fillcolor=lightgray, fillstyle=solid, linecolor=lightgray](3,-3)(2.6,-3)(2.6,3)(3,3)(3,-3)
+\psline(2.6,-3)(2.6,3)
+\psarc(0,0){1.0}{150}{45}
+\psline(-2.6,1.7)(0,0)(2.6,2.6)
+\psline[linewidth=3pt]{->}(0,0)(0,-3)
+\put(-.8,-.4){$120^\circ$}
+\put(.2,-.2){$135^\circ$}
+\put(.1,-1.4){$F=65$}
+\end{pspicture}
+\end{minipage}
+}
+\Loesung{
+\begin{minipage}{0.55\linewidth}
+Aus der Skizze kann man abmessen:
+\begin{equation*}
+k_1 \approx 48 \quad \text{und} \quad k_2 \approx 58\,.
+\end{equation*}
+
+Die rechnerische L\"osung kann \"uber den Sinussatz erfolgen
+\begin{equation*}
+\begin{array}{cl}
+ & \dfrac{\sin(75^\circ)}{65}
+= \dfrac{\sin(45^\circ)}{k_1}
+= \dfrac{\sin(60^\circ)}{k_2} \\[3ex]
+% 
+\Rightarrow &
+k_1 \approx 47.58 \quad \text{und} \quad k_2 \approx 58.28 \,.
+\end{array}
+\end{equation*}
+\end{minipage}
+% 
+\begin{minipage}{0.45\linewidth}
+\begin{pspicture}(-1,-3)(3,0)
+\psline[linewidth=3pt]{->}(0,0)(0,-3)
+\psline[linewidth=2pt]{->}(0,0)(2.196,-1.098)
+\psline[linewidth=2pt]{->}(2.196,-1.098)(0,-3)
+\put(.1,-1.4){$F=65$}
+\put(1.1,-.4){$k_1\approx 48$}
+\put(1.2,-2.4){$k_2\approx 58$}
+\psarc(0,0){1.0}{-90}{-30}
+\psarc(0,-3){1.0}{45}{90}
+\put(.1,-.7){$60^\circ$}
+\put(.1,-2.5){$45^\circ$}
+\end{pspicture}
+
+\end{minipage}
+}
+
+\ErgebnisC{linalg_Vekt_Krft_010}
+{
+$k_1 \approx 47.58 \quad \text{und} \quad k_2 \approx 58.28 \,.$
+}

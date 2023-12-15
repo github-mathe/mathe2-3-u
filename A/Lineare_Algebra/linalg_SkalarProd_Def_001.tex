@@ -1,0 +1,118 @@
+\Aufgabe[e]{Skalarprodukte}{
+Gegeben sind die folgenden \glqq{}Produkte\grqq{}
+für $\boldsymbol x = (x_1, x_2)^\top \in \R^2$\,,\,
+$\boldsymbol y = (y_1, y_2)^\top \in \R^2$\,,\,
+$\boldsymbol u = (u_1, u_2, u_3)^\top \in \R^3$\,,\,
+$\boldsymbol v = (v_1, v_2, v_3)^\top \in \R^3$\,:
+$$
+\begin{array}{lcl}
+% \langle \cdot, \cdot \rangle &:=& 4\,,\\[1ex]
+% 
+\langle \boldsymbol x, \boldsymbol y \rangle_a &:=& x_2\, y_2 + x_1\, y_1\,,\\[1ex]
+\langle \boldsymbol x, \boldsymbol y \rangle_b &:=& x_1\, y_1 - x_2\, y_2\,,\\[1ex]
+\langle \boldsymbol x, \boldsymbol y \rangle_c &:=& x_1\, y_1 + 3\, x_2\, y_2\,,\\[1ex]
+\langle \boldsymbol x, \boldsymbol y \rangle_d &:=& x_1^2 + (2\, y_2)^2\,,\\[1ex]
+% 
+\langle \boldsymbol u, \boldsymbol v \rangle_e &:=& u_1\, v_1 + u_3\, v_3\,.\\[1ex]
+\end{array}
+$$
+
+Welche der \glqq{}Produkte\grqq{} definieren Skalarprodukte?
+Begründen Sie Ihre Aussage durch das Überprüfen der Definitionen eines Skalarproduktes,
+beziehungsweise geben Sie ein Beispiel an, welches zeigt, dass eine Bedingung
+verletzt ist.
+}
+\Loesung{
+Ein Skalarprodukt in einem $\R$-Vektorraum $\vec V$ muss die folgenden drei Bedingungen erf\"ullen: 
+\begin{iii}
+\item Positive Definitheit: F\"ur alle $\vec x\in\vec V$ gilt $\skalar{\vec x,\vec x}\geq 0$ und
+$\skalar{\vec x,\vec x}=0$ nur f\"ur $\vec x=\vec 0$. 
+\item Bilinearit\"at: F\"ur alle $\vec x,\vec y,\vec z\in\vec V$ und $\lambda,\mu \in\R$ gilt
+$$\skalar{\lambda \vec x +\mu \vec y,\vec z}=\lambda\skalar{\vec x,\vec z}+\mu \skalar{\vec y,\vec z}.$$
+\item Symmetrie: F\"ur alle $\vec x,\vec y\in\vec V$ gilt $\skalar{\vec x,\vec y}=\skalar{\vec
+y,\vec x}$. 
+\end{iii}
+\begin{abc}
+\item Es handelt sich um ein Skalarprodukt. Die drei Bedingungen k\"onnen nachgepr\"uft werden:
+\begin{iii}
+\item Es gilt hier f\"ur beliebige $\vec x\in\R^2$: 
+$\langle \boldsymbol x, \boldsymbol x \rangle_a =  x_2^2 +  x_1^2 \geq 0$
+wobei Gleichheit nur f\"ur $\vec x=\vec 0$ gilt. 
+\item Für beliebige $\boldsymbol x, \boldsymbol y \in \R^2$,
+$\boldsymbol z = (z_1, z_2)^\top \in \R^2$,
+und $\lambda,\mu  \in \R$ gilt
+\begin{align*}
+\langle  \lambda\, \boldsymbol x + \mu\, \boldsymbol y, \boldsymbol z \rangle_a
+&= (\lambda\, x_2 + \mu\, y_2)z_2 + (\lambda\, x_1 + \mu\, y_1)z_1\, \\[1ex]
+% 
+&= \lambda\, (x_2\, z_2 + x_1\, z_1) + \mu\, (y_2\, z_2 +y_1\, z_1)\, \\[1ex]
+% 
+&= \lambda\, \langle \boldsymbol x, \boldsymbol z \rangle_a
++ \mu\, \langle \boldsymbol y, \boldsymbol z \rangle_a\,.
+\end{align*}
+\item Es gilt hier
+$\langle \boldsymbol x, \boldsymbol y \rangle_a
+= x_2\, y_2 + x_1\, y_1
+= y_2\, x_2 + y_1\, x_1
+= \langle \boldsymbol y, \boldsymbol x \rangle_a$\,. 
+\end{iii}
+\item Es handelt sich nicht um ein Skalarprodukt, da die Bedingung der Definitheit nicht erf\"ullt
+ist. Etwa f\"ur $\vec x=(0,1)^\top$ gilt 
+$$\skalar{\vec x,\vec x}_b=-1\cdot 1<0$$ 
+im Widerspruch zur Bedingung \textbf{i) }. 
+\item $\langle \boldsymbol x, \boldsymbol y \rangle_c := x_1\, y_1 + 3\, x_2\, y_2$
+ist ein Skalarprodukt. Das \"Uberpr\"ufen der Bedingungen ergibt:
+\begin{iii}
+\item Es gilt hier
+$\langle \boldsymbol x, \boldsymbol x \rangle_c =  x_1^2 + 3\, x_2^2 \geq 0$
+f\"ur beliebige $\vec x\in\R^2$ und $\skalar{\vec x,\vec x}_c=0$ nur f\"ur $\vec x=\vec 0$. 
+
+\item Für beliebige $\boldsymbol x, \boldsymbol y \in \R^2$,
+$\boldsymbol z = (z_1, z_2)^\top \in \R^2$,
+und Skalare $\lambda, \mu \in \R$ gilt
+% 
+\begin{align*}
+\langle \lambda\, \boldsymbol x + \mu\, \boldsymbol y, \boldsymbol z \rangle_c
+% 
+&= (\lambda\, x_1\, + \mu\, y_1) z_1 + 3\, (\lambda\, x_2 + \, \mu\, y_2) z_2\,, \\[1ex]
+% 
+&= \lambda\, (x_1\, z_1 + 3\, x_2\, z_2) + \mu\, (y_1\, z_1 + 3\, y_2\, z_2)\,, \\[1ex]
+% 
+&= \lambda\, \langle \boldsymbol x, \boldsymbol z \rangle_c
++ \mu\, \langle \boldsymbol y, \boldsymbol z \rangle_c\,.
+\end{align*}
+\item Es gilt hier
+$\langle \boldsymbol x, \boldsymbol y \rangle_c
+= x_1\, y_1 + 3\, x_2\, y_2
+= y_1\, x_1 + 3\, y_2\, x_2
+= \langle \boldsymbol y, \boldsymbol x \rangle_c\,.$
+\end{iii}
+\item 
+$\langle \boldsymbol x, \boldsymbol y \rangle_d := x_1^2 + (2\, y_2)^2$ ist nicht symmetrisch, zum Beispiel f\"ur $\boldsymbol x = (1,0)^\top$ und $\boldsymbol y = (2,0)^\top$,
+erh\"alt man
+$$
+\left\langle \begin{pmatrix} 1 \\ 0\end{pmatrix}, \begin{pmatrix} 2 \\ 0\end{pmatrix}
+  \right\rangle_d
+= 1 \neq 4 =
+\left\langle \begin{pmatrix} 2 \\ 0\end{pmatrix}, \begin{pmatrix} 1 \\ 0\end{pmatrix}
+  \right\rangle_d\,.
+$$
+Desweiteren ist $\skalar{\cdot,\cdot}_d$ auch nicht bilinear, etwa f\"ur $\lambda=\mu=1$ und $\vec
+x=\vec y=\vec z=(1,0)^\top$ gilt:
+$$\skalar{\lambda\vec x + \mu\vec y,\vec z}_d=2^2+(2\cdot 0)^2=4\neq 2=1\skalar{\vec x,\vec
+z}_d+1\skalar{\vec y,\vec z}_d.$$
+
+\item $\langle \boldsymbol u, \boldsymbol v \rangle_e := u_1\, v_1 + u_3\, v_3$
+verletzt die Bedinung der positiven Definitheit.
+Zum Beispiel f\"ur $\boldsymbol u = (0, 1, 0)^\top \neq \boldsymbol 0$
+ist $\langle \boldsymbol u, \boldsymbol u \rangle_e = 0$.
+
+\smallskip
+Somit definiert $\langle \boldsymbol u, \boldsymbol v \rangle_e$ kein Skalarprodukt.
+\end{abc}
+}
+
+\ErgebnisC{linalg_SkalarProd_Def_001}
+{
+Überprüfen Sie die Bedingungen für ein Skalarprodukt im $\R^n$\,.
+}

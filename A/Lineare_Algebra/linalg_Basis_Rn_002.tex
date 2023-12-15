@@ -1,0 +1,37 @@
+\Aufgabe[e]{Basis des $\R^5$}{
+Im $\R^5$ sind die Vektoren
+$$
+\boldsymbol c_1=\begin{pmatrix} 1\\2\\3\\5\\0\end{pmatrix}\,,\,\,
+\boldsymbol c_2=\begin{pmatrix} 0\\3\\5\\7\\8\end{pmatrix}\,,\,\,
+\boldsymbol c_3=\begin{pmatrix} 0\\0\\4\\-9\\3\end{pmatrix}
+$$
+gegeben.
+
+\begin{abc}
+\item Sind die Vektoren der Menge
+$\mathcal C = \{ \boldsymbol c_1, \boldsymbol c_2, \boldsymbol c_3 \}$
+linear unabh\"angig?
+
+\item Erg\"anzen Sie $\mathcal C$ zu einer Basis des $\R^5$.
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item An der Stufenstruktur der drei Vektoren ($\vec c_2$ und $\vec c_3$ haben keinen $x_1$-Anteil,
+$\vec c_3$ hat keinen $x_2$-Anteil.) kann man erkennen, dass die Vektoren linear unabh\"angig sind:
+$$\left( \begin{array}{r}
+1\\2\\3\\5\\0\end{array}\right),
+\left(\begin{array}{r} \cellcolor{lightgray}0\\3\\5\\7\\8\end{array}\right),
+\left(\begin{array}{r} \cellcolor{lightgray}0\\\cellcolor{lightgray}0\\4\\-9\\3\end{array}\right)
+$$
+\item  Unter Fortsetzung dieser Stufenstruktur kann man 
+$$\vec c_4 = \left(\begin{array}{r}\cellcolor{lightgray}0\\\cellcolor{lightgray}0\\\cellcolor{lightgray}0\\1\\0\end{array}\right),\, \vec c_5=\left(\begin{array}{r}\cellcolor{lightgray}0\\\cellcolor{lightgray}0\\\cellcolor{lightgray}0\\\cellcolor{lightgray}0\\1\end{array}\right)$$
+erg\"anzen, um eine Basis zu erhalten. 
+\end{abc}
+}
+
+\ErgebnisC{linalg_Basis_Rn_002}
+{
+\textbf{Zu b)} z.B. $\boldsymbol c_4 = \boldsymbol e_4$ und
+$\boldsymbol c_5 = \boldsymbol e_5$\,.
+}

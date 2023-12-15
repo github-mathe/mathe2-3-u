@@ -1,0 +1,99 @@
+\Aufgabe[e]{L\"osungen eines LGS in Abh\"angigkeit von einem Parameter}{
+Gegeben ist das inhomogene lineare Gleichungssystem
+$$
+\begin{array}{rcrcrcrcr}
+x_1 & + & 2 x_2 & + &   3 x_3 & - &     x_4 & = & 1\,,\\
+	&   &   x_2 &   &         & + &     x_4 & = & 0\,,\\
+	&   &       &   &     x_3 & + & a\, x_4 & = & 2\,,\\
+	&   &       &   & a\, x_3 & + &     x_4 & = & 2\,,\\
+\end{array}
+$$
+mit $a\in \R$.
+
+\begin{abc}
+\item F\"ur welche Werte von $a \in \R$ hat das zugehörige \textbf{homogene}
+lineare Gleichungssystem genau eine, keine oder mehrere L\"osungen?
+
+\item F\"ur welche Werte von $a \in \R$ hat das gegebene \textbf{inhomogene}
+lineare Gleichungssystem genau eine, keine oder mehrere L\"osungen?
+
+\item Geben Sie die Lösungen
+  $\boldsymbol x_1 \in \R^4$ des zugehörigen \textbf{homogenen} Systems und
+  $\boldsymbol x_2 \in \R^4$ des gegebenen \textbf{inhomogenen} Systems
+für $a=0$ an.
+
+\item Geben Sie die Lösungsmengen
+  $\mathbb{L}_1$ des zugehörigen \textbf{homogenen} Systems und
+  $\mathbb{L}_2$ des gegebenen \textbf{inhomogenen} Systems
+für $a=1$ an.
+
+\end{abc}
+}
+\Loesung{
+Wir bestimmen eine $a$-parameterabhängige Stufenform der gegebenen
+linearen Glei\-chungssysteme (homogenes LGS und inhomogenes LGS).
+Es ist ein Gau\ss{}-Schritt durch\-zu\-f\"uh\-ren.
+
+$$
+\begin{array}{rrrl|r|l|}
+1 & 2 & 3 & -1 &  0 & 1\\[1ex]
+0 & 1 & 0 &  1 &  0 & 0\\[1ex]
+0 & 0 & 1 &  a &  0 & 2\\[1ex]
+0 & 0 & a &  1 &  0 & 2\\[1ex]
+\hline
+\multicolumn{2}{c}{}\\
+1 & 2 & 3 & -1 &  0 & 1\\[1ex]
+0 & 1 & 0 &  1 &  0 & 0\\[1ex]
+0 & 0 & 1 &  a &  0 & 2\\[1ex]
+0 & 0 & 0 & 1-a^2 & 0 & 2-2a\\[1ex]
+\hline
+\end{array}
+$$
+
+\medskip
+Das Gleichungssystem ist für alle rechten Seiten genau dann eindeutig lösbar,
+wenn
+\vskip-2ex
+$$
+1-a^2 \stackrel{!}{\neq} 0\quad \Leftrightarrow\quad
+a \neq 1 \quad \text{und}\quad a \neq -1\,,
+$$
+anderenfalls hängt die Lösbarkeit von der Inhomogenität (rechten Seite) ab.
+
+
+\bigskip
+\textbf{a)} Das \textbf{homogene} Gleichungssystem
+ist für $a=1$ oder $a=-1$ mehrdeutig lösbar,
+da sich die letzte Zeile der Stufenform dann als Nullzeile ergibt, und
+ist für alle $a \in \R \setminus \{ -1, 1 \}$ eindeutig lösbar,
+da alle Diagonalelemente der Stufenform verschieden von Null sind.
+
+
+\medskip
+\textbf{b)} Das \textbf{inhomogene} Gleichungssystem
+ist für $a = a_1 := 1$ mehrdeutig lösbar da $2 - 2 a_1 = 0 = 1 - a_1^2$,
+ist für $a = a_2 := -1$ nicht lösbar da $2 - 2 a_2 = 4 \neq 0 = 1 - a_2^2$, und
+ist für alle $a \in \R \setminus \{ -1, 1 \}$ eindeutig lösbar.
+
+\smallskip
+\textbf{c)} Für $a=0$\, ist $\boldsymbol x_1 = (0, 0, 0, 0)^\top$ und
+  $\boldsymbol x_2 = (1, -2, 2, 2)^\top$\,.
+
+\smallskip
+\textbf{d)} Für $a=1$\, gilt
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l}
+\mathbb{L}_1 &=& \Big\{\quad \boldsymbol x \in \R^4 \quad \Big| \quad
+\boldsymbol x = t\, (6, -1, -1, 1)^\top\,,\quad \forall t \in \R \quad \Big\}\,,\\[3ex]
+% 
+\quad \mathbb{L}_2 &=& \Big\{ \quad \boldsymbol x \in \R^4 \quad \Big| \quad
+\boldsymbol x = (-5, 0, 2, 0)^\top + t\, (6, -1, -1, 1)^\top\,,\quad
+\forall t \in \R \quad \Big\}\,.
+\end{array}
+$$
+}
+
+\ErgebnisC{linalg_Lgsy_Para_005}
+{
+Überprüfen Sie Ihre Lösungen jeweils durch eine Probe.
+}

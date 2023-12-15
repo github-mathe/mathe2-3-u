@@ -1,0 +1,71 @@
+\Aufgabe[v]{Positive Definitheit}{
+Welche der folgenden Matrizen ist positiv definit?
+\begin{align*}
+\text{ a)}&&\Vek A=&\begin{pmatrix}-1&2\\0&1\end{pmatrix},& \text{ b)}&&\Vek
+B=&\begin{pmatrix}0&-1&0\\-1&0&0\\0&0&2\end{pmatrix}\\
+\text{ c)}&&\Vek C =& \begin{pmatrix}1&1&1\\1&2&0\\1&0&3\end{pmatrix}&\text{ d)}&&\Vek
+D=&\begin{pmatrix}\lambda&1&0\\1&1+\lambda&0\\0&0&1\end{pmatrix}\quad(\lambda\in\R)
+\end{align*}
+
+}
+
+\Loesung{
+\begin{abc}
+\item $\Vek A$ ist nicht positiv definit, etwa mit $\Vek x=(1,-1)^\top$ ergibt sich: 
+$$\Vek x^\top \Vek A \Vek x = (1,-1) \begin{pmatrix}-3\\-1\end{pmatrix}=-3+1=-2<0.$$
+\item Mit $\Vek x=(1,0,0)^\top$ ergibt sich 
+$$\Vek x^\top \Vek B \Vek x = (1,0,0)\begin{pmatrix}0\\-1\\0\end{pmatrix}=0.$$
+Da aber f\"ur positive Definitheit mit allen $\Vek x\neq \Vek 0$ $\Vek x^\top\Vek B \Vek x >0$ gelten m\"usste, ist $\Vek B$
+nicht positiv definit. 
+\item Um positive Definitheit zu zeigen, muss f\"ur alle $\Vek x = (x_1,x_2,x_3)^\top\neq \Vek 0$
+$\Vek x^\top C \Vek x>0$ \"uperpr\"uft werden: 
+\begin{align*}
+\Vek x^\top \Vek C \Vek x =& x_1^2 + 2 x_2^2 + 3x_3^2 + 2 x_1x_2 + 2 x_1x_3\\
+=&\frac {x_1^2}2 + 2x_1x_2 + 2x_2^2 + \frac {x_1^2}2 + 2x_1x_3 + 2x_3^2+x_3^2\\
+=&\left( \frac {x_1}{\sqrt 2} + \sqrt 2 x_2\right)^2 + \left( \frac{x_1}{\sqrt 2} + \sqrt 2
+x_3\right)^2 + x_3^2
+\end{align*}
+Damit gilt auf jeden Fall $\Vek x^\top \Vek C \Vek x \geq 0$. Im Fall $\Vek x^\top \Vek C\Vek x=0$
+m\"ussen beide Klammern des letzten Ausruckes und $x_3^2$ gleich Null sein. Daraus folgt dann
+unmittelbar $x_3=0$ und (aus dem Verschwinden der zweiten Klammer) $x_1=0$ und damit (Verschwinden
+der ersten Klammer) auch $x_2=0$. Insgesamt ist also nur f\"ur $\Vek x=0$ auch $\Vek x^\top \Vek C \Vek x
+= 0$.\\
+Damit ist $\Vek C$ positiv definit. 
+\item Mit beliebigem $\Vek x\in\R^3$ gilt: 
+\begin{align*}
+\Vek x^\top \Vek D \Vek x =& \lambda x_1^2 + (1+\lambda)x_2^2 + x_3^2 + 2x_1x_2\\
+=&(\sqrt \lambda x_1)^2 + 2\sqrt \lambda x_1 \cdot \frac{x_2}{\sqrt\lambda} + \frac{x_2^2}{\lambda}
++ \left( 1 + \lambda - \frac 1{\lambda}\right) x_2^2 + x_3^2\\
+=&\left( \sqrt \lambda x_1 + \frac {x_2}{\sqrt \lambda}\right)^2 + x_3^2 + \frac {\lambda + \lambda^2
+-1}\lambda x_2^2
+\end{align*}
+\begin{iii}
+\item Falls $\frac{\lambda^2+\lambda-1}{\lambda}>0$, ist $\Vek x^\top \Vek D \Vek x\geq 0$ und nur f\"ur
+$\Vek x=0$ ist $\Vek x^\top \Vek D\Vek x=0$, also ist $\Vek D$ positiv definit. 
+\item Falls $\frac{\lambda^2+\lambda-1}{\lambda}<0$, ist f\"ur $\Vek x=(-1/\sqrt{\lambda},\sqrt\lambda,0)^\top$ $\Vek
+x^\top\Vek D \Vek x<0$ und damit $\Vek D$ nicht positiv definit. 
+\item Falls $\frac{\lambda^2+\lambda-1}{\lambda}=0$ ist, verschwindet $\Vek x^\top \Vek D \Vek x$
+f\"ur $\Vek x=(-1/\sqrt\lambda,\sqrt\lambda,0)^\top\neq \Vek 0$, also ist $\Vek D$ nicht positiv definit. 
+\item F\"ur $\lambda\leq 0$ ist obige Rechnung nicht m\"oglich, aber dann gilt\\
+ $(1,0,0)\Vek D (1,0,0)^\top=\lambda\leq 0$ und $\Vek D$ ist nicht positiv definit. 
+\end{iii}
+Die Bedingungen f\"ur $\frac{\gamma_\lambda}{\lambda} := \frac{\lambda^2+\lambda-1}\lambda$ aus i)--iii) lassen sich weiter
+umformen: \\
+Zun\"achst ist der Z\"ahler 
+$$\gamma_\lambda=\lambda^2+\lambda-1=(\lambda+\frac 12)^2-\frac 54$$
+und hat seine Nullstellen bei $\frac {-1\pm \sqrt 5}2$. \\
+Zwischen beiden Nullstellen ($\frac{-1-\sqrt 5}2 <\lambda<\frac{-1+\sqrt 5}2$) ist  $\gamma_\lambda<0$.\\
+Au\ss erhalb des Intervals
+($\lambda<\frac{-1-\sqrt 5}2$ oder $\lambda>\frac{-1+\sqrt 5}2$) ist $\gamma_\lambda>0$. 
+Insgesamt ist also $\Vek D$ \\
+positiv definit f\"ur  $\lambda>\frac{-1+\sqrt 5}2$ und  \\
+nicht positiv definit f\"ur $\lambda\leq\frac{-1+\sqrt 5}2$.
+
+\end{abc}
+}
+
+\ErgebnisC{AufglinalgPosiDefi001}
+{
+$\Vek A$ und $\Vek B$ sind nicht positiv definit, $\Vek C$ ist positiv definit. 
+
+}

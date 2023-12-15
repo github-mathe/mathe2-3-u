@@ -1,0 +1,81 @@
+\Aufgabe[e]{Eigenwerte und -vektoren}{
+Es seien
+$$
+\boldsymbol A = \begin{pmatrix}
+8 & 10\\
+8 & 10
+\end{pmatrix}\,,\quad
+% 
+\boldsymbol B = \begin{pmatrix}
+ -3 & 0 & 1\\
+ -6 & 0 & 2\\
+-11 & 1 & 3
+\end{pmatrix}\,,\quad
+% 
+\boldsymbol C = \begin{pmatrix}
+0 & 1 & 0\\
+0 & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}\,.
+$$
+\begin{abc}
+\item Berechnen Sie die Eigenwerte der Matrizen.
+\item Geben Sie die zu den Eigenwerten geh\"orenden Eigenvektoren an. 
+\item Bestimmen Sie jeweils die algebraischen und geometrischen Vielfachheiten aller Eigenwerte.
+\item Welche der Matrizen sind diagonalisierbar?
+\item Multiplizieren Sie die Matrizen mit den jeweiligen gefundenen
+ Eigenvektoren. 
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item Alle Eigenwerte ergeben sich als Nullstellen des Polynoms
+  $\det(\boldsymbol M-\lambda \boldsymbol E)$, $\boldsymbol M=\boldsymbol A,
+  \boldsymbol B,\boldsymbol C$.
+\begin{align*}
+0&\overset!=
+\det\begin{pmatrix}8-\lambda&10\\8&10-\lambda\end{pmatrix}=\lambda^2-18\lambda+80-80\\
+&\Rightarrow \lambda_1=0, \quad \lambda_2=18\\[2ex]
+0&\overset!=\det\begin{pmatrix}-3-\mu&0&1\\-6&-\mu&2\\-11&1&3-\mu\end{pmatrix}\\
+&=\mu(3-\mu)(3+\mu)-6-11\mu+2(3+\mu)\\
+&=\mu (9-\mu^2)-9\mu=-\mu^3\\ &\Rightarrow \mu_1=\mu_2=\mu_3 = 0\\[2ex]
+0&\overset!=
+\det\begin{pmatrix}-\nu&1&0\\0&-\nu&0\\0&0&1-\nu\end{pmatrix}=\nu^2(1-\nu)\quad \quad\\
+&\Rightarrow \nu_1=\nu_2=0,\, \nu_3=1.
+\end{align*}
+\item Eigenvektoren sind L\"osungen des Gleichungssystems 
+$(\boldsymbol M-\lambda \boldsymbol E)v=0$: 
+\begin{align*}
+&&\begin{pmatrix}8&10\\8&10\end{pmatrix}\boldsymbol u_1  
+&=0&\Leftarrow&&\boldsymbol u_1&=\begin{pmatrix}5\\-4\end{pmatrix}\\
+&&\begin{pmatrix}-10&10\\8&-8\end{pmatrix}\boldsymbol u_2 &=0&
+\Leftarrow&&\boldsymbol u_2&=\begin{pmatrix}1\\1\end{pmatrix}\\
+&&\begin{pmatrix}-3&0&1\\-6&0&2\\-11&1&3\end{pmatrix}\boldsymbol v_1&=0&
+\Leftarrow&&\boldsymbol v_1&=\begin{pmatrix}1\\2\\3\end{pmatrix}\\
+\end{align*}
+$\boldsymbol C$ hat als Eigenvektor zum Eigenwert $0$ $\boldsymbol
+w_1=\begin{pmatrix}1,0,0\end{pmatrix}^\top$ und zum
+Eigenwert $1$ den Eigenvektor $\boldsymbol w_3=(0,0,1)^\top$.
+\item
+\item $\boldsymbol A$ hat zwei verschiedene Eigenwerte und ist daher als 
+zweidimensionale Matrix diagonalisierbar. \\
+$\boldsymbol B$ hat nur einen linear unabh\"angigen Eigenvektor, ist also nicht
+  diagonalisierbar. \\
+F\"ur $\boldsymbol C$ existieren ebenfalls nur zwei linear unabh\"angige 
+Eigenvektoren,  also ist auch
+diese Matrix nicht diagonalisierbar. 
+\item 
+\begin{align*}
+\boldsymbol A\boldsymbol u_1 &=0 \cdot \boldsymbol u_1, 
+&\boldsymbol A\boldsymbol u_2&=18 \cdot \boldsymbol u_2\\
+\boldsymbol B\boldsymbol v_1 &= 0 \cdot \boldsymbol v_1\\
+\boldsymbol C\boldsymbol v_1 &= 0\cdot \boldsymbol w_1, 
+&\boldsymbol C\boldsymbol w_3&=1\cdot \boldsymbol w_3
+\end{align*}
+\end{abc}
+}
+
+\ErgebnisC{linalg_Eign_Wert_005}
+{
+{ a)} $\lambda \in \{0,18\},\, \mu\in\{0\},\, \nu \in \{0,1\}$
+}

@@ -1,0 +1,63 @@
+\Aufgabe[e]{Spiegelung und Projektion}{
+Gegeben sei der Vektor $\Vek n= (1,\, 2,\ -3)^\top$. 
+\begin{abc}
+\item[e] Geben Sie die Hessesche Normalform der Ebene $\Vek H$ durch den Ursprung mit Normalenvektor $\Vek n$ an. 
+\item[e] Bestimmen Sie 
+\begin{iii}
+\item die Matrix $\Vek S\in\R^{(3,3)}$ der orthogonalen Spiegelung an $\Vek H$ und
+\item die Matrix $\Vek P\in \R^{(3,3)}$ der orthogonalen Projektion auf $\Vek H$. 
+\end{iii}
+\textbf{Hinweis}: Die Spiegelung des Punktes $\Vek x$ ist der Punkt, der auf der Geraden durch $\Vek x$
+und $\Vek P(x)$ liegt und dieselbe Entfernung  wie $\Vek x$ von der Ebene hat. 
+% \item Berechnen Sie au\ss erdem f\"ur $m\in \N$: 
+% $$\Vek A_m = \Vek S^m \text{ und }\Vek B_m = (\Vek S + \Vek E)^m.$$ 
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Der Einheitsnormalenvektor zur Ebene ist: $\Vek n_0 = 1/\sqrt{14}(1,\, 2,\, -3)^\top$, damit
+ist die Hessesche Normalform:
+$$\Vek H = \bigl\{\Vek x\in \R^3|\, \skalar{\Vek x,\Vek n_0}=0\bigr\}.$$
+\item {\textbf{ii)}} Zun\"achst wird die Matrix der Projektion ermittelt: \\
+Es ist $\Vek P x = \Vek x - \skalar{\Vek x,\, \Vek n_0}\Vek n_0=(\Vek E - \Vek n_0\otimes \Vek
+n_0)\Vek x$, also ist die Matrix der Projektion gegeben durch
+$$\Vek P = \Vek E - \Vek n_0\otimes\Vek n_0 = \begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix}
+- \frac 1{14}\begin{pmatrix} 1 & 2 & -3\\ 2 & 4 & -6\\ -3& -6& 9\end{pmatrix}=
+\frac 1{14} \begin{pmatrix} 13&-2&3\\-2&10&6\\3&6&5\end{pmatrix}.$$
+{\textbf{ i)}} Die Spiegelung ist nun gegeben durch (beachte den Hinweis)
+\begin{align*}
+&&\Vek S \Vek x = & \Vek x + 2\cdot (\Vek P \Vek x - \Vek x)\\
+\Rightarrow&& \Vek S =& \Vek E + 2 (\Vek E - \Vek n_0\otimes \Vek n_0 - \Vek E)=\Vek E - 2\Vek
+n_0\otimes \Vek n_0\\
+&&=&\frac 1{14}\begin{pmatrix} 12&-4&6\\-4&6&12\\6&12&-4\end{pmatrix}. 
+\end{align*}
+% \item F\"ur die Projektion gilt nach Definition $\Vek P^2=\Vek P$, also erst recht
+% $$\Vek P^m = \Vek P$$ 
+% und damit
+% \begin{align*}
+% \Vek A_m =& \Vek S^m = (2\Vek P - \Vek E)^m\\
+% =& \sum\limits_{j=0}^m\begin{pmatrix}m\\j\end{pmatrix}2^j\Vek P^j(-1)^{m-j}\Vek E^{m-j}\\
+% =& (-1)^m \Vek E^m + \sum\limits_{j=1}^m \begin{pmatrix}m\\j\end{pmatrix} 2^j(-1)^{m-j}\Vek P\\
+% =& (-1)^m\Vek E + \left( \sum\limits_{j=0}^m \begin{pmatrix}m\\j\end{pmatrix} 2^j(-1)^{m-j}
+% -(-1)^m\right) \Vek P \\
+% =& (-1)^m\Vek E + \left( (2-1)^m-(-1)^m\right)\Vek P=\left\{\begin{array}{ll}\Vek E & \text{ f\"ur
+% gerade }m\\2\Vek P - \Vek E &\text{ f\"ur ungerade }m\end{array}\right.\\
+% =&\left\{\begin{array}{ll}\Vek E & \text{ f\"ur
+% gerade }m\\\Vek S  &\text{ f\"ur ungerade }m\end{array}\right.
+% \end{align*}
+% sowie 
+% \begin{align*}
+% \Vek B_m =& (\Vek S + \Vek E)^m = (2\Vek P )^m = 2^m \Vek P.
+% \end{align*}
+
+\end{abc}
+}
+
+
+\ErgebnisC{AufglinalgSpglProj001}
+{
+\textbf{ a)} $\Vek H = \bigl\{\Vek x\in \R^3|\, \skalar{\Vek x,\Vek n_0}=0\bigr\}$\\
+\textbf{ b)} $\Vek S = \frac 1{14}\begin{pmatrix} 12&-4&6\\-4&6&12\\6&12&-4\end{pmatrix}$, $\Vek P = \frac 1{14} \begin{pmatrix} 13&-2&3\\-2&10&6\\3&6&5\end{pmatrix}$
+
+}

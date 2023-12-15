@@ -1,0 +1,83 @@
+\Aufgabe[e]{\"Ahnlichkeitstransformation}{
+
+Gegeben sind 
+$$\Vek A =  \begin{pmatrix} 2& 0& 4\\0&6&0\\4&0&2\end{pmatrix}, \, \Vek a = \begin{pmatrix}
+1\\\alpha\\-1\end{pmatrix}\text{ und } \Vek b = \begin{pmatrix}\beta\\ -\beta\\1\end{pmatrix}.$$
+\begin{abc}
+\item Bestimmen Sie -- wenn m\"oglich -- $\alpha$ und $\beta$ so, dass $\Vek a$ und $\Vek b$
+Eigenvektoren der Matrix $\Vek A$ sind. 
+\item Berechnen Sie einen weiteren (linear unabh\"angigen) Eigenvektor nebst zugeh\"origem
+Eigenwert. 
+\item Bestimmen Sie  orthogonale Matrizen $\Vek Q_i$, sowie Diagonalmatrizen $\Vek D_i$ ($i=1,2,3$),
+so dass gilt
+$$\Vek D_i = \Vek Q_i^\top \Vek B_i \Vek Q_i, \qquad i=1,2,3.$$
+Dabei sind $\Vek B_1=\Vek A$, $\Vek B_2=\Vek A^{-1}$ und $\Vek B_3=\Vek A^3$. 
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Es gilt
+$$\Vek A \Vek a = \Vek A \begin{pmatrix}1\\\alpha\\-1\end{pmatrix}=\begin{pmatrix}
+-2\\6\alpha\\2\end{pmatrix}. $$
+Wenn $\Vek a$ Eigenvektor ist, folgt aus der ersten und dritten Komponente der Gleichung der
+Eigenwert $-2$. F\"ur die zweite Komponente gilt dann $6\alpha \overset != -2\alpha$, also
+$\alpha=0$. \\
+F\"ur den zweiten Vektor $\Vek b$ hat man
+$$\Vek A \Vek b = \Vek A \begin{pmatrix} \beta\\-\beta \\1 \end{pmatrix} 
+= \begin{pmatrix} 2\beta+4\\ -6\beta \\ 4\beta + 2\end{pmatrix}$$
+Wir nehmen erneut an, dass $\Vek b$ ein Eigenvektor ist. \\
+F\"ur $\beta\neq 0$ w\"are der zugeh\"orige Eigenwert $\lambda=6$. (2. Komponente der Gleichung)\\
+Aus der ersten Komponente der Gleichung folgt damit $6\beta=2\beta + 4$, also $\beta = 1$\\
+Aus der dritten Komponente folgt $6=4\beta + 2$, also $\beta=1$.\\
+Damit ist f\"ur $\beta=1$ $\Vek b= (1,-1,1)^\top$ ein Eigenvektor von $\Vek A$ mit dem Eigenwert $6$. 
+\item Allgemein ergeben sich die Eigenwerte von $\Vek A$ als Nullstellen des charakteristischen
+Polynoms: 
+\begin{align*}
+&&0\overset !=& \det\begin{pmatrix}
+2-\lambda &           0 &            4 \\
+        0 & 6-\lambda   &            0 \\
+        4 &           0 & 2-\lambda    \end{pmatrix}
+= (6-\lambda)\det\begin{pmatrix}
+2-\lambda &           4 \\
+        4 & 2-\lambda   \end{pmatrix}\\
+&&=& (6-\lambda)((2-\lambda)^2-16)\\
+\Rightarrow &&\lambda\in& \{-2,\, 6,\, 6\}
+\end{align*}
+Ein Eigenvektor zum Eigenwert $6$ ist L\"osung von 
+$$0\overset != (\Vek A-6\Vek E ) \Vek c = \begin{pmatrix}-4&0&4\\0&0&0\\4&0&-4\end{pmatrix} \Vek
+c.$$
+Das Gleichungssystem hat den Rang 1, die geometrische Vielfachheit des Eigenwertes $6$ ist also
+gleich der algebraischen Vielfachheit $2$. \\
+Es ergeben sich die beiden linear unabh\"angigen L\"osungen $\Vek c = (1,\, 0,\, 1)^\top$
+und $\Vek d = (0,\, 1,\, 0)^\top$. (Der Vektor $\Vek b$ ist im Eigenraum zu $\lambda=6$ enthalten:
+$\Vek b = \Vek c - \Vek d$.)
+\item Zur Diagonalisierung von $\Vek B_1=\Vek A$ stellt man die Matrix der normierten Eigenvektoren
+auf: 
+$$\Vek Q = \left( \frac{\Vek a}{\norm{\Vek a}}, \, \frac{\Vek c}{\norm{\Vek c}},\, \frac{\Vek
+                           d}{\norm{\Vek d}}\right)=\begin{pmatrix} 1/\sqrt{2} & 1/\sqrt{2} & 0\\
+                           0          & 0          & 1\\
+                           -1/\sqrt 2 & 1/\sqrt{2} & 0\end{pmatrix}.$$
+Die Diagonale von $\Vek D_1$ enth\"alt dann die Eigenwerte von $\Vek A$:
+$$\Vek D_1 = \begin{pmatrix} -2 & 0 & 0\\0 & 6 & 0\\0& 0 & 6\end{pmatrix}.$$
+$\Vek B_2=\Vek A^{-1}$ hat dieselben Eigenvektoren wie $A$, somit erh\"alt man mit derselben
+Transformationsmatrix $\Vek Q_2=\Vek Q_1$ die Diagonalmatrix der Eigenwerte von $\Vek A^{-1}$: 
+$$\Vek D_2 = \begin{pmatrix} -1/2&0&0\\ 0&1/6&0\\ 0&0&1/6 \end{pmatrix}.$$
+Auch $\Vek B_3 = \Vek A^3$ hat dieselben Eigenvektoren $\Vek v\in\{\Vek a,\Vek c,\Vek d\}$:
+$$\Vek A^3 \Vek v = \Vek A^2 \lambda \Vek v = \lambda \Vek A \lambda \Vek v = \lambda^2 \lambda \Vek
+v = \lambda^2\Vek v.$$
+Es ist also $\Vek Q_3 = \Vek Q_1$ und die zugeh\"orige Diagonalmatrix enth\"alt die dritte Potenz
+der Eigenwerte von $\Vek A$: 
+$$\Vek D_3 = \begin{pmatrix} -8 & 0 & 0\\ 0 & 36 & 0\\ 0 & 0 & 216\end{pmatrix}. $$
+\end{abc}
+
+}
+
+
+\ErgebnisC{AufglinalgMatrSymm003}
+{
+\textbf{b)} $\lambda\in\{-2,\, 6\}$, $\Vek v_1 = (1,0,-1)^\top$, $\Vek v_2 = (1,0, 1)^\top$, $\Vek v_3
+= (0,1, 0)^\top$
+
+}

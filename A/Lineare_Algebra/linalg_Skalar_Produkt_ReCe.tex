@@ -1,0 +1,83 @@
+\Aufgabe[e]{Skalarprodukt im $\C^3$ (fr\"uhrere Klausuraufgabe)}{
+\begin{abc}
+\item Bestimmen Sie alle normierten Vektoren des $\R^3$, die zu 
+$\vec u_1=(1,1,0)^\top$ und $\vec u_2=(1,0,1)$ bez\"uglich des Standardskalarproduktes in $\R^3$ senkrecht stehen. 
+\item Bestimmen Sie alle normierten Vektoren des $\C^3$, die zu
+$\boldsymbol v_1 = (1, \operatorname{i}, 0)^\top$ und
+$\boldsymbol v_2 = (0, \operatorname{i}, -\operatorname{i})^\top$
+bezüglich des Standardskalarproduktes in $\C^3$ senkrecht stehen.
+\end{abc}
+}
+\Loesung{
+Im Folgenden bezeichnen wir mit der Abbildung $\langle \cdot, \cdot \rangle$ das
+Standard-Skalarprodukt in $\R^3$ bzw. in $\C^3$ und mit der Abbildung $\| \cdot \|$ die aus dem Skalarprodukt induzierte Norm.
+\begin{abc}
+\item Ein L\"osungsvektor $\vec x=(x,y,z)^\top$ muss die Bedingungen
+$$\skalar{\vec x,\vec u_1}=x+y=0\text{ und }\skalar{\vec x,\vec u_2}=x+z=0$$
+erf\"ullen. 
+Diese f\"uhren auf das Gleichungssystem: 
+$$\begin{array}{rrr|r|l}
+x  &  y  &  z  &   &   \\\hline
+1  &  1  & 0   & 0 &   \\
+1  &  0  & 1   & 0 & -I\\\hline
+1  &  1  & 0   & 0 &   \\
+0  & -1  & 1   & 0 & \\
+\end{array}$$
+Alle L\"osungen haben also die Gestalt: 
+$$\vec x=\begin{pmatrix}-t\\t\\t\end{pmatrix}\qquad\text{ mit } t\in\R.$$
+Da die L\"osungsvektoren normiert sein sollen, muss gelten: 
+$$1=\norm{\vec x}=3t^2\,\Rightarrow\, t=\pm\frac{1}{\sqrt 3}.$$
+Die einzigen beiden L\"osungen sind also 
+$$\vec x_{1/2}=\pm\frac 1{\sqrt 3}\begin{pmatrix}-1\\1\\1\end{pmatrix}.$$
+\item Die Bedingungen
+$\langle \boldsymbol v, \boldsymbol v_1 \rangle = 0$ und
+$\langle \boldsymbol v, \boldsymbol v_2 \rangle = 0$
+angewandt auf den beliebig gewählten Vektor
+$\boldsymbol v = (v_1, v_2, v_3)^\top \in \C^3$
+ergeben
+$$
+v_1 - \operatorname{i} v_2 = 0\,,\quad
+-\operatorname{i} v_2 + \operatorname{i} v_3 = 0\,.
+$$
+
+Setzt man $v_2 = \lambda \in \C$, so folgt
+$$
+v_1 = \operatorname{i} \lambda\,,\quad
+v_3 = \lambda\,,\quad
+\mbox{also }
+\boldsymbol v = \lambda\, \begin{pmatrix} \operatorname{i}\\ 1\\ 1\end{pmatrix} 
+=: \lambda\, \boldsymbol w\,.
+$$
+
+Die Vektoren $\boldsymbol z \in \C^3$,
+$\boldsymbol z := \frac{1}{\| \boldsymbol v \|}\, \boldsymbol v$,
+der L\"osungsmenge sollen normiert sein, also $\| \boldsymbol z \| \overset{!}{=} 1$.
+Mit
+$$
+\| \boldsymbol v\|
+= \| \lambda\, \boldsymbol w \|
+= | \lambda |\, \| \boldsymbol w \|
+= | \lambda |\, \sqrt{3}\,,
+$$
+und der (vorteilhaften) Wahl $| \lambda | \stackrel{!}{=} 1$, also
+$$
+\lambda = \operatorname{e}^{\operatorname{i} \varphi}\,,\quad
+\varphi \in [0, 2\,\pi)\,,
+$$
+folgt die L\"osungsmenge als
+$$
+\mathbb L =
+\left\{ \boldsymbol z \in \C^3 \,\middle|\,
+%
+\boldsymbol z =
+\dfrac{1}{\sqrt{3}}\, \operatorname{e}^{\operatorname{i} \varphi}\, 
+\begin{pmatrix} \operatorname{i}\\ 1\\ 1\end{pmatrix}\,,\quad
+\varphi \in [0, 2\,\pi) \right\}\,.
+$$
+\end{abc}
+}
+
+%\ErgebnisC{linalg_Skalar_Produkt_Komplex_001-2010-M1-KL1}
+%{
+%
+%}

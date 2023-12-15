@@ -1,0 +1,68 @@
+\Aufgabe[e]{Hessesche Normalform einer Ebene}{
+Gegeben sei die Gerade
+$$
+\boldsymbol g = \left\{\, \boldsymbol x \in \R^3 \,\middle|\,
+\boldsymbol x = (1, 0, 2)^\top + \lambda\, (2, 3, 1)^\top\,,\quad
+\lambda \in \R \,\right\}
+$$
+und $\boldsymbol p = (1, 0, 1)^\top \in \R^3$\,.
+
+\smallskip
+Geben Sie eine Hessesche Normalform der Ebene $\boldsymbol E$, mit
+$\boldsymbol p \in \boldsymbol E$ an,
+welche orthogonal zu $\boldsymbol g$ liegt.
+}
+\Loesung{
+Im Folgenden werden mit der Abbildung $\langle \cdot, \cdot \rangle$ das
+Standard-Skalarprodukt des $\R^3$ und
+mit der Abbildung $\| \cdot \|$ die aus dem Standard-Skalarprodukt des $\R^3$
+induzierte Norm
+bezeichnet.
+
+\bigskip
+Ein Normalenvektor $\boldsymbol n := (2, 3, 1)^\top$ der zu bestimmenden
+Ebene $\boldsymbol E$ entspricht nach Aufgabenstellung dem Richtungsvektor der
+Geraden $\boldsymbol g$.
+% 
+Zur Darstellung der Ebene in Hessescher Normalform muss ein Normalenvektor mit
+$\| \boldsymbol n_0 \| = 1$ gewählt werden.
+Einen solchen erhalten wir beispielsweise durch
+$$
+\boldsymbol n_0
+= \frac{1}{\| \boldsymbol n \|}\, \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}
+= \frac{1}{\sqrt{14}}\, \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}\,.
+$$
+
+Eine Hessesche Normalform der Ebene $\boldsymbol E$ ist somit bestimmt durch
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l}
+\boldsymbol E &=& \left\{\, \boldsymbol x \in \R^3 \,\middle|\,
+  \left\langle \boldsymbol x, \boldsymbol n_0 \right\rangle =
+  \left\langle \boldsymbol p, \boldsymbol n_0 \right\rangle\,,\quad
+  \boldsymbol n_0 = \frac{1}{\sqrt{14}}\, (2, 3, 1)^\top\,,\,\,
+  \boldsymbol p = (1, 0, 1)^\top
+\right\}\,,\\[3ex]
+% 
+\boldsymbol E &=& \left\{\, \boldsymbol x \in \R^3 \,\middle|\,
+\dfrac{1}{\sqrt{14}}\,
+  \left\langle \boldsymbol x\,,\,\, (2, 3, 1)^\top \right\rangle =
+  \dfrac{3}{\sqrt{14}}
+\right\}\,.\\[1ex]
+\end{array}
+$$
+
+\bigskip
+\textbf{Hinweis:} Eine Hessesche Normalform ist,
+bis auf das Vorzeichen des gewählten normierten Normalenvektors $\boldsymbol n_0$,
+eindeutig bestimmt.
+% 
+Die andere mögliche Wahl wäre hier
+$\boldsymbol n_0^- = (-1) \cdot \boldsymbol n_0
+= \frac{1}{\sqrt{14}}\, (-2, -3, -1)^\top$
+anstelle von $\boldsymbol n_0$\,.
+}
+
+\ErgebnisC{linalg_HesseNF_Ebene_001}
+{
+Eine zur gesuchten Ebene \textit{parallele} Ebene hat die allgemeine Ebenengleichung $2\, x_1 + 3\, x_2 + x_3 = 0$\,.
+}

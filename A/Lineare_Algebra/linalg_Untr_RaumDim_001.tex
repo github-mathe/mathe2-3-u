@@ -1,0 +1,147 @@
+\Aufgabe[e]{Dimensionssatz für Unterräume}{
+Best\"atigen Sie den Dimensionssatz für Unterräume für
+
+\hspace*{.05\linewidth} $\boldsymbol U_1 = \operatorname{span}\{\,
+  (1, 0, 0)^\top\,,\,\,
+  (0, 1, 0)^\top
+\,\} \subset \boldsymbol V$ und
+
+\hspace*{.05\linewidth} $\boldsymbol U_2 = \operatorname{span}\{\,
+  (2, 2, 0)^\top\,,\,\,
+  (0, 0, 3)^\top
+\,\} \subset \boldsymbol V$
+mit $\boldsymbol V = \R^3$\,.
+}
+\Loesung{
+Die Unterräume $\boldsymbol U_1 \subset \R^3$ und $\boldsymbol U_2 \subset \R^3$
+enthalten jeweils $2$ linear unabhängige Vektoren im $\R^3$
+(Prüfen Sie dieses nach!). Somit gilt
+$$
+\dim(\boldsymbol U_1) = 2\quad \text{und}\quad
+\dim(\boldsymbol U_2) = 2\,.
+$$
+
+Der Untervektorraum $\boldsymbol U_1 + \boldsymbol U_2$ enthält
+$3$ linear unabhängige Vektoren im $\R^3$ (Prüfen Sie dieses nach!).
+Somit gilt
+$$
+\dim(\boldsymbol U_1 + \boldsymbol U_2) = 3\,.
+$$
+
+Für die Bestimmung von $\dim(\boldsymbol U_1 \cap \boldsymbol U_2)$
+müssen alle linear unabhängigen Vektoren des verbleibenden Unterraums gefunden
+werden.
+% 
+Das bedeutet, für $\boldsymbol x \in \boldsymbol U_1 \cap \boldsymbol U_2$
+gilt \underline{$\boldsymbol x \in \boldsymbol U_1$ und
+$\boldsymbol x \in \boldsymbol U_2$}.
+% 
+Folglich lässt sich dieses $\boldsymbol x$ hier darstellen als
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l}
+\boldsymbol x &=& \lambda_{11}\, (1, 0, 0)^\top + \lambda_{12}\, (0, 1, 0)^\top\,,\quad
+  \lambda_{11}, \lambda_{12}\in \R\,, \quad \text{und}\\[1ex]
+% 
+\boldsymbol x &=& \lambda_{21}\, (2, 2, 0)^\top + \lambda_{22}\, (0, 0, 3)^\top\,,\quad
+  \lambda_{21}, \lambda_{22}\in \R\,.
+\end{array}
+$$
+
+Also ist hier die vektorwertige Gleichung
+$$
+  \lambda_{11}\, (1, 0, 0)^\top
++ \lambda_{12}\, (0, 1, 0)^\top
+- \lambda_{21}\, (2, 2, 0)^\top
+- \lambda_{22}\, (0, 0, 3)^\top \stackrel{!}{=} \boldsymbol 0 \,,\quad
+$$
+% 
+für die Koeffizienten
+$\lambda_{11}, \lambda_{12}, \lambda_{21}, \lambda_{22} \in \R$
+zu lösen\,.
+% 
+Eine andere Darstellung des zugehörigen linearen Gleichungssystems ergibt hier
+$$
+\begin{array}{rrrrr}
+% \lambda_{11} & \lambda_{12} & \lambda_{21} & \lambda_{22}\\[1ex]
+% \hline
+1 & 0 & -2 &  0  & 0\\[1ex]
+~ & 1 & -2 &  0  & 0\\[1ex]
+~ & ~ &  ~ & -3  & 0\\[1ex]
+\hline
+\end{array}\,.
+$$
+% eine Stufenform ohne Anwendung des Gau\ss{}-Algorithmus.
+
+\medskip
+An der Stufenform des Gleichungssystems kann man ablesen, dass die Lösung
+mehrdeutig ist (d.h. es liegt im Unterraum $\boldsymbol U_1 \cap \boldsymbol U_2$
+mindestens ein linear unabhängiger Vektor).
+% 
+Die Lösung des Gleichungssystems ergibt
+$$
+\lambda_{22} = 0\,,\,\,
+\lambda_{21} =: t \in \R\,,\,\,
+\lambda_{12} = 2\, t\,,\,\,
+\lambda_{11} = 2\, t\,.
+$$
+
+Das Einsetzen dieser $\lambda_{11}$, $\lambda_{12}$, $\lambda_{21}$,
+$\lambda_{22}$ in die beiden Gleichungen der Darstellungen des Vektors
+$\boldsymbol x \in \boldsymbol U_1 \cap \boldsymbol U_2$
+ergibt hier
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l@{\,\,}c@{\,\,}l}
+\boldsymbol x
+&=& 2\, t\, (1, 0, 0)^\top + 2\, t\, (0, 1, 0)^\top
+&=& t\, (2, 2, 0)^\top
+\quad \text{und}\\[1ex]
+% 
+\boldsymbol x
+&=& t\, (2, 2, 0)^\top + 0 \cdot (0, 0, 3)^\top
+&=& t\, (2, 2, 0)^\top
+\end{array}
+$$
+für (weiterhin) beliebige $t \in \R$\,.
+% 
+Aus diesem folgt
+$$
+\boldsymbol U_1 \cap \boldsymbol U_2 =
+\operatorname{span}\left\{\, (1, 1, 0)^\top \,\right\}
+$$
+und folglich
+$$
+\dim(\boldsymbol U_1 \cap \boldsymbol U_2) = 1\,,
+$$
+da $\boldsymbol U_1 \cap \boldsymbol U_2$
+genau einen linear unabhängigen Vektor im $\R^3$ enthält.
+
+\bigskip
+Somit sind die Aussagen des Dimensionssatzes für Unterräume hier, mit
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l}
+\dim(\boldsymbol U_1 + \boldsymbol U_2)
+&=& \dim(\boldsymbol U_1) + \dim(\boldsymbol U_2)
+ - \dim(\boldsymbol U_1 \cap \boldsymbol U_2)\,,\\[1ex]
+% 
+(3 &=& 2 + 2 - 1\,,)
+\end{array}
+$$
+% 
+sowie
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l}
+\dim(\boldsymbol U_1) &=& 2 \le n = 3 < \infty\,,\\[1ex]
+\dim(\boldsymbol U_2) &=& 2 \le n = 3 < \infty\,,\\[1ex]
+\dim(\boldsymbol U_1 + \boldsymbol U_2) &=& 3 \le n = 3 < \infty\,,\\[1ex]
+\dim(\boldsymbol U_1 \cap \boldsymbol U_2) &=& 1 \le n = 3 < \infty\,,
+\end{array}
+$$
+mit $n=3$, da $\boldsymbol V = \R^3$,
+und $\boldsymbol V$ ist ein endlichdimensionaler $\R$-Vektorraum,
+gezeigt.
+}
+
+\ErgebnisC{linalg_Untr_RaumDim_001}
+{
+Zur Information: $\dim( \boldsymbol U_1 \cap \boldsymbol U_2 ) = 1$\,.
+}

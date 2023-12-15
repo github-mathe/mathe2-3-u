@@ -1,0 +1,51 @@
+\Aufgabe[e]{Lineares Gleichungssystem mit komplexen Zahlen}{
+Lösen Sie das folgende lineare Gleichungssystem mit Hilfe des Gau\ss-Eliminationsverfahrens 
+für $u,v \in \mathbb{C}$
+$$
+\begin{array}{rcl}
+(2 +3\operatorname{i}) \cdot u + (1 -1\operatorname{i}) \cdot v
+&=& 7 +6\operatorname{i}\,,\\[1ex]
+%
+(3 -2\operatorname{i}) \cdot u + (2\operatorname{i}) \cdot v
+&=& 2 -9\operatorname{i}\,.
+\end{array}
+$$
+
+}
+
+\Loesung{
+$$\begin{array}{rr|r|l}
+ ( 2 + 3\operatorname{i}) & (1 -  \operatorname{i}) & ( 7 + 6\operatorname{i})\\
+ ( 3 - 2\operatorname{i}) & (    2\operatorname{i}) & ( 2 - 9\operatorname{i}) &\times 
+                        -\frac{(2+3\operatorname{i})}{( 3 - 2\operatorname{i})}\\\hline
+ ( 2 + 3\operatorname{i}) & (1 -  \operatorname{i}) & ( 7 + 6\operatorname{i})\\
+ (-2 - 3\operatorname{i}) & (2                    ) & (-9 - 2\operatorname{i}) & 
+                        + \text{1. Gleichung} \\\hline
+ ( 2 + 3\operatorname{i}) & (1 -  \operatorname{i}) & ( 7 + 6\operatorname{i})\\
+                   0      & (3 -  \operatorname{i}) & (-2 + 4\operatorname{i}) & 
+\end{array}$$
+
+Durch Rückwärtseinsetzen erhalten wir
+
+
+$$
+v = \frac{(-2+4\operatorname{i})}{(3-\operatorname{i})}= -1+\operatorname{i}
+$$
+und
+$$
+(2+3\operatorname{i})u = (7+4\operatorname{i})-(1-\operatorname{i})(-1+\operatorname{i})
+$$
+Daraus folgt
+$$
+u = \frac{(7+4\operatorname{i})}{(2+3\operatorname{i})} = 2-\operatorname{i}\,.
+$$
+
+}
+
+\ErgebnisC{linalgkmpllgs}{
+$
+v = -1+\operatorname{i}\quad
+,\quad
+u = 2-\operatorname{i}\,.
+$
+}

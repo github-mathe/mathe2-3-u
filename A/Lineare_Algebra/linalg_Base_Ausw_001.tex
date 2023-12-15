@@ -1,0 +1,83 @@
+\Aufgabe[e]{}
+{
+Im $\R^3$ sind die Vektoren 
+$$\vec a=\begin{pmatrix}1\\2\\-1\end{pmatrix},\vec b=\begin{pmatrix} 1\\1\\0\end{pmatrix}, \vec
+c=\begin{pmatrix}3\\4\\-1\end{pmatrix}, \vec d=\begin{pmatrix}0\\-1\\1\end{pmatrix}$$
+gegeben. 
+\begin{abc}
+%\item Skizzieren Sie die drei Vektoren. 
+%\item W\"ahlen Sie ein Erzeugendensystem von $\vec V=\Spn\left\{\vec a,\, \vec b,\, \vec c,\,\vec d \right\}$ aus.
+%\item Ist Ihr Erzeugendensystem minimal?
+\item W\"ahlen Sie eine Basis von $\vec V = \operatorname{span} \{\vec a , \vec b, \vec c, \vec d\}$ aus, die nur Vektoren $\vec a$, $\vec b$, $\vec c$ oder
+  $\vec d$ enth\"alt. 
+\item Welche Dimension hat $\vec V$?
+\item Bilden Sie ausgehend von der in Aufgabenteil \textbf{a)} gew\"ahlten Basis eine
+Orthonormalbasis von $\vec V$. 
+\item Stellen Sie die Vektoren $\vec a,\, \vec b,\, \vec c$ und $\vec d$ bez\"uglich der
+Orthonormalbasis dar, geben Sie also die zugeh\"origen Koeffizienten an, mittels derer die Vektoren mit der ausgew\"ahlten Basis dargestellt werden k\"onnen. 
+%\item Skizzieren Sie $\vec V$.
+\end{abc}
+}
+\Loesung{
+
+\begin{abc}
+%\item 
+%\begin{figure}[H]
+%\begin{center}
+%\epsfig{file=vectoren61a.eps, width = 10cm, angle=270}
+%\end{center}
+%\end{figure}
+%\item Ein offensichtliches Erzeugendensystem ist $\vec E=\{\vec a,\, \vec b,\, \vec c,\, \vec d\}$. 
+%\item Dieses Erzeugendensystem ist nicht minimal, da vier Vektoren im $\R^3$ immer linear abh\"angig
+%sein m\"ussen. 
+\item Wir wenden den Gauß-Algorithmus auf die vier (Zeilen-)Vektoren an:
+$$\begin{array}{rrr|l}
+   1   &   2   &  -1  &                    \\
+   1   &   1   &   0  & - \text{ 1. Zeile} \\
+   3   &   4   &  -1  & -3\times \text{ 1. Zeile} \\
+   0   &  -1   &   1  &                    \\\hline
+
+   1   &   2   &  -1  &                    \\
+   0   &  -1   &   1  &                    \\
+   0   &  -2   &   2  & -2\times \text{ 2. Zeile} \\
+   0   &  -1   &   1  & - \text{ 1. Zeile} \\\hline
+
+   1   &   2   &  -1  &                    \\
+   0   &  -1   &   1  &                    \\
+   0   &   0   &   0  &                           \\
+   0   &   0   &   0  &                    \\
+
+\end{array}$$
+Damit ist die Dimension des aufgespannten Vektorraumes $\vec V$ 2. Es gen\"ugen also zwei linear
+unabh\"anige Vektoren aus $\{\vec a,\vec b,\vec c,\vec d\}$, um $\vec V$ aufzuspannen. W\"ahle als
+Basis
+$$B=\{\vec a,\vec d\}.$$
+\item Die Dimension von $\vec V$ ist gleich der Anzahl der Basisvektoren des endlich erzeugten Raumes, also
+  $\dim \vec V=2$. 
+\item Wir wenden das Schmidtsche Orthonormalisierungsverfahren auf $\vec a$ und $\vec d$ an: 
+\begin{align*}
+&&\vec v_1=&\frac 1{\norm{\vec a}}\vec a=\frac 1{\sqrt 6} \begin{pmatrix}1\\2\\-1\end{pmatrix}\\
+\Rightarrow&&\vec w_2=& \vec d-\skalar{\vec d,\vec v_1}\vec v_1
+= \begin{pmatrix}0\\-1\\1 \end{pmatrix}-\frac 1{\sqrt{6}} \cdot (-3)\frac{1}{\sqrt{6}}\begin{pmatrix}1\\2\\-1 \end{pmatrix}\\
+&&=& \frac{1}{2}\begin{pmatrix}1\\0\\1 \end{pmatrix}\\
+\Rightarrow&&\vec v_2=& \frac 1{\norm{\vec w_2}}\vec w_2 = \frac 1{\sqrt
+2} \begin{pmatrix}1\\0\\1 \end{pmatrix}.
+\end{align*}
+Eine  Orthonormalbasis von $\vec V$ ist  damit 
+$$B_\perp=\left\{\frac 1{\sqrt 6}\begin{pmatrix}1\\2\\-1\end{pmatrix},\, \frac 1{\sqrt 2}\begin{pmatrix}1\\0\\1 \end{pmatrix}\right\}.$$
+\item Die Koeffizienten der Basisdarstellungen der einzelnen Vektoren bez\"uglich einer
+Orthonormalbasis lassen sich durch einfache Skalarprodukte ermitteln: 
+\begin{align*}
+\vec a=& \skalar{\vec a,\vec v_1}\vec v_1+\skalar{\vec a,\vec v_2}\vec v_2 = \frac{6}{\sqrt 6}\vec
+v_1 + 0 \vec v_2\\
+\vec b=& \skalar{\vec b,\vec v_1}\vec v_1+\skalar{\vec b,\vec v_2}\vec v_2 = \frac{3}{\sqrt 6}\vec
+v_1 + \frac{1}{\sqrt 2}\vec v_2\\
+\vec c=& \skalar{\vec c,\vec v_1}\vec v_1+\skalar{\vec c,\vec v_2}\vec v_2 = \frac{12}{\sqrt 6}\vec
+v_1 + \frac{2}{\sqrt 2}\vec v_2\\
+\vec d=& \skalar{\vec d,\vec v_1}\vec v_1+\skalar{\vec d,\vec v_2}\vec v_2 = \frac{-3}{\sqrt 6}\vec
+v_1 + \frac{1}{\sqrt 2}\vec v_2\\
+\end{align*}
+\end{abc}
+}
+
+\ErgebnisC{linalgBaseAusw001}{$\dim V=2$}

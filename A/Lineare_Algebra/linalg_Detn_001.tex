@@ -1,0 +1,73 @@
+\Aufgabe[e]{Determinanten}{
+Gegeben sei die Matrix
+$$\vec A = \begin{pmatrix} 
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9\\
+\end{pmatrix}.$$
+Berechnen Sie die Determinante unter Verwendung von
+\begin{abc}
+\item Gau{\ss}-Elimination,
+\item Laplace-Entwicklung,
+% \item Regel von Sarrus.
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item 
+Gau{\ss}-Elimination:
+\begin{align*}
+\begin{pmatrix} 
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9\\
+\end{pmatrix}
+\xrightarrow{\substack{Z2'=Z2-4Z1\\Z3'=Z2-7Z1}}
+\begin{pmatrix} 
+1 & 2 & 3\\
+0 & -3 & -6\\
+0 & -6 & -12\\
+\end{pmatrix}
+\xrightarrow{Z3''=Z3'-2Z2'}
+\begin{pmatrix} 
+1 & 2 & 3\\
+0 & -3 & -6\\
+0 & 0 & 0\\
+\end{pmatrix}
+\end{align*}
+Die Determinante ist das Produkt der Diagonalelemente:
+$$
+\operatorname{det}(\vec A) = 1 \cdot (-3) \cdot 0 = 0
+$$
+\item Laplace-Entwicklung:
+
+Wir entwickeln die Determinante entlang der ersten Spalte
+\begin{align*}
+\operatorname{det}(\vec A) &= 1 \cdot \operatorname{det} \begin{pmatrix} 5 & 6 \\ 8 & 9\end{pmatrix}
+                            - 4 \cdot \operatorname{det} \begin{pmatrix} 2 & 3 \\ 8 & 9\end{pmatrix}
+                            + 7 \cdot \operatorname{det} \begin{pmatrix} 2 & 3 \\ 5 & 6\end{pmatrix}\\
+&= 1 \cdot (5 \cdot 9 - 6 \cdot 8) - 4 \cdot (2\cdot 9 - 3\cdot 8) + 7 \cdot (2\cdot 6-5\cdot 3)\\
+&=-3+24-21\\ &= 0.
+\end{align*}
+% \item Regel von Sarrus.
+% 
+% Zuerst erweitern wir die Matrix
+% $$
+% \begin{pmatrix} 
+% 1 & 2 & 3 & 1 & 2\\
+% 4 & 5 & 6 & 4 & 5\\
+% 7 & 8 & 9 & 7 & 8
+% \end{pmatrix}
+% $$
+% Dann berechnen wir die Produkte der Diagonalen. Die Abw\"artsdiagonalen sind rot und die Aufw\"artsdiagonalen sind blau geschrieben:
+% \begin{align*}
+% &\textcolor{red}{(1 \cdot 5 \cdot 9) + (2 \cdot 6 \cdot 7) + (3 \cdot 4 \cdot 8)} - \textcolor{blue}{[(7 \cdot 5 \cdot 3) + (8 \cdot 6 \cdot 1) + (9 \cdot 4 \cdot 2)]}\\ &= \textcolor{red}{45+84+96} - \textcolor{blue}{[105+48+72]} = \textcolor{red}{225} - \textcolor{blue}{225} = 0
+% \end{align*}
+
+\end{abc}
+}
+
+\ErgebnisC{Determinanten}
+{
+$\operatorname{det}(\vec A) = 0$
+}

@@ -1,0 +1,129 @@
+\Aufgabe[e]{Dimensionssatz f\"ur Untervektorr\"aume}{
+% Verify the dimension theorem for subspaces for
+Weisen Sie den Dimensionssatz nach f\"ur den Unterraum
+
+$\boldsymbol U =
+\{\, \lambda\, \boldsymbol a \,|\, \lambda \in \mathbb{R}\, \}
+\subset \boldsymbol V$
+und
+%
+$\boldsymbol W =
+\{\, \mu\, \boldsymbol b \,|\, \mu \in \mathbb{R}\,\}
+\subset \boldsymbol V$
+
+mit festen  $\boldsymbol a, \boldsymbol b \in \boldsymbol V  = \mathbb{R}^n$,
+$0 < n < \infty$.
+
+}
+
+\Loesung{
+Es m\"ussen die folgenden F\"alle betrachtet werden.
+%
+\begin{iii}
+\item Ohne Beschr\"ankung der Allgemeinheit seien
+$\boldsymbol a \neq \boldsymbol 0$ und
+$\boldsymbol b = \boldsymbol 0$.
+%
+
+Dann gilt $\dim \boldsymbol U = 1$,
+$\boldsymbol W = \{ \boldsymbol 0 \}$, $\dim \boldsymbol W = 0$,
+und daher
+$$
+\boldsymbol U + \boldsymbol W
+= \{ \boldsymbol x \in \boldsymbol V \,|\,
+\boldsymbol x \in \operatorname{span} \{ \boldsymbol u, \boldsymbol w \}\,,\,\,
+\boldsymbol u \in \boldsymbol U\,,\,\,
+\boldsymbol w \in \{ \boldsymbol 0 \} \}
+% 
+= \boldsymbol U
+$$
+genauso wie
+$\boldsymbol U \cap \boldsymbol W = \boldsymbol U \cap \{ \boldsymbol 0 \}
+= \{ \boldsymbol 0 \}$\,.
+% 
+Daraus folgt, dass
+$\dim(\boldsymbol U + \boldsymbol W) = \dim \boldsymbol U = 1$ und
+$\dim(\boldsymbol U \cap \boldsymbol W) = 0$\,.
+% 
+% 
+Daraus folgt die Formel des Dimensionssatzes:
+$$
+\dim (\boldsymbol U + \boldsymbol W)
+= \dim \boldsymbol U + \dim \boldsymbol W - \dim (\boldsymbol U \cap \boldsymbol W)\,.
+$$
+
+\item Die Vektoren $\boldsymbol a$ und $\boldsymbol b$ sind linear abh\"angig mit
+$\boldsymbol a, \boldsymbol b \neq \boldsymbol 0$.
+% 
+Daher gibt es einen $\nu \in \mathbb{R} \setminus \{ 0 \}$ so, dass
+$\boldsymbol b = \nu\, \boldsymbol a$.
+% 
+Mit $\lambda := \nu^{-1}\, \mu$,
+folgt aus
+$\boldsymbol u = \mu \boldsymbol a$, 
+dass
+$\boldsymbol u = \lambda \boldsymbol b$.
+% 
+Die zwei Unterr\"aume $\boldsymbol U$ und $\boldsymbol W$ sind identisch 
+und daher gilt, dass
+$$
+\boldsymbol U
+= \boldsymbol W
+= \boldsymbol U + \boldsymbol W
+= \boldsymbol U \cap \boldsymbol W\,,\quad
+\dim \boldsymbol U = 1\,.
+$$
+% 
+Daraus folgt der Dimensionssatz:
+$$
+\dim (\boldsymbol U + \boldsymbol W)
+= \dim \boldsymbol U + \dim \boldsymbol W - \dim (\boldsymbol U \cap \boldsymbol W)\,.
+$$
+
+\item Die Vektoren $\boldsymbol a$ und $\boldsymbol b$ sind linear unabh\"angig.
+% 
+
+Das impliziert, dass
+$\boldsymbol U + \boldsymbol W
+= \{\lambda \boldsymbol a + \mu \boldsymbol b \,|\, \lambda, \mu \in \mathbb{R} \}$.
+% 
+
+Wegen der linearen Unabh\"angigkeit von $\boldsymbol a$ und $\boldsymbol b$
+folgt, dass
+$\dim(\boldsymbol U + \boldsymbol W) = 2$.
+% 
+
+Sei $\boldsymbol x \in \boldsymbol U \cap \boldsymbol W$.
+Dann gilt, dass  $\boldsymbol x = \lambda \boldsymbol a = \mu \boldsymbol b$
+f\"ur $\lambda, \mu \in \mathbb{R}$
+woraus folgt, dass
+$\boldsymbol 0
+= \boldsymbol x - \boldsymbol x
+= \lambda \boldsymbol a - \mu \boldsymbol b$.
+% 
+
+Weil $\boldsymbol a$ und $\boldsymbol b$ linear unabh\"angig sind, folgt, dass
+% are linearly independent, this implies
+$\mu = \lambda \stackrel{!}{=} 0$.
+% 
+Daher gilt
+$\boldsymbol U \cap \boldsymbol W = \{ \boldsymbol 0 \}$ und
+$\dim(\boldsymbol U \cap \boldsymbol W) = 0$.
+
+Zus\"astzlich gilt 
+ $\dim \boldsymbol U = 1$ und $\dim \boldsymbol W = 1$ da
+$\boldsymbol a, \boldsymbol b \neq \boldsymbol 0$,
+wegen der linearen Unabh\"angigkeit.
+% 
+% 
+Daraus erhalten wir den Dimensionssatz:
+$$
+\dim (\boldsymbol U + \boldsymbol W)
+= \dim \boldsymbol U + \dim \boldsymbol W - \dim (\boldsymbol U \cap \boldsymbol W)\,.
+$$
+
+\item F\"ur den trivialen Fall $\boldsymbol a = \boldsymbol 0$ und
+$\boldsymbol b = \boldsymbol 0$ gilt der Dimensionssatz ebenfalls.
+\end{iii}
+
+}

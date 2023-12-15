@@ -1,0 +1,72 @@
+\Aufgabe[e]{Lineare Unabh\"angigkeit in Polynomr\"aumen}{
+Untersuchen Sie, ob die Elemente der Menge
+$$
+M_1 = \left\{
+  p_1(x) = x^2\,,\quad
+  p_2(x) = (x+1)^2\,,\quad
+  p_3(x) = (x-1)^2
+\right\}\,,\quad x \in \R\,,
+$$
+% 
+linear unabh\"angig im Vektorraum $P_2$ der
+reellwertigen Polynome vom maximalen Grad $2$ sind und
+geben Sie die Dimension von $\operatorname{span} M_1$ an.
+}
+\Loesung{
+Die Elemente der Menge $M_1$ sind linear unabhängig genau dann, wenn
+$$
+0 = \lambda_1\, p_1(x) + \lambda_2\, p_2(x) + \lambda_3\, p_3(x)\,,\quad
+\lambda_1, \lambda_2, \lambda_3 \in \R\,,
+$$
+nur die eindeutige Wahl $\lambda_1 = \lambda_2 = \lambda_3 = 0$ zulässt.
+% 
+Vergleichen Sie auch die Definition der linearen Unabhängigkeit von Elementen
+eines Vektorraums aus dem Skript.
+
+\bigskip
+Um das Problem zu lösen, setzen wir die Polynome in die obige Gleichung ein
+und erhalten
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l}
+0 &=& \lambda_1\, (x^2) + \lambda_2\, (x + 1)^2 + \lambda_3\, (x - 1)^2\,,\\[1ex]
+% 
+0 &=& x^2 \cdot ( \lambda_1 + \lambda_2 + \lambda_3 )
+  + x \cdot ( 2\, \lambda_2 -2\, \lambda_3 )
+  + 1 \cdot (\lambda_2 + \lambda_3)\,,
+\end{array}
+$$
+und durch Koeffizientenvergleich erhalten wir das Gleichungssystem
+$$
+\begin{array}{r@{\,\,}c@{\,\,}l}
+\lambda_1 + \lambda_2 + \lambda_3 &=& 0\,,\\[1ex]
+2\, \lambda_2 -2\, \lambda_3 &=& 0\,,\\[1ex]
+\lambda_2 + \lambda_3 &=& 0\,,
+\end{array}
+$$
+in den Unbekannten $\lambda_1$, $\lambda_2$ und $\lambda_3$.
+
+Durch die Anwendung des Gau\ss{}-Algorithmus erhalten wir
+$$
+\begin{array}{rrrr}
+1 & 1 &  1  & 0\\[1ex]
+0 & 2 & -2  & 0\\[1ex]
+0 & 0 &  2  & 0\\[1ex]
+\hline
+\end{array}\,.
+$$
+% 
+Dieses Gleichungssystem ist eindeutig lösbar.
+Somit kann nur die Wahl $\lambda_1 = \lambda_2 = \lambda_3 = 0$
+getroffen werden.
+
+\medskip
+Folglich sind die Elemente der Menge $M_1$ linear unabhängig.
+
+\medskip
+Aus der Stufenform folgt $\dim \operatorname{span} M_1 = 3$\,.
+}
+
+\ErgebnisC{linalg_linUnab_Poly_001}
+{
+$\dim(\text{span}( M_1))=3$
+}

@@ -1,0 +1,78 @@
+\Aufgabe[e]{Abstand von Geraden im $\R^3$}{
+Gegeben sind die Geraden
+$$
+\begin{array}{r@{\,}c@{\,}l}
+\boldsymbol g_1 &=& \left\{
+\boldsymbol x \in \R^3 \,\middle|\,
+\boldsymbol x = (2, 3, 3)^\top + \lambda\, (-1, 1, 2)^\top\,,\quad
+\lambda \in \R \right\}\,,\quad \text{und}\\[1ex]
+% 
+\boldsymbol g_2 &=& \left\{
+\boldsymbol x \in \R^3 \,\middle|\,
+\boldsymbol x = (3, 0, 4)^\top + \lambda\, (2, -2, 1)^\top\,,\quad
+\lambda \in \R \right\}\,.
+\end{array}
+$$
+
+Bestimmen Sie den Abstand zwischen den Geraden $\boldsymbol g_1$ und
+$\boldsymbol g_2$\,.
+}
+\Loesung{
+Den Abstand zwischen den beiden Geraden betimmen wir, indem wir eine Ebene $\boldsymbol E$ 
+bestimmen, die parallel zu beiden Geraden ist und eine der Geraden enthält. Der Abstand 
+zwischen den Geraden $\boldsymbol g_1$ und $\boldsymbol g_2$ ist gleich dem Abstand zwischen
+Ebene und Gerade.\\
+Ein Normalenvektor $\boldsymbol n$ der gesuchten Ebene muss senkrecht auf den
+Richtungsvektoren beider Geraden stehen:
+$$
+\langle \boldsymbol n,\, (-1, 1, 2)^\top\rangle = 0\quad
+\text{und}\quad
+\langle \boldsymbol n,\, (2, -2, 1)^\top \rangle =0\,.
+$$ 
+
+Also muss gelten 
+$$\begin{array}{rcrcrl|l}
+-n_1 &+&  n_2 &+& 2 n_3 &=0\\
+2n_1 &-& 2n_2 &+&   n_3 &=0&\text{+2$\times$ 1. Gl.}\\
+\hline
+% 
+-n_1 &+& n_2  &+& 2 n_3 &=0\\
+     & &      & & 5 n_3 &=0
+\end{array}$$
+
+Also gilt $n_3=0$.
+Damit folgt aus der ersten Gleichung $n_1 = n_2$.
+Dieser Wert kann frei gew\"ahlt werden, wir entscheiden uns f\"ur einen normierten 
+Normalenvektor:
+$$
+\boldsymbol n = \left( \frac{1}{\sqrt 2}, \frac{1}{\sqrt 2}, 0 \right)^\top\,.
+$$
+
+Die Hessesche Normalform der Ebene ist damit
+$$
+\boldsymbol E = \left\{ \boldsymbol x \in \R^3 \,\middle|\,
+% 
+\frac{1}{\sqrt{2}} \langle \boldsymbol x, (1, 1, 0)^\top \rangle
+= \frac{1}{\sqrt{2}}
+\langle(3, 0, 4)^\top, (1, 1, 0)^\top \rangle \right\}\,.
+$$
+
+Da $\boldsymbol E$ und $\boldsymbol g_1$ parallel liegen,
+ist der Abstand zwischen beiden gleich dem Abstand zwischen
+$E$ und dem St\"utzvektor von $\boldsymbol g_1$:
+% 
+$$
+d(\boldsymbol g_1, \boldsymbol E)
+=\left| \left\langle \boldsymbol n,
+\left(
+\begin{pmatrix} 3\\ 0\\ 4\end{pmatrix}
+- \begin{pmatrix} 2\\ 3\\ 3\end{pmatrix}
+\right) \right\rangle \right|
+=\sqrt{2}\,.
+$$
+}
+
+\ErgebnisC{linalg_Geom_Geraden_001}
+{
+$\sqrt{2}$
+}

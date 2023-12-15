@@ -1,0 +1,40 @@
+\Aufgabe[e]{Matrix rank}{
+Determine the rank of the matrix
+$$
+\boldsymbol C =
+\left[\begin{array}{rrrrr}
+3 &  8 & 6 & -4 & -1 \\
+0 &  0 & 1 &  1 &  3 \\
+0 &  0 & 0 &  0 &  4 \\
+0 & -7 & 8 &  1 &  1 \\
+0 &  0 & 0 & -7 &  4 
+\end{array}\right]\,.
+$$
+
+}
+
+\Loesung{
+Permute the rows as
+$$
+\begin{array}{rrrrr||l}
+3 &     8 &     6 &    -4 &    -1 \\
+0 &     0 &     1 &     1 &     3 &\text{ 4th row}\\
+0 &     0 &     0 &     0 &     4 &\text{ 2nd row}\\
+0 &    -7 &     8 &     1 &     1 &\text{ 5th row}\\
+0 &     0 &     0 &    -7 &     4 &\text{ 3rd row}\\
+\hline
+\end{array}\quad\rightarrow\quad
+% 
+\begin{array}{rrrrr||}
+3 &     8 &     6 &    -4 &    -1 \\
+0 &    -7 &     8 &     1 &     1 \\
+0 &     0 &     1 &     1 &     3 \\
+0 &     0 &     0 &    -7 &     4 \\
+0 &     0 &     0 &     0 &     4 \\
+\hline
+\end{array}\,.
+$$
+
+This yields $\operatorname{rank}(\boldsymbol C) = 5$.
+
+}

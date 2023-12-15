@@ -1,0 +1,49 @@
+
+\Aufgabe[e]{fr\"uhrere Klausuraufgabe}{
+Die \textbf{symmetrische} Matrix \ $\vec A:=\left(\begin{array}{@{}ccc@{}} 1&\cdot&\cdot\\ \cdot&\cdot&\cdot\\
+\cdot&\cdot&\cdot\end{array}\right)\in {\R}^{(3,3)}$ \ habe den Bildraum
+$$\mbox{ Bild}\,\vec A=\text{span}\,\{(1,0,1)^\top,\,(1,-1,1)^\top\}.$$
+\begin{abc}
+\item
+Berechnen Sie eine Orthonormalbasis f\"ur \ $\mbox{Bild}\,\vec A$, den Unterraum \ $\mbox{Kern}\,\vec A$ \ sowie die
+Matrix \ $\vec P$ \ der orthogonalen Projektion auf \ $\mbox{Bild}\,\vec A$.\\[1ex]
+\textbf{Hinweis:} Es gilt \ $\Kern\,\vec A^\top =(\Bild \,\vec A)^\perp$. 
+\item
+Bekannt sei, dass das inhomogene lineare Gleichungssystem
+\ $\vec A\vec{x}=\vec{b}$ \ zu gegebenem \ $\vec{b}:=(1,2,1)^\top$ \ die
+partikul\"are L\"osung \ $\vec{x}=\vec{e}_2:=(0,1,0)^\top$ \ besitze. Bestimmen Sie daraus
+die Matrix \ $\vec A$.
+\end{abc}
+}
+
+\Loesung{
+\textbf{Zu a)}  Es ist unmittelbar ersichtlich, dass die beiden Vektoren
+$\boxed{\vec{v}_1:=\frac{1}{\sqrt{2}}\,\big(1,0,1\big)^\top}$ sowie $\boxed{\vec{v}_2:=(0,1,0)^\top}=(1,0,1)^\top-(1,-1,1)^\top$
+eine ONB des Unterraums $\Bild \,\vec A$ bilden. Ferner gilt wegen der
+Symmetrie $\vec A= \vec A^\top$ die Beziehung $\Kern\,\vec A=(\Bild \,\vec A)^\perp$. Es folgt
+$\vec{h}\in\Kern\,\vec A$ genau f\"ur $\vec{h}\perp\Bild \,\vec A$, und somit zum Beispiel
+$$\vec{h}=\vec{v}_1\times\vec{v}_2=\frac{1}{\sqrt{2}}\,\left|\begin{array}{ccc}
+\vec{e}_1&1&0\\\vec{e}_2&0&1\\\vec{e}_3&1&0\end{array}\right|=\frac{1}{\sqrt{2}}\,\left(\begin{array}{@{}r@{}}
+-1\\0\\1\end{array}\right);\qquad \boxed{\Kern\,\vec A=\text{span}\,\{\vec{h}\}.}$$
+Ferner gilt
+$$
+\vec P=\vec{v}_1\otimes\vec{v}_1+\vec{v}_2\otimes\vec{v}_2=
+\frac{1}{2}\,\left(\begin{array}{@{}ccc@{}}1&0&1\\0&0&0\\1&0&1\end{array}\right)
++\left(\begin{array}{@{}ccc@{}}0&0&0\\0&1&0\\0&0&0\end{array}\right)
+=\boxed{\frac{1}{2}\,\left(\begin{array}{@{}ccc@{}}1&0&1\\0&2&0\\1&0&1\end{array}\right)\,.}
+$$
+
+\bigskip
+\textbf{Zu b)}  F\"ur $\vec A=(\vec{a}_1,\vec{a}_2,\vec{a}_3)$ muss $\vec A\vec{e}_2=\vec{a}_2\stackrel{!}{=}\vec{b}$ gelten. Die geforderte
+Symmetrie f\"uhrt somit auf
+$$
+\vec A=\left(\begin{array}{@{}ccc@{}}1&1&\alpha\\1&2&1\\\alpha&1&\beta\end{array}\right)
+\stackrel{\mbox{\footnotesize $\vec A\vec{h}=\vec{0}$}}{=}
+\boxed{\left(\begin{array}{@{}ccc@{}}1&1&1\\1&2&1\\1&1&1\end{array}\right)\,.}$$
+}
+
+\ErgebnisC{AufglinalgMatrOrth001}
+{
+$\vec P=\frac{1}{2}\,\left(\begin{array}{@{}ccc@{}}1&0&1\\0&2&0\\1&0&1\end{array}\right)$
+
+}

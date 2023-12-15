@@ -1,0 +1,57 @@
+\Aufgabe[e]{Matrix rank}{
+Calculate the rank of the matrix
+$$
+\boldsymbol B =
+\left[\begin{array}{rrr}
+ 1 & -2 & 0\\
+ 1 &  1 & 1\\
+-1 & -1 & 4\\
+ 3 &  4 & 3
+\end{array}\right]\,.
+$$
+
+}
+
+\Loesung{
+The Gaussian algorithm is applied as
+$$
+\begin{array}{rrr||}
+ 1 & -2 & 0\\
+ 1 &  1 & 1\\
+-1 & -1 & 4\\
+ 3 &  4 & 3\\
+\hline
+\end{array} \quad \rightarrow \quad
+%
+\begin{array}{rrr||}
+ 1 & -2 & 0\\
+ 0 &  3 & 1\\
+ 0 & -3 & 4\\
+ 0 & 10 & 3\\
+\hline
+\end{array} \quad \rightarrow \quad
+%
+\begin{array}{rrr||}
+ 1 & -2 & 0\\
+ 0 &  3 & 1\\
+ 0 &  0 & 5\\
+ 0 &  0 & 3-\frac{10}{3}\\
+\hline
+\end{array}
+$$
+
+$$
+\rightarrow \quad
+%
+\begin{array}{rrr||}
+ 1 & -2 & 0\\
+ 0 &  3 & 1\\
+ 0 &  0 & 5\\
+ 0 &  0 & 0\\
+\hline
+\end{array}
+$$
+
+This yields $\operatorname{rank}(\boldsymbol B) = 3$.
+
+}

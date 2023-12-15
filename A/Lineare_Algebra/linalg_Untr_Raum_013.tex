@@ -1,0 +1,35 @@
+\Aufgabe[e]{Lineare Unterr\"aume}{
+	Sind die folgenden Mengen Untervektorr\"aume des \ $\R^{2}$\,?
+	\begin{abc}
+		\item[e] $ \mathbb{U} = \left\{\left( x,\,y\right)^\top  \in \mathbb{R}^2 \Big \vert x+y = 1\right\} $ 
+		\item[e] $ \mathbb{U} = \left\{\left( x,\,y\right)^\top  \in \mathbb{R}^2 \Big \vert 2x -3y = 0\right\} $ 
+		\item[e] $ \mathbb{U} = \left\{\left( x,\,y\right)^\top  \in \mathbb{R}^2 \Big \vert xy = 0\right\} $ 
+		\item $\mathbb{U}=
+\left\{\left( x,\, y \right)^\top \in \mathbb{R}^2 \,\, \middle| \,\, x \geq y \right\}$
+	\end{abc}
+}
+\Loesung{
+	Man muss jeweils die Kriterien f\"ur einen Untervektorraum nachpr\"ufen; das sind:
+	\begin{iii}
+		\item $\Vek{u},\, \Vek{v} \in \mathbb{U} \quad \Rightarrow \quad \Vek{u} + \Vek{v} \in \mathbb{U} $ und 
+		\item $\Vek{u} \in \mathbb{U} $ und $ \lambda \in \mathbb{R} \quad \Rightarrow \quad \lambda\Vek{u} \in \mathbb{U} $
+	\end{iii}
+	Außerdem muss $\mathbb{U}$ selbst ein Vektorraum sein. Insbesondere muss daf\"ur gezeigt werden, dass der Nullvektor in $\mathbb{U}$
+	enthalten ist, also $ \Vek{0} \in \mathbb{U}$.
+	\begin{abc}
+		\item $\mathbb{U}$ ist kein Untervektorraum, denn \ $\Vek{0} = \left( 0\,,\,0\right)^\top \notin \mathbb{U}\,$, weil  $0+0 \ne 1$ ist.
+		\item F\"ur $\Vek{u}= \left( x_1\,,\,y_1\right)^\top \in \mathbb{U}$ und $\Vek{v}= \left( x_2\,,\,y_2\right)^\top \in \mathbb{U}$ gilt $2x_{1}-3y_{1}=0$ und $2x_{2}-3y_{2}=0\,$, also $2(x_{1}+x_{2})-3(y_{1}+y_{2})=0$ und somit \ $\Vek{u}+\Vek{v}=\left( x_1 + x_2\,,\,y_1 + y_2\right)^\top \in  \mathbb{U}$\,.
+			\newline
+			Und weiter: F\"ur $\Vek{u}= \left( x\,,\,y\right)^\top \in \mathbb{U}$ und $\lambda \in \R$ gilt $2x-3y=0\,$, also $\lambda(2x - 3y) = 0$ und somit $\lambda \Vek{u}= \left( \lambda x\,,\,\lambda y\right)^\top \in \mathbb{U}$\,. Folglich ist $\mathbb{U}$ ein Untervektorraum.
+		\item $\mathbb{U}$  ist kein Untervektorraum, denn f\"ur $\Vek{u}_{1}= \left( 1\,,\,0\right)^\top$ und $\Vek{u}_{2}= \left( 0\,,\,1\right)^\top$ gilt $\Vek{u}_{1}\in \mathbb{U}$ und $\Vek{u}_{2} \in \mathbb{U}\,$, aber $\Vek{u}_{1} + \Vek{u}_{2} = \left( 1\,,\,1\right)^\top \not\in \mathbb{U}$.
+		\item $\mathbb{U}$ ist kein Untervektorraum, denn f\"ur $\Vek{u} = (x,y)^\top$ 
+		gilt $x\geq y$, aber f\"ur $\lambda = -1$ gilt f\"ur $\lambda \Vek{u}$ diese 
+		Eigenschaft nicht mehr.
+	\end{abc}
+}
+%\newcounter{AufglinAlg013}
+%\setcounter{AufglinAlg013}{\theAufg}
+%\Ergebnis{\subsubsection*{Ergebnisse zu Aufgabe \arabic{Blatt}.\arabic{AufglinAlg013}:}
+%
+%}
+

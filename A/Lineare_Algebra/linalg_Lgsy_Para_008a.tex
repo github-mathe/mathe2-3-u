@@ -1,0 +1,113 @@
+\Aufgabe[e]{L\"osbarkeit Linearer Gleichungssysteme}
+{
+F\"ur ein festes $t\in \R$ sei das lineare Gleichungssystem  
+$$\begin{array}{rrrrrrrrr}
+2 x_1   & -& 2 x_2 & +& 1 x_3      &-&  3    x_4 & = &1\\
+-2 x_1  & -& 2t x_2& +& t x_3      &+& (4+t) x_4 & = & 0\\
+-4t x_1 & -& 4 x_2 & +& (2-2t) x_3 &+& 8t    x_4 & = & 2\\
+6 x_1   & -& 6 x_2 & +& (3+t) x_3  &+& (-9+t)x_4 & = & 3-t^2
+\end{array}$$
+gegeben. 
+
+\begin{abc}
+ \item Wenden Sie das Gau{\ss}sche Eliminationsverfahren auf das Gleichungssystem an. \\
+(\textbf{ohne Rückwärtseinsetzen, Stufenform genügt!}).
+ \item Bestimmen Sie in Abhängigkeit von $t$ den Rang des Gleichungssystems.  
+\item Wieviele Freiheitsgrade hat das Gleichungssystem?
+\item F\"ur welche Werte von $t\in \R$ ist das inhomogene 
+Gleichungssystem lösbar? 
+\textbf{Die L\"osung selbst ist nicht zu berechnen!}
+\end{abc}
+}
+\Loesung{
+\textbf{Zu a)} Der Gau{\ss}sche Algorithmus (ohne 
+Zeilenvertauschungen!) liefert
+\begin{align*}
+& \left(\begin{array}{@{}rrrr|r@{}}
+2 & -2 & 1 & -3 & 1\\
+-2 & -2t & t & 4+t& 0\\
+-4t & -4 & 2-2t & 8t& 2 \\
+6 & -6 & 3+t & -9+t & 3-t^2
+\end{array}\right)\\[1ex]
+\rightarrow & 
+\left(\begin{array}{@{}rrrr|r@{}}
+2 & -2 & 1 & -3 & 1\\
+0 & -2-2t & 1+t & 1+t& 1\\
+0 & -4-4t & 2 & 2t& 2+2t \\
+0 &  0 & t & t & -t^2
+\end{array}\right)\\[1ex]
+\rightarrow & 
+\left(\begin{array}{@{}rrrr|r@{}}
+2 & -2 & 1 & -3 & 1\\
+0 & -2-2t & 1+t & 1+t& 1\\
+0 &  0 & -2t & -2& 2t \\
+0 &  0 & t & t & -t^2
+\end{array}\right)\\[1ex]
+\rightarrow & 
+\left(\begin{array}{@{}rrrr|r@{}}
+2 & -2 & 1 & -3 & 1\\
+0 & -2-2t & 1+t & 1+t& 1\\
+0 &  0 & -2t & -2& 2t \\
+0 &  0 & 0 & t-1 & -t^2+t
+\end{array}\right)\,.
+\end{align*}
+
+\bigskip
+\textbf{Zu b)} Aus der Stufenform liest man das folgende ab:
+\begin{itemize}
+\item F\"ur $t=1$ verschwindet die letzte Zeile des Gleichungssystems. 
+$$\left(\begin{array}{rrrr|r}
+2 & -2 & 1 & -3 & 1\\
+0 & -4 & 2 & 2& 1\\
+0 &  0 & -2 & -2& 2 \\
+0 &  0 & 0 & 0 & 0
+\end{array}\right)
+$$
+Es verbleiben drei Zeilen,
+d. h. der Rang des Gleichsungssystems ist 3. 
+\item F\"ur $t=0$ verschwindet die vorletzte Stufe des Systems und die letzte Gleichung kann mit der
+vorletzten eliminiert werden:
+$$\left(\begin{array}{rrrr|r}
+2 & -2 & 1 & -3 & 1\\
+0 & -2 & 1 & 1& 1\\
+0 &  0 &  0 & -2& 0 \\
+0 &  0 & 0 & -1& 0
+\end{array}\right) \quad\rightarrow\quad
+\left(\begin{array}{rrrr|r}
+2 & -2 & 1 & -3 & 1\\
+0 & -2 & 1 & 1& 1\\
+0 &  0 &  0 & -2& 0 \\
+0 &  0 & 0 &  0& 0
+\end{array}\right)
+$$
+ Auch dann hat das Gleichungssystem den Rang 3. 
+\item F\"ur $t=-1$ verschwindet die zweite Stufe . 
+$$\left(\begin{array}{rrrr|r}
+2 & -2 & 1 & -3 & 1\\
+0 &  0 & 0 & 0& 1\\
+0 &  0 &  2 & -2& 2 \\
+0 &  0 & 0 & -2& -2
+\end{array}\right)\quad\rightarrow\quad 
+\left(\begin{array}{rrrr|r}
+2 & -2 & 1 & -3 & 1\\
+0 &  0 &  2 & -2& 2 \\
+0 &  0 & 0 & -2& -2\\
+0 &  0 & 0 & 0& 1
+\end{array}\right)
+$$
+Der Rang der Koeffizientenmatrix ist abermals drei. Der Rang der erweiterten Koeffizientenmatrix ist 4.
+\end{itemize}
+\bigskip
+\textbf{Zu c)/d)} Zur L\"osbarkeit des Gleichungssystems gelten die folgenden Aussagen.
+\begin{iii}
+ \item F\"ur $t\not\in\{0,1,-1\}$ besitzt das Gleichungssystem nach den Gauß-Schritten
+ aus \textbf{a)} vier Zeilen, es ist also eindeutig 
+lösbar und hat keine Freiheitsgrade. 
+\item Für $t=0$ und $t=1$  enth\"alt das Gleichungssystem nach den Gauß-Schritten aus \textbf{b)}
+ noch drei Zeilen. Es ist also l\"osbar mit einem Freiheitsgrad. 
+\item Für $t=-1$ enth\"alt die letzte Zeile auf der rechten Seite noch einen nicht verschwindenden
+Eintrag. Die zugeh\"orige Gleichung w\"are $0=1$. Damit ist das Gleichungssystem nicht l\"osbar. 
+\end{iii}
+
+}
+\ErgebnisC{linalgLgsyPara009a}{Es treten die Spezialf\"alle $t=\pm 1$ und $t=0$ auf. }

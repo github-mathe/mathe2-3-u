@@ -1,0 +1,93 @@
+\Aufgabe[e]{Lineare Gleichungssysteme}{
+\begin{abc}
+\item Betrachten Sie ein lineares Gleichungssystem beliebiger Dimension 
+      mit zwei unterschiedlichen Lösungen. Hat ein solches System immer 
+      unendlich viele Lösungen?
+
+\item Gibt es ein lineares Gleichungssystem mit weniger Gleichungen 
+      als Variabelen, sodass es eine eindeutige Lösung ist?
+
+\item Seien $a,b,c,d,r$ und $s$ reelle Zahlen. Überprüfen Sie, ob das
+      lineare Gleichungssystem 
+
+$$
+\begin{array}{rcl}
+a\, x_1 + b\, x_2 &=& r\\
+c\, x_1 + d\, x_2 &=& s
+\end{array}
+$$
+eindeutig lösbar ist, falls $a d - b c \neq 0$ und berechnen Sie die Lösung.
+\end{abc}
+
+}
+
+\Loesung{
+\textbf{a)} Seien $(x_1, x_2, \ldots, x_n)^T$ und
+$(y_1, y_2, \ldots, y_n)^T$ zwei unterschiedliche spezielle Lösungen
+desselben linearen Gleichungssystems. Dann ist
+$$
+(x_1 - y_1, x_2 - y_2, \ldots, x_n - y_n)^T
+$$
+eine Lösung des entsprechenden homogenen Systems. 
+%
+Dann ist auch für jedes beliebiges $t \in \R$,
+$$
+(x_1, x_2, \ldots, x_n)^T + t\, (x_1 - y_1, x_2 - y_2, \ldots, x_n - y_n)^T
+$$
+eine Lösung des ursprünglichen linearen Gleichungssystems.
+Daher hat ein solches lineares Gleichungssystem immer unendlich viele Lösungen.
+
+\bigskip
+\textbf{b)}
+Nach dem Überführen in Zeilenstufenform erkennt man, dass eine Variable 
+frei gewählt werden kann, falls eine Lösung existiert.
+Daher ist die Lösung niemals eindeutig.
+
+
+\bigskip
+\textbf{c)} Sei $D := a d - b c \neq 0$.
+Da $D \neq 0$ folgt $a \neq 0$ oder $c \neq 0$.
+Wir betrachten zuerst den Fall $a \neq 0$. Es gilt
+$$
+\begin{array}{cc|c}
+a & b & r\\
+c & d & s
+\end{array}
+\quad \stackrel{Z_2 - \frac{c}{a}\,Z_1}{\longrightarrow}
+\quad
+\begin{array}{cc|c}
+a & b & r\\
+0 & d-\frac{c}{a}b & s-\frac{c}{a}r
+\end{array}
+\quad\longrightarrow\quad
+\begin{array}{cc|c}
+a & b & r\\
+0 & \frac{ad-bc}{a} & \frac{as-cr}{a}
+\end{array}
+$$
+
+Aus der zweiten Zeile folgt
+$$
+\frac{a d - b c}{a}\, x_2 = \frac{a s - c r}{a} \quad
+\stackrel{D \neq 0}{\longrightarrow}\quad
+x_2 = \frac{a s - c r}{D}\,.
+$$
+% 
+Die erste Zeile impliziert ($D = a d - b c \neq 0$)
+$$
+a\, x_1 + b\, \frac{a s - c r}{D} = r \quad \longrightarrow \quad
+a\, x_1 = \frac{r D - a b s + b c r}{D} = \frac{a d r - b c r - a b s + b c r}{D}
+$$
+und daher
+$$
+x_1 = \frac{d r - b s}{D}\,.
+$$
+% 
+Die eindutige Lösung ist dann
+$$
+(x_1, x_2)^T = \left( \dfrac{d r - b s}{D}, \dfrac{a s - c r}{D}\right)^T\,.
+$$
+% 
+Der Fall $c \neq 0$ wird analog behandelt.
+
+}

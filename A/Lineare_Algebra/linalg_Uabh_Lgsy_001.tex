@@ -1,0 +1,107 @@
+\Aufgabe[e]{}
+{
+Im $\R^3$ sind die Vektoren 
+$$\vec a=\begin{pmatrix}2\\2\\1\end{pmatrix},\vec b=\begin{pmatrix} 1\\1\\1\end{pmatrix}, \vec
+c=\begin{pmatrix}1\\1\\-1\end{pmatrix}$$
+gegeben. \\
+Es ist zu \"uberpr\"ufen, ob die Vektoren $\vec a,\,\vec b,\, \vec c$ linear unabh\"angig sind. %Desweiteren ist eine \textit{m\"oglichst einfache} Basis des von den drei Vektoren aufgespannten Unterraumes zu bestimmen. 
+\begin{abc}
+\item Wenden Sie dazu den Gauß-Algorithmus auf die Matrix $(\vec a,\vec b,\vec c)$ an. 
+\item Wenden Sie ebenso den Gauß-Algorithmus auf die Matrix $(\vec a,\vec b,\vec c)^\top$ an. 
+\item Bestimmen Sie die Dimension von $\operatorname{span} \{\boldsymbol a, \boldsymbol b, \boldsymbol c \}$.
+\item Zeigen Sie, dass die Zeilenvektoren der Zeilenstufenformen aus \textbf{a)} 
+und \textbf{b)} zwei unterschiedliche Untervektorräume des
+$\mathbb R^3$ aufspannen.
+\end{abc}
+
+}
+\Loesung{
+\begin{abc}
+\item Dieser Gauß-Algorithmus behandelt das Gleichungssystem, das zur Definition der linearen Unabh\"angigkeit geh\"ort: \\
+$\vec a,\,\vec b,\vec c$ sind linear unabh\"angig. $\,\Leftrightarrow\,$ Das Gleichungssystem $ \alpha\vec a+\beta \vec b+\gamma \vec c=\vec 0 $
+hat \textbf{nur} die L\"osung $\alpha=\beta=\gamma=0.$
+$$\begin{array}{rrr|r|l}
+\alpha&\beta&\gamma&       \\\hline
+2     &  1  &  1   & 0  &   \\
+2     &  1  &  1   & 0  & -I  \\
+1     &  1  & -1   & 0  & -\frac 12 \times I  \\\hline
+
+2     &  1  &  1   & 0  &   \\
+0     &  0  &  0   & 0  &     \\
+0     &  1/2& -3/2 & 0  & \text{ tausche }II\leftrightarrow III\\\hline
+
+2     &  1  &  1   & 0  &   \\
+0     &  1/2& -3/2 & 0  & \\
+0     &  0  &  0   & 0  &     \\
+\end{array}$$
+Es ist eine Variable frei w\"ahlbar, damit gibt es mehrere L\"osungen und die Vektoren sind linear abh\"angig. 
+\item Dieser Gauß-Algorithmus kombiniert die einzelnen Vektoren so, dass m\"oglichst einfache Vektoren \"ubrig bleiben (Zeilenstufenform), denen man die lineare Unabh\"angigkeit/Abh\"angigkeit ansieht. Es liegt kein Gleichungssystem zu Grunde, daher entf\"allt die rechte Seite. 
+$$\begin{array}{rrr|l}
+\alpha&\beta&\gamma&       \\\hline
+2     &  2  &  1     &   \\
+1     &  1  &  1     & -\frac 12 \times I\\
+1     &  1  & -1     & -\frac 12 \times I  \\\hline
+
+2     &  2  &  1     &   \\
+0     &  0  &  1/2   &   \\
+0     &  0  & -3/2   & +3\times II  \\\hline
+
+2     &  2  &  1     &   \\
+0     &  0  &  1/2   &   \\
+0     &  0  &  0     & \\
+\end{array}$$
+Auch hier verbleiben zwei Vektoren. Diese bilden bereits eine Basis des von $\vec a,\, \vec b$ und $\vec c$ aufgespannten Unterraumes $\vec U$. 
+
+Die Zeilenvektoren des ersten Systems haben nichts mit dem Unterraum $\vec U$ zu tun und sind  nicht in ihm enthalten.\\
+Die Zeilenvektoren des zweiten Systems sind immer eine Linearkombination der vorhergehenden Zeilen. Der Unterraum $\vec U$ wird also nie verlassen. 
+\item Aus der Zeilenstufenform kann man ablesen, dass die Dimension von 
+$\operatorname{span} \{\boldsymbol a, \boldsymbol b, \boldsymbol c \}$ gleich 2 ist.
+
+\item Der Untervektorraum, der durch die Zeilen der Zeilenstufenform aus \textbf{a)}
+aufgespannt wird ist:
+
+$$
+\boldsymbol U_1 = \operatorname {span} \left\{ \begin{pmatrix} 2\\1\\1 \end{pmatrix} \, ,
+\, \begin{pmatrix} 0\\1\\-3 \end{pmatrix}\right\}.
+$$
+
+Der Untervektorraum, der durch die Zeilen der Zeilenstufenform aus \textbf{b)}
+aufgespannt wird ist:
+
+$$
+\boldsymbol U _2 = \operatorname {span} \left\{ \begin{pmatrix} 2\\2\\1 \end{pmatrix} \, ,
+\, \begin{pmatrix} 0\\0\\1 \end{pmatrix}\right\}.
+$$
+
+Falls die beiden Vektorräume $\boldsymbol U_1$ und $\boldsymbol U_2$ identisch, kann man 
+jeden Vektor aus $\boldsymbol U_1$ in der Basis von $\boldsymbol U_2$ darstellen und umgekehr.
+Wir wählen also einen Vektor $\boldsymbol v \in \boldsymbol U_2$ zum Beispiel
+
+$$
+\boldsymbol v = \begin{pmatrix} 2\\2\\1 \end{pmatrix} - \begin{pmatrix}0\\0\\1 \end{pmatrix}
+= \begin{pmatrix} 2\\2\\0 \end{pmatrix}.
+$$
+
+Wir nehmen an, dass $\boldsymbol v \in \boldsymbol U_1$. Dann lässt sich $\boldsymbol v$ 
+als Linearkombination der Basisvektoren von $\boldsymbol U_1$ schreiben.
+
+$$
+\lambda \begin{pmatrix} 2\\1\\1 \end{pmatrix}
++\mu \begin{pmatrix} 0\\1\\-3 \end{pmatrix}
+=\begin{pmatrix} 2\\2\\ 0 \end{pmatrix}
+$$
+
+An den ersten und zweiten Komponenten kann man sehen, dass $\lambda =1$ und 
+$\mu = 1$ sein müssen, um die Gleichung zu erfüllen. Dies führt jedoch zu
+einem Widerspruch in der dritten 
+Komponente. Daher ist die Annahme, dass $ \boldsymbol v \in \boldsymbol U_1$, falsch. 
+Daraus folgt
+
+$$
+\boldsymbol U_1 \neq \boldsymbol U_2.
+$$
+
+\end{abc}
+}
+
+

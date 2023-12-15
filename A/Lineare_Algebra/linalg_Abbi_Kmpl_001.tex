@@ -1,0 +1,158 @@
+\Aufgabe[f]{Lineare Abbildung im Komplexen}{
+Gegeben ist die lineare Abbildung $\Vek L: \, \C^4 \, \rightarrow \, \C^3$ mit der Matrix 
+$$\Vek A = \begin{pmatrix} 
+    1 &  1+\imag &        1 &    \imag \\ 
+    0 &        1 &        1 &        1 \\ 
+    1 &   2\imag &    \imag &  2\imag-1
+\end{pmatrix}$$
+sowie der Vektor $\Vek b_\lambda = (\lambda-\imag, \, 0,\, -2\imag)^\top.$
+\begin{abc}
+\item Geben Sie $\Rang (\Vek A)$ und Orthonormalbasen von $\Bild \Vek A$ sowie $\Kern\Vek A$ und
+  $(\Bild \Vek A)^\perp$ an. 
+\end{abc}
+\textbf{Hinweise}: 
+\begin{itemize}
+\item Der Orthogonalraum $\vec U^\perp$ eines Unterraumes $\vec U\subset\C^n$ enth\"alt alle Vektoren, die senkrecht zu allen
+Vektoren aus $\vec U$ sind: 
+$$\vec U^\perp=\{\vec v\in\C^n|\, \skalar{\vec v,\vec u}=0\text{ f\"ur alle }\vec u\in\vec U\}$$
+\item Im Komplexen gilt $(\Bild\vec A)^\perp = \Kern(\vec A^*)$. 
+\end{itemize}
+\begin{abc}\setcounter{enumi}{1}
+\item F\"ur welche $\lambda\in \C$ ist $\Vek b_\lambda\in \Bild\Vek A$ enthalten?
+\item Geben Sie f\"ur beliebige $\lambda\in\C$ eine Zerlegung von $\Vek b_\lambda$ in Komponenten
+  aus $\Bild \Vek A$ und $(\Bild \Vek A)^\perp$ an. 
+\item Bestimmen Sie alle $\Vek x_\lambda\in \C^4$, so dass $\Vek A \Vek x_\lambda$ die orthogonale
+  Projektion von $\Vek b_\lambda$ auf $\Bild \Vek A$ ist. 
+\end{abc}
+
+
+}
+
+\Loesung{
+\begin{abc}
+\item Um eine Basis von $\Bild \Vek A$ zu bestimmen, wenden wir den Gauß-Algorithmus auf die
+Spaltenvektoren von $\Vek A$ an: 
+$$\begin{array}{rrr|l}
+       1  &       0 &       1  & \text{                                    }\\
+  1+\imag &       1 &   2\imag & \text{ -$(1+\imag)\cdot$ 1. Zeile         }\\
+       1  &       1 &    \imag & \text{ -1. Zeile                          }\\
+    \imag &       1 & 2\imag-1 & \text{ -$\imag\cdot$ 1. Zeile             }\\\hline
+
+       1  &       0 &       1  & \text{                                    }\\
+       0  &       1 & -1+\imag & \text{                                    }\\
+       0  &       1 & \imag-1  & \text{ -2. Zeile                          }\\
+       0  &       1 & \imag-1  & \text{ -2. Zeile                          }\\\hline
+
+       1  &       0 &       1  & \text{                                    }\\
+       0  &       1 & -1+\imag & \text{                                    }\\
+       0  &       0 &       0  & \text{                                    }\\
+       0  &       0 &       0  & \text{                                    }
+\end{array}$$
+Eine Basis des Bildraumes ist damit 
+$$\{(1,\, 0,\, 1)^\top, \, (0,\, 1,\, \imag-1)^\top\}.$$
+Diese wird noch orthonormiert: 
+\begin{align*}
+&&\Vek v_1 = & \frac 1{\sqrt 2} (1,\, 0,\, 1)^\top\\
+&&\Vek w_2 = & (0,\, 1,\, \imag-1)^\top - \frac 12 \skalar{(0,\, 1,\, \imag-1)^\top,\, (1,\, 0,\, 1)^\top} (1,\, 0,\, 1)^\top\\
+&&=& \frac 12 (1-\imag ,\, 2,\, \imag-1)^\top\\
+\Rightarrow &&\Vek v_2 = & \frac 1 {\sqrt{8}} (1-\imag,\, 2,\, \imag-1)^\top
+\end{align*}
+Die Vektoren $\vec v_1$ und $\vec v_2$ bilden eine Basis von $\Bild \vec A$. Um eine Basis des
+Orthogonalraumes $(\Bild \vec A)^\perp$ zu erhalten, setzen wir den Gram-Schmidt-Algorithmus mit einem
+willk\"urlichen Vektor -- hier $\vec e_3$ -- fort: 
+\begin{align*}
+&&\vec w_3=&\vec e_3 -  \skalar{\vec e_3,\, \vec v_1} \vec v_1 - \skalar{\vec e_3,\, \vec v_2}\vec
+v_2\\
+&&=& \begin{pmatrix}0\\0\\1\end{pmatrix} - \frac 12 \begin{pmatrix}1\\0\\1\end{pmatrix} - \frac
+{-1-\imag}8 \begin{pmatrix}1-\imag \\ 2 \\\imag -1\end{pmatrix}
+= \frac 14 \begin{pmatrix} -1\\1+\imag\\1\end{pmatrix}\\
+\Rightarrow&&\vec v_3 = & \frac 12 \begin{pmatrix}-1\\1+\imag\\1\end{pmatrix}
+\end{align*}
+Dieser Vektor $\vec v_3$ bildet eine Orthonormalbasis von $(\Bild\vec A)^\perp$. 
+
+Der Rang der Abbildung ist 2. Gem\"aß Dimensionsformel hat der Kern somit die Dimension $4-2=2$. 
+Wir ermitteln ihn im Gauß-Verfahren: 
+$$\begin{array}{rrrr|r|l}
+       1 &  1+\imag &        1 &  \imag   &        0 & \text{                            }\\
+       0 &       1  &        1 &       1  &        0 & \text{                            }\\
+       1 &   2\imag &  \imag   & 2\imag-1 &        0 & \text{ -1. Zeile                  }\\\hline
+
+       1 &  1+\imag &        1 &  \imag   &        0 & \text{                            }\\
+       0 &       1  &        1 &       1  &        0 & \text{                            }\\
+       0 &  \imag-1 &  \imag-1 &  \imag-1 &        0 & \text{ -$(\imag-1)\cdot$ 2. Zeile }\\\hline
+
+       1 &  1+\imag &        1 &  \imag   &        0 & \text{                            }\\
+       0 &       1  &        1 &       1  &        0 & \text{                            }\\
+       0 &       0  &        0 &       0  &        0 & \text{ -$(\imag-1)\cdot$ 2. Zeile }
+\end{array}$$
+Wir w\"ahlen zun\"achst $(x_3,x_4)=(1,0)$, um den ersten Basisvektor $(\imag,\, -1,\, 1,\, 0)^\top$
+und dann $(x_3,x_4)=(0,1)$, um den zweiten Basisvektor $(1,\, -1,\, 0,\, 1)^\top$ zu erhalten. F\"ur diese
+beiden Vektoren liefert das Schmidtsche Verfahren: 
+\begin{align*}
+&&\Vek z_1 = & \frac 1{\sqrt 3} (\imag,\, -1,\, 1,\, 0)^\top\\
+&&\Vek z'_2 = & (1,\, -1,\, 0,\, 1)^\top - \frac 13 (-\imag+1) (\imag,\, -1,\, 1,\, 0)^\top=\frac 13
+( 2-\imag,\, -2-\imag,\, \imag-1,\, 3)^\top\\
+\Rightarrow &&\Vek z_2 = & \frac 1{\sqrt{21}} (2-\imag,\, -2-\imag,\, \imag -1,\, 3)^\top
+\end{align*}
+
+\item Es ist $\Vek b_\lambda\in \Bild \Vek A$, wenn $\{\Vek b_\lambda,\, \Vek v_1,\, \Vek v_2\}$
+linear abh\"angig ist. Dies pr\"ufen wir mittels Gauß-Verfahren nach: 
+$$\begin{array}{rrr|l}
+       1       &       0  &       1 & \text{(Vielfaches von $\Vek v_1$)           }\\
+ 1-\imag       &       2  & \imag-1 & \text{(Vielfaches von $\Vek v_2$)           }\\
+ \lambda-\imag &       0  & -2\imag & \text{($\Vek b_\lambda$)                     }\\\hline
+
+       1       &       0  &       1         & \text{}\\
+       0       &       2  & 2 \imag-2       & \text{2. Zeile - $(1-\imag)\cdot$ 1. Zeile    }\\
+       0       &       0  & -\lambda-\imag  & \text{3. Zeile - $(\lambda-\imag)\cdot$ 1. Zeile}
+\end{array}$$
+Die letzte Zeile verschwindet genau dann, wenn $\lambda=-\imag$ ist, dann sind die drei Vektoren
+linear abh\"angig, es ist also 
+$$\Vek b_{-\imag}\in \Bild \Vek A.$$
+\item Die Projektion auf $\Bild \Vek A$ wird geliefert durch 
+\begin{align*}
+\Vek P ( \Vek b_\lambda) = &\skalar{\Vek b_\lambda,\Vek v_1}\Vek v_1 + \skalar{\Vek b_\lambda,\Vek
+v_2}\Vek v_2\\
+=& \frac{\lambda-3\imag}{2}\begin{pmatrix}1\\0\\1\end{pmatrix}
++ \frac{\lambda(1+\imag)-1+\imag}8\begin{pmatrix}1-\imag\\2\\\imag-1\end{pmatrix}\\
+=& \frac \lambda{8} \begin{pmatrix} 6\\2+2\imag\\2\end{pmatrix}+\frac
+18\begin{pmatrix} -10\imag\\-2+2\imag\\-14\imag\end{pmatrix}
+=\frac \lambda 4 \begin{pmatrix} 3\\1+\imag\\1\end{pmatrix}
+ - \frac 14\begin{pmatrix}5\imag\\1-\imag\\7\imag\end{pmatrix}.
+\end{align*}
+Der Anteil von $\Vek b_\lambda$  orthogonal zu $\Bild \Vek A$ ergibt sich als Differenz aus beiden: 
+\begin{align*}
+\Vek b_\lambda - \Vek P(\Vek b_\lambda) =
+& \frac{\lambda}{4}\begin{pmatrix}1\\-1-\imag\\-1\end{pmatrix} 
++ \frac 14\begin{pmatrix}\imag\\1-\imag\\-\imag\end{pmatrix}.
+\end{align*}
+\item Es soll also gelten $\Vek A \Vek x_\lambda = \Vek P (\Vek b_\lambda)$: 
+$$\begin{array}{rrrr|r}
+1       &1+\imag   &1       & \imag  & 3/4\lambda - 5/4\imag\\
+0       &1         &1       &    1   & (1+\imag)/4\lambda - (1-\imag)/4\\
+1       &2\imag    &\imag   &2\imag-1& 1/4\lambda - 7/4\imag\\\hline
+
+1       &1+\imag   &1       & \imag  & 3/4\lambda - 5/4\imag\\
+0       &1         &1       &    1   & (1+\imag)/4\lambda - (1-\imag)/4\\
+0       &1-\imag   &1-\imag &1-\imag & \lambda/2  + 1/2\imag\\\hline
+
+1       &1+\imag   &1       & \imag  & 3/4\lambda - 5/4\imag\\
+0       &1         &1       &    1   & (1+\imag)/4\lambda - (1-\imag)/4\\
+0       &0         &0       & 0      &      0                       
+\end{array}$$
+Dies liefert die Partikul\"arloesung 
+$$\Vek x_\lambda^0=((2-i)/4\lambda + (1-6\imag)/4,\, 0,\,
+(1+i)/4\lambda - (1-i)/4,\, 0)^\top$$
+ und damit die allgemeine L\"osung: 
+$$\Vek x_\lambda\in \Vek x_\lambda^0+\Kern(\Vek A).$$
+\end{abc}
+}
+
+\ErgebnisC{AufglinalgAbbiKmpl001}
+{
+\textbf{ a)} $\Rang(\Vek A)=2$, $\Bild(\Vek A) = \Spn\{(1/\sqrt{2},0,1/\sqrt{2})^\top, \, 1/\sqrt{8}(1-\imag,\,
+2,\, \imag-1)^\top\}$,\\
+$\Kern(\Vek A) = \Spn \{1/\sqrt{3}(\imag,-1,1,0)^\top,\, 1/\sqrt{21}(2-\imag, -2-\imag, \imag
+-1, 3)^\top\}$\\
+\textbf{ b)} $\Vek b_{-i}\in\Bild(\Vek A)$
+}
