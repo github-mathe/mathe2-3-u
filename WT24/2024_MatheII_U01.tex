@@ -2,7 +2,7 @@
 \input{header}
 
 \newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
-\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l}Dr.\ Frank Gimbel\\Janna Puderbach\end{tabular}}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} M.Sc Janna Puderbach\end{tabular}}
 
 \newcommand{\Jahr}{2024}
 % \newcommand{\Trimester}{HT}
@@ -10,7 +10,7 @@
 \newcommand{\Kurs}{Mathematik II}
 \newcommand{\TYPE}{Aufgabenblatt}
 \newcommand{\BLATT}{1}
-\newcommand{\TOPIC}{Grenzwerte}
+\newcommand{\TOPIC}{Definitheit, Ähnlichkeit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
@@ -37,80 +37,44 @@
 \begin{itemize}
 \item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
 \item Die mit einem Stern *) markierten (Teil-)Aufgaben entfallen in diesem Trimester. Stattdessen werden einzelne Online-Aufgaben im ILIAS-Kurs kenntlich gemacht, zu denen Sie dort Ihre L\"osungswege zur Korrektur hochladen k\"onnen. 
-\item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
+% \item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
 \end{itemize}
 
 \ruleBig
 
 %Mathe II Blatt 1
 
-\input{../A/Analysis/analys_Gren_Wert_004.tex}
+\input{../A/Lineare_Algebra/linalg_Posi_Defi_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
 
-\input{../A/Analysis/analys_Folg_Lims_001.tex}
+% \input{../A/Lineare_Algebra/linalg_Abbi_Klau_01b.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+\input{../A/Lineare_Algebra/linalg_Abbi_Kmpl_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
 
-\input{../A/Analysis/aufgabe2.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Gren_Wert_005.tex}
+\input{../A/Lineare_Algebra/linalg_Detn_Gauss_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
 
-\input{../A/Analysis/analys_Funk_Lims_001.tex}
+\input{../A/Lineare_Algebra/licdnalg_Detn_Lapl_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+% 
+\input{../A/Lineare_Algebra/linalg_Matr_Symm_003.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
 
-\input{../A/Analysis/analys_Gren_Wert_006_de.tex}
+\input{../A/Lineare_Algebra/linalg_Matr_Invt_003.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
 
-\input{../A/Analysis/continuity_001_de.tex}
+\input{../A/Analysis/analys_inverse_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+\input{../A/Analysis/analys_inverse_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+\input{../A/Analysis/analys_inverse.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+\input{../A/Analysis/analys_Umke_Funk_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
 
-\input{../A/ILIAS.tex}
 
-%\input{../A/Analysis/analys_Stet_Igkt_01a.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Zwis_Wert_001.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Ablt_Sekn_001.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Diff_Rech_01c.tex} 
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/wz-2013-3-1.tex} 
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Matr_Fnkt_001.tex} 
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Para_Grap_001.tex} 
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Diff_Para_01b.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Regl_Lhos_002.tex} 
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Satl_Bahn_001.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
-
-%\input{../A/Analysis/analys_Diff_Rech_01b.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
-
-%\input{../A/Analysis/analys_Kurv_Disk_002.tex} 
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
-
-%\input{../A/Analysis/analys_Regl_Lhos_001.tex} 
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
- 
-%\input{../A/Analysis/analys_Kurv_Disk_001.tex} 
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
-
-%\input{../A/Analysis/analys_Ewer_Opti_001.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig}{}
 
 
 \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
