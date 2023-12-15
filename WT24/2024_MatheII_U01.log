@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  14 DEC 2023 17:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  15 DEC 2023 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1363,27 +1363,22 @@ en-vek-tor nebst zugeh^^?origem
  []
 
 \c@AufglinalgMatrSymm003=\count363
-) (../A/Lineare_Algebra/linalg_Matr_Invt_003.tex
-\c@AufglinalgMatrInvt003=\count364
-)
-(../A/Analysis/analys_inverse_001.tex) (../A/Analysis/analys_inverse_002.tex
-\c@InverseFunktion=\count365
-)
-(../A/Analysis/analys_inverse.tex) (../A/Analysis/analys_Umke_Funk_001.tex
-[2]
-\c@AufganalysUmkeFunk001=\count366
-) [3] (./2024_MatheII_U01.aux)
+) (../A/Analysis/analys_inverse_001.tex) (../A/Analysis/analys_inverse_002.tex
+\c@InverseFunktion=\count364
+) (../A/Analysis/analys_inverse.tex) [2] [3
+
+] (./2024_MatheII_U01.aux)
 Package rerunfilecheck Info: File `2024_MatheII_U01.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39660 strings out of 478287
- 940913 string characters out of 5849289
+ 39636 strings out of 478287
+ 940235 string characters out of 5849289
  1496074 words of memory out of 5000000
- 57087 multiletter control sequences out of 15000+600000
+ 57073 multiletter control sequences out of 15000+600000
  513085 words of font info for 72 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,14n,120p,10626b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,14n,120p,10626b,654s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -1398,10 +1393,10 @@ c/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb>
-Output written on 2024_MatheII_U01.pdf (3 pages, 263740 bytes).
+Output written on 2024_MatheII_U01.pdf (3 pages, 256690 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
