@@ -1,4 +1,4 @@
-\Aufgabe[f]{Lineare Abbildung im Komplexen}{
+\Aufgabe[e]{Lineare Abbildung im Komplexen}{
 Gegeben ist die lineare Abbildung $\Vek L: \, \C^4 \, \rightarrow \, \C^3$ mit der Matrix 
 $$\Vek A = \begin{pmatrix} 
     1 &  1+\imag &        1 &    \imag \\ 
@@ -63,10 +63,10 @@ willk\"urlichen Vektor -- hier $\vec e_3$ -- fort:
 \begin{align*}
 &&\vec w_3=&\vec e_3 -  \skalar{\vec e_3,\, \vec v_1} \vec v_1 - \skalar{\vec e_3,\, \vec v_2}\vec
 v_2\\
-&&=& \begin{pmatrix}0\\0\\1\end{pmatrix} - \frac 12 \begin{pmatrix}1\\0\\1\end{pmatrix} - \frac
-{-1-\imag}8 \begin{pmatrix}1-\imag \\ 2 \\\imag -1\end{pmatrix}
-= \frac 14 \begin{pmatrix} -1\\1+\imag\\1\end{pmatrix}\\
-\Rightarrow&&\vec v_3 = & \frac 12 \begin{pmatrix}-1\\1+\imag\\1\end{pmatrix}
+&&=& \begin{pmatrix}0\\0\\1 \end{pmatrix} - \frac 12 \begin{pmatrix}1\\0\\1 \end{pmatrix} - \frac
+{-1-\imag}8 \begin{pmatrix}1-\imag \\ 2 \\\imag -1 \end{pmatrix}
+= \frac 14 \begin{pmatrix} -1\\1+\imag\\1 \end{pmatrix}\\
+\Rightarrow&&\vec v_3 = & \frac 12 \begin{pmatrix}-1\\1+\imag\\1 \end{pmatrix}
 \end{align*}
 Dieser Vektor $\vec v_3$ bildet eine Orthonormalbasis von $(\Bild\vec A)^\perp$. 
 
@@ -113,18 +113,18 @@ $$\Vek b_{-\imag}\in \Bild \Vek A.$$
 \begin{align*}
 \Vek P ( \Vek b_\lambda) = &\skalar{\Vek b_\lambda,\Vek v_1}\Vek v_1 + \skalar{\Vek b_\lambda,\Vek
 v_2}\Vek v_2\\
-=& \frac{\lambda-3\imag}{2}\begin{pmatrix}1\\0\\1\end{pmatrix}
+=& \frac{\lambda-3\imag}{2}\begin{pmatrix}1\\0\\1 \end{pmatrix}
 + \frac{\lambda(1+\imag)-1+\imag}8\begin{pmatrix}1-\imag\\2\\\imag-1\end{pmatrix}\\
-=& \frac \lambda{8} \begin{pmatrix} 6\\2+2\imag\\2\end{pmatrix}+\frac
-18\begin{pmatrix} -10\imag\\-2+2\imag\\-14\imag\end{pmatrix}
-=\frac \lambda 4 \begin{pmatrix} 3\\1+\imag\\1\end{pmatrix}
- - \frac 14\begin{pmatrix}5\imag\\1-\imag\\7\imag\end{pmatrix}.
+=& \frac \lambda{8} \begin{pmatrix} 6\\2+2\imag\\2 \end{pmatrix}+\frac
+18\begin{pmatrix} -10\imag\\-2+2\imag\\-14\imag \end{pmatrix}
+=\frac \lambda 4 \begin{pmatrix} 3\\1+\imag\\1 \end{pmatrix}
+ - \frac 14\begin{pmatrix}5\imag\\1-\imag\\7\imag \end{pmatrix}.
 \end{align*}
 Der Anteil von $\Vek b_\lambda$  orthogonal zu $\Bild \Vek A$ ergibt sich als Differenz aus beiden: 
 \begin{align*}
 \Vek b_\lambda - \Vek P(\Vek b_\lambda) =
 & \frac{\lambda}{4}\begin{pmatrix}1\\-1-\imag\\-1\end{pmatrix} 
-+ \frac 14\begin{pmatrix}\imag\\1-\imag\\-\imag\end{pmatrix}.
++ \frac 14\begin{pmatrix}\imag\\1-\imag\\-\imag \end{pmatrix}.
 \end{align*}
 \item Es soll also gelten $\Vek A \Vek x_\lambda = \Vek P (\Vek b_\lambda)$: 
 $$\begin{array}{rrrr|r}
@@ -139,7 +139,8 @@ $$\begin{array}{rrrr|r}
 1       &1+\imag   &1       & \imag  & 3/4\lambda - 5/4\imag\\
 0       &1         &1       &    1   & (1+\imag)/4\lambda - (1-\imag)/4\\
 0       &0         &0       & 0      &      0                       
-\end{array}$$
+\end{array}
+$$
 Dies liefert die Partikul\"arloesung 
 $$\Vek x_\lambda^0=((2-i)/4\lambda + (1-6\imag)/4,\, 0,\,
 (1+i)/4\lambda - (1-i)/4,\, 0)^\top$$

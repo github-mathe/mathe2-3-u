@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  15 DEC 2023 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  2 JAN 2024 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1330,33 +1330,33 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-(../A/Lineare_Algebra/linalg_Posi_Defi_001.tex
+(../A/Lineare_Algebra/linalg_Abbi_Kmpl_001.tex
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-10.
+29.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c@AufglinalgPosiDefi001=\count359
-)
-(../A/Lineare_Algebra/linalg_Abbi_Kmpl_001.tex
 Overfull \hbox (2.63016pt too wide) in paragraph at lines 29--29
 []\OT1/lmr/m/n/10 Geben Sie $[]([])$ und Or-thonor-mal-basen von $[][]$ sowie $
 [][]$ und $([][])[]$
  []
 
-\c@AufglinalgAbbiKmpl001=\count360
-) (../A/Lineare_Algebra/linalg_Detn_Gauss_001.tex
+\c@AufglinalgAbbiKmpl001=\count359
+) (../A/Lineare_Algebra/linalg_Posi_Defi_001.tex
+\c@AufglinalgPosiDefi001=\count360
+)
+(../A/Lineare_Algebra/linalg_Detn_Gauss_001.tex
 \c@dummy001=\count361
 )
 (../A/Lineare_Algebra/linalg_Detn_Lapl_001.tex
 \c@linalg_Detn_Lapl_001=\count362
-)
-(../A/Lineare_Algebra/linalg_Matr_Symm_003.tex [1
+) [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./HSU_RGB-eps-converted-to
 .pdf>]
+(../A/Lineare_Algebra/linalg_Matr_Symm_003.tex
 Overfull \hbox (5.41747pt too wide) in paragraph at lines 17--17
 []\OT1/lmr/m/n/10 Berechnen Sie einen weit-eren (lin-ear un-abh^^?angi-gen) Eig
 en-vek-tor nebst zugeh^^?origem
@@ -1365,20 +1365,18 @@ en-vek-tor nebst zugeh^^?origem
 \c@AufglinalgMatrSymm003=\count363
 ) (../A/Analysis/analys_inverse_001.tex) (../A/Analysis/analys_inverse_002.tex
 \c@InverseFunktion=\count364
-) (../A/Analysis/analys_inverse.tex) [2] [3
-
-] (./2024_MatheII_U01.aux)
+) [2] (./2024_MatheII_U01.aux)
 Package rerunfilecheck Info: File `2024_MatheII_U01.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39636 strings out of 478287
- 940235 string characters out of 5849289
- 1496074 words of memory out of 5000000
- 57073 multiletter control sequences out of 15000+600000
+ 39629 strings out of 478287
+ 940064 string characters out of 5849289
+ 1492092 words of memory out of 5000000
+ 57071 multiletter control sequences out of 15000+600000
  513085 words of font info for 72 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,14n,120p,10626b,654s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,14n,120p,10626b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -1393,10 +1391,10 @@ c/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb>
-Output written on 2024_MatheII_U01.pdf (3 pages, 256690 bytes).
+Output written on 2024_MatheII_U01.pdf (2 pages, 254752 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
