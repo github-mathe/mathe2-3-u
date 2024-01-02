@@ -1,0 +1,80 @@
+
+\input{header}
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} M.Sc Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2024}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{Mathematik II}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{1}
+\newcommand{\TOPIC}{Definitheit, Ähnlichkeit, Umkehrfunktionen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+%\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%  \setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+
+\textbf{Einführende Bemerkungen}
+
+\begin{itemize}
+\item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
+% \item Die mit einem Stern *) markierten (Teil-)Aufgaben entfallen in diesem Trimester. Stattdessen werden einzelne Online-Aufgaben im ILIAS-Kurs kenntlich gemacht, zu denen Sie dort Ihre L\"osungswege zur Korrektur hochladen k\"onnen. 
+% \item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
+\end{itemize}
+
+\ruleBig
+
+%Mathe II Blatt 1
+\input{../A/Lineare_Algebra/linalg_Abbi_Kmpl_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+\input{../A/Lineare_Algebra/linalg_Posi_Defi_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+% \input{../A/Lineare_Algebra/linalg_Abbi_Klau_01b.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+
+
+\input{../A/Lineare_Algebra/linalg_Detn_Gauss_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+\input{../A/Lineare_Algebra/linalg_Detn_Lapl_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+% 
+\newpage
+\input{../A/Lineare_Algebra/linalg_Matr_Symm_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+\input{../A/Analysis/analys_inverse_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+\input{../A/Analysis/analys_inverse_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+% \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\ifthenelse{\boolean{mitErg}}{
+\ruleBig
+\Ergebnisse}{}
+
+
+\end{twocolumn}
+\end{document}
