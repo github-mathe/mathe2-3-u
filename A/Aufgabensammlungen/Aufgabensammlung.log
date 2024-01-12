@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  10 JAN 2024 14:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  12 JAN 2024 14:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**2024_MatheII_U02.tex
-(./2024_MatheII_U02.tex
+**Aufgabensammlung.tex
+(./Aufgabensammlung.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (./header.tex
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -1013,7 +1013,6 @@ de.tex
 File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (./mbdefAufgaben.sty)
 \c@Aufg=\count338
-\c@Blatt=\count339
  (./KopfEnglish.sty
 Package: KopfEnglish 
 
@@ -1056,8 +1055,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen301
-\Hy@linkcounter=\count340
-\Hy@pagecounter=\count341
+\Hy@linkcounter=\count339
+\Hy@pagecounter=\count340
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
@@ -1074,7 +1073,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count342
+\Hy@SavedSpaceFactor=\count341
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
@@ -1089,7 +1088,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count343
+\c@Hy@tempcnt=\count342
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -1105,7 +1104,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count344
+\Fld@menulength=\count343
 \Field@Width=\dimen303
 \Fld@charsize=\dimen304
 Package hyperref Info: Hyper figures OFF on input line 6076.
@@ -1122,9 +1121,9 @@ LaTeX Info: Redefining \pageref on input line 6150.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count345
-\c@Item=\count346
-\c@Hfootnote=\count347
+\Hy@abspage=\count344
+\c@Item=\count345
+\c@Hfootnote=\count346
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1136,8 +1135,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count348
-\c@bookmark@seq@number=\count349
+\Fld@listcount=\count347
+\c@bookmark@seq@number=\count348
 
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -1151,53 +1150,53 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip76
 ))
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-8.
+7.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count350
+\l__color_backend_stack_int=\count349
 \l__pdf_internal_box=\box141
 )
-(./2024_MatheII_U02.aux)
-\openout1 = `2024_MatheII_U02.aux'.
+(./Aufgabensammlung.aux)
+\openout1 = `Aufgabensammlung.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-Package scrbase Info: activating english \contentsname on input line 88.
-Package scrbase Info: activating english \listfigurename on input line 88.
-Package scrbase Info: activating english \listtablename on input line 88.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+Package scrbase Info: activating english \contentsname on input line 87.
+Package scrbase Info: activating english \listfigurename on input line 87.
+Package scrbase Info: activating english \listtablename on input line 87.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count351
+\scratchcounter=\count350
 \scratchdimen=\dimen305
 \scratchbox=\box142
-\nofMPsegments=\count352
-\nofMParguments=\count353
+\nofMPsegments=\count351
+\nofMParguments=\count352
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count354
+\MPscratchCnt=\count353
 \MPscratchDim=\dimen306
-\MPnumerator=\count355
-\makeMPintoPDFobject=\count356
+\MPnumerator=\count354
+\makeMPintoPDFobject=\count355
 \everyMPtoPDFconversion=\toks51
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1217,9 +1216,9 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 88.
+ on input line 87.
 
-Package hyperref Info: Link coloring ON on input line 88.
+Package hyperref Info: Link coloring ON on input line 87.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1229,15 +1228,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count357
+\c@section@level=\count356
 )
-LaTeX Info: Redefining \ref on input line 88.
-LaTeX Info: Redefining \pageref on input line 88.
-LaTeX Info: Redefining \nameref on input line 88.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 
-(./2024_MatheII_U02.out) (./2024_MatheII_U02.out)
+(./Aufgabensammlung.out) (./Aufgabensammlung.out)
 \@outlinefile=\write4
-\openout4 = `2024_MatheII_U02.out'.
+\openout4 = `Aufgabensammlung.out'.
 
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
@@ -1246,151 +1245,106 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 88.
+(scrartcl)           before \begin{document} on input line 87.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count358
-))
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-6.
+\BKM@id=\count357
+)))
+(../Lineare_Algebra/linalg_Abbi_Kmpl_001.tex
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+29.
 
+(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
+File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+! Missing number, treated as zero.
+<to be read again> 
+                   \c@Blatt 
+l.29 }
+      
+? 
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+9.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-96.
+29.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-96.
+29.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 96.
+(Font)              <10> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 96.
+(Font)              <7> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 96.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
+(Font)              <5> on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-
+Overfull \hbox (2.63016pt too wide) in paragraph at lines 29--29
+[]\OT1/lmr/m/n/10 Geben Sie $[]([])$ und Or-thonor-mal-basen von $[][]$ sowie $
+[][]$ und $([][])[]$
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 96.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 96.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 96.
-Package epstopdf Info: Source file: <HSU_RGB.eps>
-(epstopdf)                    date: 2023-12-14 15:59:17
-(epstopdf)                    size: 122525 bytes
-(epstopdf)             Output file: <HSU_RGB-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-14 15:59:17
-(epstopdf)                    size: 26793 bytes
-(epstopdf)             Command: <repstopdf --outfile=HSU_RGB-eps-converted-to.p
-df HSU_RGB.eps>
-(epstopdf)             \includegraphics on input line 96.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./HSU_RGB-eps-converted-to.pdf): PDF inclusion: 
-found PDF version <1.7>, but at most version <1.5> allowed
-<HSU_RGB-eps-converted-to.pdf, id=36, 143.53625pt x 103.38625pt>
-File: HSU_RGB-eps-converted-to.pdf Graphic file (type pdf)
-<use HSU_RGB-eps-converted-to.pdf>
-Package pdftex.def Info: HSU_RGB-eps-converted-to.pdf  used on input line 96.
-(pdftex.def)             Requested size: 102.73933pt x 74.0pt.
-)
-Overfull \hbox (0.46648pt too wide) in paragraph at lines 96--29
-[]   
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-8.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+9.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-(../A/Analysis/analys_Gren_Wert_004.tex
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-11.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
-File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-\c@analysGrenWert004=\count359
-) (../A/Analysis/aufgabe2.tex
-\c@aufgabe2=\count360
-)
-(../A/Analysis/analys_Gren_Wert_005.tex
-\c@analysGrenWert005=\count361
-)
-(../A/Analysis/analys_Funk_Lims_001.tex
-\c@analysFunkLims001=\count362
+\c@AufglinalgAbbiKmpl001=\count358
 ) [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./HSU_RGB-eps-converted-to
-.pdf>]
-(../A/Analysis/analys_Gren_Wert_006_de.tex
-\c@analysGrenWert006de=\count363
-)
-(../A/Analysis/continuity_001_de.tex
-Overfull \hbox (0.44524pt too wide) in paragraph at lines 44--44
-[]\OT1/lmr/m/n/10 Begr^^?unden Sie f^^?ur je-den dieser Werte, we-shalb die for
--male Def-i-ni-tion der Stetigkeit
- []
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-) [2] [3
-
-] (./2024_MatheII_U02.aux)
-Package rerunfilecheck Info: File `2024_MatheII_U02.out' has not changed.
+] (./Aufgabensammlung.aux)
+Package rerunfilecheck Info: File `Aufgabensammlung.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 40113 strings out of 478287
- 953650 string characters out of 5849289
- 1539428 words of memory out of 5000000
- 57566 multiletter control sequences out of 15000+600000
- 511117 words of font info for 66 fonts, out of 8000000 for 9000
+ 39482 strings out of 478287
+ 937151 string characters out of 5849289
+ 1448806 words of memory out of 5000000
+ 56978 multiletter control sequences out of 15000+600000
+ 498103 words of font info for 56 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,17n,120p,10626b,2129s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lme
-x10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on 2024_MatheII_U02.pdf (3 pages, 259330 bytes).
+ 113i,8n,120p,10626b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
+vips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
+m-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmm
+i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Aufgabensammlung.pdf (1 page, 129892 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 104 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
