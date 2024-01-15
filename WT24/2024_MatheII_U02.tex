@@ -7,10 +7,10 @@
 \newcommand{\Jahr}{2024}
 % \newcommand{\Trimester}{HT}
 \newcommand{\Trimester}{WT}
-\newcommand{\Kurs}{Mathematik II}
+\newcommand{\Kurs}{Mathematik II/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{1}
-\newcommand{\TOPIC}{Definitheit, Ähnlichkeit, Umkehrfunktionen}
+\newcommand{\BLATT}{2}
+\newcommand{\TOPIC}{Grenzwerte, Folgen, Stetigkeit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
@@ -43,28 +43,38 @@
 \ruleBig
 
 %Mathe II Blatt 1
-\input{../A/Lineare_Algebra/linalg_Abbi_Kmpl_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
-
-\input{../A/Lineare_Algebra/linalg_Posi_Defi_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
-
-
-\input{../A/Lineare_Algebra/linalg_Detn_Gauss_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
-
-\input{../A/Lineare_Algebra/linalg_Detn_Lapl_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+% \input{../A/Lineare_Algebra/linalg_Eign_Wert_002.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
 % 
+% \input{../A/Lineare_Algebra/linalg_Eign_Wert_005.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+
+
+\input{../A/Analysis/analys_Gren_Wert_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/aufgabe2.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Gren_Wert_005.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Funk_Lims_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 \newpage
-\input{../A/Lineare_Algebra/linalg_Matr_Symm_003.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+\input{../A/Analysis/analys_Gren_Wert_006_de.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% % 
+% \newpage
+% \input{../A/Analysis/analys_Stet_Igkt_01a.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_inverse_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
 
-\input{../A/Analysis/analys_inverse_002.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+\input{../A/Analysis/continuity_001_de.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
 \ifthenelse{\boolean{mitErg}}{

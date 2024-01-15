@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-% \setboolean{mitLoes}{true}
+\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -25,7 +25,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
- \setboolean{mitErg}{true}
+%  \setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,6 +48,10 @@
 
 \input{../A/Lineare_Algebra/linalg_Posi_Defi_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+% \input{../A/Lineare_Algebra/linalg_Abbi_Klau_01b.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
 
 
 \input{../A/Lineare_Algebra/linalg_Detn_Gauss_001.tex}
