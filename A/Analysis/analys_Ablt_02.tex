@@ -2,15 +2,24 @@
 }
 Ein Elektron bewegt sich mit der Geschwindigkeit
 $$
-v(t) = e^{\cosh(3t^2+2t+1)},
+v(t) = e^{-\cosh(3t^2+2t+1)},
 $$
 wobei $t$ in Sekunden gegeben ist.
 \begin{abc}
-\item Wie hoch ist seine Beschleunigung nach $t=10 Sekunden$?
+\item Wie hoch ist seine Beschleunigung nach $t=10$ Sekunden?
 \item Kommt das Elektron jemals zur Ruhe? Man begründe die Antwort.
 \end{abc}
 
 \Loesung{
+Die Beschleunigung ist 
+$$
+a(t) = -2(3t+1) \sinh(3t^2 + 2t + 1) e^{-\cosh(3t^2+2t+1)}
+$$
+Nach 10 Sekunden hat das Elektron dann eine Beschleunigung von 
+$$
+a(10) = 10^{10^{138,75}}
+$$
+
 }
 
 \ErgebnisC{analysAblt01}

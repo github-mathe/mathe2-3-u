@@ -9,19 +9,19 @@
 \newcommand{\Trimester}{WT}
 \newcommand{\Kurs}{Mathematik II/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{2}
-\newcommand{\TOPIC}{Grenzwerte, Folgen, Stetigkeit}
+\newcommand{\BLATT}{3}
+\newcommand{\TOPIC}{Grenzwerte, Stetigkeit, Ableitungen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-% \setboolean{mitLoes}{true}
+\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %\setboolean{WITHPSTRICKS}{false}
-%\setboolean{WITHPSTRICKS}{true}
+\setboolean{WITHPSTRICKS}{true}
 
 \input{begin}
 \setboolean{mitErg}{false}
@@ -44,17 +44,24 @@
 
 %Mathe II Blatt 1
 
-\input{../A/Analysis/analys_Stet_Igkt_01a.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% \input{../A/Analysis/analys_Stet_Igkt_01a.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% 
+% \input{../A/Analysis/wz-2013-3-1.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/wz-2013-3-1.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% \input{../A/Analysis/wz-2013-6-3.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% 
+% \input{../A/Analysis/aufgabe2.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/wz-2013-6-3.tex}
+%1
+\input{../A/Analysis/analys_Ablt_01.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/aufgabe2.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%2
+% \input{../A/Analysis/analys_Ablt_02.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../A/Analysis/analys_Stet_Igkt_01a.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
@@ -65,8 +72,11 @@
 \input{../A/Analysis/analys_Diff_Para_01c.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Ablt_Sekn_001.tex}
+\input{../A/Analysis/analys_Satl_Bahn_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \input{../A/Analysis/analys_Ablt_Sekn_001.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
 \ifthenelse{\boolean{mitErg}}{
