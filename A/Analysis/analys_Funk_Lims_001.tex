@@ -64,13 +64,16 @@ $$\underset{x\to\infty}\lim f(x)=\left\{\begin{array}{ll}
 \end{array}\right.
 $$
 F\"ur $a<0$ hat man 
-$$\underset{x\to\infty}\lim
-f(x)=\underset{z\to \infty}\lim \left( \frac{z}{z^{-a}}\cdot \frac{1-\frac 1{z^2}}{z^{2a}+1}\right)
+\begin{align*}
+\underset{x\to\infty}\lim
+f(x)&=
+\underset{z\to \infty}\lim \left( \frac{z}{z^{a}z^{-2a}}\cdot \frac{1-\frac 1{z^2}}{z^{2a}+1}\right)\\
+&=\underset{z\to \infty}\lim \left( \frac{z}{z^{-a}}\cdot \frac{1-\frac 1{z^2}}{z^{2a}+1}\right)
 =\left\{\begin{array}{ll}
 0,&a<-1\\
 1,&a=-1\\
-\infty,&-1<z<0\end{array}\right..
-$$
+\infty,&-1<a<0\end{array}\right..
+\end{align*}
 
 
 \end{abc}

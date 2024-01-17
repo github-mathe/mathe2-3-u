@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=latex 2023.5.30)  16 JAN 2024 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=latex 2023.5.30)  17 JAN 2024 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1518,179 +1518,44 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \c@analysAblt01=\count399
-) [1
-
-
-
-]
+)
 (../A/Analysis/analys_Stet_Igkt_01a.tex
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-
- []
-
 \c@AufganalysStetIgkt01a=\count400
-) [2
-
-
-] (../A/Analysis/analys_Diff_Rech_01c.tex
-Overfull \hbox (15.92084pt too wide) detected at line 57
-[]
- []
-
-[3
+)
+(../A/Analysis/analys_Diff_Rech_01c.tex
+\c@AufganalysDiffRech01c=\count401
+)
+(../A/Analysis/analys_Diff_Para_01c.tex) [1
 
 
 ]
-\c@AufganalysDiffRech01c=\count401
-) [4
-
-] (../A/Analysis/analys_Diff_Para_01c.tex
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
-
-) [5
-
-
-] [6
-
-] (../A/Analysis/analys_Satl_Bahn_001.tex
+(../A/Analysis/analys_Satl_Bahn_001.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 
  []
 
-
-Overfull \hbox (12.83676pt too wide) in paragraph at lines 36--36
-\OT1/lmr/m/n/10 Die Bahn verl^^?auft also asymp-to-tisch in Rich-tung der bei-d
-en Ger-aden $[]\OMS/lmsy/m/n/10 f\OT1/lmr/m/n/10 (1\OML/lmm/m/it/10 ; \OMS/lmsy
-/m/n/10 ^^F\OT1/lmr/m/n/10 3)[]\OMS/lmsy/m/n/10 g$\OT1/lmr/m/n/10 . 
- []
-
 \c@AufganalysSatlBahn001=\count402
-) [7
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
+)
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
 
  []
 
 \BKM@file=\write5
 \openout5 = `2024_MatheII_U03.out.ps'.
 
-[8
-
-
+[2
 
 ] (./2024_MatheII_U03.aux)
 Package rerunfilecheck Info: File `2024_MatheII_U03.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 43237 strings out of 478288
- 1002821 string characters out of 5849315
- 1643077 words of memory out of 5000000
- 60616 multiletter control sequences out of 15000+600000
+ 43236 strings out of 478288
+ 1002809 string characters out of 5849315
+ 1648077 words of memory out of 5000000
+ 60615 multiletter control sequences out of 15000+600000
  517303 words of font info for 73 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,17n,120p,10626b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,10n,120p,10626b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2024_MatheII_U03.dvi (8 pages, 62632 bytes).
+Output written on 2024_MatheII_U03.dvi (2 pages, 36992 bytes).
