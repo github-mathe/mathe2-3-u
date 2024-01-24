@@ -10,12 +10,12 @@
 \newcommand{\Kurs}{Mathematik II/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
 \newcommand{\BLATT}{4}
-\newcommand{\TOPIC}{L'Hospital, Differenzieren, Kurvendiskussion}
+\newcommand{\TOPIC}{Regel von L'Hospital, Differenzieren, Kurven}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-% \setboolean{mitLoes}{true}
+\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -43,21 +43,9 @@
 
 \ruleBig
 
-%Mathe II Blatt 1
+%Mathe II Blatt 4
 
 \input{../A/Analysis/analys_Diff_Rech_01b.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-% \input{../A/Analysis/analys_Ewer_Opti_001.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-% \input{../A/Analysis/analys_Extr_Dose_001.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Funk_Lims_002.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Intg_Bogl_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../A/Analysis/analys_Matr_Fnkt_001.tex}
@@ -65,39 +53,19 @@
 % 65
 \input{../A/Analysis/analys_maxima_minima_002_DE.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-% 66
-% \input{../A/Analysis/analys_Mitl_Wrt_Satz_001.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../A/Analysis/analys_Opt_Poster.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-% 71
+
+\newpage
 \input{../A/Analysis/analys_Para_Grap_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Regl_Lhos_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-% 75
 \input{../A/Analysis/analys_Regl_Lhos_002.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Asympt_01.tex}
+\input{../A/Analysis/analys_Monotonie.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Kurv_Disk_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Kurv_Disk_004.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-% \input{../A/Analysis/analys_Zwis_Wert_001.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-% \input{../A/Analysis/b-2011-K2-A4.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-% \input{../A/Analysis/wz-2013-3-1.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
 \ifthenelse{\boolean{mitErg}}{

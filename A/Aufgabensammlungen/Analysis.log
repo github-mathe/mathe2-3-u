@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=latex 2023.6.19)  15 JAN 2024 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=latex 2023.5.30)  24 JAN 2024 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,9 +162,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language15). Reported on input line 105.
+(babel)             (\language71). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language15). Reported on input line 108.
+(babel)             (\language71). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
@@ -1489,46 +1489,444 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c@analysAblt01=\count398
-)
-(../Analysis/analys_Ablt_02.tex) (../Analysis/analys_Ablt_Sekn_001.tex
+) [1
+
+
+
+]
+(../Analysis/analys_Ablt_02.tex) [2
+
+
+
+] (../Analysis/analys_Ablt_Sekn_001.tex
 Underfull \hbox (badness 10000) in paragraph at lines 33--33
 
  []
 
-\c@analysAbltSekn001=\count399
-) (../Analysis/analys_Absch_e_001.tex) (../Analysis/analys_Asympt_01.tex
-[1
+[3
 
 
 ]
+\c@analysAbltSekn001=\count399
+) [4] (../Analysis/analys_Absch_e_001.tex) [5
+
+
+
+]
+(../Analysis/analys_Asympt_01.tex
 \c@analysAsymp01=\count400
-) (../Analysis/analys_Diff_Ndim_001.tex
+) [6
+
+
+
+] (../Analysis/analys_Diff_Ndim_001.tex
 \c@AufganalysDiffNdim001=\count401
 )
-(../Analysis/analys_Diff_Ndim_013.tex) (../Analysis/analys_Diff_Ndim_13b.tex)
-(../Analysis/analys_Diff_Ndim_14a.tex
+[7
+
+
+
+] (../Analysis/analys_Diff_Ndim_013.tex
+Overfull \hbox (9.98103pt too wide) in paragraph at lines 102--102
+[]\OT1/lmr/m/n/10 Eine Ger-ade durch den Ur-sprung kann durch $[](\OML/lmm/m/it
+/10 t\OT1/lmr/m/n/10 ) = (\OML/lmm/m/it/10 at; bt\OT1/lmr/m/n/10 )[]\OML/lmm/m/
+it/10 ;  t \OMS/lmsy/m/n/10 2 \U/msb/m/n/10 R$ \OT1/lmr/m/n/10 parametrisiert
+ []
+
+[8
+
+
+]) [9
+
+] (../Analysis/analys_Diff_Ndim_13b.tex
+Overfull \hbox (9.98103pt too wide) in paragraph at lines 39--39
+[]\OT1/lmr/m/n/10 Eine Ger-ade durch den Ur-sprung kann durch $[](\OML/lmm/m/it
+/10 t\OT1/lmr/m/n/10 ) = (\OML/lmm/m/it/10 at; bt\OT1/lmr/m/n/10 )[]\OML/lmm/m/
+it/10 ;  t \OMS/lmsy/m/n/10 2 \U/msb/m/n/10 R$ \OT1/lmr/m/n/10 parametrisiert
+ []
+
+) [10
+
+
+
+] (../Analysis/analys_Diff_Ndim_14a.tex
+Overfull \hbox (1.30705pt too wide) in paragraph at lines 34--34
+\OT1/lmr/m/n/10 Diese Ma-trix ist di-ag-o-nal-dom-i-nant mit pos-i-tiven Di-ag-
+o-nalele-menten, also pos-i-tiv definit,
+ []
+
 \c@analysDiffNdim14a=\count402
-) (../Analysis/analys_Diff_Para_01b.tex)
-(../Analysis/analys_Diff_Para_01c.tex
-Overfull \hbox (1.81973pt too wide) in paragraph at lines 26--26
-[]$[]$\OT1/lmr/m/n/10 ) 
- []
+) [11
 
-[2]) (../Analysis/analys_Diff_Para_01c.tex
-Overfull \hbox (1.81973pt too wide) in paragraph at lines 26--26
-[]$[]$\OT1/lmr/m/n/10 ) 
- []
 
-) (../Analysis/analys_Diff_Rech_01b.tex
+] (../Analysis/analys_Diff_Para_01b.tex
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 100.
+
+[12
+
+
+]) [13
+
+] (../Analysis/analys_Diff_Para_01c.tex
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+) [14
+
+
+] [15
+
+] (../Analysis/analys_Diff_Para_01c.tex
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 102.
+
+) [16
+
+
+] [17
+
+] (../Analysis/analys_Diff_Rech_01b.tex
 \c@AufganalysDiffRech001=\count403
-) (../Analysis/analys_Diff_Rech_01c.tex
+) [18
+
+
+]
+(../Analysis/analys_Diff_Rech_01c.tex
+Overfull \hbox (15.92084pt too wide) detected at line 57
+[]
+ []
+
+[19
+
+
+]
 \c@AufganalysDiffRech01c=\count404
-) (../Analysis/analys_Disk_Tayl_01a.tex [3]
+) [20
+
+] (../Analysis/analys_Disk_Tayl_01a.tex
+Overfull \hbox (9.18661pt too wide) detected at line 72
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+
+ []
+
 \c@AufganalysTiskTayl01a=\count405
-)
-(../Analysis/analys_Ewer_Opti_001.tex
+) [21
+
+
+] (../Analysis/analys_Ewer_Opti_001.tex
 \c@analysisEwerOpti001=\count406
-) (../Analysis/analys_Extr_Dose_001.tex
+)
+\BKM@file=\write5
+\openout5 = `Analysis.out.ps'.
+
+ [22
+
+
+
+]
+(../Analysis/analys_Extr_Dose_001.tex
 Overfull \hbox (1.71083pt too wide) in paragraph at lines 16--16
 \OT1/lmr/m/n/10 Die Abmes-sun-gen einer Kon-ser-ven-dose (H^^?ohe $\OML/lmm/m/i
 t/10 H$ \OT1/lmr/m/n/10 Dezime-ter und Durchmesser $\OML/lmm/m/it/10 D$ \OT1/lm
@@ -1536,33 +1934,103 @@ r/m/n/10 Dezime-
  []
 
 \c@AufganalysExtrDose001=\count407
-) (../Analysis/analys_Extrema_001.tex) (../Analysis/analys_Extr_Ndim_001.tex
+) [23
+
+
+] (../Analysis/analys_Extrema_001.tex
+Overfull \hbox (280.51117pt too wide) detected at line 48
+[]
+ []
+
+) [24
+
+
+
+] (../Analysis/analys_Extr_Ndim_001.tex
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+
+ []
+
 \c@AufganalysExtrNdim001=\count408
-)
-(../Analysis/analys_Extr_Ndim_002.tex
+) [25
+
+
+] (../Analysis/analys_Extr_Ndim_002.tex
 \c@analysExtrNdim002=\count409
-) (../Analysis/analys_Extr_Ndim_004.tex
+) [26
+
+
+]
+(../Analysis/analys_Extr_Ndim_004.tex
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
+8.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 \c@AufganalysExtrNdim004=\count410
-)
-(../Analysis/analys_Folg_Lims_001.tex [4]
+) [27
+
+
+] (../Analysis/analys_Folg_Lims_001.tex [28
+
+
+]
+Overfull \hbox (38.55034pt too wide) detected at line 142
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+
+ []
+
+[29]
 \c@alalysFolgLims001=\count411
-)
-(../Analysis/analys_Funk_Lims_001.tex
+) [30
+
+] (../Analysis/analys_Funk_Lims_001.tex
 \c@analysFunkLims001=\count412
-) (../Analysis/analys_Funk_Lims_002.tex
+) [31
+
+
+]
+(../Analysis/analys_Funk_Lims_002.tex
 \c@analysFunkLims002=\count413
-)
+) [32
+
+
+
+]
 (../Analysis/analys_Gren_Wert_004.tex
 \c@analysGrenWert004=\count414
-) (../Analysis/analys_Gren_Wert_005.tex
+) [33
+
+
+
+]
+(../Analysis/analys_Gren_Wert_005.tex
 \c@analysGrenWert005=\count415
-)
-(../Analysis/analys_Gren_Wert_006_de.tex [5]
+) [34
+
+
+]
+(../Analysis/analys_Gren_Wert_006_de.tex [35
+
+
+]
 \c@analysGrenWert006de=\count416
-)
-(../Analysis/analys_Inte_Gral_001.tex
+) [36
+
+]
+(../Analysis/analys_Inte_Gral_001.tex [37
+
+
+]
 \c@AufganalysInteGral001=\count417
-) (../Analysis/analys_Inte_Gral_007.tex
+) [38
+
+]
+(../Analysis/analys_Inte_Gral_007.tex
 Overfull \hbox (27.59523pt too wide) in paragraph at lines 11--11
 []\OT1/lmr/m/n/10 Berechnen Sie das In-te-gral $[][] []d\OML/lmm/m/it/10 x\OT1/
 lmr/m/n/10 d\OML/lmm/m/it/10 y$\OT1/lmr/m/n/10 , wobei $\OML/lmm/m/it/10 B$ \OT
@@ -1571,42 +2039,112 @@ lmr/m/n/10 d\OML/lmm/m/it/10 y$\OT1/lmr/m/n/10 , wobei $\OML/lmm/m/it/10 B$ \OT
  []
 
 \c@analysInteGral007=\count418
-) (../Analysis/analys_Inte_Gral_010.tex
+) [39
+
+
+] (../Analysis/analys_Inte_Gral_010.tex
+Overfull \hbox (13.91573pt too wide) detected at line 59
+[]\OT1/lmr/m/n/10 (2\OML/lmm/m/it/10 t \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1) 
+ [](\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 ) d\OML/lmm/m/it/10 t  \OT1/lmr/m/n/10 = 
+ (2\OML/lmm/m/it/10 t \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1) [](\OML/lmm/m/it/
+10 t\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^@ [] \OT1/lmr/m/n/10 2 [](\OML/lmm/m/i
+t/10 t\OT1/lmr/m/n/10 ) d\OML/lmm/m/it/10 t  \OT1/lmr/m/n/10 =  (2\OML/lmm/m/it
+/10 t \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1) [](\OML/lmm/m/it/10 t\OT1/lmr/m/n
+/10 ) + 2 [](\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 ) + \OML/lmm/m/it/10 C :
+ []
+
+
+Overfull \hbox (21.22296pt too wide) detected at line 59
+[]
+ []
+
 \c@analysInteGral010=\count419
-) (../Analysis/analys_Inte_Gral_013.tex
+) [40
+
+
+
+] (../Analysis/analys_Inte_Gral_013.tex
 \c@analysInteGral013=\count420
-) (../Analysis/analys_Intg_2dim_002.tex [6])
-(../Analysis/analys_Intg_Bogl_001.tex) (../Analysis/analys_Intg_Kuko_001.tex
+) [41
+
+
+]
+(../Analysis/analys_Intg_2dim_002.tex
+Overfull \hbox (2.01202pt too wide) detected at line 88
+[]
+ []
+
+[42
+
+
+]) [43
+
+] (../Analysis/analys_Intg_Bogl_001.tex) [44
+
+
+]
+(../Analysis/analys_Intg_Kuko_001.tex [45
+
+
+]
 \c@AufganalysIntgKuko001=\count421
-)
+) [46
+
+]
 (../Analysis/analys_Intg_Kuko_002.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
 
  []
 
 \c@AufganalysIntgKuko002=\count422
-) (../Analysis/analys_Intg_Kuko_004.tex
+) [47
+
+
+
+] (../Analysis/analys_Intg_Kuko_004.tex
 \c@halbkugel=\count423
-)
+) [48
+
+
+
+]
 (../Analysis/analys_Intg_Ndim_001_1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
 
-[7]
+
 Overfull \hbox (3.6682pt too wide) in paragraph at lines 19--19
 []\OT1/lmr/m/n/10 Skizzieren Sie den In-te-gra-tions-bere-ich und ver-tauschen 
 Sie die In-te-gra-tionsrei-
  []
 
+[49
+
+
+]
 \c@AufganalysIntgNdim001=\count424
-) (../Analysis/analys_Intg_Ndim_003.tex
+) [50] (../Analysis/analys_Intg_Ndim_003.tex [51
+
+
+]
 \c@analysIntgNdim003=\count425
-) (../Analysis/analys_Intg_Ndim_013.tex
+) [52
+
+]
+(../Analysis/analys_Intg_Ndim_013.tex
 \c@AufganalysIntgNdim013=\count426
-) (../Analysis/analys_Intg_Ndim_014.tex [8]
+) [53
+
+
+]
+(../Analysis/analys_Intg_Ndim_014.tex
 \c@AufganalysIntgNdim014=\count427
-)
+) [54
+
+
+
+]
 (../Analysis/analys_Intg_Ndim_017.tex
 Overfull \hbox (4.46317pt too wide) in paragraph at lines 35--35
 \OT1/lmr/bx/n/10 Hin-weis\OT1/lmr/m/n/10 : In Bezug auf die Masse be-deutet Ho-
@@ -1615,93 +2153,446 @@ lmm/m/it/10 x; y; z\OT1/lmr/m/n/10 )$
  []
 
 \c@AufganalysIntgNdim017=\count428
-) (../Analysis/analys_Intg_Ndim_023.tex
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-4.
+) [55
 
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+
+] (../Analysis/analys_Intg_Ndim_023.tex
 \c@AufganalysIntgtNdim023=\count429
-)
+) [56
+
+
+
+]
 (../Analysis/analys_Intg_Ndim_040.tex
 Overfull \hbox (1.81973pt too wide) in paragraph at lines 15--15
 []$[]$\OT1/lmr/m/n/10 ) 
  []
 
+
+Overfull \hbox (28.31895pt too wide) detected at line 88
+[]
+ []
+
+
+Overfull \hbox (39.04173pt too wide) detected at line 88
+[]
+ []
+
+[57
+
+
+]
 \c@analysIntgNdim040=\count430
-) (../Analysis/analys_Intg_Ndim_20b.tex
+) [58] (../Analysis/analys_Intg_Ndim_20b.tex
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+
+ []
+
 \c@analysIntgNdim020=\count431
-) (../Analysis/analys_Intg_Ndim_21a.tex) (../Analysis/analys_Intg_Para_001.tex 
-[9])
-(../Analysis/analys_Intg_Traf_001.tex
+) [59
+
+
+] (../Analysis/analys_Intg_Ndim_21a.tex) [60
+
+
+
+]
+(../Analysis/analys_Intg_Para_001.tex
+Overfull \hbox (49.4366pt too wide) detected at line 210
+[]
+ []
+
+[61
+
+
+] [62]) [63
+
+] (../Analysis/analys_Intg_Traf_001.tex [64
+
+
+] [65]
 \c@analysIntgTraf001=\count432
-) (../Analysis/analys_Intg_Traf_003.tex
+) [66]
+(../Analysis/analys_Intg_Traf_003.tex [67
+
+
+] [68]
+Overfull \hbox (41.17183pt too wide) detected at line 219
+[]
+ []
+
+[69]
 \c@analysIntgTraf003=\count433
-)
-(../Analysis/analys_Intg_Trig_001.tex
+) [70] (../Analysis/analys_Intg_Trig_001.tex
 \c@analysIntgTrig001=\count434
-) (../Analysis/analys_Intg_Uneg_001.tex
-[10]
+) [71
+
+
+]
+(../Analysis/analys_Intg_Uneg_001.tex
 \c@analysPartBrch006=\count435
-) (../Analysis/analys_Intg_Zyln_002.tex
+) [72
+
+
+]
+(../Analysis/analys_Intg_Zyln_002.tex
 Overfull \hbox (1.81973pt too wide) in paragraph at lines 9--9
 []$[]$\OT1/lmr/m/n/10 ) 
  []
 
+
+Overfull \hbox (20.15425pt too wide) in paragraph at lines 113--113
+\OT1/lmr/m/n/10 liegt. Der In-te-gra-tions-bere-ich f^^?ur $\OML/lmm/m/it/10 r$
+ \OT1/lmr/m/n/10 und $\OML/lmm/m/it/10 '$ \OT1/lmr/m/n/10 bleibt wie vorher. De
+r $\OML/lmm/m/it/10 z\OMS/lmsy/m/n/10 ^^@$\OT1/lmr/m/n/10 Integrationsbereich
+ []
+
+[73
+
+
+]
 \c@analysIntgZyln002=\count436
-) (../Analysis/analys_Intg_Zyln_098.tex
+) [74
+
+] (../Analysis/analys_Intg_Zyln_098.tex
 \c@analysIntgZyln098=\count437
-) (../Analysis/analys_Intr_Poly_001.tex
+) [75
+
+
+
+]
+(../Analysis/analys_Intr_Poly_001.tex
+Overfull \hbox (54.34709pt too wide) detected at line 208
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+
+ []
+
+
+Overfull \hbox (24.77011pt too wide) detected at line 208
+[]
+ []
+
+[76
+
+
+] [77]
 \c@AufganalysIntrPoly001=\count438
-) (../Analysis/analys_inverse_001.tex) (../Analysis/analys_inverse_002.tex
+) [78
+
+] (../Analysis/analys_inverse_001.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 223.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 223.
+ [79
+
+
+]
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+[80]
+Overfull \hbox (2.60434pt too wide) in paragraph at lines 223--223
+[]\OT1/lmr/m/n/10 Die Funk-tion $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ ist di
+e Umkehrfunk-tion von $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$, wenn nur der Ha
+uptwert
+ []
+
+
+Overfull \hbox (6.93787pt too wide) in paragraph at lines 223--223
+[]\OT1/lmr/m/n/10 Die Funk-tion $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ ist di
+e Umkehrfunk-tion von $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$, wenn nur der Ha
+uptwert
+ []
+
+) [81] (../Analysis/analys_inverse_002.tex [82
+
+
+]
 \c@InverseFunktion=\count439
-)
-(../Analysis/analys_inverse.tex [11]) (../Analysis/analys_Kett_Ndim_0021.tex
+) [83]
+(../Analysis/analys_inverse.tex [84
+
+
+]
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+[85]
+Overfull \hbox (3.28171pt too wide) in paragraph at lines 223--223
+\OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10 ^^@[]\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 ) \
+OMS/lmsy/m/n/10 ! \OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10 ^^@1\OML/lmm/m/it/10 ; \OMS
+/lmsy/m/n/10 1\OT1/lmr/m/n/10 )$ it is bi-jec-tive. []
+ []
+
+) [86] (../Analysis/analys_Kett_Ndim_0021.tex
 \c@AufganalysKettNdim0021=\count440
-)
-(../Analysis/analys_Kudi_Klau_001.tex) (../Analysis/analys_Kurv_Disk_001.tex
+) [87
+
+
+
+]
+(../Analysis/analys_Kudi_Klau_001.tex [88
+
+
+]) [89
+
+]
+(../Analysis/analys_Kurv_Disk_001.tex
+Overfull \hbox (2.46664pt too wide) in paragraph at lines 76--76
+\OT1/lmr/m/n/10 Mit der Sym-me-trie der Funk-tion folgt, dass in $\OML/lmm/m/it
+/10 x \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 2[]$ ein Min-i-mum 
+$\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 2[]) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+
+ []
+
 \c@AufganalysKurvDisk001=\count441
-)
-(../Analysis/analys_Kurv_Disk_002.tex
+) [90
+
+
+] (../Analysis/analys_Kurv_Disk_002.tex
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+
+ []
+
 \c@AufganalysKurvDisk002=\count442
-) (../Analysis/analys_Kurv_Disk_004.tex
-[12]
+) [91
+
+
+] (../Analysis/analys_Kurv_Disk_004.tex
+Overfull \hbox (27.17822pt too wide) detected at line 68
+[]
+ []
+
 \c@AufganalysKurvDisk004=\count443
-) (../Analysis/analys_Kurv_Disk_010.tex)
+) [92
+
+
+] (../Analysis/analys_Kurv_Disk_010.tex) [93
+
+
+]
 (../Analysis/analys_Laplace_001.tex
+
+! LaTeX Error: Invalid UTF-8 byte "FC.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 }
+      
+? 
 \c@Laplace001=\count444
-) (../Analysis/analys_Matr_Fnkt_001.tex
+) [94
+
+
+
+] (../Analysis/analys_Matr_Fnkt_001.tex
+Overfull \hbox (8.82292pt too wide) detected at line 82
+[]
+ []
+
+
+Overfull \hbox (32.26178pt too wide) detected at line 82
+[]
+ []
+
 \c@AufganalysMatrFnkt001=\count445
-)
-(../Analysis/analys_maxima_minima_002_DE.tex)
-(../Analysis/analys_Mitl_Wrt_Satz_001.tex)
-(../Analysis/analys_Newt_Verf_001.tex [13]
+) [95
+
+
+] (../Analysis/analys_maxima_minima_002_DE.tex
+NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+) [96
+
+
+] (../Analysis/analys_Mitl_Wrt_Satz_001.tex) [97
+
+
+
+]
+(../Analysis/analys_Newt_Verf_001.tex
 Overfull \hbox (24.77856pt too wide) in paragraph at lines 14--14
 []\OT1/lmr/m/n/10 Skizzieren Sie die Funk-tio-nen und bes-tim-men Sie N^^?aheru
 n-gen f^^?ur die Schnittstellen
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
+
+Overfull \hbox (2.59854pt too wide) in paragraph at lines 102--102
+[]\OT1/lmr/m/n/10 F^^?ur diesen Fall hat das Ver-fahren bere-its nach zwei Schr
+it-ten die gew^^?unschte Genauigkeit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
 \c@AufganalysNewtVerf001=\count446
-) (../Analysis/analys_Newt_Verf_003.tex) (../Analysis/analys_Newt_Verf_02a.tex
+) [98
+
+
+] [99
+
+] (../Analysis/analys_Newt_Verf_003.tex
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
+
+ []
+
+) [100
+
+
+
+] (../Analysis/analys_Newt_Verf_02a.tex
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+
+ []
+
 \c@analysNewtVerf002=\count447
-) (../Analysis/analys_Opt_Poster.tex
+) [101
+
+
+] (../Analysis/analys_Opt_Poster.tex
+Overfull \hbox (11.1993pt too wide) detected at line 66
+[]
+ []
+
 \c@AufganalysOptPoster=\count448
-) (../Analysis/analys_Para_Grap_001.tex
+) [102
+
+
+] (../Analysis/analys_Para_Grap_001.tex
 Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  []
 
+
+Overfull \hbox (1.35461pt too wide) in paragraph at lines 108--108
+[]\OT1/lmr/m/n/10 Die bei-den Funk-tio-nen haben im Punkt $\OML/lmm/m/it/10 x$ 
+\OT1/lmr/m/n/10 par-al-lele Tan-gen-ten, wenn ihre Ableitun-
+ []
+
+[103
+
+
+]
 \c@AufganalysParaGrap001=\count449
-) (../Analysis/analys_Part_Ablt_001.tex) (../Analysis/analys_Part_Brch_005.tex
-[14]
+) [104
+
+] (../Analysis/analys_Part_Ablt_001.tex) [105
+
+
+]
+(../Analysis/analys_Part_Brch_005.tex
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+
+ []
+
+[106
+
+
+]
 \c@analysPartBrch005=\count450
-) (../Analysis/analys_Regl_Lhos_001.tex
+) [107
+
+] (../Analysis/analys_Regl_Lhos_001.tex
 \c@AufganalysReglLhos001=\count451
-)
+) [108
+
+
+]
 (../Analysis/analys_Regl_Lhos_002.tex
 \c@AufganalysReglLhos002=\count452
-) (../Analysis/analys_Rich_Ablt_003.tex
+) [109
+
+
+
+]
+(../Analysis/analys_Rich_Ablt_003.tex
 Overfull \hbox (16.53778pt too wide) in paragraph at lines 14--14
 \OT1/lmr/m/n/10 Berechnen Sie die Rich-tungsableitung bei-der Funk-tio-nen in R
 ich-tung $[] := (\OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 2\OML/lmm/m/it/10 ; \OT1/l
@@ -1714,106 +2605,753 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--14
  []
 
 \c@AufganalysRichAblt003=\count453
-) (../Analysis/analys_Satl_Bahn_001.tex
+) [110
+
+
+] (../Analysis/analys_Satl_Bahn_001.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 
  []
 
+
+Overfull \hbox (12.83676pt too wide) in paragraph at lines 36--36
+\OT1/lmr/m/n/10 Die Bahn verl^^?auft also asymp-to-tisch in Rich-tung der bei-d
+en Ger-aden $[]\OMS/lmsy/m/n/10 f\OT1/lmr/m/n/10 (1\OML/lmm/m/it/10 ; \OMS/lmsy
+/m/n/10 ^^F\OT1/lmr/m/n/10 3)[]\OMS/lmsy/m/n/10 g$\OT1/lmr/m/n/10 . 
+ []
+
 \c@AufganalysSatlBahn001=\count454
-) (../Analysis/analys_Stet_Igkt_01a.tex
+) [111
+
+
+] (../Analysis/analys_Stet_Igkt_01a.tex
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+
+ []
+
 \c@AufganalysStetIgkt01a=\count455
-) (../Analysis/analys_Stet_Igkt_01a.tex) (../Analysis/analys_Tang_Ebne_001.tex 
-[15]
+) [112
+
+
+] (../Analysis/analys_Stet_Igkt_01a.tex
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+
+ []
+
+) [113
+
+
+] (../Analysis/analys_Tang_Ebne_001.tex
+Underfull \hbox (badness 10000) in paragraph at lines 87--87
+
+ []
+
 \c@AufganalysTangEbne001=\count456
-) (../Analysis/analys_Tayl_01.tex
+) [114
+
+
+] (../Analysis/analys_Tayl_01.tex
 \c@analysTayl01=\count457
-)
-(../Analysis/analys_Tayl_02.tex
+) [115
+
+
+] (../Analysis/analys_Tayl_02.tex
 \c@analysTayl02=\count458
-) (../Analysis/analys_Tayl_Entw_001.tex
+) [116
+
+
+] (../Analysis/analys_Tayl_Entw_001.tex [117
+
+
+]
 \c@AufganalysTaylEntw001=\count459
-)
-(../Analysis/analys_Tayl_Ndim_002.tex
+) [118
+
+]
+(../Analysis/analys_Tayl_Ndim_002.tex [119
+
+
+]
 \c@AufganalysTaylNdim002=\count460
-) (../Analysis/analys_Tayl_Ndim_005.tex
-[16]
+) [120
+
+]
+(../Analysis/analys_Tayl_Ndim_005.tex
+Overfull \hbox (2.80539pt too wide) detected at line 87
+[]
+ []
+
+[121
+
+
+]
 \c@AufganalysTaylNdim005=\count461
-) (../Analysis/analys_Tayl_Ndim_02b.tex)
-(../Analysis/analys_Taylor2D_01.tex) (../Analysis/analys_Trig_Glei_001.tex)
-(../Analysis/analys_Ueig_Intg_001.tex) (../Analysis/analys_Umke_Funk_001.tex
-[17]
+) [122
+
+] (../Analysis/analys_Tayl_Ndim_02b.tex [123
+
+
+]) [124
+
+]
+(../Analysis/analys_Taylor2D_01.tex)
+Overfull \hbox (2.68869pt too wide) in paragraph at lines 6--303
+   [] 
+ []
+
+[125
+
+
+
+] (../Analysis/analys_Trig_Glei_001.tex [126
+
+
+] [127]) [128]
+(../Analysis/analys_Ueig_Intg_001.tex) [129
+
+
+
+]
+(../Analysis/analys_Umke_Funk_001.tex
+Overfull \hbox (5.92343pt too wide) in paragraph at lines 88--88
+\OT1/lmr/m/n/10 Die Ableitung von $\OML/lmm/m/it/10 f[]\OT1/lmr/m/n/10 (\OML/lm
+m/m/it/10 y\OT1/lmr/m/n/10 ) = [](\OML/lmm/m/it/10 y\OT1/lmr/m/n/10 )$ ergibt s
+ich da-raus mit Hilfe des angegebe-
+ []
+
+[130
+
+
+]
 \c@AufganalysUmkeFunk001=\count462
-) (../Analysis/analys_Umke_Funk_004.tex)
-(../Analysis/analys_Volumentintegral_099.tex)
+) [131
+
+] (../Analysis/analys_Umke_Funk_004.tex) [132
+
+
+]
+(../Analysis/analys_Volumentintegral_099.tex) [133
+
+
+
+]
 (../Analysis/analys_Weg__Ablt_001.tex
 \c@AufganalysWegAblt001=\count463
-) (../Analysis/analys_Zwis_Wert_001.tex
+) [134
+
+
+
+]
+(../Analysis/analys_Zwis_Wert_001.tex
 \c@AufganalysZwisWert001=\count464
-)
-(../Analysis/aufgabe2.tex
+) [135
+
+
+
+] (../Analysis/aufgabe2.tex
 \c@aufgabe2=\count465
-) (../Analysis/b-2011A-K-A4a.tex
-\c@Aufgb-2011A-K-A4a=\count466
 )
-(../Analysis/b-2011A-K-A5a.tex [18]
-Underfull \hbox (badness 5388) in paragraph at lines 12--55
+[136
+
+
+] (../Analysis/b-2011A-K-A4a.tex
+\c@Aufgb-2011A-K-A4a=\count466
+) [137
+
+
+
+] (../Analysis/b-2011A-K-A5a.tex
+Underfull \hbox (badness 5388) in paragraph at lines 12--54
 \OT1/lmr/m/n/10 soll das Newton-Verfahren ange-wandt wer-den. Bes-tim-men Sie m
 it Hilfe
  []
 
 \c@Aufgb-2011A-K-A5a=\count467
-) (../Analysis/b-2011-K2-A4.tex) (../Analysis/b-2011-K2-A5.tex
+) [138
+
+
+] (../Analysis/b-2011-K2-A4.tex
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+
+ []
+
+[139
+
+
+]) [140
+
+] (../Analysis/b-2011-K2-A5.tex
 \c@b-2011-K2-A5=\count468
-)
-(../Analysis/b-2011-K-A6.tex) (../Analysis/b-2012-K2-A4.tex
+) [141
+
+
+
+] (../Analysis/b-2011-K-A6.tex) [142
+
+
+
+] (../Analysis/b-2012-K2-A4.tex
 Overfull \hbox (10.44601pt too wide) in paragraph at lines 16--16
 []\OT1/lmr/m/n/10 Skizzieren Sie die bei-den Kur-ven und lesen Sie aus Ihrer Sk
 izze eine nicht-ganzzahlige
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+
+ []
+
 \c@Aufgb-2011A-K-A3=\count469
-) (../Analysis/b-2013-K-A3.tex
+) [143
+
+
+] (../Analysis/b-2013-K-A3.tex
 Overfull \hbox (20.2715pt too wide) in paragraph at lines 17--17
 \OT1/lmr/m/n/10 einen It-er-a-tionss-chritt des \OT1/lmr/bx/n/10 zwei-di-men-si
 on-alen \OT1/lmr/m/n/10 Newton-Verfahrens mit dem Startvek-
  []
 
-) (../Analysis/continuity_001_de.tex [19]
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+
+ []
+
+[144
+
+
+]) [145
+
+] (../Analysis/continuity_001_de.tex
 Overfull \hbox (0.44524pt too wide) in paragraph at lines 44--44
 []\OT1/lmr/m/n/10 Begr^^?unden Sie f^^?ur je-den dieser Werte, we-shalb die for
 -male Def-i-ni-tion der Stetigkeit
  []
 
-) (../Analysis/continuity_001.tex) (../Analysis/linalg_Posi_Defi_002.tex
-\c@AufglinalgPosiDefi002=\count470
-)
-(../Analysis/wz-2013-2-1p.tex
-\c@wz-2013-2-1p=\count471
-) (../Analysis/wz-2013-3-1.tex [20]
-\c@Ergwz-2013-3-1=\count472
-)
-(../Analysis/wz-2013-6-3.tex) (../Analysis/wz-2013-6-4.tex)
-(../Analysis/wz-2013-7-6.tex) (../Analysis/wz-2013-8-1.tex)
-(../Analysis/wz-2013-8-2.tex
-\c@Aufgwz-2013-8-2=\count473
-) (../Analysis/wz3-2013-1-1.tex)
-(../Analysis/Zeuge-2013Nov-K-A4.tex [21])
-\BKM@file=\write5
-\openout5 = `Analysis.out.ps'.
+) [146
 
- [22
+
+] (../Analysis/continuity_001.tex) [147
+
+
+]
+(../Analysis/linalg_Posi_Defi_002.tex
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+
+ []
+
+\c@AufglinalgPosiDefi002=\count470
+) [148
+
+
+
+] (../Analysis/wz-2013-2-1p.tex
+\c@wz-2013-2-1p=\count471
+) [149
+
+
+
+] (../Analysis/wz-2013-3-1.tex
+Overfull \hbox (18.64441pt too wide) detected at line 63
+[]
+ []
+
+\c@Ergwz-2013-3-1=\count472
+) [150
+
+
+] (../Analysis/wz-2013-6-3.tex
+Overfull \hbox (12.71547pt too wide) in paragraph at lines 71--71
+\OT1/lmr/m/n/10 Der Gren-zw-ert  $[](\OML/lmm/m/it/10 x \OT1/lmr/m/n/10 + \OML/
+lmm/m/it/10 y\OT1/lmr/m/n/10 ) [] []$  ex-istiert nicht und damit auch  $[]  []
+$
+ []
+
+) [151
+
+
+] (../Analysis/wz-2013-6-4.tex
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 73.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 73.
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 73.
+
+
+Overfull \hbox (17.95013pt too wide) detected at line 73
+[]
+ []
+
+) [152
+
+
+] (../Analysis/wz-2013-7-6.tex) [153
+
+
+
+] (../Analysis/wz-2013-8-1.tex)
+[154
+
+
+
+] (../Analysis/wz-2013-8-2.tex
+! Undefined control sequence.
+<argument> ...abic {Aufg}:}  \textbf {a)} \[ \ZAB 
+                                                  {1.5}\bARY {rclcrcr} f & =...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...:}  \textbf {a)} \[ \ZAB {1.5}\bARY 
+                                                  {rclcrcr} f & = & (2x-3y)\...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...a)} \[ \ZAB {1.5}\bARY {rclcrcr} f &
+                                                   = & (2x-3y)\cdot \sin (3x...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...\[ \ZAB {1.5}\bARY {rclcrcr} f & = &
+                                                   (2x-3y)\cdot \sin (3x-2y)...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ... f & = & (2x-3y)\cdot \sin (3x-2y) &
+                                                   \PFEIL & f(0,0) & = & 0\\...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ... (2x-3y)\cdot \sin (3x-2y) & \PFEIL 
+                                                  & f(0,0) & = & 0\\[1ex] f_...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(2x-3y)\cdot \sin (3x-2y) & \PFEIL &
+                                                   f(0,0) & = & 0\\[1ex] f_x...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...dot \sin (3x-2y) & \PFEIL & f(0,0) &
+                                                   = & 0\\[1ex] f_x & = & 2\...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...\sin (3x-2y) & \PFEIL & f(0,0) & = &
+                                                   0\\[1ex] f_x & = & 2\,\si...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...\PFEIL & f(0,0) & = & 0\\[1ex] f_x &
+                                                   = & 2\,\sin (3x-2y)+3\,(2...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...IL & f(0,0) & = & 0\\[1ex] f_x & = &
+                                                   2\,\sin (3x-2y)+3\,(2x-3y...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...x-2y)+3\,(2x-3y)\cdot \cos (3x-2y) &
+                                                   \PFEIL & f_x(0,0) & = & 0...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...,(2x-3y)\cdot \cos (3x-2y) & \PFEIL 
+                                                  & f_x(0,0) & = & 0 \\ f_y ...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(2x-3y)\cdot \cos (3x-2y) & \PFEIL &
+                                                   f_x(0,0) & = & 0 \\ f_y &...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...t \cos (3x-2y) & \PFEIL & f_x(0,0) &
+                                                   = & 0 \\ f_y & = & -3\,\s...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...os (3x-2y) & \PFEIL & f_x(0,0) & = &
+                                                   0 \\ f_y & = & -3\,\sin (...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...& \PFEIL & f_x(0,0) & = & 0 \\ f_y &
+                                                   = & -3\,\sin (3x-2y)-2\,(...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...FEIL & f_x(0,0) & = & 0 \\ f_y & = &
+                                                   -3\,\sin (3x-2y)-2\,(2x-3...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...x-2y)-2\,(2x-3y)\cdot \cos (3x-2y) &
+                                                   \PFEIL & f_y(0,0) & = & 0...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...,(2x-3y)\cdot \cos (3x-2y) & \PFEIL 
+                                                  & f_y(0,0) & = & 0 \\[1ex]...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(2x-3y)\cdot \cos (3x-2y) & \PFEIL &
+                                                   f_y(0,0) & = & 0 \\[1ex] ...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...t \cos (3x-2y) & \PFEIL & f_y(0,0) &
+                                                   = & 0 \\[1ex] f_{xx} & = ...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...os (3x-2y) & \PFEIL & f_y(0,0) & = &
+                                                   0 \\[1ex] f_{xx} & = & 12...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ... & f_y(0,0) & = & 0 \\[1ex] f_{xx} &
+                                                   = & 12\,\cos (3x-2y)-9\,(...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ..._y(0,0) & = & 0 \\[1ex] f_{xx} & = &
+                                                   12\,\cos (3x-2y)-9\,(2x-3...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...x-2y)-9\,(2x-3y)\cdot \sin (3x-2y) &
+                                                   \PFEIL & f_{xx}(0,0) & = ...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...,(2x-3y)\cdot \sin (3x-2y) & \PFEIL 
+                                                  & f_{xx}(0,0) & = & 12 \\ ...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(2x-3y)\cdot \sin (3x-2y) & \PFEIL &
+                                                   f_{xx}(0,0) & = & 12 \\ f...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...sin (3x-2y) & \PFEIL & f_{xx}(0,0) &
+                                                   = & 12 \\ f_{xy} & = & -1...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(3x-2y) & \PFEIL & f_{xx}(0,0) & = &
+                                                   12 \\ f_{xy} & = & -13\,\...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...L & f_{xx}(0,0) & = & 12 \\ f_{xy} &
+                                                   = & -13\,\cos (3x-2y)+6\,...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...f_{xx}(0,0) & = & 12 \\ f_{xy} & = &
+                                                   -13\,\cos (3x-2y)+6\,(2x-...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...x-2y)+6\,(2x-3y)\cdot \sin (3x-2y) &
+                                                   \PFEIL & f_{xy}(0,0) & = ...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...,(2x-3y)\cdot \sin (3x-2y) & \PFEIL 
+                                                  & f_{xy}(0,0) & = & -13 \\...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(2x-3y)\cdot \sin (3x-2y) & \PFEIL &
+                                                   f_{xy}(0,0) & = & -13 \\ ...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...sin (3x-2y) & \PFEIL & f_{xy}(0,0) &
+                                                   = & -13 \\ f_{yy} & = & 1...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(3x-2y) & \PFEIL & f_{xy}(0,0) & = &
+                                                   -13 \\ f_{yy} & = & 12\,\...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ... & f_{xy}(0,0) & = & -13 \\ f_{yy} &
+                                                   = & 12\,\cos (3x-2y)-4\,(...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ..._{xy}(0,0) & = & -13 \\ f_{yy} & = &
+                                                   12\,\cos (3x-2y)-4\,(2x-3...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...x-2y)-4\,(2x-3y)\cdot \sin (3x-2y) &
+                                                   \PFEIL & f_{yy}(0,0) & = ...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...,(2x-3y)\cdot \sin (3x-2y) & \PFEIL 
+                                                  & f_{yy}(0,0) & = & 12 \\ ...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(2x-3y)\cdot \sin (3x-2y) & \PFEIL &
+                                                   f_{yy}(0,0) & = & 12 \\ \...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...sin (3x-2y) & \PFEIL & f_{yy}(0,0) &
+                                                   = & 12 \\ \eARY \] Damit ...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...(3x-2y) & \PFEIL & f_{yy}(0,0) & = &
+                                                   12 \\ \eARY \] Damit erh�...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<recently read> \eARY 
+                      
+l.69 }
+      
+? 
+
+Overfull \hbox (1072.26971pt too wide) detected at line 69
+[][]\OML/lmm/m/it/10 f \OT1/lmr/m/n/10 = (2\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 
+^^@ \OT1/lmr/m/n/10 3\OML/lmm/m/it/10 y\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^A [
+]\OT1/lmr/m/n/10 (3\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OM
+L/lmm/m/it/10 y\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 (0\OML/lmm/m/
+it/10 ; \OT1/lmr/m/n/10 0) = 0 \OML/lmm/m/it/10 f[] \OT1/lmr/m/n/10 = 2  [](3\O
+ML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 y\OT1/l
+mr/m/n/10 ) + 3 (2\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 3\OML
+/lmm/m/it/10 y\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^A []\OT1/lmr/m/n/10 (3\OML/l
+mm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 y\OT1/lmr/m
+/n/10 )\OML/lmm/m/it/10 f[]\OT1/lmr/m/n/10 (0\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10
+ 0) = 0[] \OML/lmm/m/it/10 f[] \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10 ^^@\OT1/lmr/m
+/n/10 3  [](3\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OML/lmm/
+m/it/10 y\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2 (2\OML/lmm/m/
+it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 3\OML/lmm/m/it/10 y\OT1/lmr/m/n/10
+ ) \OMS/lmsy/m/n/10 ^^A []\OT1/lmr/m/n/10 (3\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10
+ ^^@ \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 y\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 f[]\O
+T1/lmr/m/n/10 (0\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 0) = 0 \OML/lmm/m/it/10 f[] 
+\OT1/lmr/m/n/10 = 12  [](3\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/
+10 2\OML/lmm/m/it/10 y\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 9 
+(2\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 3\OML/lmm/m/it/10 y\O
+T1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^A []\OT1/lmr/m/n/10 (3\OML/lmm/m/it/10 x \OM
+S/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 y\OT1/lmr/m/n/10 )\OML/lmm/
+m/it/10 f[]\OT1/lmr/m/n/10 (0\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 0) = 12[] \OML/
+lmm/m/it/10 f[] \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 13  [](3\
+OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 y\OT1/
+lmr/m/n/10 ) + 6 (2\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 3\OM
+L/lmm/m/it/10 y\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^A []\OT1/lmr/m/n/10 (3\OML/
+lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 y\OT1/lmr/
+m/n/10 )\OML/lmm/m/it/10 f[]\OT1/lmr/m/n/10 (0\OML/lmm/m/it/10 ; \OT1/lmr/m/n/1
+0 0) = \OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 13[] \OML/lmm/m/it/10 f[] \OT1/lmr/m
+/n/10 = 12  [](3\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OML/l
+mm/m/it/10 y\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 4 (2\OML/lmm
+/m/it/10 x \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 3\OML/lmm/m/it/10 y\OT1/lmr/m/n
+/10 ) \OMS/lmsy/m/n/10 ^^A []\OT1/lmr/m/n/10 (3\OML/lmm/m/it/10 x \OMS/lmsy/m/n
+/10 ^^@ \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 y\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 f[
+]\OT1/lmr/m/n/10 (0\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 0) = 12[] 
+ []
+
+! Undefined control sequence.
+<argument> ... -13\,xy+6\,y^2\ . \] \par \par \VS 
+                                                  \textbf {b)} Die stationä...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument>  \textbf {grad}\,f(x,y) &= \lARY 
+                                            {c} 6\,x^2 -3\,y \\ -3\,x+6y^2 \...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...c} 6\,x^2 -3\,y \\ -3\,x+6y^2 \rARY 
+                                                  = \textbf {0}\\ \Rightarro...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument>  \textbf {grad}\,f(x,y) &= \lARY 
+                                            {c} 6\,x^2 -3\,y \\ -3\,x+6y^2 \...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...c} 6\,x^2 -3\,y \\ -3\,x+6y^2 \rARY 
+                                                  = \textbf {0}\\ \Rightarro...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...\operatorname {Hess}_f(x,y) = \lARY 
+                                                  {cc} 12x & -3 \\ -3 & 12y ...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...ame {Hess}_f(x,y) = \lARY {cc} 12x &
+                                                   -3 \\ -3 & 12y \rARY . \]...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...f(x,y) = \lARY {cc} 12x & -3 \\ -3 &
+                                                   12y \rARY . \] \par Für ...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...ARY {cc} 12x & -3 \\ -3 & 12y \rARY 
+                                                  . \] \par Für \ $P_1 = (0...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...\operatorname {Hess}_f(0,0) = \lARY 
+                                                  {rr} 0 & -3 \\ -3 & 0 \rAR...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...rname {Hess}_f(0,0) = \lARY {rr} 0 &
+                                                   -3 \\ -3 & 0 \rARY \PFEIL...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...}_f(0,0) = \lARY {rr} 0 & -3 \\ -3 &
+                                                   0 \rARY \PFEIL \lambda _1...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...= \lARY {rr} 0 & -3 \\ -3 & 0 \rARY 
+                                                  \PFEIL \lambda _1 \cdot \l...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ... {rr} 0 & -3 \\ -3 & 0 \rARY \PFEIL 
+                                                  \lambda _1 \cdot \lambda _...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ... (\tfrac 12,\tfrac 12\big ) = \lARY 
+                                                  {rr} 6 & -3 \\ -3 & 6 \rAR...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ... 12,\tfrac 12\big ) = \lARY {rr} 6 &
+                                                   -3 \\ -3 & 6 \rARY \PFEIL...
+l.69 }
+      
+? 
+! Misplaced alignment tab character &.
+<argument> ...12\big ) = \lARY {rr} 6 & -3 \\ -3 &
+                                                   6 \rARY \PFEIL \lambda _1...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ...= \lARY {rr} 6 & -3 \\ -3 & 6 \rARY 
+                                                  \PFEIL \lambda _1 \cdot \l...
+l.69 }
+      
+? 
+! Undefined control sequence.
+<argument> ... {rr} 6 & -3 \\ -3 & 6 \rARY \PFEIL 
+                                                  \lambda _1 \cdot \lambda _...
+l.69 }
+      
+? 
+\c@Aufgwz-2013-8-2=\count473
+) [155
+
+
+
+] (../Analysis/wz3-2013-1-1.tex) [156
+
+
+
+]
+(../Analysis/Zeuge-2013Nov-K-A4.tex) [157
+
+
+] (../Analysis/analys_Monotonie.tex)
+[158
+
+
 
 ] (./Analysis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Analysis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 44622 strings out of 478288
- 1042348 string characters out of 5849315
- 1740814 words of memory out of 5000000
- 61686 multiletter control sequences out of 15000+600000
- 502321 words of font info for 57 fonts, out of 8000000 for 9000
+ 44988 strings out of 478288
+ 1049654 string characters out of 5849315
+ 1993014 words of memory out of 5000000
+ 62038 multiletter control sequences out of 15000+600000
+ 520237 words of font info for 74 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,17n,120p,10618b,2564s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,19n,120p,10618b,2748s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Analysis.dvi (22 pages, 271096 bytes).
+Output written on Analysis.dvi (158 pages, 1717912 bytes).

@@ -9,7 +9,7 @@ Gegeben seien die folgenden Funktionen%
 \begin{abc}
 \item Skizzieren Sie die Funktionen $f_1$ und $f_2$. 
 \item Bestimmen Sie den minimalen vertikalen Abstand beider Funktionsgraphen
-$$d=\text{min }\left\{ |f_1(x)-f_2(x)|;\, x\in\R\right\}.$$
+$$d=\text{min }\left\{ |f_1(x)-f_2(x)|;\, x\in\R^+\right\}.$$
 \end{abc}
 }
 
@@ -41,15 +41,21 @@ node[right,pos=1.,font=\footnotesize]{$f_2(x)=\ln(x)$};
 \end{minipage}
 
 \item Der gesuchte Abstand ist das Minimum der Funktion 
- $g(x) = |h(x)| \text{ mit } h(x)=f_1(x) - f_2(x)|$.\\
-Dieses Minimum liegt in einem lokalen Extremum von $h(x)$, da an den R\"andern des Definitionsbereiches $D$ gilt: 
+ $g(x) = |h(x)| \text{ mit } h(x)=f_1(x) - f_2(x)$.\\
+ Es gilt $f_1(x) > f_2(x)$ für alle $x \in D$. Daher ist die Differenz
+ immer positiv. 
+ 
+ 
+Dieses Minimum liegt in einem lokalen Extremum von $h(x)$, da an den Grenzen des Definitionsbereiches $D$ gilt: 
 \begin{align*}
 \underset{x\to\infty}\lim h(x)=& \underset{x\to\infty}\lim \left( x^2+1-\ln(x)\right) \\
 =&\ln\left(  \underset{x\to\infty}\lim \EH{x^2+1-\ln(x)}\right)\\
 =&\ln \left( \underset{x\to\infty}\lim \frac{\EH{x^2+1}}{\EH{\ln x}}\right)\qquad\text{ L'Hospital wg.} \EH{x^2+1}\to\infty,\, \EH{\ln x}=x\to \infty.\\
 =&\ln \left( \underset{x\to\infty}\lim \frac{2x\EH{x^2+1}}{1}\right)=\infty\\
-\underset{x\to 0}\lim h(x)=& \underset{x\to 0}\lim \left(x^2+1-\ln x\right)=-\infty
+\underset{x\to 0}\lim h(x)=& \underset{x\to 0}\lim \left(x^2+1-\ln x\right)=\infty
 \end{align*}
+Das heißt innerhalb des Definitionsbereiches wird ein Minimum angenommen.
+
 Die lokalen Extrema von $h(x)$ liegen in den Nullstellen der ersten Ableitung: 
 \begin{align*}
 &&h'(x)=2x-\frac 1x=&0\\
@@ -76,7 +82,7 @@ xlabel=$x$,
 ylabel=$y$]
 
 \addplot[domain=0:2.5,samples=200,blue]{x^2+1-ln(x)}
-node[right,pos=1.,font=\footnotesize]{$g(x)=x^2+1-\ln(x)$};
+node[right,pos=1.,font=\footnotesize]{$g(x)=|x^2+1-\ln(x)|$};
 
 \end{axis}
 \end{tikzpicture}

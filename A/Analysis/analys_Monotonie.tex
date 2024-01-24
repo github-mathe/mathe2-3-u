@@ -1,0 +1,70 @@
+\Aufgabe[e]{Monotonieverhalten}{
+Bestimmen Sie jeweils das Monotonieverhalten der folgenden 
+Funktionen. Geben Sie dazu die Intervalle an, in denen die 
+Funktion monoton steigend bzw. monoton fallend ist.
+
+\begin{abc}
+\item $f(x) = 2x^3 - 3x^2 + 1$
+\item $g(x) = -\cos(x) - 2\sin(x/2)$
+\end{abc}
+}
+\Loesung{
+\begin{abc}
+\item
+
+\item
+Um alle station\"aren Punkte zu bestimmen, berechnen wir die Nullstellen der 
+ersten Ableitung
+$$
+g'(x) = \sin(x) -\cos(x/2)  \overset{!}{=} 0.
+$$
+Mit der Substitution $y = x/2$ erhalten wir
+$$
+0 = \sin(2y) - \cos(y).
+$$
+Wir wenden das Additionstheorem $\sin(2\alpha) = 2 \sin(\alpha)\cos(\alpha)$ an.
+$$
+0 = 2\sin(y) \cos(y) - \cos(y) = (2\sin(y) - 1)\cos(y).
+$$
+Es muss also gelten 
+\begin{align*}
+\sin(y) = 1/2 \quad \text{ oder } \quad \cos(y) = 0.
+\end{align*}
+Damit erhalten wir die Nullstellen
+\begin{align*}
+y &= \frac{\pi}{6} + 2 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+y &= \frac{5\pi}{6} + 2 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+y &= \frac{\pi}{2} +  \pi n \, \text{ f\"ur } n \in \mathbb{Z}
+\end{align*}
+Durch R\"ucksubstitution erhalten wir die station\"aren Punkte:
+\begin{align*}
+x &= \frac{\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x &= \frac{5\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x &= \pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x &= 3\pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+\end{align*}
+Wir sehen, dass $g(x)$ eine Periodenl\"ange von $4\pi$ besitzt.
+Die Funktion $g(x)$ ist zwischen den station\"aren Punkten monoton.
+
+In den Intervallen 
+$$I_1 = (\frac{\pi}{3}+ 4 \pi n , \pi+ 4 \pi n ) \text{ f\"ur }
+n \in \mathbb{Z}
+$$
+ist $g(x)$ monoton steigend.
+
+In den Intervallen 
+$$I_2 =(\pi +  4 \pi n,\frac{5\pi}{3} + 4 \pi n) \text{ f\"ur }
+n \in \mathbb{Z}$$ ist $g(x)$ monoton fallend.
+
+In den Intervallen 
+$$I_3 = (\frac{5\pi}{3}+ 4 \pi n , 3\pi+ 4 \pi n ) \text{ f\"ur }
+n \in \mathbb{Z}$$ ist $g(x)$ monoton steigend.
+
+In den Intervallen 
+$$I_4 =(3\pi +  4 \pi n,\frac{\pi}{3} + 4 \pi n) \text{ f\"ur }
+n \in \mathbb{Z}$$ ist $g(x)$ monoton fallend
+
+\end{abc}
+
+
+}

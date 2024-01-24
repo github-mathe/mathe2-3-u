@@ -11,19 +11,20 @@ f_{14}(t)=&\sqrt{2\,t^2+1},                            \\
 f_{15}(t)=&\ln (t)-\ln (5t)                            ,&\qquad  && 
 f_{16}(t)=&\ln (t^2)-\ln (t^5).                         \\           
 \end{align*}
-\textbf{Hinweis: }Es gilt $\dfrac{d}{dx}(\ln(x))=\dfrac 1x$. 
-\item Bestimmen Sie die vierte Ableitung folgender Funktionen, wobei Sie das geeignete Zusammenfassen von Termen nicht vergessen sollten. 
-\begin{align*}
-f_{17}(t)=&(t-3)^4-(2t+1)^5    ,&\qquad  && 
-f_{18}(t)=&(t+1)\,\sin (2t)    \\            
-f_{19}(t)=&(t^3-1)\,\text{e}^{2t}     ,&\qquad  && 
-f_{20}(t)=&\sin (3t)\,\text{e}^{-t}   \\           
-\end{align*}
-\textbf{Hinweis: }Nutzen Sie gegebenen Falls die Leibniz-Regel zur Berechnung h\"oherer Ableitungen. Diese hat dieselbe Gestalt wie der binomische Lehrsatz:  
-\begin{align*}
-(f(t)\cdot g(t))^{(n)}=&\sum\limits_{k=0}^n\begin{pmatrix}n\\k\end{pmatrix}f^{(k)}(t)\cdot g^{(n-k)}(t)\\
-\text{Z. B. f\"ur } n=2: \, (f(t)\cdot g(t))''=& f(t)g''(t)+2f'(t)g'(t)+f''(t)g(t)
-\end{align*}
+% \textbf{Hinweis: }Es gilt $\dfrac{d}{dx}(\ln(x))=\dfrac 1x$. 
+% \item Bestimmen Sie die vierte Ableitung folgender Funktionen, wobei Sie das geeignete Zusammenfassen von Termen nicht vergessen sollten. 
+% \begin{align*}
+% f_{17}(t)=&(t-3)^4-(2t+1)^5    ,&\qquad  && 
+% f_{18}(t)=&(t+1)\,\sin (2t)    \\            
+% f_{19}(t)=&(t^3-1)\,\text{e}^{2t}     ,&\qquad  && 
+% f_{20}(t)=&\sin (3t)\,\text{e}^{-t}   \\           
+% \end{align*}
+% \textbf{Hinweis: }Nutzen Sie gegebenen Falls die Leibniz-Regel zur Berechnung h\"oherer Ableitungen. Diese hat dieselbe Gestalt wie der binomische Lehrsatz:  
+% \begin{align*}
+% (f(t)\cdot g(t))^{(n)}=&\sum\limits_{k=0}^n\begin{pmatrix}n\\k\end{pmatrix}f^{(k)}(t)\cdot g^{(n-k)}(t)\\
+% \text{Z. B. f\"ur } n=2: 
+% \, (f(t)\cdot g(t))''=& f(t)g''(t)+2f'(t)g'(t)+f''(t)g(t)
+% \end{align*}
 \item Bestimmen Sie die\ $n$--te Ableitung folgender Funktionen. 
 \begin{align*}
 f_{21}(t)=&\sin (3t)        ,&\qquad  && 
@@ -48,29 +49,29 @@ f_{14}'(t)= & \frac{4t}{2\sqrt{2t^2+1}}\\
 f_{15}'(t)= & \frac 1 t - \frac{5}{5t}=0\\
 f_{16}'(t)= & \frac d{dt} (\ln (t^2)-\ln (t^5)) = \frac d{dt}(2\ln t - 5 \ln t) = \frac{-3}{t}
 \end{align*}
-\item 
-\begin{align*}
-f_{17}^{(4)}= & 4\cdot 3 \cdot 2 \cdot 1 - 2^4\cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot (2t+1)\\
-=& 24\cdot \left( 1 - 80 (2t+1)\right) = -24(160t+79)\\
-f_{18}^{(4)}= &\left( \frac d{dt}\right)^3\left( \sin(2t)+(t+1)2\cos(2t)\right)\\
-=&-8\cos(2t)+ 2\left( \frac d{dt}\right)^2\left( \cos(2t)-2(t+1)\sin(2t)\right)\\
-=& -8\cos(2t) -8\cos(2t) -4  \frac d{dt}\left( \sin(2t)+2(t+1)\cos(2t)\right)\\
-=& -16\cos(2t) -8\cos(2t) -8\cos(2t)+16(t+1)\sin(2t)\\
-=&-32\cos(2t)+16(t+1)\sin(2t)\\
-f_{19}^{(4)}= &\left( \frac d{dt}\right)^3\left( (3t^2+2(t^3-1))\EH{2t}\right)\\
-=& \left( \frac d{dt}\right)^2\left((6t+6t^2+2(3t^2+2(t^3-1)))\EH{2t}\right)\\
-=& \left( \frac d{dt}\right)^2\left( (4t^3+12t^2+6t-4)\EH{2t}\right) \\
-=& \frac d{dt} \left((12t^2+24t+6+8t^3+24t^2+12t-8)\EH{2t}\right)\\
-=& (24t + 24 + 24t^2 + 48t+12+24t^2+48t+12+16t^3+48t^2+24t-16)\EH{2t}\\
-=& (16t^3+96t^2+144t+32)\EH{2t}\\
-f_{20}^{(4)}= &\left( \frac d{dt}\right)^3\left( 3\cos(3t)\EH{-t}-\sin(3t)\EH{-t}\right)\\
-=& \left( \frac d{dt}\right)^2\left((-9\sin(3t)-3\cos(3t)-3\cos(3t)+\sin(3t))\EH{-t}\right)\\
-=& \left( \frac d{dt}\right)^2\left( (-8\sin(3t)-6\cos(3t))\EH{-t}\right) \\
-=& \frac d{dt} \left((-24\cos(3t)+8\sin(3t)+18\sin(3t)+6\cos(3t))\EH{-t}\right) \\
-=& \frac d{dt} \left((-18\cos(3t)+26\sin(3t))\EH{-t}\right)\\
-=&(54\sin(3t)+18\cos(3t)+78\cos(3t)-26\sin(3t))\EH{-t} \\
-=& (28\sin(3t)+96\cos(3t))\EH{-t}
-\end{align*}
+% \item 
+% \begin{align*}
+% f_{17}^{(4)}= & 4\cdot 3 \cdot 2 \cdot 1 - 2^4\cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot (2t+1)\\
+% =& 24\cdot \left( 1 - 80 (2t+1)\right) = -24(160t+79)\\
+% f_{18}^{(4)}= &\left( \frac d{dt}\right)^3\left( \sin(2t)+(t+1)2\cos(2t)\right)\\
+% =&-8\cos(2t)+ 2\left( \frac d{dt}\right)^2\left( \cos(2t)-2(t+1)\sin(2t)\right)\\
+% =& -8\cos(2t) -8\cos(2t) -4  \frac d{dt}\left( \sin(2t)+2(t+1)\cos(2t)\right)\\
+% =& -16\cos(2t) -8\cos(2t) -8\cos(2t)+16(t+1)\sin(2t)\\
+% =&-32\cos(2t)+16(t+1)\sin(2t)\\
+% f_{19}^{(4)}= &\left( \frac d{dt}\right)^3\left( (3t^2+2(t^3-1))\EH{2t}\right)\\
+% =& \left( \frac d{dt}\right)^2\left((6t+6t^2+2(3t^2+2(t^3-1)))\EH{2t}\right)\\
+% =& \left( \frac d{dt}\right)^2\left( (4t^3+12t^2+6t-4)\EH{2t}\right) \\
+% =& \frac d{dt} \left((12t^2+24t+6+8t^3+24t^2+12t-8)\EH{2t}\right)\\
+% =& (24t + 24 + 24t^2 + 48t+12+24t^2+48t+12+16t^3+48t^2+24t-16)\EH{2t}\\
+% =& (16t^3+96t^2+144t+32)\EH{2t}\\
+% f_{20}^{(4)}= &\left( \frac d{dt}\right)^3\left( 3\cos(3t)\EH{-t}-\sin(3t)\EH{-t}\right)\\
+% =& \left( \frac d{dt}\right)^2\left((-9\sin(3t)-3\cos(3t)-3\cos(3t)+\sin(3t))\EH{-t}\right)\\
+% =& \left( \frac d{dt}\right)^2\left( (-8\sin(3t)-6\cos(3t))\EH{-t}\right) \\
+% =& \frac d{dt} \left((-24\cos(3t)+8\sin(3t)+18\sin(3t)+6\cos(3t))\EH{-t}\right) \\
+% =& \frac d{dt} \left((-18\cos(3t)+26\sin(3t))\EH{-t}\right)\\
+% =&(54\sin(3t)+18\cos(3t)+78\cos(3t)-26\sin(3t))\EH{-t} \\
+% =& (28\sin(3t)+96\cos(3t))\EH{-t}
+% \end{align*}
 \item \begin{iii}
 \item Jedes Ableiten der Funktion $f_{21}$ f\"uhrt wegen der inneren Ableitung aus der Kettenregel
 zu einem Faktor $3$. Außerdem ergibt jedes zweite Ableiten der \"außeren Funktion (immer die
