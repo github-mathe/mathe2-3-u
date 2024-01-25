@@ -1,6 +1,6 @@
 \Aufgabe[e]{Monotonieverhalten}{
-Bestimmen Sie jeweils das Monotonieverhalten der folgenden 
-Funktionen. Geben Sie dazu die Intervalle an, in denen die 
+Untersuchen Sie das Monotonieverhalten der folgenden Funktionen.
+Geben Sie dazu alle Intervalle an, in denen die 
 Funktion monoton steigend bzw. monoton fallend ist.
 
 \begin{abc}
@@ -11,7 +11,25 @@ Funktion monoton steigend bzw. monoton fallend ist.
 \Loesung{
 \begin{abc}
 \item
-
+Die erste Ableitung ist
+$$
+f'(x) = 6x^2 -6x = x(6x-x)
+$$
+Damit sind die station\"aren Punkte bei 
+$$
+x_1 = 0 \quad \text{ und } \quad x_2 = 1.
+$$
+Mit der zweiten Ableitung erhalten wir f\"ur $x_1 = 0$
+$$
+f''(0) = -6
+$$
+und f\"ur $x_2 = 1$
+$$
+f(1) = 6.
+$$
+Damit ist bei $x_1 = 0$ ein Maximum und bei $x_2 = 1$ Minimum.
+In den Intervallen $(-\infty, 0 )$ und $(1,\infty)$ ist $f(x)$ monoton steigend
+und in dem Intervall $(0,1)$ ist $f(x)$ monoton fallend.
 \item
 Um alle station\"aren Punkte zu bestimmen, berechnen wir die Nullstellen der 
 ersten Ableitung
@@ -32,16 +50,16 @@ Es muss also gelten
 \end{align*}
 Damit erhalten wir die Nullstellen
 \begin{align*}
-y &= \frac{\pi}{6} + 2 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
-y &= \frac{5\pi}{6} + 2 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
-y &= \frac{\pi}{2} +  \pi n \, \text{ f\"ur } n \in \mathbb{Z}
+y_1 &= \frac{\pi}{6} + 2 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+y_2 &= \frac{5\pi}{6} + 2 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+y_3 &= \frac{\pi}{2} +  \pi n \, \text{ f\"ur } n \in \mathbb{Z}
 \end{align*}
 Durch R\"ucksubstitution erhalten wir die station\"aren Punkte:
 \begin{align*}
-x &= \frac{\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
-x &= \frac{5\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
-x &= \pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
-x &= 3\pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x_1 &= \frac{\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x_2 &= \frac{5\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x_3 &= \pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x_4 &= 3\pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
 \end{align*}
 Wir sehen, dass $g(x)$ eine Periodenl\"ange von $4\pi$ besitzt.
 Die Funktion $g(x)$ ist zwischen den station\"aren Punkten monoton.
