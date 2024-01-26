@@ -13,7 +13,7 @@ Funktion monoton steigend bzw. monoton fallend ist.
 \item
 Die erste Ableitung ist
 $$
-f'(x) = 6x^2 -6x = x(6x-x)
+f'(x) = 6x^2 -6x = x(6x-6)
 $$
 Damit sind die station\"aren Punkte bei 
 $$
@@ -25,7 +25,7 @@ f''(0) = -6
 $$
 und f\"ur $x_2 = 1$
 $$
-f(1) = 6.
+f''(1) = 6.
 $$
 Damit ist bei $x_1 = 0$ ein Maximum und bei $x_2 = 1$ Minimum.
 In den Intervallen $(-\infty, 0 )$ und $(1,\infty)$ ist $f(x)$ monoton steigend
@@ -57,10 +57,17 @@ y_3 &= \frac{\pi}{2} +  \pi n \, \text{ f\"ur } n \in \mathbb{Z}
 Durch R\"ucksubstitution erhalten wir die station\"aren Punkte:
 \begin{align*}
 x_1 &= \frac{\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
-x_2 &= \frac{5\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
-x_3 &= \pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
-x_4 &= 3\pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x_2 &= \frac{5\pi}{3} + 4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}
 \end{align*}
+Da f\"ur $y_3$ die Perioden $\pi$ ist, erhalten wir nach der 
+R\"ucksubstitution im Intervall $[0,4\pi)$
+die zwei station\"aren Punkte $x_3$ und $x_4$.
+\begin{align*}
+x_3 &= \pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}\\
+x_4 &= 3\pi +  4 \pi n \, \text{ f\"ur } n \in \mathbb{Z}
+\end{align*}
+
+
 Wir sehen, dass $g(x)$ eine Periodenl\"ange von $4\pi$ besitzt.
 Die Funktion $g(x)$ ist zwischen den station\"aren Punkten monoton.
 
@@ -81,6 +88,16 @@ n \in \mathbb{Z}$$ ist $g(x)$ monoton steigend.
 In den Intervallen 
 $$I_4 =(3\pi +  4 \pi n,\frac{\pi}{3} + 4 \pi n) \text{ f\"ur }
 n \in \mathbb{Z}$$ ist $g(x)$ monoton fallend
+
+\begin{tikzpicture}
+  \draw[->] (-2, 0) -- (8, 0) node[right] {$x$};
+  \draw[->] (0, -2) -- (0, 2) node[above] {$y$};
+  \node[red] at (1.5,1) {$f(x)$};
+  \node[blue] at (-1.5,1) {$g(x)$};
+  \draw[scale=0.5, domain=-2:16, smooth, variable=\x, blue] plot (\x,{-cos(\x r)-2*sin(\x/2 r)});
+  \draw[scale=0.5, domain=-1:1.8, smooth, variable=\y, red]  plot ({\y}, {2*\y*\y*\y - 3*\y*\y + 1});
+\end{tikzpicture}
+
 
 \end{abc}
 

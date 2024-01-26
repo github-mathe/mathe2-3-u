@@ -23,6 +23,8 @@ Die Bahn verl\"auft also asymptotisch in Richtung der beiden Geraden $\Spn\{(1,\
 F\"ur die Geschwindigkeit gilt passend dazu 
 $$\underset{t\rightarrow \pm\infty}\lim \dot{\vec r}(t)=(\pm 1,3)^\top.$$
 
+Der Graph zeigt die Bahnkurve des Satelliten sowie deren Asymptoten.
+
 \psset{xunit=1cm, yunit=1cm, runit=1cm}
 \begin{pspicture}(-1,-6)(5,6)
 \psgrid[subgriddiv=1,griddots=10,gridlabels=0](-1,-6)(5,6)
@@ -30,7 +32,13 @@ $$\underset{t\rightarrow \pm\infty}\lim \dot{\vec r}(t)=(\pm 1,3)^\top.$$
 \parametricplot[plotpoints=200, plotstyle=curve]
 {-4}{4}
 {1 t t mul add sqrt .5 mul  3 t mul .5 mul}
+\rput[l](1,0){$\vec r(t)$}
+\psline{->}(-1,-6.5)(-1,6.5)
+\psline{->}(-1.5,-6)(5.5,-6)
+\rput[r](-1,6){$r_1$}
+\rput[t](5,-6){$r_2$}
 \end{pspicture}
+
 
 \end{abc}
 }
