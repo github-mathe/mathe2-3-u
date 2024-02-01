@@ -1,14 +1,90 @@
 \Aufgabe[e]{Asymptoten}{
-Man bestimme die (waagerechten bzw.\ senkrekten bzw.ß schrägen) Asymptoten der folgenden Funktionen:
+Man bestimme die (waagerechten bzw.\ senkrekten bzw.\ schrägen) Asymptoten der folgenden Funktionen:
 \begin{abc}
-\item $f(x) = \frac{x}{4+x^2}$
-\item $g(x) = e^{-x^2}$
+\item $f(x) = \frac{x}{4-x^2}$
+\item $g(x) = \operatorname{e}^{-x^2}$
 \item $h(x) = \frac{x^2-3x}{2x-2}$
 \item $l(x)=x^2e^{-x}$
 \end{abc}
 }
 
 \Loesung{
+\begin{abc}
+\item
+Um die senkrekten Asymptoten zu finden, bestimmen wir zunächst die Nullstellen 
+des Nenners. Die Nullstellen liegen bei $x_1 = -2$ und $x_2 = 2$.
+
+An diesen untersuchen wir das Verhalten der Funktion:
+$$
+\lim_{x\to -2^-} \frac{x}{4-x^2} = -\infty \, , \lim_{x\to -2^+} \frac{x}{4-x^2} = \infty
+$$
+und
+$$
+\lim_{x\to 2^-} \frac{x}{4-x^2} = \infty \, , \lim_{x\to 2^+} \frac{x}{4-x^2} = -\infty
+$$
+Das bedeutet es es gibt eine senkrechte Asymptote bei $ x = -2$ und $x = 2$.
+
+Um die waagerechten Asymptoten zu finden, untersuchen wir das Verhalten im 
+Unendlichen. 
+$$
+\lim_{x \to -\infty} \frac{x}{4-x^2} = 0
+$$
+und
+$$
+\lim_{x \to \infty} \frac{x}{4-x^2} = 0.
+$$
+Das hei\ss t, es gibt eine waagerechte Asymptote bei $y = 0.$
+
+\item
+Die Funktion $g(x) = \operatorname{e}^{-x^2}$ hat keine Definitionsl\"ucke. 
+Es gibt also keine senkrekten Asymptoten.
+
+F\"ur die waagerechten Asymptoten untersuchen wir das Verhalten im Unendlichen.
+Es gilt: 
+$$
+\lim_{x \to -\infty} \operatorname{e}^{-x^2} = 0
+$$
+und 
+$$
+\lim_{x \to \infty} \operatorname{e}^{-x^2} = 0.
+$$
+Es gibt also eine waagerechte Asymptote bei $y = 0$.
+
+\item
+Die Funktion $h(x) = \frac{x^2-3x}{2x-2}$ hat eine Definitionsl\"ucke bei $x = 1$.
+Es gilt:
+$$
+\lim_{x \to 1^-} \frac{x^2-3x}{2x-2} = \infty
+$$
+und 
+$$
+\lim_{x \to 1^+} \frac{x^2-3x}{2x-2} = -\infty.
+$$
+Da der Z\"ahler von $h(x)$ genau einen Polynomgrad h\"oher ist als der des Nenners, 
+gibt es eine schr\"age Asymptote.
+
+Durch Polynomdivision erhalten wir:
+$$
+(x^2 -3x):(2x -2) = (\frac{1}{2}x - 1) + \frac{-2}{2x-2}.
+$$
+Es gibt also eine schr\"age Asymptote bei $y = \frac{1}{2}x - 1$.
+\item
+Die Funktion $l(x)=x^2e^{-x}$ hat keine Definitionsl\"ucke. Daher hat sie keine 
+senkrechte Asymptote. 
+Wir untersuchen das Verhalten im Unendlichen mit Hilfe der Regel von L'Hospital,
+um die waagerechten Asymptoten zu finden:
+$$
+\lim_{x \to -\infty} x^2e^{-x} = \lim_{x \to -\infty} -2xe^{-x}
+=\lim_{x \to -\infty} 2e^{-x} = \infty.
+$$
+und 
+$$
+\lim_{x \to \infty} x^2e^{-x} = \lim_{x \to \infty} -2xe^{-x}
+=\lim_{x \to \infty} 2e^{-x} = 0.
+$$
+Es gibt also eine waagerechte Asymptote bei $y = 0$.
+\end{abc}
+
 }
 
 \ErgebnisC{analysAsymp01}
