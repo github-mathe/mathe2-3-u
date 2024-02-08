@@ -1,0 +1,94 @@
+
+\input{header}
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} M.Sc Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2024}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{Mathematik II/B (WI/ET)}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{5}
+\newcommand{\TOPIC}{Kurvendiskussion, Taylorpolynom}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%  \setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+\renewcommand{\d }{\mathrm{d}}
+
+\textbf{Einführende Bemerkungen}
+
+\begin{itemize}
+\item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
+% \item Die mit einem Stern *) markierten (Teil-)Aufgaben entfallen in diesem Trimester. Stattdessen werden einzelne Online-Aufgaben im ILIAS-Kurs kenntlich gemacht, zu denen Sie dort Ihre L\"osungswege zur Korrektur hochladen k\"onnen. 
+% \item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
+\end{itemize}
+
+\ruleBig
+
+%Mathe II Blatt 4
+
+
+\input{../A/Analysis/analys_Tayl_02.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Tayl_01.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Tayl_Entw_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \input{../A/Analysis/analys_Absch_e_001.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{} 
+
+\input{../A/Analysis/analys_Asympt_01.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \input{../A/Analysis/analys_Disk_Tayl_01a.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \input{../A/Analysis/analys_Kudi_Klau_001.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Kurv_Disk_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+\newpage
+\input{../A/Analysis/analys_Kurv_Disk_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \input{../A/Analysis/analys_Kurv_Disk_004.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \input{../A/Analysis/analys_Kurv_Disk_010.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+
+% 
+% \input{../A/Analysis/wz-2013-2-1p.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\ifthenelse{\boolean{mitErg}}{
+\ruleBig
+\Ergebnisse}{}
+
+
+\end{twocolumn}
+\end{document}
