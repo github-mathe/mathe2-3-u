@@ -4,7 +4,7 @@ Gegeben sei die Funktion $$f(x)=\ln(x).$$
 %\item Determine the Taylor polynomial of order two, $T_2(x)$, of $f(x)$ at the expansion point $x=1$.
 %\item Determine the reminder term $R_2(x;1)$ and estimate $$\max_{x\in[1,2]}|R(x;1)|.$$
 \item Bestimmen Sie das Taylor-Polynom der Ordnung zwei, $T_2(x)$, von $f(x)$ an der Stelle $x=1$.
-\item Bestimmen Sie das Restglied $R_2(x;1)$ und schätzen Sie $$\max_{x\in[1,2]}|R(x;1)|.$$
+\item Bestimmen Sie das Restglied $R_2(x;1)$ und schätzen Sie $$\max_{x\in[1,2]}|R_2(x;1)|.$$
 \end{abc}
 }
 
@@ -17,7 +17,7 @@ f'(x) = \frac{1}{x}, \quad f''(x) = -\frac{1}{x^2}, \quad f'''(x) = \frac{2}{x^3
 \end{align*}
 Das Taylor-Polynom ist
 $$
-f(x) = f(1) + f'(x)(x-1) +\frac{1}{2} f''(x)(x-1)^2+R_2(x;1),
+f(x) = f(1) + f'(1)(x-1) +\frac{1}{2} f''(1)(x-1)^2+R_2(x;1),
 $$
 und das Taylor-Polynom der zweiten Ordnung an der Stelle $x=1$ ist
 $$
@@ -25,16 +25,16 @@ T_2(x) = 0 + 1 (x-1) + \frac{1}{2}(-1)(x-1)^2 = -\frac{1}{2}x^2 + 2x -\frac{3}{2
 $$
 \item Das Restglied ist
 $$
-R(x;1) = f'''(\xi)\frac{(x-1)^3}{3!}, \quad \xi \in [1,2].
+R_2(x;1) = f'''(\xi)\frac{(x-1)^3}{3!}, \quad \xi \in [1,2].
 $$
 Es ist
 $$
-R(x;1) = \frac{2}{\xi^3}\frac{(x-1)^3}{3!}, \quad \xi \in [1,2].
+R_2(x;1) = \frac{2}{\xi^3}\frac{(x-1)^3}{3!}, \quad \xi \in [1,2].
 $$
 %An upper bound for the funtion $R(x;1)$ for $\xi$ and $x$ in the interval $[1,2]$ is found by minimizing the denominator and maximizing the numerator. The minimim of the denominator is at $\xi=1$ and the maximum of the numerator is at $x=2$. This because the cubic function is monotonically increasing since its derivative is always positive. We have thus the estimate
 Eine obere Schranke für die Funktion $R(x;1)$ für $\xi$ und $x$ im Intervall $[1,2]$ wird durch Minimieren des Nenners und Maximieren des Zählers gefunden. Das Minimum des Nenners liegt bei $\xi=1$ und das Maximum des Zählers ist bei $x=2$. Dies liegt daran, dass die kubische Funktion monoton steigend ist, da ihre Ableitung immer positiv ist. Wir haben also die Schätzung
 $$
-R(x;1) \leq \dfrac{2}{1^3}\dfrac{(2-1)^3}{3!} = \frac{1}{3}.
+R_2(x;1) \leq \dfrac{2}{1^3}\dfrac{(2-1)^3}{3!} = \frac{1}{3}.
 $$
 %In the following the function $R_2(x;1)$ is plotted for the two values of $\xi=1$ and $\xi=2$:
 Im Folgenden wird die Funktion $R_2(x;1)$ für die beiden Werte $\xi=1$ und $\xi=2$ skizziert:
@@ -73,6 +73,6 @@ Im Folgenden wird die Funktion $R_2(x;1)$ für die beiden Werte $\xi=1$ und $\xi
 {
 Eine Abschätzung des Restglieds ist
 $$
-R(x;1) \leq \frac{1}{3}.
+R_2(x;1) \leq \frac{1}{3}.
 $$
 }

@@ -1,0 +1,90 @@
+\Aufgabe[e]{Ableitung der Umkehrfunktion}{
+\begin{abc}
+\item Leiten Sie die Formel für die Ableitung der Umkehrfunktion her.
+\item Leiten Sie eine Formel für die zweiten Ableitung der Umkehrfunktion her.
+\item Gegeben sei die Funktion
+$$ f(x) = \operatorname{e}^{x} + 2x . $$
+\begin{iii}
+\item Zeigen Sie, dass $f:\R \to \R$ umkehrbar ist.
+\item Bestimmen Sie die Ableitungen $g^\prime(1)$ und $g^{\prime\prime}(1)$ der Umkehrfunktion 
+$$g=f^{-1}.$$ 
+\end{iii}
+\end{abc}
+}
+
+
+\Loesung{
+% \textbf{Zu a)} Es gilt:
+% \begin{itemize}
+% \item[i)] \qquad 
+% $f_1'(x) = 3\cdot 4 x^3(\ln x)^2 + 3 x^4\cdot 2\ln x \cdot \dfrac{1}{x}=6x^3\ln x(2\ln x+1)\,,$
+% \item[ii)] \qquad
+% $\begin{array}[t]{r@{\;}c@{\;}l}
+% f_2(x) & = & x^{x+\ln x} = \exp\left((x+\ln x)\cdot \ln x\right)\,,\\[3ex]
+% f_2'(x) & = & \exp\left((x+\ln x)\cdot \ln x\right) \cdot \left[\left(1+\dfrac{1}{x}\right)\ln x + (x + \ln x)\cdot \dfrac{1}{x}\right]\\[2ex]
+%  & = & \left(1+\ln x + \dfrac{2}{x}\ln x\right)\cdot x^{x+\ln x}\,,
+% \end{array}
+% $
+% \item[iii)] \qquad $\begin{array}[t]{r@{\;}c@{\;}l}
+% f_3'(x) & = & \dfrac{1}{\sqrt{1-x^2}} + \dfrac{2\sqrt{1-x^2}+2x\cdot \dfrac{1}{2}\cdot \dfrac{-2x}{\sqrt{1-x^2}}}{\sqrt{1-4x^2(1-x^2)}} - \dfrac{3}{\sqrt{1-x^2}}\\[3ex]
+% & = & - \dfrac{2}{\sqrt{1-x^2}} + \dfrac{2\sqrt{1-x^2}- \dfrac{2x^2}{\sqrt{1-x^2}}}{1-2x^2}\\[3ex] 
+% & = & - \dfrac{2}{\sqrt{1-x^2}} + \dfrac{2-4x^2}{(1-2x^2)\sqrt{1-x^2}} = 0\,,
+% \end{array}
+% $\\[1ex]
+% d.h.\ $f_3$ ist konstant. 
+% \end{itemize}
+\begin{abc}
+\item 
+Für die Umkehrfunktion von $f$ gilt:
+$$
+x = f(f^{-1}(x))
+$$
+Wir leiten beide Seiten dieser Identität einmal ab.
+Damit erhalten wir mit der Kettenregel
+$$
+1 = f'(f^{-1}(x))\cdot(f^{-1}(x))'
+$$
+Wir stellen nach der Ableitung der Umkehrfunktion um und erhalten.
+$$
+(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}
+$$
+\item 
+Um die Formel für die zweite Ableitung der Umkehrfunktion herzuleiten, 
+leiten wir die Identität
+$$
+x = f(f^{-1}(x)) 
+$$
+zweimal ab. Wir erhalten
+$$
+0 = f''(f^{-1}(x))\cdot(f^{-1}(x))'\cdot (f^{-1}(x))' + f'(f^{-1}(x))\cdot(f^{-1}(x))''  
+$$
+Wir stellen nach der zweiten Ableitung der Umkehrfunktion um. Damit erhalten wir
+$$
+(f^{-1})''(x) = -f''(f^{-1}(x))\cdot\frac{1}{(f'(f^{-1}(x))^2} 
+$$
+Alternativ kann man die Formel auch herleiten, indem man die Formel für die erste
+Ableitung der Umkehrfunktion nochmals ableitet.
+\item
+\begin{iii}
+\item Die Funktion $f:\R \to \R$ ist streng monoton steigend, denn $x \mapsto 2x$ und $x \mapsto \operatorname{e}^x$
+ sind beide streng monoton steigend. \\
+Außerdem ist $\lim\limits_{x \to -\infty} f(x) = - \infty$ und
+ $\lim\limits_{x \to +\infty} f(x) = +\infty$.\\
+Also werden von der stetigen Funktion $f(x)$ alle reellen Werte angenommen. Wegen der Monotonie
+ wird jeder Wert nur genau ein Mal angenommen und die Funktion $f(x)$ ist umkehrbar. 
+
+
+\item Es ist $f(0)=\operatorname{e}^0+2 \cdot 0=1$, also hat man $x_0=0$ und $y_0=f(x_0)=1$. Mit den Formeln f\"ur die Ableitung der Umkehrfunktion aus der Vorlesung und den Ableitungen
+$f^\prime(x)=\operatorname{e}^x+2$ sowie $f^{\prime\prime}(x)=\operatorname{e}^x$ folgt 
+$$ g^\prime(1)=\dfrac{1}{f^\prime(0)}=\dfrac{1}{3} 
+   \text{ und } 
+   g^{\prime\prime}(1)=-\dfrac{f^{\prime\prime}(0)}{(f^\prime(0))^3}
+	= -\dfrac{1}{27}\,. $$
+	
+\end{iii}
+\end{abc}
+}
+
+%\ErgebnisC{analysUmkeFunk004}
+%{
+%}
