@@ -1,0 +1,54 @@
+\Aufgabe[]{Newton-Verfahren (alte Klausuraufgabe)}{
+Gegeben sei die Funktion $f:\R ^3\rightarrow \R $ durch 
+$$f(x,y,z)=z\cdot \cos(\pi\cdot(x+y)) +z^2+y^4.$$
+Gesucht sind die station\"aren Punkte dieser Funktion. 
+\begin{abc}
+\item Geben Sie an, welche Bedingung ein station\"arer Punkt $\vec x\in\R^3$ erf\"ullen muss. 
+\item Um eine N\"aherung f\"ur einen solchen Punkt zu berechnen, soll das dreidimensionale Newton-Verfahren angewendet werden. Auf welche Funktion wird das Newton-Verfahren angewendet?\\
+Geben Sie die Iterationsvorschrift an. 
+\item F\"uhren Sie f\"ur den Startvektor $\vec x_0=\begin{pmatrix}1/2\\1\\0\end{pmatrix}$ einen Iterationsschritt durch. 
+\item Geben Sie ein geeignetes Abbruchkriterium des Newton-Verfahrens an. (Dieses Kriteriums ist \textbf{nicht} auszuwerten.)
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item In einem station\"aren Punkt muss der Gradient der Funktion $f$ verschwinden: 
+$$\vec 0\overset != \nabla f(x,y,z)=\begin{pmatrix}
+-\pi z \sin(\pi(x+y))\\
+-\pi z \sin(\pi(x+y))+4y^3\\
+\cos(\pi(x+y))+2z
+\end{pmatrix}$$
+\item Das Newton-Verfahren wird auf die Funktion $\vec F(x,y,z)=\nabla f(x,y,z)$ angewendet. Die Ableitung dieser Funktion ist
+\begin{align*}
+&\vec F'(x,y,z)\Bigl(=H_f(x,y,z)\Bigr)\\
+=&\begin{pmatrix}
+-\pi^2 z\cos(\pi(x+y)) & -\pi^2 z \cos(\pi(x+y)) & -\pi \sin(\pi(x+y))\\
+-\pi^2 z\cos(\pi(x+y)) & -\pi^2 z \cos(\pi(x+y))+12y^2 & -\pi\sin(\pi(x+y))\\
+-\pi\sin(\pi(x+y)) & -\pi \sin(\pi(x+y)) & 2\end{pmatrix}.
+\end{align*}
+Zu gegebenem Startwert $\vec x_0$ wird die folgende Iteration durchgef\"uhrt: \\
+F\"ur $j=0,1,2,\hdots$: 
+\begin{itemize}
+\item L\"ose das lineare Gleichungssystem $\vec F'(\vec x_j)\Delta \vec x = -\vec F(\vec x_j)$ nach $\Delta \vec x$ auf.
+\item Berechne n\"achste Iteration $\vec x_{j+1}=\vec x_j+\Delta \vec x$. 
+\end{itemize}
+\item F\"ur den gegebenen Startvektor $\vec x_0=\left(\frac 12,1,0\right)^\top$ ergibt sich 
+zun\"achst 
+$$\vec F\left(\frac 12,1,0\right)=\begin{pmatrix}0 \\4\\0\end{pmatrix}\text{ und }\vec F'\left(\frac 12,1,0\right)=\begin{pmatrix}
+ 0&  0 & \pi \\
+0 & 12 & \pi \\
+\pi & \pi & 2\end{pmatrix}.$$
+Die L\"osung des Gleichungssystems $\vec F'(\vec x_0) \Delta \vec x = -\vec F(\vec x_0)$ 
+ergibt
+$$\Delta \vec x= \begin{pmatrix}\frac 13\\-\frac 13\\0\end{pmatrix}$$
+und als n\"achsten Iterationsschritt
+$$\vec x_1=\vec x_0+\Delta \vec x = \begin{pmatrix}\frac 56\\\frac 23\\0\end{pmatrix}.$$
+\item Geeignete Abbruchkriterien sind etwa
+$\Vert{\vec F(\vec x_k)}\Vert<\varepsilon$ oder $\Vert{\vec x_k-\vec x_{k-1}}\Vert<\varepsilon$ mit fest vorgegebenem $\varepsilon>0$. \\
+Desweiteren empfiehlt es sich, die Iteration nach $N$ Schritten (z. B. $N=1000$) abzubrechen, auch wenn das Abbruchkriterium nicht erf\"ullt ist.  
+\end{abc}
+\rule{360pt}{1pt}
+\cleardoublepage
+}
+
