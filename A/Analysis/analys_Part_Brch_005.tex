@@ -25,7 +25,7 @@ f\"ur \(x=2:\quad B = -1 \)\\
 f\"ur \(x=3:\quad 5 = C\cdot 2 \Rightarrow C = \frac52\,.\)\\
   
 Es folgt
-\[ \int f(x)\,\d x =-\dfrac{1}{2} \ln |x-1| - \ln |x-2| + \dfrac{5}{2} \ln |x-3| + C\,.\]
+\[ \int f(x)\,\d x =-\dfrac{1}{2} \ln |x-1| - \ln |x-2| + \dfrac{5}{2} \ln |x-3| + c\,.\]
 
 
 \bigskip
@@ -36,8 +36,8 @@ Es folgt
 Durch Multiplikation mit dem Hauptnenner erh\"alt man
 \[x^2 = A(x-3)^2+B(x-3)+C\]
 Es folgt
-Einsetzen der Nullstelle des Hauptnenners in die Gleichung liefert f\"ur \(x=3\) den Wert \(C=9\) und Koeffizientenvergleich f\"ur \(x^2\) liefert \(A=1\). Nun w\"ahlen wir noch \(x=4\) und erhalten die Gleichung \(16 = A+B+C \Rightarrow B = 16\).
-\[\int f(x) \,\d x =\ln |x-3| - \dfrac{6}{x-3} - \dfrac{9}{2(x-3)^2} + C\,.\]
+Einsetzen der Nullstelle des Hauptnenners in die Gleichung liefert f\"ur \(x=3\) den Wert \(C=9\) und Koeffizientenvergleich f\"ur \(x^2\) liefert \(A=1\). Nun w\"ahlen wir noch \(x=4\) und erhalten die Gleichung \(16 = A+B+C \Rightarrow B = 6\).
+\[\int f(x) \,\d x =\ln |x-3| - \dfrac{6}{x-3} - \dfrac{9}{2(x-3)^2} + c\,.\]
 
 \bigskip
 \textbf{Zu c)} Hier existiert eine Partialbruchzerlegung der Form
@@ -57,7 +57,7 @@ Folglich ist
 \[f(x)=\frac{2}{9(x+1)}+\frac{7}{9(x-2)} +\frac{5}{3(x-2)^2}\,, \] 
 und
 \[\int f(x) \,\d x=\frac{2}{9} \ln |x+1| +\frac{7}{9} \ln|x-2|
-  - \frac{5}{3(x-2)} + C\,.\]
+  - \frac{5}{3(x-2)} + c\,.\]
 
 \bigskip
 \textbf{Zu d)} Der Faktor $x^2+x+1$ hat hier keine reellen Nullstellen und kann
@@ -82,14 +82,14 @@ Substitution $u=x+\dfrac{1}{2}$,
   & = \frac 12 \ln \left|u^2+\frac 34\right| + \frac 32 \cdot \frac 43\int \frac 1{\frac{4u^2}3+1}\d
   u, \quad \text{substituiere }z=2u/\sqrt 3\\
   & = \frac 12 \ln \left|u^2+\frac 34\right| + \sqrt 3\int \frac 1{z^2+1}\d z\\
-  & = \frac 12 \ln \left|u^2+\frac 34\right| + \sqrt 3\arctan(z) + C\\
+  & = \frac 12 \ln \left|u^2+\frac 34\right| + \sqrt 3\arctan(z) + c\\
   & = \dfrac{1}{2} \ln\left|u^2+\frac{3}{4}\right| + \sqrt{3}
-   \arctan  \left(\frac{2u}{\sqrt3}  \right) + C \\
-  & = \frac 12 \ln(x^2+x+1) + \sqrt3 \arctan\left(\dfrac{2x+1}{\sqrt3}\right) + C
+   \arctan  \left(\frac{2u}{\sqrt3}  \right) + c \\
+  & = \frac 12 \ln(x^2+x+1) + \sqrt3 \arctan\left(\dfrac{2x+1}{\sqrt3}\right) + c
 \end{align*}
 Damit gilt
 \[ \int f(x)\,\d x=\dfrac{1}{3} \ln |x-1|-\dfrac{1}{6} \ln (x^2+x+1)
-   - \dfrac{1}{\sqrt{3}} \arctan \dfrac{2x+1}{\sqrt{3}} + C\,.\]
+   - \dfrac{1}{\sqrt{3}} \arctan \dfrac{2x+1}{\sqrt{3}} + c\,.\]
 }
 
 \ErgebnisC{analysPartBrch005}
