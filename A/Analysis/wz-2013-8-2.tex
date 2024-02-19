@@ -1,6 +1,6 @@
 \Aufgabe[e]{Taylor--Polynom  \& Extrema in 2 Dimensionen}{
 \begin{itemize}
-	\item[ a)] Berechnen Sie das Taylor--Polynom 2. Grades der Funktion $f(x,y) = (2x-3y)\cdot\sin(3x-2y)$ zum Entwicklungspunkt $ \vec x_0=(0,0)^{\text T}$\,.
+	\item[ a)] Berechnen Sie das Taylor--Polynom 2. Grades der Funktion $f(x,y) = (2x-3y)\cdot\sin(3x-2y)$ zum Entwicklungspunkt $ \vec x_0=(0,0)^{\text {T} }$ \,.
 	
 	\item[ b)] Ermitteln Sie die Extrema der Funktion \ $f(x,y)=2x^3-3xy+2y^3-3$\,.
 \end{itemize}
@@ -8,64 +8,65 @@
 
 \Loesung{
 \textbf{a)} 
-% \textbf{1. Lösungsweg:}
-	\[
-	\ZAB{1.5}\bARY{rclcrcr}
-	f & = & (2x-3y)\cdot\sin(3x-2y) & \PFEIL & f(0,0) & = & 0\\[1ex]
-	f_x & = & 2\,\sin(3x-2y)+3\,(2x-3y)\cdot\cos(3x-2y) & \PFEIL & f_x(0,0) & = & 0 \\
-	f_y & = & -3\,\sin(3x-2y)-2\,(2x-3y)\cdot\cos(3x-2y) & \PFEIL & f_y(0,0) & = & 0 \\[1ex]
-	f_{xx} & = & 12\,\cos(3x-2y)-9\,(2x-3y)\cdot\sin(3x-2y) & \PFEIL & f_{xx}(0,0) & = & 12 \\
-	f_{xy} & = & -13\,\cos(3x-2y)+6\,(2x-3y)\cdot\sin(3x-2y) & \PFEIL & f_{xy}(0,0) & = & -13 \\
-	f_{yy} & = & 12\,\cos(3x-2y)-4\,(2x-3y)\cdot\sin(3x-2y) & \PFEIL & f_{yy}(0,0) & = & 12 \\
-	\eARY
-\]
-Damit erhält man für das gesuche Taylor--Polynom die Darstellung:
-	\[
-	T_2(x,y) = 6\,x^2 -13\,xy+6\,y^2\ .
-\]
-
-% \textbf{2. Lösungsweg:}
+%NOTE: Die Sytnax der Lösung muss überarbeitet werden.
+% % \textbf{1. Lösungsweg:}
+% 	\[
+% 	\ZAB{1.5}\bARY{rclcrcr}
+% 	f & = & (2x-3y)\cdot\sin(3x-2y) & \PFEIL & f(0,0) & = & 0\\[1ex]
+% 	f_x & = & 2\,\sin(3x-2y)+3\,(2x-3y)\cdot\cos(3x-2y) & \PFEIL & f_x(0,0) & = & 0 \\
+% 	f_y & = & -3\,\sin(3x-2y)-2\,(2x-3y)\cdot\cos(3x-2y) & \PFEIL & f_y(0,0) & = & 0 \\[1ex]
+% 	f_{xx} & = & 12\,\cos(3x-2y)-9\,(2x-3y)\cdot\sin(3x-2y) & \PFEIL & f_{xx}(0,0) & = & 12 \\
+% 	f_{xy} & = & -13\,\cos(3x-2y)+6\,(2x-3y)\cdot\sin(3x-2y) & \PFEIL & f_{xy}(0,0) & = & -13 \\
+% 	f_{yy} & = & 12\,\cos(3x-2y)-4\,(2x-3y)\cdot\sin(3x-2y) & \PFEIL & f_{yy}(0,0) & = & 12 \\
+% 	\eARY
+% \]
+% Damit erhält man für das gesuche Taylor--Polynom die Darstellung:
+% 	\[
+% 	T_2(x,y) = 6\,x^2 -13\,xy+6\,y^2\ .
+% \]
 % 
-% Da der Entwicklungspunkt der Ursprung des Koordinatensystems ist, bietet sich ein sehr viel einfacheres Vorgehen an:
-% Mit
+% % \textbf{2. Lösungsweg:}
+% % 
+% % Da der Entwicklungspunkt der Ursprung des Koordinatensystems ist, bietet sich ein sehr viel einfacheres Vorgehen an:
+% % Mit
+% % 	\[
+% % 	\sin(t)=t-\dfrac{t^3}{6}+... \UND t=(3x-2y) \PFEIL \sin(3x-2y)=(3x-2y)-\dfrac{(3x-2y)^3}{6}+...
+% % \]
+% % Das gesuchte Taylor--Poynom der Funktion \ $f$ \ erhält man jetzt als das Produkt von dem Faktor \ $(2x-3y)$ \ mit dem Anfang der Taylor--Entwicklung der Sinus--Funktion, wobei nur Terme bis zur zweiten Ordnung berücksichtigt werden müssen:
+% % 	\[
+% % 	T_2(x,y) = (2x-3y)\cdot (3x-2y) = 6\,x^2 -13\,xy+6\,y^2\ .
+% % \]
+% 
+% \VS
+% \textbf{b)} Die stationären Punkte erhält man aus
+% \begin{align*}
+% 	\textbf{grad}\,f(x,y) &= \lARY{c} 6\,x^2 -3\,y \\ -3\,x+6y^2 \rARY = \textbf{0}\\ 
+% 	\Rightarrow \begin{cases}y=2x^2 \\ -3x+24x^4=0 \end{cases} 
+% 	&\Rightarrow \begin{cases} y = 2x^2\\ 3x\left(8x^3-1\right)=0 \end{cases}
+% 	\Rightarrow  \begin{cases}y = 2x^2\\ x = 0  \vee x = \frac12 \end{cases}
+% \end{align*}
+% zu \ $P_1 = (0,0)$ \ und \ $P_2 = \big(\frac 12,\frac 12\big)$\ .
+% 
+% Die Hesse--Matrix ist
 % 	\[
-% 	\sin(t)=t-\dfrac{t^3}{6}+... \UND t=(3x-2y) \PFEIL \sin(3x-2y)=(3x-2y)-\dfrac{(3x-2y)^3}{6}+...
+% 	\operatorname{Hess}_f(x,y) = \lARY{cc} 12x & -3 \\ -3 & 12y \rARY .
 % \]
-% Das gesuchte Taylor--Poynom der Funktion \ $f$ \ erhält man jetzt als das Produkt von dem Faktor \ $(2x-3y)$ \ mit dem Anfang der Taylor--Entwicklung der Sinus--Funktion, wobei nur Terme bis zur zweiten Ordnung berücksichtigt werden müssen:
+% 
+% Für \ $P_1 = (0,0)$ \ erhält man
 % 	\[
-% 	T_2(x,y) = (2x-3y)\cdot (3x-2y) = 6\,x^2 -13\,xy+6\,y^2\ .
+% 	\operatorname{Hess}_f(0,0) = \lARY{rr} 0 & -3 \\ -3 & 0 \rARY \PFEIL \lambda_1 \cdot \lambda_2 = \det(\operatorname{Hess}_f(0,0)) = -9 < 0\ .
 % \]
-
-\VS
-\textbf{b)} Die stationären Punkte erhält man aus
-\begin{align*}
-	\textbf{grad}\,f(x,y) &= \lARY{c} 6\,x^2 -3\,y \\ -3\,x+6y^2 \rARY = \textbf{0}\\ 
-	\Rightarrow \begin{cases}y=2x^2 \\ -3x+24x^4=0 \end{cases} 
-	&\Rightarrow \begin{cases} y = 2x^2\\ 3x\left(8x^3-1\right)=0 \end{cases}
-	\Rightarrow  \begin{cases}y = 2x^2\\ x = 0  \vee x = \frac12 \end{cases}
-\end{align*}
-zu \ $P_1 = (0,0)$ \ und \ $P_2 = \big(\frac 12,\frac 12\big)$\ .
-
-Die Hesse--Matrix ist
-	\[
-	\operatorname{Hess}_f(x,y) = \lARY{cc} 12x & -3 \\ -3 & 12y \rARY .
-\]
-
-Für \ $P_1 = (0,0)$ \ erhält man
-	\[
-	\operatorname{Hess}_f(0,0) = \lARY{rr} 0 & -3 \\ -3 & 0 \rARY \PFEIL \lambda_1 \cdot \lambda_2 = \det(\operatorname{Hess}_f(0,0)) = -9 < 0\ .
-\]
-Damit haben die Eigenwerte verschiedene Vorzeichen und es handelt sich um einen Sattelpunkt.
-
-Für \ $P_2 = \big(\frac 12,\frac 12\big)$ \ erhält man
-	\[
-	\operatorname{Hess}_f\big(\tfrac 12,\tfrac 12\big) = \lARY{rr} 6 & -3 \\ -3 & 6 \rARY \PFEIL \lambda_1 \cdot \lambda_2 = \det((\operatorname{Hess}_f\big(\tfrac 12,\tfrac 12\big)) = 27 > 0
-\]
-sowie 
-\[
-f_{xx}\big(\tfrac 12,\tfrac 12\big)= 6 > 0\,.
-\]
-Damit sind beide Eigenwerte positiv und es handelt sich um ein Minimum.
+% Damit haben die Eigenwerte verschiedene Vorzeichen und es handelt sich um einen Sattelpunkt.
+% 
+% Für \ $P_2 = \big(\frac 12,\frac 12\big)$ \ erhält man
+% 	\[
+% 	\operatorname{Hess}_f\big(\tfrac 12,\tfrac 12\big) = \lARY{rr} 6 & -3 \\ -3 & 6 \rARY \PFEIL \lambda_1 \cdot \lambda_2 = \det((\operatorname{Hess}_f\big(\tfrac 12,\tfrac 12\big)) = 27 > 0
+% \]
+% sowie 
+% \[
+% f_{xx}\big(\tfrac 12,\tfrac 12\big)= 6 > 0\,.
+% \]
+% Damit sind beide Eigenwerte positiv und es handelt sich um ein Minimum.
 }
 
 \ErgebnisC{Aufgwz-2013-8-2}

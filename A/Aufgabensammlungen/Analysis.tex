@@ -24,7 +24,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
- \setboolean{mitErg}{true}
+%  \setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -382,9 +382,14 @@
 % 114
 \input{../Analysis/Zeuge-2013Nov-K-A4.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+% 115
 \input{../Analysis/analys_Monotonie.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+% 116
+\input{../Analysis/analys_Extrema_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% 117
+\input{../Analysis/analys_Gren_Wert_007.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 \end{twocolumn}
 \end{document}

@@ -1,8 +1,6 @@
 \Aufgabe[e]{}
 {
-% \begin{abc}
-%  
-% \item 
+
 Gegeben sei die Funktion $f(x) = \cos \left(\dfrac{\pi}{2} \sin x\right)$.
 
 \begin{iii}
@@ -20,20 +18,10 @@ Gegeben sei die Funktion $f(x) = \cos \left(\dfrac{\pi}{2} \sin x\right)$.
  \item Skizzieren Sie den Graphen von $f$ im Intervall $[-\pi,2\pi]$. 
  
 \end{iii}
-% 
-% 
-% 
-% \item Bestimmen Sie den Grenzwert 
-% \[
-% \lim_{x\rightarrow \infty} (x+3)\left(\operatorname e^{2/x}-1\right)\,.
-% \]
-% 
-% \end{abc}
 }
 
 
 \Loesung{
-\textbf{Zu a)} 
 \begin{iii}
 \item  Der Wertebereich der Sinusfunktion ist $[-1,1]$. Auf $[-\pi/2,\pi/2]$ 
 nimmt der Kosinus alle Werte von $0$ bis $1$ an. Somit gilt 
@@ -113,20 +101,5 @@ E_{\max} = \left\{ \left(\frac{\pi}{2}+k\pi,0\right) \mid k\in \mathbb Z \right\
 %\boxed{\includegraphics[width =0.25\textwidth]{./fig_f.eps}}
 \end{center}
 
-\bigskip
-\textbf{Zu b)} Es gilt 
-\[
-(x+3)\left(\operatorname e^{2/x}-1\right) = \frac{\operatorname 
-e^{2/x}-1}{\dfrac{1}{x+3}} =: \frac{f(x)}{g(x)}
-\]
-mit $\lim_{x\rightarrow \infty} f(x) = 0$ und $\lim_{x\rightarrow \infty} g(x) = 0$. Mit 
-dem Satz von L'Hospital folgt dann
-\begin{align*}
- \lim_{x\rightarrow \infty} \dfrac{f(x)}{g(x)} & = \lim_{x\rightarrow \infty }
-\dfrac{f'(x)}{g'(x)} = \lim_{x\rightarrow \infty} \dfrac{2\operatorname e^{2/x} 
-(x+3)^2}{x^2} \\[1ex]
-& = \lim_{x\rightarrow \infty} 2\operatorname e^{2/x} \, \lim_{x\rightarrow \infty} 
-\dfrac{(x+3)^2}{x^2} = 2\,.
-\end{align*}
 }
 
