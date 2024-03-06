@@ -9,14 +9,14 @@
 \newcommand{\Trimester}{WT}
 \newcommand{\Kurs}{Mathematik II/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{8}
-\newcommand{\TOPIC}{Integration, partielle Ableitungen}
+\newcommand{\BLATT}{10}
+\newcommand{\TOPIC}{Stationäre Punkte, Newton-Verfahren, Richtungsableitung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
 % \setboolean{mitLoes}{true}
-
+% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -43,38 +43,41 @@
 
 \ruleBig
 
-%Mathe II Blatt 7
+%Mathe II Blatt 10
 
-% \input{../A/Analysis/exercise_newton.tex}
+\input{../A/Analysis/analys_Kett_Ndim_0021.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Rich_Ablt_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+\newpage
+\input{../A/Analysis/exercise_newton.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Extr_Ndim_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Extr_Ndim_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/b-2013-K-A3.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \input{../A/Analysis/analys_Diff_Ndim_013.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+ 
+% \input{../A/Analysis/analys_Diff_Ndim_14a.tex}
 % \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-
-\input{../A/Analysis/analys_Intg_Uneg_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Ueig_Intg_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-% 
-% \input{../A/Analysis/Zeuge-2013Nov-K-A4.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-% 
-% % 69
-% \input{../A/Analysis/analys_Newt_Verf_02a.tex}
+% \input{../A/Analysis/analys_Extrema_001.tex}
 % \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Tang_Ebne_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Part_Ablt_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Rich_Ablt_003.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Diff_Ndim_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-% \input{../A/Analysis/wz-2013-6-4.tex}
+% \input{../A/Analysis/wz-2013-8-2.tex}
 % \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+ 
+% \input{../A/Analysis/analys_Intg_Ndim_001_1.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}

@@ -1,27 +1,15 @@
 \Aufgabe[e]{Richtungsableitungen} {
-\begin{abc}
-\item
+
 Gegeben seien die skalarwertigen Funktionen
 $$f(x,y,z)=y^2-xz\qquad \text{ und } \qquad g(x,y,z)=x^2\sin(y)+\cos(z).$$
 Berechnen Sie die Richtungsableitung beider Funktionen in Richtung $\vec h:=(-2,3,4)^\top$.
-% \item
-% Gegeben sei die folgende vektorwertige Funktion $$\vec f(x,y) = (\operatorname{e}^{xy}, x^2+y^3)^\top.$$ 
-% \begin{iii}
-% \item Berechnen Sie die Jacobi-Matrix von $\vec f$ in dem Punkt $\vec P_1=(1,2)^\top$.
-% \item Berechnen Sie die Richtungsableitung von $\vec f$ in Richtung $\vec v=(1,0)^\top$ in dem Punkt $\vec P_2=(1,1)^\top$.
-% \end{iii}
-\end{abc}
+
 }
-% \Aufgabe[e]{Directional derivatives} {
-% Given are the functions
-% $$f(x,y,z)=y^2-xz\qquad \text{ and } \qquad g(x,y,z)=x^2\sin(y)+\cos(z).$$
-% Compute the directional derivative of both functions in direction $\vec h:=(-2,3,4)^T$.
-% }
+
 
 
 \Loesung{
-\begin{abc}
-\item
+
 Zun\"achst berechnen wir die Gradienten der beiden Funktionen:
 \begin{align*}
 \nabla f(x,y,z)=& (-z,\, 2y,\, -x)^\top\\
@@ -36,58 +24,8 @@ Damit ergeben sich dann die Richtungsableitungen:
 \frac{\partial g}{\partial \vec{\hat h}}(x,y,z)=& \skalar{\vec{\hat h},\, \nabla g(x,y,z)}
 =\frac 1{\sqrt{29}} \left( -4x\sin(y)+3x^2\cos(y)-4\sin(z)\right).
 \end{align*}
-% \item
-% \begin{iii}
-% \item Die Jacobi-Matrix ist
-% $$
-% \vec J(\vec x) = 
-% \begin{pmatrix} 
-% f_{1,x} & f_{1,y}\\
-% f_{2,x} & f_{2,y}
-% \end{pmatrix}
-% = \begin{pmatrix} 
-% y\operatorname{e}^{xy} & x\operatorname{e}^{xy}\\
-% 2x & 3y^2
-% \end{pmatrix}
-% $$
-% 
-% Die Jacobi-Matrix ausgewertet in dem Punkt $\vec P_1=(1,2)^\top$ ist
-% $$
-% \vec J(\vec P_1) 
-% = \begin{pmatrix}
-% 2\operatorname{e}^{2} & \operatorname{e}^{2}\\
-% 2 & 12
-% \end{pmatrix}
-% $$
-% \item Um die Richtungsableitung zu bestimmen, ben\"otigen wir einen Einheitsvektor. Da der gegebene Vektor $\vec v$ 
-% bereits Einheitsl\"ange hat, kann die Richtungsableitung berechnet werden durch
-% $$
-% \frac{\partial \vec f}{\partial \vec h}(\vec x) = \vec J(x) \vec v = (y\operatorname{e}^{xy}, 2x)^\top
-% $$
-% 
-% Die Richtungsableitung ausgewertet in dem Punkt $\vec P_2$ ist
-% $$
-% \frac{\partial \vec f}{\partial \vec h}(\vec P_2) = (\operatorname{e}, 2)^\top.
-% $$
-% \end{iii}
-\end{abc}
+
 }
-% \Loesung{
-% First, we compute the gradient of both functions:
-% \begin{align*}
-% \nabla f(x,y,z)=& (-z,\, 2y,\, -x)^T\\
-% \nabla g(x,y,z)=& (2x\sin(y),\, x^2\cos(y),\, -\sin(z))^T.
-% \end{align*}
-% Further, we need the normal vector in direction $\vec h$:
-% $$\vec{\hat h}=\frac 1{\sqrt{4+9+16}}(-2,\, 3,\, 4)^T=\frac 1{\sqrt{29}}(-2,\, 3,\, 4)^T.$$
-% This gives the directional derivatives:
-% \begin{align*}
-% \frac{\partial f}{\partial \vec{\hat h}}(x,y,z)=& \skalar{\vec{\hat h},\, \nabla f(x,y,z)}=\frac
-% 1{\sqrt{29}} \left( 2z+6y-4x\right)\\
-% \frac{\partial g}{\partial \vec{\hat h}}(x,y,z)=& \skalar{\vec{\hat h},\, \nabla g(x,y,z)}
-% =\frac 1{\sqrt{29}} \left( -4x\sin(y)+3x^2\cos(y)-4\sin(z)\right).
-% \end{align*}
-% }
 
 \ErgebnisC{AufganalysRichAblt003}
 {

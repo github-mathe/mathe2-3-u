@@ -1,0 +1,61 @@
+\Aufgabe[e]{Tangentialebene und Richtungsableitung}{
+Gegeben sei die multivariate Funktion 
+$$f (x, y, z) = 3x^3y - 2xy^2 - z.$$ 
+
+\begin{abc}
+\item Bestimmen Sie die Gleichung der Tangentialebene zu der Äquipotentialfläche
+$$f(x,y,z) = 0$$
+in dem Punkt auf der Oberfläche mit den Koordinaten $x=2$ und $y=1$.
+\item Berechnen Sie die Richtungsableitung von $f$ in die Richtung 
+      des Vektors \\$\vec v = (1, 2, 1)^T$ in dem Punkt $\vec P = (1, 1, 1)^T$.
+\end{abc}
+
+}
+%
+\Loesung{
+\begin{abc}
+\item
+Wir schreiben 
+$$z=F(x,y) = 3x^3y-2xy^2.$$
+Der Ausdruck der Tangentialebene ist
+\begin{align*}
+z &= z_0 + F_x(x_0,y_0) (x-x_0) + F_y(x_0,y_0)(y-y_0),\\
+z &= F(x_0,y_0) + F_x(x_0,y_0) (x-x_0) + F_y(x_0,y_0)(y-y_0),
+\end{align*}
+
+wobei $F_x(x,y) = 9x^2y-2y^2$ und $F_y(x,y)=3x^3-4xy$.
+
+Die Gleichung der Ebene ist dann:
+%
+\begin{align*}
+z &= 20 + 34 (x-2) + 16(y-1),\\
+z &= 34x+16y-64.
+\end{align*}
+
+\item Für die Richtungsableitung benötigen wir den Gradienten von $f$:
+$$
+\nabla f(x,y,z) = \begin{pmatrix}
+9x^2y-2y^2\\
+3x^3-4xy\\
+-1
+\end{pmatrix},
+$$
+
+Wir werten den Gradienten in dem Punkt $(1,1,1)$ aus
+$$
+\nabla f(1,1,1) = \begin{pmatrix}
+7\\
+-1\\
+-1
+\end{pmatrix},
+$$
+\end{abc}
+Damit ist die Richtungsableitung 
+\begin{align*}
+\frac{\partial f}{\partial \vec v} &= \langle \nabla f, \frac{\vec v}{\|\vec v\|} \rangle, \\
+&= (7,-1,-1)^T \cdot \frac{(1,2,1)^T}{\|\sqrt{6}\|} = \frac{4}{\sqrt{6}}.
+\end{align*}
+
+
+}
+

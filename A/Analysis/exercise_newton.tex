@@ -19,6 +19,7 @@ $$\vec 0\overset != \nabla f(x,y,z)=\begin{pmatrix}
 -\pi z \sin(\pi(x+y))+4y^3\\
 \cos(\pi(x+y))+2z
 \end{pmatrix}$$
+
 \item Das Newton-Verfahren wird auf die Funktion $\vec F(x,y,z)=\nabla f(x,y,z)$ angewendet. Die Ableitung dieser Funktion ist
 \begin{align*}
 &\vec F'(x,y,z)\Bigl(=H_f(x,y,z)\Bigr)\\
@@ -29,26 +30,27 @@ $$\vec 0\overset != \nabla f(x,y,z)=\begin{pmatrix}
 \end{align*}
 Zu gegebenem Startwert $\vec x_0$ wird die folgende Iteration durchgef\"uhrt: \\
 F\"ur $j=0,1,2,\hdots$: 
-\begin{itemize}
+
+\begin{iii}
 \item L\"ose das lineare Gleichungssystem $\vec F'(\vec x_j)\Delta \vec x = -\vec F(\vec x_j)$ nach $\Delta \vec x$ auf.
 \item Berechne n\"achste Iteration $\vec x_{j+1}=\vec x_j+\Delta \vec x$. 
-\end{itemize}
+\end{iii}
+
 \item F\"ur den gegebenen Startvektor $\vec x_0=\left(\frac 12,1,0\right)^\top$ ergibt sich 
 zun\"achst 
-$$\vec F\left(\frac 12,1,0\right)=\begin{pmatrix}0 \\4\\0\end{pmatrix}\text{ und }\vec F'\left(\frac 12,1,0\right)=\begin{pmatrix}
+$$\vec F\left(\frac 12,1,0\right)=\begin{pmatrix}0 \\4\\0 \end{pmatrix}\text{ und }\vec F'\left(\frac 12,1,0\right)=\begin{pmatrix}
  0&  0 & \pi \\
 0 & 12 & \pi \\
 \pi & \pi & 2\end{pmatrix}.$$
 Die L\"osung des Gleichungssystems $\vec F'(\vec x_0) \Delta \vec x = -\vec F(\vec x_0)$ 
 ergibt
-$$\Delta \vec x= \begin{pmatrix}\frac 13\\-\frac 13\\0\end{pmatrix}$$
+$$\Delta \vec x= \begin{pmatrix}\frac 13\\-\frac 13\\0 \end{pmatrix}$$
 und als n\"achsten Iterationsschritt
-$$\vec x_1=\vec x_0+\Delta \vec x = \begin{pmatrix}\frac 56\\\frac 23\\0\end{pmatrix}.$$
+$$\vec x_1=\vec x_0+\Delta \vec x = \begin{pmatrix}\frac 56\\\frac 23\\0 \end{pmatrix}.$$
+
 \item Geeignete Abbruchkriterien sind etwa
 $\Vert{\vec F(\vec x_k)}\Vert<\varepsilon$ oder $\Vert{\vec x_k-\vec x_{k-1}}\Vert<\varepsilon$ mit fest vorgegebenem $\varepsilon>0$. \\
 Desweiteren empfiehlt es sich, die Iteration nach $N$ Schritten (z. B. $N=1000$) abzubrechen, auch wenn das Abbruchkriterium nicht erf\"ullt ist.  
 \end{abc}
-\rule{360pt}{1pt}
-\cleardoublepage
 }
 
