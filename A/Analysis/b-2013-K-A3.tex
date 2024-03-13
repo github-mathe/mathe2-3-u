@@ -17,10 +17,10 @@ nach der Taylor'schen Formel um den Punkt \ $P=(0\,,\,-1\,,\,2)$ \ bis zu einsch
 }
 
 \Loesung{
-\bigskip
-\textbf{L\"osung:}\\[1ex]
-
-\bigskip
+% \bigskip
+% \textbf{L\"osung:}\\[1ex]
+% 
+% \bigskip
 \textbf{Zu a)} Mit \ $\vec x_0 =(0\,,\,-1\,,\,2)^\top$ \ gilt:
 	\[
 	\begin{array}{rcllrcl}
@@ -51,37 +51,37 @@ T_2(x,y,z)  = & 2-\ln(2) - 2\,x + \dfrac 52\,x^2 + 2 x(y+1) \\[2ex]
 & -\dfrac{1}{2} (y+1)^2 + \dfrac 18\,(z-2)^2 \ .
 \end{align*}
 
-\bigskip
-\textbf{Zu b)}  Mit 
-$$
-g^{-1}\left(\frac{4}{3}\right) = 1\,, \left(g^{-1}\right)'\left(\frac{4}{3}\right) = \dfrac{1}{g'(1)} = \frac{1}{2}
-$$ 
-und
-$$
- \left(g^{-1}\right)''\left(\frac{4}{3}\right) = \dfrac{-g''(1)}{\left(g'(1)\right)^3} = -\frac{1}{4}
-$$
-folgt
-$$
-T_2\left(y; \frac{4}{3}\right) = 1 + \frac{1}{2}\left(y - \frac{4}{3} \right) -\frac{1}{8}\left(y - \frac{4}{3} \right)^2\,.
-$$
-
-\bigskip
-\textbf{Zu c)} F\"ur $\vec F(x,y)= (y -\EH{-x^2},y +(x-1)^2-2)^\top$ gilt
-$$
-\vec J_{\vec{F}}(x,y) = \begin{pmatrix} 2x\EH{-x^2} & 1 \\ 2(x-1)  & 1 \end{pmatrix}\,, \quad \vec J_{\vec{F}}(0,0) = \begin{pmatrix}  0 & 1 \\ -2  & 1 \end{pmatrix}. 
-$$
-Das Newton-Verfahren liefert damit f\"ur den Iterationsschritt
-$$\vec x_1=\vec x_0 + \vec {\Delta x}$$
-mit der L\"osung $\vec{\Delta x}$ des linearen Gleichungssystems $\vec J_{\vec F}(0,0)\vec{\Delta x}=-\vec F(0,0):$
-$$\begin{array}{rr|r|l}
-  0  &  1  &  1 & \\
- -2  &  1  &  1 & 
-\end{array}$$
-die Schrittweite $$\vec{\Delta x}=\begin{pmatrix}0 \\1\end{pmatrix}$$
-und damit
-$$
-\vec x_1 = \vec x_0+ \vec{\Delta x} = \boxed{\begin{pmatrix} 0\\ 1 \end{pmatrix}}\,.
-$$
+% \bigskip
+% \textbf{Zu b)}  Mit 
+% $$
+% g^{-1}\left(\frac{4}{3}\right) = 1\,, \left(g^{-1}\right)'\left(\frac{4}{3}\right) = \dfrac{1}{g'(1)} = \frac{1}{2}
+% $$ 
+% und
+% $$
+%  \left(g^{-1}\right)''\left(\frac{4}{3}\right) = \dfrac{-g''(1)}{\left(g'(1)\right)^3} = -\frac{1}{4}
+% $$
+% folgt
+% $$
+% T_2\left(y; \frac{4}{3}\right) = 1 + \frac{1}{2}\left(y - \frac{4}{3} \right) -\frac{1}{8}\left(y - \frac{4}{3} \right)^2\,.
+% $$
+% 
+% \bigskip
+% \textbf{Zu c)} F\"ur $\vec F(x,y)= (y -\EH{-x^2},y +(x-1)^2-2)^\top$ gilt
+% $$
+% \vec J_{\vec{F}}(x,y) = \begin{pmatrix} 2x\EH{-x^2} & 1 \\ 2(x-1)  & 1 \end{pmatrix}\,, \quad \vec J_{\vec{F}}(0,0) = \begin{pmatrix}  0 & 1 \\ -2  & 1 \end{pmatrix}. 
+% $$
+% Das Newton-Verfahren liefert damit f\"ur den Iterationsschritt
+% $$\vec x_1=\vec x_0 + \vec {\Delta x}$$
+% mit der L\"osung $\vec{\Delta x}$ des linearen Gleichungssystems $\vec J_{\vec F}(0,0)\vec{\Delta x}=-\vec F(0,0):$
+% $$\begin{array}{rr|r|l}
+%   0  &  1  &  1 & \\
+%  -2  &  1  &  1 & 
+% \end{array}$$
+% die Schrittweite $$\vec{\Delta x}=\begin{pmatrix}0 \\1\end{pmatrix}$$
+% und damit
+% $$
+% \vec x_1 = \vec x_0+ \vec{\Delta x} = \boxed{\begin{pmatrix} 0\\ 1 \end{pmatrix}}\,.
+% $$
 }
 
 

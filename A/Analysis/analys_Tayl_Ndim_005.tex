@@ -46,16 +46,16 @@ t)\end{pmatrix}&\Rightarrow&\ &\vec r(1)=&\begin{pmatrix}-1\\0 \end{pmatrix}\\
 und das Taylorpolynom zu: 
 \begin{align*}
 T_{2,\vec r}=& \vec r(1) + (t-1)\vec r'(1) + \frac 12 (t-1)^2 \vec r''(1)\\
-=& \begin{pmatrix}-1 -\frac 12 \pi^2(t-1)^2\\(t-1)-\frac 12(1+2\pi^2)(t-1)^2\end{pmatrix}.
+=& \begin{pmatrix}-1 +\frac 12 \pi^2(t-1)^2\\(t-1)-\frac 12(1+2\pi^2)(t-1)^2\end{pmatrix}.
 \end{align*}
 \item Es ist 
 $$g(t)=-\EH{\ln t - \sin^2(\pi t) + 1 - \cos^2(\pi t)}=-\EH{\ln t }=-t.$$
 \item Die Verkettung der beiden Taylor-Polynome hingegen ergibt: 
 \begin{align*}
 \tilde g(t)=& -1 + 2 \left( -2 +\frac 12 \pi^2 (t-1)^2\right) 
-- (t-1)\left( 1+\frac 12(1+2\pi^2)(t-1)\right) + \\
+- (t-1)\left( 1-\frac 12(1+2\pi^2)(t-1)\right) + \\
 &- \left( -2+\frac 12 \pi^2(t-1)^2\right)^2 +\\
-&+ 2 \left( -2-\frac
+&+ 2 \left( -2+\frac
 12 \pi^2(t-1)^2\right)(t-1)\left( 1 - \frac 12 (1+2\pi^2)(t-1)\right) + \\
 &- \frac 12 (t-1)^2 \left(1-\frac 12(1+2\pi^2)(t-1)\right)^2\\
 =& -9-5(t-1)+\left( 8\pi^2+2\right)(t-1)^2 + \left(2\pi^2+\frac12\right) (t-1)^3 \\

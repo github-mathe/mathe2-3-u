@@ -1,0 +1,65 @@
+\Aufgabe[e]{Kegelvolumen}{
+Gegeben sei ein Kegel als
+$$
+\mathbf{K} = \left\{ \vec x = \begin{pmatrix} x\\y\\z \end{pmatrix} \in \mathbb{R}^3 :
+z = +\sqrt{x^2 +y^2}\right\}
+$$
+der durch 
+$$
+z = +\sqrt{x^2 +y^2}
+$$
+eingeschlossen ist.
+\begin{abc}
+\item Bestimmen Sie das Volumen des Kegels für $z=2$ mittels Integration in 
+      Zylinderkoordinaten.
+\item Gegeben sei die Dichtefunktion
+$$
+\rho(x,y,z) =  x + 2y +z^2
+$$
+      Bestimmen Sie die Masse des Kegels.
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item
+Wir transformieren von kartesischen Koordinaten in Zylinderkoordinaten.
+$$
+x = r \cos(\varphi), \quad
+y = r \sin(\varphi), \quad
+z = z
+$$
+Die Integrationsgrenzen sind dann gegeben durch
+$$ 
+0 \leq r \leq 2 , \quad r \leq z \leq 2, \quad 0 \leq \varphi \leq 2\pi 
+$$
+Die Jacobi-Determinate ist $r$.
+
+Damit erhalten wir das Integral.
+\begin{align*}
+\int_0^2 \int_r^2 \int_0^{2\pi} r \d \varphi \d z \d r 
+&= 2\pi \int_0^2 \int_r^2 r \d z \d r \\
+&= 2\pi \int_0^2 rz\Big|_r^2 \d r\\
+&= \int_0^2 (2-r)r \d r\\
+&= 2\pi\left( \frac{2r^2}{2}\Big|_0^2 - \frac{r^3}{3}\Big|_0^2 \right)\\
+&= 2\pi (4-\frac{8}{3})\\
+&= \frac{8}{3} \pi
+\end{align*}
+Damit ist das Volumen des gegebenen Kegels $\frac{8}{3}\pi$.
+
+\item
+\begin{align*}
+\int_K x + 2y +z^2 \d V 
+&= \int_0^2 \int_r^2 \int_0^{2\pi} (r\cos(\varphi +2r\sin(\varphi) +z^2)r \d \varphi \d z\d r\\
+&= \int_0^2 \int_r^2 \left(r\sin(\varphi)\Big|_0^{2\pi}- 2r\cos(\varphi)\Big|_0^{2\pi}+ z^2\varphi\Big|_0^{2\pi}\right)r\d z \d r\\
+& = \int_0^2 \int_r^2 2\pi z^2r \d z \d r\\
+& = \int_0^2 2\pi r\frac{z^3}{3}\Big|_r^2 \d r\\
+& = \int_0^2 \frac{16\pi r}{3} - \frac{2\pi r^4}{3} \d r\\
+& = \frac{8 \pi r^2}{3}\Big|_0^2 -\frac{2\pi r^5}{3} \Big|_0^2 \\
+& = \frac{32 \pi}{5}
+\end{align*}
+\end{abc}
+
+
+}
