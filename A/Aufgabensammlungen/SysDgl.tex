@@ -1,0 +1,69 @@
+\input{header}
+
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} M.Sc Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2024}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{Mathematik II}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{1}
+\newcommand{\TOPIC}{Definitheit, Ähnlichkeit, Umkehrfunktionen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%  \setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+\renewcommand{\d }{\mathrm{d}}
+\ruleBig
+
+%Mathe III
+%1
+\input{../SysDgl/sysdgl_Gdgl_Syst_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Mixd_Klau_011.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Mixd_Klau_11a.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Mixd_Klau_14b.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Syst_Hptv_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Syst_Hptv_006.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Syst_Ihom_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Syst_Loes_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Syst_Loes_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../SysDgl/sysdgl_Syst_Loes_005.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\end{twocolumn}
+\end{document}

@@ -1,25 +1,26 @@
 \Aufgabe[e]{Differentialgleichungen und Systeme (Hauptvektoren)}
 {
 Gegeben sei die lineare Differentialgleichung
-\renewcommand{\theequation}{\arabic{Blatt}.\arabic{equation}}
+% \renewcommand{\theequation}{\arabic{Blatt}.\arabic{equation}}
 \begin{equation}
 \label{dgl}
 	u'''(t) - 4\,u''(t)+4\,u'(t) = 9\,\EH{-t}\ .
 \end{equation}
-\begin{itemize}
- \item[a)] \ Verwandeln Sie die Differentialgleichung \eqref{dgl} in ein System erster Ordnung
+\begin{abc}
+ \item \ Verwandeln Sie die Differentialgleichung \eqref{dgl} in ein System erster Ordnung
 \[
-\dot{{\vec x}}(t) = \vec A \vec x(t) + \vec f(t) \,. 
+\dot{{\vec x}}(t) = \vec A \vec x(t) + \vec f(t) \,.
 \]
-\item[b)]  Bestimmen Sie die allgemeine L\"osung des homogenen Systems \ $\dot{{\vec x}}(t) = \vec A \vec x(t) $ \  aus \mbox{Teil a)}\,.
-\item[c)]  Bestimmen Sie die allgemeine L\"osung des Systems aus Teil a)\,. \\[1ex]
-\textbf{Hinweis:} Eine spezielle L\"osung des Systems aus Teil a) kann mit dem Ansatz $\vec x_{\mathrm{p}}(t) = (\alpha,\beta,\gamma)^\top \cdot\EH{-t}$, mit $\alpha,\beta,\gamma\in \R$,  bestimmt werden. 
-\end{itemize}
+\item  Bestimmen Sie die allgemeine L\"osung des homogenen Systems \ $\dot{{\vec x}}(t) = \vec A \vec x(t) $ \  aus \mbox{Teil a)}\,.
+\item  Bestimmen Sie die allgemeine L\"osung des Systems aus Teil a)\,. \\[1ex]
+\textbf{Hinweis:} Eine spezielle L\"osung des Systems aus Teil a) kann mit dem Ansatz $\vec x_{\mathrm{p}}(t) = (\alpha,\beta,\gamma)^\top \cdot\EH{-t}$, mit $\alpha,\beta,\gamma\in \R$,  bestimmt werden.
+\end{abc}
 
 }
 
 \Loesung{
-\textbf{Zu a)} Mit den Substitutionen \ $u' =: v$ \ und \ $u'' = v' =: w$ \ erhält man das System erster Ordnung:
+\begin{abc}
+\item Mit den Substitutionen \ $u' =: v$ \ und \ $u'' = v' =: w$ \ erhält man das System erster Ordnung:
 \[
 	{\left(\begin{array}{c} u(t) \\ v(t) \\ w(t) \end{array}\right)' = \left(\begin{array}{crr} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & -4 & 4 \end{array}\right)\left(\begin{array}{c} u(t) \\ v(t) \\ w(t) \end{array}\right) + \left(\begin{array}{c} 0 \\ 0 \\ 9 \end{array}\right)\cdot\EH{-t}\ .}
 \]
@@ -29,11 +30,11 @@ Mit $\boxed{\vec x(t) := (u(t),v(t),w(t))^\top}$ und $\boxed{\vec f(t):= (0,0,9)
 \]
 
 \bigskip
-\textbf{Zu b)} Die charakteristische Gleichung ist
+\item Die charakteristische Gleichung ist
 \[
 \det \left(\begin{array}{ccc} -\lambda & 1 & 0 \\ 0 & -\lambda & 1 \\ 0 & -4 & 4-\lambda \end{array}\right) = -\lambda\cdot\big(\lambda^2 -4\lambda+4\big) = 0 .
 \]
-Die Eigenwerte sind somit \ $\lambda_1=0 $ \ und \ $ \lambda_{2,3}=2$. Ein Eigenvektor f\"ur \ $\lambda_1=0$ \ ist \ $\vec v_1=\big(1\,,\,0\,,\,0\big)^{\top}$ . F\"ur \ $\lambda_{2,3}=2$ \ gibt es nur einen linear unab\"angigen Eigenvektor, z.B. \ $\vec v_2=\big(1\,,\,2\,,\,4\big)^{\top}$ . Es muss also noch ein zugeh\"origer Hauptvektor bestimmt werden: 
+Die Eigenwerte sind somit \ $\lambda_1=0 $ \ und \ $ \lambda_{2,3}=2$. Ein Eigenvektor f\"ur \ $\lambda_1=0$ \ ist \ $\vec v_1=\big(1\,,\,0\,,\,0\big)^{\top}$ . F\"ur \ $\lambda_{2,3}=2$ \ gibt es nur einen linear unab\"angigen Eigenvektor, z.B. \ $\vec v_2=\big(1\,,\,2\,,\,4\big)^{\top}$ . Es muss also noch ein zugeh\"origer Hauptvektor bestimmt werden:
 \[
 \left(\begin{array}{ccc} -2 & 1 & 0 \\ 0 & -2 & 1 \\ 0 & -4 & 2 \end{array}\right)	\left(\begin{array}{c} h_1 \\ h_2 \\ h_3 \end{array}\right) = \left(\begin{array}{c} 1 \\ 2 \\ 4 \end{array}\right) \,\Rightarrow\,  \vec h = \left(\begin{array}{c} 0 \\ 1 \\ 4 \end{array}\right)\ .
 \]
@@ -44,7 +45,7 @@ Damit erh\"alt man die allgemeine L\"osung des homogenen Systems zu
 
 
 \bigskip
-\textbf{Zu c)} Für das inhomogene System erhält man mit dem Ansatz $\vec x_{\mathrm{p}}(t) = (\alpha,\beta,\gamma)^\top \cdot\EH{-t}$ nach K\"urzen durch den Exponentialterm das LGS
+\item F\"ur das inhomogene System erh\"alt man mit dem Ansatz $\vec x_{\mathrm{p}}(t) = (\alpha,\beta,\gamma)^\top \cdot\EH{-t}$ nach K\"urzen durch den Exponentialterm das LGS
 \[
 	\left(\begin{array}{c} -\alpha \\ -\beta \\ -\gamma \end{array}\right) = \left(\begin{array}{crr} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & -4 & 4 \end{array}\right)\left(\begin{array}{c} \alpha \\ \beta \\ \gamma \end{array}\right)  + \left(\begin{array}{c} 0 \\ 0 \\ 9 \end{array}\right)
 	\,\Rightarrow\, \left(\begin{array}{c} \alpha \\ \beta \\ \gamma \end{array}\right) = \left(\begin{array}{r} -1 \\ 1 \\ -1 \end{array}\right)\ .
@@ -62,7 +63,7 @@ Die allgemeine L\"osung ist die Summe aus der homogenen und der partikul\"aren L
 && \displaystyle + 	\left(\begin{array}{r} -1 \\ 1 \\ -1 \end{array}\right)\cdot\EH{-t}\ \ .
 \end{array}}
 \]
-
+\end{abc}
 
 }
 
@@ -70,6 +71,5 @@ Die allgemeine L\"osung ist die Summe aus der homogenen und der partikul\"aren L
 \ErgebnisC{AufgsysdglGdglSyst001}
 {
 $	\vec x_{\mathrm{hom}} (t) = c_1\left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right) + c_2\left(\begin{array}{c} 1 \\ 2 \\ 4 \end{array}\right)\cdot\EH{2\,t} + c_3\begin{pmatrix} t\\ 1+2t \\ 4+4t \end{pmatrix}\cdot\EH{2\,t}$
-
 }
 

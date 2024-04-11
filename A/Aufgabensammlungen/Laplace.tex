@@ -1,0 +1,81 @@
+\input{header}
+
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} M.Sc Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2024}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{Mathematik II}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{1}
+\newcommand{\TOPIC}{Definitheit, Ähnlichkeit, Umkehrfunktionen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%  \setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+\renewcommand{\d }{\mathrm{d}}
+\ruleBig
+
+%Mathe III
+%1
+\input{../Laplace/gewdgl_Awep_Lapl_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%2
+\input{../Laplace/gewdgl_Line_AWPr_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%3
+\input{../Laplace/gewdgl_Line_AWPr_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%4
+\input{../Laplace/laplac_Balk_Bieg_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%5
+\input{../Laplace/laplac_Delt_Dist_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%6
+\input{../Laplace/laplac_Delt_Dist_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%7
+\input{../Laplace/laplac_Intg_Glgn_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%8
+\input{../Laplace/laplac_ldgl_KlLp_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%9
+\input{../Laplace/laplac_Traf_Bere_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%10
+\input{../Laplace/laplac_Traf_Bere_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%11
+\input{../Laplace/laplac_Traf_Bere_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%12
+\input{../Laplace/laplac_Traf_Bere_01b.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%13
+\input{../Laplace/laplac_Traf_Bere_02a.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%14
+\input{../Laplace/laplac_Tran_Heav_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\end{twocolumn}
+\end{document}
