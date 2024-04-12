@@ -1,0 +1,236 @@
+\Aufgabe[e]{First order differential equations}
+{
+\begin{itemize}
+\item[\textbf{1)}] Classify the following ordinary differential equations (ODEs) of the first order as
+\begin{enumerate}
+\item[\textbf{a)}] Linear or nonlinear.
+\item[\textbf{b)}] In case of linear ODEs classify them as 
+\begin{itemize}
+\item homogeneous or inhomogeneous.
+\item ODE with constant or non-constant coefficients.
+\end{itemize}
+\item[\textbf{c)}] Classify them according to the type as in the lecture notes:
+\begin{enumerate}
+\item $y'= f(x)\cdot g(y)$, solved by separation of variables,
+\item $y'=g(y/x)$, homogeneous, solved with substitution $u=y/x$,
+\item $y'=f(ax+by+c)$, right hand side with bilinear argument, solved with substitution $u=ax+by+c$,
+\item $y'+p(x) \cdot y = q(x)$, linear ODE.
+\end{enumerate}
+\end{enumerate}
+\begin{multicols}{2}
+\begin{iii}
+\item $y' + 2 y = 3x$.
+\item $y'y + x = 0$.
+\item $y'= \frac{x^2+y^2}{xy}$.
+\item $y'=(x+y+1)^2$.
+\item $x^2y'= x y + 2y^2$.
+\item $y'=\frac{y(x-y)}{x^2}$.
+\item $y'=\frac{x-y}{x+y}$.
+\item $y'= \ln(y+2x+1)^2$.
+\end{iii}
+\end{multicols}
+\item[\textbf{2)}] Compute the general solution of equations \textbf{i)} and \textbf{ii)}.
+\end{itemize}
+}
+
+
+\Loesung{
+\begin{itemize}
+\item[\textbf{1)}] 
+\begin{iii}
+\item $y' + 2 y = 3x$. Linear, inhomogeneous, with constant coefficients, type: right hand side with bilinear argument.
+\item $y'y + x = 0$. Nonlinear, type: separation of variables.
+\item $y'= \frac{x^2+y^2}{xy}$. Nonlinear, type: homogeneous with substitution $u=y/x$.
+%\item $x^2y' = 2y + 1$. Linear, inhomogeneous, non-constant coefficients, type D.
+\item $y'=(x+y+1)^2$. Nonlinear, type: right hand side with bilinear argument.
+\item $x^2y'= x y + 2y^2$. Nonlinear, type: homogeneous with substitution $u=y/x$.
+%\item $y' = \cos(x)y$. Linear, homogeneous, non-constant coefficients, type D.
+\item $y'=\frac{y(x-y)}{x^2}$. Nonlinear, type: homogeneous with substitution $u=y/x$.
+\item $y'=\frac{x-y}{x+y}$. Nonlinear, type: homogeneous with substitution $u=y/x$.
+\item $y'= \ln(y+2x+1)^2$. Nonlinear, type: right hand side with bilinear argument.
+\end{iii}
+\item[\textbf{2)}] Compute the general solution of equations \textbf{i)} and \textbf{ii)}.
+
+\noindent To \textbf{i)}
+
+\underline{The equation can be solved as linear equation:} it is linear, first order, with constant coefficients and inhomogeneous.
+The solution can be determined as the sum of the solution of the homogeneous equation and a particular solution: 
+$$
+y(x) = y_h(x) + y_p(x).
+$$
+The solution of the homogeneous equation can be determined following the general solution procedure for the case with non-constant coeffcients as we do here to show the method. It could be also determined computing the zeros of the characteristic polynomial and this will be shown later.
+
+\underline{The equation can be also interpreted as type: right hand side with bilinear argument.}
+$$
+y'=f(ax+by+c)=3x-2y
+$$
+and solved with a substitution as shown below.
+
+Let's start with the general method. The solution of the homogeneous problem is
+$$
+y_h(x) = C \operatorname{e}^{-P(x)},
+$$
+where 
+$$
+P(x) = \int^x p(t) \d t
+$$
+and $p(x)$ is 2 in this case, so it is $P(x) = 2x$ and
+$$
+y_h(x) = C\operatorname{e}^{-2x}.
+$$
+For the particular solution with use the method of variations of constants
+$$
+y_p(x) = C(x) \operatorname{e}^{P(x)} = C(x) \operatorname{e}^{-2x}.
+$$
+We use the same ansatz function as in the homogeneous part but multiplied by the function $C(x)$ instead of the constant $C$.
+To determine the expression for $C(x)$ we derive $y_p(x)$
+$$
+y_p'(x) = C'(x) \operatorname{e}^{-2x} -2 C(x) \operatorname{e}^{-2x}
+$$
+and insert $y$ and $y'$ into the ODE
+\begin{align*}
+C'(x) \operatorname{e}^{-2x} -2 C(x) \operatorname{e}^{-2x} + 2 C(x) \operatorname{e}^{-2x} &= 3x\\
+C'(x) \operatorname{e}^{-2x} &= 3x\\
+C'(x) = 3x \operatorname{e}^{2x}\\
+\int \d C = 3 \int x \operatorname{e}^{2x} \d x.
+\end{align*}
+The integral on the right hand side is computed by integration by parts with
+\begin{align*}
+u=x, \quad u'&=1,\\
+v'=\operatorname{e}^{2x}, \quad v&=\frac{1}{2}\operatorname{e}^{2x}.
+\end{align*}
+It is
+\begin{align*}
+\int x \operatorname{e}^{2x} \d x &= \frac{1}{2} \operatorname{e}^{2x} - \int \frac{1}{2} \operatorname{e}^{2x} \d x\\
+&= \frac{1}{2} \operatorname{e}^{2x} - \frac{1}{4} \operatorname{e}^{2x} + \tilde C\\
+&= \frac{1}{2}\operatorname{e}^{2x} ( x - \frac{1}{2}) + \tilde C.
+\end{align*}
+Coming back to the integral
+$$
+\int \d C = 3 \int x \operatorname{e}^{2x} \d x,
+$$
+we have
+$$
+C(x) = \frac{3}{2} \operatorname{e}^{2x} (x-\frac{1}{2}) + \tilde C.
+$$
+The constant $\tilde C$ can be set to zero, because it is already present in the solution of the homogeneous equation. 
+
+The particular solution is
+\begin{align*}
+y_p(x) &= C(x) \operatorname{e}^{-2x} = \left( \frac{3}{2} \operatorname{e}^{2x} (x-\frac{1}{2})\right) \operatorname{e}^{-2x}\\
+&=\frac{3}{2} (x-\frac{1}{2}).
+\end{align*}
+The general solution is
+$$
+y(x) = y_h(x) + y_p(x) = C \operatorname{e}^{-2x} + \frac{3}{2} (x-\frac{1}{2}).
+$$
+
+\underline{Now we solve the equation as a type: right hand side with bilinear argument}
+$$
+y'=f(ax+by+c)=3x-2y.
+$$
+With the substitution $u=3x-2y$, it is
+$$
+u'= 3 -2y'.
+$$
+Since $y'=3x-2y=u$ it is 
+$$
+u'= 3-2u.
+$$
+This can be solved by separation of variables
+\begin{align*}
+\frac{\d u}{\d x} &= 3-2u\\
+ \int \frac{\d u}{3-2u} &= \int \d x\\
+ -\frac{1}{2} \ln |3-2u| &= x + C\\
+ -\frac{1}{3-2u} &= C\operatorname{e}^{2x},
+\end{align*}
+by back substitution it is
+\begin{align*}
+\frac{1}{3-6x+4y} &= C \operatorname{e}^{2x}\\
+3-6x+4y &= C \operatorname{e}^{-2x}\\
+y &= C\operatorname{e}^{-2x} +\frac{3}{2}x - \frac{3}{4}.
+\end{align*}
+
+\newpage
+\underline{The equation can be also solved as a linear ODE with constant coeffcients:}
+
+We derive the characteristic polynomial
+$$
+p(\lambda) = \lambda + 2.
+$$
+It has the root $\lambda = -2$, so the solution of the homogeneous equation is
+$$
+y_h(x) = C\operatorname{e}^{\lambda x} = C \operatorname{e}^{-2x}.
+$$
+A guess for the particular solution is 
+$$
+y_p(x) = A_1x + A_0.
+$$
+Differentiating this we get
+$$
+y_p'(x) = A_1.
+$$
+Inserting $y_p$ and $y_p'$ into the ODE we get
+$$
+A_1+2A_1x+2A_0 = 3x
+$$
+and equating the coeffcients we get
+\begin{align*}
+2A_1 &= 3\\
+A_1+2A_0 &= 0
+\end{align*}
+which gives the values $A_0 = -\frac{3}{4}$ and $A_1 = \frac{3}{2}$ and the particular solution
+$$
+y_p(x) = \frac{3}{2}x-\frac{3}{4}.
+$$
+The general solution is again
+$$
+y(x) = y_h(x)+y_p(x) = C\operatorname{e}^{-2x} + \frac{3}{2}x-\frac{3}{4}.
+$$
+\noindent To \textbf{ii)}
+
+The equation
+$$
+y'y = -x,
+$$
+is of \underline{type: separation of variables}
+\begin{align*}
+\int y \d y &= -\int x \d x\\
+\frac{y^2}{2} &= -\frac{x^2}{2}+\widetilde C\\
+y^2 &= C-x^2, \quad C = 2\widetilde C,\\
+y &= \pm \sqrt{C-x^2}.
+\end{align*}
+The equation $y'y-x=0$ can be also interpreted as\\
+\underline{type: nonlinear homogeneous with substitution $u=y/x$}
+$$
+y' = -\frac{x}{y}
+$$ 
+and solved by the substitution $u=\frac{y}{x}$.
+
+From the relation $ux = y$, we differentiate on both sides to get
+$$
+u' x + u = y',
+$$
+where we have used the product rule for the product $ux$.
+Substituting $y'=-\frac{1}{u}$ we get
+\begin{align*}
+u'x + u &= - \frac{1}{u}\\
+u' &= -\frac{1}{x} (u+\frac{1}{u})\\
+\int \frac{u}{u^2+1}\d u &= \int -\frac{1}{x}\d x\\
+\frac{1}{2}\ln (u^2+1) &= -\ln x + \ln \widetilde C\\
+u^2+1 &= \frac{C}{x^2}, \quad C=\widetilde C^2\\
+u^2 &= \frac{C}{x^2}-1,
+\end{align*}
+with the back substitution it is
+\begin{align*}
+u^2 &= \frac{C}{x^2}-1,\\
+\frac{y^2}{x^2} &= \frac{C}{x^2}-1,\\
+y^2 & = C -x^2\\
+y&=\pm \sqrt{C-x^2}.
+\end{align*}
+
+\end{itemize}
+}
+
+
+
