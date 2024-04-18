@@ -1,20 +1,25 @@
-\Aufgabe[e]{First order differential equations}
+\Aufgabe[e]{Differentialgleichungen erster Ordnung}
 {
 \begin{itemize}
-\item[\textbf{1)}] Classify the following ordinary differential equations (ODEs) of the first order as
+\item[\textbf{1)}] Klassifizieren Sie die follgenden gew\"ohnlichen Differentialgleichungen 
+                   erster Ordnung als 
+
 \begin{enumerate}
-\item[\textbf{a)}] Linear or nonlinear.
-\item[\textbf{b)}] In case of linear ODEs classify them as 
+\item[\textbf{a)}] Linear oder nicht-linear.
+\item[\textbf{b)}] In dem Fall einer linearen Differentialgleichung klassifizieren Sie 
+                   die Glsichung zus\"atzlich als
 \begin{itemize}
-\item homogeneous or inhomogeneous.
-\item ODE with constant or non-constant coefficients.
+\item homogen oder inhomogen.
+\item Differentialgleichung mit konstanten oder nicht-konstanten Koeffizienten.
 \end{itemize}
-\item[\textbf{c)}] Classify them according to the type as in the lecture notes:
+\item[\textbf{c)}]  Nutzen Sie die Vorlesungsunterlagen, um die Differentialgleichung als
+                    einen der folgenden Typen zu klassifizieren:
 \begin{enumerate}
-\item $y'= f(x)\cdot g(y)$, solved by separation of variables,
-\item $y'=g(y/x)$, homogeneous, solved with substitution $u=y/x$,
-\item $y'=f(ax+by+c)$, right hand side with bilinear argument, solved with substitution $u=ax+by+c$,
-\item $y'+p(x) \cdot y = q(x)$, linear ODE.
+\item $y'= f(x)\cdot g(y)$, zu lösen mittels Trennung der Variablen,
+\item $y'=g(y/x)$, homogen, zu l\"osen mittels Substitution mit $u=y/x$,
+\item $y'=f(ax+by+c)$, rechte Seite mit bilinearen Argumenten, zu lösen mit der 
+      Substitution $u=ax+by+c$,
+\item $y'+p(x) \cdot y = q(x)$, lineare Differentialgleichung.
 \end{enumerate}
 \end{enumerate}
 \begin{multicols}{2}
@@ -29,7 +34,8 @@
 \item $y'= \ln(y+2x+1)^2$.
 \end{iii}
 \end{multicols}
-\item[\textbf{2)}] Compute the general solution of equations \textbf{i)} and \textbf{ii)}.
+\item[\textbf{2)}] Berechnen Sie die allgemeine L\"osung der Gleichungen \textbf{i)} 
+                   bis \textbf{iv)}.
 \end{itemize}
 }
 
@@ -38,113 +44,139 @@
 \begin{itemize}
 \item[\textbf{1)}] 
 \begin{iii}
-\item $y' + 2 y = 3x$. Linear, inhomogeneous, with constant coefficients, type: right hand side with bilinear argument.
-\item $y'y + x = 0$. Nonlinear, type: separation of variables.
-\item $y'= \frac{x^2+y^2}{xy}$. Nonlinear, type: homogeneous with substitution $u=y/x$.
+\item $y' + 2 y = 3x$. Linear, inhomogen, mit konstanten Koeffizients, Typ: rechte 
+      Seite mit bilinearen Koeffizienten.
+\item $y'y + x = 0$. Nicht-linear, Typ: Trennung der Variablen.
+\item $y'= \frac{x^2+y^2}{xy}$. Nicht-linear, Typ: homogen mit Substitution $u=y/x$.
 %\item $x^2y' = 2y + 1$. Linear, inhomogeneous, non-constant coefficients, type D.
-\item $y'=(x+y+1)^2$. Nonlinear, type: right hand side with bilinear argument.
-\item $x^2y'= x y + 2y^2$. Nonlinear, type: homogeneous with substitution $u=y/x$.
+\item $y'=(x+y+1)^2$. Nicht-linear, Typ: rechte Seite mit bilinearen Argumenten.
+\item $x^2y'= x y + 2y^2$. Nicht-linear, Typ: homogen mit Substitution $u=y/x$.
 %\item $y' = \cos(x)y$. Linear, homogeneous, non-constant coefficients, type D.
-\item $y'=\frac{y(x-y)}{x^2}$. Nonlinear, type: homogeneous with substitution $u=y/x$.
-\item $y'=\frac{x-y}{x+y}$. Nonlinear, type: homogeneous with substitution $u=y/x$.
-\item $y'= \ln(y+2x+1)^2$. Nonlinear, type: right hand side with bilinear argument.
+\item $y'=\frac{y(x-y)}{x^2}$. Nicht-linear, Typ: homogen mit Substitution $u=y/x$.
+\item $y'=\frac{x-y}{x+y}$. Nicht-linear, Typ: homogen mit Substitution $u=y/x$.
+\item $y'= \ln(y+2x+1)^2$. Nicht-linear, Typ: rechte Seite mit bilineren Argumenten.
 \end{iii}
-\item[\textbf{2)}] Compute the general solution of equations \textbf{i)} and \textbf{ii)}.
+\item[\textbf{2)}] Berechnen Sie die allgemeine L\"osung der Gleichungen \textbf{i)} und \textbf{ii)}.
 
-\noindent To \textbf{i)}
+\noindent Zu \textbf{i)}
 
-\underline{The equation can be solved as linear equation:} it is linear, first order, with constant coefficients and inhomogeneous.
-The solution can be determined as the sum of the solution of the homogeneous equation and a particular solution: 
+\underline{Die Gleichung kann als lineare Gleichung gel\"ost werden:}
+Die Gleichung ist linear, erster Ordnung, mit konstanten Koeffizienten und inhomogen.
+% it is linear, first order, with constant coefficients and inhomogeneous.
+Die L\"osung kann als Summe aus der L\"osung der homogenen Gleichung und einer partikul\"aren 
+L\"osung bestimmt werden:
+% The solution can be determined as the sum of the solution of the homogeneous equation and a particular solution: 
 $$
 y(x) = y_h(x) + y_p(x).
 $$
-The solution of the homogeneous equation can be determined following the general solution procedure for the case with non-constant coeffcients as we do here to show the method. It could be also determined computing the zeros of the characteristic polynomial and this will be shown later.
+Die Lösung der homogenen Gleichung mit dem allgemeinen Lösungsverfahren für den Fall mit 
+nicht-konstanten Koeffizienten, den wir hier zeigen. Man kann die Lösung auch durch Berechnung 
+der Nullstellen des charakteristischen Polynoms bestimmen. Dieser Methode wird später gezeigt.
 
-\underline{The equation can be also interpreted as type: right hand side with bilinear argument.}
+% The solution of the homogeneous equation can be determined following the general solution procedure for the case with non-constant coeffcients as we do here to show the method. It could be also determined computing the zeros of the characteristic polynomial and this will be shown later.
+
+\underline{Die Gleichung kann interpretiert werden vom Typ rechte Seite mit bilinearen}\\
+\underline{Argumenten.}
+% The equation can be also interpreted as type: right hand side with bilinear argument.}
 $$
 y'=f(ax+by+c)=3x-2y
 $$
-and solved with a substitution as shown below.
+und wird mit der Substitution, wie unten gezeigt, gelöst.
+% and solved with a substitution as shown below.
 
-Let's start with the general method. The solution of the homogeneous problem is
+Wir beginnen mit der allgemeinen Methode. Die Lösung des homogenen Problems ist
+% Let's start with the general method. The solution of the homogeneous problem is
 $$
 y_h(x) = C \operatorname{e}^{-P(x)},
 $$
-where 
+wobei
 $$
 P(x) = \int^x p(t) \d t
 $$
-and $p(x)$ is 2 in this case, so it is $P(x) = 2x$ and
+und $p(x)$ in diesem Fall 2 ist, sodass $P(x) = 2x$ gilt und
 $$
 y_h(x) = C\operatorname{e}^{-2x}.
 $$
-For the particular solution with use the method of variations of constants
+Für die partikuläre Lösung nutzen wir die Methode der Variation der Konstanten
+% For the particular solution with use the method of variations of constants
 $$
 y_p(x) = C(x) \operatorname{e}^{P(x)} = C(x) \operatorname{e}^{-2x}.
 $$
-We use the same ansatz function as in the homogeneous part but multiplied by the function $C(x)$ instead of the constant $C$.
-To determine the expression for $C(x)$ we derive $y_p(x)$
+Wir nutzen dieselbe Ansatzfunktion wie im homogenen Teil aber multipliziert mit der 
+Funktion $C(x)$ statt der Konstanten $C$.
+% We use the same ansatz function as in the homogeneous part but multiplied by the function $C(x)$ instead of the constant $C$.
+Um den Ausdruck für $C(x)$ zu bestimmen, leiten wir $y_p(x)$ ab
+% To determine the expression for $C(x)$ we derive $y_p(x)$
 $$
 y_p'(x) = C'(x) \operatorname{e}^{-2x} -2 C(x) \operatorname{e}^{-2x}
 $$
-and insert $y$ and $y'$ into the ODE
+und setzen $y$ und $y'$ in die Differentialgleichung ein
 \begin{align*}
 C'(x) \operatorname{e}^{-2x} -2 C(x) \operatorname{e}^{-2x} + 2 C(x) \operatorname{e}^{-2x} &= 3x\\
 C'(x) \operatorname{e}^{-2x} &= 3x\\
 C'(x) = 3x \operatorname{e}^{2x}\\
 \int \d C = 3 \int x \operatorname{e}^{2x} \d x.
 \end{align*}
-The integral on the right hand side is computed by integration by parts with
+Das Integral auf der rechten Seite  wird mit partieller Integration berechnet
+% The integral on the right hand side is computed by integration by parts with
 \begin{align*}
 u=x, \quad u'&=1,\\
 v'=\operatorname{e}^{2x}, \quad v&=\frac{1}{2}\operatorname{e}^{2x}.
 \end{align*}
-It is
+Es gilt
 \begin{align*}
 \int x \operatorname{e}^{2x} \d x &= \frac{1}{2} \operatorname{e}^{2x} - \int \frac{1}{2} \operatorname{e}^{2x} \d x\\
 &= \frac{1}{2} \operatorname{e}^{2x} - \frac{1}{4} \operatorname{e}^{2x} + \tilde C\\
 &= \frac{1}{2}\operatorname{e}^{2x} ( x - \frac{1}{2}) + \tilde C.
 \end{align*}
-Coming back to the integral
+Zurück zu dem Integral
+% Coming back to the integral
 $$
 \int \d C = 3 \int x \operatorname{e}^{2x} \d x,
 $$
-we have
+erhalten wir
 $$
 C(x) = \frac{3}{2} \operatorname{e}^{2x} (x-\frac{1}{2}) + \tilde C.
 $$
-The constant $\tilde C$ can be set to zero, because it is already present in the solution of the homogeneous equation. 
+Die Konstante $\tilde C$ kann null gesetzt werden, weil sie bereits in der Lösung der 
+homogenen Gleichung berücksichtigt wurde.
+% The constant $\tilde C$ can be set to zero, because it is already present in the solution of the homogeneous equation. 
 
-The particular solution is
+Die partikuläre Lösung ist
+% The particular solution is
 \begin{align*}
 y_p(x) &= C(x) \operatorname{e}^{-2x} = \left( \frac{3}{2} \operatorname{e}^{2x} (x-\frac{1}{2})\right) \operatorname{e}^{-2x}\\
 &=\frac{3}{2} (x-\frac{1}{2}).
 \end{align*}
-The general solution is
+Die allgemeine Lösung ist
+% The general solution is
 $$
 y(x) = y_h(x) + y_p(x) = C \operatorname{e}^{-2x} + \frac{3}{2} (x-\frac{1}{2}).
 $$
 
-\underline{Now we solve the equation as a type: right hand side with bilinear argument}
+\underline{Wir lösen die Gleichung nun als Typ: rechte Seite mit bilinearen}\\
+\underline{Argumenten.}
 $$
 y'=f(ax+by+c)=3x-2y.
 $$
-With the substitution $u=3x-2y$, it is
+Mit der Substitution $u=3x-2y$, erhalten wir
 $$
 u'= 3 -2y'.
 $$
-Since $y'=3x-2y=u$ it is 
+Da $y'=3x-2y=u$ gilt 
 $$
 u'= 3-2u.
 $$
-This can be solved by separation of variables
+Diese lösen wir mit Trennung der Variablen
+% This can be solved by separation of variables
 \begin{align*}
 \frac{\d u}{\d x} &= 3-2u\\
  \int \frac{\d u}{3-2u} &= \int \d x\\
  -\frac{1}{2} \ln |3-2u| &= x + C\\
  -\frac{1}{3-2u} &= C\operatorname{e}^{2x},
 \end{align*}
-by back substitution it is
+mit der Rücksubstitution erhalten wir
+% by back substitution it is
 \begin{align*}
 \frac{1}{3-6x+4y} &= C \operatorname{e}^{2x}\\
 3-6x+4y &= C \operatorname{e}^{-2x}\\
@@ -152,67 +184,73 @@ y &= C\operatorname{e}^{-2x} +\frac{3}{2}x - \frac{3}{4}.
 \end{align*}
 
 \newpage
-\underline{The equation can be also solved as a linear ODE with constant coeffcients:}
+\underline{Die Differentialgleichung gelöst werden als lineare Differentialgleichung mit}\\
+\underline{ konstanten Koeffizienten:}
 
-We derive the characteristic polynomial
+Wir bestimmen das charakteristische Polynom
+% We derive the characteristic polynomial
 $$
-p(\lambda) = \lambda + 2.
+p(\lambda) = \lambda + 2
 $$
-It has the root $\lambda = -2$, so the solution of the homogeneous equation is
+mit den Nullstellen $\lambda = -2$. Damit ist die Lösung der homogenen Gleichung 
 $$
 y_h(x) = C\operatorname{e}^{\lambda x} = C \operatorname{e}^{-2x}.
 $$
-A guess for the particular solution is 
+Der Ansatz für die partikuläre Lösung ist
 $$
 y_p(x) = A_1x + A_0.
 $$
-Differentiating this we get
+Durch Ableiten erhalten wir
 $$
 y_p'(x) = A_1.
 $$
-Inserting $y_p$ and $y_p'$ into the ODE we get
+Wir setzen $y_p$ und $y_p'$ in die Differentialgleichung ein und erhalten
+% Inserting $y_p$ and $y_p'$ into the ODE we get
 $$
-A_1+2A_1x+2A_0 = 3x
+A_1+2A_1x+2A_0 = 3x.
 $$
-and equating the coeffcients we get
+Ein Koeffizientenvergleich liefert
+% and equating the coeffcients we get
 \begin{align*}
 2A_1 &= 3\\
 A_1+2A_0 &= 0
 \end{align*}
-which gives the values $A_0 = -\frac{3}{4}$ and $A_1 = \frac{3}{2}$ and the particular solution
+wodurch wir die Werte $A_0 = -\frac{3}{4}$ und $A_1 = \frac{3}{2}$ erhalten und 
+die partikuläre Lösung
 $$
 y_p(x) = \frac{3}{2}x-\frac{3}{4}.
 $$
-The general solution is again
+Die allgemeine Lösung ist wieder
 $$
 y(x) = y_h(x)+y_p(x) = C\operatorname{e}^{-2x} + \frac{3}{2}x-\frac{3}{4}.
 $$
-\noindent To \textbf{ii)}
+\noindent Zu \textbf{ii)}
 
-The equation
+Die Gleichung
 $$
 y'y = -x,
 $$
-is of \underline{type: separation of variables}
+ist vom \underline{Typ: Trennung der Variablen}
 \begin{align*}
 \int y \d y &= -\int x \d x\\
 \frac{y^2}{2} &= -\frac{x^2}{2}+\widetilde C\\
 y^2 &= C-x^2, \quad C = 2\widetilde C,\\
 y &= \pm \sqrt{C-x^2}.
 \end{align*}
-The equation $y'y-x=0$ can be also interpreted as\\
-\underline{type: nonlinear homogeneous with substitution $u=y/x$}
+Die Gleichung $y'y-x=0$ kann auch interpretiert werden als\\
+\underline{Typ: nicht-linear, homogen mit der Substitution $u=y/x$}
 $$
 y' = -\frac{x}{y}
 $$ 
-and solved by the substitution $u=\frac{y}{x}$.
+und kann mit der Substitution $u=\frac{y}{x}$ gelöst werden.
 
-From the relation $ux = y$, we differentiate on both sides to get
+Aus der Beziehung $ux = y$, erhalten wir durch differenzieren beider Seiten
 $$
 u' x + u = y',
 $$
-where we have used the product rule for the product $ux$.
-Substituting $y'=-\frac{1}{u}$ we get
+wobei wir die Produktregel benutzen.
+% where we have used the product rule for the product $ux$.
+Mit der Substitution $y'=-\frac{1}{u}$ erhalten wir
 \begin{align*}
 u'x + u &= - \frac{1}{u}\\
 u' &= -\frac{1}{x} (u+\frac{1}{u})\\
@@ -221,7 +259,7 @@ u' &= -\frac{1}{x} (u+\frac{1}{u})\\
 u^2+1 &= \frac{C}{x^2}, \quad C=\widetilde C^2\\
 u^2 &= \frac{C}{x^2}-1,
 \end{align*}
-with the back substitution it is
+durch die Rücksubstitution erhalten wir
 \begin{align*}
 u^2 &= \frac{C}{x^2}-1,\\
 \frac{y^2}{x^2} &= \frac{C}{x^2}-1,\\
