@@ -1,0 +1,70 @@
+\input{header}
+
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} M.Sc Janna Puderbach\end{tabular}}
+
+\newcommand{\Jahr}{2024}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{WT}
+\newcommand{\Kurs}{Mathematik II}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{1}
+\newcommand{\TOPIC}{Definitheit, Ähnlichkeit, Umkehrfunktionen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%  \setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+\renewcommand{\d }{\mathrm{d}}
+\ruleBig
+
+%Mathe II Blatt 1
+%1
+\input{../GewDgln/gewdgl_Bern_Dglg_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Dgln_Defb_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Dgln_Erst_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Dgl_Tdv_AWP_099.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Homg_Line_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Ihom_Line_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Ihom_Line_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Line_nOrd_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Line_nOrd_1-3.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Strm_Lrkr_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+
+\end{twocolumn}
+\end{document}

@@ -1,0 +1,62 @@
+\Aufgabe[e]{Logistisches Wachstum}{
+Bestimmen Sie die allgemeine Lösung des Anfangswertproblems
+$$
+y'(t) = \lambda (k-y(t))y(t) \quad , \quad y(0) = y_0
+$$
+wobei $k, \lambda \in \mathbb R$.
+}
+
+\Loesung{
+Wir l\"osen diese Differentialgleichung durch Trennung der Variablen.
+
+$$
+\int \frac{1}{(k-y(t))y(t)} \d y = \int \lambda \d t
+$$
+
+Das Integral auf der linken Seite lösen wir mit einer Partialbruchzerlegung.
+
+$$
+\frac{1}{(k-y)y} = \frac{A}{k-y} + \frac{B}{y} 
+$$
+Durch Multiplikation mit dem Nenner erhalten wir
+$$
+Ay + B(k-y) = 1
+$$
+Durch Koeffizientenvergleich erhalten wir das Gleichungssystem
+\begin{align*}
+A-B &= 0 \\
+B = \frac{1}{k}
+\end{align*}
+Damit ergibt sich
+\begin{align*}
+\int \frac{1}{k} \frac{1}{k-y} + \frac{1}{k} \frac{1}{y} \d y &= \int \lambda \d t\\
+\frac{1}{k} \int \left(- \frac{1}{y-k} +\frac{1}{y} \right) \d t &= \int \lambda \d t\\
+\frac{1}{k}( \ln|y| - \ln|y-k|) &= \lambda t + c^*\\
+\frac{1}{k} \ln|\frac{y}{y-k}| &= \lambda t + c^*
+\end{align*}
+Wir stellen die Gleichung nach $y$ um.
+\begin{align*}
+\frac{y}{y-k} &= c \operatorname{e}^{\lambda k t}\\
+\frac{1}{1-\frac{k}{y}} &= c \operatorname{e}^{\lambda k t}\\
+1 &= \left(1 - \frac{k}{y} \right) c\operatorname{e}^{\lambda k t}\\
+1 - c \operatorname{e}^{\lambda k t} &= - \frac{ck}{y} \operatorname{e}^{\lambda k t}\\
+y &= - \frac{ck\operatorname{e}^{\lambda kt}}{1 - c\operatorname{e}^{\lambda kt}}
+\end{align*}
+Mit dem Anfangswert erhalten wir
+\begin{align*}
+y_0 = y(0) &= -\frac{ck}{1-c}\\
+y_0 &= \frac{k}{1-\frac{1}{c}} \\
+\left(1-\frac{1}{c}\right) y_0 &= k\\
+\frac{1}{c}y_0 &= k -y_0\\
+c&= \frac{y_0}{y_0 -k}
+\end{align*}
+Die allgemeine Lösung ist
+\begin{align*}
+y&=-\frac{ck \operatorname{e}^{\lambda kt}}{1-c\operatorname{e}^{\lambda kt}}
+\end{align*}
+Die spezielle Lösung erhalten wir durch einsetzen der Konstanten.
+\begin{align*}
+y &= \frac{y_0}{k-y_0} \frac{k}{\operatorname{e}^{\-\lambda kt} + \frac{y_0}{k-y_0}}\\
+&=\frac{y_0 k}{y_0 +(k-y_0)\operatorname{e}^{-\lambda k t}}
+\end{align*}
+}

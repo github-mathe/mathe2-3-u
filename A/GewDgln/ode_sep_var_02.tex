@@ -1,0 +1,51 @@
+\Aufgabe[e]{Anfangswertproblem}{
+Gegeben sei das Anfangswertproblem:
+% Given the initial value problem:
+$$y^\prime=\sqrt y,\quad y(0)=0.$$
+\begin{iii}
+\item Bestimmen sie eine Lösung des gegebenen Anfangswertproblems.
+% Find a solution of the IVP.
+\item Hat das Anfangswertproblem eine eindeutige Lösung?
+% Does the IVP have a unique solution?
+\end{iii}
+}
+
+\Loesung{
+\begin{iii}
+\item Die L\"osung kann mit Trennung der Variablen berechnet.
+% The solution can be computed by the separation of variables
+\begin{align*}
+\frac{1}{\sqrt{y}}\d y &= \d x\\
+\int \frac{1}{\sqrt{y}}\d y &= \int \d x\\
+2\sqrt{y} &= x +C\\
+y &= \frac{1}{4}(x+C)^2
+\end{align*}
+Mit dem Anfangswert erhalten wir $C=0$ und die L\"osung
+% Using the initial condition we get $C=0$ and a solution is
+$$
+y=\frac{1}{4} x^2,
+$$
+Die L\"osung ist nicht eindeutig, da offensichtlich die konstante Null-Funktion eine Lösung ist,
+die die Anfangswertbedingung erfüllt. 
+% but this is not the unique solution since it is clear that also the constant zero function is a solution that satisfies the initial condition. 
+\item 
+Das Problem hat unendlich viele L\"osungen der Form
+% This problem has inifinitely many solutions, which are of the form
+\begin{align*}
+f(x) = 
+\begin{cases}
+0, \quad 0 < x < \bar x,\\
+\frac{1}{4} x^2 -\frac{1}{4}\bar x^2, \quad x > \bar x.
+\end{cases}
+\end{align*}
+Das kann man daraus herleiten, dass die Differentialgleichung  autonom und daher invariant 
+gegenüber einer Verschiebung bez\"uglich $x$ ist. Also falls $\bar y(t)$ eine L\"osung 
+der obigen Differentialgleichung ist, dann ist auch $\hat y(t)= \overline y(t+t_0)$ eine 
+L\"osung des Problems 
+$$y^\prime=\sqrt y,\quad y(t_0)=0.$$
+
+% This can be deduced by the fact that the ODE is autonomous and hence invariant with respect to a translation with respect to $x$. So if $\bar y(t)$ is a solution of the above ODE then $\hat y(t)= \overline y(t+t_0)$ is solution of the problem
+% $$y^\prime=\sqrt y,\quad y(t_0)=0.$$
+
+\end{iii}
+}

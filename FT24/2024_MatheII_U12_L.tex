@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
- \setboolean{mitLoes}{true}
+\setboolean{mitLoes}{true}
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -25,7 +25,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
- \setboolean{mitErg}{true}
+%  \setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,10 +46,9 @@
 %Mathe III Blatt 12
 \input{../A/Analysis/analys_Inte_Gral_007.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-\newpage
 \input{../A/Analysis/analys_Intg_Para_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+% 
 % \input{../A/Analysis/analys_Intg_Kuko_001.tex}
 % \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 %35

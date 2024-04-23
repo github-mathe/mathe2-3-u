@@ -1,0 +1,131 @@
+\Aufgabe[e]{Trennung der Variablen}{
+Lösen die folgenden Anfangswertprobleme und bestimmen Sie den maximalen Definitionsbereich 
+der Lösung
+% Solve the following initial value problems and determine the interval of validity for the solution
+\begin{abc}
+\item $y'(x) = 6y^2(x)x, \quad y(1) = \dfrac{1}{6}$.
+\item $y'(x) = \dfrac{{3{x^2} + 4x - 4}}{{2y(x) - 4}},\quad y(1) = 3$.
+\item $y'(x) = {\operatorname{e}^{ - y(x)}}\left( {2x - 4} \right), \quad y(5) = 0$.
+\item $y'(x) = \dfrac{1}{x^2}, \quad y(x_0)=0$.
+\item $y'(x) = x^2, \quad y(0)=y_0$.
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item $y'(x) = 6y^2(x)x, \quad y(1) = \dfrac{1}{6}$.
+Mit Trennung der Variablen gilt
+% With separation of variables it is
+\begin{align*}
+\frac{\d y}{y^2} &= 6x \d x\\
+\int \frac{\d y}{y^2} &= \int 6x \d x\\
+-\frac{1}{y} &= 3x^2+ C.
+\end{align*}
+Mit der Anfangsbedingung $y(1) = \frac{1}{6}$ erhalten wir
+\begin{align*}
+-6 &= 3 + C\\
+-9 & = C.
+\end{align*}
+Die Lösung ist dann
+$$
+y = \frac{1}{9-3x^2}.
+$$
+Wir bestimmen nun den Gültigkeitsbereich der Lösung. Es muss gelten
+$$9 - 3x^2 \neq 0,$$
+daher
+$$
+x\neq \pm \sqrt{3}.
+$$
+Die Werte $x=\pm \sqrt{3}$ müssen vermieden werden, damit erhalten wir die 
+folgenden möglichen Gültigkeitsbereiche: 
+$$
+-\infty < x < -\sqrt{3}, \quad -\sqrt{3} < x < \sqrt{3}, \quad \sqrt{3} < x < \infty.
+$$
+Da die Lösung in $x=1<\sqrt{3}$ positiv ist (siehe Anfangswert) ist der Gültigkeitsbereich
+in dem Intervall
+$$
+-\sqrt{3} < x < \sqrt{3}.
+$$
+\item $y'(x) = \dfrac{{3{x^2} + 4x - 4}}{{2y(x) - 4}},\quad y(1) = 3$.
+Es gilt 
+\begin{align*}
+(2y-4) \d y &= (3x^2+4x-4) \d x\\
+\int (2y-4) \d y &= \int(3x^2+4x-4) \d x\\
+y^2-4y & = x^3 +2x^2-4x+C.
+\end{align*}
+Durch Anwenden der der Anfangsbedingung, gilt
+\begin{align*}
+9 -12 & = 1 + 2 -4 +C\\
+-2 &= C.
+\end{align*}
+Mit $d=-x^3-2x^2+4x+2$ gilt
+$$y^2-4y+d = 0$$
+welches eine quadratische Gleichung mit der Lösungsmenge
+\begin{align*}
+y &= 2\pm \sqrt{4-d}\\
+&=2\pm \sqrt{x^3+2x^2-4x+2}.
+\end{align*}
+Von den zwei Kandidaten für die Lösung ist nur eine eine gültige Lösung. Das 
+kann mit Hilfe der Anfangsbedingung nachgewiesen werden $y(1) = 3$. 
+In der Tat gilt
+\begin{align*}
+3 &= 2+\sqrt{1+2-4+2},\\
+3 &\neq 2-\sqrt{1+2-4+2},
+\end{align*}
+daher ist die Lösung mit dem negativen Term $2-\sqrt{4-d}$ nicht gültig.
+
+Um den Gültigkeitsbereich der Lösung zu untersuchen, nutzen wir  
+$$
+4-d = x^3+2x^2-4x+2 \geq 0.
+$$
+Durch Einsetzen verschiener Werte für $x$, können wir überprüfen, dass für $x=-3$ 
+die Funktion $x^3+2x^2-4x+2$ positiv und für $x=-4$ negativ ist.
+Da die Funktion stetig ist, muss die Nullstelle zwischen -4 und -3 liegen. Wir bezeichnen 
+diesen Wert mit $\bar x$, der Gültigkeitsbereich ist dann 
+$$
+x\geq \bar x \approx -3.36.
+$$
+\item $y'(x) = {\operatorname{e}^{ - y(x)}}\left( {2x - 4} \right), \quad y(5) = 0$.
+Es gilt
+\begin{align*}
+\int \operatorname{e}^y \d y &= \int (2x-4 \d x)\\
+\operatorname{e}^y & = x^2-4x +C.
+\end{align*}
+Durch Einsetzen des Anfangswertes, erhalten wir die Konstante $C=-4$.
+Die Lösung ist daher
+$$
+y = \ln(x^2-4x-4).
+$$
+Für die Gültigkeit muss gelten
+$$
+x^2-4x-4 > 0.
+$$
+Die Nullstellen der Funktion $x^2-4x-4$ sind $x=2 \pm 2\sqrt{2}$. Da die Funktion 
+konvex ist, ist die Funktion positiv in dem Intervall
+$$
+-\infty < x < 2-2\sqrt{2} \quad \text{and} \quad 2+2\sqrt{2} < x < \infty.
+$$
+Da der Anfangswert bei $x=5$ liegt, ist der Gültigkeitsbereich das Intervall $2+2\sqrt{2} < x < \infty$.
+\item $y'(x) = \dfrac{1}{x^2}, \quad y(x_0)=0$.
+Es gilt
+\begin{align*}
+\d y &= \frac{\d x}{x^2}\\
+\int \d y &= \int \frac{\d x}{x^2}\\
+y &= -\frac{1}{x} + C.
+\end{align*}
+Durch Anwenden der Anfangwertbedingung erhalten wir 
+$$C=\frac{1}{x_0},$$
+woraus wir $x_0 \neq 0$ erhalten.
+Die Lösung ist
+$$
+y = -\frac{1}{x} + \frac{1}{x_0}.
+$$
+Für den Gültigkeitsbereich muss gelten, dass $x\neq 0$, damit ist er gegeben als $0 < x < \infty$ falls $x_0 > 0$ und $-\infty < x < 0$ falls $x_0 < 0$.
+\item $y'(x) = x^2, \quad y(0)=y_0$.
+Diese einfache Gleichung hat die Lösung
+$$
+y = \frac{x^3}{3} + y_0,
+$$
+und der Gültigkeitsbereich ist der ganze $\mathbb R$.
+\end{abc}
+}
