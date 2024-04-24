@@ -1,0 +1,245 @@
+\Aufgabe[e]{First order differential equations}
+{
+Classify the following ordinary differential equations (ODEs) of the first order:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x^2y' = 2y + 1$. 
+\item $y' = \cos(x)y$. 
+\item $x^2 y' + y^2 = x y$.
+\item $y'=\sin(y+1)$. 
+\item $y'=(4x-y+1)^2$.
+\item $y'+3y+2=\operatorname{e}^{2x}$. 
+\end{enumerate}
+\end{multicols}
+%
+\begin{abc}
+\item Classify them as linear or nonlinear.
+In case of linear ODEs classify them as 
+\begin{iii}
+\item homogeneous or inhomogeneous.
+\item ODE with constant or non-constant coefficients.
+\end{iii}
+\item Classify them according to the type as in the lecture notes:
+\begin{iii}
+\item $y'= f(x)\cdot g(y)$ solved by separation of variables.
+\item $y'=g(y/x)$ with substitution $u=y/x$ becomes of type A.
+\item $y'=f(ax+by+c)$ with substitution $u=ax+by+c$ is of type A.
+\item $y'+p(x) \cdot y = q(x)$.
+\end{iii}
+\item Compute the general solution of all equations.
+\end{abc}
+}
+
+
+\Loesung{
+\begin{itemize}
+\item[\textbf{1)}] 
+\begin{iii}
+\item $x^2y' = 2y + 1$. Linear, inhomogeneous, non-constant coefficients: Type A (separable) or type D.
+\item $y' = \cos(x)y$. Linear, homogeneous, non-constant coefficients, separable (type A).
+\item $x^2 y' + y^2 = x y(x)$. Nonlinear, homogeneous, solvable with substitution of Type B.
+\item $y'=\sin(y+1)$. Nonlinear, separable of Type A.
+\item $y'=(4x-y+1)^2$. Nonlinear, type C.
+\item $y'+3y+2=\operatorname{e}^{2x}$. Linear, inhomogeneous, Type D with constant coefficients.
+\end{iii}
+\item[\textbf{2)}] Compute the general solution of all equations.
+\begin{iii}
+\item $x^2y' = 2y + 1$. Linear, inhomogeneous, non-constant coefficients: type A.
+This is of separable type:
+\begin{align*}
+\frac{\d y}{2y+1} &= \frac{\d x}{x^2},\\
+\frac{1}{2} \ln(2y+1) &= -\frac{1}{x},\\
+2y+1 &= \widetilde C\operatorname{e}^{-\frac{2}{x}},\\
+y &= C e^{-\frac{2}{x}} -\frac{1}{2}.
+\end{align*}
+
+This equation can also be solved with a longer procedure, considering it of Type D: First determining the solution of the homogeneous part (H) and then the particular solution (P) using the method of the undetermined coeffcients.
+Let's start with (H):
+
+The equation 
+$$x^2y'=2y$$
+is separable and it has the solution
+$$
+y_h(x) = C e^{\frac{-2}{x}}.
+$$
+For the part (P) we make the ansatz
+$$
+y_p(x) = C(x) e^{\frac{-2}{x}}.
+$$
+Then we differentiate:
+$$
+y_p'(x) = C'(x) e^{\frac{-2}{x}} + C(x) \frac{2}{x^2} e^{\frac{-2}{x}}.
+$$
+Substituting into the equation yields
+\begin{align*}
+C'(x) x^2 e^{\frac{-2}{x}} + 2C(x) e^{\frac{-2}{x}} &= 2 C(x) e^{\frac{-2}{x}} +1\\
+C'(x) x^2 e^{\frac{-2}{x}} &= 1\\
+C'(x) &= \frac{e^{\frac{2}{x}}}{x^2}\\
+\int \d C &= \int \frac{e^{\frac{2}{x}}}{x^2}\d x.
+\end{align*}
+We integrate the integral on the right with the substitution $u=2/x$ from which we compute the differential $\d u = -\frac{2}{x^2}\d x$. We have thus
+$$
+\frac{\d x}{x^2} = -\frac{\d u}{2} 
+$$
+and
+\begin{align*}
+\int \d C &=  -\frac{1}{2} \int e^u \d u,\\
+C &=  -\frac{1}{2} e^u + \widetilde C,\quad \text{ (e.g. } \widetilde C = 0)\\
+C &=  -\frac{1}{2} e^\frac{2}{x}.\quad \text{ (after back substitution)}
+\end{align*}
+The particular solution is therefore
+$$
+y_p(x) = -\frac{1}{2}  e^\frac{2}{x}  e^\frac{-2}{x} =  -\frac{1}{2}
+$$
+and the general solution is
+$$
+y(x) = y_h(x) + y_p(x) = C e^\frac{-2}{x} - \frac{1}{2}.
+$$
+\item $y' = \cos(x)y$. Linear, homogeneous, non-constant coefficients, separable (type A).
+
+Solution:
+\begin{align*}
+\int \frac{1}{y} \d y &= \int \cos(x) \d x,\\
+\ln(y) &= \sin(x) + \ln(C),\\
+y &= C e^{\sin(x)}.
+\end{align*}
+\item $x^2 y' + y^2 = x y(x)$. Nonlinear, homogeneous, solvable with substitution of Type B.
+
+The equation is reformulated as
+$$
+y'= \frac{y}{x} -\frac{y^2}{x^2}.
+$$
+With the substitution $u=y/x$ we have 
+\begin{align*}
+y&=u x\\
+y'&=u' x + u.
+\end{align*}
+We substite $y'$ and $y/x$ in the ODE to get
+$$
+u' x + u = u -u^2.
+$$
+that can be solved by separation of variables
+%
+\begin{align*}
+u' &= -\frac{u^2}{x},\\
+\int \frac{1}{u^2} \d u &= -\frac{1}{x} \d x,\\
+-\frac{1}{u} &= \ln(x) + C,\\
+u &= \frac{1}{\ln(x) + C},\\
+y &= \frac{x}{\ln(x) + C}. \quad (\text{after back substitution } u=y/x)
+\end{align*}
+%
+\item $y'=\sin(y+1)$. Nonlinear, separable of Type A.
+
+We solve it by separation of variables:
+%
+\begin{align*}
+\int \frac{\d y}{\sin(y+1)} &= \int \d x,\\
+\ln|\tan\left(\frac{y+1}{2}\right)| &= x + \ln(C),\\
+\tan\left(\frac{y+1}{2}\right) &= C e^x,\\
+\frac{y+1}{2} &= \arctan(Ce^x),\\
+y &= 2\arctan(Ce^x)-1.
+\end{align*}
+%
+\item $y'=(4x-y+1)^2$. Nonlinear, type C.
+
+This nonlinear ODE is solved by substitution. We set
+$$
+u = 4x-y+1
+$$
+to get
+$$
+u'= 4-y' \quad \rightarrow \quad y'=4-u'.
+$$
+Substituting $u=4x-y+1$ and $y'=4-u'$ into the equation yields a separable equation
+\begin{align*}
+4-u' &= u^2,\\
+u' & = 4-u^2,\\
+\frac{\d u}{4-u^2} &= \d x,\\
+\int \frac{\d u}{4-u^2} &= \int \d x,\\
+\frac{1}{4} \ln|u+2| - \ln|u-2| &= x+ \ln(\widetilde C), \quad \text{ (with partial fraction decomposition, see below)}\\
+\ln\frac{u+2}{u-2} &= 4x + \ln(\widetilde C^4),\\
+u+2 &= Ce^{4x}(u-2),\quad (\text{with } C=\widetilde C^4)\\
+u & = -2Ce^{4x} + uCe^{4x} -2,\\
+u(1-Ce^{4x}) &= -2\left(Ce^{4x}+1\right)\\
+u &= -2 \frac{Ce^{4x}+1}{1-Ce^{4x}},\\
+4x-y+1 &= -2 \frac{Ce^{4x}+1}{1-Ce^{4x}}, \quad \text{(back substitution)}\\
+y &= 4x + \frac{3+Ce^{4x}}{1-Ce^{4x}}.
+\end{align*}
+%
+For the partial fraction decomposition in the 5th step above we have
+$$
+\frac{-1}{u^2-4} = -\frac{1}{4} \frac{1}{x-2} + \frac{1}{4} \frac{1}{x+2}.
+$$
+%
+\item $y'+3y+2=\operatorname{e}^{2x}$. Linear, inhomogeneous, Type D with constant coefficients.
+
+This equation can be solved as Type D using the method of undetermined coefficients or as a linear inhomogeneous ODE with constant coefficients, using special guesses for the inhomogeneities and the superposition principle.
+
+Let's start with the first method. Her we have to solve the homogeneous problem (H) and then find a particular solution (P).
+
+For the homogeneous problem we can use separation of variables or in case of constant coefficients (only in this case!) use the characteristic polynomial:
+$$
+\lambda + 3 = 0 \quad \rightarrow \quad \lambda = -3
+$$
+to determine the solution part
+$$
+y_h(x) = C e^{-3x}.
+$$
+To solve problem (P) we make the ansatz
+$$
+y_p(x) = C(x) e^{-3x}
+$$
+and differentiate it
+$$
+y_p'(x) = C'(x) e^{-3x} - C(x) 3 e^{-3x}.
+$$
+We insert $y_p$ and $y_p'$ into the ODE to get
+\begin{align*}
+C'(x)e^{-3x} -3C(x) e^{-3x} +3Ce^{-3x} +2 &= e^{2x}\\
+C'(x)&= e^{5x}-2e^{3x}\\
+C(x) &= \frac{1}{5}e^{5x} -\frac{2}{3}e^{3x}.
+\end{align*}
+The particular solution is
+$$
+y_p(x) = \left( \frac{1}{5}e^{5x} -\frac{2}{3}e^{3x} \right) e^{-3x} = \frac{1}{5}e^{2x}  -\frac{2}{3}
+$$
+and the general solution is
+$$
+y(x) = y_h(x) + y_p(x) = C e^{-3x} +  \frac{1}{5}e^{2x}  -\frac{2}{3}.
+$$
+
+As mentioned above, we can solve the problem using special guesses for the inhomogeneities and the superposition principle.
+
+The right-hand side of the equation is $e^{2x} -2$, so we find two solutions for the two terms separately. First for $e^{2x}$. The ansatz in the exponential case is again exponential $y_{p1}=Ae^{\alpha x}$, where $\alpha$ is the exponent of the righ-hand term:
+$$
+y_{p1} = A e^{2x}.
+$$
+The constant $A$ is found by coefficients comparison:
+\begin{align*}
+y_{p1}' +3y_{p1} &= e^{2x}, \quad \text{(note: the term -2 is not considered)}\\
+2 A e^{2x} + 3 A e^{2x} &= e^{2x},\\
+A &= \frac{1}{5}.
+\end{align*}
+The first part of the particular solutions is
+$$
+y_{p1} = \frac{1}{5}e^{2x}.
+$$
+The second part is computed with the polynomial ansatz of the zero-th order $y_{p2}=B$ because the term $-2$ is a constant. Inserting the ansatz function into the ODE yields
+$$
+3 B = -2 \quad B=-\frac{2}{3}.
+$$
+We have thus the particular solution by superposition
+$$
+y_p(x) = y_{p1}(x) + y_{p2}(x) =  \frac{1}{5}e^{2x} - \frac{2}{3}
+$$
+and again the general solution
+$$
+y(x) = y_h(x) + y_p(x) = Ce^{-3x} +  \frac{1}{5}e^{2x} - \frac{2}{3}.
+$$
+\end{iii}
+
+\end{itemize}
+}
+
+
+
