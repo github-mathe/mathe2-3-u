@@ -1,5 +1,5 @@
-\Aufgabe[e]{Substitution: Homogeneous first-order differential equations}{
-Compute the solution of the following initial value problems
+\Aufgabe[e]{Substitution: Homogene Differentilagleichung erster Ordnung}{
+Berechnen Sie die Lösung des folgenden Anfangswertproblems
 \begin{abc}
 \item $x\,y\,y' + 4{x^2} + {y^2} = 0, \quad y(2) = 0, \quad  x > 0$.
 \item $x\,y' = y\left( {\ln x - \ln y} \right), \quad y(1) = 4, \quad x > 0$.
@@ -9,28 +9,28 @@ Compute the solution of the following initial value problems
 \Loesung{
 \begin{abc}
 \item $x\,y\,y' + 4{x^2} + {y^2} = 0, \quad y(2) = 0, \quad  x > 0$.
-We divide all terms by $x^2$ and get
+Wir dividieren alle Terme durch $x^2$ und erhalten
 \begin{align*}
 \frac{y}{x} y' + 4 + \frac{y^2}{x^2} = 0.
 \end{align*}
-We set $u=\dfrac{y}{x}$, thus $y=ux$ and differentialting both sides we get
+Wir setzen $u=\dfrac{y}{x}$, also $y=ux$ und differenzieren beide Seiten und erhalten
 \begin{align*}
 y' &= u'x+u.
 \end{align*}
-From the first equation above we can write the explicit differential equation
+Aus der ersten Gleichung können wir die explizite Differentialgleichung schreiben
 $$
 y'= -\frac{x}{y}\left(4+\frac{y^2}{x^2}\right),
 $$
-which with the substitution $u=\dfrac{y}{x}$ it is
+mit der Substitution $u=\dfrac{y}{x}$ gilt
 $$
 y' = -\frac{4+u^2}{u}.
 $$
-Using $y' = u'x+u$ we get
+Wir nutzen $y' = u'x+u$ und erhalten
 \begin{align*}
 u'x+u &= -\frac{4+u^2}{u},\\
 u'&= -\frac{1}{x}\frac{4+2u^2}{u}.
 \end{align*}
-This is an equation that can be solved by the seperation of variables as follows
+Diese Gleichung lässt sich durch die Trennung von Variablen wie folgt lösen
 \begin{align*}
 \frac{u}{4+2u^2} \d u & = -\frac{1}{x} \d x,\\
 \int \frac{u}{4+2u^2} \d u & = -\int \frac{1}{x} \d x,\\
@@ -38,34 +38,34 @@ This is an equation that can be solved by the seperation of variables as follows
 \frac{1}{4} \ln(4+2u^2) &= -\ln(|x|) + \ln(C),\\
 \ln(4+2u^2)^\frac{1}{4} &= \ln(C|x|^{-1}).
 \end{align*}
-Here we have to exclude $x=0$ from the interval of validity of the solution. Since the initial condition is set at the positive value $x=2$, we choose the interval $x>0$ for the next steps.
+Hier müssen wir $x=0$ aus dem Gültigkeitsintervall der Lösung ausschließen. Da die Anfangsbedingung auf den positiven Wert $x=2$ gesetzt wird, wählen wir für die nächsten Schritte das Intervall $x>0$.
 %
-Therefore, it is
+Daher gilt
 \begin{align*}
 4+2u^2 = \frac{C^4}{x^4}.
 \end{align*}
-Executing the back substitution we get
+mit der Rücksubstitution erhalten wir
 \begin{align*}
 \frac{y^2}{x^2} &= \frac{1}{2} \left( \frac{C^4-4x^4}{x^4}\right),\\
 y^2 & = \frac{x^2}{2} \left( \frac{C^4-4x^4}{x^4}\right).
 \end{align*}
-Using the initial condition $y(2) = 0$ we get $C^4=64$ and
+Wir wenden die Anfangsbedingung $y(2) = 0$ an. Damit erhalten wir $C^4=64$ und
 \begin{align*}
 y^2 &= \frac{64-4x^4}{2x^2},\\
 y &= \pm \frac{1}{x}\sqrt{32-2x^4}.
 \end{align*}
-We have to assure that under the square root only positive numbers can be considered. Thus, it has to be
+Wir müssen sicherstellen, dass bei der Quadratwurzel nur positive Zahlen berücksichtigt werden können. Es muss also gelten
 $$
 32-2x^4 \geq 0,
 $$
-which results in the interval of validity
+woraus sich das Gültigkeitsintervall ergibt
 $$
 0 < x \leq 2.
 $$
-We have to check if the solution is unique or both solutions can be accepted. Since the initial condition is in $x=2$ where the solution if zero, this can be a valid ``initial'' condition for both branches, so the solution is not unique!
+Wir müssen prüfen, ob die Lösung eindeutig ist oder beide Lösungen akzeptiert werden können. Da die Anfangsbedingung in $x=2$ liegt, wo die Lösung Null ist, kann dies eine gültige ``Anfangsbedingung'' für beide Zweige sein, also ist die Lösung nicht eindeutig!
 
 \newpage
-The graph of the solution is
+Der Graph der Lösung ist
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -83,65 +83,64 @@ The graph of the solution is
 %
 %
 \item $x\,y' = y\left( {\ln x - \ln y} \right), \quad y(1) = 4, \quad x > 0$.
-
-With the logarithm rules the equation can be written as
+Mit Logarithmusgesetzen können wir die Gleichung schreiben als
 \begin{align*}
 xy' &= y \ln(\frac{x}{y}),\\
 y' &= \frac{y}{x} \ln(\frac{x}{y}).
  \end{align*}
-With the substitution $u=\dfrac{y}{x}$ it is
+Mit der Substitution $u=\dfrac{y}{x}$ gilt
 %
 \begin{align*}
 y'=u \ln(u^{-1}) = -u \ln(u).
 \end{align*}
-Differentiating the substitution relation we get
+Durch Ableiten der Substitution erhalten wir 
 \begin{align*}
 y'&=xu'+u,\\
 u'&=\frac{y'-u}{x} = \frac{-u\ln(u)-u}{x}.
 \end{align*}
-Now we can use separation of variables
+Jetzt nutzen wir die Trennung der Variablen
 %
 \begin{align*}
 \frac{\d u}{u\ln(u)+u} &= -\frac{\d x}{x},\\
 \int \frac{\d u}{u\ln(u)+u} &= -\int \frac{\d x}{x}.
 \end{align*}
-The integral on the left can be computed using the substitution $v=\ln(u)+1$ and the differential $\d v = \dfrac{1}{u}\d u$ to get
+Das Integral auf der linken Seite kann mit der Substitution $v=\ln(u)+1$ und dem Differential $\d v = \dfrac{1}{u}\d u$ berechnet werden und ergibt
 \begin{align*}
 \int \frac{\d v}{v} &= -\int \frac{\d x}{x},\\
 \ln|v| &= -\ln|x| + C.
 \end{align*}
-With the back substitution it is
+Mit der Rücksubstitution gilt
 \begin{align*}
 \ln|\ln(u)+1| = -\ln|x| + C.
 \end{align*}
-Since we have the condition $x>0$ in the problem setting, we can drop the absolute value on the right hand side. 
+Da wir die Bedingung $x>0$ in der Problemstellung haben, können wir den Betrag auf der rechten Seite weglassen. 
 %
 \begin{align*}
 \ln|\ln(u)+1| = -\ln(x) + C.
 \end{align*}
-Exponentiating both sides gives
+Die Potenzierung beider Seiten ergibt
 \begin{align*}
 |\ln(u)+1| = C \frac{1}{x},
 \end{align*}
-where the constant $C$ has been used instead of $\operatorname{e}^C$ by renaming it, i.e.\ we have set $C^*=\operatorname{e}^C$ and changed the name from $C^*$ to $C$ again to simplify the notation.
-Furthermore, we drop the absolute value on the left hand side, because the sign can be absorbed in the constant $C$.
-We have thus
+wobei die Konstante $C$ anstelle von $\operatorname{e}^C$ durch Umbenennung verwendet wurde, d.h. wir haben $C^*=\operatorname{e}^C$ gesetzt und den Namen von $C^*$ wieder in $C$ geändert, um die Notation zu vereinfachen.
+Außerdem lassen wir den Betrag auf der linken Seite weg, da das Vorzeichen in der Konstante $C$ aufgehen kann.
+Wir haben also
 \begin{align*}
 \ln(u) &= C \frac{1}{x} -1,\\
 u &= \operatorname{e}^{\frac{C}{x} -1}.
 \end{align*}
-With the back substitution we have
+Mit der Rücksubstitution gilt
 \begin{align*}
 \frac{y}{x} &= \operatorname{e}^{\frac{C}x{}-1},\\
 y &= x \operatorname{e}^{\frac{C}x{}-1},
 \end{align*}
-and using the initial condition $y(1)=4$ we have
+und unter Verwendung der Anfangsbedingung $y(1)=4$ ergibt sich
 \begin{align*}
 4 &= \operatorname{e}^{C-1},\\
 \ln{4} & = C - 1,\\
 C & = \ln(4) +  1.
 \end{align*}
-The solution of the differential equation is
+Die Lösung der Differentialgleichung ist dann
 $$
 y = x \operatorname{e}^{\dfrac{\ln(4)+1}{x}-1}.
 $$

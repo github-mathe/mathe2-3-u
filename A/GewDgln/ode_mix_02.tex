@@ -1,6 +1,6 @@
-\Aufgabe[e]{First order differential equations}
+\Aufgabe[e]{Differentialgleichungen erster Ordnung}
 {
-Classify the following ordinary differential equations (ODEs) of the first order:
+Klassifizieren Sie die folgenden Differentialgleichungen erster Ordnung:
 \begin{multicols}{2}
 \begin{enumerate}
 \item $x^2y' = 2y + 1$. 
@@ -13,20 +13,20 @@ Classify the following ordinary differential equations (ODEs) of the first order
 \end{multicols}
 %
 \begin{abc}
-\item Classify them as linear or nonlinear.
-In case of linear ODEs classify them as 
+\item Klassifizieren Sie diese als linear oder nicht linear.
+In dem Fall einer linearen Differentialgleichung klassifizieren Sie die zusätzlich als
 \begin{iii}
-\item homogeneous or inhomogeneous.
-\item ODE with constant or non-constant coefficients.
+\item homogen oder inhomogen.
+\item mit konstanten oder nicht-konstanten Koeffizienten.
 \end{iii}
-\item Classify them according to the type as in the lecture notes:
+\item Klassifizieren Sie die Differentialgleichung als einen der folgenden Typen:
 \begin{iii}
-\item $y'= f(x)\cdot g(y)$ solved by separation of variables.
-\item $y'=g(y/x)$ with substitution $u=y/x$ becomes of type A.
-\item $y'=f(ax+by+c)$ with substitution $u=ax+by+c$ is of type A.
+\item $y'= f(x)\cdot g(y)$ zu Lösen mit Trennung der Variablen.
+\item $y'=g(y/x)$ zu Lösen mit der Substitution $u=y/x$.
+\item $y'=f(ax+by+c)$ zu Lösen mit der Substitution $u=ax+by+c$.
 \item $y'+p(x) \cdot y = q(x)$.
 \end{iii}
-\item Compute the general solution of all equations.
+\item Berechnen Sie die allgemeine Lösung aller Differentialgleichungen.
 \end{abc}
 }
 
@@ -35,17 +35,18 @@ In case of linear ODEs classify them as
 \begin{itemize}
 \item[\textbf{1)}] 
 \begin{iii}
-\item $x^2y' = 2y + 1$. Linear, inhomogeneous, non-constant coefficients: Type A (separable) or type D.
-\item $y' = \cos(x)y$. Linear, homogeneous, non-constant coefficients, separable (type A).
-\item $x^2 y' + y^2 = x y(x)$. Nonlinear, homogeneous, solvable with substitution of Type B.
-\item $y'=\sin(y+1)$. Nonlinear, separable of Type A.
-\item $y'=(4x-y+1)^2$. Nonlinear, type C.
-\item $y'+3y+2=\operatorname{e}^{2x}$. Linear, inhomogeneous, Type D with constant coefficients.
+\item $x^2y' = 2y + 1$. Linear, inhomogen, nicht-konstant Koeffizienten: Typ A (separabel) 
+oder Typ D.
+\item $y' = \cos(x)y$. Linear, homogen, nicht-konstant Koeffizienten, separabel (Typ A).
+\item $x^2 y' + y^2 = x y(x)$. Nicht-linear, homogen, lösbar mit der Substitution von  Typ B.
+\item $y'=\sin(y+1)$. Nicht-linear, separabel von Typ A.
+\item $y'=(4x-y+1)^2$. Nicht-linear, Typ C.
+\item $y'+3y+2=\operatorname{e}^{2x}$. Linear, inhomogen, Typ D mit konstanten Koeffizienten.
 \end{iii}
-\item[\textbf{2)}] Compute the general solution of all equations.
+\item[\textbf{2)}] 
 \begin{iii}
-\item $x^2y' = 2y + 1$. Linear, inhomogeneous, non-constant coefficients: type A.
-This is of separable type:
+\item $x^2y' = 2y + 1$. Linear, inhomogen, nicht-konstant Koeffizienten: Typ A (separabel)
+
 \begin{align*}
 \frac{\d y}{2y+1} &= \frac{\d x}{x^2},\\
 \frac{1}{2} \ln(2y+1) &= -\frac{1}{x},\\
@@ -53,84 +54,83 @@ This is of separable type:
 y &= C e^{-\frac{2}{x}} -\frac{1}{2}.
 \end{align*}
 
-This equation can also be solved with a longer procedure, considering it of Type D: First determining the solution of the homogeneous part (H) and then the particular solution (P) using the method of the undetermined coeffcients.
-Let's start with (H):
-
-The equation 
+Diese Gleichung kann auch mit einem längeren Verfahren gelöst werden, wenn man sie als vom Typ D betrachtet: Zuerst wird die Lösung des homogenen Teils (H) bestimmt und dann die besondere Lösung (P) mit der Methode der unbestimmten Koeffizienten.
+Wir beginnen mit (H):
+Die Gleichung  
 $$x^2y'=2y$$
-is separable and it has the solution
+ist separabel und sie hat die Lösung
 $$
 y_h(x) = C e^{\frac{-2}{x}}.
 $$
-For the part (P) we make the ansatz
+Für den Teil (P) machen wir den Ansatz
 $$
 y_p(x) = C(x) e^{\frac{-2}{x}}.
 $$
-Then we differentiate:
+Dann leiten wir ab:
 $$
 y_p'(x) = C'(x) e^{\frac{-2}{x}} + C(x) \frac{2}{x^2} e^{\frac{-2}{x}}.
 $$
-Substituting into the equation yields
+Einsetzen in die Gleichung ergibt
 \begin{align*}
 C'(x) x^2 e^{\frac{-2}{x}} + 2C(x) e^{\frac{-2}{x}} &= 2 C(x) e^{\frac{-2}{x}} +1\\
 C'(x) x^2 e^{\frac{-2}{x}} &= 1\\
 C'(x) &= \frac{e^{\frac{2}{x}}}{x^2}\\
 \int \d C &= \int \frac{e^{\frac{2}{x}}}{x^2}\d x.
 \end{align*}
-We integrate the integral on the right with the substitution $u=2/x$ from which we compute the differential $\d u = -\frac{2}{x^2}\d x$. We have thus
+Wir integrieren das Integral auf der rechten Seite mit der Substitution $u=2/x$, woraus wir das Differential $\d u = -\frac{2}{x^2}\d x$ berechnen. Wir haben also
 $$
 \frac{\d x}{x^2} = -\frac{\d u}{2} 
 $$
-and
+und
 \begin{align*}
 \int \d C &=  -\frac{1}{2} \int e^u \d u,\\
-C &=  -\frac{1}{2} e^u + \widetilde C,\quad \text{ (e.g. } \widetilde C = 0)\\
-C &=  -\frac{1}{2} e^\frac{2}{x}.\quad \text{ (after back substitution)}
+C &=  -\frac{1}{2} e^u + \widetilde C,\quad \text{ (z.B. } \widetilde C = 0)\\
+C &=  -\frac{1}{2} e^\frac{2}{x}.\quad \text{ (nach Rücksubstitution)}
 \end{align*}
-The particular solution is therefore
+Daher ist die partikuläre Gleichung
 $$
 y_p(x) = -\frac{1}{2}  e^\frac{2}{x}  e^\frac{-2}{x} =  -\frac{1}{2}
 $$
-and the general solution is
+und die allgemeine Lösung ist
 $$
 y(x) = y_h(x) + y_p(x) = C e^\frac{-2}{x} - \frac{1}{2}.
 $$
-\item $y' = \cos(x)y$. Linear, homogeneous, non-constant coefficients, separable (type A).
+\item $y' = \cos(x)y$. Linear, homogen, nicht-konstant Koeffizienten, separabel (Typ A).
 
-Solution:
+Lösung:
 \begin{align*}
 \int \frac{1}{y} \d y &= \int \cos(x) \d x,\\
 \ln(y) &= \sin(x) + \ln(C),\\
 y &= C e^{\sin(x)}.
 \end{align*}
-\item $x^2 y' + y^2 = x y(x)$. Nonlinear, homogeneous, solvable with substitution of Type B.
+\item $x^2 y' + y^2 = x y(x)$. Nicht-linear, homogen, lösbar mit der Substitution von  Typ B.
 
-The equation is reformulated as
+Die Gleichung kann umgeformt werden zu
 $$
 y'= \frac{y}{x} -\frac{y^2}{x^2}.
 $$
-With the substitution $u=y/x$ we have 
+Mit der Substitution $u=y/x$ erhalten wir 
 \begin{align*}
 y&=u x\\
 y'&=u' x + u.
 \end{align*}
-We substite $y'$ and $y/x$ in the ODE to get
+Wir substituieren $y'$ und $y/x$ in die Differentialgleichung und erhalten
 $$
 u' x + u = u -u^2.
 $$
-that can be solved by separation of variables
+Diese kann mit Seperation der Variablen gelöst werden.
 %
 \begin{align*}
 u' &= -\frac{u^2}{x},\\
 \int \frac{1}{u^2} \d u &= -\frac{1}{x} \d x,\\
 -\frac{1}{u} &= \ln(x) + C,\\
 u &= \frac{1}{\ln(x) + C},\\
-y &= \frac{x}{\ln(x) + C}. \quad (\text{after back substitution } u=y/x)
+y &= \frac{x}{\ln(x) + C}. \quad (\text{ nach Rücksubstitution } u=y/x)
 \end{align*}
 %
-\item $y'=\sin(y+1)$. Nonlinear, separable of Type A.
+\item $y'=\sin(y+1)$. Nicht-linear, separabel von Typ A.
 
-We solve it by separation of variables:
+Wir lösen die Differentialgleichung mit Trennung der Variablen:
 %
 \begin{align*}
 \int \frac{\d y}{\sin(y+1)} &= \int \d x,\\
@@ -140,99 +140,101 @@ We solve it by separation of variables:
 y &= 2\arctan(Ce^x)-1.
 \end{align*}
 %
-\item $y'=(4x-y+1)^2$. Nonlinear, type C.
+\item $y'=(4x-y+1)^2$. Nicht-linear, Typ C.
 
-This nonlinear ODE is solved by substitution. We set
+Diese nichtlinesre Differentialgleichung kann mit Substitution gelöst werden. Wir setzen
 $$
 u = 4x-y+1
 $$
-to get
+und erhalten
 $$
 u'= 4-y' \quad \rightarrow \quad y'=4-u'.
 $$
-Substituting $u=4x-y+1$ and $y'=4-u'$ into the equation yields a separable equation
+Substituieren $u=4x-y+1$ und $y'=4-u'$ in die Gleichung, führt zu der seperablen 
+Gleichung
 \begin{align*}
 4-u' &= u^2,\\
 u' & = 4-u^2,\\
 \frac{\d u}{4-u^2} &= \d x,\\
 \int \frac{\d u}{4-u^2} &= \int \d x,\\
-\frac{1}{4} \ln|u+2| - \ln|u-2| &= x+ \ln(\widetilde C), \quad \text{ (with partial fraction decomposition, see below)}\\
+\frac{1}{4} \ln|u+2| - \ln|u-2| &= x+ \ln(\widetilde C), \quad \text{ (mit Partialbruchzerlegung, siehe unten)}\\
 \ln\frac{u+2}{u-2} &= 4x + \ln(\widetilde C^4),\\
-u+2 &= Ce^{4x}(u-2),\quad (\text{with } C=\widetilde C^4)\\
+u+2 &= Ce^{4x}(u-2),\quad (\text{mit } C=\widetilde C^4)\\
 u & = -2Ce^{4x} + uCe^{4x} -2,\\
 u(1-Ce^{4x}) &= -2\left(Ce^{4x}+1\right)\\
 u &= -2 \frac{Ce^{4x}+1}{1-Ce^{4x}},\\
-4x-y+1 &= -2 \frac{Ce^{4x}+1}{1-Ce^{4x}}, \quad \text{(back substitution)}\\
+4x-y+1 &= -2 \frac{Ce^{4x}+1}{1-Ce^{4x}}, \quad \text{(Rücksubstitution)}\\
 y &= 4x + \frac{3+Ce^{4x}}{1-Ce^{4x}}.
 \end{align*}
 %
-For the partial fraction decomposition in the 5th step above we have
+Für die Partialbruchzerlegung im 5. Schritt oben ergibt sich
 $$
 \frac{-1}{u^2-4} = -\frac{1}{4} \frac{1}{x-2} + \frac{1}{4} \frac{1}{x+2}.
 $$
 %
-\item $y'+3y+2=\operatorname{e}^{2x}$. Linear, inhomogeneous, Type D with constant coefficients.
+\item $y'+3y+2=\operatorname{e}^{2x}$. Linear, inhomogen, Typ D mit konstanten Koeffizienten.
 
-This equation can be solved as Type D using the method of undetermined coefficients or as a linear inhomogeneous ODE with constant coefficients, using special guesses for the inhomogeneities and the superposition principle.
+Diese Gleichung kann als Typ D mit der Methode der unbestimmten Koeffizienten oder als lineare inhomogene ODE mit konstanten Koeffizienten gelöst werden, wobei spezielle Ansätze für die Inhomogenitäten und das Superpositionsprinzip verwendet werden.
 
-Let's start with the first method. Her we have to solve the homogeneous problem (H) and then find a particular solution (P).
+Beginnen wir mit der ersten Methode. Hier müssen wir das homogene Problem (H) lösen und dann eine partikuläre Lösung (P) finden.
 
-For the homogeneous problem we can use separation of variables or in case of constant coefficients (only in this case!) use the characteristic polynomial:
+Für das homogene Problem können wir die Variablentrennung verwenden oder im Falle konstanter Koeffizienten (nur in diesem Fall!) das charakteristische Polynom benutzen:
 $$
 \lambda + 3 = 0 \quad \rightarrow \quad \lambda = -3
 $$
-to determine the solution part
+um den Lösungsteil zu bestimmen
 $$
 y_h(x) = C e^{-3x}.
 $$
-To solve problem (P) we make the ansatz
+Um das Problem (P) zu lösen, machen wir den Ansatz
 $$
 y_p(x) = C(x) e^{-3x}
 $$
-and differentiate it
+und differentieren ihn
 $$
 y_p'(x) = C'(x) e^{-3x} - C(x) 3 e^{-3x}.
 $$
-We insert $y_p$ and $y_p'$ into the ODE to get
+Wir setzen $y_p$ und $y_p'$ in die gleichung ein und erhalten
 \begin{align*}
 C'(x)e^{-3x} -3C(x) e^{-3x} +3Ce^{-3x} +2 &= e^{2x}\\
 C'(x)&= e^{5x}-2e^{3x}\\
 C(x) &= \frac{1}{5}e^{5x} -\frac{2}{3}e^{3x}.
 \end{align*}
-The particular solution is
+Die partikuläre Lösung ist
 $$
 y_p(x) = \left( \frac{1}{5}e^{5x} -\frac{2}{3}e^{3x} \right) e^{-3x} = \frac{1}{5}e^{2x}  -\frac{2}{3}
 $$
-and the general solution is
+un die allgemeine Lösung ist
 $$
 y(x) = y_h(x) + y_p(x) = C e^{-3x} +  \frac{1}{5}e^{2x}  -\frac{2}{3}.
 $$
 
-As mentioned above, we can solve the problem using special guesses for the inhomogeneities and the superposition principle.
+Wie bereits erwähnt, können wir das Problem mit Hilfe spezieller Ansätze für die Inhomogenitäten und dem Superpositionsprinzip lösen.
 
-The right-hand side of the equation is $e^{2x} -2$, so we find two solutions for the two terms separately. First for $e^{2x}$. The ansatz in the exponential case is again exponential $y_{p1}=Ae^{\alpha x}$, where $\alpha$ is the exponent of the righ-hand term:
+Die rechte Seite der Gleichung ist $e^{2x} -2$, also finden wir zwei Lösungen für die beiden Terme getrennt. Zunächst für $e^{2x}$. Der Ansatz im exponentiellen Fall ist wieder exponentiell $y_{p1}=Ae^{\alpha x}$, wobei $\alpha$ der Exponent des rechten Terms ist:
 $$
 y_{p1} = A e^{2x}.
 $$
-The constant $A$ is found by coefficients comparison:
+Die Konstante $A$ wird durch Koeffizientenvergleich gefunden:
 \begin{align*}
-y_{p1}' +3y_{p1} &= e^{2x}, \quad \text{(note: the term -2 is not considered)}\\
+y_{p1}' +3y_{p1} &= e^{2x}, \quad \text{(Bemerkung: der Term -2 wird nicht betrachtet)}\\
 2 A e^{2x} + 3 A e^{2x} &= e^{2x},\\
 A &= \frac{1}{5}.
 \end{align*}
-The first part of the particular solutions is
+Der erste Teil der partikulären Lösung ist
+
 $$
 y_{p1} = \frac{1}{5}e^{2x}.
 $$
-The second part is computed with the polynomial ansatz of the zero-th order $y_{p2}=B$ because the term $-2$ is a constant. Inserting the ansatz function into the ODE yields
+Der zweite Teil wird mit dem Polynom-Ansatz nullter Ordnung $y_{p2}=B$ berechnet, da der Term $-2$ eine Konstante ist. Setzt man die Ansatzfunktion in die Differentialgleichung ein, so erhält man
 $$
 3 B = -2 \quad B=-\frac{2}{3}.
 $$
-We have thus the particular solution by superposition
+Wir haben also die partikuläre Lösung durch Superposition
 $$
 y_p(x) = y_{p1}(x) + y_{p2}(x) =  \frac{1}{5}e^{2x} - \frac{2}{3}
 $$
-and again the general solution
+un die allgemeine Lösung
 $$
 y(x) = y_h(x) + y_p(x) = Ce^{-3x} +  \frac{1}{5}e^{2x} - \frac{2}{3}.
 $$

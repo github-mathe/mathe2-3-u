@@ -1,10 +1,11 @@
-\Aufgabe[e]{Nonlinear first order differential equations}
+\Aufgabe[e]{Nichtlineare Differentialgleichung erster Ordnung}
 {
 \begin{itemize}
-\item[\textbf{1)}] Classify the following ODEs of the first order as
+\item[\textbf{1)}] Klassifizieren Sie die folgenden Differentialgleichungen erster 
+Ordnung als 
 \begin{enumerate}
-\item Homogeneuous ODE: $y'=g(y/x)$ with substitution $u=y/x$.
-\item ODE with bilinear argument: $y'=f(ax+by+c)$ with substitution $u=ax+by+c$.
+\item Homogene Differentialgleichung: $y'=g(y/x)$ mit Substitution $u=y/x$.
+\item Differentialgleichung mit bilinearen Argumenten: $y'=f(ax+by+c)$ mit Substitution $u=ax+by+c$.
 \end{enumerate}
 \begin{multicols}{2}
 \begin{iii}
@@ -17,27 +18,29 @@
 \item $\displaystyle y'=\frac{y+\operatorname{e}^{-\frac{y}{x}}}{x}$
 \end{iii}
 \end{multicols}
-\item[\textbf{2)}]  Perform the proper substitution and reformulate the equation in terms of $u$ and $u'$ without solving the equations.
+\item[\textbf{2)}]  
+Verwenden Sie eine angemessene Substitution und formulieren Sie die Gleichungen in Termen
+von $u$ und $u'$ um ohne sie zu lösen.
 \end{itemize}
 }
 
 
 \Loesung{
 \begin{itemize}
-\item[\textbf{1)}] Classify the following ODEs of the first order as
+\item[\textbf{1)}] 
 \begin{iii}
-\item $\displaystyle y'(x^2+xy) = y^2-xy$, homogeneous.
-\item $\displaystyle y' = \frac{x^2y}{x^3+y^3}$, homogeneous.
-\item $\displaystyle y'=\frac{1}{x+y}$, bilinear argument.
+\item $\displaystyle y'(x^2+xy) = y^2-xy$, homogen.
+\item $\displaystyle y' = \frac{x^2y}{x^3+y^3}$, homogen.
+\item $\displaystyle y'=\frac{1}{x+y}$, bilineare Argumente.
 %\item $\displaystyle y'=\frac{2x-y}{x-2y}$, homogeneous.
-\item $\displaystyle y'=-\sin^2(x+y+1)$, bilinear argument.
-\item $\displaystyle x^2y' = y^2+xy-x^2$, homogeneous.
-\item $\displaystyle y'=\frac{y+\operatorname{e}^{-\frac{y}{x}}}{x}$, homogeneous.
+\item $\displaystyle y'=-\sin^2(x+y+1)$, bilineare Argumente.
+\item $\displaystyle x^2y' = y^2+xy-x^2$, homogen.
+\item $\displaystyle y'=\frac{y+\operatorname{e}^{-\frac{y}{x}}}{x}$, homogen.
 \end{iii}
 
-\item[\textbf{2)}]  Performe the proper substitution and reformulate the equation in terms of $u$ and $u'$ without solving the equations.
+\item[\textbf{2)}] 
 \begin{iii}
-\item With the substitution $u=y/x$ we get
+\item Mit der Substitution $u=y/x$ erhalten wir
 \begin{align*}
 y'(x^2+xy) &= y^2-xy\\
 y'&= \frac{y^2-xy}{x^2+xy}\\
@@ -47,8 +50,8 @@ y'&= u'x+u = \frac{u^2-u}{1+u}\\
 u' &= \frac{1}{x}\left(\frac{u^2-u}{1+u} -u\right)\\
 u' &= -\frac{1}{x}\frac{2u}{1+u}.
 \end{align*}
-This equation can be solved by variables separation. The solution is not asked in the exercise, but we show it here
-to present one case of not explicit solution.
+Diese Gleichung kann durch Variablentrennung gelöst werden. Die Lösung wird in der Übung nicht verlangt, aber wir zeigen sie hier
+um einen Fall einer nicht expliziten Lösung zu zeigen.
 \begin{align*}
 u' &= -\frac{1}{x}\frac{2u}{1+u}\\
 \frac{1+u}{u}\d u & = -\frac{2}{x}\\
@@ -59,12 +62,11 @@ u\operatorname{e}^u &= \frac{C}{x^2}\\
 \frac{y}{x}\operatorname{e}^\frac{y}{x} &= \frac{C}{x^2}\\
 yx\operatorname{e}^\frac{y}{x} &= C.
 \end{align*}
-The last equation gives the solution $y$ in implicit form. The solution can be for example plotted using Matlab:
-
-\includegraphics[width=0.5\textwidth] {../A/analysis/implicit_solution.pdf}
+Die letzte Gleichung liefert die Lösung $y$ in impliziter Form. Die Lösung kann z.B. mit Matlab geplottet werden:
+% \includegraphics[width=0.5\textwidth] {../A/GewDgln/implicit_solution.pdf}
 \item $\displaystyle y' = \frac{x^2y}{x^3+y^3}$.
 
-With the substitution $u=y/x$ we have:
+Mit der Substitution $u=y/x$ erhalten wir:
 \begin{align*}
 y'&=\frac{x^2y}{x^3+y^3},\\
 y'&=\frac{y/x}{1+y^3/x^3},\\
@@ -73,25 +75,25 @@ y'&=u'x+u = \frac{u}{1+u^3},\\
 u'&= \frac{1}{x}\left( \frac{u}{1+u^3} - u\right),\\
 u'&= -\frac{1}{x}\left( \frac{u^4}{1+u^3}\right).
 \end{align*}
-The last equation can be solved by separation of variables and it leads to an implicit equation for $y$ after back substitution.
+Die letzte Gleichung kann durch Variablentrennung gelöst werden und führt nach Rücksubstitution zu einer impliziten Gleichung für $y$.
 \item $\displaystyle y'=\frac{1}{x+y}$.
 
-With the substitution $u=x+y$ we get
+Mit der Substitution $u=y+x$ erhalten wir:  
 \begin{align*}
 y'&=\frac{1}{u}\\
 y'&=u'-1 =\frac{1}{u}\\
 u' &= \frac{1+u}{u}.
 \end{align*}
-The last equation can be solved by separation of variables and it leads to an implicit equation for $y$ after back substitution.
+Die letzte Gleichung kann durch Variablentrennung gelöst werden und führt nach Rücksubstitution zu einer impliziten Gleichung für $y$.
 \item $\displaystyle y'=-\sin^2(x+y+1)$.
 
-With the substitution $u=x+y+1$ we get
+Mit der Substitution $u=x+y+1$ erhalten wir:
 \begin{align*}
 y'&=-\sin^2(u)\\
 y'&=u'-1 =-\sin^2(u)\\
 u' &= \cos^2(u).
 \end{align*}
-This equation can be solved by separation of variables (solution not required by the exercise):
+Diese Gleichung kann mit Trennung der Variablen glöst werden (Die Lösung ist hier nicht gefordert):
 \begin{align*}
 u' &= \cos^2(u),\\
 \frac{\d u}{\cos^2(u)} &= \d x,\\
@@ -104,17 +106,16 @@ y &= \arctan(x+C)-x-1.
 
 \item $\displaystyle x^2y' = y^2+xy-x^2$.
 
-With the substitution $u=y/x$ we get 
+Mit der Substitution $u=y/x$ erhalten wir 
 \begin{align*}
 y'&=\frac{y^2}{x^2}+\frac{y}{x} -1,\\
 y'&=u'x+u = u^2+u-1,\\
 u'&= \frac{u^2-1}{x}.
 \end{align*}
-This equation can be solved by separation of variables and partial fraction decomposition for example.
-
+Diese Gleichung kann z. B. durch Trennung der Variablen und partielle Bruchzerlegung gelöst werden.
 \item $\displaystyle y'=\frac{y+\operatorname{e}^{-\frac{y}{x}}}{x}$.
 
-With the substitution $u=y/x$ we get
+Mit der Substitution $u=y/x$ erhalten wir
 
 \begin{align*}
 y'&=\frac{y}{x} + \frac{1}{x}\operatorname{e}^{-\frac{y}{x}},\\
@@ -122,7 +123,7 @@ y'&= u+\frac{1}{x}\operatorname{e}^{-u},\\
 y'&= u'x+u = u+\frac{1}{x}\operatorname{e}^{-u},\\
 u'&= \frac{1}{x^2}\operatorname{e}^{-u}.
 \end{align*}
-This can be solved by separation of variables.
+Das kann mit Trennung der Variablen gelöst werden.
 
 \end{iii}
 
