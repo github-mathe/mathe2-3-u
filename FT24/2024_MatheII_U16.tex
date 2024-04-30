@@ -12,6 +12,11 @@
 \newcommand{\BLATT}{16}
 \newcommand{\TOPIC}{}
 
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing} % for example, this is used for coils and other path decorations
+\usepackage{pgf}
+\usepackage{circuitikz}
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
@@ -51,6 +56,8 @@
 \input{../A/GewDgln/gewdgl_Line_nOrd_003.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 \input{../A/GewDgln/gewdgl_Line_nOrd_003_mod.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+\input{../A/GewDgln/harmonischer_oszillator.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 
