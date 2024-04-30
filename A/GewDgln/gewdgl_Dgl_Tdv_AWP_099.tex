@@ -1,53 +1,31 @@
-\Aufgabe[e]{Trennung der Ver\"anderlichen und Anfangswertproblem}
-{
-\begin{abc}
- \item Bestimmen Sie alle L\"osungen der Differentialgleichung
- $$
- t f^\prime(t)=f(t)+te^{f(t)/t}
- $$
- \item Bestimmen Sie die L\"osung der Anfangswertaufgabe
- $$
- y''(x) - 2 y'(x) - 3y(x) = 0, \quad y(0) = 0, \quad y'(0) = 6.
- $$
-\end{abc}
+\Aufgabe[e]{Trennung der Veränderlichen und Anfangswertproblem}
 
+{
+Klassifizeren die folgende Differentialgleichung und bestimmen Sie die Lösung des Anfangswertproblems mit $y(0) = 0$ und $y'(0) = 6$:
+ $$
+ y''(x) - 2 y'(x) - 3y(x) = 0.
+ $$
 }
 
 \Loesung{
+Die Nullstellen des charakteristischen Polynoms
+$p(\lambda)=\lambda^2-2\lambda-3$ sind $\lambda_1=-1$ und $\lambda_2=3$.
 
-\begin{abc}
-%
-\item 
-Die Gleichung lautet
-$$ f^\prime(t)=\frac{f(t)}{t}+e^{f(t)/t} $$
-und hat somit die Form
- $f^\prime(t)=F\left(f(t)/t\right)$.  \\
-Mit der Substitution $z(t)=\dfrac{f(t)}{t}$,\; $f(t)=tz(t),\;f^\prime(t)=z(t)+tz^\prime(t)$ erh\"alt man:
-$$ z+tz^\prime=z+e^{z}\, , \text{ also }  \dfrac{\d z}{\d t} =\frac{1}{t}e^{z}. $$
-Trennung der Variablen liefert
-\[\int e^{-z}\d z =\int \dfrac{1}{t}\, dt,\]
-also $-e^{-z}=\ln|t|+C$ und damit
-$z=-\ln(-\ln|t|-C)$. R\"ucktransformation auf die alten Variablen ergibt
-$$ f(t)=tz(t)=-t\ln(-\ln|t|-C) \text{ mit } C\in\mathbb{R} . $$
-%
-\item Die Nullstellen des charakteristischen Polynoms
-$p(\lambda)=\lambda^2-2\lambda-3$ sind $\lambda_1=-1$ und $\lambda_2=3$. 
+Die allgemeine Lösung ist
+$$ y(x) = c_1 \operatorname{e}^{-x} + c_2 \operatorname{e}^{3x}  \text{ mit } c_1,c_2 \in \mathbb{R} .$$
 
-Die allgemeine L\"osung ist 
-$$ y(x) = c_1 e^{-x} + c_2 e^{3x} \ \text{ mit } c_1,c_2 \in \R .$$
-
-Aus den Anfangsbedingungen $y(0)=c_1 + c_2 \stackrel{!}{=} 0$ und $y^\prime(0) = -c_1 + 3c_2 \stackrel{!}{=} 6$ folgt das lineare 
-Gleichungssystem
+Mit den Anfangswertbedingungen $y(0)=c_1 + c_2 \stackrel{!}{=} 0$ und 
+$y^\prime(0) = -c_1 + 3c_2 \stackrel{!}{=} 6$ erhalten wir das lineare System
+% $$ \begin{array}{rcrl}
 $$ \begin{array}{rcrl}
    c_1 & + & c_2 & = 0, \\
   -c_1 & + & 3c_2 & = 6 
    \end{array} $$
-mit L\"osung $c_2=3/2$ und $c_1=-3/2$. Damit ist 
-$$ y(x) = -\frac32  e^{-x} + \frac32 e^{3x}. $$
-\end{abc}
+mit Lösung $c_2=3/2$ und $c_1=-3/2$. Damit ist 
+$$ y(x) = -\frac32  \operatorname{e}^{-x} + \frac32 \operatorname{e}^{3x}. $$
+%    \end{array} $$
+% with solution $c_2=3/2$ and $c_1=-3/2$. This yields
+% $$ y(x) = -\frac32  \operatorname{e}^{-x} + \frac32 \operatorname{e}^{3x}. $$
 
 }
-\ErgebnisC{gewdglDglTdvAWP099}{
-\textbf{a)} $f(t)=tz(t)=-t\ln(-\ln|t|-C)$\\
-\textbf{b)} $y(x) = -\frac32  e^{-x} + \frac32 e^{3x}$
-}
+

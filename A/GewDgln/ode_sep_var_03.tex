@@ -1,0 +1,148 @@
+\Aufgabe[e]{Substitution: Homogene Differentilagleichung erster Ordnung}{
+Berechnen Sie die Lösung des folgenden Anfangswertproblems
+\begin{abc}
+\item $x\,y\,y' + 4{x^2} + {y^2} = 0, \quad y(2) = 0, \quad  x > 0$.
+\item $x\,y' = y\left( {\ln x - \ln y} \right), \quad y(1) = 4, \quad x > 0$.
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item $x\,y\,y' + 4{x^2} + {y^2} = 0, \quad y(2) = 0, \quad  x > 0$.
+Wir dividieren alle Terme durch $x^2$ und erhalten
+\begin{align*}
+\frac{y}{x} y' + 4 + \frac{y^2}{x^2} = 0.
+\end{align*}
+Wir setzen $u=\dfrac{y}{x}$, also $y=ux$ und differenzieren beide Seiten und erhalten
+\begin{align*}
+y' &= u'x+u.
+\end{align*}
+Aus der ersten Gleichung können wir die explizite Differentialgleichung schreiben
+$$
+y'= -\frac{x}{y}\left(4+\frac{y^2}{x^2}\right),
+$$
+mit der Substitution $u=\dfrac{y}{x}$ gilt
+$$
+y' = -\frac{4+u^2}{u}.
+$$
+Wir nutzen $y' = u'x+u$ und erhalten
+\begin{align*}
+u'x+u &= -\frac{4+u^2}{u},\\
+u'&= -\frac{1}{x}\frac{4+2u^2}{u}.
+\end{align*}
+Diese Gleichung lässt sich durch die Trennung von Variablen wie folgt lösen
+\begin{align*}
+\frac{u}{4+2u^2} \d u & = -\frac{1}{x} \d x,\\
+\int \frac{u}{4+2u^2} \d u & = -\int \frac{1}{x} \d x,\\
+\int \frac{1}{4}\frac{4u}{4+2u^2} \d u & = -\int \frac{1}{x} \d x,\\
+\frac{1}{4} \ln(4+2u^2) &= -\ln(|x|) + \ln(C),\\
+\ln(4+2u^2)^\frac{1}{4} &= \ln(C|x|^{-1}).
+\end{align*}
+Hier müssen wir $x=0$ aus dem Gültigkeitsintervall der Lösung ausschließen. Da die Anfangsbedingung auf den positiven Wert $x=2$ gesetzt wird, wählen wir für die nächsten Schritte das Intervall $x>0$.
+%
+Daher gilt
+\begin{align*}
+4+2u^2 = \frac{C^4}{x^4}.
+\end{align*}
+mit der Rücksubstitution erhalten wir
+\begin{align*}
+\frac{y^2}{x^2} &= \frac{1}{2} \left( \frac{C^4-4x^4}{x^4}\right),\\
+y^2 & = \frac{x^2}{2} \left( \frac{C^4-4x^4}{x^4}\right).
+\end{align*}
+Wir wenden die Anfangsbedingung $y(2) = 0$ an. Damit erhalten wir $C^4=64$ und
+\begin{align*}
+y^2 &= \frac{64-4x^4}{2x^2},\\
+y &= \pm \frac{1}{x}\sqrt{32-2x^4}.
+\end{align*}
+Wir müssen sicherstellen, dass bei der Quadratwurzel nur positive Zahlen berücksichtigt werden können. Es muss also gelten
+$$
+32-2x^4 \geq 0,
+$$
+woraus sich das Gültigkeitsintervall ergibt
+$$
+0 < x \leq 2.
+$$
+Wir müssen prüfen, ob die Lösung eindeutig ist oder beide Lösungen akzeptiert werden können. Da die Anfangsbedingung in $x=2$ liegt, wo die Lösung Null ist, kann dies eine gültige ``Anfangsbedingung'' für beide Zweige sein, also ist die Lösung nicht eindeutig!
+
+\newpage
+Der Graph der Lösung ist
+
+\begin{tikzpicture}
+    \begin{axis}[
+     axis lines=middle,clip=false,
+            xmin=0,xmax=4, ymin=-10,ymax=10,
+            xticklabel style={black},
+            xlabel=$x$,
+            ylabel=$y$]
+    \addplot[domain=0.5:2,samples=200,red]{-1/x*sqrt(32-2*x^4)}
+				node[right,pos=0.5,font=\footnotesize]{$f(x)_{+}=-\frac{1}{x}\sqrt{32-2x^4}$};
+    \addplot[domain=0.5:2,samples=200,blue]{1/x*sqrt(32-2*x^4)}
+				node[right,pos=0.5,font=\footnotesize]{$f(x)_{-}=\frac{1}{x}\sqrt{32-2x^4}$};
+    \end{axis}
+  \end{tikzpicture}
+%
+%
+\item $x\,y' = y\left( {\ln x - \ln y} \right), \quad y(1) = 4, \quad x > 0$.
+Mit Logarithmusgesetzen können wir die Gleichung schreiben als
+\begin{align*}
+xy' &= y \ln(\frac{x}{y}),\\
+y' &= \frac{y}{x} \ln(\frac{x}{y}).
+ \end{align*}
+Mit der Substitution $u=\dfrac{y}{x}$ gilt
+%
+\begin{align*}
+y'=u \ln(u^{-1}) = -u \ln(u).
+\end{align*}
+Durch Ableiten der Substitution erhalten wir 
+\begin{align*}
+y'&=xu'+u,\\
+u'&=\frac{y'-u}{x} = \frac{-u\ln(u)-u}{x}.
+\end{align*}
+Jetzt nutzen wir die Trennung der Variablen
+%
+\begin{align*}
+\frac{\d u}{u\ln(u)+u} &= -\frac{\d x}{x},\\
+\int \frac{\d u}{u\ln(u)+u} &= -\int \frac{\d x}{x}.
+\end{align*}
+Das Integral auf der linken Seite kann mit der Substitution $v=\ln(u)+1$ und dem Differential $\d v = \dfrac{1}{u}\d u$ berechnet werden und ergibt
+\begin{align*}
+\int \frac{\d v}{v} &= -\int \frac{\d x}{x},\\
+\ln|v| &= -\ln|x| + C.
+\end{align*}
+Mit der Rücksubstitution gilt
+\begin{align*}
+\ln|\ln(u)+1| = -\ln|x| + C.
+\end{align*}
+Da wir die Bedingung $x>0$ in der Problemstellung haben, können wir den Betrag auf der rechten Seite weglassen. 
+%
+\begin{align*}
+\ln|\ln(u)+1| = -\ln(x) + C.
+\end{align*}
+Die Potenzierung beider Seiten ergibt
+\begin{align*}
+|\ln(u)+1| = C \frac{1}{x},
+\end{align*}
+wobei die Konstante $C$ anstelle von $\operatorname{e}^C$ durch Umbenennung verwendet wurde, d.h. wir haben $C^*=\operatorname{e}^C$ gesetzt und den Namen von $C^*$ wieder in $C$ geändert, um die Notation zu vereinfachen.
+Außerdem lassen wir den Betrag auf der linken Seite weg, da das Vorzeichen in der Konstante $C$ aufgehen kann.
+Wir haben also
+\begin{align*}
+\ln(u) &= C \frac{1}{x} -1,\\
+u &= \operatorname{e}^{\frac{C}{x} -1}.
+\end{align*}
+Mit der Rücksubstitution gilt
+\begin{align*}
+\frac{y}{x} &= \operatorname{e}^{\frac{C}x{}-1},\\
+y &= x \operatorname{e}^{\frac{C}x{}-1},
+\end{align*}
+und unter Verwendung der Anfangsbedingung $y(1)=4$ ergibt sich
+\begin{align*}
+4 &= \operatorname{e}^{C-1},\\
+\ln{4} & = C - 1,\\
+C & = \ln(4) +  1.
+\end{align*}
+Die Lösung der Differentialgleichung ist dann
+$$
+y = x \operatorname{e}^{\dfrac{\ln(4)+1}{x}-1}.
+$$
+\end{abc}
+}
