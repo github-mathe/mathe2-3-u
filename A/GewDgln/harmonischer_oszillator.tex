@@ -1,6 +1,6 @@
 \Aufgabe[e]{Harmonischer Oszillator}
 {
-Man betrachtet die Differentialgleichung
+Man betrachte die Differentialgleichung
 \[
 y'' + 2\rho y' + \omega^2 y = 0, \quad \text{mit } \rho, \omega \in \mathbb R_+
 \]
@@ -88,35 +88,36 @@ Bestimmen Sie die Lösung der DGl für alle drei Fälle: überdämpft, kritisch 
 
 
 \Loesung{
-Fall 1: Kritische Dämpfung (\(\rho = \omega\))
+Fall 1: Überdämpft (\(\rho > \omega\))
+Die Wurzeln sind reell und unterschiedlich:
+\[
+\lambda = -\rho \pm \sqrt{\rho^2 - \omega^2}
+\]
+mit der Lösung:
+\[
+y(t) = Ae^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + Be^{(-\rho - \sqrt{\rho^2 - \omega^2})t}
+\]
+Fall 2: Kritische Dämpfung (\(\rho = \omega\))
 Die charakteristische Gleichung vereinfacht sich zu:
 \[
-r^2 + 2\omega r + \omega^2 = 0
+\lambda^2 + 2\omega \lambda + \omega^2 = 0
 \]
-mit einer doppelten Wurzel \(r = -\omega\). Die Lösung ist:
+mit einer doppelten Wurzel \(\lambda = -\omega\). Die Lösung ist:
 \[
 y(t) = (A + Bt)e^{-\omega t}
 \]
 
-Fall 2: Untergedämpft (\(\rho < \omega\))
+Fall 3: Untergedämpft (\(\rho < \omega\))
 Die Wurzeln sind komplex:
 \[
-r = -\rho \pm i\sqrt{\omega^2 - \rho^2}
+\lambda = -\rho \pm i\sqrt{\omega^2 - \rho^2}
 \]
 was zu der Lösung führt:
 \[
 y(t) = e^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))
 \]
 
-Fall 3: Überdämpft (\(\rho > \omega\))
-Die Wurzeln sind reell und unterschiedlich:
-\[
-r = -\rho \pm \sqrt{\rho^2 - \omega^2}
-\]
-mit der Lösung:
-\[
-y(t) = Ae^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + Be^{(-\rho - \sqrt{\rho^2 - \omega^2})t}
-\]
+
 
 
 }

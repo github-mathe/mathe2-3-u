@@ -9,7 +9,7 @@ mit den drei Fällen
 \begin{enumerate}
   \item \textbf{Überdämpft (\( \rho > \omega \)):} Das System kehrt ohne Oszillation langsam zum Gleichgewicht zurück.
   $$
-  r(t) = \operatorname{e}^{-\rho + \sqrt{\rho^2 - \omega^2}}
+  r(t) = \operatorname{e}^{(-\rho + \sqrt{\rho^2 - \omega^2})t}
   $$
   \item \textbf{Kritisch gedämpft (\( \rho = \omega \)):} Das System kehrt so schnell wie möglich ohne Oszillation zum Gleichgewicht zurück mit
   $$
@@ -17,7 +17,7 @@ mit den drei Fällen
   $$
   \item \textbf{Untergedämpft (\( \rho < \omega \)):} Das System oszilliert mit einer Amplitude, die allmählich auf null abnimmt.
   $$
-  r(t) = \operatorname{e}^{-\rho t} \cos(\sqrt{\rho^2 - \omega}t)
+  r(t) = \operatorname{e}^{-\rho t} \cos(\sqrt{\rho^2 - \omega^2}t)
   $$
 \end{enumerate}
 Bestimmen Sie die Lösung der DGl für alle drei Fälle: überdämpft, kritisch gedämpft und untergedämpft.
@@ -26,7 +26,17 @@ Bestimmen Sie die Lösung der DGl für alle drei Fälle: überdämpft, kritisch 
 
 
 \Loesung{
-Fall 1: Kritische Dämpfung (\(\rho = \omega\))
+Fall 1: Überdämpft (\(\rho > \omega\))
+Die Wurzeln sind reell und unterschiedlich:
+\[
+\lambda = -\rho \pm \sqrt{\rho^2 - \omega^2}
+\]
+mit der homogenen Lösung:
+\[
+y(t) = Ae^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + Be^{(-\rho - \sqrt{\rho^2 - \omega^2})t}
+\]
+
+Fall 2: Kritische Dämpfung (\(\rho = \omega\))
 Die charakteristische Gleichung vereinfacht sich zu:
 \[
 \lambda^2 + 2\omega \lambda + \omega^2 = 0
@@ -38,7 +48,7 @@ y(t) = (A + Bt)e^{-\omega t}
 Für die partikuläre Lösung wählen wir den Ansatz
 
 
-Fall 2: Untergedämpft (\(\rho < \omega\))
+Fall 3: Untergedämpft (\(\rho < \omega\))
 Die Wurzeln sind komplex:
 \[
 \lambda = -\rho \pm i\sqrt{\omega^2 - \rho^2}
@@ -48,15 +58,6 @@ was zu der homogenen Lösung führt:
 y(t) = e^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))
 \]
 
-Fall 3: Überdämpft (\(\rho > \omega\))
-Die Wurzeln sind reell und unterschiedlich:
-\[
-\lambda = -\rho \pm \sqrt{\rho^2 - \omega^2}
-\]
-mit der homogenen Lösung:
-\[
-y(t) = Ae^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + Be^{(-\rho - \sqrt{\rho^2 - \omega^2})t}
-\]
 
 
 }
