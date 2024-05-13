@@ -17,7 +17,7 @@ mit den drei Fällen
   $$
   \item \textbf{Untergedämpft (\( \rho < \omega \)):} Das System oszilliert mit einer Amplitude, die allmählich auf null abnimmt.
   $$
-  r(t) = \operatorname{e}^{-\rho t} \cos(\sqrt{\rho^2 - \omega^2}t)
+  r(t) = \operatorname{e}^{-\rho t} \cos(\sqrt{\omega^2 - \rho^2}t)
   $$
 \end{enumerate}
 Bestimmen Sie die Lösung der DGl für alle drei Fälle: überdämpft, kritisch gedämpft und untergedämpft.
@@ -33,9 +33,25 @@ Die Wurzeln sind reell und unterschiedlich:
 \]
 mit der homogenen Lösung:
 \[
-y(t) = Ae^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + Be^{(-\rho - \sqrt{\rho^2 - \omega^2})t}
+y_h(t) = A\operatorname{e}^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + B\operatorname{e}^{(-\rho - \sqrt{\rho^2 - \omega^2})t}
 \]
+Wir führen die Abkürzung $z = \sqrt{\rho^2 - \omega^2}$ ein.
+Für die partikuläre Lösung wählen wir den Ansatz
+$$
+y_p = A t \operatorname{e}^{(-\rho + z)t}.
+$$
+mit den Ableitungen
+\begin{align*}
+y_p' &= A ( 1+t(-\rho + z)) \operatorname{e}^{(-\rho + z)t}\\
+y_p'' &= 
+\end{align*}
+Durch Einsetzen erhalten wir
 
+
+Damit ist die Lösung 
+\begin{align*}
+y = 
+\end{align*}
 Fall 2: Kritische Dämpfung (\(\rho = \omega\))
 Die charakteristische Gleichung vereinfacht sich zu:
 \[
@@ -43,9 +59,27 @@ Die charakteristische Gleichung vereinfacht sich zu:
 \]
 mit einer doppelten Wurzel \(\lambda = -\omega\). Die homogene Lösung ist:
 \[
-y(t) = (A + Bt)e^{-\omega t}
+y_h(t) = (A + Bt)\operatorname{e}^{-\omega t}
 \]
-Für die partikuläre Lösung wählen wir den Ansatz
+Da $\lambda = -\omega$ eine doppelte Nullstelle ist, wählen wir für die partikuläre 
+Lösung den Ansatz
+$$
+y_p = At^2 \operatorname{e}^{-\omega t}.
+$$
+Wir bilden die Ableitungen
+\begin{align*}
+y_p' &= A\operatorname{e}^{-\omega t}(2t - \omega t^2)\\
+y_p''& = A\operatorname{e}^{-\omega t}(-2 +\omega^2t^2 - 4\omega t)
+\end{align*}
+Durch Einsetzen erhalten wir
+\begin{align*}
+\operatorname{e}^{-\omega t} &= 
+A\operatorname{e}^{-\omega t} (-2 + \omega^2 t^2 + 2\omega(2t- \omega t^2) + \omega^2 t^2)\\
+&= -2A\operatorname{e}^{-\omega t}
+\end{align*}
+Damit ist $A = \frac{1}{2}$.
+
+
 
 
 Fall 3: Untergedämpft (\(\rho < \omega\))
@@ -55,11 +89,34 @@ Die Wurzeln sind komplex:
 \]
 was zu der homogenen Lösung führt:
 \[
-y(t) = e^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))
+y_h(t) = \operatorname{e}^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))
 \]
-
-
-
+Wir führen die Abkürzung $z = \sqrt{\omega^2 - \rho^2}$ ein.
+Für die partikuläre Lösung wählen wir den Ansatz
+$$
+y_p = t\operatorname{e}^{-\rho t}(A\sin(zt) + B\cos(zt)) 
+$$
+Die Ableitungen sind
+\begin{align*}
+y_p' &= \operatorname{e}^{-\rho t}((A- \rho t A - ztB)\sin(zt) + (B-\rho t B + ztA) \cos(zt))\\
+y_p'' &= \operatorname{e}^{-\rho t}( (-2\rho A - 2zB + t(2\rho zB + \rho^2 A -z^2A)) \sin(zt) \\
+&+
+          (-2\rho B +2zA + t(-2\rho zA + \rho^2 B - z^2B)) \cos(zt))
+\end{align*}
+Wir setzen die Ableitungen in die Differentialgleichung ein und erhalten
+\begin{align*}
+\operatorname{e}^{-\rho t}(-2\sqrt{\omega^2 - \rho^2}B \sin(\sqrt{\omega^2-\rho^2}t)
++2\sqrt{\omega^2 - \rho^2}A \cos(\sqrt{\omega^2-\rho^2}t) ) = 
+ \operatorname{e}^{-\rho t} \cos(\sqrt{\rho^2 - \omega^2}t)
+\end{align*}
+Durch Koeffizientenvergleich erhalten wir
+$$
+A=0 \quad , \quad B = \frac{1}{2}
+$$
+Damit ist die Lösung
+\begin{align*}
+y = 
+\end{align*}
 }
 
 
