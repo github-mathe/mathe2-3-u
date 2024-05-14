@@ -1,0 +1,89 @@
+% \Aufgabe[f]{AWP mit Laplace--Transformation}
+% {
+% Bestimmen Sie mit Hilfe der Laplace--Transformation die Lösung der Anfangswertaufgabe: 
+% $$ u''(t)+4\,u'(t)-12\,u(t)=4\,\text{e}^{-2\,t}$$
+% mit den Anfangswerten 
+% $$u(0)=0 \text{ und }  u'(0)=0\;.$$
+% %&  &  &  &  &  &  \\ 
+% %\mathbf{ii)} &  & v''(t)+25\,v(t)=80\,\sin (3\,t) & , & v(0)=3
+% %& , & v'(0)=5\;. \\ 
+% %&  &  &  &  &  &  \\ 
+% %\mathbf{iii)} &  & w''(t)+25\,w(t)=50\,\sin (5\,t) & , & 
+% %w(0)=1 & , & w'(0)=5\;. \\ 
+% %&  &  &  &  &  &  \\ 
+% %\mathbf{iv)} &  & x''(t)+4\,x'(t)+13\,x(t)=0 & , & 
+% %x(0)=6 & , & x'(0)=0\;.
+
+% }
+\Aufgabe[e]{IVP with Laplace transform}
+{
+Compute the solution of the following initial value problem using the Laplace transform:
+$$ u''(t)+4\,u'(t)-12\,u(t)=4\,\text{e}^{-2\,t}$$
+with the initial values
+$$u(0)=0 \text{ and }  u'(0)=0\;.$$
+%&  &  &  &  &  &  \\ 
+%\mathbf{ii)} &  & v''(t)+25\,v(t)=80\,\sin (3\,t) & , & v(0)=3
+%& , & v'(0)=5\;. \\ 
+%&  &  &  &  &  &  \\ 
+%\mathbf{iii)} &  & w''(t)+25\,w(t)=50\,\sin (5\,t) & , & 
+%w(0)=1 & , & w'(0)=5\;. \\ 
+%&  &  &  &  &  &  \\ 
+%\mathbf{iv)} &  & x''(t)+4\,x'(t)+13\,x(t)=0 & , & 
+%x(0)=6 & , & x'(0)=0\;.
+
+}
+\Loesung{
+%\textbf{i)\ \ }
+% Die Laplace--Transformation der AWA lautet mit\ \ $%
+% u_{0}=u_{0}'=0$\ : 
+% \begin{align*}
+% &  & \left( s^{2}\,U(s)-s\,u_{0}-u_{0}'\right) +4\cdot \left(
+% s\,U(s)-u_{0}\right) -12\cdot U(s)\;=\;\dfrac{4}{s+2} \\ 
+% &  &  \\ 
+% \Rightarrow &  & \left( s^{2}+4\,s-12\right) \cdot U(s)\;=\;\dfrac{4}{s+2}
+% \\ 
+% &  &  \\ 
+% \Rightarrow &  & U(s)\;=\;\dfrac{4}{\left( s+2\right) \,\left(
+% s^{2}+4\,s-12\right) }\;=\;\dfrac{\frac{-1}{4}}{s+2}+\dfrac{\frac{1}{8}}{s-2}%
+% +\dfrac{\frac{1}{8}}{s+6}
+% \end{align*}
+% Die Rücktransformation ergibt die Lösung der AWA\thinspace : 
+% \[
+% u_{\text{AW}}(t)=\dfrac{-1}{4}\,\text{e}^{-2\,t}+\dfrac{1}{8}\,\text{e}%
+% ^{2\,t}+\dfrac{1}{8}\,\text{e}^{-6\,t}\;\;. 
+% \]
+With $%
+u_{0}=u_{0}'=0$, the Laplace transform of the IVP reads:
+\begin{align*}
+&  & \left( s^{2}\,U(s)-s\,u_{0}-u_{0}'\right) +4\cdot \left(
+s\,U(s)-u_{0}\right) -12\cdot U(s)\;=\;\dfrac{4}{s+2} \\ 
+&  &  \\ 
+\Rightarrow &  & \left( s^{2}+4\,s-12\right) \cdot U(s)\;=\;\dfrac{4}{s+2}
+\\ 
+&  &  \\ 
+\Rightarrow &  & U(s)\;=\;\dfrac{4}{\left( s+2\right) \,\left(
+s^{2}+4\,s-12\right) }\;=\;\dfrac{\frac{-1}{4}}{s+2}+\dfrac{\frac{1}{8}}{s-2}%
++\dfrac{\frac{1}{8}}{s+6}
+\end{align*}
+Resubstitution yields the solution of the IVP\thinspace : 
+\[
+u_{\text{AW}}(t)=\dfrac{-1}{4}\,\text{e}^{-2\,t}+\dfrac{1}{8}\,\text{e}%
+^{2\,t}+\dfrac{1}{8}\,\text{e}^{-6\,t}\;\;. 
+\]
+
+%\begin{align*}
+%\mathbf{ii)} &  & v_{\text{AW}}(t)=5\,\sin (3\,t)-2\,\sin (5\,t)+3\,\cos
+%(5\,t)\;\;. \\ 
+%&  &  \\ 
+%\mathbf{iii)} &  & w_{\text{AW}}(t)=-5\,t\,\cos (5\,t)+2\,\sin (5\,t)+\cos
+%(5\,t)\;\;. \\ 
+%&  &  \\ 
+%\mathbf{iv)} &  & x_{\text{AW}}(t)=\,\text{e}^{-2\,t}\cdot \big(4\,\sin
+%(3\,t)+6\,\cos (3\,t)\big)\;\;.
+%\end{align*}
+}
+
+\ErgebnisC{AufglaplacAnfwAufg001}
+{
+$u_{\text{AW}}(t)=\dfrac{-1}{4}\,\text{e}^{-2\,t}+\dfrac{1}{8}\,\text{e}^{2\,t}+\dfrac{1}{8}\,\text{e}^{-6\,t}$
+}
