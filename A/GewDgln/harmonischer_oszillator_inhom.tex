@@ -48,16 +48,16 @@ y_p'' &= A (-\rho +z) ( 2+ t(-\rho +z)) \operatorname{e}^{(-\rho+z)t}
 \end{align*}
 Durch Einsetzen und Zusammenfassen erhalten wir
 $$
-2A\sqrt{\rho -\omega} \operatorname{e}^{(-\rho+ \sqrt{\rho^2 - \omega^2})t} = \operatorname{e}^{(-\rho + \sqrt{\rho^2 - \omega^2})t}
+2A\sqrt{\rho^2 -\omega^2} \operatorname{e}^{(-\rho+ \sqrt{\rho^2 - \omega^2})t} = \operatorname{e}^{(-\rho + \sqrt{\rho^2 - \omega^2})t}
 $$
-Damit ist $A= \frac{1}{2\sqrt{\rho -\omega}}$.
+Damit ist $A= \frac{1}{2\sqrt{\rho^2-\omega^2}}$.
 Die partikuläre Lösung ist
 $$
-y_p = \frac{1}{2\sqrt{\rho -\omega}}t \operatorname{e}^{(-\rho + z)t}.
+y_p = \frac{1}{2\sqrt{\rho^2 -\omega^2}}t \operatorname{e}^{(-\rho +  \sqrt{\rho^2 - \omega^2})t}.
 $$
 Damit ist die allgemeine Lösung 
 \begin{align*}
-y = A\operatorname{e}^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + B\operatorname{e}^{(-\rho - \sqrt{\rho^2 - \omega^2})t} + \frac{1}{2\sqrt{\rho -\omega}}t \operatorname{e}^{(-\rho + z)t}.
+y = A\operatorname{e}^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + B\operatorname{e}^{(-\rho - \sqrt{\rho^2 - \omega^2})t} + \frac{1}{2\sqrt{\rho^2 -\omega^2}}t \operatorname{e}^{(-\rho +  \sqrt{\rho^2 - \omega^2})t}.
 \end{align*}
 
 \textbf{Fall 2: Kritische Dämpfung (\(\rho = \omega\))}
@@ -68,7 +68,7 @@ Die charakteristische Gleichung vereinfacht sich zu:
 \]
 mit einer doppelten Wurzel \(\lambda = -\omega\). Die homogene Lösung ist:
 \[
-y_h(t) = t^2 \operatorname{e}^{-\omega t}.
+y_h(t) =(A+Bt) \operatorname{e}^{-\omega t}.
 \]
 Da $\lambda = -\omega$ eine doppelte Nullstelle ist, wählen wir für die partikuläre 
 Lösung den Ansatz
@@ -83,8 +83,8 @@ y_p''& = A\operatorname{e}^{-\omega t}(2 +\omega^2t^2 - 4\omega t)
 Durch Einsetzen erhalten wir
 \begin{align*}
 \operatorname{e}^{-\omega t} &= 
-A\operatorname{e}^{-\omega t} (-2 + \omega^2 t^2 + 2\omega(2t- \omega t^2) + \omega^2 t^2)\\
-&= -2A\operatorname{e}^{-\omega t}
+A\operatorname{e}^{-\omega t} (2 + \omega^2 t^2 + 2\omega(2t- \omega t^2) + \omega^2 t^2)\\
+&= 2A\operatorname{e}^{-\omega t}
 \end{align*}
 Damit ist $A = \frac{1}{2}$.
 Die partikuläre Lösung ist
@@ -93,7 +93,7 @@ y_p = \frac{1}{2}t^2 \operatorname{e}^{-\omega t}.
 $$
 Die allgemeine Lösung ist
 $$
-y = t^2 \operatorname{e}^{-\omega t} + \frac{1}{2}t^2 \operatorname{e}^{-\omega t}.
+y = (A+Bt) \operatorname{e}^{-\omega t} + \frac{1}{2}t^2 \operatorname{e}^{-\omega t}.
 $$
 
 
@@ -127,15 +127,15 @@ Wir setzen die Ableitungen in die Differentialgleichung ein und erhalten
 \end{align*}
 Durch Koeffizientenvergleich erhalten wir
 $$
-A=0 \quad , \quad B = \frac{1}{2}
+A= \frac{1}{2} \quad , \quad B =0
 $$
 Die partikuläre Lösung ist
 $$
-y_p = \frac{1}{2}t\operatorname{e}^{-\rho t} \cos((\sqrt{\omega^2 - \rho^2})t).
+y_p = \frac{1}{2}t\operatorname{e}^{-\rho t} \sin((\sqrt{\omega^2 - \rho^2})t).
 $$
 Damit ist die allgemeine Lösung
 $$
-y = \operatorname{e}^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))+\frac{1}{2}t\operatorname{e}^{-\rho t} \cos((\sqrt{\omega^2 - \rho^2})t).
+y = \operatorname{e}^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))+\frac{1}{2}t\operatorname{e}^{-\rho t} \sin((\sqrt{\omega^2 - \rho^2})t).
 $$
 }
 
