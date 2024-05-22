@@ -1,16 +1,16 @@
-% \Aufgabe[e]{Lineare Differentialgleichungen $n$-ter Ordnung}
-% {
-% Bestimmen Sie die allgemeinen L"osungen der folgenden
-% Differentialgleichungen:
+\Aufgabe[e]{Lineare Differentialgleichungen $n$-ter Ordnung}
+{
+Bestimmen Sie die allgemeinen L\"osungen der folgenden
+Differentialgleichungen:
 % \begin{abc}
 % \item $y^{(4)} + 4y = 0$,
 % \item $y^{(4)} + 2y''' + y'' = 12 x$,
 % \item $y^{\prime\prime}+4y^\prime+5y=8\sin t$,
 % \item $y^{\prime\prime}-4y^\prime+4y=\EH{2x}$.
-\Aufgabe[e]{Linear ODEs of the 4th order}
-{
-Compute the general solutions of the following
-differential equations:
+% \Aufgabe[e]{Linear ODEs of the 4th order}
+% {
+% Compute the general solutions of the following
+% differential equations:
 \begin{abc}
 \item $y^{(4)} + 4y = 0$,
 \item $y^{(4)} - 18 y'' + 81y=0$.
@@ -27,47 +27,50 @@ differential equations:
 % Die allgemeine Lösung lautet also
 % $$ y(x) = c_1 e^x \cos x + c_2 e^x \sin x + c_3 \EH{-x} \cos x 
 %    + c_4 \EH{-x} \sin x \text{ mit } c_1,c_2,c_3,c_4 \in \R . $$
-\item It is $p(\lambda)=\lambda^4+4$, the zeroes are
+\item Das charakteristische Polynom ist $p(\lambda)=\lambda^4+4$, mit den Nullstellen
 %$\lambda_\ell = \sqrt{2} \EH{i (2\ell+1) \pi / 4}$ for $\ell=0,1,2,3$,
 $\lambda_\ell = \sqrt{2} \EH{i (\pi/2+k\pi) / 2}$ for $k=0,1,2,3$,
 $$\lambda_0=1+i, \lambda_1=-1+i, \lambda_2=-1-i, \lambda_3=1-i.$$
-A real fundamental system is
+Das Fundamentalsystem ist dann
 $$\{ e^x \cos x, e^x \sin x, \EH{-x} \cos x, \EH{-x} \sin x \}$$ 
-The general solution is therefore given as
+Die allgemeine Lösung ist also gegeben als
+% The general solution is therefore given as
 $$ y(x) = c_1 e^x \cos x + c_2 e^x \sin x + c_3 \EH{-x} \cos x 
    + c_4 \EH{-x} \sin x \text{ with } c_1,c_2,c_3,c_4 \in \R . $$
 \item
-Given the equation $$y^{(4)} - 18 y'' + 81y=0,$$
-the characteristic polynomial is
+Von der gegebenen Gleichung $$y^{(4)} - 18 y'' + 81y=0,$$
+ist das charakteristische Polynom
 $$
-\lambda^4-18\lambda + 81 = 0
+\lambda^4-18\lambda^2 + 81 = 0
 $$
-and it can be written as
+und kann geschrieben werden als
 $$
 (x^2-9)^2 = (x-3)^2\cdot(x+3)^2 = 0
 $$
-and it has two double zeros: $\lambda_1 = -3$ and $\lambda_2 = 3$.
-The general solution of the homogeneous ODE is
+mit den zwei doppelten Nullstellen: $\lambda_1 = -3$ und $\lambda_2 = 3$.
+Die allgemeine Lösung der hommogenen Differentialgleichung ist
+% The general solution of the homogeneous ODE is
 $$
 y(x) = (c_1+c_2x) e^{-3 x} + (c_3 + c_4x) e^{3 x}.
 $$
-Here we observe that the coefficients in front of the exponential functions are linear functions because the multiplicity of the zeros is 2.
+Die Koeffizienten vor der Exponentialfunktion sind lineare Funktionen, weil es sich um doppelte Nulstellen handelt.
+% % Here we observe that the coefficients in front of the exponential functions are linear functions because the multiplicity of the zeros is 2.
 \end{abc} 
 }
 
-
-\ErgebnisC{AufggewdglLinenOrd003}
+% 
+% \ErgebnisC{gewdgl_Line_nOrd_003_mod}
 % {
-% Partikuläre Lösungen:
-% a) $0$, \, 
-% b) $-12x^2+2x^3$,\, 
-% c) $\sin t-\cos t$,\, 
-% d) $\frac 12 x^2\EH{2x}$
-{
-Particulate solutions:
-a) $0$, \,
-b) $-12x^2+2x^3$,\,
-c) $\sin t-\cos t$,\,
-(d) $\frac 12 x^2\EH{2x}$
-}
+% % Partikuläre Lösungen:
+% % a) $0$, \, 
+% % b) $-12x^2+2x^3$,\, 
+% % c) $\sin t-\cos t$,\, 
+% % d) $\frac 12 x^2\EH{2x}$
+% % {
+% % Particulate solutions:
+% % a) $0$, \,
+% % b) $-12x^2+2x^3$,\,
+% % c) $\sin t-\cos t$,\,
+% % (d) $\frac 12 x^2\EH{2x}$
+% }
 

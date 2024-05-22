@@ -9,8 +9,8 @@
 \newcommand{\Trimester}{FT}
 \newcommand{\Kurs}{Mathematik III/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{16}
-\newcommand{\TOPIC}{}
+\newcommand{\BLATT}{17}
+\newcommand{\TOPIC}{Inhomogene lineare Dgln, Resonanz, Laplace-Transformation}
 
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathmorphing} % for example, this is used for coils and other path decorations
@@ -48,17 +48,22 @@
 
 \ruleBig
 
-%Mathe III Blatt 16
+%Mathe III Blatt 17
+\input{../A/GewDgln/gewdgl_Ihom_Line_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+\input{../A/GewDgln/harmonischer_oszillator_inhom.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/GewDgln/gewdgl_Line_nOrd_1-3.tex}
+\input{../A/GewDgln/ode_resonanz_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-\input{../A/GewDgln/gewdgl_Line_nOrd_003.tex}
+
+\input{../A/Laplace/laplac_Traf_Bere_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-\input{../A/GewDgln/gewdgl_Line_nOrd_003_mod.tex}
+
+\input{../A/Laplace/laplac_Traf_Bere_01b.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-\input{../A/GewDgln/harmonischer_oszillator.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}

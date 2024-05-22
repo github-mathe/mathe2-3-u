@@ -1,0 +1,90 @@
+% \Aufgabe[f]{R\"ucktransformation}
+% {
+% Berechnen Sie
+% \begin{align*}
+% &\text{\bf a)}&&\, &\mathcal{L}^{-1}\left\{ \frac 5{s+2}\right\}&
+% \qquad\qquad\text{\bf b)}& \, &\mathcal{L}^{-1}\left\{\frac {4s-3}{s^2+4}\right\}\\
+% &\text{\bf c)}&&\, &\mathcal{L}^{-1}\left\{ \frac {2s-5}{s^2}\right\}&
+% \qquad\qquad\text{\bf d)}& \, &\mathcal{L}^{-1}\left\{ \frac 1{s^2+2s}\right\}\\
+% &\text{\bf e)}&&\, &\mathcal{L}^{-1}\left\{\frac {5s^2-15s+7}{(s+1)(s-2)^2}\right\}&
+% \qquad\qquad\text{\bf f)}&\, &\mathcal{L}^{-1}\left\{\frac {4-5s}{s^{3/2}}\right\}.
+% \end{align*}
+% }
+\Aufgabe[e]{Inverse Laplace transform}
+{
+Compute
+\begin{align*}
+&\text{\textbf a)}&&\, &\mathcal{L}^{-1}\left\{ \frac 5{s+2}\right\}&
+\qquad\qquad\text{\textbf b)}& \, &\mathcal{L}^{-1}\left\{\frac {4s-3}{s^2+4}\right\}\\
+&\text{\textbf c)}&&\, &\mathcal{L}^{-1}\left\{ \frac {2s-5}{s^2}\right\}&
+\qquad\qquad\text{\textbf d)}& \, &\mathcal{L}^{-1}\left\{ \frac 1{s^2+2s}\right\}\\
+&\text{\textbf e)}&&\, &\mathcal{L}^{-1}\left\{\frac {5s^2-15s+7}{(s+1)(s-2)^2}\right\}&
+\qquad\qquad\text{\textbf f)}&\, &\mathcal{L}^{-1}\left\{3\operatorname{e}^{-2s}\right\}.
+\end{align*}
+}
+\Loesung{
+\begin{abc}
+\item $$\mathcal{L}^{-1}\left\{ \dfrac 5 {s+2}\right\} = 5\mathcal{L}^{-1}\left\{\dfrac 1{s+2}\right\} = 5\operatorname{e}^{-2t}$$
+\item \begin{align*}
+\mathcal{L}^{-1}\left\{ \frac{4s-3}{s^2+4}\right\} 
+=&  4 \mathcal{L}^{-1}\left\{\frac
+s{s^2+2^2}\right\} - 3 \mathcal{L}^{-1}\left\{\frac 1 {s^2 + 2^2}\right\}\\
+=& 4 \cos(2t)-\frac 32 \sin(2t)
+\end{align*}
+\item $$\mathcal{L}^{-1}\left\{\frac {2s-5}{s^2}\right\}
+=2\mathcal{L}^{-1}\left\{\frac 1s\right\} - 5 \mathcal{L}^{-1}\left\{ \frac 1{s^2}\right\} 
+= 2 - 5t$$
+\item \begin{align*}
+\mathcal{L}^{-1}\left\{ \frac 1{s^2+2s}\right\} = &\mathcal{L}^{-1}\left\{ \dfrac {\frac 12}s+ \dfrac {- \frac
+12}{s+2}\right\}= \frac 12 \mathcal{L}^{-1}\left\{ \frac 1s\right\}- \frac
+12 \mathcal{L}^{-1}\left\{ \frac 1{s+2}\right\}\\
+=& \frac 12 - \frac 12 \operatorname{e}^{-2t}
+\end{align*}
+\item \begin{align*}
+\mathcal{L}^{-1}\left\{\frac{5s^2-15s+7}{(s+1)(s-2)^2}\right\} = & 3 \mathcal{L}^{-1}\left\{ \frac 1 {s+1}\right\} +
+2 \mathcal{L}^{-1}\left\{ \frac 1 {s-2}\right\} - \mathcal{L}^{-1}\left\{ \frac 1 {(s-2)^2}\right\}\\
+=& 3\operatorname{e}^{-t} +2\operatorname{e}^{2t} - t\operatorname{e}^{2t}
+\end{align*}
+\item 
+\begin{align*}
+\mathcal{L}^{-1}\left\{3e^{-2s}\right\}=3\delta(t-2)
+\end{align*}
+%\begin{align*}
+%\mathcal{L}^{-1}\left\{\frac{4-5s}{s^{3/2}}\right\}=&4\mathcal{L}^{-1}\left\{\frac{1}{s^{3/2}}\right\}-5 \mathcal{L}^{-1}\left\{\frac{1}{s^{1/2}}\right\}
+%=4\mathcal{L}^{-1}\left\{\dfrac{\frac 1{\sqrt s}}{s}\right\} -5 \mathcal{L}^{-1}\left\{\frac{1}{\sqrt s}\right\}\\
+%=&4\int_0^t\mathcal{L}^{-1}\left\{\frac{1}{\sqrt s}\right\}\text d t-5\dfrac1{\sqrt{\pi t}}
+%=4\int_0^t\dfrac1{\sqrt{\pi t}}\text d t-5\dfrac1{\sqrt{\pi t}}\\
+%=&\frac{4}{\sqrt{\pi}}\int_0^t t^{-\frac12}\text d t-5\dfrac1{\sqrt{\pi t}}
+%= \frac{8\sqrt t }{\sqrt \pi} - \frac{5}{\sqrt{\pi t}}
+%\end{align*}
+%
+%
+%% Alternativ kann man die Formel
+%% $$\mathcal{L}^{-1}\left\{\frac{1}{s^{a}}\right\}=\dfrac{t^{a-1}}{\Gamma(a)}$$
+%% mit $\Gamma(\frac 12) = \sqrt \pi $ und $\Gamma(\frac 32)=\frac{\sqrt \pi}2$ benutzen.
+%Alternatively, the formula
+%$$\mathcal{L}^{-1}\left\{\frac{1}{s^{a}}\right\}=\dfrac{t^{a-1}}{\Gamma(a)}$$
+%with $\Gamma(\frac 12) = \sqrt \pi $ and $\Gamma(\frac 32)=\frac{\sqrt \pi}2$ can be used.
+\end{abc}
+}
+
+
+
+\ErgebnisC{AufglaplacTrafBere004}
+{
+{\textbf a)} $5\operatorname{e}^{-2t}                                             $
+{\textbf b)} $4 \cos(2t)-\frac 32 \sin(2t)                          $
+{\textbf c)} $ 2 - 5t                                               $
+{\textbf d)} $\frac 12 - \frac 12 \operatorname{e}^{-2t}                          $
+{\textbf e)} $3\operatorname{e}^{-t} +2\operatorname{e}^{2t} - t\operatorname{e}^{2t}                         $
+{\textbf f)} $\frac{8\sqrt t }{\sqrt \pi} - \frac{5}{\sqrt{\pi t}}  $
+
+}
+
+
+
+
+
+
+
+
