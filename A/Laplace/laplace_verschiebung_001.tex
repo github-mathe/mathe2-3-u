@@ -1,0 +1,85 @@
+\Aufgabe[e]{Verschiebungssatz}
+{
+\begin{abc}
+\item Berechnen Sie die Laplace-Transformation der Funktion \( f(t) = h(t-3) e^{t-3} \).
+\item Berechnen Sie die Inverse Laplace-Transformation von \(\frac{1}{(s-2)^2}\).
+\item Berechnen Sie die Inverse Laplace-Transformation von \(\frac{1}{(s-1)^2} e^{-3s}\).
+\end{abc}
+
+}
+
+\Loesung{
+
+\textbf{Lösung zu a):}
+
+1. Nutzen Sie die Verschiebungseigenschaft der Laplace-Transformation:
+   Wenn \( \mathcal{L}\{f(t)\} = F(s) \), dann gilt \( \mathcal{L}\{f(t-a)h(t-a)\} = e^{-as}F(s) \).
+
+   In diesem Fall ist \( f(t-a) = e^{t-a} \). Bei $a=3$ ist $e^{t-3}$. 
+
+2. Finden Sie die Laplace-Transformation von \( e^t \) (nicht von $e^{t-3}$):
+   \[
+   \mathcal{L}\{e^t\} = \int_0^\infty e^{t} e^{-st} dt = \int_0^\infty e^{(1-s)t} dt
+   \]
+   Damit das Integral konvergiert, muss \( s > 1 \) sein:
+   \[
+   \mathcal{L}\{e^t\} = \frac{1}{s-1}
+   \]
+
+3. Wenden Sie die Verschiebungseigenschaft an:
+   \[
+   \mathcal{L}\{e^{t-3}h(t-3)\} = e^{-3s} \cdot \mathcal{L}\{e^t\} = e^{-3s} \cdot \frac{1}{s-1}
+   \]
+
+
+\textbf{Lösung zu b):}
+1. Die allgemeine Formel für die Inverse Laplace-Transformation von \(\frac{1}{(s-a)^n}\) ist:
+   \[
+   \mathcal{L}^{-1}\left\{\frac{1}{(s-a)^n}\right\} = \frac{t^{n-1} e^{at}}{(n-1)!}
+   \]
+
+2. Für unseren speziellen Fall ist \( a = 2 \) und \( n = 2 \).
+
+   Mit der Formel erhalten wir:
+   \[
+   \mathcal{L}^{-1}\left\{\frac{1}{(s-2)^2}\right\} = \frac{t^{2-1} e^{2t}}{(2-1)!} = \frac{t e^{2t}}{1} = t e^{2t}
+   \]
+
+}
+
+\textbf{Lösung zu c):}
+
+1. Identifizieren Sie die Verschiebungseigenschaft:
+   Der Term \( e^{-3s} \) deutet auf eine Zeitverschiebung in der ursprünglichen Funktion hin. Speziell gilt, wenn \( \mathcal{L}\{f(t)\} = F(s) \), dann ist \( \mathcal{L}\{f(t-a)h(t-a)\} = e^{-as}F(s) \).
+
+2. Finden Sie die Inverse Laplace-Transformation der unverschobenen Funktion:
+   Betrachten Sie \(\frac{1}{(s-1)^2}\). Wir erkennen, dass die Inverse Laplace-Transformation von \(\frac{1}{(s-a)^2}\) \( t e^{at} \) ist:
+   \[
+   \mathcal{L}^{-1}\left\{\frac{1}{(s-1)^2}\right\} = t e^{t}
+   \]
+
+3. Wenden Sie die Verschiebungseigenschaft an:
+   Der Term \( e^{-3s} \) zeigt eine Verschiebung um 3 Einheiten an. Daher:
+   \[
+   \mathcal{L}^{-1}\left\{\frac{1}{(s-1)^2} e^{-3s}\right\} = (t-3) e^{(t-3)} h(t-3)
+   \]
+
+\ErgebnisC{AufglaplaceVerschiebung001}
+{
+\begin{abc}
+\item
+\[
+\mathcal{L}\{ h(t-3) e^{t-3} \} = \frac{e^{-3s}}{s-1}
+\]
+\item
+\[
+\mathcal{L}^{-1}\left\{\frac{1}{(s-2)^2}\right\} = t e^{2t}
+\]
+\item
+\[
+\mathcal{L}^{-1}\left\{\frac{1}{(s-1)^2} e^{-3s}\right\} = (t-3) e^{(t-3)} h(t-3)
+\]
+\end{abc}
+
+
+}
