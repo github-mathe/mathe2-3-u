@@ -20,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-\setboolean{mitLoes}{true}
+% \setboolean{mitLoes}{true}
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -72,15 +72,20 @@
 
 \input{../A/Laplace/laplac_Traf_Bere_002.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
 \input{../A/Laplace/laplac_ldgl_KlLp_004.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Laplace/laplac_Traf_Bere_004_mod.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% 
+% \input{../A/Laplace/laplac_Traf_Bere_004_mod.tex}
+% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../A/Laplace/laplac_Anfw_Aufg_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Laplace/laplace_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+
+
 
 % \input{../A/Laplace/laplac_Traf_Bere_003.tex}
 % \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}

@@ -1,34 +1,42 @@
-\Aufgabe[e]{Laplace transform}
+\Aufgabe[e]{Laplace-Transformation}
 {
-Answer the following points giving and example if necessary:
+Beantworten Sie die folgenden Fragen und geben Sie gegebenenfalls ein Beispiel.
+% Answer the following points giving and example if necessary:
 \begin{iii}
-\item How is the Laplace transform defined?
-\item Why the variable $s$ has to be positive?
-\item What is the Heaviside function $h_{t_0}(t)$?
-\item Explain with an example what is the damping of a function $f(t)$.
-\item Is it true that $\mathcal{L}\left\{f(t)+g(t)\right\} = F(s)+G(s)$?
-\item Is it true that $\mathcal{L}\left\{f(t)\,g(t)\right\} = F(s)\,G(s)$?
-\item Recapitulate how to solve an initial value problem using the Laplace transform.
-\item Write the properties of the Dirac delta function $\delta(t)$ (also called $\delta$-distribution).
+\item Wie ist die Laplace-Transformation definiert?
+\item Warum muss die Variable $s$ positiv sein?
+\item Was ist die Heaviside-Funktion $h_{t_0}(t)$?
+\item Erklären Sie anhand eines Beispiels, was die Dämpfung einer Funktion $f(t)$.
+\item Ist die folgende Aussage wahr? $$\mathcal{L}\left\{f(t)+g(t)\right\} = F(s)+G(s)$$
+\item Ist die folgende Aussage wahr?
+$$\mathcal{L}\left\{f(t)\,g(t)\right\} = F(s)\,G(s)$$
+\item Wiederholen Sie, wie man ein Anfangswertproblem mithilfe der Laplace-Transformation
+lösen kann.
+\item Schreiben Sie die Eigenschaften der Dirac-Delta-Funktion $\delta(t)$ (auch $\delta$-Distribution) auf.
 \end{iii}
 }
 
 
 \Loesung{
 \begin{iii}
-\item How is the Laplace transform defined?
+\item Wie ist die Laplace-Transformation definiert?
 
 $\mathcal{L}\left\{f(t)\right\} = \int_0^\infty \operatorname{e}^{-st} f(t) \d t$.
 
-\item Why the variable $s$ has to be positive?
+\item Warum muss die Variable $s$ positiv sein?
 
-Because the upper limit of the integral in the definition of the Laplace transform is $\infty$ and the exponential function $\operatorname{e}^{-st}$ is bounded for $t\rightarrow \infty$ only if $s>0$.
-\item What is the Heaviside function $h_{t_0}(t)$?
+Weil die obere Grenze des Integrals der Definition der Laplace-Transformation $\infty$ ist
+und die Exponentialfunktion $\operatorname{e}^{-st}$ nur beschränkt ist für 
+$t\rightarrow \infty$, wenn $s>0$.
 
-It is the step function that is 0 for $t<t_0$ and 1 for $t\geq t_0$.
-\item Explain with an example what is the damping of a function $f(t)$.
 
-Show the graph of $\operatorname{e}^{-t} f(t)$ with $f(t)=\dfrac{t}{10}$ or $f(t)=\sin(t)$.
+\item Was ist die Heaviside-Funktion $h_{t_0}(t)$?
+
+Die Heaviside-Funktion ist die Stufenfunktion, die 0 ist für $t<t_0$ und 1 für $t\geq t_0$.
+
+\item Erklären Sie anhand eines Beispiels, was die Dämpfung einer Funktion $f(t)$.
+
+Zeigen Sie den Graphen von $\operatorname{e}^{-t} f(t)$ mit $f(t)=\dfrac{t}{10}$ oder $f(t)=\sin(t)$.
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -62,25 +70,26 @@ Show the graph of $\operatorname{e}^{-t} f(t)$ with $f(t)=\dfrac{t}{10}$ or $f(t
     \end{axis}
   \end{tikzpicture}
 
-\item Is it true that $\mathcal{L}\left\{f(t)+g(t)\right\} = F(s)+G(s)$? YES.
+\item\item Ist die folgende Aussage wahr? $$\mathcal{L}\left\{f(t)+g(t)\right\} = F(s)+G(s)$$ Ja.
 
-\item Is it true that $\mathcal{L}\left\{f(t)\,g(t)\right\} = F(s)\,G(s)$? NO
+\item\item Ist die folgende Aussage wahr?
+$$\mathcal{L}\left\{f(t)\,g(t)\right\} = F(s)\,G(s)$$ Nein.
 
-\item Recapitulate how to solve an initial value problem using the Laplace transform.
-
+\item Wiederholen Sie, wie man ein Anfangswertproblem mithilfe der Laplace-Transformation
+lösen kann.
 \renewcommand{\labelenumi}{\arabic{enumi}}
  \setcounter{enumi}{0}
 \begin{enumerate}
-\item Transform right and left hand side of the ODE: Apply $\mathcal{L}\{\cdot\}$.
-\item Substitute the initial values and solve for $Y(s)$.
-\item Inverse transform (use the table) left and right hand side of the equation to get $y(t)=\mathcal{L}^{-1}(Y(s))$.
+\item Transformieren Sie die rechte und die linke Seite der Dgl.: Wende $\mathcal{L}\{\cdot\}$ an.
+\item Setzen Sie die Anfangsbedingungen ein und lösen Sie nach $Y(s)$.
+\item Rücktransformieren Sie die linke und die rechte Seite der Gleichung (mithilfe der Tabelle), um die Lösung $y(t)=\mathcal{L}^{-1}(Y(s))$ zu erhalten.
 \end{enumerate}
 
-\item Write the properties of the Dirac delta function $\delta(t)$ (also called $\delta$-distribution).
+\item Schreiben Sie die Eigenschaften der Dirac-Delta-Funktion $\delta(t)$ (auch $\delta$-Distribution) auf.
 
 \begin{align*}
 &\int_{-\infty}^\infty \delta(t) \d t = 1, \\
-&\int_{-\infty}^\infty \delta(t-a) \d t = 1, \quad \text{ (arbitrary } a)\\
+&\int_{-\infty}^\infty \delta(t-a) \d t = 1, \quad \text{ (beliebig } a)\\
 &\int_{-\infty}^\infty \delta(t-t_0)\, f(t) \d t = f(t_0)\\
 \end{align*}
 

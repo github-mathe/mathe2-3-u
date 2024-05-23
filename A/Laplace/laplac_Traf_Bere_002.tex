@@ -7,24 +7,25 @@ Bestimmen Sie unter Verwendung von \ ${\cal{L}}\big\{\sin(t)\big\} = \dfrac{1}{s
 	\textbf{c)} \ \int\limits_{0}^{\infty}\frac{\sin(t)}{t}\ \text dt\ ,\quad
 	\textbf{d)} \ {\cal{L}}\left\{\EH{-t}\,\frac{\sin(t)}{t}\right\}\ .
 \]
+\textbf{Hinweis:} Nutzen Sie die Transformationsformel, die Sie im Vorlesunngsskript auf Seite 87-88 finden.
 
 
-
-\textbf{e)} \ Bestimmen Sie \textbf{mit Hilfe des Faltungssatzes} der Laplace-Transformation die Urbildfunktion \  $f(t)$ \ zur Bildfunktion
-  \[
-  F(s) := \dfrac{s}{(s+1)(s^2+1)}\ .
-\]
+% \textbf{e)} \ Bestimmen Sie \textbf{mit Hilfe des Faltungssatzes} der Laplace-Transformation die Urbildfunktion \  $f(t)$ \ zur Bildfunktion
+%   \[
+%   F(s) := \dfrac{s}{(s+1)(s^2+1)}\ .
+% \]
 }
 
 \Loesung{
-\textbf{a)} \ Mit der Transformationsformel \ \ ${\cal{L}}\left\{\dfrac{f(t)}{t}\right\} = \int\limits_{s}^\infty  F(\sigma)\ \text d\sigma$ \ \ erhält man
+\textbf{a)} \ Mit der Transformationsformel \ \ 
+${\cal{L}}\left\{\dfrac{f(t)}{t}\right\} = \int\limits_{s}^\infty  F(\sigma)\ \d\sigma$ \ \ erhält man
 	\[
 	{\cal{L}}\left\{\frac{\sin(t)}{t}\right\} = \int\limits_{s}^\infty  \dfrac{1}{\sigma^2+1}\ \text d\sigma = \Big[\arctan(\sigma)\Big]_s^\infty = \dfrac \pi2-\arctan(s)\ .
 \]
 
 \textbf{b)} \ Mit der Transformationsformel \ \ ${\cal{L}}\left\{\int\limits_{0}^{t} f(\tau) \text d\tau\right\} = \dfrac{F(s)}{s}$ \ \ erhält man 
 	\[
-	{\cal{L}}\left\{\int\limits_{0}^{t}\frac{\sin(\tau)}{\tau}\ \text d\tau\right\} = \frac 1s\cdot\left(\dfrac \pi2-\arctan(s) \right)
+	{\cal{L}}\left\{\int\limits_{0}^{t}\frac{\sin(\tau)}{\tau}\ \d\tau\right\} = \frac 1s\cdot\left(\dfrac \pi2-\arctan(s) \right)
 \]
 
 
@@ -41,11 +42,11 @@ Mit Hilfe des Anfangs- und Endwertsatzes ergibt sich
 
 \textbf{2. Lösungsweg}\newline
 Nach Definition der Laplace-Transformierten gilt
-$${\cal{L}}\left\{\dfrac{\sin(t)}{t}\right\}=\int\limits_{0}^\infty\EH{-st}\cdot\frac{\sin(t)}{t}\ \text dt=U(s)$$
+$${\cal{L}}\left\{\dfrac{\sin(t)}{t}\right\}=\int\limits_{0}^\infty\EH{-st}\cdot\frac{\sin(t)}{t}\ \d t=U(s)$$
 
 Aus der Teilaufgabe \textbf{a)} folgt $U(s)=\dfrac \pi2-\arctan(s)$.\newline
 Somit erhält man
-$$\int\limits_{0}^\infty\frac{\sin(t)}{t}\ \text dt=\int\limits_{0}^\infty\EH{-0\cdot t}\cdot\frac{\sin(t)}{t}\ \text dt=U(0)=\dfrac \pi2$$
+$$\int\limits_{0}^\infty\frac{\sin(t)}{t}\ \text dt=\int\limits_{0}^\infty\EH{-0\cdot t}\cdot\frac{\sin(t)}{t}\ \d t=U(0)=\dfrac \pi2$$
 
 
 
@@ -56,44 +57,44 @@ $$\int\limits_{0}^\infty\frac{\sin(t)}{t}\ \text dt=\int\limits_{0}^\infty\EH{-0
 	{\cal{L}}\left\{\EH{-t}\,\frac{\sin(t)}{t}\right\} = \dfrac \pi2-\arctan(s+1)\ .
 \]
 
-
-\textbf{e)} \ Es gilt
-$$
-F(s) = F_1(s) \cdot F_2(s) \quad \mbox{mit} \quad F_1(s) = \dfrac{1}{s+1}\,, \quad F_2(s)= \dfrac{s}{s^2+1}\,.
-$$
-Mit den Rücktransformierten 
-$$
-f_1(t) = \EH{-t} \quad \mbox{und} \quad f_2(t) = \cos( t)
-$$
-folgt
-\begin{align*}
-f(t) & = f_1(t) \ast f_2(t) = \int_0^t \EH{-(t-\tau)}\cos (\tau) \text d \tau = \EH{-t} \int_0^t \EH{\tau}\cos (\tau) \text d \tau\,.
-\end{align*}
-Mit 
-\begin{align*}
-I=&\int_0^t \EH{\tau}\cos \tau \text d \tau  = \EH{\tau}\sin \tau\Big|_0^t -  \int_0^t \EH{\tau}\sin \tau \text d \tau\\[1ex]
-& =  \EH{t}\sin t + \EH{\tau}\cos \tau |_0^t - \int_0^t \EH{\tau}\cos \tau \text d \tau\\[1ex]
-& =  \EH{t}\sin t + \EH{t}\cos t - 1  - I
-\end{align*}
-folgt
-$$2I=\EH{t}\sin t + \EH{t}\cos t - 1$$
-und
-$$
-I = \dfrac{1}{2}\,\EH{t}\sin t + \dfrac{1}{2}\,\EH{t}\cos t - \dfrac{1}{2}
-$$
-
-
-Alternativ kann man im Komplexen rechnen:
-\begin{align*}
-I=&\int_0^t \EH{\tau}\cos \tau \text d \tau  =\int_0^t \Real(\EH{\tau}\cdot\EH{i\tau})  \text d \tau \\[1ex]
-&=\Real\left(\int_0^t (\EH{(1+i)\tau}\text d \tau\right) =\left[\Real\left(\dfrac{\EH{(1+i)\tau}}{1+i}\right)\right]_0^t=\left[\EH{\tau}\Real\left(\dfrac{(\cos\tau+i\sin\tau)(1-i)}{2}\right)\right]_0^t\\[1ex]
-&=\left[\EH{\tau}\cdot\dfrac{(\cos\tau+\sin\tau)}{2}\right]_0^t=\EH{t}\cdot\dfrac{(\cos t+\sin t)}{2}-\dfrac{1}{2}\\
-\end{align*}
-
-Somit ergibt sich
-$$
-\ f(t) = \EH{-t} \cdot I=\dfrac{1}{2} (\sin t + \cos t) - \dfrac{1}{2}\,\EH{-t}\ .\ 
-$$
+% 
+% \textbf{e)} \ Es gilt
+% $$
+% F(s) = F_1(s) \cdot F_2(s) \quad \mbox{mit} \quad F_1(s) = \dfrac{1}{s+1}\,, \quad F_2(s)= \dfrac{s}{s^2+1}\,.
+% $$
+% Mit den Rücktransformierten 
+% $$
+% f_1(t) = \EH{-t} \quad \mbox{und} \quad f_2(t) = \cos( t)
+% $$
+% folgt
+% \begin{align*}
+% f(t) & = f_1(t) \ast f_2(t) = \int_0^t \EH{-(t-\tau)}\cos (\tau) \text d \tau = \EH{-t} \int_0^t \EH{\tau}\cos (\tau) \d \tau\,.
+% \end{align*}
+% Mit 
+% \begin{align*}
+% I=&\int_0^t \EH{\tau}\cos \tau \text d \tau  = \EH{\tau}\sin \tau\Big|_0^t -  \int_0^t \EH{\tau}\sin \tau \text d \tau\\[1ex]
+% & =  \EH{t}\sin t + \EH{\tau}\cos \tau |_0^t - \int_0^t \EH{\tau}\cos \tau \text d \tau\\[1ex]
+% & =  \EH{t}\sin t + \EH{t}\cos t - 1  - I
+% \end{align*}
+% folgt
+% $$2I=\EH{t}\sin t + \EH{t}\cos t - 1$$
+% und
+% $$
+% I = \dfrac{1}{2}\,\EH{t}\sin t + \dfrac{1}{2}\,\EH{t}\cos t - \dfrac{1}{2}
+% $$
+% 
+% 
+% Alternativ kann man im Komplexen rechnen:
+% \begin{align*}
+% I=&\int_0^t \EH{\tau}\cos \tau \text d \tau  =\int_0^t \Real(\EH{\tau}\cdot\EH{i\tau})  \text d \tau \\[1ex]
+% &=\Real\left(\int_0^t (\EH{(1+i)\tau}\text d \tau\right) =\left[\Real\left(\dfrac{\EH{(1+i)\tau}}{1+i}\right)\right]_0^t=\left[\EH{\tau}\Real\left(\dfrac{(\cos\tau+i\sin\tau)(1-i)}{2}\right)\right]_0^t\\[1ex]
+% &=\left[\EH{\tau}\cdot\dfrac{(\cos\tau+\sin\tau)}{2}\right]_0^t=\EH{t}\cdot\dfrac{(\cos t+\sin t)}{2}-\dfrac{1}{2}
+% \end{align*}
+% 
+% Somit ergibt sich
+% $$
+% \ f(t) = \EH{-t} \cdot I=\dfrac{1}{2} (\sin t + \cos t) - \dfrac{1}{2}\,\EH{-t}\ .\ 
+% $$
 
 }
 
@@ -103,5 +104,5 @@ $$
 \textbf{ b)} $\frac {\pi/2-\arctan s} s$, 
 \textbf{ c)} $\frac \pi 2$,
 \textbf{ d)} $\frac \pi 2 - \arctan (s+1)$,
-\textbf{ e)} $\frac {\sin t + \cos t}2 - \frac{\EH{-t}}2$
+% \textbf{ e)} $\frac {\sin t + \cos t}2 - \frac{\EH{-t}}2$
 }
