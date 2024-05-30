@@ -1,0 +1,142 @@
+\Aufgabe[e]{Alte Klausuraufgabe: lokale Extrema in 2 Dimensionen}{
+Gegeben sei die folgende multivariate Funktion:
+$$f(x,y) = (x^2 + 2y^2) \operatorname{e}^{-(x^2+y^2)}.$$
+Bestimmen Sie alle stationären Punkte und klassifizieren Sie diese als Maximum, Minimum oder
+Sattelpunkt.
+}
+
+\Loesung{
+Der Gradient von $f$ ist
+\begin{align*}
+\nabla f (x,y) &= 
+\begin{pmatrix}
+2x\operatorname{e}^{-(x^2+y^2)} + (x^2 + 2y^2)\operatorname{e}^{-(x^2+y^2)} (-2x) \\
+4y\operatorname{e}^{-(x^2+y^2)} + (x^2 + 2y^2)\operatorname{e}^{-(x^2+y^2)}(-2y)
+\end{pmatrix}\\
+&= \operatorname{e}^{-(x^2+y^2)}
+\begin{pmatrix}
+2x - 2x(x^2 + 2y^2)\\
+4y - 2y(x^2 + 2y^2)
+\end{pmatrix}
+\end{align*}
+
+$\nabla f(x,y) \overset{!}{=} 0$ führt zu dem System
+\begin{align*}
+0 &= 2x(1 - x^2 -2y^2)\\
+0 &= 2y(2 - x^2 - 2y^2)
+\end{align*}
+Aus der ersten Gleichung erhalten wir:
+\begin{align*}
+x = 0 \quad \text{ oder } \quad & 0 = 1 - x^2 - 2y^2 \\
+                 \Leftrightarrow & 2y^2 = 1 - x^2  
+\end{align*}
+Aus der zweiten Gleichung erhalten wir
+\begin{align*}
+y = 0 \quad \text{ oder } \quad & 0 = 2 - x^2 -2y^2\\
+                    \Leftrightarrow & 2y^2 = 2 - x^2
+\end{align*}
+Daher müssen wir die folgenden drei Fälle betrachten:
+\begin{iii}
+\item
+\begin{align*}
+x = 0, \quad y = 0
+\end{align*}
+\item
+\begin{align*}
+x = 0, \quad 2y^2 &= 2 - x^2 \\ 
+             2y^2 &= 2\\
+              y^2 &= 1\\
+                  &\Rightarrow x = 0, \quad y = -1\\
+                  &            x = 0, \quad y = 1
+\end{align*}
+\item
+\begin{align*}
+y=0, \quad 2y^2 &= 1 - x^2\\
+            0   &= 1- x^2\\
+            x^2 &= 1\\
+                &\Rightarrow x = -1, \quad y = 0\\
+                &            x = 1, \quad  y = 0
+\end{align*}
+\end{iii}
+Die Funktion hat die folgenden 5 stationären Punkte:
+\begin{align*}
+\begin{pmatrix} 0 \\ 0 \end{pmatrix},
+\begin{pmatrix} 0 \\ -1 \end{pmatrix},
+\begin{pmatrix} 0 \\ 1 \end{pmatrix},
+\begin{pmatrix} -1 \\ 0 \end{pmatrix},
+\begin{pmatrix} 1 \\ 0 \end{pmatrix}
+\end{align*}
+
+Um die stationären Punkte zu klassifizieren, benötigen wir die Hesse-Matrix
+$$
+H(x,y) = 2 \operatorname{e}^{-x^2-y^2} 
+\begin{pmatrix}
+1 - 5x^2 - 2y^2 + 2x^4 + 4x^2y^2 & - 6xy + 2x^3y + 4xy^3\\
+ - 6 xy + 2x^3y + 4xy^3 & 2 - x^2 - 10y^2 + 2x^2y^2 + 4y^4
+\end{pmatrix}
+$$
+
+Die Hesse-Matrix in dem kritischen Punkt $\begin{pmatrix} 0,0 \end{pmatrix}^T$ ist
+positiv definit
+$$
+H(0,0) = 
+2 \begin{pmatrix}
+1 & 0\\
+0 & 2
+\end{pmatrix}.
+$$
+Daher ist $\begin{pmatrix} 0,0 \end{pmatrix}^T$ ein Minimum.
+
+Die Hesse-Matrix in den kritischen Punkten $\begin{pmatrix} 0,-1 \end{pmatrix}^T$ und 
+$\begin{pmatrix} 0,1 \end{pmatrix}^T$ ist negativ definit
+$$
+H(0,-1) =
+\frac{2}{\operatorname{e}}
+\begin{pmatrix}
+-1 & 0\\
+0 & -4
+\end{pmatrix}
+$$
+$$
+H(0,1) =
+\frac{2}{\operatorname{e}}
+\begin{pmatrix}
+-1 & 0\\
+0 & -4
+\end{pmatrix}
+$$
+Daher sind $\begin{pmatrix} 0, -1 \end{pmatrix}^T$ und $\begin{pmatrix} 0, 1 \end{pmatrix}^T$ Maxima.
+
+Die Hesse-Matrix in den kritischen Punkten $\begin{pmatrix} -1, 0 \end{pmatrix}^T$ und 
+$\begin{pmatrix} 1, 0 \end{pmatrix}^T$ ist indefinit
+$$
+H(-1,0) =
+\frac{2}{\operatorname{e}}
+\begin{pmatrix}
+-2 & 0\\
+0 & 1
+\end{pmatrix}
+$$
+
+$$
+H(1,0) =
+\frac{2}{\operatorname{e}}
+\begin{pmatrix}
+-2 & 0\\
+0 & 1
+\end{pmatrix}
+$$
+Daher sind $\begin{pmatrix} -1,0 \end{pmatrix}^T$ und $\begin{pmatrix} -1,0 \end{pmatrix}^T$ 
+Sattelpunkte.
+
+}
+
+\ErgebnisC{analysExtrNdim003}{
+$
+\begin{pmatrix} 0 \\ 0 \end{pmatrix},
+\begin{pmatrix} 0 \\ -1 \end{pmatrix},
+\begin{pmatrix} 0 \\ 1 \end{pmatrix},
+\begin{pmatrix} -1 \\ 0 \end{pmatrix},
+\begin{pmatrix} 1 \\ 0 \end{pmatrix}
+$
+}

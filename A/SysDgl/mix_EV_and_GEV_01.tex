@@ -1,0 +1,163 @@
+\Aufgabe[f]{Differentialgleichungssysteme erster Ordnung}
+{
+Berechnen Sie die allgemeine Lösungen der folgenden Differentialgleichungssysteme:
+\begin{abc}
+\item
+\begin{align*}
+y'_1 &= 2y_1 - 3y_2,\\
+y'_2 &= -y_1 + 4y_2.
+\end{align*}
+\item
+\begin{align*}
+y'_1 &= -y_1,\\
+y'_2 &= -y_2.
+\end{align*}
+\item
+\begin{align*}
+y'_1 &= 2y_1 - y_2,\\
+y'_2 &= y_1 + 4y_2.
+\end{align*}
+\end{abc}
+}
+
+
+\Loesung{
+\begin{abc}
+\item
+Wir können das Differentialgleichungssystem schreiben als:
+$$
+\vec y' = \begin{bmatrix} y'_1 \\ y'_2 \end{bmatrix} =
+\begin{bmatrix}
+2 & -3 \\ -1 & 4
+\end{bmatrix}
+\begin{bmatrix}
+y_1 \\ y_2
+\end{bmatrix}.
+$$
+Das charakteristische Polynom der Systemmatrix ist:
+$$
+p(\lambda) = \lambda^2 - 6\lambda + 5.
+$$
+Die Nullstellen des Polynoms sind $\lambda_1 = 1$ und $\lambda_2 = 5$.
+Der Eigenvektor $\vec v_1$ zu dem Eigenwert $\lambda_1 = 1$ wird bestimmt durch das Lösen des 
+linearen Gleichungssystems:
+$$
+\begin{bmatrix}
+1 & -3 \\
+-1 & 3
+\end{bmatrix}
+\begin{bmatrix}
+v_{11} \\ v_{12}
+\end{bmatrix}
+=\begin{bmatrix}
+0\\0
+\end{bmatrix}
+$$
+Das führt zu
+$$
+\vec v_1 = \begin{bmatrix}3\\1 \end{bmatrix}.
+$$
+Der Eigenvektor $\vec v_2$ zu dem Eigenwert $\lambda_2 = 5$ wird bestimmt durch das Lösen des 
+linearen Gleichungssystems:
+$$
+\begin{bmatrix}
+-3 & -3 \\
+-1 & -1
+\end{bmatrix}
+\begin{bmatrix}
+v_{21} \\ v_{22}
+\end{bmatrix}
+=\begin{bmatrix}
+0\\0
+\end{bmatrix}
+$$
+Das führt zu
+$$
+\vec v_2 = \begin{bmatrix}1\\-1 \end{bmatrix}.
+$$
+Die allgemeine Lösung ist:
+$$
+\vec y = C_1 \operatorname{e}^{t} \begin{bmatrix} 3\\1 \end{bmatrix}
+        + C_2 \operatorname{e}^{5t} \begin{bmatrix} 1\\-1 \end{bmatrix},
+        \quad C_1,C_2 \in \mathbb{R}.
+$$
+\item
+Wir können das Differentialgleichungssystem schreiben als:
+$$
+\vec y' = \begin{bmatrix} y'_1 \\ y'_2 \end{bmatrix} =
+\begin{bmatrix}
+-1 & 0 \\ 0 & -1
+\end{bmatrix}
+\begin{bmatrix}
+y_1 \\ y_2
+\end{bmatrix}.
+$$
+Das charakteristische Polynom der Systemmatrix ist:$$
+p(\lambda) = (\lambda + 1)^2.
+$$
+Die Nullstellen des Polynoms sind $\lambda_1 = \lambda_2 = -1$.
+Die Eigenvektoren $\vec v_1,2$ können bestimmt werden durch lösen des Gleichungssystems:
+$$
+\begin{bmatrix}
+0 & 0 \\
+0 & 0
+\end{bmatrix}
+\vec v
+=\begin{bmatrix}
+0\\0
+\end{bmatrix}
+$$
+Daher ist jeder Vektor $\vec v \in \mathbb{R}^2$ ein Eigenwert. Wir wählen
+$\vec v_1 = \begin{bmatrix} 1\\0 \end{bmatrix}$ and $\vec v_2 \begin{bmatrix} 0\\ 1\end{bmatrix}$
+Die allgemeine Lösung ist
+$$
+\vec y = C_1 \operatorname{e}^{-t} \begin{bmatrix}1\\0 \end{bmatrix}
+       + C_2 \operatorname{e}^{-t} \begin{bmatrix}0\\1 \end{bmatrix}.
+$$
+\item
+Wir können das Differentialgleichungssystem schreiben als:
+$$
+\vec y' = \begin{bmatrix} y'_1 \\ y'_2 \end{bmatrix} =
+\begin{bmatrix}
+2 & -1 \\
+1 & 4
+\end{bmatrix}
+\begin{bmatrix}
+y_1 \\ y_2
+\end{bmatrix}.
+$$
+Das charakteristische Polynom der Systemmatrix ist:
+$$
+p(\lambda) = (\lambda - 3)^2.
+$$
+Da die Systemmatrix nicht diagonalisierbar ist, müssen wir den Eigenvektor $\vec v_1$ und den 
+Hauptvektor $\vec v_2$ bestimmen. Wir lösen dafür das lineare Gleichungssystem:
+$$
+\begin{bmatrix}
+-1 & -1\\
+1 & 1
+\end{bmatrix}
+\vec v_1 = 
+\begin{bmatrix}
+0\\0
+\end{bmatrix}
+$$
+ und 
+$$\begin{bmatrix}
+-1 & -1\\
+1 & 1
+\end{bmatrix}
+\vec v_2 = \vec v_1
+$$
+Das führt zu:
+$$
+\vec v_1 =\begin{bmatrix} -1\\1 \end{bmatrix} \quad \text{ and } \quad 
+\vec v_2 =\begin{bmatrix} 1\\0 \end{bmatrix}
+$$
+Daher ist die allgemeine Lösung:
+$$
+\vec y = C_1 \operatorname{e}^{3t} \begin{bmatrix}-1\\1 \end{bmatrix} + 
+         C_2 \operatorname{e}^{3t}\begin{bmatrix} 1-t \\ t \end{bmatrix}.
+$$
+\end{abc}
+}
