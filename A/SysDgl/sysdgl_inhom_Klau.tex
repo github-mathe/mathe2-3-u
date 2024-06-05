@@ -1,0 +1,125 @@
+\Aufgabe{}{
+Gegeben sei das folgende Differentialgleichungssystem
+
+$$
+\boldsymbol y'(t) = \begin{pmatrix}2 & 1 & 1\\ -1 & 0 & -1 \\ 1 & 1 & 2\end{pmatrix}
+                    \boldsymbol y(t) + \begin{pmatrix} 1\\ 3\\ 9\end{pmatrix}\operatorname{e}^{-3t}
+$$
+mit dem Anfangswert $\boldsymbol y(0) = \begin{pmatrix} -3\\2\\1 \end{pmatrix}$.
+
+\begin{abc}
+\item
+Ermitteln Sie die Fundamentalmatrix $\boldsymbol Y(t) $ des homogenen Systems und geben Sie die Lösung des homogenen Systems.
+\item
+Berechnen Sie die allgemeine Lösung des inhomogenen Systems und lösen Sie das Anfangswertproblem.
+\end{abc}
+}
+
+\Loesung{
+
+\begin{abc}
+\item
+Das charakteristische Polynom ist
+$$
+p(\lambda) = (2-\lambda)(1-\lambda)^2
+$$
+Die Eigenwerte sind also $\lambda_1 = 2$ und $\lambda_{2/3} = 1$.
+Die Eigenvektor $\boldsymbol v_1$ zu dem Eigenwert $\lambda_1 = 2$ ist
+$$\begin{array}{rrr|rl}
+0  &  1 &  1 & 0 & \text{tausche 1. Zeile und 3.Zeile} \\
+-1 & -2 & -1 & 0 &        \\
+1  &  1 &  0 & 0 &        \\\hline
+
+ 1 &  1 &  0 & 0 &         \\
+-1 & -2 & -1 & 0 & + \text{1. Zeile}   \\
+ 0 &  1 &  1 & 0 &         \\\hline
+
+ 1 &  1 &  0 & 0  &         \\
+ 0 & -1 & -1 & 0  &   \\
+ 0 &  1 &  1 & 0  & + \text{2. Zeile}\\\hline
+
+ 1 &  1 &  0 & 0  &         \\
+ 0 & -1 & -1 & 0  &   \\
+ 0 &  0 &  0 & 0  &   \\
+\end{array}$$
+Damit erhalten den Eigenvektor $\boldsymbol v_1 = \begin{pmatrix}1\\-1\\1 \end{pmatrix}$.
+
+Die Eigenvektoren $\boldsymbol v_2$ und $\boldsymbol v_3$ zu dem Eigenwert $\lambda = 1$
+
+$$\begin{array}{rrr|rl}
+1  &  1 &  1 & 0 &  \\
+-1 & -1 & -1 & 0 & + \text{1. Zeile}       \\
+1  &  1 &  1 & 0 & - \text{1. Zeile}      \\\hline
+
+ 1 &  1 &  1 & 0  &         \\
+ 0 &  0 &  0 & 0  &    \\
+ 0 &  0 &  0 & 0  &         \\
+
+\end{array}$$
+Daraus erhalten wir die Eigenvektoren $\boldsymbol v_2 = \begin{pmatrix} -1\\1\\0 \end{pmatrix}$
+und $\boldsymbol v_3 = \begin{pmatrix} -1\\ 0 \\1 \end{pmatrix}$.
+
+Die Fundamentalmatrix ist dann gegeben durch
+$$
+\boldsymbol Y(t) =
+\begin{pmatrix}
+\operatorname{e}^{2t} & -\operatorname{e}^{t} & -\operatorname{e}^{t}\\
+-\operatorname{e}^{2t}& \operatorname{e}^{t}  & 0 \\
+\operatorname{e}^{2t} & 0 & \operatorname{e}^{t}
+\end{pmatrix}
+$$
+Damit ist die allgemeine Lösung der homogenen Gleichung
+$$
+\boldsymbol y_h(t) = \boldsymbol Y(t) \boldsymbol c \quad \text{ mit } \, \boldsymbol c \in \mathbb{R}^3.
+$$
+\item
+Durch Variation der Konstanten erhalten wir die partikuläre Lösung $\boldsymbol y_p(t) = \boldsymbol Y(t) \boldsymbol c(t)$
+Wir lösen das Gleichungssystem $\boldsymbol Y(t)\boldsymbol c' = \begin{pmatrix} 1\\3\\9 \end{pmatrix}\operatorname{e}^{-3t}$.
+
+$$\begin{array}{rrr|rl}
+ \operatorname{e}^{2t}  &  -\operatorname{e}^{t} &  -\operatorname{e}^{t} &  \operatorname{e}^{-3t} &  \\
+-\operatorname{e}^{2t}  &   \operatorname{e}^{t} &  0                    & 3\operatorname{e}^{-3t} & + \text{ 1. Zeile} \\
+ \operatorname{e}^{2t}  &    0                   &  \operatorname{e}^{t} & 9\operatorname{e}^{-3t} & - \text{ 1. Zeile} \\ \hline
+
+ \operatorname{e}^{2t}  &  -\operatorname{e}^{t} &  -\operatorname{e}^{t} &  \operatorname{e}^{-3t} &  \\
+ 0                      & 0                      & -\operatorname{e}^{t}  & 4\operatorname{e}^{-3t} & \\
+ 0                      & \operatorname{e}^{t}   & 2\operatorname{e}^{t}  & 8\operatorname{e}^{-3t}
+\end{array}
+$$
+Wir erhalten
+$$
+\boldsymbol c'(t) = \begin{pmatrix} 13 \operatorname{e}^{-5t} \\ 16\operatorname{e}^{-4t} \\ -4\operatorname{e}^{-4t}\end{pmatrix}
+$$
+und damit
+$$
+\boldsymbol c(t)= \begin{pmatrix} -\frac{13}{5}\operatorname{e}^{-5t} \\-4\operatorname{e}^{-4t} \\ \operatorname{e}^{-4t} \end{pmatrix}
+$$
+Die allgemeine Lösung ist nun
+$$
+\boldsymbol y_{allg}(t) = \boldsymbol y_p(t) + \boldsymbol y_h(t) = \boldsymbol Y(t)(\boldsymbol c(t) + \boldsymbol c)
+$$
+Der konstante Vektor wird durch den Anfangswert festgelegt:
+\begin{align*}
+\begin{pmatrix} -3\\2\\1 \end{pmatrix} &= \boldsymbol Y(0)(\boldsymbol c(0) +\boldsymbol c)\\
+                                       &= \begin{pmatrix} 1 & -1 & -1\\-1 & 1 & 0\\ 1 & 0 & 1 \end{pmatrix} \begin{pmatrix} -\frac{13}{5}+c_1\\-4+c_2\\1+c_3 \end{pmatrix}
+\end{align*}
+Wir erhalten
+$$
+\boldsymbol c = \begin{pmatrix} 6\\ \frac{13}{5}\\0 \end{pmatrix}
+$$
+Die Lösung für das Anfangswertproblem lautet
+$$
+\boldsymbol y_{AWP} (t) =
+\begin{pmatrix}
+\operatorname{e}^{2t} & -\operatorname{e}^{t} & -\operatorname{e}^{t}\\
+-\operatorname{e}^{2t}& \operatorname{e}^{t}  & 0 \\
+\operatorname{e}^{2t} & 0 & \operatorname{e}^{t}
+\end{pmatrix}
+\left(
+\begin{pmatrix} -\frac{13}{5}\operatorname{e}^{-5t} \\-4\operatorname{e}^{-4t} \\ \operatorname{e}^{-4t} \end{pmatrix}
++ \begin{pmatrix} 6\\ \frac{13}{5}\\0 \end{pmatrix}
+\right)
+$$
+\end{abc}
+
+}
