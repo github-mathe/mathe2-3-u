@@ -14,85 +14,84 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-% \setboolean{mitLoes}{true}
+\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %\setboolean{WITHPSTRICKS}{false}
-%\setboolean{WITHPSTRICKS}{true}
+\setboolean{WITHPSTRICKS}{true}
 
 \input{begin}
 \setboolean{mitErg}{false}
- \setboolean{mitErg}{true}
+%  \setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Set the INTRODUCTION section of the sheet here:
 % \input{introduction.tex}
-
+\renewcommand{\d }{\mathrm{d}}
 \ruleBig
 
-%Mathe II Blatt 1
-\input{../Lineare_Algebra/linalg_Abbi_Kmpl_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%Mathe III
+%1
 \input{../Lineare_Algebra/basis_Rn_005.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%2
 \input{../Lineare_Algebra/equations_complex_linear_system_002.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+% 3
 \input{../Lineare_Algebra/equations_linear_system_007.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%4
 \input{../Lineare_Algebra/lgs_klausur_aufgabe_2021.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%5
 \input{../Lineare_Algebra/linalg_Abbi_Klau_01b.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%6
+\input{../Lineare_Algebra/linalg_Abbi_Kmpl_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%7
 \input{../Lineare_Algebra/linalg_Base_Ausw_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%8
 \input{../Lineare_Algebra/linalg_Basis_Darst_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%9
 \input{../Lineare_Algebra/linalg_Basis_Rn_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%10
 \input{../Lineare_Algebra/linalg_Basis_Rn_002.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%11
 \input{../Lineare_Algebra/linalg_Basis_Rn_006.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%12
 \input{../Lineare_Algebra/linalg_Detn_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%13
 \input{../Lineare_Algebra/linalg_Detn_Gauss_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%14
 \input{../Lineare_Algebra/linalg_Detn_Lapl_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%15
 \input{../Lineare_Algebra/linalg_Detn_Lapl_002.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%16
 \input{../Lineare_Algebra/linalg_Drehmatrix.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%17
 \input{../Lineare_Algebra/linalg_Ebne_Abbi_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%18
 \input{../Lineare_Algebra/linalg_Eign_Wert_002.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
+%19
 \input{../Lineare_Algebra/linalg_Eign_Wert_005.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-
-%TODO: Was ist hier falsch?
 % \input{../Lineare_Algebra/linalg_Eulr_Wnkl_001.tex}
 % \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
@@ -132,6 +131,7 @@
 \input{../Lineare_Algebra/linalg_Lgsy_Para_008a.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+
 \input{../Lineare_Algebra/linalg_Lgsy_Typn_003.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
@@ -143,6 +143,7 @@
 
 \input{../Lineare_Algebra/linalg_Mapr_Kmpl_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 
 \input{../Lineare_Algebra/linalg_Mapr_Reel_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
@@ -165,6 +166,7 @@
 \input{../Lineare_Algebra/linalg_Matr_Symm_003.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+
 \input{../Lineare_Algebra/linalg_Orthogonale_Projektion_001-2011-M1-KL1_b.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
@@ -177,13 +179,14 @@
 \input{../Lineare_Algebra/linalg_Poly_Inte_004.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+
 \input{../Lineare_Algebra/linalg_Posi_Defi_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../Lineare_Algebra/linalg_SkalarProd_Def_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../Lineare_Algebra/linalg_SkalarProd_Def_001.tex}
+\input{../Lineare_Algebra/linalg_Skalar_Produkt_ReCe.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../Lineare_Algebra/linalg_Spgl_Proj_001.tex}
@@ -192,12 +195,11 @@
 \input{../Lineare_Algebra/linalg_Tetr_Volu_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../Lineare_Algebra/linalg_Tetr_Volu_001.tex}
+\input{../Lineare_Algebra/linalg_Uabh_Lgsy_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../Lineare_Algebra/linalg_Untr_Raum_013.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
 
 
 \input{../Lineare_Algebra/linalg_Untr_Raum_03b.tex}
@@ -206,11 +208,12 @@
 \input{../Lineare_Algebra/linalg_Untr_RaumDim_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../Lineare_Algebra/linalg_Untr_RaumDim_001.tex}
+\input{../Lineare_Algebra/linalg_Vekt_Krft_010.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../Lineare_Algebra/linalg_VeMa_Norm_011.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 
 \input{../Lineare_Algebra/linalg_VeMa_Norm_012.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
@@ -233,8 +236,13 @@
 \input{../Lineare_Algebra/tensor_produkt_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+
 \input{../Lineare_Algebra/vector_subspace_dimension_002.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../Lineare_Algebra/linalg_Eignw_Potenz_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 
 \end{twocolumn}
 \end{document}
