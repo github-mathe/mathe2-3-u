@@ -1,0 +1,32 @@
+\Aufgabe{}{
+Gegeben sei die Matrix
+$\vec A = \begin{pmatrix} 1 & 2\\ 0 & 1 \end{pmatrix}$.
+
+Lösen Sie das homogene Differentialgleichungssystem
+$$
+\dot{\vec x}(t) = \vec A \vec x(t).
+$$
+Geben Sie auch die Fundmentalmatrix an.
+}
+
+\Loesung{
+Die Matrix $\vec A$ hat den doppelten Eigenwert $\lambda = 1$ mit dem Eigenvektor 
+$\vec v = \begin{pmatrix} 1\\ 0\end{pmatrix}$.
+
+Um den Hauptvektor zu bestimmen, wir die Lösung des Gleichungssystems
+$$
+(\vec A - 1\cdot \vec E) \vec w = \vec v
+$$
+Eine mögliche Wahl für den Hauptvektor ist $\vec w = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$.
+Damit ist die allgemeine Lösung des Systems
+\begin{align*}
+\vec x(t) &= \operatorname{e}^{\lambda t} (c_1 \vec v + c_2( \vec w + t \vec v)) \\
+& \operatorname{e}^t \left( c_1 \begin{pmatrix} 1\\0 \end{pmatrix} + c_2 \left(
+\begin{pmatrix} 0\\1 \end{pmatrix} + t \begin{pmatrix} \end{pmatrix} \right) \right) \\
+&= \operatorname{e}^t \begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix} \begin{pmatrix} c_1\\c_2 \end{pmatrix}.
+\end{align*}
+Die Fundmentalmatrix ist dann
+$$
+\vec X (t) =  \begin{pmatrix} \operatorname{e}^t & t\operatorname{e}^t \\ 0 & \operatorname{e}^t \end{pmatrix}.
+$$
+}

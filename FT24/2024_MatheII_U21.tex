@@ -42,7 +42,7 @@
 
 \begin{itemize}
 \item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
-\item Die mit einem Stern *) markierten Aufgaben sind nur für Studierende von ET relevant.
+% \item Die mit einem Stern *) markierten Aufgaben sind nur für Studierende von ET relevant.
 
 % \item Die mit einem Stern *) markierten (Teil-)Aufgaben entfallen in diesem Trimester. Stattdessen werden einzelne Online-Aufgaben im ILIAS-Kurs kenntlich gemacht, zu denen Sie dort Ihre L\"osungswege zur Korrektur hochladen k\"onnen. 
 % \item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
@@ -51,16 +51,21 @@
 \ruleBig
 
 %Mathe III Blatt 21
+\input{../A/SysDgl/sysdgl_Syst_Loes_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%----
+\input{../A/SysDgl/system_1st_order_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../A/SysDgl/sysdgl_Mixd_Klau_11a.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%8
-\input{../A/SysDgl/sysdgl_Syst_Loes_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-\input{../A/SysDgl/sysdgl_Syst_Loes_004.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 \input{../A/SysDgl/sysdgl_inhom_Klau.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/SysDgl/sysdgl_Syst_Loes_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
 \ifthenelse{\boolean{mitErg}}{
 \ruleBig

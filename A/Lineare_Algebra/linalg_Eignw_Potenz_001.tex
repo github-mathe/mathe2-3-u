@@ -1,0 +1,165 @@
+\Aufgabe{}{
+
+Sei $A \in \mathbb R^{(3,3)}$ die Matrix:
+\[ A = \begin{pmatrix}
+1 & 1 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 1
+\end{pmatrix} \]
+
+\begin{itemize}
+    \item Ist die Matrix diagonalisierbar?
+    \item Man bestimme die Potenz \( A^6 \) ohne Matrixprodukte zu benutzen.
+\end{itemize}
+}
+
+\Loesung{
+1. Eigenwerte und Eigenvektoren:
+
+   Die Eigenwerte einer Matrix \( A \) erhält man durch Lösen der charakteristischen Gleichung \(\det(A - \lambda I) = 0\). Für die gegebene Matrix \( A \) berechnen wir:
+   \[
+   \det\begin{pmatrix}
+   1 - \lambda & 1 & 0 \\
+   0 & 2 - \lambda & 0 \\
+   0 & 0 & 1 - \lambda
+   \end{pmatrix} = (1 - \lambda)\begin{vmatrix}
+   2 - \lambda & 0 \\
+   0 & 1 - \lambda
+   \end{vmatrix}
+   = (1 - \lambda)^2 (2 - \lambda)
+   \]
+
+   Die charakteristische Gleichung ist:
+   \[
+   (1 - \lambda)^2 (2 - \lambda) = 0
+   \]
+
+   Die Lösungen dieser Gleichung sind die Eigenwerte:
+   \[
+   \lambda_1 = 1, \quad \lambda_2 = 1, \quad \lambda_3 = 2
+   \]
+
+   Jetzt bestimmen wir die entsprechenden Eigenvektoren.
+
+   - Für \(\lambda_1 = 1\), lösen wir \((A - I)v = 0\):
+     \[
+     \begin{pmatrix}
+     0 & 1 & 0 \\
+     0 & 1 & 0 \\
+     0 & 0 & 0
+     \end{pmatrix}
+     \begin{pmatrix}
+     v_1 \\
+     v_2 \\
+     v_3
+     \end{pmatrix} = 0
+     \]
+     Ein möglicher Eigenvektor ist \(v_1 = \begin{pmatrix}
+     1 \\
+     0 \\
+     0
+     \end{pmatrix}\).
+
+   - Für \(\lambda_2 = 1\), lösen wir \((A - I)v = 0\) erneut und erhalten einen zweiten Eigenvektor:
+     \[
+     \begin{pmatrix}
+     0 & 1 & 0 \\
+     0 & 1 & 0 \\
+     0 & 0 & 0
+     \end{pmatrix}
+     \begin{pmatrix}
+     v_1 \\
+     v_2 \\
+     v_3
+     \end{pmatrix} = 0
+     \]
+     Ein möglicher Eigenvektor ist \(v_2 = \begin{pmatrix}
+     0 \\
+     0 \\
+     1
+     \end{pmatrix}\).
+
+   - Für \(\lambda_3 = 2\), lösen wir \((A - 2I)v = 0\):
+     \[
+     \begin{pmatrix}
+     -1 & 1 & 0 \\
+     0 & 0 & 0 \\
+     0 & 0 & -1
+     \end{pmatrix}
+     \begin{pmatrix}
+     v_1 \\
+     v_2 \\
+     v_3
+     \end{pmatrix} = 0
+     \]
+     Ein möglicher Eigenvektor ist \(v_3 = \begin{pmatrix}
+     1 \\
+     1 \\
+     0
+     \end{pmatrix}\).
+
+   Somit ist die Matrix \( P \) aus den Eigenvektoren:
+   \[
+   P = \begin{pmatrix}
+   1 & 1 & 0 \\
+   0 & 1 & 0 \\
+   0 & 0 & 1
+   \end{pmatrix}
+   \]
+
+   Die Diagonalmatrix \( D \) ist:
+   \[
+   D = \begin{pmatrix}
+   1 & 0 & 0 \\
+   0 & 2 & 0 \\
+   0 & 0 & 1
+   \end{pmatrix}
+   \]
+
+2. **Berechnung der Potenz**:
+
+   Mit der Diagonalisierung können wir \( A^6 \) wie folgt berechnen:
+   \[ A^6 = (PDP^{-1})^6 = PD^6P^{-1} \]
+
+   Um \( D^6 \) zu berechnen, erheben wir jeden Diagonaleintrag zur Potenz 6:
+   \[
+   D^6 = \begin{pmatrix}
+   1^6 & 0 & 0 \\
+   0 & 2^6 & 0 \\
+   0 & 0 & 1^6
+   \end{pmatrix} = \begin{pmatrix}
+   1 & 0 & 0 \\
+   0 & 64 & 0 \\
+   0 & 0 & 1
+   \end{pmatrix}
+   \]
+
+   Daher ist:
+   \[
+   A^6 = P D^6 P^{-1} = \begin{pmatrix}
+   1 & 1 & 0 \\
+   0 & 1 & 0 \\
+   0 & 0 & 1
+   \end{pmatrix}
+   \begin{pmatrix}
+   1 & 0 & 0 \\
+   0 & 64 & 0 \\
+   0 & 0 & 1
+   \end{pmatrix}
+   \begin{pmatrix}
+   1 & -1 & 0 \\
+   0 & 1 & 0 \\
+   0 & 0 & 1
+   \end{pmatrix}
+   \]
+
+   Durch Multiplikation erhalten wir:
+   \[
+   A^6 = \begin{pmatrix}
+   1 & 63 & 0 \\
+   0 & 64 & 0 \\
+   0 & 0 & 1
+   \end{pmatrix}
+   \]
+
+}
