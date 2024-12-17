@@ -9,8 +9,8 @@
 \newcommand{\Trimester}{WT}
 \newcommand{\Kurs}{Mathematik II/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{1}
-\newcommand{\TOPIC}{Grenzwerte, Folgen, Stetigkeit}
+\newcommand{\BLATT}{2}
+\newcommand{\TOPIC}{Grenzwerte, Stetigkeit, Ableitungen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
@@ -21,7 +21,7 @@
 
 
 %\setboolean{WITHPSTRICKS}{false}
-%\setboolean{WITHPSTRICKS}{true}
+\setboolean{WITHPSTRICKS}{true}
 
 \input{begin}
 \setboolean{mitErg}{false}
@@ -42,38 +42,22 @@
 
 \ruleBig
 
-%Mathe II Blatt 1
-% \input{../A/Lineare_Algebra/linalg_Eign_Wert_002.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
-% 
-% \input{../A/Lineare_Algebra/linalg_Eign_Wert_005.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+%Mathe II Blatt 
 
-
-
-\input{../A/Analysis/analys_Gren_Wert_004.tex}
+\input{../A/Analysis/analys_Ablt_01.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/aufgabe2.tex}
+\input{../A/Analysis/analys_Stet_Igkt_01a.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Gren_Wert_005.tex}
+\input{../A/Analysis/analys_Diff_Rech_01c.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Funk_Lims_001.tex}
+\input{../A/Analysis/analys_Diff_Para_01c.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 \newpage
-\input{../A/Analysis/analys_Gren_Wert_006_de.tex}
+\input{../A/Analysis/analys_Satl_Bahn_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-% % 
-% \newpage
-% \input{../A/Analysis/analys_Stet_Igkt_01a.tex}
-% \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\newpage
-\input{../A/Analysis/continuity_001_de.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
 
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
