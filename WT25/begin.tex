@@ -1,0 +1,97 @@
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,backgrounds,calendar,decorations.pathmorphing,fadings,shadings,calc,intersections}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.shapes}
+\usetikzlibrary{decorations.footprints}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{positioning}
+\usetikzlibrary{through}
+
+\ifthenelse{\boolean{WITHPSTRICKS}}{%
+\usepackage{auto-pst-pdf}
+\usepackage{pstricks,pst-plot,pst-text}
+}{}
+
+\usepackage{pgfplots}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mbdefAufgaben}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitErg}
+\setboolean{mitErg}{false}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{Aufg}
+\setcounter{Aufg}{0}
+\newcounter{Blatt}
+\setcounter{Blatt}{\BLATT}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{KopfEnglish}
+
+% Seitenraender
+\textwidth = 285mm
+\textheight = 180mm
+\leftmargin 5mm
+\oddsidemargin = -20mm
+\evensidemargin = -20mm
+\topmargin = -25mm
+\parindent 0cm
+\columnsep 2cm
+
+% % % Aufgabenstellung
+% % % Schwierungkeitsgrad mit "e" , "f" oder "v" angeben
+% % % "e" Einführung   
+% % % "f" Festigung
+% % % "v" Vertiefung  
+
+\newcommand{\Aufgabe}[3][]{
+\stepcounter{Aufg}
+\subsubsection*{Aufgabe 
+\arabic{Blatt}.\arabic{Aufg}\ifthenelse{\equal{#1}{e}}{}{\ifthenelse{\equal{#1}{f}}{
+$\!\!{}^\star$}{\ifthenelse{\equal{#1}{v}}{$^{\star\star}$}{}}}{: #2}}
+{#3}
+}
+% % % Ergebnisse jeweils am Ende des Aufgabenblattes Anzeigen
+\newcommand{\Ergebnisse}{}
+\makeatletter
+\newcommand{\Ergebnis}[1]{
+	\g@addto@macro{\Ergebnisse}{#1}
+}
+\makeatother
+\makeatletter
+\newcommand{\ErgebnisC}[2]{
+\@ifundefined{c@#1}
+{\newcounter{#1}}
+{}
+\setcounter{#1}{\theAufg}
+
+\ifthenelse{\boolean{mitErg}}{	\g@addto@macro{\Ergebnisse}{\subsubsection*{Ergebnisse zu Aufgabe \arabic{Blatt}.\arabic{#1}:}
+}%
+	\g@addto@macro{\Ergebnisse}{#2}}{}
+}
+\makeatother
+
+
+% % % Lösungen
+\newcommand{\Loesung}[1]{
+	\ifthenelse{\boolean{mitLoes}}
+	{\subsubsection*{Lösung \arabic{Blatt}.\arabic{Aufg}:}
+		#1}
+	{}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{document}
+\begin{twocolumn}
+% % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the TITLE of the sheet here:
+%\uebheader{\Kurs}{\arabic{Blatt}}{\Trimester\,\Jahr}{\TOPIC}
+%\uebheader{\Kurs}{\arabic{Blatt}}{\Trimester\,\Jahr}{\TOPIC}
+\uebheader{\Kurs}{\arabic{Blatt}}{\Trimester\,\Jahr}{\TOPIC}
+\ruleBig
