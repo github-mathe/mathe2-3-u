@@ -10,12 +10,12 @@
 \newcommand{\Kurs}{Mathematik II/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
 \newcommand{\BLATT}{1}
-\newcommand{\TOPIC}{Grenzwerte, Folgen}
+\newcommand{\TOPIC}{Funktionsgraphen, Grenzwerte, Folgen, Differenzieren}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-\setboolean{mitLoes}{true}
+%\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -52,7 +52,11 @@
 \input{../A/Analysis/aufgabe2.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+\input{../A/Analysis/analys_Diff_einfach.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+\input{../A/Analysis/analys_Diff_Rech_01c.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
