@@ -1,7 +1,7 @@
 \Aufgabe[e]{Station\"are Punkte} {
  Gegeben sei die Funktion
 $$
-f(x,y) =  ax^2 + 2xy + ay^2-ax-ay
+f(x,y) =  ax^2 + 2xy + ay^2-ax-ay.
 $$
 Bestimmen Sie diejenigen $a\in \R$, f\"ur welche die Funktion 
 $f$ relative Maxima, relative Minima und Sattelpunkte besitzt und geben Sie 
@@ -12,15 +12,15 @@ diese an.
 In station\"aren Punkten  muss der Gradient der Funktion Null werden: 
 \begin{align*}
 &\vec 0= \nabla f(x,y)=\begin{pmatrix} 2ax+2y-a\\2x+2ay-a\end{pmatrix}\\
-&\begin{array}{rr|r|l}
-2a     &    2 &     a& \\
-2      &   2a &     a&  \text{wir vertauschen die 1. und 2. Zeile}\\\hline
-2      &   2a &     a&  \\
-2a     &    2 &     a& -a\cdot\text{ 1. Zeile}\\\hline
-2     &    2a &     a  & : 2\\
-0     &    2-2a^2 &     a  &  : (2-2a^2), \text{ f\"ur }a^2\neq 1\\\hline
-1     &    a & \frac a 2  & \\
-0 &    1 & \frac{a(1-a)}{2(1-a^2)}\\
+&\begin{array}{r|rr|r|l}
+\mathrm{I}  & 2a     &    2 &     a& \mathrm{I'} = \mathrm{II}\\
+\mathrm{II} & 2      &   2a &     a& \mathrm{II'} = \mathrm{I}\\\hline
+\mathrm{I}' & 2      &   2a &     a&  \\
+\mathrm{II'} & 2a     &    2 &     a&\mathrm{II''}= \mathrm{II'} -a\cdot \mathrm{I'}\\\hline
+\mathrm{I'}& 2     &    2a &     a  & \mathrm{I''}= \mathrm{I'}: 2\\
+\mathrm{II''}& 0     &    2-2a^2 &     a  & \mathrm{II'''} = \mathrm{II''} : (2-2a^2), \text{ f\"ur }a^2\neq 1\\\hline
+\mathrm{I''}& 1     &    a & \frac a 2  & \\
+\mathrm{II'''}& 0 &    1 & \frac{a(1-a)}{2(1-a^2)}\\
 \end{array}
 \end{align*}
 Dann ist 
@@ -64,4 +64,4 @@ F\"ur $a\neq \pm 1$ ist der station\"are Punkt $\frac a{2(1+a)}(1,1)^\top$. F\"u
 mehrere station\"are Punkte. 
 }
 }
-
+

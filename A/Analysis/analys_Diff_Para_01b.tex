@@ -8,7 +8,7 @@ b x^3+cx^2+d& \quad & \text{ f\"ur } x\leq 1\\
 $$
 auf $\R$ zweimal differenzierbar ist. \\
 Ist $g(x)$ f\"ur diese Wahl auch dreimal differenzierbar?
-\item \"Uberpr\"ufen Sie, dass die Funktion 
+\item Zeigen Sie, dass die Funktion 
 $$  f:\R \to \R, \quad f(x) = \begin{cases}
      x \sin(1/x) & \text{ f\"ur } x \ne 0 , \\ 0 & \text{ f\"ur } x=0 
   \end{cases} $$
@@ -18,7 +18,8 @@ in $x=0$ stetig ist, aber \textit{nicht } differenzierbar. \\
 $$ f:\R \to \R, \quad f(x) = \begin{cases}
     x^2 \sin(1/x) & \text{ f\"ur } x \ne 0 , \\
        0 & \text{ f\"ur } x=0 \end{cases} $$
-ist in $x=0$ differenzierbar. Ist die Ableitung dort stetig? Hinweis: Betrachten Sie die Folge $(x_n)_{n\in \N}$ mit $x_n=\frac{1}{2n\pi}$.
+ist in $x=0$ differenzierbar. Ist die Ableitung dort stetig? 
+\textbf{Hinweis:} Betrachten Sie die Folge $(x_n)_{n\in \N}$ mit $x_n=\frac{1}{2n\pi}$.
 \end{abc}
 
 }
@@ -50,7 +51,7 @@ g''_+(1)&=\underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{g'(x)
 &= \underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \frac{1-x}{x(x-1)}
  = \underset{\tiny\begin{array}{l}x\to 1\\x>1\end{array}}\lim \left(-\frac 1x\right)=-1
 \end{align*}
-Beide Grenzwerte m\"ussen \"ubereinstimmen, damit $g''(1)$ sinnvoll definiert ist, also gilt
+Beide Grenzwerte m\"ussen \"ubereinstimmen, damit $g''(1)$ sinnvoll definiert ist. Also gilt
 $$b=\frac{-2}3\,\Rightarrow \, c=\frac 32\,\Rightarrow\, d=-b-c=\frac{-5}6.$$
 Man hat dann 
 $$g''(x)=\left\{\begin{array}{lll}
@@ -78,8 +79,9 @@ differenzierbar.
   und somit ist $|f(x)-f(0)|=|f(x)| \le |x| \underset{x \to 0}{\longrightarrow} 0$. \\
   Der Differenzenquotient in $x_0=0$ ist
   $$ Q(x) := \dfrac{f(x)-f(x_0)}{x-x_0} = \dfrac{1}{x} f(x)=\sin(1/x). $$
-  Dieser Ausdruck konvergiert \textbf{nicht} f"ur $x \to 0$.
-  Setzt man zum Beispiel $x_n = \dfrac{1}{n \pi+\pi/2}$, dann gilt 
+  Dieser Ausdruck konvergiert \textbf{nicht} f\"ur $x \to 0$.
+  Setzt man zum Beispiel 
+  $x_n = \dfrac{1}{n \pi+\pi/2}$, dann gilt 
   $x_n \underset{n \to \infty}{\longrightarrow} 0$ und
  $$Q(x_n)=\sin(n \pi+\pi/2)=\left\{\begin{array}{rl}
 +1,\,&\text{ f\"ur gerade }n\\
@@ -87,9 +89,9 @@ differenzierbar.
 \end{array}\right.$$
 \item  Der Differenzenquotient in $x_0=0$ ist
  $$ Q(x) := \dfrac{f(x)-f(x_0)}{x-x_0} = \dfrac{1}{x} f(x)=x\sin(1/x). $$
- Dies konvergiert f"ur $x \to 0$ gegen $0$, wie schon in Teil a) gezeigt
+ Dies konvergiert f\"ur $x \to 0$ gegen $0$, wie schon in Teil a) gezeigt
  wurde. Damit ist $f$ in $x_0=0$ differenzierbar und $f^\prime(0)=0$. 
- Die Ableitung f"ur $x \ne 0$ ist
+ Die Ableitung f\"ur $x \ne 0$ ist
  $$ f^\prime(x)= 2x \sin(1/x) + x^2 \cos(1/x) \left(-\dfrac{1}{x^2}\right)
    = 2x \sin(1/x) - \cos(1/x) . $$
  Sie konvergiert nicht in $x=0$. Sei dazu $x_n=\frac
