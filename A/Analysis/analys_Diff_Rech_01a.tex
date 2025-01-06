@@ -1,0 +1,43 @@
+\Aufgabe[e]{Differenzieren}{
+ Bestimmen Sie jeweils die erste Ableitung. (Eventuell notwendige Beschr\"ankungen des Definitionsgebietes sind nicht angegeben.) 
+\begin{align*}
+%f_9(t)=&\sinh(t)-\cosh(2t)                          ,&\qquad  &&  
+%f_{10}(t)=&(t-3)^4\,\sinh(t),                        \\            
+f_{11}(t)=&t^2\,\text{e}^{-2t}\,\sin (3t)            ,&\qquad  && 
+f_{12}(t)=&\sqrt{t}\,\text{e}^{2t},                   \\           
+f_{13}(t)=&\sin ^3\left( \text{e}^{2t^2}+t^5\right)   ,&\qquad  &&  
+f_{14}(t)=&\sqrt{2\,t^2+1},                            \\            
+f_{15}(t)=&\ln (t)-\ln (5t)                            ,&\qquad  && 
+f_{16}(t)=&\ln (t^2)-\ln (t^5).                         \\           
+\end{align*}
+}
+
+\Loesung{
+\begin{align*}
+%f_9'(t)= & \cosh(t) - 2\sinh(2t)\\
+%f_{10}'(t)= & 4(t-3)^3\sinh(t)+(t-3)^4\cosh(t)\\
+f_{11}'(t)= & 2t\EH{-2t}\sin(3t)+t^2(-2\EH{-2t})\sin(3t)+t^2\EH{-2t}\cdot 3\cos(3t)\\
+=& t\EH{-2t}\bigl( 2(1-t)\sin(3t) +3t\cos(3t)\bigr)\\
+f_{12}'(t)= & \frac{1}{2\sqrt t} \EH{2t} + \sqrt t \cdot 2 \EH{2t} = \frac{1+4t}{2\sqrt t} \EH{2t}\\
+f_{13}'(t)= & 3\sin^2\left( \EH{2t^2}+t^5\right)\cdot \cos\left( \EH{2t^2}+t^5\right)\cdot \left( 4t\EH{2t^2}+5t^4\right)\\
+f_{14}'(t)= & \frac{4t}{2\sqrt{2t^2+1}}\\
+f_{15}'(t)= & \frac 1 t - \frac{5}{5t}=0\\
+f_{16}'(t)= & \frac d{dt} (\ln (t^2)-\ln (t^5)) = \frac d{dt}(2\ln t - 5 \ln t) = \frac{-3}{t}
+\end{align*}
+
+}
+
+\ErgebnisC{AufganalysDiffRech001}
+{
+%\textbf{a)} 
+$
+%f_9'(2) \approx      -50.818   ,\,
+%f_{10}'(2) \approx  -10.745     ,\,
+f_{11}'(2) \approx   0.2315     ,\,
+f_{12}'(2) \approx   173.73     ,\,
+f_{13}'(2) \approx -2039.7  ,$\\
+$f_{14}'(2) =    4/3       ,\, 
+f_{15}'(2) =   0          ,\, 
+f_{16}'(2) =    -3/2
+$
+}
