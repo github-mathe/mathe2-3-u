@@ -2,7 +2,7 @@
 \input{header}
 
 \newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
-\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} Dr. Ulrike Kochan-Eilers\end{tabular}}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} M. Sc. Janna Puderbach\end{tabular}}
 
 \newcommand{\Jahr}{2025}
 % \newcommand{\Trimester}{HT}
@@ -25,7 +25,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
- \setboolean{mitErg}{true}
+\setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,20 +44,26 @@
 
 %Mathe II Blatt 
 
+\input{../A/Analysis/analys_Gren_Wert_006_de.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Folg_Lims_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}
+
+\newpage
 \input{../A/Analysis/analys_Ablt_01.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Stet_Igkt_01a.tex}
+\input{../A/Analysis/analys_Diff_Rech_01a.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Diff_Rech_01c.tex}
+\input{../A/Analysis/analys_Diff_Rech_01_nurb.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Diff_Para_01c.tex}
+\input{../A/Analysis/continuity_001_de.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 \newpage
-\input{../A/Analysis/analys_Satl_Bahn_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
