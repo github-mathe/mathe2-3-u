@@ -25,7 +25,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
- \setboolean{mitErg}{true}
+\setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,8 +49,8 @@
 \input{../A/Analysis/analys_Diff_Para_01c.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/continuity_001_de.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%\input{../A/Analysis/continuity_001_de.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../A/Analysis/analys_Stet_Igkt_01a.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
@@ -61,6 +61,8 @@
 \input{../A/Analysis/analys_Satl_Bahn_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+\input{../A/Analysis/analys_Differenzieren.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
 \ifthenelse{\boolean{mitErg}}{
