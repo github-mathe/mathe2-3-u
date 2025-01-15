@@ -1,0 +1,76 @@
+\Aufgabe[e]{Divergenz von Folgen}{
+    Betrachten Sie die Folge:
+    \[
+    a_n = \frac{n!}{\sqrt{n}}.
+    \]
+    Zeigen Sie, dass die Folge \((a_n)\) gegen \(\infty\) strebt, indem Sie die Definition 1.10 des Skriptes nutzen. Zeigen Sie dazu, dass für jedes \(M > 0\) ein \(N \in \mathbb{N}\) existiert, sodass:
+        \[
+        a_n > M \quad \text{für alle } n > N.
+        \]
+ 
+        \textbf{Hinweis:}
+	Verwenden Sie die Stirling-Approximation für \(n!\):
+        \[
+        n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n,
+        \]
+        um das asymptotische Verhalten von \(a_n\) zu bestimmen, und verwenden Sie die Abschätzung \(n (\ln n - 1) > n\) für \(n > 8\), um ein geeignetes \(N\) für ein gegebenes \(M > 0\) zu finden.
+}
+
+\Loesung{
+    Mit der Stirling-Approximation:
+    \[
+    n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n,
+    \]
+    ergibt sich:
+    \[
+    a_n = \frac{n!}{\sqrt{n}} \sim \frac{\sqrt{2\pi n} \left(\frac{n}{e}\right)^n}{\sqrt{n}} = \sqrt{2\pi} \cdot \frac{n^n}{e^n}.
+    \]
+
+    \bigskip
+    \textbf{Definition der Divergenz:} \\
+    Wir zeigen, dass \(a_n \to \infty\), indem wir für jedes \(M > 0\) ein \(N\) finden, sodass:
+    \[
+    a_n > M.
+    \]
+
+    Da \(a_n \sim \sqrt{2\pi} \cdot \frac{n^n}{e^n}\), genügt es zu zeigen, dass:
+    \[
+    \frac{n^n}{e^n} > \frac{M}{\sqrt{2\pi}}.
+    \]
+
+    Nehmen wir den Logarithmus:
+    \[
+    n \ln n - n > \ln\left(\frac{M}{\sqrt{2\pi}}\right).
+    \]
+
+    \bigskip
+    \textbf{Abschätzung für \(n\):} \\
+    Für \(n > 8\) gilt die Ungleichung:
+    \[
+    n (\ln n - 1) > n.
+    \]
+    Daher genügt es, ein \(n\) zu finden, sodass:
+    \[
+    n > \ln\left(\frac{M}{\sqrt{2\pi}}\right).
+    \]
+
+    \textbf{Beispiel:} Für \(M = 1000\) ergibt sich:
+    \[
+    \ln\left(\frac{1000}{\sqrt{2\pi}}\right) \approx \ln(398.94) \approx 5.99.
+    \]
+    Also muss \(n > 5.99\). Wählen wir \(N = 8\), dann gilt für alle \(n > N\):
+    \[
+    a_n > 1000.
+    \]
+
+    Somit gilt allgemein:
+    \[
+    n > \max(8, \ln(M)/\sqrt{2\pi}).
+    \]
+    
+    Die Folge \(a_n = \frac{n!}{\sqrt{n}}\) strebt nach \(\infty\).
+}
+\ErgebnisC{Divergenz}
+{
+$N = \max(8, \ln(M)/\sqrt{2\pi})$
+}
