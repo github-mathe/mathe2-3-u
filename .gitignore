@@ -22,5 +22,5 @@
 *.toc
 *.zip
 *.tex.swp
-202*_MatheII_U*.pdf
-202*_MatheIII_U*.pdf
+*/202*_MatheII_U*.pdf
+*/202*_MatheIII_U*.pdf
