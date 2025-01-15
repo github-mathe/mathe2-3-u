@@ -1,0 +1,159 @@
+\Aufgabe[e]{Differenzieren}{
+Bestimmen Sie jeweils die $n$-te Ableitung der folgenden Funktionen:
+\begin{itemize}
+\item[a)] $n=4, f(x)= 5\sin(x)+ 3\cos(x)    $                                           
+\item[b)] $n=3, f(x)= 2\sinh(2x)+ 3\cosh(x) $    
+\item[c)] $n=2, f(x)= x^2 \sin(2x) $
+\item[d)] $n=1, f(x)= \dfrac{x^2-2x+3}{x^2+2x-3}$
+\item[e)] $n=3, f(x)= x^5 \ln(x) $
+\item[f)] $n=3, f(x)= \sin^3(x) $  
+\item[g)] $n=3, f(x)= e^x \sin(x) $
+\item[h)] $n=2, f(x)= e^{\tan(x)} $
+\item[i)] $n=2, f(x)= \dfrac{\tan(x)}{x}$
+\item[j)] $n=2, f(x)= \dfrac{x^2}{\sin(x)}$             
+\end{itemize}                             
+}
+
+\Loesung{
+\begin{itemize}
+\item[a)] 
+\begin{align*}
+f'(x)&=5 \cos(x)-3\sin(x) \\
+f''(x) &= -5 \sin(x)-3\cos(x) \\
+f'''(x) &= -5 \cos(x) +3\sin(x) \\
+f''''(x) &= 5 \sin(x) -3 \cos(x)
+\end{align*}
+\item[b)]
+\begin{align*}
+f'(x) &= 4 \cosh(2x) +3\sinh(x) \\
+f''(x) &= 8 \sinh(2x) +3 \cosh(x) \\
+f'''(x) &= 16 \cosh(2x)+3 \sinh(x)
+\end{align*}
+\item[c)]
+\begin{align*}
+f'(x) &= 2x \sin(2x)+2x^2 \cos(2x) \\
+      &= 2x( \sin(2x) +x \cos(2x)) \\
+f''(x) &= 2 ( \sin(2x) +x \cos(2x)) + 2x (2 \cos(2x)+\cos(2x)-2x\sin(2x)) \\
+       &= 2 \sin(2x) +8x \cos(2x) -4x^2 \sin(2x)      
+\end{align*}
+\item[d)]
+\begin{align*}
+f'(x) &= \frac{(2x-2)(x^2+2x-3)-(x^2-2x+3)(2x+2)}{(x^2+2x-3)^2} \\
+      &= \frac{8x^2-12x-4x^2}{(x^2+2x-3)^2} \\
+      &= \frac{4x^2-12x}{(x^2+2x-3)^2}
+\end{align*}
+\item[e)]
+\begin{align*}
+f'(x) &= 5x^4 \ln(x) +x^5 \frac{1}{x} \\
+      &= 5x^4 \ln(x) +4x^3 \\
+f''(x) &= 20 x^3 \ln(x) +5x^4 \frac{1}{x} +4x^3 \\
+       &= 20 x^3 \ln(x) + 9x^3 \\
+f'''(x) &= 60 x^2 \ln(x) +20 x^3 \frac{1}{x} +27 x^2 \\
+        &= 60 x^2 \ln(x) +47 x^2      
+\end{align*}
+\item[f)]
+\begin{align*}
+f'(x) &= 3 \sin^2(x) \cos(x) \\
+f''(x) &= 6 \sin(x) \cos(x) \cos(x) -3 \sin^3(x) \\
+       &= 6 \sin(x) \cos^2(x) -3 \sin^3(x) \\
+f'''(x) &= 6 \cos^3(x) -6 \sin(x) 2 \cos(x)\sin(x)-9 \sin^2(x)\cos(x) \\
+        &= 6 \cos^3(x) -21 \sin^2(x) \cos(x)             
+\end{align*}
+\item[g)]
+\begin{align*}
+f'(x) &= e^x \sin(x) + e^x \cos(x) \\
+      &= e^x (\sin(x)+\cos(x)) \\
+f''(x) &= e^x ( \sin(x) +\cos(x) +\cos(x) -\sin(x)) \\
+       &= 2 e^x \cos(x) \\
+f'''(x) &= e^x 2 \cos(x) - e^x 2 \sin(x) \\
+        &= 2 e^x (\cos(x)-\sin(x))             
+\end{align*}
+\item[h)]
+\begin{align*}
+f'(x) &=   e^{\tan(x)} \frac{1}{\cos^2(x)}\\
+f''(x) &=    e^{\tan(x)} \frac{1}{\cos^2(x)} \frac{1}{\cos^2(x)} + 2 e^{\tan(x)}  \frac{\sin(x) \cos(x)}{\cos^4(x)} \\
+       &= e^{\tan(x)} \frac{1}{\cos^4(x)} + e^{\tan(x)} 2 \tan(x)  \frac{1}{\cos^2(x)}
+\end{align*}
+\item[i)]
+\begin{align*}
+f'(x) &= \frac{x/\cos^2(x) -\tan(x) }{x^2} \\
+      &= \frac{1}{x \cos^2(x)} -\frac{\tan(x)}{x^2} \\
+f''(x) &= \frac{-\cos^2(x)+2x\cos(x)\sin(x)}{x^2\cos^4(x)}- \frac{x^2\cos^2(x)-2x\tan(x)}{x^4} \\
+       &= - \frac{2}{x^2 \cos^2(x)} +\frac{2 \sin(x)}{x \cos^3(x)} + \frac{2 \tan(x)}{x^3} \\
+       &=   - \frac{2}{x^2 \cos^2(x)} +\frac{2 \tan(x)}{x \cos^2(x)} + \frac{2 \tan(x)}{x^3}    
+\end{align*}
+\item[j)]
+\begin{align*}
+f'(x) &=   \frac{2x \sin(x)-x^2\cos(x)}{\sin^2(x)}\\
+      &= \frac{2x}{\sin(x)} - \frac{x^2 \cos(x)}{\sin^2(x)} \\
+f''(x) &= \frac{2\sin(x)-2x\cos(x)}{\sin^2(x)} - \frac{(2x\cos(x)-x^2\sin(x))\sin^2(x)-(x^2 \cos(x)2\sin(x)\cos(x))}{\sin^4(x)}\\
+       &= \frac{2}{\sin(x)} - \frac{2x\cos(x)}{\sin^2(x)} - \frac{2x\cos(x)}{\sin^2(x)}  + \frac{x^2}{\sin(x)} + \frac{2x^2\cos^2(x)}{\sin^3(x)} \\
+       &=  \frac{2}{\sin(x)} - \frac{4x\cos(x)}{\sin^2(x)}+ \frac{x^2}{\sin(x)} + \frac{2x^2\cos^2(x)}{\sin^3(x)}
+\end{align*}
+\end{itemize}
+
+
+
+}
+
+\ErgebnisC{AufganalysDiffeinfach}
+{
+
+\textbf{a)} $f'(x)=5 \cos(x)-3\sin(x), \
+f''(x) = -5 \sin(x)-3\cos(x), \\
+f'''(x)= -5 \cos(x) +3\sin(x), 
+f''''(x)= 5 \sin(x) -3 \cos(x)$
+
+\textbf{b)}
+$f'(x) = 4 \cosh(2x) +3\sinh(x), \
+f''(x) = 8 \sinh(2x) +3 \cosh(x), \\
+f'''(x) = 16 \cosh(2x)+3 \sinh(x)$
+
+\textbf{c)}
+$f'(x) = 2x( \sin(2x) +x \cos(2x)), \
+f''(x)= 2 \sin(2x) +8x \cos(2x) -4x^2 \sin(2x)  $
+
+\textbf{d)}
+$f'(x)   = \frac{4x^2-12x}{(x^2+2x-3)^2}$
+
+\textbf{e)}
+$
+f'(x)  = 5x^4 \ln(x) +4x^3, \
+f''(x) = 20 x^3 \ln(x) + 9x^3, \
+f'''(x) = 60 x^2 \ln(x) +47 x^2      
+$
+
+\textbf{f)}
+$
+f'(x) = 3 \sin^2(x) \cos(x), \
+f''(x) = 6 \sin(x) \cos^2(x) -3 \sin^3(x), \
+f'''(x)   = 6 \cos^3(x) -21 \sin^2(x) \cos(x)             
+$
+
+\textbf{g)}
+$
+f'(x)  = e^x (\sin(x)+\cos(x)), \
+f''(x) = 2 e^x \cos(x), \
+f'''(x)  = 2 e^x (\cos(x)-\sin(x))             
+$
+
+\textbf{h)}
+$
+f'(x) =   e^{\tan(x)} \frac{1}{\cos^2(x)}, \
+f''(x) = e^{\tan(x)} \frac{1}{\cos^4(x)} + e^{\tan(x)} 2 \tan(x)  \frac{1}{\cos^2(x)}
+$
+
+\textbf{i)}
+$
+f'(x)  = \frac{1}{x \cos^2(x)} -\frac{\tan(x)}{x^2}, \
+f''(x)  =   - \frac{2}{x^2 \cos^2(x)} +\frac{2 \tan(x)}{x \cos^2(x)} + \frac{2 \tan(x)}{x^3}    
+$
+
+\textbf{j)}
+$
+f'(x)  = \frac{2x}{\sin(x)} - \frac{x^2 \cos(x)}{\sin^2(x)}, \
+f''(x) =  \frac{2}{\sin(x)} - \frac{4x\cos(x)}{\sin^2(x)}+ \frac{x^2}{\sin(x)} + \frac{2x^2\cos^2(x)}{\sin^3(x)}
+$
+
+                                                      
+}                                    
