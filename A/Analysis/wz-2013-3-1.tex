@@ -15,7 +15,22 @@ Berechnen Sie folgende Aufgaben:
 }
 
 \Loesung{
-\textbf{i)} \ Mit der Leibniz--Regel gilt:
+\textbf{i)} 
+1. Lösungsweg: 
+	\[
+	\begin{array}{crcl}
+	 & f(t) &=& (2t+1)^4\cdot\sin(3t) \\[1ex]
+	 \,\Rightarrow\, & f'(t) & = & 8 (2t+1)^3 \sin(3t) + 3 (2t+1)^4 \cos(3t)\\[2ex]
+	\,\Rightarrow\, & f''(t) &=& 48(2t+1)^3 \cos(3t) +48 (2t+1)^2 \sin(3t) -9(2t+1)^4 \sin(3t) \\[2ex]
+	\,\Rightarrow\, & f'''(t) &=& 288(2t+1)^2 \cos(3t) -144(2t+1)^3 \sin(3t) +192 (2t+1) \sin(3t) \\[1ex]
+	&  & &  +144 (2t+1)^2 \cos(3t) -72 (2t+1)^3 \sin(3t) -27(2t+1)^4 \cos(3t)  \\[1ex]
+	  &  &=&  \left[ 432(2t+1)^2 -27(2t+1)^4 \right]  \cos(3t) +
+	  \left[ 192 (2t+1) -216(2t+1)^3\right] \sin(3t)
+	\end{array}
+\]
+
+
+2. Lösungsweg: Mit der Leibniz--Regel gilt:
 	\[
 	\begin{array}{rcl}
 	f'''(t) &=& -27\cdot(2t+1)^4\cos(3t)-3\cdot4\cdot2\cdot9\cdot(2t+1)^3\sin(3t)\\
