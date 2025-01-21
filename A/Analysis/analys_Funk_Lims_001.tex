@@ -40,21 +40,58 @@ Daher ist $\underset{x\to-\infty}\lim f(x)=-\underset{x\to+\infty}\lim f(x)$ und
 Grenzwerte zu berechnen. \\
 Es wird vorausgesetzt, dass $\EH x$ stetig ist und dass gilt $\underset{x\to\infty}\lim \EH{x}=\infty$, somit kann man den
 Funktionsgrenzwert durch die Substitution $z=\EH{x}$ bestimmen: 
+%\begin{align*}
+%\underset{x\to\infty}\lim f(x)=& \underset{x\to\infty}\lim \frac{\EH x-\EH{-x}}{\EH{ax}+\EH{-ax}}
+%= \underset{z\to\infty}\lim \frac{z-\frac 1z}{z^a+\frac 1{z^a}}\\
+%=& \underset{z\to\infty}\lim \left( \frac{z}{z^a}\cdot \frac{1-\frac 1{z^2}}{1+\frac{1}{z^{2a}}}\right)
+%\end{align*}
+%Der Grenzwert des ersten Bruches ist 
+%$$\underset{z\to\infty}\lim \frac z{z^a}=\underset{z\to\infty}\lim z^{1-a}=\left\{\begin{array}{ll}
+%\infty,& a<1\\
+%1,&a=1\\
+%0,&a>1\end{array}\right..
+%$$
+%F\"ur den zweiten Bruch hat man 
+%$$\underset{z\to\infty}\lim \frac{1-\frac 1{z^2}}{1+\frac{1}{z^{2a}}}=\left\{\begin{array}{ll}
+%0,& a<0\\
+%\frac 12,& a=0\\
+%1,& a>0\end{array}\right..$$
+%Insgesamt ergibt sich daraus: 
+%$$\underset{x\to\infty}\lim f(x)=\left\{\begin{array}{ll}
+%\infty,& 0\leq a<1\\
+%1,& a=1\\
+%0,& a>1
+%\end{array}\right.
+%$$
+%F\"ur $a<0$ hat man 
+%\begin{align*}
+%\underset{x\to\infty}\lim
+%f(x)&=
+%\underset{z\to \infty}\lim \left( \frac{z}{z^{a}z^{-2a}}\cdot \frac{1-\frac 1{z^2}}{z^{2a}+1}\right)\\
+%&=\underset{z\to \infty}\lim \left( \frac{z}{z^{-a}}\cdot \frac{1-\frac 1{z^2}}{z^{2a}+1}\right)
+%=\left\{\begin{array}{ll}
+%0,&a<-1\\
+%1,&a=-1\\
+%\infty,&-1<a<0\end{array}\right..
+%\end{align*}
+
 \begin{align*}
 \underset{x\to\infty}\lim f(x)=& \underset{x\to\infty}\lim \frac{\EH x-\EH{-x}}{\EH{ax}+\EH{-ax}}
-= \underset{z\to\infty}\lim \frac{z-\frac 1z}{z^a+\frac 1{z^a}}\\
-=& \underset{z\to\infty}\lim \left( \frac{z}{z^a}\cdot \frac{1-\frac 1{z^2}}{1+\frac{1}{z^{2a}}}\right)
+= \underset{x\to\infty}\lim \frac{\EH x-\frac{1}{\EH{x}}}{\EH{ax}+ \frac{1}{\EH{ax}}}\\
+=& \underset{x\to\infty}\lim \frac{\frac{1}{\EH x}(\EH {2x}-1)}{\frac{1}{\EH {ax}}(\EH{2ax}+ 1)} 
+= \underset{x\to\infty}\lim \frac{\EH {ax} \EH {2x}}{\EH x \EH {2ax}} \frac{1-\frac{1}{\EH {2x}}}{1+\frac{1}{\EH{2ax}}}\\
+=& \underset{x\to\infty}\lim \frac{\EH {x}}{\EH {ax}} \frac{1-\frac{1}{\EH {2x}}}{1+\frac{1}{\EH{2ax}}} 
 \end{align*}
 Der Grenzwert des ersten Bruches ist 
-$$\underset{z\to\infty}\lim \frac z{z^a}=\underset{z\to\infty}\lim z^{1-a}=\left\{\begin{array}{ll}
+$$\underset{x\to\infty}\lim \frac {\EH x}{\EH {ax}}=\underset{x\to\infty}\lim \EH {x(1-a)}=\left\{\begin{array}{ll}
 \infty,& a<1\\
 1,&a=1\\
 0,&a>1\end{array}\right..
 $$
 F\"ur den zweiten Bruch hat man 
-$$\underset{z\to\infty}\lim \frac{1-\frac 1{z^2}}{1+\frac{1}{z^{2a}}}=\left\{\begin{array}{ll}
+$$\underset{x\to\infty}\lim  \frac{1-\frac{1}{\EH {2x}}}{1+\frac{1}{\EH{2ax}}}=\left\{\begin{array}{ll}
 0,& a<0\\
-\frac 12,& a=0\\
+\frac 1 2,& a=0\\
 1,& a>0\end{array}\right..$$
 Insgesamt ergibt sich daraus: 
 $$\underset{x\to\infty}\lim f(x)=\left\{\begin{array}{ll}
@@ -65,15 +102,36 @@ $$\underset{x\to\infty}\lim f(x)=\left\{\begin{array}{ll}
 $$
 F\"ur $a<0$ hat man 
 \begin{align*}
-\underset{x\to\infty}\lim
-f(x)&=
-\underset{z\to \infty}\lim \left( \frac{z}{z^{a}z^{-2a}}\cdot \frac{1-\frac 1{z^2}}{z^{2a}+1}\right)\\
-&=\underset{z\to \infty}\lim \left( \frac{z}{z^{-a}}\cdot \frac{1-\frac 1{z^2}}{z^{2a}+1}\right)
-=\left\{\begin{array}{ll}
+\underset{x\to\infty}\lim f(x) 
+&= \underset{x\to\infty}\lim \frac{\EH {x}}{\EH {ax}} \frac{1-\frac{1}{\EH {2x}}}{1+\frac{1}{\EH{2ax}}} 
+= \underset{x\to\infty}\lim \frac{\EH {x}}{\EH {ax}} \frac{1-\frac{1}{\EH {2x}}}{\frac{\EH {2ax}}{\EH {2ax}}+\frac{1}{\EH{2ax}}} \\
+&= \underset{x\to\infty}\lim \frac{\EH {x}}{\EH {ax} \EH {-2ax}} \frac{1-\frac{1}{\EH {2x}}}{\EH {2ax}+1}
+= \underset{x\to\infty}\lim \frac{\EH {x}}{\EH {-ax} } \frac{1-\frac{1}{\EH {2x}}}{\EH {2ax}+1}\\
+\end{align*}
+
+
+
+Der Grenzwert des ersten Bruches ist 
+$$\underset{x\to\infty}\lim \frac {\EH x}{\EH {-ax}}=\underset{x\to\infty}\lim \EH {x(1+a)}=\left\{\begin{array}{ll}
+0,& a<-1\\
+1,&a=-1\\
+\infty,&-1<a<0\end{array}\right..
+$$
+F\"ur den zweiten Bruch hat man 
+$$\underset{x\to\infty}\lim \frac{1-\frac{1}{\EH {2x}}}{\EH {2ax}+1}=\left\{\begin{array}{ll}
+0,& a<-1\\
+1,& a=-1\\
+1,& -1<a<0\end{array}\right..$$
+Insgesamt ergibt sich daraus: 
+$$\underset{x\to\infty}\lim f(x)=\left\{\begin{array}{ll}
 0,&a<-1\\
 1,&a=-1\\
 \infty,&-1<a<0\end{array}\right..
-\end{align*}
+$$
+
+
+
+
 \end{abc}
 }
 

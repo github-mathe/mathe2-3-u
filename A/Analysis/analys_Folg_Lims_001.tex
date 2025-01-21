@@ -115,21 +115,32 @@ k\right)^k\right)^x \underset{k\rightarrow \infty}\longrightarrow e^x.$$
 Wenn also $f_n$ konvergiert muss der Grenzwert mit dem der Teilfolge \"ubereinstimmen und es gilt
 $$\underset{n\rightarrow \infty}\lim f_n = e^x.$$
 
-Der Fall negativer $x<0$ l\"asst sich mit Hilfe des Falls $x>0$ behandeln: 
-Wir untersuchen dazu mit $y=-x>0$ die Folge
-$$h_n:=f_n\cdot \left( 1 + \frac y n\right)^n=\left( \left( 1-\frac yn\right) \left( 1 + \frac
-yn\right)\right)^n=\left( 1-\frac{y^2}{n^2}\right)^n.$$
-Es gilt einerseits $h_n<1$. Andererseits liefert die Bernoulli-Ungleichung zumindest f\"ur $n>y$: 
-$$h_n \geq 1 -n\cdot \frac{y^2}{n^2}=1-\frac{y^2}{n}\underset{n\to\infty}\longrightarrow 1.$$
-Wegen dieser beiden Ungleichungen muss $h_n$ konvergieren:
-$$\underset{n\to\infty}\lim h_n = 1.$$
-Nach Definition von $h_n$ ist 
-$$f_n=\frac{h_n}{\left( 1 + \frac y n\right)^n}.$$
-Z\"ahler und Nenner dieses Ausdruckes konvergieren und somit konvergiert auch $f_n$: 
-$$\underset{n\to\infty}{\lim} f_n = \frac{\underset{n\to\infty}\lim
-h_n}{\underset{n\to\infty}\lim \left( 1 + \frac yn\right)^n}=\frac 1 {\EH y} = \EH{-y}=\EH x.$$
-F\"ur $x=0$ hat man ohnehin 
-$$\underset{n\to\infty}\lim f_n = \underset{n\to\infty}\lim 1^n=1=\EH 0.$$
+%Der Fall negativer $x<0$ l\"asst sich mit Hilfe des Falls $x>0$ behandeln: 
+%Wir untersuchen dazu mit $y=-x>0$ die Folge
+%$$h_n:=f_n\cdot \left( 1 + \frac y n\right)^n=\left( \left( 1-\frac yn\right) \left( 1 + \frac
+%yn\right)\right)^n=\left( 1-\frac{y^2}{n^2}\right)^n.$$
+%Es gilt einerseits $h_n<1$. Andererseits liefert die Bernoulli-Ungleichung zumindest f\"ur $n>y$: 
+%$$h_n \geq 1 -n\cdot \frac{y^2}{n^2}=1-\frac{y^2}{n}\underset{n\to\infty}\longrightarrow 1.$$
+%Wegen dieser beiden Ungleichungen muss $h_n$ konvergieren:
+%$$\underset{n\to\infty}\lim h_n = 1.$$
+%Nach Definition von $h_n$ ist 
+%$$f_n=\frac{h_n}{\left( 1 + \frac y n\right)^n}.$$
+%Z\"ahler und Nenner dieses Ausdruckes konvergieren und somit konvergiert auch $f_n$: 
+%$$\underset{n\to\infty}{\lim} f_n = \frac{\underset{n\to\infty}\lim
+%h_n}{\underset{n\to\infty}\lim \left( 1 + \frac yn\right)^n}=\frac 1 {\EH y} = \EH{-y}=\EH x.$$
+%F\"ur $x=0$ hat man ohnehin 
+%$$\underset{n\to\infty}\lim f_n = \underset{n\to\infty}\lim 1^n=1=\EH 0.$$
+F\"ur den Fall $x<0$ l\"asst sich $f_n$ umformen zu 
+\begin{align*}
+f_n=& \left( 1 + \frac x n \right)^n \, \text{mit $x < 0$ } \\
+   =& \left( 1 - \frac t n \right)^n \, \text{mit $t$ = $-x>0$ }.
+\end{align*}
+$f_n$ hat mit $n_k=- k\cdot t$ die konvergente Teilfolge 
+\begin{align*}
+f_{n_k} &=  \left( 1 + \frac 1 k \right)^{-kt} \\
+        &= \left( \left( 1 + \frac 1 k \right)^{k} \right)^{-t}  \underset{k\rightarrow \infty}\longrightarrow  e^{-t} = e^x \, \text{mit $x < 0$}.
+\end{align*}
+
 Es gilt also f\"ur alle $x\in\Z$:
 $$\underset{n\to\infty}\lim f_n = \EH{x}.$$
 \item Es ist 

@@ -129,7 +129,13 @@ Die Folge $a_n = \dfrac{2^n}{n!}$ kann für $n>3$ nach oben und unten beschränk
 0 \leq \frac{2^n}{n!} = \frac{\overbrace{2\cdot 2\cdot 2\dots 2}^{n}}{1\cdot 2\cdot 3\dots n} \leq \frac{2}{1}\cdot \frac{2}{2}\cdot \underbrace{\frac{2}{3}\cdot\frac{2}{4}\dots\frac{2}{n-1}}_{\leq 1} \cdot \frac{2}{n} \leq \frac{4}{n}.
 \end{align*}
 Da die Folge von oben und unten durch zwei Nullfolge beschränkt ist, erhält man mit dem Einschließungssatz
-den Grenzwert $a=0$.
+den Grenzwert $a=0$. \\
+
+Alternativ kann das Quotientenkriterium verwendet werden:
+\begin{align*}
+\lim\limits_{n\rightarrow \infty} \frac{a_{n+1}}{a_n} &= \lim\limits_{n\rightarrow \infty} \frac{2^{n+1}}{(n+1)!} \frac{n!}{2^n} = \lim\limits_{n\rightarrow \infty} \frac{2}{n+1} = 0 < 1.
+\end{align*}
+Da der Grenzwert kleiner als 1 ist, konvergiert die Folge $a_n$.
 \end{iii}
 \end{abc}
 }
