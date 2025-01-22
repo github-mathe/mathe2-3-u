@@ -1,18 +1,17 @@
 \Aufgabe[e]{Minimaler Abstand}{
-Gegeben seien die folgenden Funktionen%
+Gegeben seien die folgenden Funktionen:
 \begin{multicols}{2}
 \begin{iii}
-\item $f_1(x) = x^2+1$,
-\item $f_2(x) = \ln(x)$.
+\item $f_1(x) = x^2+1$, mit $D(f_1) = \R$,
+\item $f_2(x) = \ln(x)$, mit $D(f_2) = \R^+$.
 \end{iii}
 \end{multicols}
 \begin{abc}
 \item Skizzieren Sie die Funktionen $f_1$ und $f_2$. 
-\item Bestimmen Sie den minimalen vertikalen Abstand beider Funktionsgraphen
+\item Bestimmen Sie den minimalen vertikalen Abstand beider Funktionsgraphen:
 $$d=\text{min }\left\{ |f_1(x)-f_2(x)|;\, x\in\R^+\right\}.$$
 \end{abc}
 }
-
 
 \Loesung{
 \begin{abc}
@@ -40,32 +39,74 @@ node[right,pos=1.,font=\footnotesize]{$f_2(x)=\ln(x)$};
 
 \end{minipage}
 
-\item Der gesuchte Abstand ist das Minimum der Funktion 
- $g(x) = |h(x)| \text{ mit } h(x)=f_1(x) - f_2(x)$.\\
- Es gilt $f_1(x) > f_2(x)$ für alle $x \in D$. Daher ist die Differenz
- immer positiv. 
- 
- 
-Dieses Minimum liegt in einem lokalen Extremum von $h(x)$, da an den Grenzen des Definitionsbereiches $D$ gilt: 
-\begin{align*}
-\underset{x\to\infty}\lim h(x)=& \underset{x\to\infty}\lim \left( x^2+1-\ln(x)\right) \\
-=&\ln\left(  \underset{x\to\infty}\lim \EH{x^2+1-\ln(x)}\right)\\
-=&\ln \left( \underset{x\to\infty}\lim \frac{\EH{x^2+1}}{\EH{\ln x}}\right)\qquad\text{ L'Hospital wg.} \EH{x^2+1}\to\infty,\, \EH{\ln x}=x\to \infty.\\
-=&\ln \left( \underset{x\to\infty}\lim \frac{2x\EH{x^2+1}}{1}\right)=\infty\\
-\underset{x\to 0}\lim h(x)=& \underset{x\to 0}\lim \left(x^2+1-\ln x\right)=\infty
-\end{align*}
-Das heißt innerhalb des Definitionsbereiches wird ein Minimum angenommen.
+\item 
+Der gesuchte Abstand entspricht dem Minimum der Funktion
+$$
+h(x) = |f_1(x) - f_2(x)|.
+$$
+Der Definitionsbereich von $h$ ergibt sich als
+$$
+D(h) = D(f_1) \cap D(f_2) = \R^+.
+$$
+Da $f_1(x)$ für alle $x \in \R^+$ oberhalb von $f_2(x)$ liegt, vereinfacht sich $h(x)$ zu
+$$
+h(x) = f_1(x) - f_2(x),
+$$
+ohne den Betrag betrachten zu müssen.
 
-Die lokalen Extrema von $h(x)$ liegen in den Nullstellen der ersten Ableitung: 
-\begin{align*}
-&&h'(x)=2x-\frac 1x=&0\\
-\Leftrightarrow&&2x^2=&1\\
-\Leftrightarrow&& x_{1/2}=&\pm\frac 1{\sqrt 2}
-\end{align*}
-von diesen beiden Werten liegt nur $x_1=\frac 1{\sqrt 2}$ im Definitionsbereich $D$. Dort ist 
-$$d=g(x_1)=h(x_1)=  \frac 12 + 1 - \ln \left(\frac 1{\sqrt 2}\right) = \frac 32 - \ln\left(\frac{\sqrt 2}2\right).$$
+Die Grenzen des Definitionsbereichs zeigen, dass:
+\[
+\lim_{x \to \infty} h(x) = \lim_{x \to \infty} \left( x^2 + 1 - \ln(x) \right).
+\]
+Durch Faktorisieren von $x^2 + 1$:
+\[
+\lim_{x \to \infty} h(x) = \lim_{x \to \infty} \left( x^2 + 1 \right) \left( 1 - \frac{\ln(x)}{x^2 + 1} \right).
+\]
 
-Der Graph von $h(x)=g(x)$ ist 
+Es gilt
+\[
+\lim_{x \to \infty} \frac{\ln(x)}{x^2 + 1} = 0.
+\]
+Da der Bruch die Form $\frac{\infty}{\infty}$ hat, kann die Regel von L’Hôpital angewendet werden:
+\[
+\lim_{x \to \infty} \frac{\ln(x)}{x^2 + 1} = \lim_{x \to \infty} \frac{\frac{1}{x}}{2x}.
+\]
+Der neue Bruch ergibt:
+\[
+\lim_{x \to \infty} \frac{1}{2x^2} = 0.
+\]
+Daher gilt:
+\[
+\lim_{x \to \infty} h(x) = \infty.
+\]
+Weiterhin gilt:
+\[
+\lim_{x \to 0^+} h(x) = \lim_{x \to 0^+} \left( x^2 + 1 - \ln(x) \right) = \infty.
+\]
+Damit wird innerhalb des Definitionsbereichs ein Minimum angenommen.\\
+
+Die lokalen Extrema von $h(x)$ liegen in den Nullstellen der ersten Ableitung:
+\[
+h'(x) = 2x - \frac{1}{x}.
+\]
+Setzen $h'(x) = 0$ ergibt:
+\[
+2x - \frac{1}{x} = 0 \quad \Rightarrow \quad 2x^2 = 1 \quad \Rightarrow \quad x_{1/2} = \pm\frac{1}{\sqrt{2}}.
+\]
+Da $x \in \R^+$, bleibt nur $x_1 = \frac{1}{\sqrt{2}}$.\\
+
+Die zweite Ableitung von $h(x)$ ist:
+\[
+h''(x) = 2 + \frac{1}{x^2}.
+\]
+Da $h''(x) > 0$ für alle $x \in \R^+$, ist $h(x)$ an der Stelle $x_1 = \frac{1}{\sqrt{2}}$ streng konvex, und es handelt sich um ein lokales Minimum.\\
+
+An dieser Stelle ist:
+\[
+d = \frac{3}{2} - \ln\left( \frac{\sqrt{2}}{2} \right).
+\]
+
+Der Graph von $h(x)$ ist:
 
 \begin{minipage}{\linewidth}
 \centering
@@ -82,7 +123,7 @@ xlabel=$x$,
 ylabel=$y$]
 
 \addplot[domain=0:2.5,samples=200,blue]{x^2+1-ln(x)}
-node[right,pos=1.,font=\footnotesize]{$g(x)=|x^2+1-\ln(x)|$};
+node[right,pos=1.,font=\footnotesize]{$h(x)=|x^2+1-\ln(x)|$};
 
 \end{axis}
 \end{tikzpicture}
@@ -90,4 +131,11 @@ node[right,pos=1.,font=\footnotesize]{$g(x)=|x^2+1-\ln(x)|$};
 
 \end{abc}
 
+}
+
+
+\ErgebnisC{MaxMin001}
+{
+
+$d = \frac{3}{2} - \ln\left( \frac{\sqrt{2}}{2} \right)$
 }

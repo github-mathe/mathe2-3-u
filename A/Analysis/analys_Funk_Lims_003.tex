@@ -1,0 +1,106 @@
+\Aufgabe[e]{Funktionenlimes}{
+Berechnen Sie die folgenden Grenzwerte. Wenn der Grenzwert nicht existiert, begründen Sie Ihre Antwort.
+\begin{abc}
+\item
+\begin{multicols}{2}
+\begin{iii}
+    \item $ \lim_{x \to 2} (3x^2 - 4x + 5) $
+
+    \item $ \lim_{x \to \infty} \frac{2x^2 + 3}{5x^2 + 7} $
+
+    \item $ \lim_{x \to 1} \frac{1}{x - 1} $
+
+    \item $ \lim_{x \to \infty} \sin(x) $
+
+    \item $ \lim_{x \to 0^+} x \ln(x) $
+
+    \item $ \lim_{x \to \infty} e^{-x} $
+
+    \item $ \lim_{x \to 0} \frac{\sin(x)}{x} $
+
+    \item $ \lim_{x \to 0} \sin\left(\frac{1}{x}\right) $
+
+    \item $ \lim_{x \to 0} \frac{|x|}{x} $
+\end{iii}
+\end{multicols}
+\item
+Gegeben die stückweise definierte Funktion:
+\[
+f(x) = \begin{cases} 
+x^2, & \text{falls } x < 0, \\
+3x + 1, & \text{falls } x \geq 0.
+\end{cases}
+\]
+Berechnen Sie $ \lim_{x \to 0} f(x) $.
+\end{abc}
+}
+
+\Loesung{
+
+\begin{abc}
+\item
+\begin{iii}
+    \item $ \lim_{x \to 2} (3x^2 - 4x + 5) = 3(2)^2 - 4(2) + 5 = 9 $
+
+    \item
+    \[
+    \lim_{x \to \infty} \frac{2x^2 + 3}{5x^2 + 7}
+    = \lim_{x \to \infty} \frac{x^2(2 + \frac{3}{x^2})}{x^2(5 + \frac{7}{x^2})}
+    = \lim_{x \to \infty} \frac{2 + \frac{3}{x^2}}{5 + \frac{7}{x^2}}.
+    \]
+    Da $ \frac{3}{x^2} \to 0 $ und $ \frac{7}{x^2} \to 0 $ für $ x \to \infty $, folgt:
+    \[
+    \lim_{x \to \infty} \frac{2 + \frac{3}{x^2}}{5 + \frac{7}{x^2}} = \frac{2}{5}.
+    \]
+
+    \item Der Grenzwert existiert nicht, da $ \frac{1}{x - 1} \to \infty $ für $ x \to 1^+ $ und $ \frac{1}{x - 1} \to -\infty $ für $ x \to 1^- $.
+
+    \item Der Grenzwert existiert nicht, da $ \sin(x) $ zwischen $-1$ und $1$ oszilliert, während $x \to \infty$.
+
+    \item $ \lim_{x \to 0^+} x \ln(x) = \lim_{x \to 0^+} \frac{\ln(x)}{1/x} = \lim_{x \to 0^+} \frac{-1/x}{-1/x^2} = \lim_{x \to 0^+} x = 0 $ (L’Hôpital-Regel angewendet).
+
+    \item $ \lim_{x \to \infty} e^{-x} = 0 $ (Exponentielles Abklingen).
+
+    \item
+    \[
+    \lim_{x \to 0} \frac{\sin(x)}{x} = \lim_{x \to 0} \frac{\cos(x)}{1} = \cos(0) = 1.
+    \]
+    (L’Hôpital-Regel angewendet).
+
+    \item Der Grenzwert existiert nicht, da $ \sin\left(\frac{1}{x}\right) $ unendlich oft zwischen $-1$ und $1$ oszilliert, während $x \to 0$.
+
+    \item Der Grenzwert existiert nicht, da die linksseitige Grenze $ \lim_{x \to 0^-} \frac{|x|}{x} = -1 $ und die rechtsseitige Grenze $ \lim_{x \to 0^+} \frac{|x|}{x} = 1 $ unterschiedlich sind.
+\end{iii}
+\item
+Gegeben die Funktion:
+\[
+f(x) = \begin{cases} 
+x^2, & \text{falls } x < 0, \\
+3x + 1, & \text{falls } x \geq 0.
+\end{cases}
+\]
+Da $ \lim_{x \to 0^-} f(x) = 0^2 = 0 $ und $ \lim_{x \to 0^+} f(x) = 3(0) + 1 = 1 $, ist der Grenzwert $ \lim_{x \to 0} f(x) $ nicht definiert.
+\end{abc}
+}
+
+\ErgebnisC{analysFunkLims003}
+{
+\begin{abc}
+\item
+\begin{iii}
+\begin{multicols}{2}
+    \item $ 9 $
+    \item $ \frac{2}{5} $
+    \item Existiert nicht
+    \item Existiert nicht
+    \item $ 0 $
+    \item $ 0 $
+    \item $ 1 $
+    \item Existiert nicht
+    \item Existiert nicht
+\end{multicols}
+\end{iii}
+
+\item Für $ f(x) $ existiert der Grenzwert bei $ x \to 0 $ nicht.
+\end{abc}
+}

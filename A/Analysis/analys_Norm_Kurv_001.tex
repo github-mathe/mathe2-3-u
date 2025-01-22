@@ -1,0 +1,87 @@
+\Aufgabe[e]{Normalenvektor einer Kurve}{
+\begin{abc}
+\item Gegeben sei eine Kurve in der Ebene durch ihre Parameterdarstellung:
+$$
+\vec{r}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix}.
+$$
+Bestimmen Sie den Tangentialvektor im Punkt, der durch $t = t_0$ definiert ist, und leiten Sie den Normalenvektor aus der Orthogonalitätsbedingung mit dem Tangentialvektor ab.
+
+\item Gegeben sei die Kurve:
+$$
+\vec{r}(t) = \begin{pmatrix} |t| \\ t^3 \end{pmatrix}.
+$$
+Prüfen Sie, ob der Normalenvektor für alle $t \in \R$ existiert, und berechnen Sie den Normalenvektor im Punkt, der durch $t_0 = 2$ gegeben ist.
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Eine Normalenvektor $\vec{n}(t) = \begin{pmatrix} n_1 \\ n_2 \end{pmatrix}$ ist senkrecht zum Tangentialvektor $\vec{r}'(t)$, daher muss gelten:
+$$
+\langle \vec{n}(t), \vec{r}'(t) \rangle = 0.
+$$
+Setzen wir $\vec{r}'(t) = \begin{pmatrix} x'(t) \\ y'(t) \end{pmatrix}$, ergibt sich:
+$$
+\langle \vec{n}(t), \vec{r}'(t) \rangle = n_1 x'(t) + n_2 y'(t) = 0.
+$$
+
+Diese Gleichung beschreibt eine lineare Beziehung zwischen \(n_1\) und \(n_2\), d.h., es gibt unendlich viele Lösungen, da jede skalare Vielfache von \(\begin{pmatrix} -y'(t) \\ x'(t) \end{pmatrix}\) ebenfalls eine Lösung ist. Um einen eindeutigen Normalenvektor zu definieren, kann eine Konvention wie die Wahl einer bestimmten Länge (z.B. Einheitsvektor) verwendet werden. Eine mögliche Lösung ist:
+$$
+\vec{n}(t) = \begin{pmatrix} -y'(t) \\ x'(t) \end{pmatrix}.
+$$
+
+\item Die Kurve ist durch ihre Parameterdarstellung gegeben:
+$$
+\vec{r}(t) = \begin{pmatrix} |t| \\ t^3 \end{pmatrix}.
+$$
+
+Der Tangentialvektor ergibt sich durch die Ableitung von $\vec{r}(t)$. Da $x(t) = |t|$ ist, beachten wir, dass die Ableitung stückweise definiert ist:
+$$
+x'(t) = \begin{cases} 
+1, & t > 0, \\
+-1, & t < 0, \\
+\text{nicht definiert}, & t = 0.
+\end{cases}
+$$
+Die Ableitung von $y(t) = t^3$ ist:
+$$
+y'(t) = 3t^2.
+$$
+Der Tangentialvektor ist somit:
+$$
+\vec{r}'(t) = \begin{pmatrix} x'(t) \\ y'(t) \end{pmatrix} = \begin{pmatrix} \text{sgn}(t) \\ 3t^2 \end{pmatrix}, \quad t \neq 0.
+$$
+
+Für $t = 0$ ist $x'(t)$ nicht definiert, daher existiert der Normalenvektor an dieser Stelle nicht. Für $t \neq 0$ gilt die Orthogonalitätsbedingung:
+$$
+\langle \vec{n}(t), \vec{r}'(t) \rangle = n_1 x'(t) + n_2 y'(t) = 0.
+$$
+Setzen wir $x'(t) = \text{sgn}(t)$ und $y'(t) = 3t^2$, ergibt sich:
+$$
+n_1 \cdot \text{sgn}(t) + n_2 \cdot 3t^2 = 0.
+$$
+Eine mögliche Lösung ist:
+$$
+n_1 = -3t^2, \quad n_2 = \text{sgn}(t).
+$$
+Somit ist der Normalenvektor:
+$$
+\vec{n}(t) = \begin{pmatrix} -3t^2 \\ \text{sgn}(t) \end{pmatrix}.
+$$
+
+Für $t_0 = 2$ gilt $x'(2) = 1$ und $y'(2) = 12$. Der Normalenvektor ist:
+$$
+\vec{n}(2) = \begin{pmatrix} -12 \\ 1 \end{pmatrix}.
+$$
+
+Der Normalenvektor existiert nicht für $t = 0$, ist jedoch für $t \neq 0$ definiert. 
+\end{abc}
+}
+
+\ErgebnisC{NormKurv001}
+{
+\begin{abc}
+\item $\vec{n}(t) = \begin{pmatrix} -y'(t) \\ x'(t) \end{pmatrix}$
+\item $\vec{n}(2) = \begin{pmatrix} -12 \\ 1 \end{pmatrix}$
+\end{abc}
+}

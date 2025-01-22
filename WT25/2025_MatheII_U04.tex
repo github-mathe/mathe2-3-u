@@ -10,12 +10,12 @@
 \newcommand{\Kurs}{Mathematik II/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
 \newcommand{\BLATT}{4}
-\newcommand{\TOPIC}{Differentiation, Tangenten, lokale Extrema, L´Hospital, Ableitungen}
+\newcommand{\TOPIC}{Differentiation, Tangenten, lokale Extrema, L'Hospital, Ableitungen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-\setboolean{mitLoes}{true}
+%\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -25,7 +25,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
-%\setboolean{mitErg}{true}
+\setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,6 +43,17 @@
 \ruleBig
 
 %Mathe III Blatt 
+\input{../A/Analysis/analys_Regl_Lhos_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Funk_Lims_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/wz-2013-3-1.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_maxima_minima_002_DE.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 \input{../A/Analysis/analys_Diff_Para_01c.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
@@ -53,20 +64,14 @@
 \input{../A/Analysis/analys_Para_Grap_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_maxima_minima_002_DE.tex}
+\input{../A/Analysis/analys_Norm_Kurv_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 %\input{../A/Analysis/analys_Regl_Lhos_001.tex}
 %\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Regl_Lhos_002.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Gren_Wert_007.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/wz-2013-3-1.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%\input{../A/Analysis/analys_Gren_Wert_007.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 %\input{../A/Analysis/analys_Extrema_002.tex}
 %\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
