@@ -9,8 +9,8 @@
 \newcommand{\Trimester}{WT}
 \newcommand{\Kurs}{Mathematik II/B (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{4}
-\newcommand{\TOPIC}{Differentiation, Tangenten, lokale Extrema, L'Hospital, Ableitungen}
+\newcommand{\BLATT}{5}
+\newcommand{\TOPIC}{L'Hospital, Optimierungsproblem, Kurvendiskussion, Monotonieverhalten}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
@@ -42,34 +42,37 @@
 
 \ruleBig
 
-%Mathe III Blatt 
-\input{../A/Analysis/analys_Regl_Lhos_002.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%Mathe V Blatt 
 
-\input{../A/Analysis/analys_Funk_Lims_003.tex}
+\input{../A/Analysis/analys_Regl_Lhos_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/wz-2013-3-1.tex}
+% 69
+\input{../A/Analysis/analys_Opt_Poster.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_maxima_minima_002_DE.tex}
+% 114
+\input{../A/Analysis/analys_Monotonie.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Diff_Para_01c.tex}
+%5
+\input{../A/Analysis/analys_Asympt_01.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% 53
+\input{../A/Analysis/analys_inverse_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% 59
+\input{../A/Analysis/analys_Kurv_Disk_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% 115
+\input{../A/Analysis/analys_Extrema_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+% 58
+\input{../A/Analysis/analys_Kurv_Disk_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 %\input{../A/Analysis/analys_Kudi_Klau_001.tex}
 %\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Para_Grap_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-\input{../A/Analysis/analys_Norm_Kurv_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%\input{../A/Analysis/analys_Regl_Lhos_001.tex}
+%% 60
+%\input{../A/Analysis/analys_Kurv_Disk_004.tex}
 %\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
 %\input{../A/Analysis/analys_Gren_Wert_007.tex}
 %\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 

@@ -26,7 +26,7 @@ $$\sign(z)=\left\{\begin{array}{ll}
 \item \begin{iii}
 \item F\"ur $x>0$ gilt $\sign(x)=\sign(1+x)=1$ sowie $|x+1|=x+1$, damit gilt
 $$\underset{x\to 0+}\lim f(x)= \underset{x\to 0+}\lim (x^3+x+1+1)=2.$$
-\item F\"ur $-1<x<0$ gilt $\sign(x)-1$, $\sign(1+x)=1$ sowie $|x+1|=x+1$, damit gilt
+\item F\"ur $-1<x<0$ gilt $\sign(x)=-1$, $\sign(1+x)=1$ sowie $|x+1|=x+1$, damit gilt
 $$\underset{x\to 0-}\lim f(x)= \underset{x\to 0-}\lim \frac{x^3+x+1+1}{-1}=-2.$$
 \item F\"ur $-1<x<0$ gilt $\sign(x)=-1$, $\sign(1+x)=1$ sowie $|x+1|=x+1$, damit gilt
 $$\underset{x\to (-1)+}\lim f(x)= \underset{x\to (-1)+}\lim \frac{x^3+x+1+1}{-1}=0.$$
@@ -38,8 +38,7 @@ $$f(-x)=\frac{\sinh(-x)}{\cosh(ax)} = \frac{\EH{-x}-\EH{-(-x)}}{\EH{-ax}+\EH{-(-
 = -\frac{\EH{x}-\EH{-x}}{\EH{ax}+\EH{-ax}}=-f(x)$$
 Daher ist $\underset{x\to-\infty}\lim f(x)=-\underset{x\to+\infty}\lim f(x)$ und es gen\"ugt einen der beiden
 Grenzwerte zu berechnen. \\
-Es wird vorausgesetzt, dass $\EH x$ stetig ist und dass gilt $\underset{x\to\infty}\lim \EH{x}=\infty$, somit kann man den
-Funktionsgrenzwert durch die Substitution $z=\EH{x}$ bestimmen: 
+Es wird vorausgesetzt, dass $\EH x$ stetig ist und dass gilt $\underset{x\to\infty}\lim \EH{x}=\infty$.
 %\begin{align*}
 %\underset{x\to\infty}\lim f(x)=& \underset{x\to\infty}\lim \frac{\EH x-\EH{-x}}{\EH{ax}+\EH{-ax}}
 %= \underset{z\to\infty}\lim \frac{z-\frac 1z}{z^a+\frac 1{z^a}}\\
@@ -93,7 +92,7 @@ $$\underset{x\to\infty}\lim  \frac{1-\frac{1}{\EH {2x}}}{1+\frac{1}{\EH{2ax}}}=\
 0,& a<0\\
 \frac 1 2,& a=0\\
 1,& a>0\end{array}\right..$$
-Insgesamt ergibt sich daraus: 
+Insgesamt ergibt sich daraus f\"ur $a>0$: 
 $$\underset{x\to\infty}\lim f(x)=\left\{\begin{array}{ll}
 \infty,& 0\leq a<1\\
 1,& a=1\\
@@ -118,10 +117,7 @@ $$\underset{x\to\infty}\lim \frac {\EH x}{\EH {-ax}}=\underset{x\to\infty}\lim \
 \infty,&-1<a<0\end{array}\right..
 $$
 F\"ur den zweiten Bruch hat man 
-$$\underset{x\to\infty}\lim \frac{1-\frac{1}{\EH {2x}}}{\EH {2ax}+1}=\left\{\begin{array}{ll}
-0,& a<-1\\
-1,& a=-1\\
-1,& -1<a<0\end{array}\right..$$
+$$\underset{x\to\infty}\lim \frac{1-\frac{1}{\EH {2x}}}{\EH {2ax}+1}=1 \, \text{f\"ur $a<0$}.$$
 Insgesamt ergibt sich daraus: 
 $$\underset{x\to\infty}\lim f(x)=\left\{\begin{array}{ll}
 0,&a<-1\\
