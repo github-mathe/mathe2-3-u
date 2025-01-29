@@ -3,13 +3,46 @@ Untersuchen Sie das Monotonieverhalten der folgenden Funktionen.
 Geben Sie dazu alle Intervalle an, in denen die 
 Funktion monoton steigend bzw. monoton fallend ist.
 
+\begin{multicols}{2}
 \begin{abc}
+\item $\sin(2x)$
 \item $f(x) = 2x^3 - 3x^2 + 1$
 \item $g(x) = -\cos(x) - 2\sin(x/2)$
+\item $\cosh(x+1)$
 \end{abc}
+\end{multicols}
 }
 \Loesung{
 \begin{abc}
+\item
+Die Ableitung der Funktion $f(x) = \sin(2x)$ ist: $f'(x) = 2\cos(2x).$
+
+Kritische Punkte erhalten wir, indem wir die Ableitung gleich Null setzen:
+$$
+2\cos(2x) = 0 \Rightarrow \cos(2x) = 0.
+$$
+Die Lösungen dieser Gleichung sind:
+$$
+2x = \frac{\pi}{2} + k\pi, \quad k \in \mathbb{Z}
+$$
+$$
+x = \frac{\pi}{4} + \frac{k\pi}{2}, \quad k \in \mathbb{Z}.
+$$
+Um das Monotonieverhalten zu bestimmen, analysieren wir das Vorzeichen der Ableitung $f'(x)$:
+
+\begin{iii}
+\item $f(x)$ ist streng monoton steigend in den Intervallen 
+$$
+\left( \frac{k\pi}{2}, \frac{\pi}{4} + \frac{k\pi}{2} \right)
+$$ 
+da $ \cos(2x) > 0 $.
+\item $f(x)$ ist streng monoton fallend in den Intervallen 
+$$
+\left( \frac{\pi}{4} + \frac{k\pi}{2}, \frac{(k+1)\pi}{2} \right)
+$$ 
+da $ \cos(2x) < 0 $.
+\end{iii}
+
 \item
 Die erste Ableitung ist
 $$
@@ -97,9 +130,21 @@ n \in \mathbb{Z}$$ ist $g(x)$ monoton fallend.
   \draw[scale=0.5, domain=-2:16, smooth, variable=\x, blue] plot (\x,{-cos(\x r)-2*sin(\x/2 r)});
   \draw[scale=0.5, domain=-1:1.8, smooth, variable=\y, red]  plot ({\y}, {2*\y*\y*\y - 3*\y*\y + 1});
 \end{tikzpicture}
+\item
+Die Ableitung der Funktion $g(x) = \cosh(x+1)$ ist:
+$$
+g'(x) = \sinh(x+1).
+$$
+Kritische Punkte erhalten wir durch die Bedingung:
+$$
+g'(x) = 0 \Rightarrow \sinh(x+1) = 0 \Rightarrow x = -1.
+$$
+Um das Monotonieverhalten zu bestimmen, analysieren wir das Vorzeichen von $g'(x)$:
 
+\begin{iii}
+\item $ g(x) $ ist streng monoton fallend f\"ur $ x < -1 $, da $ \sinh(x+1) < 0 $.
+\item $ g(x) $ ist streng monoton steigend f\"ur $ x > -1 $, da $ \sinh(x+1) > 0 $.
+\end{iii}
 
 \end{abc}
-
-
 }
