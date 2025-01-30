@@ -5,10 +5,10 @@ Funktion monoton steigend bzw. monoton fallend ist.
 
 \begin{multicols}{2}
 \begin{abc}
-\item $\sin(2x)$
-\item $f(x) = 2x^3 - 3x^2 + 1$
+\item $f(x) = \sin(2x)$
+\item $h(x) = 2x^3 - 3x^2 + 1$
 \item $g(x) = -\cos(x) - 2\sin(x/2)$
-\item $\cosh(x+1)$
+\item $k(x) = \cosh(x+1)$
 \end{abc}
 \end{multicols}
 }
@@ -33,12 +33,12 @@ Um das Monotonieverhalten zu bestimmen, analysieren wir das Vorzeichen der Ablei
 \begin{iii}
 \item $f(x)$ ist streng monoton steigend in den Intervallen 
 $$
-\left( \frac{k\pi}{2}, \frac{\pi}{4} + \frac{k\pi}{2} \right)
+\left( \frac{k\pi}{2}, \frac{\pi}{4} + \frac{k\pi}{2} \right),
 $$ 
 da $ \cos(2x) > 0 $.
 \item $f(x)$ ist streng monoton fallend in den Intervallen 
 $$
-\left( \frac{\pi}{4} + \frac{k\pi}{2}, \frac{(k+1)\pi}{2} \right)
+\left( \frac{\pi}{4} + \frac{k\pi}{2}, \frac{(k+1)\pi}{2} \right),
 $$ 
 da $ \cos(2x) < 0 $.
 \end{iii}
@@ -46,7 +46,7 @@ da $ \cos(2x) < 0 $.
 \item
 Die erste Ableitung ist
 $$
-f'(x) = 6x^2 -6x = 6x(x-1)
+h'(x) = 6x^2 -6x = 6x(x-1)
 $$
 Damit sind die station\"aren Punkte bei 
 $$
@@ -54,15 +54,17 @@ x_1 = 0 \quad \text{ und } \quad x_2 = 1.
 $$
 Mit der zweiten Ableitung erhalten wir f\"ur $x_1 = 0$
 $$
-f''(0) = -6
+h''(0) = -6
 $$
 und f\"ur $x_2 = 1$
 $$
-f''(1) = 6.
+h''(1) = 6.
 $$
 Damit ist bei $x_1 = 0$ ein Maximum und bei $x_2 = 1$ Minimum.
-In den Intervallen $(-\infty, 0 )$ und $(1,\infty)$ ist $f(x)$ monoton steigend
-und in dem Intervall $(0,1)$ ist $f(x)$ monoton fallend.
+In den Intervallen $(-\infty, 0 )$ und $(1,\infty)$ ist $h(x)$ monoton steigend
+und in dem Intervall $(0,1)$ ist $h(x)$ monoton fallend.
+
+
 \item
 Um alle station\"aren Punkte zu bestimmen, berechnen wir die Nullstellen der 
 ersten Ableitung
@@ -130,20 +132,21 @@ n \in \mathbb{Z}$$ ist $g(x)$ monoton fallend.
   \draw[scale=0.5, domain=-2:16, smooth, variable=\x, blue] plot (\x,{-cos(\x r)-2*sin(\x/2 r)});
   \draw[scale=0.5, domain=-1:1.8, smooth, variable=\y, red]  plot ({\y}, {2*\y*\y*\y - 3*\y*\y + 1});
 \end{tikzpicture}
+
 \item
-Die Ableitung der Funktion $g(x) = \cosh(x+1)$ ist:
+Die Ableitung der Funktion $k(x) = \cosh(x+1)$ ist:
 $$
-g'(x) = \sinh(x+1).
+k'(x) = \sinh(x+1).
 $$
 Kritische Punkte erhalten wir durch die Bedingung:
 $$
-g'(x) = 0 \Rightarrow \sinh(x+1) = 0 \Rightarrow x = -1.
+k'(x) = 0 \Rightarrow \sinh(x+1) = 0 \Rightarrow x = -1.
 $$
-Um das Monotonieverhalten zu bestimmen, analysieren wir das Vorzeichen von $g'(x)$:
+Um das Monotonieverhalten zu bestimmen, analysieren wir das Vorzeichen von $k'(x)$:
 
 \begin{iii}
-\item $ g(x) $ ist streng monoton fallend f\"ur $ x < -1 $, da $ \sinh(x+1) < 0 $.
-\item $ g(x) $ ist streng monoton steigend f\"ur $ x > -1 $, da $ \sinh(x+1) > 0 $.
+\item $ k(x) $ ist streng monoton fallend f\"ur $ x < -1 $, da $ \sinh(x+1) < 0 $.
+\item $ k(x) $ ist streng monoton steigend f\"ur $ x > -1 $, da $ \sinh(x+1) > 0 $.
 \end{iii}
 
 \end{abc}
