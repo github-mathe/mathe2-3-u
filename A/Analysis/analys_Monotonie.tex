@@ -28,20 +28,46 @@ $$
 $$
 x = \frac{\pi}{4} + \frac{k\pi}{2}, \quad k \in \mathbb{Z}.
 $$
-Um das Monotonieverhalten zu bestimmen, analysieren wir das Vorzeichen der Ableitung $f'(x)$:
 
-\begin{iii}
-\item $f(x)$ ist streng monoton steigend in den Intervallen 
+Um das Monotonieverhalten zu bestimmen, analysieren wir, ob es sich bei den kritischen Punkten um Minima oder Maxima handelt: \\
+
+Maxima liegen bei \\
 $$
-\left( \frac{k\pi}{2}, \frac{\pi}{4} + \frac{k\pi}{2} \right),
-$$ 
-da $ \cos(2x) > 0 $.
+x = \frac{\pi}{4} + \pi k, \quad k \in \mathbb{Z}
+$$
+vor, da $f''(x)=-4\sin(2x) < 0$.
+Minima liegen bei \\
+$$
+x = \frac{3\pi}{4} + \pi k, \quad k \in \mathbb{Z}
+$$
+vor, da $f''(x)=-4\sin(2x) > 0$. \\
+
+Daher gilt
+\begin{iii}
 \item $f(x)$ ist streng monoton fallend in den Intervallen 
 $$
-\left( \frac{\pi}{4} + \frac{k\pi}{2}, \frac{(k+1)\pi}{2} \right),
+\left( \frac{\pi}{4}+\pi k, \frac{3\pi}{4} + \pi k \right).
 $$ 
-da $ \cos(2x) < 0 $.
+\item $f(x)$ ist streng monoton steigend in den Intervallen 
+$$
+\left( \frac{3\pi}{4} + \pi k, \frac{5 \pi}{4}+ \pi k \right).
+$$ 
+
 \end{iii}
+%Um das Monotonieverhalten zu bestimmen, analysieren wir das Vorzeichen der Ableitung $f'(x)$:
+%
+%\begin{iii}
+%\item $f(x)$ ist streng monoton steigend in den Intervallen 
+%$$
+%\left( \frac{k\pi}{2}, \frac{\pi}{4} + \frac{k\pi}{2} \right),
+%$$ 
+%da $ \cos(2x) > 0 $.
+%\item $f(x)$ ist streng monoton fallend in den Intervallen 
+%$$
+%\left( \frac{\pi}{4} + \frac{k\pi}{2}, \frac{(k+1)\pi}{2} \right),
+%$$ 
+%da $ \cos(2x) < 0 $.
+%\end{iii}
 
 \item
 Die erste Ableitung ist
