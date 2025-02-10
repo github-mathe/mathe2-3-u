@@ -6,6 +6,8 @@ $$
 \begin{abc}
 %\item Determine the Taylor polynomial of the second order $T_2(x)$ of $f(x)$ about the point $x=1$.
 %\item Determine the difference between the Taylor polynomial $T_2(x)$ and the function $f(x)$ at the point $x=0$, i.e. determine $d(0)$ where
+\item Geben Sie den maximalen Definitionsbereich von $f(x)$ an.
+\item Kann die Funktion $f(x)$ im Punkt $x=0$ stetig fortgesetzt werden? Wenn ja, geben Sie die stetige Fortsetzung an.
 \item Bestimmen Sie das Taylor-Polynom zweiter Ordnung $T_2(x)$ von $f(x)$ um den Punkt $x=1$.
 \item Bestimmen Sie die Differenz zwischen dem Taylor-Polynom $T_2(x)$ und der Funktion $f(x)$ im Punkt $x=0$, d.h. bestimmen Sie $d(0)$, wobei
 $$d(x):= |T_2(x) - f(x)|.$$
@@ -16,6 +18,21 @@ Man beachte, dass die Funktion $f(x)$ an der Stelle $x=0$ stetig fortgesetzt wer
 
 \Loesung{
 \begin{abc}
+\item Die Funktion $f(x)$ ist auf $\mathbb{R}\setminus\{0\}$ definiert.
+\item 
+Wir müssen den Grenzwert $\lim_{x\to 0}f(x)$ berechnen, da die Funktion $\sin(x)\ln(x)$ in 0 nicht definiert ist. Wenn der Grenzwert existiert, erweitern wir die Funktion um den Wert des Grenzwertes. 
+\begin{align*}
+\lim_{x\to 0} \sin(x) \ln(x) &= \lim_{x\to 0} \frac{\ln(x)}{\frac{1}{\sin{x}}} \\
+&= \lim_{x\to 0} -\frac{1}{x} \frac{\sin^2(x)}{\cos(x)} \\
+&= \lim_{x\to 0} -\frac{\sin(x)}{x}\lim_{x\to 0}\sin(x) \lim_{x\to 0} \frac{1}{\cos(x)} \\
+&= \lim_{x\to 0} -\frac{\cos(x)}{1}\lim_{x\to 0}\sin(x) \lim_{x\to 0} \frac{1}{\cos(x)} 
+&= -1 \cdot 0 \cdot 1 = 0.
+\end{align*}
+Wir erweitern die Funktion bei $x=0$ durch Stetigkeit mit dem Grenzwert $f(0)=0$. \\
+  \begin{align*}
+  \quad f(x) = \begin{cases} \sin(x)\ln(x) & \text{f\"ur} \, x > 0, \\
+                       0 & \text {f\"ur}\, x=0,\end{cases}\\
+\end{align*}
 \item
 Die Ableitungen von $f(x)$ sind: 
 $$f'(x)=\cos(x)\ln(x) + \frac{\sin(x)}{x},$$
@@ -28,17 +45,9 @@ T_2(x;1) &= f(1) + f'(1) (x-1) +\frac12 f''(x) (x-1)^2\\
 \item Die Differenz ist
 $$d(x):= |T_2(x) - f(x)| = |\sin(x) \ln(x) - \sin(1) (x-1) - \left( \cos(1) -\frac{\sin(1)}{2}\right) (x-1)^2|.$$
 %We have to compute the limit $\lim_{x\to 0}d(x)$ because the function $\sin(x)\ln(x)$ is not defined in 0. If the limit exists we extend the function with the value of the limit.
-Wir müssen den Grenzwert $\lim_{x\to 0}d(x)$ berechnen, da die Funktion $\sin(x)\ln(x)$ in 0 nicht definiert ist. Wenn der Grenzwert existiert, erweitern wir die Funktion um den Wert des Grenzwertes.
-\begin{align*}
-\lim_{x\to 0} \sin(x) \ln(x) &= \lim_{x\to 0} \frac{\ln(x)}{\frac{1}{\sin{x}}} \\
-&= \lim_{x\to 0} -\frac{1}{x} \frac{\sin^2(x)}{\cos(x)} \\
-&= \lim_{x\to 0} -\frac{\sin(x)}{x}\lim_{x\to 0}\sin(x) \lim_{x\to 0} \frac{1}{\cos(x)} \\
-&= -1 \cdot 0 \cdot 1 = 0.
-\end{align*}
 %We extend the function at $x=0$ by continuity with the limit value $f(0)=0$.
 %The difference is
-Wir erweitern die Funktion bei $x=0$ durch Stetigkeit mit dem Grenzwert $f(0)=0$.
-Die Differenz ist
+Die Differenz ausgewertet im Punkt $x=0$ ist
 $$
 d(0) = \left|\sin(1) + \frac{\sin(1)}{2} - \cos(1)\right| = \frac{3\sin(1)}{2} - \cos(1).
 $$
