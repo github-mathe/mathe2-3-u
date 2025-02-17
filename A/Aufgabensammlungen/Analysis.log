@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=latex 2022.5.1)  20 DEC 2024 08:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=latex 2022.5.1)  17 FEB 2025 09:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1642,7 +1642,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--33
 
 ]
 (../Analysis/analys_Asympt_01.tex
-Overfull \hbox (4.192pt too wide) in paragraph at lines 88--88
+Overfull \hbox (4.192pt too wide) in paragraph at lines 90--90
 []\OT1/lmr/m/n/10 Die Funk-tion $\OML/lmm/m/it/10 g\OT1/lmr/m/n/10 (\OML/lmm/m/
 it/10 x\OT1/lmr/m/n/10 ) = [][]$ hat keine Def-i-ni-tionslucke. Es gibt also k
 eine senkrechten
@@ -1994,12 +1994,12 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 
 ]
-Overfull \hbox (38.55034pt too wide) detected at line 142
+Overfull \hbox (38.55034pt too wide) detected at line 153
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 
  []
 
@@ -2007,46 +2007,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--142
 \c@alalysFolgLims001=\count410
 ) [28
 
-] (../Analysis/analys_Funk_Lims_001.tex
-\c@analysFunkLims001=\count411
-) [29
+] (../Analysis/analys_Funk_Lims_001.tex [29
 
+
+]
+\c@analysFunkLims001=\count411
+) [30
 
 ]
 (../Analysis/analys_Funk_Lims_002.tex
 \c@analysFunkLims002=\count412
-) [30
+) [31
 
 
 
 ]
 (../Analysis/analys_Gren_Wert_004.tex
 \c@analysGrenWert004=\count413
-) [31
+) [32
 
 
 
 ]
 (../Analysis/analys_Gren_Wert_005.tex
 \c@analysGrenWert005=\count414
-) [32
+) [33
 
 
 ]
-(../Analysis/analys_Gren_Wert_006_de.tex [33
+(../Analysis/analys_Gren_Wert_006_de.tex [34
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+
+ []
+
 \c@analysGrenWert006de=\count415
-) [34
+) [35
 
-]
-(../Analysis/analys_Inte_Gral_001.tex [35
+] (../Analysis/analys_Inte_Gral_001.tex [36
 
 
 ]
 \c@AufganalysInteGral001=\count416
-) [36
+) [37
 
 ]
 (../Analysis/analys_Inte_Gral_007.tex
@@ -2058,7 +2063,7 @@ lmr/m/n/10 d\OML/lmm/m/it/10 y$\OT1/lmr/m/n/10 , wobei $\OML/lmm/m/it/10 B$ \OT
  []
 
 \c@analysInteGral007=\count417
-) [37
+) [38
 
 
 ] (../Analysis/analys_Inte_Gral_010.tex
@@ -2078,7 +2083,7 @@ Overfull \hbox (21.22296pt too wide) detected at line 59
  []
 
 \c@analysInteGral010=\count418
-) [38
+) [39
 
 
 
@@ -2089,7 +2094,7 @@ Overfull \hbox (0.61137pt too wide) in paragraph at lines 75--75
  []
 
 \c@analysInteGral013=\count419
-) [39
+) [40
 
 
 ] (../Analysis/analys_Intg_2dim_002.tex
@@ -2097,21 +2102,21 @@ Overfull \hbox (2.01202pt too wide) detected at line 88
 []
  []
 
-[40
+[41
 
 
-]) [41
+]) [42
 
-] (../Analysis/analys_Intg_Bogl_001.tex) [42
+] (../Analysis/analys_Intg_Bogl_001.tex) [43
 
 
 ]
-(../Analysis/analys_Intg_Kuko_001.tex [43
+(../Analysis/analys_Intg_Kuko_001.tex [44
 
 
 ]
 \c@AufganalysIntgKuko001=\count420
-) [44
+) [45
 
 ]
 (../Analysis/analys_Intg_Kuko_002.tex
@@ -2120,17 +2125,126 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--8
  []
 
 \c@AufganalysIntgKuko002=\count421
-) [45
+) [46
 
 
 
 ] (../Analysis/analys_Intg_Kuko_004.tex
 \c@halbkugel=\count422
-) [46
+) [47
 
 
 ]
 (../Analysis/analys_Intg_Ndim_001_1.tex
+
+LaTeX Warning: Command \. invalid in math mode on input line 19.
+
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.19 }
+      
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Extra }, or forgotten $.
+\add@accent ... \accent@spacefactor \spacefactor }
+                                                  \let \maybe@load@fontshape...
+l.19 }
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.19 }
+      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   $
+l.19 }
+      
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.19 }
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 }
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 }
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 }
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.19 }
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.19 }
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
@@ -2141,28 +2255,30 @@ Overfull \hbox (3.6682pt too wide) in paragraph at lines 19--19
 Sie die In-te-gra-tionsrei-
  []
 
-[47
+[48
 
 
 ]
 \c@AufganalysIntgNdim001=\count423
-) [48] (../Analysis/analys_Intg_Ndim_003.tex [49
+) [49
+
+] (../Analysis/analys_Intg_Ndim_003.tex [50
 
 
 ]
 \c@analysIntgNdim003=\count424
-) [50
+) [51
 
 ]
 (../Analysis/analys_Intg_Ndim_013.tex
 \c@AufganalysIntgNdim013=\count425
-) [51
+) [52
 
 
 ]
 (../Analysis/analys_Intg_Ndim_014.tex
 \c@AufganalysIntgNdim014=\count426
-) [52
+) [53
 
 
 
@@ -2175,12 +2291,12 @@ m/it/10 x; y; z\OT1/lmr/m/n/10 )$
  []
 
 \c@AufganalysIntgNdim017=\count427
-) [53
+) [54
 
 
 ] (../Analysis/analys_Intg_Ndim_023.tex
 \c@AufganalysIntgtNdim023=\count428
-) [54
+) [55
 
 
 
@@ -2200,21 +2316,21 @@ Overfull \hbox (39.04173pt too wide) detected at line 88
 []
  []
 
-[55
+[56
 
 
 ]
 \c@analysIntgNdim040=\count429
-) [56] (../Analysis/analys_Intg_Ndim_20b.tex
+) [57] (../Analysis/analys_Intg_Ndim_20b.tex
 Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 \c@analysIntgNdim020=\count430
-) [57
+) [58
 
 
-] (../Analysis/analys_Intg_Ndim_21a.tex) [58
+] (../Analysis/analys_Intg_Ndim_21a.tex) [59
 
 
 
@@ -2224,36 +2340,36 @@ Overfull \hbox (4.37416pt too wide) detected at line 210
 []
  []
 
-[59
+[60
 
 
-] [60]) [61
+] [61]) [62
 
-] (../Analysis/analys_Intg_Traf_001.tex [62
+] (../Analysis/analys_Intg_Traf_001.tex [63
 
 
-] [63]
+] [64]
 \c@analysIntgTraf001=\count431
-) [64]
-(../Analysis/analys_Intg_Traf_003.tex [65
+) [65]
+(../Analysis/analys_Intg_Traf_003.tex [66
 
 
-] [66]
+] [67]
 Overfull \hbox (41.17183pt too wide) detected at line 219
 []
  []
 
-[67]
+[68]
 \c@analysIntgTraf003=\count432
-) [68] (../Analysis/analys_Intg_Trig_001.tex
+) [69] (../Analysis/analys_Intg_Trig_001.tex
 \c@analysIntgTrig001=\count433
-) [69
+) [70
 
 
 ]
 (../Analysis/analys_Intg_Uneg_001.tex
 \c@analysPartBrch006=\count434
-) [70
+) [71
 
 
 ]
@@ -2269,16 +2385,16 @@ OT1/lmr/m/n/10 und $\OML/lmm/m/it/10 '$ \OT1/lmr/m/n/10 bleibt wie vorher. Der
 $\OML/lmm/m/it/10 z\OMS/lmsy/m/n/10  $\OT1/lmr/m/n/10 Integrationsbereich
  []
 
-[71
+[72
 
 
 ]
 \c@analysIntgZyln002=\count435
-) [72
+) [73
 
 ] (../Analysis/analys_Intg_Zyln_098.tex
 \c@analysIntgZyln098=\count436
-) [73
+) [74
 
 
 
@@ -2298,19 +2414,19 @@ Overfull \hbox (24.77011pt too wide) detected at line 208
 []
  []
 
-[74
+[75
 
 
-] [75]
+] [76]
 \c@AufganalysIntrPoly001=\count437
-) [76
+) [77
 
 ] (../Analysis/analys_inverse_001.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 223.
+(Font)              <8> on input line 225.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 223.
- [77
+(Font)              <6> on input line 225.
+ [78
 
 
 ]
@@ -2338,27 +2454,27 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ; in font nullfont!
-[78]
-Overfull \hbox (2.60434pt too wide) in paragraph at lines 223--223
+[79]
+Overfull \hbox (2.60434pt too wide) in paragraph at lines 225--225
 []\OT1/lmr/m/n/10 Die Funk-tion $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ ist di
 e Umkehrfunk-tion von $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$, wenn nur der Ha
 uptwert
  []
 
 
-Overfull \hbox (6.93787pt too wide) in paragraph at lines 223--223
+Overfull \hbox (6.93787pt too wide) in paragraph at lines 225--225
 []\OT1/lmr/m/n/10 Die Funk-tion $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ ist di
 e Umkehrfunk-tion von $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$, wenn nur der Ha
 uptwert
  []
 
-) [79] (../Analysis/analys_inverse_002.tex [80
+) [80] (../Analysis/analys_inverse_002.tex [81
 
 
 ]
 \c@InverseFunktion=\count438
-) [81]
-(../Analysis/analys_inverse.tex [82
+) [82]
+(../Analysis/analys_inverse.tex [83
 
 
 ]
@@ -2386,21 +2502,21 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ; in font nullfont!
-[83]
+[84]
 Overfull \hbox (3.28171pt too wide) in paragraph at lines 223--223
 \OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10  []\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 ) \OM
 S/lmsy/m/n/10 ! \OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10  1\OML/lmm/m/it/10 ; \OMS/lms
 y/m/n/10 1\OT1/lmr/m/n/10 )$ it is bi-jec-tive. []
  []
 
-) [84] (../Analysis/analys_Kett_Ndim_0021.tex
+) [85] (../Analysis/analys_Kett_Ndim_0021.tex
 \c@AufganalysKettNdim0021=\count439
-) [85
+) [86
 
 
 
 ]
-(../Analysis/analys_Kudi_Klau_001.tex) [86
+(../Analysis/analys_Kudi_Klau_001.tex) [87
 
 
 ]
@@ -2417,7 +2533,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--76
  []
 
 \c@AufganalysKurvDisk001=\count440
-) [87
+) [88
 
 
 ] (../Analysis/analys_Kurv_Disk_002.tex
@@ -2432,7 +2548,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--82
  []
 
 \c@AufganalysKurvDisk002=\count441
-) [88
+) [89
 
 
 ] (../Analysis/analys_Kurv_Disk_004.tex
@@ -2441,10 +2557,10 @@ Overfull \hbox (27.17822pt too wide) detected at line 68
  []
 
 \c@AufganalysKurvDisk004=\count442
-) [89
+) [90
 
 
-] (../Analysis/analys_Kurv_Disk_010.tex) [90
+] (../Analysis/analys_Kurv_Disk_010.tex) [91
 
 
 ]
@@ -2465,7 +2581,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 \c@Laplace001=\count443
-) [91
+) [92
 
 
 
@@ -2475,18 +2591,37 @@ Overfull \hbox (8.82292pt too wide) detected at line 82
  []
 
 \c@AufganalysMatrFnkt001=\count444
-) [92
+) [93
 
 
 ] (../Analysis/analys_maxima_minima_002_DE.tex
 NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (
 in y). (see also unbounded coords=jump). 
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+
+ []
+
 NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (
 in y). (see also unbounded coords=jump). 
-) [93
+[94
 
 
-] (../Analysis/analys_Mitl_Wrt_Satz_001.tex) [94
+]
+\c@MaxMin001=\count445
+) [95
+
+] (../Analysis/analys_Mitl_Wrt_Satz_001.tex) [96
 
 
 
@@ -2498,8 +2633,9 @@ gen fur die Schnittstellen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
-
+Overfull \hbox (0.49052pt too wide) in paragraph at lines 14--14
+\OT1/lmr/m/n/10 auf funf Nachkom-mas-tellen genau. Hi-erfur ist die Ver-wen-d
+ung eines Taschen-
  []
 
 
@@ -2513,6 +2649,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--102
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
+[97
+
+
+]
 Overfull \hbox (2.59854pt too wide) in paragraph at lines 102--102
 []\OT1/lmr/m/n/10 Fur diesen Fall hat das Ver-fahren bere-its nach zwei Schrit
 -ten die gewunschte Genauigkeit
@@ -2523,18 +2667,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--102
 
  []
 
-\c@AufganalysNewtVerf001=\count445
-) [95
-
-
-] [96
+\c@AufganalysNewtVerf001=\count446
+) [98
 
 ] (../Analysis/analys_Newt_Verf_003.tex
 Underfull \hbox (badness 10000) in paragraph at lines 58--58
 
  []
 
-) [97
+\c@AufganalysNewtVerf003=\count447
+) [99
 
 
 
@@ -2548,17 +2690,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--54
 
  []
 
-\c@analysNewtVerf002=\count446
-) [98
+\c@analysNewtVerf002=\count448
+) [100
 
 
 ] (../Analysis/analys_Opt_Poster.tex
-Overfull \hbox (11.1993pt too wide) detected at line 66
+Overfull \hbox (11.1993pt too wide) detected at line 70
 []
  []
 
-\c@AufganalysOptPoster=\count447
-) [99
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+\c@AufganalysOptPoster=\count449
+) [101
 
 
 ] (../Analysis/analys_Para_Grap_001.tex
@@ -2572,14 +2724,14 @@ Overfull \hbox (1.35461pt too wide) in paragraph at lines 108--108
 \OT1/lmr/m/n/10 par-al-lele Tan-gen-ten, wenn ihre Ableitun-
  []
 
-[100
+[102
 
 
 ]
-\c@AufganalysParaGrap001=\count448
-) [101
+\c@AufganalysParaGrap001=\count450
+) [103
 
-] (../Analysis/analys_Part_Ablt_001.tex) [102
+] (../Analysis/analys_Part_Ablt_001.tex) [104
 
 
 ]
@@ -2598,29 +2750,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--93
 
  []
 
-[103
+[105
 
 
 ]
-\c@analysPartBrch005=\count449
-) [104
+\c@analysPartBrch005=\count451
+) [106
 
 ] (../Analysis/analys_Regl_Lhos_001.tex
-\c@AufganalysReglLhos001=\count450
-) [105
+\c@AufganalysReglLhos001=\count452
+) [107
 
 
 ]
 (../Analysis/analys_Regl_Lhos_002.tex
-\c@AufganalysReglLhos002=\count451
-) [106
+\c@AufganalysReglLhos002=\count453
+) [108
 
 
 
 ]
 (../Analysis/analys_Rich_Ablt_003.tex
-\c@AufganalysRichAblt003=\count452
-) [107
+\c@AufganalysRichAblt003=\count454
+) [109
 
 
 
@@ -2637,25 +2789,25 @@ Overfull \hbox (12.83676pt too wide) in paragraph at lines 44--44
 /n/10 \OT1/lmr/m/n/10 3)[]\OMS/lmsy/m/n/10 g$\OT1/lmr/m/n/10 . 
  []
 
-\c@AufganalysSatlBahn001=\count453
-) [108
-
-
-] (../Analysis/analys_Stet_Igkt_01a.tex
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-
- []
-
-\c@AufganalysStetIgkt01a=\count454
-) [109
-
-
-] (../Analysis/analys_Stet_Igkt_01a.tex
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-
- []
-
+\c@AufganalysSatlBahn001=\count455
 ) [110
+
+
+] (../Analysis/analys_Stet_Igkt_01a.tex
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+
+ []
+
+\c@AufganalysStetIgkt01a=\count456
+) [111
+
+
+] (../Analysis/analys_Stet_Igkt_01a.tex
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+
+ []
+
+) [112
 
 
 ] (../Analysis/analys_Tang_Ebne_001.tex
@@ -2663,31 +2815,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--87
 
  []
 
-\c@AufganalysTangEbne001=\count455
-) [111
-
-
-] (../Analysis/analys_Tayl_01.tex
-\c@analysTayl01=\count456
-) [112
-
-
-] (../Analysis/analys_Tayl_02.tex
-\c@analysTayl02=\count457
+\c@AufganalysTangEbne001=\count457
 ) [113
 
 
-] (../Analysis/analys_Tayl_Entw_001.tex [114
+] (../Analysis/analys_Tayl_01.tex
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+
+ []
+
+\c@analysTayl01=\count458
+) [114
+
+
+] (../Analysis/analys_Tayl_02.tex
+\c@analysTayl02=\count459
+) [115
 
 
 ]
-\c@AufganalysTaylEntw001=\count458
-) [115
+(../Analysis/analys_Tayl_Entw_001.tex [116
+
+
+]
+\c@AufganalysTaylEntw001=\count460
+) [117
 
 ]
 (../Analysis/analys_Tayl_Ndim_002.tex
-\c@AufganalysTaylNdim002=\count459
-) [116
+\c@AufganalysTaylNdim002=\count461
+) [118
 
 
 ]
@@ -2696,30 +2853,30 @@ Overfull \hbox (2.80539pt too wide) detected at line 88
 []
  []
 
-\c@AufganalysTaylNdim005=\count460
-) [117
+\c@AufganalysTaylNdim005=\count462
+) [119
 
 
-] (../Analysis/analys_Tayl_Ndim_02b.tex [118
+] (../Analysis/analys_Tayl_Ndim_02b.tex [120
 
 
-]) [119
+]) [121
 
 ]
 (../Analysis/analys_Taylor2D_01.tex)
-Overfull \hbox (2.68869pt too wide) in paragraph at lines 6--301
+Overfull \hbox (2.68869pt too wide) in paragraph at lines 6--300
    [] 
  []
 
-[120
+[122
 
 
 
-] (../Analysis/analys_Trig_Glei_001.tex [121
+] (../Analysis/analys_Trig_Glei_001.tex [123
 
 
-] [122]) [123]
-(../Analysis/analys_Ueig_Intg_001.tex) [124
+] [124]) [125]
+(../Analysis/analys_Ueig_Intg_001.tex) [126
 
 
 
@@ -2731,44 +2888,44 @@ m/m/it/10 y\OT1/lmr/m/n/10 ) = [](\OML/lmm/m/it/10 y\OT1/lmr/m/n/10 )$ ergibt s
 ich da-raus mit Hilfe des angegebe-
  []
 
-[125
+[127
 
 
 ]
-\c@AufganalysUmkeFunk001=\count461
-) [126
+\c@AufganalysUmkeFunk001=\count463
+) [128
 
-] (../Analysis/analys_Umke_Funk_004.tex) [127
+] (../Analysis/analys_Umke_Funk_004.tex) [129
 
 
 ]
-(../Analysis/analys_Volumentintegral_099.tex) [128
+(../Analysis/analys_Volumentintegral_099.tex) [130
 
 
 
 ]
 (../Analysis/analys_Weg__Ablt_001.tex
-\c@AufganalysWegAblt001=\count462
-) [129
+\c@AufganalysWegAblt001=\count464
+) [131
 
 
 
 ]
 (../Analysis/analys_Zwis_Wert_001.tex
-\c@AufganalysZwisWert001=\count463
-) [130
+\c@AufganalysZwisWert001=\count465
+) [132
 
 
 
 ] (../Analysis/aufgabe2.tex
-\c@aufgabe2=\count464
+\c@aufgabe2=\count466
 )
-[131
+[133
 
 
 ] (../Analysis/b-2011A-K-A4a.tex
-\c@Aufgb-2011A-K-A4a=\count465
-) [132
+\c@Aufgb-2011A-K-A4a=\count467
+) [134
 
 
 
@@ -2778,8 +2935,8 @@ Underfull \hbox (badness 5388) in paragraph at lines 12--54
 it Hilfe
  []
 
-\c@Aufgb-2011A-K-A5a=\count466
-) [133
+\c@Aufgb-2011A-K-A5a=\count468
+) [135
 
 
 ] (../Analysis/b-2011-K2-A4.tex
@@ -2787,18 +2944,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--92
 
  []
 
-[134
+[136
 
 
-]) [135
+]) [137
 
 ] (../Analysis/b-2011-K2-A5.tex
-\c@b-2011-K2-A5=\count467
-) [136
+\c@b-2011-K2-A5=\count469
+) [138
 
 
 
-] (../Analysis/b-2011-K-A6.tex) [137
+] (../Analysis/b-2011-K-A6.tex) [139
 
 
 
@@ -2813,11 +2970,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--77
 
  []
 
-\c@Aufgb-2011A-K-A3=\count468
-) [138
+\c@Aufgb-2011A-K-A3=\count470
+) [140
 
 
-] (../Analysis/b-2013-K-A3.tex) [139
+] (../Analysis/b-2013-K-A3.tex) [141
 
 
 
@@ -2827,10 +2984,10 @@ Overfull \hbox (0.44524pt too wide) in paragraph at lines 44--44
 e Def-i-ni-tion der Stetigkeit
  []
 
-) [140
+) [142
 
 
-] (../Analysis/continuity_001.tex) [141
+] (../Analysis/continuity_001.tex) [143
 
 
 ]
@@ -2839,24 +2996,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--42
 
  []
 
-\c@AufglinalgPosiDefi002=\count469
-) [142
+\c@AufglinalgPosiDefi002=\count471
+) [144
 
 
 
 ] (../Analysis/wz-2013-2-1p.tex
-\c@wz-2013-2-1p=\count470
-) [143
+\c@wz-2013-2-1p=\count472
+) [145
 
 
 
 ] (../Analysis/wz-2013-3-1.tex
-Overfull \hbox (18.64441pt too wide) detected at line 63
+Overfull \hbox (25.31126pt too wide) detected at line 78
 []
  []
 
-\c@Ergwz-2013-3-1=\count471
-) [144
+
+Overfull \hbox (18.64441pt too wide) detected at line 78
+[]
+ []
+
+\c@Ergwz-2013-3-1=\count473
+) [146
 
 
 ] (../Analysis/wz-2013-6-3.tex
@@ -2866,7 +3028,7 @@ lmm/m/it/10 y\OT1/lmr/m/n/10 ) [] []$  ex-istiert nicht und damit auch  $[]  []
 $
  []
 
-) [145
+) [147
 
 
 ] (../Analysis/wz-2013-6-4.tex
@@ -2883,63 +3045,85 @@ Overfull \hbox (17.95013pt too wide) detected at line 73
 []
  []
 
-) [146
+) [148
 
 
-] (../Analysis/wz-2013-7-6.tex) [147
+] (../Analysis/wz-2013-7-6.tex) [149
 
 
 
 ] (../Analysis/wz-2013-8-1.tex)
-[148
-
-
-
-] (../Analysis/wz-2013-8-2.tex
-\c@Aufgwz-2013-8-2=\count472
-) [149
-
-
-
-] (../Analysis/wz3-2013-1-1.tex)
 [150
 
 
 
-] (../Analysis/Zeuge-2013Nov-K-A4.tex) [151
+] (../Analysis/wz-2013-8-2.tex
+\c@Aufgwz-2013-8-2=\count474
+) [151
+
+
+
+] (../Analysis/wz3-2013-1-1.tex)
+[152
+
+
+
+] (../Analysis/Zeuge-2013Nov-K-A4.tex) [153
 
 
 ]
-(../Analysis/analys_Monotonie.tex [152
+(../Analysis/analys_Monotonie.tex
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
 
 
-]) [153
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 
-]
-(../Analysis/analys_Extrema_002.tex) [154
-
+ []
 
 
-]
-(../Analysis/analys_Gren_Wert_007.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+[154
+
+
+])
 \BKM@file=\write5
 \openout5 = `Analysis.out.ps'.
 
- [155
+ [155] (../Analysis/analys_Extrema_002.tex
+\c@StationaerePunkte=\count475
+) [156
+
+
+
+]
+(../Analysis/analys_Gren_Wert_007.tex) [157
 
 
 
 ] (Analysis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Analysis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45344 strings out of 478660
- 1074057 string characters out of 2844525
- 1997014 words of memory out of 3000000
- 62290 multiletter control sequences out of 15000+600000
+ 45361 strings out of 478660
+ 1074350 string characters out of 2844525
+ 1997134 words of memory out of 3000000
+ 62307 multiletter control sequences out of 15000+600000
  454408 words of font info for 73 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,19n,120p,10620b,2753s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,19n,120p,10620b,2763s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Analysis.dvi (155 pages, 1715144 bytes).
+Output written on Analysis.dvi (157 pages, 1723128 bytes).

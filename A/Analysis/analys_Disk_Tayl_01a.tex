@@ -47,12 +47,12 @@ Die Taylor-Polynome in den beiden Extrempunkten sind damit
 \begin{pspicture}(-4,-4)(4,1)
 \psgrid[subgriddiv=5,griddots=1,gridlabels=.3](-4,-4)(4,1)
 \psline(-4,0)(4,0)%Asymptote
-\psplot[plotpoints=200, plotstyle=curve, linecolor=lightgray]
+\psplot[plotpoints=200, plotstyle=curve, linecolor=blue]
 {0}{4}
 {2.718 2 neg exp 1 2.5 neg x 2 neg add 2 exp mul add mul}
 \put(3.5,-.6){$T_{2;2}$}
 \put(.2,-3.2){$T_{2;-1/2}$}
-\psplot[plotpoints=200, plotstyle=curve, linecolor=lightgray]
+\psplot[plotpoints=200, plotstyle=curve, linecolor=blue]
 {-2}{1}
 {2.718 .125 neg exp 4 neg  13 8 div x .5 add 2 exp mul add mul}
 
