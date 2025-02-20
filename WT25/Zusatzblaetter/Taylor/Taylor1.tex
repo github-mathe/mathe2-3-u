@@ -8,7 +8,6 @@ $$
 \item Geben Sie das Restglied $R_3(x;0)$ an. 
 \item Schätzen Sie das Restglied für $|x| < \frac{1}{2}$ ab.
 \end{abc}
-\textbf{Hinweis:} Es ist nicht notwendig das Restglied optimal abzuschätzen.
 }
 
 
@@ -16,7 +15,7 @@ $$
 \begin{abc}
 \item Die Taylor-Entwicklung von \( f(x) \) um \( x_0 = 0 \) ist:
 \[
-f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 \cdots
+T_3(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 \cdots
 \]
 
 \begin{align*}
@@ -49,7 +48,7 @@ R_3(x; 0) = \frac{f^{(4)}(\xi)}{4!}x^4 = -\frac{1}{4(\xi+1)^4}x^4.
 \]
 
 
-\item F\u"r \( |x| < \frac{1}{2} \) ergibt sich \( -\frac{1}{2} \leq \xi \leq \frac{1}{2} \) :
+\item F\"ur \( |x| < \frac{1}{2} \) ergibt sich \( -\frac{1}{2} \leq \xi \leq \frac{1}{2} \) :
 \begin{align*}
 |R_3(x; 0)|& = \left|-\frac{1}{4(\xi+1)^4}x^4\right| = \frac{1}{4}\frac{1}{(\xi+1)^4}x^4
 \leq \frac{1}{4}\frac{1}{(-\frac{1}{2}+1)^4} \left( \frac{1}{2}\right) ^4 \\

@@ -1,0 +1,98 @@
+\Aufgabe{}
+{
+Gegeben sei die Funktion
+\[\
+f(x) = \frac{e^x}{(x+1)^2}.
+\]
+
+\begin{enumerate}
+    \item Bestimmen Sie das Taylor-Polynom 2. Ordnung \(T_2(x)\) von \(f(x)\) um den Punkt \(x_0 = 0\).
+    \item Geben Sie das Restglied \(R_2(x;0)\) an.
+    \item Schätzen Sie das Restglied für \( |x| < \frac{1}{3} \) ab.
+\end{enumerate}
+
+\textbf{Hinweis:} Es ist nicht notwendig, das Restglied optimal abzuschätzen.
+}
+
+\Loesung{
+\begin{enumerate}
+    \item Die Taylor-Entwicklung von \( f(x) \) um \( x_0 = 0 \) lautet:
+    \[
+    T_2(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \dots
+    \]
+    
+    Berechnung der Ableitungen:
+    
+    \begin{align*}
+    f(0) &= \frac{e^0}{(0+1)^2} = 1 \\
+    f'(x) &= \frac{(x-1)e^x}{(x+1)^3} \quad \Rightarrow \quad f'(0) = -1\\
+    f''(x) &= \frac{(x^2 - 2x + 3)e^x}{(x+1)^4} \quad \Rightarrow \quad f''(0) = 3
+    \end{align*}
+    
+    Damit ergibt sich das Taylor-Polynom 2. Ordnung:
+    
+    \[
+    T_2(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2
+    = 1 - x + \frac{3}{2}x^2.
+    \]
+    
+    \item Das Restglied ist gegeben durch:
+    
+    \[
+    R_2(x; 0) = \frac{f^{(3)}(\xi)}{3!}x^3,
+    \]
+    
+    wobei \( -\frac{1}{3} \leq \xi \leq \frac{1}{3} \).
+    
+    Dritte Ableitung:
+    
+    \[
+    f'''(x) = \frac{(x^3 - 3x^2 + 9x - 11)e^x}{(x+1)^5}.
+    \]
+    
+    \item Abschätzung des Restglieds für \( |x| < \frac{1}{3} \):
+    
+    \[
+    |R_2(x; 0)| = \left|\frac{f^{(3)}(\xi)}{3!}x^3\right| = \left|\frac{(\xi^3 - 3\xi^2 + 9\xi - 11)e^\xi}{6(\xi+1)^5} x^3\right|.
+    \]
+    
+    Da \( |x| < \frac{1}{3} \), maximieren wir den Bruch für \( -\frac{1}{3} \leq \xi \leq \frac{1}{3} \). Eine grobe Abschätzung liefert:
+    \[
+    \left| f'''(\xi) \right| = \left| \frac{(\xi^3 - 3\xi^2 + 9\xi - 11)e^\xi}{(\xi+1)^5} \right|
+    \]
+    
+    \[
+    \left| f'''(\xi) \right| \leq \frac{\left| \xi^3 - 3\xi^2 + 9\xi - 11 \right| e^\xi}{|(\xi+1)^5|}
+    \]
+    
+    \[
+    \left| \xi^3 - 3\xi^2 + 9\xi - 11 \right| \leq \left| \xi^3 \right| + \left| -3\xi^2 \right| + \left| 9\xi \right| + \left| -11 \right|
+    \]
+    
+    Wir w\"ahlen \( \xi = \frac{1}{3} \):
+    
+    \[
+    \frac{1}{27} + \frac{1}{3} + 3 + 11 = \frac{388}{27}
+    \]
+    
+    \[
+    (\xi+1)^5 \bigg|_{\xi = -\frac{1}{3}} =  \left(\frac{-1}{3}+1\right)^5=\left(\frac{2}{3}\right)^5 = \frac{32}{243} \approx 0.1317.
+    \]
+    
+    \[
+    \max_{\xi} |f'''(\xi)| = \frac{\frac{388}{27} \cdot e^\xi}{(\xi+1)^5} = \frac{\frac{388}{27} \times 1.3956}{1024/243} = 4.76.
+    \]
+    
+    \[
+    \left| R_2(x; 0) \right| \leq \frac{4.76}{6} x^3 = 0.79 x^3.
+    \]
+    
+    
+    Daraus ergibt sich die Schranke für das Restglied:
+    
+    \[
+    |R_2(x; 0)| \leq 0.79 \left(\frac{1}{3}\right)^3.
+    \]
+    
+\end{enumerate}
+}
