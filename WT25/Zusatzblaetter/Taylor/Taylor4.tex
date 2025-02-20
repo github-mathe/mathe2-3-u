@@ -1,0 +1,71 @@
+\Aufgabe{}{
+Gegeben sei die Funktion $$
+f(x) = \frac{1}{\sqrt{x^2+1}},
+$$
+\begin{abc}
+\item Bestimmen Sie das Taylor-Polynom 2.Ordnung $T_3(x)$ von $f (x)$ um den
+	  Punkt $x_0 = 1$.
+\item Geben Sie das Restglied $R_2(x;1)$ an.
+\item Schätzen Sie das Restglied für $\frac{1}{2} < x < \frac{3}{2}$ ab.
+\end{abc}
+\textbf{Hinweis:} Es ist nicht notwendig das Restglied optimal abzuschätzen.
+}
+
+
+\Loesung{
+\begin{abc}
+\item Die Taylor-Entwicklung von \( f(x) \) um \( x_0 = 1\) ist:
+\[
+f(x) = f(1) + f'(1)(x-1) + \frac{f''(1)}{2!}(x-1)^2 \cdots
+\]
+
+\begin{align*}
+f(1)  &= \frac{1}{\sqrt{2}} \\
+f'(x) &= -\frac{x}{\sqrt{(x^2+1)^3}}  \quad \Rightarrow \quad f'(1) = -\frac{1}{2\sqrt{2}}\\
+f''(x) &= \frac{2x^2-1}{\sqrt{(x^2+1)^5}}  \quad \Rightarrow \quad f''(1) = \frac{1}{4\sqrt{2}}
+\end{align*}
+
+
+Damit ergibt sich das Taylor-Polynom zu
+\[
+T_2(x) = f(1) + f'(1)(x-1) + \frac{f''(1)}{2!}(x-1)^2 \\
+= \frac{1}{\sqrt{2}}-\frac{1}{2\sqrt{2}}(x-1)+\frac{1}{8\sqrt{2}}(x-1)^2.
+\]
+
+\item Das Restglied wird wie folgt bestimmt:
+\[
+R_2(x; 1) = \frac{f'''(\xi)}{3!}(x-1)^3,
+\]
+wobei $\frac{1}{2}\leq \xi \leq \frac{3}{2}$ gilt.
+
+\[
+f'''(x) = -\frac{6x^3-9x}{\sqrt{(x^2+1)^7}}.
+\]
+
+Das Restglied wird damit 
+\[
+R_2(x; 1) = \frac{f'''(\xi)}{3!}(x-1)^3
+=-\frac{2\xi^3-3\xi}{2\sqrt{(\xi^2+1)^7}}(x-1)^3.
+\]
+
+
+\item F\"ur \( \frac{1}{2} <x  < \frac{3}{2} \) ergibt sich \( \frac{1}{2} \leq \xi \leq \frac{3}{2} \) :
+\begin{align*}
+|R_2(x; 1)|& = \left|-\frac{2\xi^3-3\xi}{2\sqrt{(\xi^2+1)^7}}(x-1)^3\right|\\
+&=\left|-\frac{\xi(2\xi^2-3)}{2\sqrt{(\xi^2+1)^7}}(x-1)^3\right|\\
+&\leq \left|-\frac{\frac{3}{2}(2\frac{3}{2}^2-3)}{2\sqrt{(\frac{3}{2}^2+1)^7}}(\frac{3}{2}-1)^3\right|\\
+&= \frac{144}{\sqrt{13^7}}\frac{1}{8}\\
+&= \frac{18}{\sqrt{13^7}}\\
+&\leq \frac{18}{\sqrt{9^7}}\\
+&= \frac{2}{3^5} \approx 0.008
+\end{align*}
+
+D.h.
+\[
+|R_2(x; 1)| \leq \frac{2}{3^5} .
+\]
+
+	  
+\end{abc}
+
+}
