@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-\setboolean{mitLoes}{true}
+%\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -63,6 +63,11 @@
 % 79
 \input{../A/Analysis/analys_Tang_Ebne_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% 
+\input{../A/Analysis/analys_StatPunkte.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
 
 %% 92
 %\input{../A/Analysis/analys_Weg__Ablt_001.tex}
