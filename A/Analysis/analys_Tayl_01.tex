@@ -18,7 +18,7 @@ Man beachte, dass die Funktion $f(x)$ an der Stelle $x=0$ stetig fortgesetzt wer
 
 \Loesung{
 \begin{abc}
-\item Die Funktion $f(x)$ ist auf $\mathbb{R}\setminus\{0\}$ definiert.
+\item Die Funktion $f(x)$ ist auf $\mathbb{R}^+$ definiert.
 \item 
 Wir müssen den Grenzwert $\lim_{x\to 0}f(x)$ berechnen, da die Funktion $\sin(x)\ln(x)$ in 0 nicht definiert ist. Wenn der Grenzwert existiert, erweitern wir die Funktion um den Wert des Grenzwertes. 
 \begin{align*}
@@ -39,7 +39,7 @@ $$f'(x)=\cos(x)\ln(x) + \frac{\sin(x)}{x},$$
 $$f''(x) =  -\sin(x)\ln(x) + 2\frac{\cos(x)}{x} - \frac{\sin(x)}{x^2} .$$
 Das Taylor-Polynom ist
 \begin{align*}
-T_2(x;1) &= f(1) + f'(1) (x-1) +\frac12 f''(x) (x-1)^2\\
+T_2(x;1) &= f(1) + f'(1) (x-1) +\frac12 f''(1) (x-1)^2\\
 &= \sin(1) (x-1) + \left(\cos(1) - \frac{\sin(1)}{2}\right)(x-1)^2
 \end{align*}
 \item Die Differenz ist

@@ -1,0 +1,62 @@
+%Identisch mit analys_Diff_Ndim_001.tex
+\Aufgabe[e]{Partielle Ableitungen}{
+Bestimmen Sie alle ersten und zweiten partiellen Ableitungen der folgenden reellen Funktionen und geben Sie jeweils die ersten und zweiten Ableitungen in Matrixschreibweise an: 
+\[
+\begin{array}{rclcrcl}
+\mathbf{i)} &  & f(x,y)=\,x^2 +3xy+2y^2 & \;\;\;\;\; & \mathbf{ii)} & & g(x,y)= e^{x+y} +x^2y \\ 
+&  &  &  &  &  &  \\ 
+\mathbf{iii)} &  & h(x,y)=\sin (xy)+\cos (x)+y^2 &  & \mathbf{iv)} &  & p(x,y)=\ln(x^2+y^2+z^3)\\
+&  &  &  &  &  &  \\ 
+\mathbf{v)} &  & q(x,y,z)= \sin(xy)z +2xz
+\end{array}
+\]
+}
+
+\Loesung{
+
+\begin{iii}
+\item \begin{align*}
+\nabla f(x,y)=&\left( 2x+3y\;,\;3x+4y\right)^\top\\
+\vec H_f(x,y)=&\begin{pmatrix}
+2 & 3 \\ 
+3 & 4
+\end{pmatrix}
+\end{align*}
+\item \begin{align*}
+\nabla g(x,y)=& \Big( 2xy+e^{x+y}\;,\;x^2+e^{x+y}\Big)^\top \\
+\vec H_g(x,y)=& \small{\begin{pmatrix}
+e^{x+y}+2y &e^{x+y}+2x \\ 
+e^{x+y}+2x&e^{x+y}
+\end{pmatrix}}
+\end{align*}
+\item \begin{align*}
+\nabla h(x,y)=&\Big( y \cos(xy)-\sin(x)\;,\;x \cos(xy)+2y\Big)^\top\\
+\vec H_h(x,y)=&\begin{pmatrix}
+-y^2 \sin(xy)-\cos(x) & -xy\sin(xy)+\cos(xy) \\ 
+-xy\sin(xy)+\cos(xy) & -x^2 \sin(xy)+2
+\end{pmatrix}
+\end{align*}
+\item \begin{align*}
+\nabla p(x,y)=&\big(\frac{2x}{1+x^2+y^2}\;,\; \frac{2y}{1+x^2+y^2}\big)^\top\\
+\vec H_p(x,y)=&
+\begin{pmatrix}
+\frac{2}{1+x^2+y^2}-\frac{4x^2}{(1+x^2+y^2)^2} & \frac{-4xy}{(1+x^2+y^2)^2}  \\ 
+\frac{-4xy}{(1+x^2+y^2)^2} & \frac{2}{1+x^2+y^2}-\frac{4y^2}{(1+x^2+y^2)^2}
+\end{pmatrix}
+\end{align*}
+\item \begin{align*}
+\nabla q(x,y,z) =&\big(z(2+y\cos(xy))\;,\; xz\cos(xy)\;,\; 2x+\sin(xy)\big)^\top\\
+\vec H_q(x,y,z) =&\begin{pmatrix}
+-y^2z\sin(xy) & z\cos(xy)-xyz\sin(xy) & y\cos(xy)+2 \\
+z\cos(xy)-xyz\sin(xy)  & -x^2z\sin(xy) & \cos(xy)x \\
+y\cos(xy)+2 & x\cos(xy) & 0 
+\end{pmatrix}
+\end{align*}
+\end{iii}
+}
+
+% \ErgebnisC{dummy}
+% {
+% 
+% }
+

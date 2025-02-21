@@ -29,7 +29,7 @@ $$f(x)=\EH{-{x^2/2}}(2x-3).$$
 \Leftrightarrow&&0=& x^2-\frac 32 x -  1\\
 \Leftrightarrow&&x_{1,2}=& \frac 3 4 \pm \sqrt{\frac 9{16}+1}=\left\{\begin{array}{r}2\\-\frac 12\end{array}\right.
 \end{align*}
-Da die Funktion $f(x)$ zwischen den beiden kritischen Punkten $x_1$ und $x_2$ bei $x_0$ eine Nullstelle hat und links davon negativ und rechts von $x_0$ positiv ist und sich asymptotisch der $x$-Achse ann\"ahert, muss in $x_1=2$ ein Maximum und in $x_2=\frac 12$ ein Minimum liegen. 
+Da die Funktion $f(x)$ zwischen den beiden kritischen Punkten $x_1$ und $x_2$ bei $x_0$ eine Nullstelle hat und links davon negativ und rechts von $x_0$ positiv ist und sich asymptotisch der $x$-Achse ann\"ahert, muss in $x_1=2$ ein Maximum und in $x_2=-\frac 12$ ein Minimum liegen. 
 \item Zur Bestimmung der Taylorpolynome wird die zweite Ableitung von $f$ ben\"otigt: 
 $$f''(x)=\EH{-x^2/2}(2x^3-3x^2-2x-4x+3)=\EH{-x^2/2}(2x^3-3x^2-6x+3)$$
 Die Taylor-Polynome in den beiden Extrempunkten sind damit
@@ -47,12 +47,12 @@ Die Taylor-Polynome in den beiden Extrempunkten sind damit
 \begin{pspicture}(-4,-4)(4,1)
 \psgrid[subgriddiv=5,griddots=1,gridlabels=.3](-4,-4)(4,1)
 \psline(-4,0)(4,0)%Asymptote
-\psplot[plotpoints=200, plotstyle=curve, linecolor=lightgray]
+\psplot[plotpoints=200, plotstyle=curve, linecolor=blue]
 {0}{4}
 {2.718 2 neg exp 1 2.5 neg x 2 neg add 2 exp mul add mul}
 \put(3.5,-.6){$T_{2;2}$}
 \put(.2,-3.2){$T_{2;-1/2}$}
-\psplot[plotpoints=200, plotstyle=curve, linecolor=lightgray]
+\psplot[plotpoints=200, plotstyle=curve, linecolor=blue]
 {-2}{1}
 {2.718 .125 neg exp 4 neg  13 8 div x .5 add 2 exp mul add mul}
 

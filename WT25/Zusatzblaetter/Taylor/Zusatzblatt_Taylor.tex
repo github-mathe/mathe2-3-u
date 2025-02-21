@@ -1,0 +1,151 @@
+
+\documentclass[10pt,landscape,fleqn]{article}
+%
+\usepackage{pgfplots}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+%
+%\usepackage{pstricks,pst-plot,pst-text,pst-solides3d}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,
+            pdftitle={Mathe II/B},
+            pdfauthor={Thomas Carraro},
+            pdfpagemode={UseOutlines},pdfstartview={Fit},
+            linkcolor=black,urlcolor=blue,
+            pdfsubject={Mathematik IV}]{hyperref}
+\usepackage{cancel}
+%
+\usepackage{ifthen}
+\newboolean{mitLoes}
+%\setboolean{mitLoes}{false}
+\setboolean{mitLoes}{true}
+
+\newcounter{sol}
+\setcounter{sol}{0}
+\ifthenelse{\boolean{mitLoes}}{
+\setcounter{sol}{1}
+}
+
+\usepackage{amssymb,amsmath,amsthm,am1-aufgaben,bm}
+\usepackage{array, hhline}
+\usepackage{multirow, multicol}
+\usepackage{paralist}
+\usepackage{mathtools}
+
+% \usepackage{marvosym,pifont}
+% \usepackage{listings}
+% \usepackage{algorithmic,algorithm}
+% \lstset{language=Matlab,numbers=left}
+
+\newcounter{Aufg}
+\setcounter{Aufg}{0}
+
+\newcommand{\Aufgabe}[3][]{
+\stepcounter{Aufg}
+\subsubsection*{Aufgabe
+\arabic{Aufg}}
+{#3}
+}
+
+\newcommand{\Loesung}[1]{
+	\ifthenelse{\boolean{mitLoes}}
+	{\subsubsection*{L\"osung:}
+		#1}
+	{}
+	\ifthenelse{\boolean{mitLoes}}{
+	\leavevmode
+	\newline
+	\rule{360pt}{1pt}
+\cleardoublepage 
+}
+
+}
+
+
+\textwidth = 270mm
+\textheight = 180mm
+\leftmargin 5mm
+\oddsidemargin = -20mm
+\evensidemargin = -20mm
+\topmargin = -25mm
+\parindent 0cm
+\columnsep 2cm
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\rmi}{\mathrm{i}}
+
+\renewcommand{\vec}{\boldsymbol}
+\newcommand{\mat}{\boldsymbol}
+
+\newcommand{\ud}{\;\mathrm{d}}
+\newcommand{\p}{\partial}
+\newcommand{\dO}{\d \vec o}
+\newcommand{\dA}{\d \vec A}
+\newcommand{\dX}{\d \vec x}
+
+\renewcommand{\div}{\operatorname{div}}
+\newcommand{\rot}{\operatorname{rot}}
+\newcommand{\grad}{\operatorname{grad}}
+
+\newcommand{\skalar}[1]{\left\langle{#1}\right\rangle}
+
+\renewcommand{\d}{\,{\rm d}}
+\newcommand{\x}{\ensuremath{{\vec x}}}
+\newcommand{\ve}[3]{\begin{pmatrix} #1\\ #2\\ #3\end{pmatrix}}
+\newcommand{\e}{\ensuremath{{\bf e}}}
+
+\begin{document}
+
+
+
+\begin{twocolumn}
+
+
+
+\href{http://mb-mathe.hsu-hh.de/bause}
+{\large\bf Helmut-Schmidt-Universit\"at}\\
+\href{http://mb-mathe.hsu-hh.de/bause}
+{\large\bf Universit\"at der Bundeswehr Hamburg}\\
+\href{http://mb-mathe.hsu-hh.de/bause}
+{\large\bf Fakult\"at f\"ur Maschinenbau und\,Bauingenieurwesen}\\[1ex]
+\href{http://mb-mathe.hsu-hh.de/bause}
+{\large\bf Prof. Dr.\ Thomas Carraro}\\
+\\[-28mm]
+\phantom{.}
+\hfill\includegraphics[height=20mm]{HSU_RGB}
+
+\vspace*{8mm}
+{\Large\bf Mathematik II/B (WI/ET) \hfill Zusatzblatt}\\[1ex]
+{\Large WT 2025 \hfill  Taylor-Entwicklung}
+
+
+\vspace*{1mm}
+\rule{360pt}{2pt}
+
+\vspace*{0ex}
+% \paragraph*{Ex1}
+%
+\input{Taylor1.tex}
+\input{Taylor2.tex}
+\input{Taylor3.tex}
+% 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{twocolumn}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
