@@ -15,8 +15,360 @@
 
 \Loesung{
 
+\begin{itemize}
+\item[i)]
+\begin{enumerate}
+\item \textbf{Berechnung des Gradienten:}
 
+Der Gradient von $ f $ ist:
+\[
+\nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
+\]
 
+Berechnung der partiellen Ableitungen:
+\[
+\frac{\partial f}{\partial x} = 2x + y - 3
+\]
+\[
+\frac{\partial f}{\partial y} = x + 2y - 3
+\]
+
+Daher:
+\[
+\nabla f(x, y) = (2x + y - 3, x + 2y - 3)
+\]
+
+\item \textbf{Ermittlung der kritischen Punkte:}
+
+Kritische Punkte treten dort auf, wo der Gradient Null ist:
+\[
+2x + y - 3 = 0
+\]
+\[
+x + 2y - 3 = 0
+\]
+
+Lösung dieses linearen Gleichungssystems:
+\[
+\begin{cases}
+2x + y = 3 \\
+x + 2y = 3
+\end{cases}
+\]
+
+Der kritische Punkt ist also $ (1, 1) $.
+%
+%\item \textbf{Klassifizierung des kritischen Punkts:}
+%
+%Um den kritischen Punkt zu klassifizieren, untersuchen wir die zweiten partiellen Ableitungen:
+%\[
+%f_{xx} = \frac{\partial^2 f}{\partial x^2} = 2
+%\]
+%\[
+%f_{yy} = \frac{\partial^2 f}{\partial y^2} = 2
+%\]
+%\[
+%f_{xy} = \frac{\partial^2 f}{\partial x \partial y} = 1
+%\]
+%
+%Die Hessische Determinante $ D $ ist:
+%\[
+%D = f_{xx} f_{yy} - (f_{xy})^2 = (2)(2) - (1)^2 = 4 - 1 = 3
+%\]
+%
+%Da $ D > 0$ und $ f_{xx} > 0$ ist, hat die Funktion ein lokales Minimum bei $ (1, 1)$.
+\end{enumerate}
+
+\item[ii)]
+\begin{enumerate}
+\item \textbf{Berechnung des Gradienten:}
+
+Der Gradient von $ f $ ist:
+\[
+\nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
+\]
+
+Berechnung der partiellen Ableitungen:
+\[
+\frac{\partial f}{\partial x} = 3x^2 - 3y
+\]
+\[
+\frac{\partial f}{\partial y} = -3x + 3y^2
+\]
+
+Daher:
+\[
+\nabla f(x, y) = (3x^2 - 3y, -3x + 3y^2)
+\]
+
+\item \textbf{Ermittlung der kritischen Punkte:}
+
+Kritische Punkte treten dort auf, wo der Gradient Null ist:
+\[
+3x^2 - 3y = 0
+\]
+\[
+-3x + 3y^2 = 0
+\]
+
+Vereinfachung dieser Gleichungen:
+\[
+x^2 = y \quad \text{(1)}
+\]
+\[
+x = y^2 \quad \text{(2)}
+\]
+
+Einsetzen von Gleichung (2) in Gleichung (1):
+\[
+(y^2)^2 = y \implies y^4 = y \implies y(y^3 - 1) = 0
+\]
+
+Auflösen nach $ y $:
+\[
+y = 0 \quad \text{oder} \quad y^3 = 1 \implies y = 1
+\]
+
+Für $ y = 0 $:
+\[
+x = 0
+\]
+
+Für $ y = 1 $:
+\[
+x = (1)^2 = 1
+\]
+
+Daher sind die kritischen Punkte $ (0, 0) $ und $ (1, 1) $.
+
+%\item \textbf{Klassifizierung der kritischen Punkte:}
+%
+%Um die kritischen Punkte zu klassifizieren, untersuchen wir die zweiten partiellen Ableitungen:
+%\[
+%f_{xx} = \frac{\partial^2 f}{\partial x^2} = 6x
+%\]
+%\[
+%f_{yy} = \frac{\partial^2 f}{\partial y^2} = 6y
+%\]
+%\[
+%f_{xy} = \frac{\partial^2 f}{\partial x \partial y} = -3
+%\]
+%
+%Die Hessische Determinante $ D$ lautet:
+%\[
+%D = f_{xx} f_{yy} - (f_{xy})^2 = (6x)(6y) - (-3)^2 = 36xy - 9
+%\]
+%
+%Auswertung von $ D$ an jedem kritischen Punkt:
+%
+%- Bei $ (0, 0) $:
+%\[
+%D = 36(0)(0) - 9 = -9
+%\]
+%Da $ D < 0 $, ist $ (0, 0) $ ein Sattelpunkt.
+%
+%- Bei $ (1, 1) $:
+%\[
+%D = 36(1)(1) - 9 = 27
+%\]
+%Da $ D > 0$ und $f_{xx}(1, 1) = 6 > 0$ ist, ist $ (1, 1)$ ein lokales Minimum.
+\end{enumerate}
+\item[iii)]
+\begin{enumerate}
+\item \textbf{Berechnung des Gradienten:}
+
+Der Gradient von $ f $ ist:
+\[
+\nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
+\]
+
+Berechnung der partiellen Ableitungen:
+\[
+\frac{\partial f}{\partial x} = 4x^3 - 4y
+\]
+\[
+\frac{\partial f}{\partial y} = 4y^3 - 4x
+\]
+
+Daher:
+\[
+\nabla f(x, y) = (4x^3 - 4y, 4y^3 - 4x)
+\]
+
+\item \textbf{Ermittlung der kritischen Punkte:}
+
+Kritische Punkte treten dort auf, wo der Gradient Null ist:
+\[
+4x^3 - 4y = 0
+\]
+\[
+4y^3 - 4x = 0
+\]
+
+Vereinfachung dieser Gleichungen:
+\[
+x^3 = y \quad \text{(1)}
+\]
+\[
+y^3 = x \quad \text{(2)}
+\]
+
+Einsetzen von Gleichung (1) in Gleichung (2):
+\[
+(y^3)^3 = y \implies y^9 = y \implies y(y^8 - 1) = 0
+\]
+
+Auflösen nach $ y $:
+\[
+y = 0 \quad \text{oder} \quad y^8 = 1 \implies y = \pm 1
+\]
+
+Für $ y = 0 $:
+\[
+x^3 = 0 \implies x = 0
+\]
+
+Für $ y = 1 $:
+\[
+x^3 = 1 \implies x = 1
+\]
+
+Für $ y = -1 $:
+\[
+x^3 = -1 \implies x = -1
+\]
+
+Daher sind die kritischen Punkte $ (0, 0) $, $ (1, 1) $ und $ (-1, -1) $.
+
+%\item \textbf{Klassifizierung der kritischen Punkte:}
+%
+%Um die kritischen Punkte zu klassifizieren, untersuchen wir die zweiten partiellen Ableitungen:
+%\[
+%f_{xx} = \frac{\partial^2 f}{\partial x^2} = 12x^2
+%\]
+%\[
+%f_{yy} = \frac{\partial^2 f}{\partial y^2} = 12y^2
+%\]
+%\[
+%f_{xy} = \frac{\partial^2 f}{\partial x \partial y} = -4
+%\]
+%
+%Die Hessische Determinante $ D $ ist:
+%\[
+%D = f_{xx} f_{yy} - (f_{xy})^2 = (12x^2)(12y^2) - (-4)^2 = 144x^2y^2 - 16
+%\]
+%
+%Auswertung von $ D$ an jedem kritischen Punkt:
+%
+%- Bei $ (0, 0) $:
+%\[
+%D = 144(0)^2(0)^2 - 16 = -16
+%\]
+%Da $ D < 0 $, ist $ (0, 0) $ ein Sattelpunkt.
+%
+%- Bei $ (1, 1) $:
+%\[
+%D = 144(1)^2(1)^2 - 16 = 128
+%\]
+%Da $ D > 0$ und $ f_{xx}(1, 1) = 12 > 0$ ist, ist $ (1, 1)$ ein lokales Minimum.
+%
+%- Bei $ (-1, -1)$:
+%\[
+%D = 144(-1)^2(-1)^2 - 16 = 128
+%\]
+%Da $ D > 0$ und $f_{xx}(-1, -1) = 12 > 0$ ist, ist $(-1, -1)$ ein lokales Minimum.
+\end{enumerate}
+
+\item[iv)]
+\begin{enumerate}
+\item \textbf{Berechnung des Gradienten:}
+
+Der Gradient von $ f $ ist:
+\[
+\nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
+\]
+
+Berechnung der partiellen Ableitungen:
+\[
+\frac{\partial f}{\partial x} = 4x^3 - 4x
+\]
+\[
+\frac{\partial f}{\partial y} = 4y^3 - 4y
+\]
+
+Daher:
+\[
+\nabla f(x, y) = (4x(x^2 - 1), 4y(y^2 - 1))
+\]
+
+\item \textbf{Ermittlung der kritischen Punkte:}
+
+Kritische Punkte treten dort auf, wo der Gradient Null ist:
+\[
+4x(x^2 - 1) = 0
+\]
+\[
+4y(y^2 - 1) = 0
+\]
+
+Lösung dieser Gleichungen:
+\[
+x(x^2 - 1) = 0 \implies x = 0, \, x = \pm 1
+\]
+\[
+y(y^2 - 1) = 0 \implies y = 0, \, y = \pm 1
+\]
+
+Kombiniert man diese Ergebnisse, ergeben sich folgende kritische Punkte:
+\[
+(0, 0), \, (1, 0), \, (-1, 0), \, (0, 1), \, (0, -1), \, (1, 1), \, (1, -1), \, (-1, 1), \, (-1, -1)
+\]
+
+%\item \textbf{Klassifizierung der kritischen Punkte:}
+%
+%Zur Klassifizierung der kritischen Punkte untersuchen wir die zweiten partiellen Ableitungen:
+%\[
+%f_{xx} = \frac{\partial^2 f}{\partial x^2} = 12x^2 - 4
+%\]
+%\[
+%f_{yy} = \frac{\partial^2 f}{\partial y^2} = 12y^2 - 4
+%\]
+%\[
+%f_{xy} = \frac{\partial^2 f}{\partial x \partial y} = 0
+%\]
+%
+%Die Hessische Determinante $ D $ ist:
+%\[
+%D = f_{xx} f_{yy} - (f_{xy})^2 = (12x^2 - 4)(12y^2 - 4)
+%\]
+%
+%Auswertung von $ D $ an jedem kritischen Punkt:
+%
+%- Bei $ (0, 0) $:
+%\[
+%f_{xx} = -4, \quad f_{yy} = -4, \quad D = (-4)(-4) - 0 = 16
+%\]
+%Da $ D > 0 $ und $ f_{xx} < 0 $, ist $ (0, 0) $ ein lokales Maximum.
+%
+%- Bei $ (1, 0) $ und $ (-1, 0) $:
+%\[
+%f_{xx} = 8, \quad f_{yy} = -4, \quad D = (8)(-4) - 0 = -32
+%\]
+%Da $ D < 0 $, sind diese Punkte Sattelpunkte.
+%
+%- Bei $ (0, 1) $ und $ (0, -1) $:
+%\[
+%f_{xx} = -4, \quad f_{yy} = 8, \quad D = (-4)(8) - 0 = -32
+%\]
+%Da $ D < 0 $, sind diese Punkte Sattelpunkte.
+%
+%- Bei $ (1, 1) $, $ (1, -1) $, $ (-1, 1) $ und $ (-1, -1) $:
+%\[
+%f_{xx} = 8, \quad f_{yy} = 8, \quad D = (8)(8) - 0 = 64
+%\]
+%Da $ D > 0 $ und $ f_{xx} > 0 $, sind diese Punkte lokale Minima.
+\end{enumerate}
+\end{itemize}
 }
 
 \ErgebnisC{analysAblt01}

@@ -68,20 +68,28 @@ w\"ahrend sich f\"ur $z=0$ die Geraden $y=\pm 1$ ergeben:\\
 \item Es ist 
 $$\nabla f(x,y,z)=\left( -z,2y,-x\right)^\top\text{ und damit }\nabla f(\vec p_0)=(-3,\, -4,\,
 -1)^\top.$$
-\item Die Ebene $\vec E$ hat den Normalenvektor $\nabla f(\vec p_0)$, dessen Normierung
-$$\vec n_0=\frac 1{\sqrt{26}} \begin{pmatrix}-3\\-4\\-1\end{pmatrix} $$
-ergibt und enth\"alt den Punkt $\vec
-p_0$. Ihre Hessesche Normalform ist also 
+%\item Die Ebene $\vec E$ hat den Normalenvektor $\nabla f(\vec p_0)$, dessen Normierung
+%$$\vec n_0=\frac 1{\sqrt{26}} \begin{pmatrix}-3\\-4\\-1\end{pmatrix} $$
+%ergibt und enth\"alt den Punkt $\vec
+%p_0$. Ihre Hessesche Normalform ist also 
+%\begin{align*}
+%\vec E = &\{\vec x\in \R^3|\, \skalar{\vec x-\vec p_0,\, \vec n_0}=0\}\\
+%=&\left\{\vec
+%x\in \R^3\left|\, \skalar{\begin{pmatrix}x-1\\y+2\\z-3\end{pmatrix},\frac 1{\sqrt{26}} \begin{pmatrix}-3\\ -4\\
+%-1\end{pmatrix}}=0\right.\right\}.
+%\end{align*}
+\item Die Ebene $\vec E$ hat den Normalenvektor $\nabla f(\vec p_0)$ und enth\"alt den Punkt $\vec
+p_0$. Ihre Punkt-Normalen-Form ist also 
 \begin{align*}
-\vec E = &\{\vec x\in \R^3|\, \skalar{\vec x-\vec p_0,\, \vec n_0}=0\}\\
+\vec E = &\{\vec x\in \R^3|\, \skalar{\vec n, \vec x-\vec p_0}=0\}\\
 =&\left\{\vec
-x\in \R^3\left|\, \skalar{\begin{pmatrix}x-1\\y+2\\z-3\end{pmatrix},\frac 1{\sqrt{26}} \begin{pmatrix}-3\\ -4\\
--1\end{pmatrix}}=0\right.\right\}.
+x\in \R^3\left|\, \skalar{\begin{pmatrix}-3\\ -4\\-1\end{pmatrix}, \begin{pmatrix}x-1\\y+2\\z-3\end{pmatrix}}=0\right.\right\}.
 \end{align*}
-\item Ein kritischer Punkt erf\"ullt die Bedingung $\nabla f(\vec x)=0$. Damit ist $\vec x = \vec 0$ der
-einzige kritische Punkt. Der Abstand ergibt sich aus dem Skalarprodukt der Hesseschen Normalform: 
+%\item Ein kritischer Punkt erf\"ullt die Bedingung $\nabla f(\vec x)=0$. Damit ist $\vec x = \vec 0$ der
+%einzige kritische Punkt. Der Abstand ergibt sich aus dem Skalarprodukt der Hesseschen Normalform: 
+%$$d=\left|\skalar{\vec 0-\vec p_0,\vec n_0}\right|=\frac 1{\sqrt{26}} |-2|=\sqrt{\frac 2{13}}.$$
+\item Ein kritischer Punkt erf\"ullt die Bedingung $\nabla f(\vec x)=0$. Damit ist $\vec x = \vec 0$ der einzige kritische Punkt. Der Abstand ergibt sich aus dem folgenden Skalarprodukt, wobei der normierte Normalenvektor $n_0$ verwendet wird: 
 $$d=\left|\skalar{\vec 0-\vec p_0,\vec n_0}\right|=\frac 1{\sqrt{26}} |-2|=\sqrt{\frac 2{13}}.$$
-
 
 \end{abc}
 
