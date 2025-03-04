@@ -1,0 +1,75 @@
+\Aufgabe[e]{}
+{
+Bestimmen Sie f\"ur die gegebenen Koordinaten jeweils
+die Jacobi-Matrix $\vec J$ und die Determinante der Jacobi-Matrix $\text{det}(\vec J)$.
+
+\begin{itemize}
+\item[a)] Polarkoordinaten: $x= r \cos \varphi, \, y= r \sin \varphi$ 
+\item[b)] Zylinderkoordinaten: $x= r\cos \varphi, \, y= r \sin \varphi, \, z=z $ 
+\item[c)] Kugelkoordinaten: $x= r \cos \varphi \sin \theta, \, y= r \sin \varphi \sin \theta, \, z= r \cos \theta$
+\item[d)] Kugelkoordinaten: $x= r \cos \varphi \cos \theta, \, y= r \sin \varphi \cos \theta, \, z= r \sin \theta$
+\end{itemize}
+}
+\Loesung{
+
+\begin{itemize}
+\item[a)] \[
+J =
+\begin{bmatrix}
+\cos\varphi & -r \sin\varphi \\
+\sin\varphi& r \cos\varphi
+\end{bmatrix}
+\]
+$$
+\text{det}(\vec J) = r \cos^2 \varphi + r \sin^2 \varphi = r(\cos^2+\sin^2) = r 
+$$
+\item[b)] \[J =
+\begin{bmatrix}
+\cos\varphi & -r \sin\varphi & 0 \\
+\sin\varphi& r \cos\varphi & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\]
+$$
+\text{det}(\vec J) = r \cos^2 \varphi + r \sin^2 \varphi = r(\cos^2+\sin^2) = r 
+$$
+\item[c)] \[J =
+\begin{bmatrix}
+\cos\varphi \sin \theta & -r \sin\varphi \sin \theta & r \cos \varphi \cos \theta \\
+\sin\varphi \sin \theta & r \cos\varphi \sin \theta & r \sin \varphi \cos \theta \\
+\cos \theta & 0 & -r \sin \theta 
+\end{bmatrix}
+\]
+\begin{align*}
+\text{det}(\vec J) &= -r^2 \cos^2 \varphi \sin^3 \theta - r^2 \sin^2 \varphi \sin \theta \cos^2 \theta \\
+&- r^2 \cos^2 \varphi \cos^2 \theta \sin \theta -r^2 \sin^2 \varphi \sin^3 \theta \\
+&= -r^2 \sin^3 \theta (\cos^2 \varphi + \sin^2 \varphi) -r^2 \cos^2 \theta \sin \theta (\cos^2 \varphi + \sin^2 \varphi) \\
+&= -r^2 \sin^3 \theta - r^2 \cos^2 \theta \sin \theta \\
+&= -r^2 \sin \theta (\sin^2 \theta + \cos^2 \theta) \\
+&= -r^2 \sin \theta
+\end{align*}
+\item[d)] \[J =
+\begin{bmatrix}
+\cos\varphi \cos \theta & -r \sin\varphi \cos \theta & -r \cos \varphi \sin \theta \\
+\sin\varphi \cos \theta & r \cos\varphi \cos \theta & -r \sin \varphi \sin \theta \\
+\sin \theta & 0 & r \cos \theta 
+\end{bmatrix}
+\]
+\begin{align*}
+\text{det}(\vec J) &= -r^2 \cos^2 \varphi \cos^3 \theta + r^2 \sin^2 \varphi \sin^2 \theta \cos \theta \\
+&+ r^2 \cos^2 \varphi \sin^2 \theta \cos \theta + r^2 \sin^2 \varphi \cos^3 \theta \\
+&= r^2 \cos^3 \theta (\cos^2 \varphi + \sin^2 \varphi) + r^2 \sin^2 \theta \cos \theta (\cos^2 \varphi + \sin^2 \varphi) \\
+&= r^2 \cos^3 \theta + r^2 \sin^2 \theta \cos \theta \\
+&= r^2 \cos \theta (\sin^2 \theta + \cos^2 \theta) \\
+&= r^2 \cos \theta
+\end{align*}
+\end{itemize}
+}
+
+\ErgebnisC{AnalysJacobi}
+{
+a) det($\vec J$) = $r$,
+b) det($\vec J$) = $r$,  
+c) det($\vec J) = -r^2 \sin \theta$, 
+d) det($\vec J) = r^2 \cos \theta$                                                            
+}                                    
