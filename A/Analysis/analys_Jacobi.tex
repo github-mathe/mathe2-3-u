@@ -1,29 +1,41 @@
-\Aufgabe[e]{}
+\Aufgabe[e]{Koordinatentransformationen}
 {
-Bestimmen Sie f\"ur die gegebenen Koordinaten jeweils
-die Jacobi-Matrix $\vec J$ und die Determinante der Jacobi-Matrix $\text{det}(\vec J)$.
+Betrachten Sie die folgenden Koordinatentransformationen als Abbildungen $\vec T: \mathbb{R}^{\text{n}} \to \mathbb{R}^{\text{n}}$. 
+Bestimmen Sie f\"ur jede Transformation die Jacobi-Matrix $\vec J$ und deren Determinante $\text{det}(\vec J)$.
 
-\begin{itemize}
-\item[a)] Polarkoordinaten: $x= r \cos \varphi, \, y= r \sin \varphi$ 
-\item[b)] Zylinderkoordinaten: $x= r\cos \varphi, \, y= r \sin \varphi, \, z=z $ 
-\item[c)] Kugelkoordinaten: $x= r \cos \varphi \sin \theta, \, y= r \sin \varphi \sin \theta, \, z= r \cos \theta$
-\item[d)] Kugelkoordinaten: $x= r \cos \varphi \cos \theta, \, y= r \sin \varphi \cos \theta, \, z= r \sin \theta$
-\end{itemize}
+\begin{abc}
+    \item \textbf{Polarkoordinaten}: Transformation $\vec T: \mathbb{R}^2 \to \mathbb{R}^2$
+    \[
+    \vec T(r, \varphi) = (x, y)^T, \quad x= r \cos \varphi, \quad y= r \sin \varphi
+    \]
+    \item \textbf{Zylinderkoordinaten}: Transformation $\vec T: \mathbb{R}^3 \to \mathbb{R}^3$
+    \[
+    \vec T(r, \varphi, z) = (x, y, z)^T, \quad x= r\cos \varphi, \quad y= r \sin \varphi, \quad z=z
+    \]
+    \item \textbf{Kugelkoordinaten}: Transformation $\vec T: \mathbb{R}^3 \to \mathbb{R}^3$
+    \[
+    \vec T(r, \varphi, \theta) = (x, y, z)^T, \quad x= r \cos \varphi \sin \theta, \quad y= r \sin \varphi \sin \theta, \quad z= r \cos \theta
+    \]
+    \item \textbf{Alternative Kugelkoordinaten}: Transformation $\vec T: \mathbb{R}^3 \to \mathbb{R}^3$
+    \[
+    \vec T(r, \varphi, \theta) = (x, y, z)^T, \quad x= r \cos \varphi \cos \theta, \quad y= r \sin \varphi \cos \theta, \quad z= r \sin \theta
+    \]
+\end{abc}
 }
-\Loesung{
 
-\begin{itemize}
-\item[a)] \[
-J =
+\Loesung{
+\begin{abc}
+\item \[
+\vec J =
 \begin{bmatrix}
 \cos\varphi & -r \sin\varphi \\
 \sin\varphi& r \cos\varphi
 \end{bmatrix}
 \]
 $$
-\text{det}(\vec J) = r \cos^2 \varphi + r \sin^2 \varphi = r(\cos^2+\sin^2) = r 
+\text{det}(\vec J) = r \cos^2 \varphi + r \sin^2 \varphi = r(\cos^2+\sin^2) = r
 $$
-\item[b)] \[J =
+\item \[\vec J =
 \begin{bmatrix}
 \cos\varphi & -r \sin\varphi & 0 \\
 \sin\varphi& r \cos\varphi & 0 \\
@@ -31,13 +43,13 @@ $$
 \end{bmatrix}
 \]
 $$
-\text{det}(\vec J) = r \cos^2 \varphi + r \sin^2 \varphi = r(\cos^2+\sin^2) = r 
+\text{det}(\vec J) = r \cos^2 \varphi + r \sin^2 \varphi = r(\cos^2+\sin^2) = r
 $$
-\item[c)] \[J =
+\item \[\vec J =
 \begin{bmatrix}
 \cos\varphi \sin \theta & -r \sin\varphi \sin \theta & r \cos \varphi \cos \theta \\
 \sin\varphi \sin \theta & r \cos\varphi \sin \theta & r \sin \varphi \cos \theta \\
-\cos \theta & 0 & -r \sin \theta 
+\cos \theta & 0 & -r \sin \theta
 \end{bmatrix}
 \]
 \begin{align*}
@@ -48,11 +60,11 @@ $$
 &= -r^2 \sin \theta (\sin^2 \theta + \cos^2 \theta) \\
 &= -r^2 \sin \theta
 \end{align*}
-\item[d)] \[J =
+\item \[\vec J =
 \begin{bmatrix}
 \cos\varphi \cos \theta & -r \sin\varphi \cos \theta & -r \cos \varphi \sin \theta \\
 \sin\varphi \cos \theta & r \cos\varphi \cos \theta & -r \sin \varphi \sin \theta \\
-\sin \theta & 0 & r \cos \theta 
+\sin \theta & 0 & r \cos \theta
 \end{bmatrix}
 \]
 \begin{align*}
@@ -63,13 +75,15 @@ $$
 &= r^2 \cos \theta (\sin^2 \theta + \cos^2 \theta) \\
 &= r^2 \cos \theta
 \end{align*}
-\end{itemize}
+\end{abc}
 }
 
 \ErgebnisC{AnalysJacobi}
 {
-a) det($\vec J$) = $r$,
-b) det($\vec J$) = $r$,  
-c) det($\vec J) = -r^2 \sin \theta$, 
-d) det($\vec J) = r^2 \cos \theta$                                                            
-}                                    
+\begin{abc}
+    \item det($\vec J$) = $r$,
+    \item det($\vec J$) = $r$,
+    \item det($\vec J$) = $-r^2 \sin \theta$,
+    \item det($\vec J$) = $r^2 \cos \theta$
+\end{abc}
+}
