@@ -3,23 +3,23 @@
 \item Berechnen Sie folgende Integrale mittels partieller Integration: 
 \begin{multicols}{2}
 \begin{iii}
-\item $\int x\cdot \sin x \,\d x$,
-\item $\int \sin^2(x) \,\d x$,
-%  \int\frac{x^2+1}{\sqrt x}\,\d x
-\item $\int x^2\EH{1-x} \,\d x$,
-\item $\int \frac{x}{\cos^2 x}\,\d x$,
-\item $\int\limits_{0}^{\pi/4} \frac x{\cos^2 x}\,\d x$
+\item $\int x\cdot \sin x \,\mathrm{d} x$,
+\item $\int \sin^2(x) \,\mathrm{d} x$,
+%  \int\frac{x^2+1}{\sqrt x}\,\mathrm{d} x
+\item $\int x^2\EH{1-x} \,\mathrm{d} x$,
+\item $\int \frac{x}{\cos^2 x}\,\mathrm{d} x$,
+\item $\int\limits_{0}^{\pi/4} \frac x{\cos^2 x}\,\mathrm{d} x$
 \end{iii}
 \end{multicols}
 \item Berechnen Sie folgende Integrale mittels einer geeigneten Substitution: 
 \begin{multicols}{2}
 \begin{iii}
-\item $\int\limits_1^2 \frac{3x^2+7}{x^3+7x-2}\,\d x$,
-\item $\int\limits_\pi^{3\pi/2}x^2\cos(x^3+2)\,\d x$,
-\item $\int\limits_1^2 \frac1x \EH{1+\ln x}\,\d x $,
-\item $\int\limits_{1/4}^1 \EH{\sqrt x}\,\d x,$
-\item $\int\cosh^2 x \sinh x \,\d x$
-% ,&&\int\limits_{-1}^32x|x|\,\d x
+\item $\int\limits_1^2 \frac{3x^2+7}{x^3+7x-2}\,\mathrm{d} x$,
+\item $\int\limits_\pi^{3\pi/2}x^2\cos(x^3+2)\,\mathrm{d} x$,
+\item $\int\limits_1^2 \frac1x \EH{1+\ln x}\,\mathrm{d} x $,
+\item $\int\limits_{1/4}^1 \EH{\sqrt x}\,\mathrm{d} x,$
+\item $\int\cosh^2 x \sinh x \,\mathrm{d} x$
+% ,&&\int\limits_{-1}^32x|x|\,\mathrm{d} x
 \end{iii}
 \end{multicols}
 \end{abc}
@@ -30,21 +30,21 @@
 \begin{abc}
 \item \begin{iii}
 \item \begin{align*}
-\int \underbrace{x}_{u}\underbrace{\sin x}_{v'} \,\d x =& \underbrace{x}_{u} \underbrace{(-\cos
-x)}_{v}- \int \underbrace{1}_{u'} \cdot \underbrace{(-\cos x)}_{v}\\
-=&-x \cos x + \int \cos x = -x\cos x + \sin x + C
+\int \underbrace{x}_{u}\underbrace{\sin x}_{v'} \,\mathrm{d} x =& \underbrace{x}_{u} \underbrace{(-\cos
+x)}_{v}- \int \underbrace{1}_{u'} \cdot \underbrace{(-\cos x)}_{v} \mathrm{d} x\\
+=&-x \cos x + \int \cos x \mathrm{d} x = -x\cos x + \sin x + C
 \end{align*}
 \item \begin{align*}
-&&\int\underbrace{\sin x}_u \underbrace{\sin x}_{v'}  \,\d x=&\underbrace{\sin
-x}_{u}\underbrace{(-\cos x)}_{v} - \int \underbrace{\cos x}_{u'}\underbrace{(-\cos x)}_{v}\,\d x\\
-&&=&-\sin x\cos x +\int\underbrace{\cos x\cos x}_{=1-\sin^2 x}\,\d x\\
-&&=& -\sin x \cos x +\int 1 \,\d x - \int \sin^2 x\,\d x\\
-\Rightarrow &&2\int\sin^2 x \,\d x =& -\sin x \cos x + x + 2C\\
-\Rightarrow &&\int\sin^2 x \,\d x =& \frac {x-\sin x \cos x}{2} + C
+&&\int\underbrace{\sin x}_u \underbrace{\sin x}_{v'}  \,\mathrm{d} x=&\underbrace{\sin
+x}_{u}\underbrace{(-\cos x)}_{v} - \int \underbrace{\cos x}_{u'}\underbrace{(-\cos x)}_{v}\,\mathrm{d} x\\
+&&=&-\sin x\cos x +\int\underbrace{\cos x\cos x}_{=1-\sin^2 x}\,\mathrm{d} x\\
+&&=& -\sin x \cos x +\int 1 \,\mathrm{d} x - \int \sin^2 x\,\mathrm{d} x\\
+\Rightarrow &&2\int\sin^2 x \,\mathrm{d} x =& -\sin x \cos x + x + 2C\\
+\Rightarrow &&\int\sin^2 x \,\mathrm{d} x =& \frac {x-\sin x \cos x}{2} + C
 \end{align*}
 Alternativ kann man die Beziehung \(\sin^2(x) = \frac 12 (1-\cos(2x))\) (siehe Formelsammlung) nutzen. Damit bekommt man:
 \begin{align*}
- \int \sin^2(x) \,\d x = \frac 12 \int (1-\cos(2x)) \,\d x = \frac 12\left(x-\frac 12 \sin(2x)\right) + C
+ \int \sin^2(x) \,\mathrm{d} x = \frac 12 \int (1-\cos(2x)) \,\mathrm{d} x = \frac 12\left(x-\frac 12 \sin(2x)\right) + C
 \end{align*}
 Dies l\"asst sich mithilfe von \(\sin(x) \cos(x) = \frac 12 \sin(x)\) in die andere Darstellung der L\"osung umwandeln.
 
@@ -60,52 +60,50 @@ Dies l\"asst sich mithilfe von \(\sin(x) \cos(x) = \frac 12 \sin(x)\) in die and
 % \end{align*}
 
 \item \begin{align*}
-\int \underbrace{x^2}_{u}\underbrace{\EH{1-x}}_{v'}\,\d
-x=& \underbrace{x^2}_u\underbrace{(-\EH{1-x})}_{v}-\int\underbrace{2x}_{u'=u_2}\underbrace{(-\EH{1-x})}_{v=v_2'}\,\d
+\int \underbrace{x^2}_{u}\underbrace{\EH{1-x}}_{v'}\,\mathrm{d}x=& \underbrace{x^2}_u\underbrace{(-\EH{1-x})}_{v}-\int\underbrace{2x}_{u'=u_2}\underbrace{(-\EH{1-x})}_{v=v_2'}\,\mathrm{d}
 x\\
 =&
--x^2\EH{1-x}-\underbrace{2x}_{u_2}\underbrace{\EH{1-x}}_{v_2}+\int\underbrace{2}_{u_2'}\underbrace{\EH{1-x}}_{v_2}\,\d
-x\\
+-x^2\EH{1-x}-\underbrace{2x}_{u_2}\underbrace{\EH{1-x}}_{v_2}+\int\underbrace{2}_{u_2'}\underbrace{\EH{1-x}}_{v_2}\,\mathrm{d}x\\
 =& -(x^2+2x)\EH{1-x}-2\EH{1-x} + C =-(x^2+2x+2)\EH{1-x} + C
 \end{align*}
 \item \begin{align*}
-\int \underbrace{x}_u\underbrace{\frac 1{\cos^2 x}}_{v'}\,\d x = & \underbrace{x}_u\underbrace{\tan
-x}_{v}-\int\underbrace{1}_{u'}\underbrace{\tan x }_v\,\d x\\
+\int \underbrace{x}_u\underbrace{\frac 1{\cos^2 x}}_{v'}\,\mathrm{d} x = & \underbrace{x}_u\underbrace{\tan
+x}_{v}-\int\underbrace{1}_{u'}\underbrace{\tan x }_v\,\mathrm{d} x\\
 =&x\tan x + \ln |\cos x| + C
 \end{align*}
 \item $\bigl[x\tan x+\ln |\cos x|\bigr]_{x=0}^{\pi/4}=\frac \pi 4 + \ln \frac 1{\sqrt 2} -
 0=\frac \pi 4 -\frac {\ln 2}{2}$
 \end{iii}
 \item\begin{iii}
-\item Mit $y=x^3+7x-2$ und $\,\d y = (3x^2+7)\,\d x$ hat man: 
+\item Mit $y=x^3+7x-2$ und $\,\mathrm{d} y = (3x^2+7)\,\mathrm{d} x$ hat man: 
 \begin{align*}
-\int\limits_1^2\frac{3x^2+7}{x^3+7x-2}\,\d x=&\int\limits_{y(1)}^{y(2)}\frac 1 y \,\d y= \Bigl[ \ln
+\int\limits_1^2\frac{3x^2+7}{x^3+7x-2}\,\mathrm{d} x=&\int\limits_{y(1)}^{y(2)}\frac 1 y \,\mathrm{d} y= \Bigl[ \ln
 |y|\Bigr]_6^{20}=\ln \frac {20}6=\ln \frac {10}3
 \end{align*}
-\item Hier w\"ahlt man $y=x^3+2$ und  erh\"alt daraus $\,\d y = 3x^2 \, \d x$ und setzt ein: 
+\item Hier w\"ahlt man $y=x^3+2$ und  erh\"alt daraus $\,\mathrm{d} y = 3x^2 \, \mathrm{d} x$ und setzt ein: 
 \begin{align*}
-\frac 13 \int\limits_{\pi}^{3\pi/2} 3x^2\cos(x^3+2)\,\d x=& \frac
-13 \int\limits_{y(\pi)}^{y(3\pi/2)}\cos(y)\,\d y\\
+\frac 13 \int\limits_{\pi}^{3\pi/2} 3x^2\cos(x^3+2)\,\mathrm{d} x=& \frac
+13 \int\limits_{y(\pi)}^{y(3\pi/2)}\cos(y)\,\mathrm{d} y\\
 =&\frac 13\left( \sin\left( \left( \frac
 {3\pi}2\right)^3+2\right)-\sin (\pi^3+2)\right)
 \end{align*}
-\item Mit $y=1+\ln x$ und $\,\d y = \frac{\,\d x}x$ hat man
+\item Mit $y=1+\ln x$ und $\,\mathrm{d} y = \frac{\,\mathrm{d} x}x$ hat man
 \begin{align*}
-\int\limits_1^2 \frac 1x \EH{1+\ln x} \,\d x =& \int\limits_{y(1)}^{y(2)} \EH{y}\,\d y=\EH{1+\ln
+\int\limits_1^2 \frac 1x \EH{1+\ln x} \,\mathrm{d} x =& \int\limits_{y(1)}^{y(2)} \EH{y}\,\mathrm{d} y=\EH{1+\ln
 2}-\EH{1}=\EH{}
 \end{align*}
 \item Wir w\"ahlen $y=\sqrt x$. Damit folgt (f\"ur $x>0$):
-$$x=y^2\,\Rightarrow \, \,\d x = 2y\,\d y$$
+$$x=y^2\,\Rightarrow \, \,\mathrm{d} x = 2y\,\mathrm{d} y$$
 und schlie\ss{}lich
 \begin{align*}
-\int\limits_{1/4}^1\EH{\sqrt x}\,\d x=& \int\limits_{y(1/4)}^{y(1)} \EH y \cdot 2y \,\d
-y= 2\int\limits_{1/2}^1 y\EH y\,\d y\\
-=& \bigl[2y\EH y\bigr]_{1/2}^1 -2 \int\limits_{1/2}^1\EH y\,\d y\text{ (partielle Integration)}\\
+\int\limits_{1/4}^1\EH{\sqrt x}\,\mathrm{d} x=& \int\limits_{y(1/4)}^{y(1)} \EH y \cdot 2y \,\mathrm{d}
+y= 2\int\limits_{1/2}^1 y\EH y\,\mathrm{d} y\\
+=& \bigl[2y\EH y\bigr]_{1/2}^1 -2 \int\limits_{1/2}^1\EH y\,\mathrm{d} y\text{ (partielle Integration)}\\
 =&2\EH{ }-\sqrt{\EH{ }}-2(\EH{ }-\sqrt{\EH { }})=\sqrt{\EH{ }}
 \end{align*}
-\item Mit $y=\cosh x$ und $\,\d y = \sinh x \,\d x$ hat man
+\item Mit $y=\cosh x$ und $\,\mathrm{d} y = \sinh x \,\mathrm{d} x$ hat man
 \begin{align*}
-\int\cosh^2 x \sinh x \,\d x=& \int y^2\,\d y = \frac{y^3}3 + C = \frac{\cosh^3 x}3 + C
+\int\cosh^2 x \sinh x \,\mathrm{d} x=& \int y^2\,\mathrm{d} y = \frac{y^3}3 + C = \frac{\cosh^3 x}3 + C
 \end{align*}
 % \item Wir stellen den Betrag dar als $|x|=\sqrt{x^2}$ und substituieren $y=x^2$. Die Ableitung ist
 % $$\frac{\,\d y}{\,\d x} = 2x,$$

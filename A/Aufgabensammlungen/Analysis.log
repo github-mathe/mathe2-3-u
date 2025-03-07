@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=latex 2022.5.1)  17 FEB 2025 09:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=latex 2022.5.1)  7 MAR 2025 07:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2811,7 +2811,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--59
 
 
 ] (../Analysis/analys_Tang_Ebne_001.tex
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 
  []
 
@@ -3002,9 +3002,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--42
 
 
 ] (../Analysis/wz-2013-2-1p.tex
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+
+ []
+
 \c@wz-2013-2-1p=\count472
 ) [145
-
 
 
 ] (../Analysis/wz-2013-3-1.tex
@@ -3095,35 +3098,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--179
 [154
 
 
-])
-\BKM@file=\write5
-\openout5 = `Analysis.out.ps'.
-
- [155] (../Analysis/analys_Extrema_002.tex
+]) [155] (../Analysis/analys_Extrema_002.tex
 \c@StationaerePunkte=\count475
 ) [156
 
 
 
 ]
-(../Analysis/analys_Gren_Wert_007.tex) [157
+(../Analysis/analys_Gren_Wert_007.tex)
+\BKM@file=\write5
+\openout5 = `Analysis.out.ps'.
+
+ [157
 
 
 
-] (Analysis.aux)
+]
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+! LaTeX Error: File `../Analysis/analys_part_Ablt_002.tex.tex' not found.
 
-Package rerunfilecheck Info: File `Analysis.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
- ) 
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.392 ...../Analysis/analys_part_Ablt_002.tex.tex}
+                                                  
+*** (cannot \read from terminal in nonstop modes)
+
+ 
 Here is how much of TeX's memory you used:
  45361 strings out of 478660
- 1074350 string characters out of 2844525
- 1997134 words of memory out of 3000000
- 62307 multiletter control sequences out of 15000+600000
+ 1074363 string characters out of 2844525
+ 1997133 words of memory out of 3000000
+ 62308 multiletter control sequences out of 15000+600000
  454408 words of font info for 73 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  113i,19n,120p,10620b,2763s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on Analysis.dvi (157 pages, 1723128 bytes).
+Output written on Analysis.dvi (157 pages, 1723392 bytes).
