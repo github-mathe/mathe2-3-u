@@ -12,7 +12,11 @@
 
 \Loesung{
 
-\textbf{a)} Die Partialbruchzerlegung des Integranden ergibt
+\textbf{a)} 
+Da der Z\"ahlergrad gleich dem Nennergrad ist, wird zun\"achst eine Polynomdivision durchgef\"uhrt. Diese ergibt
+\begin{equation*}
+\frac{4x^4}{x^4-1} = 4+ \frac{4}{x^4-1}.
+\end{equation*}F\"ur den zweiten Term wird eine Partialbruchzerlegung durchgef\"uhrt, sodass sich der folgende Integrand ergibt:
 
 \begin{equation*}
 \frac{4x^4}{x^4-1} = 4+ \frac{1}{x-1} - \frac{1}{x+1} - \frac{2}{x^2+1}.
@@ -23,7 +27,7 @@ Damit ist
  \begin{equation*}
  \begin{aligned}
  I_a & = \int 4+ \frac{1}{x-1} - \frac{1}{x+1} - \frac{2}{x^2+1} \mathrm{d}  x \\[1ex]
- & = 4x + \ln \left| x-1 \right| - \ln \left| x+1 \right| - 2\arctan(x) .
+ & = 4x + \ln \left| x-1 \right| - \ln \left| x+1 \right| - 2\arctan(x) + C.
  \end{aligned}
  \end{equation*}
  \bigskip
@@ -34,12 +38,12 @@ Damit ist
  \begin{aligned}
  I_b & = 3 \int \left( 1+3x^2\right)  \cdot \ln (x) \mathrm{d}  x\\[1ex]
  & = 3 \left[ \left( x+x^3\right) \ln (x) - \int \frac{x+x^3}{x} \mathrm{d}  x\right] \\[1ex]
- & = 3 \left[ \left( x+x^3\right) \ln (x) - x - \frac{x^3}{3} \right] \\[1ex]
- & = \left( 3x + 3x^3\right) \ln (x) - 3x - x^3 .
+ & = 3 \left[ \left( x+x^3\right) \ln (x) - x - \frac{x^3}{3} + C \right] \\[1ex]
+ & = \left( 3x + 3x^3\right) \ln (x) - 3x - x^3 + \tilde{C} .
  \end{aligned}
  \end{equation*}
 
-(Falls man ohne Umformung partiell integriert, erhält man $ I_2 = (x+x^3) \ln (x^3) - 3x - x^3$.) 
+(Falls man ohne Umformung partiell integriert, erhält man $ I_2 = (x+x^3) \ln (x^3) - 3x - x^3 + C$.) 
 \bigskip
 
 \textbf{c)}
@@ -49,8 +53,8 @@ Damit ist
  \begin{aligned}
  I_c & = \int 2t \cdot \sin(t) \mathrm{d}  t\\[1ex]
  & = -2t \cos (t) - \int -2 \cos (t) \mathrm{d}  t \\[1ex]
- & = -2t \cos (t) + 2\sin(t) \\[1ex]
- & = -2 \sqrt{x} \cos (\sqrt{x}) + 2 \sin (\sqrt{x}).
+ & = -2t \cos (t) + 2\sin(t) +C\\[1ex]
+ & = -2 \sqrt{x} \cos (\sqrt{x}) + 2 \sin (\sqrt{x}) +C.
  \end{aligned}
  \end{equation*}
 \bigskip
@@ -67,12 +71,16 @@ Damit ist
  Daraus folgt
  
  \begin{equation*}
- I_d = \int \sin(2x) \cdot \operatorname{e}^x \mathrm{d}  t = \frac{1}{5} \sin(2x) \cdot \operatorname{e}^x - \frac{2}{5} \cos(2x) \operatorname{e}^x .
+ I_d = \int \sin(2x) \cdot \operatorname{e}^x \mathrm{d}  t = \frac{1}{5} \sin(2x) \cdot \operatorname{e}^x - \frac{2}{5} \cos(2x) \operatorname{e}^x +C.
  \end{equation*}
 
 }
 
-% \ErgebnisC{Aufgb-Zeuge-2013Nov-K-A4}
-% {
-% 
-% }
+ \ErgebnisC{Aufgb-Zeuge-2013Nov-K-A4}
+ {
+ \begin{abc}\item $I_a= 4x + \ln \left| x-1 \right| - \ln \left| x+1 \right| - 2\arctan(x) + C$
+\item $I_b =  \left( 3x + 3x^3\right) \ln (x) - 3x - x^3 + C $
+\item $I_c =-2 \sqrt{x} \cos (\sqrt{x}) + 2 \sin (\sqrt{x}) +C$
+\item $I_d =\frac{1}{5} \sin(2x) \cdot \operatorname{e}^x - \frac{2}{5} \cos(2x) \operatorname{e}^x +C $
+\end{abc}
+ }
