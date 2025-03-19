@@ -1,0 +1,74 @@
+\Aufgabe[e]{ }{
+Berechnen Sie die Integrale
+\begin{iii}
+\item $I_1={\displaystyle \int } \dfrac{\sin(\sqrt{x})}{\sqrt{x}}\mathrm{d} x$
+\item $I_2={\displaystyle \int \limits_0^2} (x^2-2) e^{-2x}\mathrm{d} x$ 
+\item $I_3={\displaystyle \int \limits_1^3} x^3 \ln(x^2)\mathrm{d} x$
+\item $I_4={\displaystyle \int \limits_0^1} \dfrac{e^x}{1+e^x} \mathrm{d} x$
+\item $I_5={\displaystyle \int} \dfrac{5x^2+7x+3}{x^3-3x+2} \mathrm{d} x$
+\end{iii}
+}
+
+\Loesung{
+ \begin{iii}
+\item Wir substituieren $u=\sqrt{x}$, $\mathrm{d} u = \dfrac{\mathrm{d} x}{2\sqrt{x}}$ 
+\begin{align*}
+I_1=& \int \dfrac{\sin(\sqrt{x})}{\sqrt{x}}\mathrm{d} x\\
+=& \int 2 \sin(u) \mathrm{d} u\\
+=& -2 \cos(u)+C \\
+=& -2\cos(\sqrt{x}) +C
+\end{align*}
+
+\item Wir erhalten durch zweifache partielle Integration 
+\begin{align*}
+I_2=& \int \limits_0^2 (x^2-2) e^{-2x}\mathrm{d} x\\
+=& \left[ -\frac{1}{2}(x^2-2)e^{-2x}\right]_0^2 + \frac{1}{2} \int_0^2 e^{-2x} 2x \mathrm{d} x\\
+=& \left[ -\frac{1}{2}(x^2-2)e^{-2x} - \frac{1}{2} e^{-2x}\right]_0^2 +\frac{1}{4} \int_0^2 2 e^{-2x}\mathrm{d} x\\
+=& \left[ -\frac{1}{2}(x^2-2)e^{-2x} - \frac{1}{2} e^{-2x} - \frac{1}{4} e^{-2x}\right]_0^2 \\
+=& -e^{-4} -e^{-4} -\frac{1}{4} e^{-4} -1 +\frac{1}{4} \\
+=& -\frac{9}{4}e^{-4}-\frac{3}{4}
+\end{align*}
+
+\item Wir erhalten durch partielle Integration
+\begin{align*}
+I_3 =& \int_0^3 x^3 \ln(x^2)\mathrm{d} x\\ 
+=& 2\int_0^3  x^3 \ln(x) \mathrm{d} x\\ 
+=& 2 \left\lbrace \left[ \frac{1}{4}x^4 \ln(x)\right]_1^3 - \frac{1}{4} \int_1^3 x^4 \dfrac{1}{x} \mathrm{d} x\right\rbrace \\
+=& 2 \left\lbrace \left[ \frac{1}{4}x^4 \ln(x)\right]_1^3 - \frac{1}{4} \int_1^3 x^3 \mathrm{d} x\right\rbrace \\
+=& 2 \left\lbrace \left[ \frac{1}{4}x^4 \ln(x) -\frac{1}{16}x^4  \right]_1^3 \right\rbrace \\
+=& \left[ \frac{1}{2} x^4 \ln(x) - \frac{1}{8} x^4 \right] _1^3 \\
+=& \frac{81}{2} \ln(3) - \frac{80}{8}
+\end{align*}
+
+\item  Wir substituieren $u=1+e^x$, $\mathrm{d} u = e^x \mathrm{d} x$
+\begin{align*}
+I_4 &= \int_0^1 \dfrac{e^x}{1+e^x}\mathrm{d} x \\
+&=\int_{u(0)}^{u(1)} \dfrac{1}{u} \mathrm{d} u \\
+&= \left[ \ln|u|\right]_{u(0)}^{u(1)} \\
+&=  \left[ \ln|1+e^x|\right]_0^1 \\
+&= \ln(1+e) - \ln(2) \\
+&= \ln \left( \dfrac{1+e}{2}\right) 
+\end{align*}
+
+\item Wir f\"uhren eine Partialbruchzerlegung durch. Zun\"achst werden dazu die Nullstellen des Nenners bestimmt. Die erste Nullstelle wird geraten $x_0 =1$. Anschließend wird eine Polynomdivision durchgef\"uhrt:
+$(x^3-3x+2):(x-1)=x^2+x-2$. Daraus ergeben sich die weiteren Nullstellen $x_1 = 1$ und $x_2 =-2$. Damit ergibt sich
+\begin{align*}
+ \dfrac{5x^2+7x+3}{x^3-3x+2} &=  \dfrac{5x^2+7x+3}{(x-1)^2(x+2)}  \\
+ &= \dfrac{A}{x-1} + \dfrac{B}{(x-1)^2} + \dfrac{C}{x+2} \\
+\end{align*}
+Es wird ein Koeffizientenvergleich durchgef\"uhrt:
+\begin{align*}
+5x^2+7x+3 &= A(x-1)(x+2) +B(x+2)+C(x-1)^2 \\
+15 &= 3B \Rightarrow B=5 \\
+9 &= 9C \Rightarrow C =1 \\
+3 &= -2A+2B+C \Rightarrow A =4
+\end{align*}
+Daraus ergibt sich das Integral
+\begin{align*}
+I_5 &= \int \dfrac{4}{x-1} + \dfrac{5}{(x-1)^2} + \dfrac{C}{x+2}  \mathrm{d} x \\
+&= 4 \ln|x-1| - \dfrac{5}{x-1} + \ln|x+2| + C
+\end{align*}
+\end{iii}
+}
+
+
