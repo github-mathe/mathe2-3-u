@@ -1,18 +1,18 @@
 \Aufgabe[f]{Integration in $\R^2$}{
 Berechnen Sie den Wert des Integrals
-$$ \int\limits_B f_j(x,y)\d (x,y), \qquad j=1,\, 2$$
+$$ \int\limits_B f_j(x,y)\mathrm{d} (x,y), \qquad j=1,\, 2$$
 auf dem Bereich $B=[0,\, \pi]\times[0,\, \text{e}-1]$ f\"ur die beiden Funktionen 
 $$f_1(x,y)=\frac{\sin x}{1+y},\qquad f_2(x,y)=x(y+1)^{x-1}.$$
 
 }
 \Loesung{
 \begin{align*}
-\int\limits_B f_1(x,y)\d (x,y)=& \int\limits_{x=0}^\pi \int\limits_{y=0}^{\text e-1} \frac{\sin x }{1+y}\d
-y \d x = \int\limits_{x=0}^\pi \sin x \quad\Bigl.\ln |1+y|\Bigr|_{y=0}^{\text e - 1} \d x\\
-=& \int\limits_{x=0}^\pi \sin x \d x (1-0)=2\\
-\int\limits_B f_2(x,y)\d (x,y)=& \int\limits_{x=0}^\pi \int\limits_{y=0}^{\text e -1} x(y+1)^{x-1}\d
-y \d x\\
-=& \int\limits_{x=0}^\pi \Bigl.(y+1)^x\Bigr|_{y=0}^{\text e-1} \d x = \int\limits_0^\pi (\EH x - 1)\d
+\int\limits_B f_1(x,y)\mathrm{d} (x,y)=& \int\limits_{x=0}^\pi \int\limits_{y=0}^{\text e-1} \frac{\sin x }{1+y}\mathrm{d}
+y \mathrm{d} x = \int\limits_{x=0}^\pi \sin x \quad\Bigl.\ln |1+y|\Bigr|_{y=0}^{\text e - 1} \mathrm{d}x\\
+=& \int\limits_{x=0}^\pi \sin x \mathrm{d} x (1-0)=2\\
+\int\limits_B f_2(x,y)\mathrm{d} (x,y)=& \int\limits_{x=0}^\pi \int\limits_{y=0}^{\text e -1} x(y+1)^{x-1}\mathrm{d}
+y \mathrm{d} x\\
+=& \int\limits_{x=0}^\pi \Bigl.(y+1)^x\Bigr|_{y=0}^{\text e-1} \mathrm{d} x = \int\limits_0^\pi (\EH x - 1)\mathrm{d}
 x\\
 =& \EH \pi - \EH 0 - \pi=\EH \pi - 1 - \pi.
 \end{align*}

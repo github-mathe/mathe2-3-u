@@ -11,6 +11,8 @@
 \newcommand{\TYPE}{Aufgabenblatt}
 \newcommand{\BLATT}{1}
 \newcommand{\TOPIC}{}
+\usepackage{pstricks}
+\usepackage{pst-plot}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
@@ -45,9 +47,27 @@
 %Mathe II Blatt 1
 \input{../A/Analysis/analys_Integrale.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%36
+\input{../A/Analysis/analys_Intg_Ndim_001_1.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%38
+\input{../A/Analysis/analys_Intg_Ndim_013.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%48
+\input{../A/Analysis/analys_Intg_Trig_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%37
+\input{../A/Analysis/analys_Intg_Ndim_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%31
+\input{../A/Analysis/analys_Intg_2dim_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-
-
+\input{../A/Analysis/analys_Intg_Pola_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%39
+\input{../A/Analysis/analys_Intg_Ndim_014.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
 \ifthenelse{\boolean{mitErg}}{

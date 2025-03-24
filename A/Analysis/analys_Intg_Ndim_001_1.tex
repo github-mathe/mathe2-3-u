@@ -1,15 +1,15 @@
 \Aufgabe[e]{Bereichsintegrale} {
 Berechnen Sie 
 \begin{itemize}
-\item[\textbf{a)}] $	I := \int\limits_D  x^2\,y+x \ \d \vec x \text{ mit } D := [-2,2]\times[1,3]\.$
-\item[\textbf{b)}] $J:= \int\limits_G x \d (x,y)$ mit dem durch die Kurven \\
+\item[\textbf{a)}] $	I := \int\limits_D  x^2\,y+x \mathrm{d} \vec x \text{ mit } D := [-2,2]\times[1,3]$
+\item[\textbf{b)}] $J:= \int\limits_G x \mathrm{d} (x,y)$ mit dem durch die Kurven \\
 $$x=0,\, y=2x \text{ und } y=\frac1a\,x^2+a\ ,\ a>0$$
 berandeten Fl\"achenst\"uck G. 
 \item[\textbf{c)}] Betrachten Sie das zweifache Integral
 $$ I:= \int_{x=1}^2 \int_{y=4/x^2}^{4/x} 
-  x y^2 \EH {x^2y^2/4} \, \text{d} y \, \text{d} x + 
+  x y^2 \EH {x^2y^2/4} \, \mathrm{d} y \, \mathrm{d} x + 
   \int_{x=2}^4 \int_{y=1}^{4/x} 
-  x y^2 \EH {x^2y^2/4} \, \text{d} y \, \text{d} x. $$
+  x y^2 \EH {x^2y^2/4} \, \mathrm{d} y \, \mathrm{d} x. $$
 \begin{itemize}
 \item[i)] Skizzieren Sie den Integrationsbereich und vertauschen Sie die 
 Integrationsreihenfolge.
@@ -96,7 +96,6 @@ Nun werden die Ober und Untergrenzen f\"ur $x$ in beiden Integrationsbereichen v
 \psline[linewidth=2pt]{->}(-1.7,2)(-.5,2)
 \put(-1.7,1.6){Drehen}
 \end{pspicture}
-
 \end{center}
 
 
@@ -104,9 +103,9 @@ Nun werden die Ober und Untergrenzen f\"ur $x$ in beiden Integrationsbereichen v
 \Loesung{
 \begin{itemize}
 \item[\textbf{Zu a)}] \begin{align*}
-  I  = & \int\limits_1^3\ \int\limits_{-2}^{2} \left( x^2\,y+x\right) \d x\ \d y
-   = \int\limits_1^3\ \left[\frac{x^3}{3}\,y+\frac{x^2}{2}\right]_{x=-2}^2 \ \d y \\
-   = & \frac{16}{3}\cdot\int\limits_1^3\ y \ \d y
+  I  = & \int\limits_1^3\ \int\limits_{-2}^{2} \left( x^2\,y+x\right) \mathrm{d} x\ \mathrm{d} y
+   = \int\limits_1^3\ \left[\frac{x^3}{3}\,y+\frac{x^2}{2}\right]_{x=-2}^2 \ \mathrm{d}y \\
+   = & \frac{16}{3}\cdot\int\limits_1^3\ y \ \mathrm{d} y
    =  \frac{16}{3}\cdot 4  = \boxed{\frac{64}{3}\ .}
 \end{align*}
 
@@ -144,9 +143,9 @@ Die Kurven berühren sich somit im Punkt $P=(a,2a)$.
 \end{center}
 Somit ergibt sich für den Integralwert:
 \begin{align*}
-J& = \ \iint_G x \d  (x,y)  = \int_{x=0}^a x \int_{y=2x}^{\frac{1}{a}x^2 + a} \d \, y\d  x \
- =  \int_{x=0}^a x \left(\dfrac{1}{a}x^2 + a -2 x\right) \d  x\\
-& = \int_{x=0}^a \left(\dfrac{1}{a}x^3 + ax -2 x^2\right) \d  x
+J& = \ \iint_G x \d  (x,y)  = \int_{x=0}^a x \int_{y=2x}^{\frac{1}{a}x^2 + a} \mathrm{d} \, y\mathrm{d}  x \
+ =  \int_{x=0}^a x \left(\dfrac{1}{a}x^2 + a -2 x\right) \mathrm{d} x\\
+& = \int_{x=0}^a \left(\dfrac{1}{a}x^3 + ax -2 x^2\right)\mathrm{d} x
  = \left[\dfrac{1}{4a} x^4 + \dfrac{1}{2}ax^2 - \dfrac{2}{3}x^3\right]_{0}^a \\[2ex]
 & = \dfrac{1}{4} a^3+\dfrac{1}{2} a^3 -\dfrac{2}{3} a^3  = \boxed{\dfrac{1}{12} a^3\,.}\\
 \end{align*}
@@ -191,11 +190,11 @@ D = \left\{ (x,y) \, | \, 1 \le y \le 4,
 	\dfrac{2}{\sqrt{y}} \le x \le \dfrac{4}{y} \right\}. 
 $$
 Das Integral ist 
-$$  I = \int_1^4 \int_{2/\sqrt{y}}^{4/y} x y^2 \, \EH{x^2y^2/4} \, \text{d}x \text{d}y$$ 
+$$  I = \int_1^4 \int_{2/\sqrt{y}}^{4/y} x y^2 \, \EH{x^2y^2/4} \, \mathrm{d}x \mathrm{d}y$$ 
 mit dem Integralwert 
 \begin{align*}
-  I & =   \int_1^4 \left[ 2 \EH{x^2 y^2 /4} \right]_{x=2/\sqrt{y}}^{4/y} \text{d}y
-  = \int_1^4 \big[ 2 \EH 4-2\EH y \big] \text{d}y \\[2ex]
+  I & =   \int_1^4 \left[ 2 \EH{x^2 y^2 /4} \right]_{x=2/\sqrt{y}}^{4/y} \mathrm{d}y
+  = \int_1^4 \big[ 2 \EH 4-2\EH y \big] \mathrm{d}y \\[2ex]
   & =  6 \EH 4-2\EH 4+2\EH{ } =  4 \EH 4+2\EH{ }.
 \end{align*}
 

@@ -8,7 +8,7 @@ $$
 f(x,y) = \operatorname{e}^{x^2+y^2} y^2
 $$
 gegeben.
-Bestimmen Sie das Integral $I = \int_R f(x,y) \d (x,y).$
+Bestimmen Sie das Integral $I = \int_R f(x,y) \mathrm{d} (x,y).$
 }
 
 \Loesung{
@@ -18,14 +18,17 @@ x = r \cos(\varphi) , \quad y = r \sin(\varphi)
 $$
 Es gilt dann:
 \begin{align*}
-I &= \int_1^2 \int_0^{2\pi} \operatorname{e}^{r^2} r^2 \sin(\varphi) \cdot r \d \varphi \d r \\
-&= \int_1^2 \int_0^{2\pi} \operatorname{e}^{r^2} r^3 \sin(\varphi) \d \varphi \d r \\
-&= \int_1^2 \operatorname{e}^{r^2} r^3 (\frac{1}{2}(\varphi -\sin(\varphi)\cos(\varphi))\Big |_0^{2\pi}\d r \\
-&= \pi \int_1^2 \operatorname{e}^{r^2} r^3 \d r \\
-&= \pi \int_1^4 \operatorname{e}^u u  \cdot \frac{1}{2}\d u \\
-&= \frac{\pi}{2} \left(\operatorname{e}^u u \Big |_1^4 - \int_1^4 \operatorname{e}^u \d r\right)\\
+I &= \int_1^2 \int_0^{2\pi} \operatorname{e}^{r^2} r^2 \sin(\varphi) \cdot r \mathrm{d} \varphi \mathrm{d} r \\
+&= \int_1^2 \int_0^{2\pi} \operatorname{e}^{r^2} r^3 \sin(\varphi) \mathrm{d} \varphi \mathrm{d} r \\
+&= \int_1^2 \operatorname{e}^{r^2} r^3 (\frac{1}{2}(\varphi -\sin(\varphi)\cos(\varphi))\Big |_0^{2\pi}\mathrm{d} r \\
+&= \pi \int_1^2 \operatorname{e}^{r^2} r^3 \mathrm{d} r \\
+&= \pi \int_1^4 \operatorname{e}^u u  \cdot \frac{1}{2} \mathrm{d} u \\
+&= \frac{\pi}{2} \left(\operatorname{e}^u u \Big |_1^4 - \int_1^4 \operatorname{e}^u \mathrm{d} r\right)\\
 &=\frac{\pi}{2} \left(\operatorname{e}^u u \Big |_1^4 - \operatorname{e}^u \Big |_1^4\right)\\
 &=\frac{3\operatorname{e}^4 \pi}{2}
 \end{align*}
+}
 
+\ErgebnisC{AnalysIntgPola001}{
+$I= \frac{3\operatorname{e}^4 \pi}{2}$
 }

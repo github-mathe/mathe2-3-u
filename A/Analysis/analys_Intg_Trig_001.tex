@@ -6,7 +6,7 @@ komplett eingeschlossen wird.
 \begin{abc}
 \item Skizzieren Sie den Bereich $B\subset \R^2$. 
 \item Berechnen Sie das Integral 
-$$I=\int\limits_B 2y\d(x,y).$$
+$$I=\int\limits_B 2y\mathrm{d}(x,y).$$
 \end{abc}
 }
 \Loesung{
@@ -53,10 +53,10 @@ x 180 mul 3.14159 div sin
 
 \item Es bietet sich eine Parametrisierung als Normalbereich bez\"uglich $x$ an. Dabei ist zu beachten, dass die untere Grenze des Bereichs $B$ durch $\cos(x)$ gegeben ist und die obere Grenze durch $\sin(x)$. 
 \begin{align*}
-I=&\int\limits_{x=\pi/4}^{5\pi/4}\int\limits_{y=\cos(x)}^{\sin(x)}2y\d y\d x
-= \int\limits_{x=\pi/4}^{5\pi/4}\Bigl.y^2\Bigr|_{y=\cos(x)}^{\sin(x)}\d x\\
-=& \int\limits_{x=\pi/4}^{5\pi/4}(\sin^2(x)-\cos^2(x))\d x
-= \int\limits_{x=\pi/4}^{5\pi/4}(-\cos(2x))\d x\\
+I=&\int\limits_{x=\pi/4}^{5\pi/4}\int\limits_{y=\cos(x)}^{\sin(x)}2y\mathrm{d} y\mathrm{d} x
+= \int\limits_{x=\pi/4}^{5\pi/4}\Bigl.y^2\Bigr|_{y=\cos(x)}^{\sin(x)}\mathrm{d} x\\
+=& \int\limits_{x=\pi/4}^{5\pi/4}(\sin^2(x)-\cos^2(x))\mathrm{d} x
+= \int\limits_{x=\pi/4}^{5\pi/4}(-\cos(2x))\mathrm{d} x\\
 =& \left.-\frac{\sin(2x)}2\right|_{x=\pi/4}^{5\pi/4}
 = \frac 12\left( \sin\frac\pi 2 - \sin\frac{5\pi}2\right) = \frac{1-1}2=0
 \end{align*}
@@ -64,5 +64,5 @@ Dieses Ergebnis konnte man erwarten, da der Integrand $2y$ eine ungerade Funktio
 \end{abc}
 }
 \ErgebnisC{analysIntgTrig001}{
-0
+$I=0$
 }
