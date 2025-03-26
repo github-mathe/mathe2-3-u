@@ -1,0 +1,30 @@
+\Aufgabe[e]{Taylor--Entwicklung in 2 Dim.}{
+Gegeben sei \ $f:\R^2 \to \R$  \ mit \ $f(x,y)=e^{x}\sin(y)$.
+Bestimmen Sie das Taylorpolynom 2. Grades von \ $f$ \ für den Entwicklungspunkt \ $(0,0)$\,.
+}
+
+\Loesung{
+ Mit den partiellen Ableitungen 
+  \[
+  \begin{array}{rclcl}
+  f_x & = & e^{x}\sin(y) & \Rightarrow  & f_x(0,0)=0\ , \\
+  f_y & = & e^{x}\cos(y) & \Rightarrow  & f_y(0,0)=1\ , \\
+  f_{xx} & = & e^{x}\sin(y)& \Rightarrow  & f_{xx}(0,0)=0\ , \\
+  f_{xy} & = & e^{x}\cos(y) & \Rightarrow  & f_{xy}(0,0)=1\ , \\
+  f_{yy} & = & -e^{x}\sin(y) & \Rightarrow  & f_{yy}(0,0)=0
+  \end{array}
+\]
+folgt
+\begin{align*}
+T_{f,2}(x,y)\  = & \  f(0,0) + f_x(0,0)(x-0)+f_y(0,0)(y-0)+ \frac{1}{2} f_{xx}(0,0)(x-0)^2 \\
++ & \frac{1}{2}f_{yy}(y-0)^2  +f_{xy}(0,0)(x-0)(y-0) \\
+ = & \  y+xy
+\end{align*}
+
+}
+
+% \ErgebnisC{dummy}
+% {
+% 
+% }
+

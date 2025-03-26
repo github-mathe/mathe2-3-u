@@ -1,0 +1,41 @@
+\Aufgabe[e]{Richtungsableitungen} {
+
+Gegeben seien die skalarwertige Funktion $f(x,y)$ und die vektorwertige Funktion $\vec g(x,y)$ 
+$$f(x,y)=x^2y^3\qquad \text{ und } \qquad \vec g(x,y)=(x^2+y,\, xy)^\top.$$
+Berechnen Sie die Richtungsableitung beider Funktionen im Punkt $\vec P = (1,\, 2)^\top$ in Richtung $\vec h:=(3,4)^\top$.
+
+}
+
+
+
+\Loesung{
+
+Zun\"achst berechnen wir die die ersten Ableitungen der beiden Funktionen:
+\begin{align*}
+\nabla f(x,y) =& (2xy^3,\, 3x^2y^2)^\top\\
+\vec J_g(x,y) &= 
+\begin{pmatrix} 
+2x & 1\\
+y & x
+\end{pmatrix}.
+\end{align*}
+Nun berechnen wir die ersten Ableitungen im Punkt $\vec P = (1,\, 2)^\top$:
+\begin{align*}
+\nabla f(1,2) =& (16,\, 12)^\top\\
+\vec J_g(1,2) &= 
+\begin{pmatrix} 
+2 & 1\\
+2 & 1
+\end{pmatrix}.
+\end{align*}
+Desweiteren ben\"otigen wir den Normalenvektor in Richtung $\vec h$:
+$$\vec{\hat h}=\frac 1{5}(3,\, 4)^\top$$
+Damit ergeben sich dann die Richtungsableitungen:
+\begin{align*}
+\frac{\partial f}{\partial \vec{\hat h}}(x,y)=& \skalar{\vec{\hat h},\, \nabla f(x,y,z)}=\frac
+{84}{5}\\
+\frac{\partial \vec g}{\partial \vec{\hat h}}(x,y)=& \vec J_g(1,2) \cdot \vec{\hat h}
+= \frac 1{5} (2,\, 2)^\top
+\end{align*}
+
+}

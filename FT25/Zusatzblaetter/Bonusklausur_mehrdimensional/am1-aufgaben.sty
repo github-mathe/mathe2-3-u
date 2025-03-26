@@ -1,0 +1,46 @@
+%Style am1-aufgaben
+\typeout{Document Style 'am1 - aufgaben' -- released 24/7/1996}
+
+% benoetigt das Package amssymb
+\RequirePackage{amssymb}
+
+% Definition Seitenlayout (kein Absatzeinruecken,
+% keine Seitennummerierung)
+\textwidth15.5cm \textheight25cm
+\oddsidemargin0mm \evensidemargin-4.5mm \topmargin-15mm
+\parindent0cm
+\pagestyle{empty}
+
+% Ueberschrift fuer Aufgaben und Zusatzaufgaben
+\newcommand{\A}[1]{\vspace{1ex}\par{\bf A#1)~}}
+\newcommand{\Z}[1]{\vspace{1ex}\par{\bf Z#1)~}}
+\newcommand{\ZA}{\par{\bf Zusatzaufgaben:}\\}
+
+% grosser Bruchstrich in $-Mode
+\newcommand{\Frac}[2]{{\ensuremath\displaystyle\frac{#1}{#2}}}
+
+% Listen mit alphabetischer und kleiner, roemischer Nummerierung
+\newenvironment{abc}{\begin{enumerate}\renewcommand{\labelenumi}{\textbf{\alph{enumi})}}}{\end{enumerate}}
+\newenvironment{ABC}{\begin{enumerate}\renewcommand{\labelenumi}{\textbf{\Alph{enumi})}}}{\end{enumerate}}
+\newenvironment{iii}{\begin{enumerate}\renewcommand{\labelenumi}{\textbf{\roman{enumi})}}}{\end{enumerate}}
+
+% Punkte
+\newcommand{\punkte}[1]{\par\hspace*{\fill}(#1 Points)\\}
+
+% Menge der rellen, komplexen, ganzen, etc. Zahlen
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+% Umschalten auf displaystyle
+\newcommand{\D}{\displaystyle}
+
+% Winkelsymbol
+\newcommand{\winkel}{\angle\!\!\!)}
+
+% Querstrich ueber ganze Seite
+\newcommand{\strich}{\rule{0cm}{1mm}\hrulefill\rule{0cm}{1mm}}
+

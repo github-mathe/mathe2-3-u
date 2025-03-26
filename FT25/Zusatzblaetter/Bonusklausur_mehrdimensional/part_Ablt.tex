@@ -1,0 +1,38 @@
+\Aufgabe[e]{Partielle Ableitungen}{
+Bestimmen Sie die ersten partiellen Ableitungen der folgenden reellen Funktionen und geben Sie diese Ableitungen in Matrixschreibweise an: 
+\[
+\begin{array}{rclcrcl}
+\mathbf{i)} &  & f(x,y)=\, e^{xy^3} & \;\;\;\;\; & \mathbf{ii)} & & g(x,y)=\sin(x^2-y) \\ 
+&  &  &  &  &  &  \\ 
+\mathbf{iii)} &  & h(x,y)=(2x-y)^2 +\ln(xy) &  & \mathbf{iv)} &  & p(x,y)=\ln(x+y^2) - e^{2xy}+3x\\
+&  &  &  &  &  &  \\ 
+\mathbf{v)} &  & q(x,y,z)= e^{x-y}\cos(5z)
+\end{array}
+\]
+}
+
+\Loesung{
+
+\begin{iii}
+\item \begin{align*}
+\nabla f(x,y)=&\left( y^3 e^{xy^3}\;,\;3y^2x e^{xy^3}\right)^\top\\
+\end{align*}
+\item \begin{align*}
+\nabla g(x,y)=& \Big( 2x \cos(x^2-y)\;,\;-\cos(x^2-y)\Big)^\top \\
+\end{align*}
+\item \begin{align*}
+\nabla h(x,y)=&\Big( 4(2x-y)+\dfrac{1}{x}\;,\;-2(2x-y) + \dfrac{1}{y}\Big)^\top\\
+\end{align*}
+\item \begin{align*}
+\nabla p(x,y)=&\big(\dfrac{1}{x+y^2}-2ye^{2xy}+3\;,\; \dfrac{2y}{x+y^2}-2xe^{2xy}\big)^\top\\
+\end{align*}
+\item \begin{align*}
+\nabla q(x,y,z) =&\big(e^{x-y} \cos(5z)\;,\; -e^{x-y}\cos(5z)\;,\; -5e^{x-y} \sin(5z)\big)^\top\\
+\end{align*}
+\end{iii}
+}
+
+% \ErgebnisC{dummy}
+% {
+% 
+% }

@@ -1,0 +1,81 @@
+\Aufgabe{Stationäre Punkte}{
+Gegeben sei die Funktion:
+
+$$
+f(x,y) = x^3+axy+y^3 \quad \text{ mit } \quad a \in \mathbb{R}.
+$$
+
+\begin{abc}
+	\item
+	Bestimmen Sie alle stationären Punkte in Abhängigkeit von $a$.
+	\item
+	Klassifizieren Sie diese für $a\neq 0$ als Minimum, Maximum oder Sattelpunkt.
+\end{abc}
+\ifthenelse{\boolean{mitLoes}}
+
+
+}
+\Loesung{
+\begin{abc}
+	
+	\item
+	Der Gradient ist gegeben durch:
+	\[
+	\nabla f(x, y) = \left( 3x^2+ay, ax+3y^2 \right)
+	\]
+	
+	Um die stationären Punkte zu finden, setzen wir den Gradienten gleich 0:
+	
+	1. $3x^2+ay = 0$
+
+	2.  $ax+3y^2 = 0$ \\
+	
+F\"ur den Fall $a=0$ erhalten wir $3x^2 =0$ und $3y^2=0$, d.h. einen station\"aren Punkt bei (0,0).
+F\"ur $a \neq 0$ lösen wir die erste Gleichung nach $y$ auf:
+\begin{align*}
+	&3x^2+ay = 0 \quad \Rightarrow \quad y = -\dfrac{3x^2}{a}.
+\end{align*}
+Einsetzen in die zweite Gleichung ergibt:
+\begin{align*}
+ax+3y^2 &= 0 \\
+ax+3( -\dfrac{3x^2}{a})^2 &= 0 \\
+ax + \frac{27}{a^2} x^4 &= 0 \\
+x(a+ \frac{27}{a^2} x^3) &= 0
+\end{align*}
+Daraus ergeben sich die stationären Punkte $(0,0)$ und $(-\frac{1}{3},-\frac{1}{3})$.
+
+	\item
+	Für $a \neq 0$ ist die Hesse-Matrix gegeben als:
+	$$
+		\boldsymbol H(x,y) =
+		\begin{pmatrix}
+				6x & a  \\
+				a & 6y
+			\end{pmatrix}
+		$$
+		
+\begin{itemize}
+			
+\item Ausgewertet in $(0,0)$ erhalten wir:
+				$$
+				\boldsymbol H\left(0,0\right) = \begin{pmatrix}
+					0 & a \\
+					a & 0
+				\end{pmatrix}
+				$$
+Für die Determinante ergibt sich $det(\boldsymbol H\left(0,0\right)) = -a^2 <0$. Daher ist die Matrix indefinit und der Punkt $(0,0)$ ist ein Sattelpunkt.
+
+\item  Ausgewertet in $(-\frac{1}{3},-\frac{1}{3})$ erhalten wir:
+$$
+\boldsymbol H\left(-\frac{1}{3},-\frac{1}{3}\right) = \begin{pmatrix}
+	-2a & a \\
+	a & -2a
+\end{pmatrix}
+$$
+Für die Determinante ergibt sich $det(\boldsymbol H\left(-\frac{1}{3},-\frac{1}{3}\right)) = 3a^2 >0$. Damit erhalten wir für $a<0$ ein lokales Minimum und für $a>0$ ein lokales Maximum.
+\end{itemize}
+	
+	
+\end{abc}
+
+}
