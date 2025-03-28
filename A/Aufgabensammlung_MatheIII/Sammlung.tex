@@ -1,0 +1,208 @@
+\input{header}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+%\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setboolean{mitErg}{false}
+%\setboolean{mitErg}{true}
+
+%\setboolean{WITHPSTRICKS}{false}
+\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\thispagestyle{empty} 
+% Logo
+\begin{center}
+    \vspace*{2cm}
+    \includegraphics[width=0.3\textwidth]{HSU_RGB.eps} % <- Logo-Dateiname hier einfügen
+\end{center}
+
+% Titel
+\begin{center}
+    \vspace{1cm}
+    {\LARGE \textbf{Aufgabensammlung}}\\
+    \vspace{0.5cm}
+    {\LARGE \textbf{Mathematik III/B}} \\
+    \vspace{0.5cm}
+    {\large f\"ur WI/ET} \\
+\end{center}
+
+
+% Universität
+\vfill
+\begin{center}
+    {\large Prof. Dr. Thomas Carraro} \\
+    {\large Fr\"uhjahrstrimester 2025}
+\end{center}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+% Inhaltsverzeichnis
+\tableofcontents
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%\setboolean{mitErg}{false}
+\setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+\renewcommand{\d }{\mathrm{d}}
+%\ruleBig
+\setcounter{page}{1}
+
+\section*{Gew\"ohnliche Differentialgleichungen}
+\addcontentsline{toc}{section}{Gew\"ohnliche Differentialgleichungen}
+%
+\input{../GewDgln/gewdgl_Bern_Dglg_001.tex}
+\ifthenelse{\boolean{mitLoes}}{}{}
+
+\input{../GewDgln/gewdgl_Dgln_Defb_001.tex}
+\ifthenelse{\boolean{mitLoes}}{}{}
+
+\input{../GewDgln/gewdgl_Dgln_Erst_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Dgl_Tdv_AWP_099.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Homg_Line_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Ihom_Line_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Ihom_Line_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Line_nOrd_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Line_nOrd_003_mod.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Line_nOrd_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Line_nOrd_1-3.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/gewdgl_Strm_Lrkr_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/Logistisches_Wachstum.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/ode_mix_01.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/ode_mix_02.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/ode_mix_03.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/ode_sep_var_01.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/ode_sep_var_02.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../GewDgln/ode_sep_var_03.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+%_____________________________________________________________________
+\section*{Laplace-Transformation}
+\addcontentsline{toc}{section}{Laplace-Transformation}
+%
+\input{../Laplace/gewdgl_Awep_Lapl_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/gewdgl_Line_AWPr_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/gewdgl_Line_AWPr_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Balk_Bieg_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Delt_Dist_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Delt_Dist_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Intg_Glgn_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_ldgl_KlLp_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Traf_Bere_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Traf_Bere_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Traf_Bere_003.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Traf_Bere_01b.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Traf_Bere_02a.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../Laplace/laplac_Tran_Heav_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+%_____________________________________________________________________________
+\section*{Lineare Systeme von Differentialgleichungen}
+\addcontentsline{toc}{section}{Lineare Systeme von Differentialgleichungen}
+%
+\input{../SysDgl/sysdgl_Gdgl_Syst_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Mixd_Klau_011.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Mixd_Klau_11a.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Mixd_Klau_14b.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Syst_Hptv_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Syst_Hptv_006.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Syst_Ihom_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Syst_Loes_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Syst_Loes_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+\input{../SysDgl/sysdgl_Syst_Loes_005.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\newpage
+\section*{Ergebnisse}
+\addcontentsline{toc}{section}{Ergebnisse}
+\ifthenelse{\boolean{mitErg}}{
+\Ergebnisse}{}
+\end{document}

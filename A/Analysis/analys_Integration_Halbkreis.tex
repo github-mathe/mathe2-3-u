@@ -1,0 +1,45 @@
+\Aufgabe[e]{Fl\"acheninhalt eines Halbkreises}
+{
+Bestimmen Sie den Fl\"acheninhalt eines Einheitskreises mit dem Radius $r = 1$ f\"ur $y \geq 0$ (oberer Halbkreis),
+indem Sie eine Integration in kartesischen Koordinaten durchf\"uhren. \\
+
+Hinweis: Das Integral $\int \sqrt{1-x^2} \mathrm{d}x$ kann gel\"ost werden, indem eine Substitution mit $x=\sin(u)$ durchgef\"uhrt wird.
+}
+
+\Loesung{
+F\"ur den Einheitskreis gilt $x^2+y^2=1$. Daraus folgt, dass $y = \pm \sqrt{1-x^2}$ gilt. Da nur der Fl\"acheninhalt des oberen Halbkreises gesucht wird, ergeben sich f\"ur $y$ die Grenzen $0 \leq y \leq \sqrt{1-x^2}$. F\"ur $x$ erhalten wir die Grenzen $-1 \leq x \leq 1$.
+
+Damit kann der Fl\"acheninhalt des oberen Halbkreises mit dem folgenden Integral bestimmt werden:
+
+\begin{align*}
+A &= \int_{x=-1}^1 \int_{y=0}^{\sqrt{1-x^2}} 1 \mathrm{d}y \mathrm{d} x \\
+  &= \int_{x=-1}^1 \left[ x \right]_{y=0}^{\sqrt{1-x^2}}  \mathrm{d} x \\
+  &= \int_{x=-1}^1 \sqrt{1-x^2}  \mathrm{d} x \\
+\end{align*}
+Dieses Integral kann durch Substitution gel\"ost werden. Man w\"ahle $x=\sin(u)$ und damit $\mathrm{d}x = \cos(u) \mathrm{d}u$. Um die neuen Integrationsgrenzen zu berechnen, wird $u$ zu $u=\arcsin(x)$ bestimmt. Damit ergeben sich die neuen Integrationsgrenzen $u(-1)= -\frac{\pi}{2}$ und $u(1)= \frac{\pi}{2}$. Damit resultiert:
+
+\begin{align*}
+A &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sqrt{1-\sin^2(u)} \cos(u) \mathrm{d}u \\
+  &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sqrt{\cos^2(u)} \cos(u) \mathrm{d}u \\
+  &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos(u) \cos(u) \mathrm{d}u \\
+\end{align*}
+
+Dieses Integral kann mit partieller Integration gel\"ost werden oder man verwendet das Ergebnis aus der Vorlesung:
+$$
+\int \cos^2(x) \mathrm{x} = \frac{x}{2}+\frac{1}{4}\sin(2x) + C.
+$$
+
+Damit ergibt sich:
+\begin{align*}
+A &= \left[ \frac{u}{2}+\frac{1}{4}\sin(2u) \right]_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \\
+  &= \frac{\pi}{4}+ \frac{1}{4}\sin(\pi)- \left[ -\frac{\pi}{4}+ \frac{1}{4}\sin(\pi)\right]  \\
+  &= \frac{\pi}{2}
+\end{align*}
+Der Fl\"acheninhalt des halben Einheitskreises betr\"agt damit $\frac{\pi}{2}$.
+}
+
+
+\ErgebnisC{analysIntegHalbkreis}
+{
+$A = \frac{\pi}{2}$
+}

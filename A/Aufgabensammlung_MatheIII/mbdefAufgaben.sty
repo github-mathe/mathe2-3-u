@@ -1,0 +1,169 @@
+% Definitions
+
+%\newcommand{\ud}{\,\mathrm{d}}
+
+\renewcommand{\vec}{\boldsymbol}
+%\newcommand{\hs}[1]{\hspace*{#1ex}}
+%\newcommand{\vs}[1]{\vspace*{#1ex}}
+%\newcommand{\ds}{\displaystyle}
+
+\newcommand{\cL}{{\mathcal{L}}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\sL}{\mathcal{L}}
+
+\newcommand{\No}{\mathbb{N}_0}
+\newcommand{\Rn}{\mathbb{R}^n}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\Kn}{\K^n}
+\newcommand{\Knn}{\K^{(n,n)}}
+
+\newcommand{\Real}{\mathrm{Re}}
+\newcommand{\Imag}{\mathrm{Im}}
+\newcommand{\Bild}{\mathrm{Bild}}
+\newcommand{\Rang}{\mathrm{Rang}}
+\newcommand{\Kern}{\mathrm{Kern}}
+\newcommand{\Spn}{\mathrm{span}}
+\newcommand{\EH}[1]{\mathrm{e}^{#1}}
+
+\renewcommand{\d}{\,\mathrm{d}}
+
+%
+\newcommand{\mycomment}[1]{}
+\renewcommand{\theequation}{\mbox{\arabic{section}.\arabic{equation}}}
+%
+\newcommand{\colorcancel}[2]{
+\renewcommand{\CancelColor}{\color{#2}}\cancel{#1}
+}
+\newcommand{\GruenBox}[1]{\colorbox{teal!40}{$#1$}}
+\newcommand{\GruenText}[1]{\textcolor{teal}{#1}}
+\newcommand{\RotText}[1]{\textcolor{red}{#1}}
+\newcommand{\BlauText}[1]{\textcolor{blue}{#1}}
+\newcommand{\RotBox}[1]{\colorbox{red!40}{$#1$}}
+\newcommand{\BlauBox}[1]{\colorbox{blue!40}{$#1$}}
+\newcommand{\HellblauBox}[1]{\colorbox{blue!20}{$#1$}}
+\newcommand{\Betrag}[1]{\left\vert#1\right\vert}
+\newcommand{\Pfeil}[1]{\, \xrightarrow{\parbox{2.2ex}{\centering #1}} \,}
+\newcommand{\imag}{\,\mathrm{i}}
+\newcommand{\sign}{\mathrm{sign}}
+
+
+% % % Klammern % % %
+\newcommand{\Kzwei}{}
+\newcommand{\skalar}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%	Schwierigkeitsgrad anzeigen
+%		nur fuer die \begin{abc} ... \end{abc} und \begin{iii} ... \end{iii} Umgebung
+%		Syntax:		\item[] = \item[e] = kein Stern
+%					\item[f] = 1 Stern
+%					\item[g] = 2 Stern
+%					\item["alles andere"] = \item[e] = kein Stern 
+%		Schachteln der Umgebungen für 2 Stufen möglich
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% % % Schwierungkeitsgrad mit "e" , "f" oder "v" angeben
+% % % "e" Einführung   
+% % % "f" Festigung
+% % % "v" Vertiefung  
+%
+\newboolean{ABC}
+\setboolean{ABC}{false}
+\newcommand{\abstandtest}{2.5ex}
+\let\olditem\item
+\newcommand{\itemN}[1][e]{
+	\ifthenelse{\equal{#1}{e}}{
+		\stepcounter{enumi}
+		\olditem[\theenumi \parbox{\abstandtest}{)\mbox{}}]
+		}{
+		\ifthenelse{\equal{#1}{f}}{
+			\stepcounter{enumi}
+			\olditem[\theenumi \parbox{\abstandtest}{$^{\star}$)}]
+			}{
+			\ifthenelse{\equal{#1}{v}}{
+				\stepcounter{enumi}
+				\olditem[\theenumi \parbox{\abstandtest}{$^{\star\star}$)}]
+				}{
+				\stepcounter{enumi}
+				\olditem[\theenumi \parbox{\abstandtest}{)\mbox{}}]
+				}
+			}
+		}
+}
+\newcommand{\itemNN}[1][e]{
+	\ifthenelse{\equal{#1}{e}}{
+		\stepcounter{enumii}
+		\olditem[\theenumii \parbox{\abstandtest}{)\mbox{}}]
+		}{
+		\ifthenelse{\equal{#1}{f}}{
+			\stepcounter{enumii}
+			\olditem[\theenumii \parbox{\abstandtest}{$^{\star}$)}]
+			}{
+			\ifthenelse{\equal{#1}{v}}{
+				\stepcounter{enumii}
+				\olditem[\theenumii \parbox{\abstandtest}{$^{\star\star}$)}]
+				}{
+				\stepcounter{enumii}
+				\olditem[\theenumii \parbox{\abstandtest}{)\mbox{}}]
+				}
+			}
+		}
+}
+\newenvironment{abc}{
+	\let\olditem\item
+	\let\item\itemN
+	\setboolean{ABC}{true}
+	\begin{enumerate}[label=\textbf{\alph*}]
+}{
+	\end{enumerate}
+	\setboolean{ABC}{false}
+	\let\item\olditem
+	\setcounter{enumi}{0}
+	\setcounter{enumii}{0}
+	}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\newenvironment{iii}{
+	\let\item\olditem
+	\ifnum\value{enumi}>0
+		\let\item\itemNN
+	\else
+		\let\item\itemN
+	\fi
+	\begin{enumerate}[label=\textbf{\roman*}]
+}{
+	\end{enumerate}
+	\let\olditem\item
+	\ifABC \else
+		\setcounter{enumi}{0}
+	\fi
+	\setcounter{enumii}{0}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % TIKZ
+\newcommand{\Gitter}[4]{
+	\draw[thin,color=gray,dotted] (#1,#2) grid (#3,#4);
+}
+\newcommand{\Koordinatenkreuz}[6]{
+	\draw[->, >=latex] (#1,0) -- ++ (-0.2,0) -- (#2,0) -- ++ (0.2,0) node[below] {#5};
+	\draw[->, >=latex] (0,#3) -- ++ (0,-0.2) -- (0,#4) -- ++ (0,0.2) node[left] {#6};
+}
+% % %
+\newcommand{\Arstr}[1][1.5]{\renewcommand{\arraystretch}{#1}}
+\newcommand{\Arsep}[1][2]{\setlength{\arraycolsep}{#1pt}}
+\newcommand{\Colsep}[1][3]{\setlength{\columnsep}{#1ex}}
+\newcommand{\ruleBig}{\rule{0.46\textwidth}{2pt}}
+\newcommand{\ruleNormal}{\rule{0.46\textwidth}{1pt}}
+\newcommand{\Vek}[1]{\text{\boldmath{$#1$}}}
+\newcommand{\Norm}[2][2={}]
+{
+	{\left\| #1 \right\|}_{#2}
+}
+\hyphenation{
+	LGSe
+}

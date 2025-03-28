@@ -1,0 +1,173 @@
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{geometry}
+\geometry{left=3cm, right=3cm, top=3cm, bottom=3cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\newboolean{WITHPSTRICKS}
+\setboolean{WITHPSTRICKS}{false}
+
+
+\ifthenelse{\boolean{WITHPSTRICKS}}{%
+\usepackage{auto-pst-pdf}
+\usepackage{pstricks,pst-plot,pst-text}
+}{}
+
+\usepackage{pgfplots}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mbdefAufgaben}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitErg}
+\setboolean{mitErg}{false}
+\setboolean{mitErg}{true}
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+%\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{Aufg}
+\setcounter{Aufg}{0}
+\newcommand{\Aufgabe}[3][]{
+\stepcounter{Aufg}
+\subsubsection*{Aufgabe 
+\arabic{Aufg}\ifthenelse{\equal{#1}{e}}{}{\ifthenelse{\equal{#1}{f}}{
+$\!\!{}^\star$}{\ifthenelse{\equal{#1}{v}}{$^{\star\star}$}{}}}{: #2}}
+{#3}
+}
+% % % Ergebnisse jeweils am Ende des Aufgabenblattes Anzeigen
+\newcommand{\Ergebnisse}{}
+\makeatletter
+\newcommand{\Ergebnis}[1]{
+	\g@addto@macro{\Ergebnisse}{#1}
+}
+\makeatother
+
+%\makeatletter
+%\newcommand{\ErgebnisC}[2]{
+%\@ifundefined{c@#1}
+%{\newcounter{#1}}
+%{}
+%\setcounter{#1}{\theAufg}
+%%\setcounter{\csname #1\endcsname}{\value{Aufg}}
+%\ifthenelse{\boolean{mitErg}}{	\g@addto@macro{\Ergebnisse}{\subsubsection*{Ergebnisse zu Aufgabe \arabic{#1}:}
+%}%
+%	\g@addto@macro{\Ergebnisse}{#2}}{}
+%}
+%\makeatother
+\makeatletter
+\newcommand{\ErgebnisC}[2]{%
+  \@ifundefined{c@#1}{\newcounter{#1}}{}%
+  \expandafter\setcounter\csname #1\endcsname{\value{Aufg}}%
+  \ifthenelse{\boolean{mitErg}}{%
+    \g@addto@macro{\Ergebnisse}{\subsubsection*{Ergebnisse zu Aufgabe \arabic{#1}:}}%
+    \g@addto@macro{\Ergebnisse}{#2}%
+  }{}%
+}
+\makeatother
+
+% % % Lösungen
+\newcommand{\Loesung}[1]{
+	\ifthenelse{\boolean{mitLoes}}
+	{\subsubsection*{Lösung \arabic{Aufg}:}
+		#1}
+	{}
+}
+
+\begin{document}
+\thispagestyle{empty} 
+% Logo
+\begin{center}
+    \vspace*{2cm}
+    \includegraphics[width=0.3\textwidth]{HSU_RGB.eps} % <- Logo-Dateiname hier einfügen
+\end{center}
+
+% Titel
+\begin{center}
+    \vspace{1cm}
+    {\LARGE \textbf{Aufgabensammlung}}\\
+    \vspace{0.5cm}
+    {\LARGE \textbf{Mathematik III/B}} \\
+    \vspace{0.5cm}
+    {\large f\"ur WI/ET} \\
+\end{center}
+
+
+% Universität
+\vfill
+\begin{center}
+    {\large Prof. Dr. Thomas Carraro} \\
+    {\large Fr\"uhjahrstrimester 2025}
+\end{center}
+
+\newpage
+
+\section*{Gew\"ohnliche Differentialgleichungen}
+
+\input{../GewDgln/gewdgl_Bern_Dglg_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+%\input{../GewDgln/gewdgl_Dgln_Defb_001.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+%\input{../GewDgln/gewdgl_Dgln_Erst_001.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Dgl_Tdv_AWP_099.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Homg_Line_001.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Ihom_Line_001.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Ihom_Line_002.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Line_nOrd_003.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Line_nOrd_003_mod.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Line_nOrd_003.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%\input{../GewDgln/gewdgl_Line_nOrd_004.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Line_nOrd_1-3.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/gewdgl_Strm_Lrkr_001.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/Logistisches_Wachstum.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/ode_mix_01.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/ode_mix_02.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/ode_mix_03.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/ode_sep_var_01.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../GewDgln/ode_sep_var_02.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%\input{../GewDgln/ode_sep_var_03.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\end{document}
