@@ -1,4 +1,4 @@
-\Aufgabe[]{}{
+\Aufgabe[e]{Inhomogenes lineares System von DGLn}{
 \begin{abc}
 \item Gegeben sei das Anfangswertproblem 
 $$u''(x)-16u(x)=16x\qquad \text{ mit }\qquad u(0)=1,\; u'(0)=4.$$
@@ -174,5 +174,22 @@ Damit hat man als allgemeine L\"osung der inhomogenen Differentialgleichung:
 $$\vec y(x)=\vec y_h(x)+\vec y_p(x)=c_1\vec y_1(x) + c_2\vec y_2(x) + c_3\vec y_3(x)-2\vec v_1.$$
 \end{iii}
 \end{abc}
+}
 
+\ErgebnisC{sysdglMixdKlau011}
+{
+\begin{abc}
+\item 
+\begin{iii}
+\item $\vec y'(x)=\begin{pmatrix}0&1\\
+16 & 0 \end{pmatrix} \vec y(x) + \begin{pmatrix}0\\16x\end{pmatrix}$ mit $\vec y(0)=(1,4)^\top$
+\item $y(x) =\begin{pmatrix}-x\\-1\end{pmatrix} + \frac{9\EH{4x}}8\begin{pmatrix}1\\4\end{pmatrix}+ \frac{\EH{-4x}}8\begin{pmatrix}-1\\4\end{pmatrix}$
+\item 
+\end{iii}
+\item 
+\begin{iii}
+\item $\mathcal{F} = \left\lbrace \vec y_1, \vec y_2, \vec y_3 \right\rbrace  ==\left\lbrace \EH{x}\begin{pmatrix}2\\-2\\3\end{pmatrix}, \, \EH x \begin{pmatrix}0\\-\sin(2x)\\\cos(2x)\end{pmatrix}, \, \EH x\begin{pmatrix}0\\\cos(2x)\\\sin(2x)\end{pmatrix}\right\rbrace $
+\item $y(x) = c_1\vec y_1(x) + c_2\vec y_2(x) + c_3\vec y_3(x)-2\vec v_1$ mit $\begin{pmatrix}4\\-4\\6\end{pmatrix}=2\vec v_1$
+\end{iii}
+\end{abc}
 }

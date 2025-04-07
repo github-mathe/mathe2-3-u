@@ -41,10 +41,13 @@ t&\text{ f\"ur }0\leq t\leq 3\\
 \item 
 \textbf{1.Lösungsweg:}(komplexe Zahlen)
 \begin{align*}
-&&\cL\{f_4(t)\} =& \int\limits_0^\pi\EH{-st}\sin t \d t =\int\limits_0^\pi\Imag(\EH{-st+it}) \d t\\
-&&=&\Imag\left(\dfrac{\EH{-st+it}}{-s+i}\right)\Big|_0^\pi=\Imag\left(\dfrac{(-s-i)\EH{-st+it}}{s^2+1}\right)\Big|_0^\pi\\
-&&= & \dfrac{\EH{-st}}{s^2+1}\cdot\Imag((-s-i)(\cos t+i\sin t))\Big|_0^\pi=\dfrac{\EH{-st}}{s^2+1}\cdot(-\cos t-s\sin t))\Big|_0^\pi \\
-\Rightarrow&&  =  & \frac {\EH{-s\pi}+1}{1+s^2}
+&&\cL\{f_4(t)\} =& \int\limits_0^\pi\EH{-st}\sin t \d t \\
+&& =& \int\limits_0^\pi\Imag(\EH{-st+it}) \d t\\
+&&=&\Imag\left(\dfrac{\EH{-st+it}}{-s+i}\right)\Big|_0^\pi \\
+&& =& \Imag\left(\dfrac{(-s-i)\EH{-st+it}}{s^2+1}\right)\Big|_0^\pi\\
+&&= & \dfrac{\EH{-st}}{s^2+1}\cdot\Imag((-s-i)(\cos t+i\sin t))\Big|_0^\pi \\
+&& =&\dfrac{\EH{-st}}{s^2+1}\cdot(-\cos t-s\sin t))\Big|_0^\pi \\
+&&  =  & \frac {\EH{-s\pi}+1}{1+s^2}
 \end{align*}
 
 \textbf{2.Lösungsweg:} (zweifache partielle Integration)
@@ -62,8 +65,8 @@ t&\text{ f\"ur }0\leq t\leq 3\\
 
 \ErgebnisC{AufglaplacTrafBere003}
 {
-\textbf{ a)} $\frac As - \frac{2A\EH{-st_0}}{s^2+2s}$, 
-\textbf{ b)} $\frac{A(\EH{-as}-\EH{-bs}}{s}$, 
-\textbf{ c)} $\frac{1-\EH{-3s}}{s^2}$,
-\textbf{ d)} $\frac{1+\EH{-s\pi}}{1+s^2}$
+\textbf{ a)} $F_1(s)=\dfrac As - \frac{2A\EH{-st_0}}{s^2+2s}$, 
+\textbf{ b)} $F_2(s)=\dfrac{A(\EH{-as}-\EH{-bs}}{s}$, 
+\textbf{ c)} $F_3(s)=\dfrac{1-\EH{-3s}}{s^2}$, \\
+\textbf{ d)} $F_4(s)=\dfrac{1+\EH{-s\pi}}{1+s^2}$
 }

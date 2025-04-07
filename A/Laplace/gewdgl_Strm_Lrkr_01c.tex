@@ -7,9 +7,9 @@ $I(t)$ \ für \ $0 \le t \le 5$ \ und \ $t > 5$.
 %\item Ermitteln  Sie $I(t)$ als L\"osung eines Anfangswertproblems. \\
 %\textbf{Hinweis}: L\"osen Sie \textit{ zwei } Anfangswertprobleme, wobei Sie den Anfangswert $I(5)$ des zweiten AWP als Funktionswert der L\"osung des ersten AWP erhalten.
 %\item
-Ermitteln Sie $I(t)$ mit Hilfe der Laplace-Transformation. 
-%\end{abc} 
-
+Ermitteln Sie $I(t)$ mit Hilfe der Laplace-Transformation.
+ 
+\noindent
 \textbf{Hinweis}: In diesem Stromkreis gilt $L\dot I(t) + RI(t)=U(t)$ mit
 $$U(t)=5\cdot(1-h(t-5))=\left\{\begin{array}{ll}
 5,&0\leq t\leq 5\\
@@ -68,12 +68,14 @@ Es sei $Y(s)$ die Laplace-Transformierte des Stroms $I(t)$. Damit gilt
 &&=& 5\left( \frac 1s - \frac{\EH{-5s}}s\right)\\
 \end{align*}
 Diese (algebraische) Gleichung hat die L\"osung
-$Y(s)=\dfrac{5(1-\EH{-5s})}{s(sL+R)}=\dfrac{25(1-\EH{-5s})}{4s(5s+1)}$. \\
+$$
+Y(s)=\dfrac{5(1-\EH{-5s})}{s(sL+R)}=\dfrac{25(1-\EH{-5s})}{4s(5s+1)}.
+$$
 Vor der eigentlichen R\"ucktransformation betrachten wir zun\"achst
-\begin{align*}
-\frac 1{s(5s+1)} = & \frac{1}s-\frac{5}{5s+1}
-=& \mathcal{L}\left\{  1 - \EH{-t/5}\right\}
-\end{align*}
+$$
+\frac 1{s(5s+1)} =  \frac{1}s-\frac{5}{5s+1}
+= \mathcal{L}\left\{  1 - \EH{-t/5}\right\}
+$$
 Daraus ergibt sich dann 
 \begin{align*}
 I(s)=& \frac{25}4\sL^{-1}\left\{\frac{1-\EH{-5s}}{s(5s+1)}\right\}\\

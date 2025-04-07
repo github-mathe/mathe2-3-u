@@ -4,7 +4,7 @@ Man betrachte die Differentialgleichung des harmonischen Oszillators
 \[
 y'' + 2\rho y' + \omega^2 y = r(t), \quad \text{mit } \rho, \omega \in \mathbb R_+
 \]
-aus Aufgabe 16.4, %harmonischer_oszillator.tex
+aus Aufgabe !!!!!!, %harmonischer_oszillator.tex
 mit den drei Fällen
 \begin{enumerate}
   \item \textbf{Überdämpft (\( \rho > \omega \)):} Das System kehrt ohne Oszillation langsam zum Gleichgewicht zurück.
@@ -20,8 +20,7 @@ mit den drei Fällen
   r(t) = \operatorname{e}^{-\rho t} \cos(\sqrt{\omega^2 - \rho^2}t)
   $$
 \end{enumerate}
-Bestimmen Sie die Lösung der DGl für alle drei Fälle: überdämpft, kritisch gedämpft und untergedämpft.
-
+Bestimmen Sie die Lösung der Dgl. für die Fälle überdämpft, kritisch gedämpft und untergedämpft.
 }
 
 
@@ -59,9 +58,8 @@ Damit ist die allgemeine Lösung
 \begin{align*}
 y = A\operatorname{e}^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + B\operatorname{e}^{(-\rho - \sqrt{\rho^2 - \omega^2})t} + \frac{1}{2\sqrt{\rho^2 -\omega^2}}t \operatorname{e}^{(-\rho +  \sqrt{\rho^2 - \omega^2})t}.
 \end{align*}
-
-\textbf{Fall 2: Kritische Dämpfung (\(\rho = \omega\))}
-
+\noindent
+\textbf{Fall 2: Kritische Dämpfung (\(\rho = \omega\))} \\
 Die charakteristische Gleichung vereinfacht sich zu:
 \[
 \lambda^2 + 2\omega \lambda + \omega^2 = 0
@@ -96,9 +94,8 @@ $$
 y = (A+Bt) \operatorname{e}^{-\omega t} + \frac{1}{2}t^2 \operatorname{e}^{-\omega t}.
 $$
 
-
-\textbf{Fall 3: Untergedämpft (\(\rho < \omega\))}
-
+\noindent
+\textbf{Fall 3: Untergedämpft (\(\rho < \omega\))} \\
 Die Wurzeln sind komplex:
 \[
 \lambda = -\rho \pm i\sqrt{\omega^2 - \rho^2}
@@ -137,6 +134,12 @@ Damit ist die allgemeine Lösung
 $$
 y = \operatorname{e}^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))+\frac{1}{2}t\operatorname{e}^{-\rho t} \sin((\sqrt{\omega^2 - \rho^2})t).
 $$
+}
+
+\ErgebnisC{harmonischerOszillatorinhomogen}{
+Fall 1: $y(t) = A\operatorname{e}^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + B\operatorname{e}^{(-\rho - \sqrt{\rho^2 - \omega^2})t} + \frac{1}{2\sqrt{\rho^2 -\omega^2}}t \operatorname{e}^{(-\rho +  \sqrt{\rho^2 - \omega^2})t},$\\
+Fall 2: $y(t) = (A+Bt) \operatorname{e}^{-\omega t} + \frac{1}{2}t^2 \operatorname{e}^{-\omega t},$\\
+Fall 3: $y(t) = \operatorname{e}^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))+\frac{1}{2}t\operatorname{e}^{-\rho t} \sin((\sqrt{\omega^2 - \rho^2})t).$
 }
 
 

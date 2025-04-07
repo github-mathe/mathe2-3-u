@@ -4,11 +4,11 @@ Gegeben sei das Anfangswertproblem für \ $u(t)$
 $$	u'' + 4\,u' +3\,u = 12\cdot\Big(1-h(t-2)\Big)\ ,\quad u(0)=u'(0)=0$$
 wobei \ $h(t)$ \ die Heaviside--Funktion ist.
 
+\begin{abc}
+\item Bestimmen Sie die Lösung mit Hilfe der Laplace--Transformation.
 
-\textbf{a)} \ Bestimmen Sie die Lösung mit Hilfe der Laplace--Transformation.
-
-\textbf{b)} \ Geben Sie die Lösung in den Bereichen  $0\le t < 2$  und  $ 2\le t$ ohne Verwendung der Heaviside--Funktion an und fassen Sie die Terme sinnvoll zusammen.
-
+\item Geben Sie die Lösung in den Bereichen  $0\le t < 2$  und  $ 2\le t$ ohne Verwendung der Heaviside--Funktion an und fassen Sie die Terme sinnvoll zusammen.
+\end{abc}
 }
 
 \Loesung{
@@ -56,5 +56,12 @@ Die Rücktransformation ergibt die gesuchte Lösung
 }
 
 \ErgebnisC{AufglaplacldglKlLp001}{
-$4+2\,\EH{-3\,t}-6\,\EH{-t} - h(t-2)\cdot\Big(4+2\,\EH{-3\,(t-2)}-6\,\EH{-(t-2)}\Big)$
+\begin{abc}
+\item $u(t) = 4+2\,\EH{-3\,t}-6\,\EH{-t} - h(t-2)\cdot\Big(4+2\,\EH{-3\,(t-2)}-6\,\EH{-(t-2)}\Big)$
+\item $u(t) = \left\{\begin{array}{ccl}
+	       4+2\,\EH{-3\,t}-6\,\EH{-t} & \text{für} & 0\le t < 2 \\
+	       \\
+	       \left(2-2\,\EH6\right)\cdot \EH{-3\,t} + \left(-6+6\,\EH2\right)\cdot\EH{-t} & \text{für} & 2\le t
+	       \end{array}\right.\ $
+\end{abc}
 }

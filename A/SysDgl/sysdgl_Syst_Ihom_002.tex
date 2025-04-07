@@ -128,15 +128,16 @@ Der konstante Vektor $\vec c$ wird durch die Anfangsbedingungen festgelegt:
 &&c_2=& -\frac 32
 \end{align*}
 Damit ist dann 
-$$\vec y_{AWP}(t)=\vec Y(t)\begin{pmatrix}\frac 18((-4t-1)\EH{4t}+1)\\
+\begin{align*}
+\vec y_{AWP}(t)&=\vec Y(t)\begin{pmatrix}\frac 18((-4t-1)\EH{4t}+1)\\
 \frac 12(\EH{4t}-3)\\
 \EH{3t}\end{pmatrix}
 = \begin{pmatrix}
 \frac 18(-\EH{5t}+(1-12t)\EH{t})\\
 \frac 18(7\EH{5t}+(1-12t)\EH{t})\\
-\frac 12(\EH{5t}+3\EH t)\end{pmatrix}
-= \frac {\EH{5t}}8\begin{pmatrix}-1\\7\\4\end{pmatrix}+\frac{\EH t}8\begin{pmatrix}1-12t\\1-12t\\12\end{pmatrix}.
-$$
+\frac 12(\EH{5t}+3\EH t)\end{pmatrix} \\
+&= \frac {\EH{5t}}8\begin{pmatrix}-1\\7\\4\end{pmatrix}+\frac{\EH t}8\begin{pmatrix}1-12t\\1-12t\\12\end{pmatrix}.
+\end{align*}
 
 \item Mit der Formel 
 $$\vec y_{AWP}(t)=\vec Y(t)\vec Y(0)^{-1}\vec y_0 + \int\limits_0^t\vec Y(t-s)\vec Y(0)^{-1}\vec f(s)\d s$$ 
@@ -153,6 +154,7 @@ $$\vec Y(0)^{-1}\vec f(s) = \begin{pmatrix}1 & 0 & 0 \\
 \begin{pmatrix}
 -1\\2 \\3\end{pmatrix}\EH{5s}$$
 die L\"osung des Anfangswertproblems: 
+
 \begin{align*}
 \vec y_{AWP}(t)=&\begin{pmatrix}
 \EH t & \EH t t & 0 \\
@@ -187,8 +189,8 @@ die L\"osung des Anfangswertproblems:
 -2
 \end{pmatrix}\right|_{s=0}^t 
 - \frac 14\int\limits_0^t\EH{t+4s}\begin{pmatrix}
--2\\-2\\0\end{pmatrix}\d s 
-+\left. \frac 13\EH{ 2t+3s}\begin{pmatrix}
+-2\\-2\\0\end{pmatrix}\d s \\
+& +\left. \frac 13\EH{ 2t+3s}\begin{pmatrix}
 0\\3\\3\end{pmatrix}\right|_{s=0}^t\\
 =& \begin{pmatrix}
 -\EH t t \\
@@ -203,8 +205,8 @@ die L\"osung des Anfangswertproblems:
 -2
 \end{pmatrix}
 - \frac 1{16}(\EH{5t}-\EH t)\begin{pmatrix}
--2\\-2\\0\end{pmatrix}
-+\frac 13(\EH{ 5t}-\EH{2t})\begin{pmatrix}
+-2\\-2\\0\end{pmatrix} \\
+& +\frac 13(\EH{ 5t}-\EH{2t})\begin{pmatrix}
 0\\3\\3\end{pmatrix}\\
 =& \EH t\begin{pmatrix}
 -t +\frac 14 - \frac t2-\frac 18\\
@@ -225,11 +227,13 @@ die L\"osung des Anfangswertproblems:
 
 \ErgebnisC{AufgsysdglSystIhom002}
 {
-$\vec Y(t)=\begin{pmatrix}
+\begin{abc}
+\item $\vec Y(t)=\begin{pmatrix}
 \EH t & \EH t t & 0  \\
 \EH t & \EH t t & \EH{2t} \\
 0     & -\EH t  & \EH{2t} \end{pmatrix}$
-
+\item $\vec y_{AWP}(t)= \dfrac {\EH{5t}}8\begin{pmatrix}-1\\7\\4\end{pmatrix}+\dfrac{\EH t}8\begin{pmatrix}1-12t\\1-12t\\12\end{pmatrix}$
+\end{abc}
 
 }
 

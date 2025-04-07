@@ -9,53 +9,48 @@ Sie läßt sich mit Hilfe der Substitution
 \[
 z(x)=\Big(u(x)\Big)^{1\,-\,n} 
 \]
-in eine lineare Differentialgleichung für \ $z(x)$ \ überführen.
-
-Bestimmen Sie die allgemeine Lösung der Differentialgleichung für \ $y(x)$%
+in eine lineare Differentialgleichung für $z(x)$ überführen.\\
+Bestimmen Sie die allgemeine Lösung der Differentialgleichung für $y(x)$%
 \[
 y'=\frac{-2}x\cdot y+x^2\cdot y^2\;. 
 \]
 
 \Loesung{
 Die Bernoulli'sche Differentialgleichung teilt man zuerst durch $\Big(u(x)\Big)^{n} $:
-
-\[\dfrac{u^{\prime }(x)}{\Big(u(x)\Big)^{n}}=f(x)\cdot\dfrac{1}{u(x)}+g(x)\]
-
-Nun substituiert man $z(x)=\dfrac{1}{u(x)}=\Big(u(x)\Big)^{1\,-\,n}$
-
+\[
+\dfrac{u^{\prime }(x)}{\Big(u(x)\Big)^{n}}=f(x)\cdot\dfrac{1}{u(x)}+g(x)
+\]
+Nun substituiert man $z(x)=\dfrac{1}{u(x)}=\Big(u(x)\Big)^{1\,-\,n}$.
 Es gilt
-
-\[z'(x)=(1-n)\cdot\Big(u(x)\Big)^{-\,n}\cdot u'(x)=(1-n)\cdot\dfrac{u'(x)}{\Big(u(x)\Big)^{n}} \]
-
-Somit wird die Bernoulli'sche Differentialgleichung in die folgende inhomogene lineare Dgl überführt:
-
-\[\dfrac{z'(x)}{1-n}=f(x)\cdot z(x)+g(x)\]
-
-
-Für die gegebene DGl $\quad y'(x)=\dfrac{-2}x\,y+x^2\cdot y^2\quad $  gilt 
-
-\[u(x)=y(x),\;n=2,\;f(x)=\frac{-2}x,\;g(x)=x^2\]
-
-
+\[
+z'(x)=(1-n)\cdot\Big(u(x)\Big)^{-\,n}\cdot u'(x)=(1-n)\cdot\dfrac{u'(x)}{\Big(u(x)\Big)^{n}}\ .
+ \]
+Somit wird die Bernoulli'sche Differentialgleichung in die folgende inhomogene lineare Dgl. überführt:
+\[
+\dfrac{z'(x)}{1-n}=f(x)\cdot z(x)+g(x)
+\]
+Für die gegebene Dgl. $\quad y'(x)=\dfrac{-2}x\,y+x^2\cdot y^2\quad $ gilt 
+\[
+u(x)=y(x),\;n=2,\;f(x)=\frac{-2}x,\;g(x)=x^2.
+\]
 Diese Gleichung geht also durch die Substitution $z(x)=(y(x))^{-1}=\dfrac 1{y(x)}$
 in eine inhomogene lineare Dgl. für\ \ $z(x)$\ \ 
 \[
--z'(x)=-\frac 2x\cdot z+x^2\;, 
+-z'(x)=-\frac 2x\cdot z+x^2
 \]
 über.
 Durch Trennung der Veränderlichen und Variation der Konstanten erhält man die folgende Lösung
 \[
-\underline{\;z(x)=C\cdot x^2-x^3\;}\;. 
+z(x)=C\cdot x^2-x^3\ . 
 \]
-
 Die Rücksubstitution ergibt die gesuchte Lösung für\ \ $y(x)$\ : 
 \[
-\underline{\underline{\;y(x)=\frac 1{C\cdot x^2-x^3}\;}}\;. 
+y(x)=\frac 1{C\cdot x^2-x^3}\ . 
 \]
 }
 
 
 \ErgebnisC{AufggewdglBernDglg001}{
-Es gilt $(1-n)u'(x)=u(x)^n\cdot z'(x)$.
+Es gilt $(1-n)u'(x)=u(x)^n\cdot z'(x)$. Damit ist die Lösung $y(x)=\frac 1{C\cdot x^2-x^3}$.
 }
 

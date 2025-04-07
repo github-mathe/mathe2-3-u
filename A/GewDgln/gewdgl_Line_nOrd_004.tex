@@ -6,26 +6,23 @@ $$y^{\prime\prime}+4y^\prime+5y=0$$
 }
 
 \Loesung{
-\begin{abc}
-\item 
+
 Das charakteristische Polynom $p(\lambda)=\lambda^2+4\lambda+5$ hat die Nullstellen
 $$\lambda_1=-2+i, \lambda_2=-2-i$$
 die Lösung ist dann
 \begin{align*}
 y&=C_1\EH{-2t+\imag t}+C_2\EH{-2t-\imag t}\\
 &= \EH{-2t}(C_1(\cos t+\imag \sin t)+C_2(\cos t-\imag \sin t)) \\
-&= \EH{-2t}(c_1\cos t+c_2 \sin t )
+&= \EH{-2t}(c_1\cos t+c_2 \sin t ),
 \end{align*}
-wobei die reellem Konstanten $c_1=C_1+C_2$ und $c_2 = i(C_1-C_2)$ sind.
-
-Die komplexen Konstanten können durch die rellen Konstanten wie folgt ausgedrückt werden:
+wobei $c_1=C_1+C_2$ und $c_2 = i(C_1-C_2)$ die reellen Konstanten sind. \\
+Die komplexen Konstanten können durch die reellen Konstanten wie folgt ausgedrückt werden:
 $C_1=\overline{C_2}=\dfrac{c_1-\imag c_2}{2}$.
-\end{abc} 
 }
 
 
-\ErgebnisC{AufggewdglLinenOrd002}
+\ErgebnisC{AufggewdglLinenOrd004}
 {
-a) $y(x) = c_1 \EH{2x}+c_2\EH{-x}$
+$y(x) = \EH{-2t}(c_1\cos t+c_2 \sin t )$
 }
 

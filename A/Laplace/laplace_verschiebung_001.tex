@@ -10,8 +10,8 @@
 
 \Loesung{
 
-\textbf{Lösung zu a):}
-
+\begin{abc}
+\item
 1. Nutzen Sie die Verschiebungseigenschaft der Laplace-Transformation:
    Wenn \( \mathcal{L}\{f(t)\} = F(s) \), dann gilt \( \mathcal{L}\{f(t-a)h(t-a)\} = e^{-as}F(s) \).
 
@@ -32,7 +32,7 @@
    \]
 
 
-\textbf{Lösung zu b):}
+\item
 1. Die allgemeine Formel für die Inverse Laplace-Transformation von \(\frac{1}{(s-a)^n}\) ist:
    \[
    \mathcal{L}^{-1}\left\{\frac{1}{(s-a)^n}\right\} = \frac{t^{n-1} e^{at}}{(n-1)!}
@@ -47,7 +47,7 @@
 
 
 
-\textbf{Lösung zu c):}
+\item
 
 1. Identifizieren Sie die Verschiebungseigenschaft:
    Der Term \( e^{-3s} \) deutet auf eine Zeitverschiebung in der ursprünglichen Funktion hin. Speziell gilt, wenn \( \mathcal{L}\{f(t)\} = F(s) \), dann ist \( \mathcal{L}\{f(t-a)h(t-a)\} = e^{-as}F(s) \).
@@ -63,6 +63,7 @@
    \[
    \mathcal{L}^{-1}\left\{\frac{1}{(s-1)^2} e^{-3s}\right\} = (t-3) e^{(t-3)} h(t-3)
    \]
+\end{abc}
 }
 \ErgebnisC{AufglaplaceVerschiebung001}
 {

@@ -2,16 +2,16 @@
 {
 Ein Stromkreis habe einen Widerstand von \ $R=0.8$ Ohm \ und eine Selbstinduktion von \ $L=4$ Henry\,. Bis zur Zeit \ $t_0=0$ \ fließe kein Strom. Dann wird eine Spannung von \ $U=5$ Volt \ angelegt. Nach $5$ Sekunden wird
 die Spannung abgeschaltet. Berechnen Sie den Stromverlauf \
-$I(t)$ \ für \ $0 \le t \le 5$ \ und \ $t > 5$. \\ 
-\textbf{Hinweis}: In diesem Stromkreis gilt $L\dot I(t) + RI(t)=U(t)$
+$I(t)$ \ für \ $0 \le t \le 5$ \ und \ $t > 5$. \\  \\
+\noindent
+\textbf{Hinweis}: In diesem Stromkreis gilt $L\dot I(t) + RI(t)=U(t).$
 }
 
 \Loesung{
 Es gilt gilt die Differentialgleichung
 \[
-  L\dot{I}(t)+RI(t)=U(t)
+  L\dot{I}(t)+RI(t)=U(t).
 \]
-
 Für \ $0\leq t\leq 5$ \ gilt \ $U(t)=5$\,. Die Trennung der Variablen führt zu
 \[
   \int \frac{dI}{U-R I}=\int \frac{1}{L} \,dt,\Rightarrow
@@ -25,7 +25,6 @@ und somit
 $$
    I(t)=\frac{1}{R} \big( U-c_2 e^{-Rt/L} \big)\,.
 $$
-
 Einsetzen der Anfangsbedingung \ $I(0)=0$ \ ergibt \ $c_2=U$ \ und
 $$
   I(t)=\frac{U}{R}\big(1-e^{-R/Lt}\big)\,.
@@ -34,8 +33,6 @@ Einsetzen der gegebenen Zahlenwerte ergibt die Lösung
 $$ 
   I(t) = 6.25\, \big(1-e^{-0.2 t}\big) \text{ f\"ur } 0 < t < 5\,. 
 $$
-
-
 Im Zeitraum \ $t>5$ \ ist $U(t)=0$ \ und der Anfangsstrom ist
 $$
 I(5)=I_0=6.25\,\big(1-e^{-1}\big)\ .
