@@ -1,19 +1,21 @@
 \Aufgabe[e]{Trennung der Veränderlichen und Anfangswertproblem}
 
 {
-Klassifizeren die folgende Differentialgleichung und bestimmen Sie die Lösung des Anfangswertproblems mit $y(0) = 0$ und $y'(0) = 6$:
+Klassifizieren die folgende Differentialgleichung und bestimmen Sie die Lösung des Anfangswertproblems mit $y(0) = 0$ und $y'(0) = 6$:
  $$
  y''(x) - 2 y'(x) - 3y(x) = 0.
  $$
 }
 
 \Loesung{
+Klassifizierung: lineare Dgl. 2. Ordnung, konstante Koeffizienten, homogen. \\
 Die Nullstellen des charakteristischen Polynoms
 $p(\lambda)=\lambda^2-2\lambda-3$ sind $\lambda_1=-1$ und $\lambda_2=3$.
-
 Die allgemeine Lösung ist
-$$ y(x) = c_1 \operatorname{e}^{-x} + c_2 \operatorname{e}^{3x}  \text{ mit } c_1,c_2 \in \mathbb{R} .$$
-
+\begin{equation*}
+y(x) = c_1 \operatorname{e}^{-x} + c_2 \operatorname{e}^{3x}  \text{ mit } c_1,c_2 \in \mathbb{R}\ .
+\end{equation*}
+\noindent
 Mit den Anfangswertbedingungen $y(0)=c_1 + c_2 \stackrel{!}{=} 0$ und 
 $y^\prime(0) = -c_1 + 3c_2 \stackrel{!}{=} 6$ erhalten wir das lineare System
 % $$ \begin{array}{rcrl}
@@ -29,3 +31,6 @@ $$ y(x) = -\frac32  \operatorname{e}^{-x} + \frac32 \operatorname{e}^{3x}. $$
 
 }
 
+\ErgebnisC{DglTdvAWP099}{
+$ y(x) = -\frac32  \operatorname{e}^{-x} + \frac32 \operatorname{e}^{3x} $
+}

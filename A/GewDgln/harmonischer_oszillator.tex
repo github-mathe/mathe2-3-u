@@ -1,5 +1,5 @@
 \Aufgabe[e]{Harmonischer Oszillator}
-{
+{\label{aufgabe:oszillator}
 Man betrachte die Differentialgleichung
 \[
 y'' + 2\rho y' + \omega^2 y = 0, \quad \text{mit } \rho, \omega \in \mathbb R_+
@@ -64,26 +64,17 @@ Die gegebene Differentialgleichung, ist eine klassische Form einer linearen Diff
     \node at (3,1.5) {RLC Stromkreis};
 \end{circuitikz}
 \end{center}
-
 \end{enumerate}
-
 Diese Gleichung ist allgemein bekannt als \textit{"Gedämpfter harmonischer Oszillator"} oder einfach als \textit{"Gedämpfter Oszillator"}. Sie umfasst drei spezifische Szenarien basierend auf dem Wert von \( \rho \) im Vergleich zu \( \omega \):
 \begin{enumerate}
   \item \textbf{Überdämpft (\( \rho > \omega \)):} Das System kehrt ohne Oszillation langsam zum Gleichgewicht zurück.
   \item \textbf{Kritisch gedämpft (\( \rho = \omega \)):} Das System kehrt so schnell wie möglich ohne Oszillation zum Gleichgewicht zurück.
   \item \textbf{Untergedämpft (\( \rho < \omega \)):} Das System oszilliert mit einer Amplitude, die allmählich auf null abnimmt.
 \end{enumerate}
-
 \textbf{Aufgabe:}
 \smallskip
-
-Bestimmen Sie die Lösung der DGl für alle drei Fälle: überdämpft, kritisch gedämpft und untergedämpft.
-
-\smallskip
-
+Bestimmen Sie die Lösung der DGl für alle drei Fälle: überdämpft, kritisch gedämpft und untergedämpft.\\ \\
 \textbf{Hinweis:} Bestimmen Sie das charakteristische Polynom und seine Nullstellen und verwenden Sie den Exponentialansatz. Man betrachte alle drei Fälle, in denen die Nullstellen einfach, doppelt oder komplex konjiugiert sind.
-
-
 }
 
 
@@ -106,7 +97,6 @@ mit einer doppelten Wurzel \(\lambda = -\omega\). Die Lösung ist:
 \[
 y(t) = (A + Bt)e^{-\omega t}
 \]
-
 Fall 3: Untergedämpft (\(\rho < \omega\))
 Die Wurzeln sind komplex:
 \[
@@ -117,10 +107,12 @@ was zu der Lösung führt:
 y(t) = e^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t))
 \]
 
-
-
-
 }
 
 
+\ErgebnisC{harmonischerOszillator}{
+Fall 1: $y(t) = Ae^{(-\rho + \sqrt{\rho^2 - \omega^2})t} + Be^{(-\rho - \sqrt{\rho^2 - \omega^2})t}$,\\
+Fall 2: $y(t) = (A + Bt)e^{-\omega t},$\\
+Fall 3: $y(t) = e^{-\rho t}(A \cos(\sqrt{\omega^2 - \rho^2} t) + B \sin(\sqrt{\omega^2 - \rho^2} t)).$
+}
 

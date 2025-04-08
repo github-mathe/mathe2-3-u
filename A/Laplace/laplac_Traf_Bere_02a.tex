@@ -17,18 +17,19 @@ Bestimmen Sie unter Verwendung von \ ${\cal{L}}\big\{\sin(t)\big\} = \dfrac{1}{s
 }
 
 \Loesung{
-\textbf{a)} \ Mit der Transformationsformel \ \ ${\cal{L}}\left\{\dfrac{f(t)}{t}\right\} = \int\limits_{s}^\infty  F(\sigma)\ \text d\sigma$ \ \ erhält man
+\begin{abc}
+\item Mit der Transformationsformel \ \ ${\cal{L}}\left\{\dfrac{f(t)}{t}\right\} = \int\limits_{s}^\infty  F(\sigma)\ \text d\sigma$ \ \ erhält man
 	\[
 	{\cal{L}}\left\{\frac{\sin(t)}{t}\right\} = \int\limits_{s}^\infty  \dfrac{1}{\sigma^2+1}\ \text d\sigma = \Big[\arctan(\sigma)\Big]_s^\infty = \dfrac \pi2-\arctan(s)\ .
 \]
 
-\textbf{b)} \ Mit der Transformationsformel \ \ ${\cal{L}}\left\{\int\limits_{0}^{t} f(\tau) \text d\tau\right\} = \dfrac{F(s)}{s}$ \ \ erhält man 
+\item\ Mit der Transformationsformel \ \ ${\cal{L}}\left\{\int\limits_{0}^{t} f(\tau) \text d\tau\right\} = \dfrac{F(s)}{s}$ \ \ erhält man 
 	\[
 	{\cal{L}}\left\{\int\limits_{0}^{t}\frac{\sin(\tau)}{\tau}\ \text d\tau\right\} = \frac 1s\cdot\left(\dfrac \pi2-\arctan(s) \right)
 \]
 
 
-\textbf{c)}
+\item
 
 \textbf{1. Lösungsweg}\newline
 Mit Hilfe des Anfangs- und Endwertsatzes ergibt sich 
@@ -51,11 +52,11 @@ $$\int\limits_{0}^\infty\frac{\sin(t)}{t}\ \text dt=\int\limits_{0}^\infty\EH{-0
 
 
 
-\textbf{d)} \ Mit der Transformationsformel \ \ ${\cal{L}}\left\{\EH{-at}\,f(t)\right\} = F(s+a)$ \ \ erhält man
+\item Mit der Transformationsformel \ \ ${\cal{L}}\left\{\EH{-at}\,f(t)\right\} = F(s+a)$ \ \ erhält man
 	\[
 	{\cal{L}}\left\{\EH{-t}\,\frac{\sin(t)}{t}\right\} = \dfrac \pi2-\arctan(s+1)\ .
 \]
-
+\end{abc}
 
 %\textbf{e)} \ Es gilt
 %$$
@@ -99,9 +100,9 @@ $$\int\limits_{0}^\infty\frac{\sin(t)}{t}\ \text dt=\int\limits_{0}^\infty\EH{-0
 
 \ErgebnisC{AufglaplacTrafBere002}
 {
-\textbf{ a)} $\frac \pi 2 - \arctan s$, 
-\textbf{ b)} $\frac {\pi/2-\arctan s} s$, 
-\textbf{ c)} $\frac \pi 2$,
-\textbf{ d)} $\frac \pi 2 - \arctan (s+1)$,
+\textbf{ a)} $F(s)=\frac \pi 2 - \arctan s$, 
+\textbf{ b)} $F(s)=\frac {\pi/2-\arctan s} s$, 
+\textbf{ c)} $F(s)=\frac \pi 2$,
+\textbf{ d)} $F(s)=\frac \pi 2 - \arctan (s+1)$,
 %\textbf{ e)} $\frac {\sin t + \cos t}2 - \frac{\EH{-t}}2$
 }

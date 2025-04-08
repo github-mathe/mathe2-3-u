@@ -2,7 +2,7 @@
 {
 Beantworten Sie die folgenden Fragen und geben Sie gegebenenfalls ein Beispiel.
 % Answer the following points giving and example if necessary:
-\begin{iii}
+\begin{abc}
 \item Wie ist die Laplace-Transformation definiert?
 \item Warum muss die Variable $s$ positiv sein?
 \item Was ist die Heaviside-Funktion $h_{t_0}(t)$?
@@ -13,12 +13,12 @@ $$\mathcal{L}\left\{f(t)\,g(t)\right\} = F(s)\,G(s)$$
 \item Wiederholen Sie, wie man ein Anfangswertproblem mithilfe der Laplace-Transformation
 lösen kann.
 \item Schreiben Sie die Eigenschaften der Dirac-Delta-Funktion $\delta(t)$ (auch $\delta$-Distribution) auf.
-\end{iii}
+\end{abc}
 }
 
 
 \Loesung{
-\begin{iii}
+\begin{abc}
 \item Wie ist die Laplace-Transformation definiert?
 
 $\mathcal{L}\left\{f(t)\right\} = \int_0^\infty \operatorname{e}^{-st} f(t) \d t$.
@@ -70,20 +70,19 @@ Zeigen Sie den Graphen von $\operatorname{e}^{-t} f(t)$ mit $f(t)=\dfrac{t}{10}$
     \end{axis}
   \end{tikzpicture}
 
-\item\item Ist die folgende Aussage wahr? $$\mathcal{L}\left\{f(t)+g(t)\right\} = F(s)+G(s)$$ Ja.
+\item Ist die folgende Aussage wahr? $$\mathcal{L}\left\{f(t)+g(t)\right\} = F(s)+G(s)$$ Ja.
 
-\item\item Ist die folgende Aussage wahr?
+\item  Ist die folgende Aussage wahr?
 $$\mathcal{L}\left\{f(t)\,g(t)\right\} = F(s)\,G(s)$$ Nein.
 
 \item Wiederholen Sie, wie man ein Anfangswertproblem mithilfe der Laplace-Transformation
 lösen kann.
-\renewcommand{\labelenumi}{\arabic{enumi}}
- \setcounter{enumi}{0}
-\begin{enumerate}
+
+\begin{iii}
 \item Transformieren Sie die rechte und die linke Seite der Dgl.: Wende $\mathcal{L}\{\cdot\}$ an.
 \item Setzen Sie die Anfangsbedingungen ein und lösen Sie nach $Y(s)$.
 \item Rücktransformieren Sie die linke und die rechte Seite der Gleichung (mithilfe der Tabelle), um die Lösung $y(t)=\mathcal{L}^{-1}(Y(s))$ zu erhalten.
-\end{enumerate}
+\end{iii}
 
 \item Schreiben Sie die Eigenschaften der Dirac-Delta-Funktion $\delta(t)$ (auch $\delta$-Distribution) auf.
 
@@ -93,9 +92,23 @@ lösen kann.
 &\int_{-\infty}^\infty \delta(t-t_0)\, f(t) \d t = f(t_0)\\
 \end{align*}
 
-\end{iii}
+\end{abc}
 
 }
 
 
 
+
+\ErgebnisC{odemix05}{
+\begin{abc}
+\item $\mathcal{L}\left\{f(t)\right\} = \int_0^\infty \operatorname{e}^{-st} f(t) \d t$
+\item $\operatorname{e}^{-st}$ nur beschränkt ist für 
+$t\rightarrow \infty$, wenn $s>0$.
+\item  $h_{t_0}$: Stufenfunktion, die 0 für $t<t_0$ und 1 für $t\geq t_0$ ist.
+\item /
+\item Ja
+\item Nein
+\item /
+\item $\int_{-\infty}^\infty \delta(t) \d t = 1, \, \int_{-\infty}^\infty \delta(t-a) \d t = 1, \, \int_{-\infty}^\infty \delta(t-t_0)\, f(t) \d t = f(t_0)$
+\end{abc}
+}

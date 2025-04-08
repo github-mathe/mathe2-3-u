@@ -1,4 +1,4 @@
-\Aufgabe{}{
+\Aufgabe[e]{Inhomogene lineare Differentialgleichungssystem}{
 Gegeben sei das folgende Differentialgleichungssystem
 
 $$
@@ -122,4 +122,26 @@ $$
 $$
 \end{abc}
 
+}
+
+
+
+\ErgebnisC{ssdglinhomKlau}{
+\begin{abc}
+\item  $\boldsymbol y_h(t) = \begin{pmatrix}
+\operatorname{e}^{2t} & -\operatorname{e}^{t} & -\operatorname{e}^{t}\\
+-\operatorname{e}^{2t}& \operatorname{e}^{t}  & 0 \\
+\operatorname{e}^{2t} & 0 & \operatorname{e}^{t}
+\end{pmatrix} \boldsymbol c $
+\item  $\boldsymbol y_{AWP} (t) =
+\begin{pmatrix}
+\operatorname{e}^{2t} & -\operatorname{e}^{t} & -\operatorname{e}^{t}\\
+-\operatorname{e}^{2t}& \operatorname{e}^{t}  & 0 \\
+\operatorname{e}^{2t} & 0 & \operatorname{e}^{t}
+\end{pmatrix}
+\left(
+\begin{pmatrix} -\frac{13}{5}\operatorname{e}^{-5t} \\-4\operatorname{e}^{-4t} \\ \operatorname{e}^{-4t} \end{pmatrix}
++ \begin{pmatrix} 6\\ \frac{13}{5}\\0 \end{pmatrix}
+\right)$
+\end{abc}
 }

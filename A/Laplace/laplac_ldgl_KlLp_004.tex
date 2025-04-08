@@ -15,10 +15,11 @@
 Gegeben sie das folgende Anfangswertproblem für $y(t)$ durch
 $$	y'' + 4\,y = t\ ,\quad y(0)= 1, y'(0)=2.$$
 
-\textbf{a)} \ Berechnen Sie die Lösung mit dem Exponentialansatz.
+\begin{abc}
+\item Berechnen Sie die Lösung mit dem Exponentialansatz.
 
-\textbf{b)} \ Berechnen Sie die Lösung mit Hilfe der Laplace-Transformation.
-
+\item Berechnen Sie die Lösung mit Hilfe der Laplace-Transformation.
+\end{abc}
 }
 
 \Loesung{
@@ -38,7 +39,6 @@ Daher ist die Lösung des homogenen Systems
 $$y_h(t) = C_1 \cos{2t} + C_2 \sin{2t}.$$
 Die beiden Konstanten werden mit den Anfangswerten bestimmt.
 % The two constants will be determined with the initial conditions.
-
 Für die partikuläre Lösung machen wir den Ansatz
 % For the particular solution we make the ansatz
 $$y_p(t) = A_0 + A_1 t,$$
@@ -60,18 +60,18 @@ $$y'(0)= \frac{1}{4} + 2C_2 \stackrel{!}{=} 2 \rightarrow C_2 = \frac{7}{8}.$$
 Die spezielle Lösung ist dann
 % The solution is
 $$y(t) = \frac{1}{4}t+\cos{2t} + \frac{7}{8}\sin{2t}.$$
-
+\noindent
 \textbf{b)}
 Mit der Laplace-Transformation gilt
 % With the Laplace transform it is
 $$s^2Y(s) -s-2+4Y(s) = \frac{1}{s^2}$$
 $$(s^2+4)Y(s) = \frac{1}{s^2}+s+2$$
 $$Y(s) = \frac{s^3+2s^2+1}{s^2(s^2+4)}$$
-Partialbruchzerlegung
+Durchführen einer Partialbruchzerlegung:
 $$\frac{s^3+2s^2+1}{s^2(s^2+4)}= \frac{A}{s}+ \frac{B}{s^2} + \frac{Cs+D}{s^2+4}$$
-Multiplikation beider Seiten mit $s^2(s^2+4)$ 
-$$s^3+2s^2+1= As(s^2+4)+ B(s^2+4) + (Cs+D)s^2$$
-der Wert $s=0$ führt zu $B=\frac{1}{4}$.
+Multiplikation beider Seiten mit $s^2(s^2+4)$ ergibt
+$$s^3+2s^2+1= As(s^2+4)+ B(s^2+4) + (Cs+D)s^2.$$
+Der Wert $s=0$ führt zu $B=\dfrac{1}{4}$.
 $$s^3+2s^2+1= As^3+4As+ \frac{1}{4}s^2+1 + Cs^3+Ds^2$$
 Mit Koeffizientenvergleich erhalten wir
 \begin{align*}
@@ -89,3 +89,11 @@ $$y(t) = \frac{1}{4}t + \cos{2t} + \frac{7}{8}\sin{2t}.$$
 %\Ergebnis{\subsubsection*{Ergebnisse zu Aufgabe \arabic{Blatt}.\arabic{AufglaplacldglKlLp001}:}
 %
 %}
+
+
+\ErgebnisC{laplacldglKIlp004}{
+\begin{abc}
+\item $y(t)= \frac{1}{4}t+\cos{2t} + \frac{7}{8}\sin{2t}$
+\item $y(t)= \frac{1}{4}t + \cos{2t} + \frac{7}{8}\sin{2t}$
+\end{abc}
+}

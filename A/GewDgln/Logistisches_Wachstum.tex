@@ -8,19 +8,16 @@ wobei $k, \lambda \in \mathbb R$.
 
 \Loesung{
 Wir l\"osen diese Differentialgleichung durch Trennung der Variablen.
-
 $$
 \int \frac{1}{(k-y(t))y(t)} \d y = \int \lambda \d t
 $$
-
 Das Integral auf der linken Seite lösen wir mit einer Partialbruchzerlegung.
-
 $$
 \frac{1}{(k-y)y} = \frac{A}{k-y} + \frac{B}{y} 
 $$
 Durch Multiplikation mit dem Nenner erhalten wir
 $$
-Ay + B(k-y) = 1
+Ay + B(k-y) = 1.
 $$
 Durch Koeffizientenvergleich erhalten wir das Gleichungssystem
 \begin{align*}
@@ -52,11 +49,15 @@ c&= \frac{y_0}{y_0 -k}
 \end{align*}
 Die allgemeine Lösung ist
 \begin{align*}
-y&=-\frac{ck \operatorname{e}^{\lambda kt}}{1-c\operatorname{e}^{\lambda kt}}
+y&=-\frac{ck \operatorname{e}^{\lambda kt}}{1-c\operatorname{e}^{\lambda kt}}.
 \end{align*}
 Die spezielle Lösung erhalten wir durch einsetzen der Konstanten.
 \begin{align*}
 y &= \frac{y_0}{k-y_0} \frac{k}{\operatorname{e}^{\-\lambda kt} + \frac{y_0}{k-y_0}}\\
 &=\frac{y_0 k}{y_0 +(k-y_0)\operatorname{e}^{-\lambda k t}}
 \end{align*}
+}
+
+\ErgebnisC{LogitischesWachstum}{
+die spezielle Lösung lautet: $y = \dfrac{y_0 k}{y_0 +(k-y_0)\operatorname{e}^{-\lambda k t}}$.
 }

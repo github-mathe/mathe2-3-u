@@ -1,0 +1,82 @@
+
+\input{header}
+
+\newcommand{\PROFESSOR}{Prof.\ Dr.\ Thomas Carraro}
+\newcommand{\ASSISTANT}{\setlength{\tabcolsep}{0pt}\begin{tabular}{l} Dr. Ulrike Kochan-Eilers\end{tabular}}
+
+\newcommand{\Jahr}{2025}
+% \newcommand{\Trimester}{HT}
+\newcommand{\Trimester}{FT}
+\newcommand{\Kurs}{Mathematik III/C (WI/ET)}
+\newcommand{\TYPE}{Aufgabenblatt}
+\newcommand{\BLATT}{1}
+\newcommand{\TOPIC}{Integration in 1D, Integration in 2D}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{mitLoes}
+\setboolean{mitLoes}{false}
+\setboolean{mitLoes}{true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setboolean{WITHPSTRICKS}{false}
+%\setboolean{WITHPSTRICKS}{true}
+
+\input{begin}
+\setboolean{mitErg}{false}
+%\setboolean{mitErg}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set the INTRODUCTION section of the sheet here:
+% \input{introduction.tex}
+
+\textbf{Einführende Bemerkungen}
+
+\begin{itemize}
+\item Vermeiden Sie die Verwendung von Taschenrechnern oder Online-Ressourcen.
+% \item Die mit einem Stern *) markierten (Teil-)Aufgaben entfallen in diesem Trimester. Stattdessen werden einzelne Online-Aufgaben im ILIAS-Kurs kenntlich gemacht, zu denen Sie dort Ihre L\"osungswege zur Korrektur hochladen k\"onnen. 
+% \item Die mit zwei Sternen  **) markierten (Teil-)Aufgaben richten sich an Studierende, die die \"ubrigen Aufgaben bereits gel\"ost haben und die Inhalte weiter vertiefen m\"ochten. 
+\end{itemize}
+
+\ruleBig
+
+%Mathe II Blatt 1
+\input{../A/Analysis/analys_Integrale.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%36
+\input{../A/Analysis/analys_Intg_Ndim_001_1.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%38
+\input{../A/Analysis/analys_Intg_Ndim_013.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%48
+\input{../A/Analysis/analys_Intg_Trig_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%37
+%\input{../A/Analysis/analys_Intg_Ndim_003.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%%31
+%\input{../A/Analysis/analys_Intg_2dim_002.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%
+%\input{../A/Analysis/analys_Intg_Pola_001.tex}
+%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%39
+\input{../A/Analysis/analys_Intg_Ndim_014.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Integration_Halbkreis.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+% \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\ifthenelse{\boolean{mitErg}}{
+\ruleBig
+\Ergebnisse}{}
+
+
+\end{twocolumn}
+\end{document}
