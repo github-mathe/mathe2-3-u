@@ -1,10 +1,10 @@
 \Aufgabe[]{Newton-Verfahren }{
-Gegeben sei die Funktion $f:\R ^3\rightarrow \R $ durch 
+Gegeben sei die Funktion $f:\R ^2\rightarrow \R $ durch 
 $$f(x,y)=x^3-3xy^2.$$
 Gesucht sind die station\"aren Punkte dieser Funktion. 
 \begin{abc}
-\item Geben Sie an, welche Bedingung ein station\"arer Punkt $\vec x\in\R^3$ erf\"ullen muss. 
-\item Um eine N\"aherung f\"ur einen solchen Punkt zu berechnen, soll das dreidimensionale Newton-Verfahren angewendet werden. Auf welche Funktion wird das Newton-Verfahren angewendet?\\
+\item Geben Sie an, welche Bedingung ein station\"arer Punkt $\vec x\in\R^2$ erf\"ullen muss. 
+\item Um eine N\"aherung f\"ur einen solchen Punkt zu berechnen, soll das zweidimensionale Newton-Verfahren angewendet werden. Auf welche Funktion wird das Newton-Verfahren angewendet?\\
 Geben Sie die Iterationsvorschrift an. 
 \item F\"uhren Sie f\"ur den Startvektor $\vec x_0=\begin{pmatrix}1\\1\end{pmatrix}$ einen Iterationsschritt durch. 
 \item Geben Sie ein geeignetes Abbruchkriterium des Newton-Verfahrens an. (Dieses Kriteriums ist \textbf{nicht} auszuwerten.)
@@ -14,14 +14,14 @@ Geben Sie die Iterationsvorschrift an.
 \Loesung{
 \begin{abc}
 \item In einem station\"aren Punkt muss der Gradient der Funktion $f$ verschwinden: 
-$$\vec 0\overset != \nabla f(x,y,z)=\begin{pmatrix}
+$$\vec 0\overset != \nabla f(x,y)=\begin{pmatrix}
 3x^2-3y^2\\
 -6xy
 \end{pmatrix}$$
 
-\item Das Newton-Verfahren wird auf die Funktion $\vec F(x,y,z)=\nabla f(x,y,z)$ angewendet. Die Ableitung dieser Funktion ist
+\item Das Newton-Verfahren wird auf die Funktion $\vec F(x,y)=\nabla f(x,y)$ angewendet. Die Ableitung dieser Funktion ist
 \begin{align*}
-&\vec F'(x,y,z)\Bigl(=H_f(x,y,z)\Bigr)\\
+&\vec F'(x,y)\Bigl(=H_f(x,y)\Bigr)\\
 =&\begin{pmatrix}
 6x &  -6y\\
 -6y & -6x 
