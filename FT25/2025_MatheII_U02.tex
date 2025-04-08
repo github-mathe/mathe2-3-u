@@ -9,8 +9,8 @@
 \newcommand{\Trimester}{FT}
 \newcommand{\Kurs}{Mathematik III/C (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{1}
-\newcommand{\TOPIC}{Integration in 1D, Integration in 2D}
+\newcommand{\BLATT}{2}
+\newcommand{\TOPIC}{Polarkoordinaten, Zylinderkoordinaten, Kugelkoordinaten}
 \usepackage{pstricks}
 \usepackage{pst-plot}
 
@@ -27,7 +27,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
-%\setboolean{mitErg}{true}
+\setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,34 +44,28 @@
 
 \ruleBig
 
-%Mathe II Blatt 1
-\input{../A/Analysis/analys_Integrale.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%36
-\input{../A/Analysis/analys_Intg_Ndim_001_1.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%38
-\input{../A/Analysis/analys_Intg_Ndim_013.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%48
-\input{../A/Analysis/analys_Intg_Trig_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%37
-%\input{../A/Analysis/analys_Intg_Ndim_003.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%%31
-%\input{../A/Analysis/analys_Intg_2dim_002.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%
-%\input{../A/Analysis/analys_Intg_Pola_001.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%39
-\input{../A/Analysis/analys_Intg_Ndim_014.tex}
+%Mathe III Blatt 2
+
+\input{../A/Analysis/analys_Integration_Halbkreis_polar.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Integration_Halbkreis.tex}
+\input{../A/Analysis/analys_Intg_Kegl_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+\input{../A/Analysis/analys_Intg_Pola_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Intg_2dim_002.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Intg_Ndim_20b.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Intg_Kuko_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+\input{../A/Analysis/analys_Intg_Para_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
 \ifthenelse{\boolean{mitErg}}{
 \ruleBig

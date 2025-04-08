@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=latex 2022.5.1)  24 MAR 2025 08:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=latex 2022.5.1)  8 APR 2025 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2105,7 +2105,9 @@ Overfull \hbox (2.01202pt too wide) detected at line 88
 [41
 
 
-]) [42
+]
+\c@analysIntg2dim002=\count420
+) [42
 
 ] (../Analysis/analys_Intg_Bogl_001.tex) [43
 
@@ -2115,7 +2117,7 @@ Overfull \hbox (2.01202pt too wide) detected at line 88
 
 
 ]
-\c@AufganalysIntgKuko001=\count420
+\c@AufganalysIntgKuko001=\count421
 ) [45
 
 ]
@@ -2124,127 +2126,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--8
 
  []
 
-\c@AufganalysIntgKuko002=\count421
+\c@AufganalysIntgKuko002=\count422
 ) [46
 
 
 
 ] (../Analysis/analys_Intg_Kuko_004.tex
-\c@halbkugel=\count422
+\c@halbkugel=\count423
 ) [47
 
 
 ]
 (../Analysis/analys_Intg_Ndim_001_1.tex
-
-LaTeX Warning: Command \. invalid in math mode on input line 19.
-
-! Improper \spacefactor.
-<recently read> \spacefactor 
-                             
-l.19 }
-      
-You can refer to \spacefactor only in horizontal mode;
-you can refer to \prevdepth only in vertical mode; and
-neither of these is meaningful inside \write. So
-I'm forgetting what you said and using zero instead.
-
-! Extra }, or forgotten $.
-\add@accent ... \accent@spacefactor \spacefactor }
-                                                  \let \maybe@load@fontshape...
-l.19 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.19 }
-      
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.19 }
-      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.19 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.19 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.19 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
@@ -2259,25 +2152,23 @@ Sie die In-te-gra-tionsrei-
 
 
 ]
-\c@AufganalysIntgNdim001=\count423
-) [49
-
-] (../Analysis/analys_Intg_Ndim_003.tex [50
+\c@AufganalysIntgNdim001=\count424
+) [49] (../Analysis/analys_Intg_Ndim_003.tex [50
 
 
 ]
-\c@analysIntgNdim003=\count424
+\c@analysIntgNdim003=\count425
 ) [51
 
 ]
 (../Analysis/analys_Intg_Ndim_013.tex
-\c@AufganalysIntgNdim013=\count425
+\c@AufganalysIntgNdim013=\count426
 ) [52
 
 
 ]
 (../Analysis/analys_Intg_Ndim_014.tex
-\c@AufganalysIntgNdim014=\count426
+\c@AufganalysIntgNdim014=\count427
 ) [53
 
 
@@ -2290,12 +2181,12 @@ mogenitat, dass die Massendichte $\OML/lmm/m/it/10 \OT1/lmr/m/n/10 (\OML/lmm/
 m/it/10 x; y; z\OT1/lmr/m/n/10 )$
  []
 
-\c@AufganalysIntgNdim017=\count427
+\c@AufganalysIntgNdim017=\count428
 ) [54
 
 
 ] (../Analysis/analys_Intg_Ndim_023.tex
-\c@AufganalysIntgtNdim023=\count428
+\c@AufganalysIntgtNdim023=\count429
 ) [55
 
 
@@ -2320,13 +2211,13 @@ Overfull \hbox (39.04173pt too wide) detected at line 88
 
 
 ]
-\c@analysIntgNdim040=\count429
+\c@analysIntgNdim040=\count430
 ) [57] (../Analysis/analys_Intg_Ndim_20b.tex
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
 
  []
 
-\c@analysIntgNdim020=\count430
+\c@analysIntgNdim020=\count431
 ) [58
 
 
@@ -2349,7 +2240,7 @@ Overfull \hbox (4.37416pt too wide) detected at line 210
 
 
 ] [64]
-\c@analysIntgTraf001=\count431
+\c@analysIntgTraf001=\count432
 ) [65]
 (../Analysis/analys_Intg_Traf_003.tex [66
 
@@ -2360,15 +2251,15 @@ Overfull \hbox (41.17183pt too wide) detected at line 219
  []
 
 [68]
-\c@analysIntgTraf003=\count432
+\c@analysIntgTraf003=\count433
 ) [69] (../Analysis/analys_Intg_Trig_001.tex
-\c@analysIntgTrig001=\count433
+\c@analysIntgTrig001=\count434
 ) [70
 
 
 ]
 (../Analysis/analys_Intg_Uneg_001.tex
-\c@analysPartBrch006=\count434
+\c@analysPartBrch006=\count435
 ) [71
 
 
@@ -2389,11 +2280,11 @@ $\OML/lmm/m/it/10 z\OMS/lmsy/m/n/10  $\OT1/lmr/m/n/10 Integrationsbereich
 
 
 ]
-\c@analysIntgZyln002=\count435
+\c@analysIntgZyln002=\count436
 ) [73
 
 ] (../Analysis/analys_Intg_Zyln_098.tex
-\c@analysIntgZyln098=\count436
+\c@analysIntgZyln098=\count437
 ) [74
 
 
@@ -2415,11 +2306,11 @@ l.197 ...t{../A/Analysis/analys_Intg_Pola_001.tex}
 
  
 Here is how much of TeX's memory you used:
- 43784 strings out of 478660
- 1031724 string characters out of 2844525
+ 43786 strings out of 478660
+ 1031789 string characters out of 2844525
  1655810 words of memory out of 3000000
- 60936 multiletter control sequences out of 15000+600000
+ 60938 multiletter control sequences out of 15000+600000
  436492 words of font info for 56 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,17n,120p,10620b,982s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on Analysis.dvi (74 pages, 606928 bytes).
+ 113i,17n,120p,10620b,987s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on Analysis.dvi (74 pages, 606856 bytes).

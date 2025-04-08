@@ -1,0 +1,28 @@
+\Aufgabe[e]{Fl\"acheninhalt eines Halbkreises}
+{
+Bestimmen Sie den Fl\"acheninhalt eines Einheitskreises mit dem Radius $r = 1$ f\"ur $y \geq 0$ (oberer Halbkreis),
+indem Sie eine Integration in Polarkoordinaten durchf\"uhren. \\
+}
+
+\Loesung{
+F\"ur den Einheitskreis gilt $x^2+y^2=1$. Setzt man die Polarkoordinaten
+\begin{align*}
+x &= r \cos(\varphi) \\
+y &= r \sin(\varphi)
+\end{align*}
+ein, wobei $0\leq r$ und $0\leq \varphi \leq 2 \pi$ gilt, ergeben sich die Grenzen f\"ur $r$ zu $0 \leq r \leq 1$. F\"ur den Winkel $\varphi$ ergeben sich die Grenzen $0 \leq \varphi \leq \pi$, da nur der obere Halbkreis betrachtet wird. Damit ergibt sich f\"ur den Fl\"acheninhalt folgendes Integral, wobei $\mathrm{d}A = \mathrm{d} x \mathrm{d}y = r \mathrm{d}r \mathrm{d} \varphi$ gilt:
+\begin{align*}
+A &= \int_{\varphi=0}^{\pi}  \int_{r=0}^1 r \mathrm{d}r \mathrm{d}\varphi \\
+  &= \int_{\varphi=0}^{\pi}  \frac{1}{2} \left[ r^2 \right]_0^1  \mathrm{d}\varphi \\
+  &= \int_{\varphi=0}^{\pi}  \frac{1}{2}  \mathrm{d}\varphi \\
+  &= \frac{1}{2} \left[ \varphi \right]_0^{\pi} \\
+  &= \frac{1}{2} \pi 
+\end{align*}
+Der Fl\"acheninhalt des halben Einheitskreises betr\"agt damit $\frac{\pi}{2}$.
+}
+
+
+\ErgebnisC{analysIntegHalbkreis}
+{
+$A = \frac{\pi}{2}$
+}

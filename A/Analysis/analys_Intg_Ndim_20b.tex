@@ -1,6 +1,6 @@
 \Aufgabe[e]{Alte Klausuraufgabe}{
 \begin{abc}
-\item Berechnen Sie das Integral $\iint_D\frac{x^2}{y^2}\d x\d y$, wobei 
+\item Berechnen Sie das Integral $\iint_D\frac{x^2}{y^2}\mathrm{d} x\mathrm{d} y$, wobei 
 $D$ den von den Geraden $x=2$, $y=x$ und der Hyperbel $xy=1$ begrenzten Bereich 
 des $\R^2$ bezeichne.
  
@@ -62,11 +62,10 @@ D =\left\{\begin{pmatrix}x\\y\end{pmatrix}\in\R^2: \frac{1}{x}\leq y \leq x\text
 $$
 Es gilt
 \begin{align*}
-\iint_D\frac{x^2}{y^2}\d x\d y &= \int_1^2\left(\int_{1/x}^x 
-\frac{x^2}{y^2}\d 
-y\right)\d x\\[1ex]
- &= \int_1^2 x^2 \cdot \left[\frac{-1}{y}\right]_{y = 1/x}^{y=x} \d x\\[1ex]
- &= \int_1^2 \left(-x+x^3\right)\d x = \frac{9}{4}\,.
+\iint_D\frac{x^2}{y^2}\mathrm{d} x\mathrm{d} y &= \int_1^2\left(\int_{1/x}^x 
+\frac{x^2}{y^2}\mathrm{d}y\right)\mathrm{d} x\\[1ex]
+ &= \int_1^2 x^2 \cdot \left[\frac{-1}{y}\right]_{y = 1/x}^{y=x} \mathrm{d} x\\[1ex]
+ &= \int_1^2 \left(-x+x^3\right)\mathrm{d} x = \frac{9}{4}\,.
 \end{align*}
 \begin{abc}\setcounter{enumi}{1}
 %\item Der Bereich $B$ ist ein Normalbereich mit
@@ -127,8 +126,8 @@ Die zugeh\"orige Funktionaldeterminante ist $ \left|
 \dfrac{\partial(x,y,z)}{\partial(r,\varphi,z)}\right| = r$. Das Volumen ist:
 \begin{align*}
   \int_{z=-1}^2 \int_{\varphi = 0}^{2\pi} \int_{r=0}^{\sqrt{1+z^2}}
-	r \, \d r \d\varphi \d z
-  & =  \int_{z=-1}^2 2\pi \frac{1+z^2}{2} \d z\\[2ex]
+	r \, \mathrm{d}r \mathrm{d}\varphi \d z
+  & =  \int_{z=-1}^2 2\pi \frac{1+z^2}{2} \mathrm{d} z\\[2ex]
   & = \pi \left( 3 + \left[ \frac{z^3}{3} \right]_{z=-1}^2 \right) \\[2ex]
   & =  \pi \left( 3 + \frac{8}{3} + \frac{1}{3} \right) =  6 \pi\,.
 \end{align*}
