@@ -1,22 +1,17 @@
-\Aufgabe[e]{Kegelvolumen}{
-Gegeben sei ein Kegel als
+\Aufgabe[e]{Volumen und Masse}{
+Gegeben sei der Körper
 $$
 \mathbf{K} = \left\{ \vec x = \begin{pmatrix} x\\y\\z \end{pmatrix} \in \mathbb{R}^3 :
-z = +\sqrt{x^2 +y^2}\right\}
+z \leq \sqrt{x^2 +y^2}, \, 0 \leq z \leq 2\right\}.
 $$
-der durch 
-$$
-z = +\sqrt{x^2 +y^2}
-$$
-eingeschlossen ist.
 \begin{abc}
-\item Bestimmen Sie das Volumen des Kegels für $z=2$ mittels Integration in 
-      Zylinderkoordinaten.
+\item Skizzieren Sie den dreidimensionalen Körper $\mathbf{K}$.
+\item Bestimmen Sie das Volumen des Körpers durch Integration in Zylinderkoordinaten.
 \item Gegeben sei die Dichtefunktion
 $$
 \rho(x,y,z) =  x + 2y +z^2.
 $$
-      Bestimmen Sie die Masse des Kegels, die durch
+      Bestimmen Sie die Masse des Körpers, die durch
       
 $$
 M = \int_{K} \rho(\vec x) \mathrm{d} \vec x
@@ -27,6 +22,33 @@ gegeben ist.
 
 \Loesung{
 \begin{abc}
+\item 
+\begin{tikzpicture}
+  \begin{axis}[
+    view={135}{30},
+    xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
+    domain=-2:2,
+    y domain=-2:2,
+    samples=20,
+    samples y=20,
+    axis on top,
+    z buffer=sort,
+    colormap/cool,
+    enlargelimits=true,
+    grid=major,
+    xtick={-2,-1,0,1,2},
+    ytick={-2,-1,0,1,2},
+    ztick={0,1,2},
+  ]
+    \addplot3[
+      surf,
+      shader=interp,
+      opacity=1,
+    ]
+    {sqrt(x^2 + y^2)};
+  \end{axis}
+\end{tikzpicture}
+%
 \item
 Wir transformieren von kartesischen Koordinaten in Zylinderkoordinaten.
 $$

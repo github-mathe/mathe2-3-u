@@ -1,0 +1,65 @@
+\Aufgabe[e]{Fl\"acheninhalt einer Ellipse}
+{
+  Gegeben sei die Ellipse durch die Punktmenge
+  \[
+    E = \left\{ (x, y) \in \mathbb{R}^2 : \frac{x^2}{a^2} + \frac{y^2}{b^2} \leq 1, \, \text{ mit } a > 0, b > 0 \right\}
+  \]
+  \begin{abc}
+    \item Skizzieren Sie die Region $E$ für die konkreten Werte $a = 2$, $b = 1$. 
+
+    \item Führen Sie eine geeignete Koordinatentransformation ein, um die Fläche $A$ der Ellipse zu berechnen.
+    \item Bestimmen Sie die Jacobi-Determinante der Transformation und formulieren Sie das entsprechende Flächenintegral zur Berechnung von $A$ in den neuen Koordinaten.
+
+    \item Berechnen Sie die Fläche der Ellipse durch Auswertung des Integrals.
+
+    \item Diskutieren Sie, warum die direkte Verwendung der üblichen Polarkoordinaten ($x = r \cos\varphi$, $y = r \sin\varphi$) zu einer komplexeren Integrationsaufgabe führt. Worin besteht die Schwierigkeit? 
+  \end{abc}
+
+}
+
+\Loesung{
+
+  \begin{abc}
+    \item
+    \[
+      x = a r \cos\varphi,\quad y = b r \sin\varphi,\quad r \in [0, 1],\ \varphi \in [0, 2\pi).
+    \]
+    \item 
+Wenn man die gewöhnlichen Polarkoordinaten verwendet, also
+\[
+x = r \cos\varphi,\quad y = r \sin\varphi,
+\]
+und diese in die Ungleichung der Ellipse einsetzt, ergibt sich:
+\[
+\frac{r^2 \cos^2\varphi}{a^2} + \frac{r^2 \sin^2\varphi}{b^2} \leq 1.
+\]
+Dies kann umgeformt werden zu:
+\[
+r^2 \left( \frac{\cos^2\varphi}{a^2} + \frac{\sin^2\varphi}{b^2} \right) \leq 1,
+\quad\text{also}\quad
+r \leq \left( \frac{\cos^2\varphi}{a^2} + \frac{\sin^2\varphi}{b^2} \right)^{-\frac{1}{2}}.
+\]
+
+Damit ergibt sich für das Integral:
+\[
+A = \int_0^{2\pi} \int_0^{r(\varphi)} r\, \mathrm{d}r\, \mathrm{d}\varphi,
+\quad\text{wobei}\quad
+r(\varphi) = \left( \frac{\cos^2\varphi}{a^2} + \frac{\sin^2\varphi}{b^2} \right)^{-\frac{1}{2}}.
+\]
+
+\textbf{Fazit:} Die Verwendung gewöhnlicher Polarkoordinaten ist prinzipiell möglich, führt jedoch zu einem aufwändigeren Integrationsbereich, da die obere Grenze von $r$ abhängig vom Winkel $\varphi$ ist. Die Integration ist damit deutlich komplizierter.
+
+Im Gegensatz dazu erlaubt die Transformation
+\[
+x = a r \cos\varphi,\quad y = b r \sin\varphi,\quad r \in [0,1],\ \varphi \in [0,2\pi)
+\]
+eine Beschreibung der Ellipse durch ein einfaches Rechteck im $(r, \varphi)$-Koordinatensystem, was die Berechnung der Fläche erheblich vereinfacht.
+
+  \end{abc}
+
+}
+
+\ErgebnisC{analysIntegEllipse}
+{
+TODO
+}
