@@ -2,7 +2,7 @@
 Gegeben sei der Körper
 $$
 \mathbf{K} = \left\{ \vec x = \begin{pmatrix} x\\y\\z \end{pmatrix} \in \mathbb{R}^3 :
-z = \sqrt{x^2 +y^2}, \, 0 \leq z \leq 2\right\}.
+z \leq \sqrt{x^2 +y^2}, \, 0 \leq z \leq 2\right\}.
 $$
 \begin{abc}
 \item Skizzieren Sie den dreidimensionalen Körper $\mathbf{K}$.
@@ -22,7 +22,33 @@ gegeben ist.
 
 \Loesung{
 \begin{abc}
-\item TODO: Skizze
+\item 
+\begin{tikzpicture}
+  \begin{axis}[
+    view={135}{30},
+    xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
+    domain=-2:2,
+    y domain=-2:2,
+    samples=20,
+    samples y=20,
+    axis on top,
+    z buffer=sort,
+    colormap/cool,
+    enlargelimits=true,
+    grid=major,
+    xtick={-2,-1,0,1,2},
+    ytick={-2,-1,0,1,2},
+    ztick={0,1,2},
+  ]
+    \addplot3[
+      surf,
+      shader=interp,
+      opacity=1,
+    ]
+    {sqrt(x^2 + y^2)};
+  \end{axis}
+\end{tikzpicture}
+%
 \item
 Wir transformieren von kartesischen Koordinaten in Zylinderkoordinaten.
 $$
