@@ -47,11 +47,14 @@ x = r \cos(\varphi) , \quad y = r \sin(\varphi)
 $$
 Es gilt dann:
 \begin{align*}
-I &= \int_1^2 \int_0^{2\pi} \operatorname{e}^{r^2} r^2 \sin(\varphi) \cdot r \mathrm{d} \varphi \mathrm{d} r \\
-&= \int_1^2 \int_0^{2\pi} \operatorname{e}^{r^2} r^3 \sin(\varphi) \mathrm{d} \varphi \mathrm{d} r \\
+I &= \int_1^2 \int_0^{2\pi} \operatorname{e}^{r^2} r^2 \sin^2(\varphi) \cdot r \mathrm{d} \varphi \mathrm{d} r \\
+&= \int_1^2 \int_0^{2\pi} \operatorname{e}^{r^2} r^3 \sin^2(\varphi) \mathrm{d} \varphi \mathrm{d} r \\
 &= \int_1^2 \operatorname{e}^{r^2} r^3 (\frac{1}{2}(\varphi -\sin(\varphi)\cos(\varphi))\Big |_0^{2\pi}\mathrm{d} r \\
 &= \pi \int_1^2 \operatorname{e}^{r^2} r^3 \mathrm{d} r \\
-&= \pi \int_1^4 \operatorname{e}^u u  \cdot \frac{1}{2} \mathrm{d} u \\
+\end{align*}
+Um dieses Integral zu l\"osen wird eine Substitution mit $u=r^2$ und $\mathrm{d}u = 2r \mathrm{d}r$ und anschlie\ss end eine partielle Integration durchgef\"uhrt:
+\begin{align*}
+I &= \pi \int_1^4 \operatorname{e}^u u  \cdot \frac{1}{2} \mathrm{d} u \\
 &= \frac{\pi}{2} \left(\operatorname{e}^u u \Big |_1^4 - \int_1^4 \operatorname{e}^u \mathrm{d} r\right)\\
 &=\frac{\pi}{2} \left(\operatorname{e}^u u \Big |_1^4 - \operatorname{e}^u \Big |_1^4\right)\\
 &=\frac{3\operatorname{e}^4 \pi}{2}

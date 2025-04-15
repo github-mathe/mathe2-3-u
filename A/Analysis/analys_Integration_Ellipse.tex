@@ -71,12 +71,22 @@ $$
 A = \int_{\varphi=0}^{2\pi} \int_{r=0}^1 abr \, \mathrm{d}r\, \mathrm{d} \varphi.
 $$    
     
+\item
+\begin{align*}
+A &= \int_{\varphi=0}^{2\pi} \int_{r=0}^1 abr \, \mathrm{d}r\, \mathrm{d} \varphi \\
+  &= \int_{\varphi=0}^{2\pi} \frac{1}{2}ab \left[ r^2 \right]_0^1 \mathrm{d} \varphi\\
+  &= \int_{\varphi=0}^{2\pi} \frac{1}{2}ab \mathrm{d} \varphi\\
+  &= \frac{1}{2}ab \left[ \varphi \right]_0^{2\pi} \\
+  &= \frac{1}{2}ab 2 \pi \\
+  &= ab \pi
+\end{align*}    
+    
 \item 
-Wenn man die gewöhnlichen Polarkoordinaten verwendet, also
+Werden die gewöhnlichen Polarkoordinaten
 \[
 x = r \cos\varphi,\quad y = r \sin\varphi,
 \]
-und diese in die Ungleichung der Ellipse einsetzt, ergibt sich:
+verwendet und diese in die Ungleichung der Ellipse einsetzt, ergibt sich:
 \[
 \frac{r^2 \cos^2\varphi}{a^2} + \frac{r^2 \sin^2\varphi}{b^2} \leq 1.
 \]
@@ -109,10 +119,10 @@ eine Beschreibung der Ellipse durch ein einfaches Rechteck im $(r, \varphi)$-Koo
 \ErgebnisC{analysIntegEllipse}
 {
 \begin{abc}
-\item
-\item
-\item
-\item
-\item
+\item /
+\item $ x = a r \cos\varphi,\quad y = b r \sin\varphi,\quad r \in [0, 1],\ \varphi \in [0, 2\pi)$
+\item $A = \int_{\varphi=0}^{2\pi} \int_{r=0}^1 abr \, \mathrm{d}r\, \mathrm{d} \varphi$
+\item $A= ab \pi$
+\item kompliziertere obere Integrationsgrenze f\"ur $r$: $r(\varphi) = \left( \frac{\cos^2\varphi}{a^2} + \frac{\sin^2\varphi}{b^2} \right)^{-\frac{1}{2}}$
 \end{abc}
 }

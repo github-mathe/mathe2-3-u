@@ -15,8 +15,17 @@ Der Bereich ist durch die Geraden $x=y-1\Rightarrow y=x+1$ und $x=1-y\Rightarrow
 Das ist ein Dreieck:
 \begin{center}
 \begin{pspicture}(-3,-2)(3,2)
-\psgrid(-3,-2)(3,2)
-\psline[linewidth=2pt](-2,-1)(2,-1)(0,1)(-2,-1)
+  \psgrid(-3,-2)(3,2)
+  
+  % Achsen
+  \psaxes[labels=none,ticks=none]{->}(0,0)(-3,-2)(3,2)
+  
+  % Beschriftung der Achsen
+  \uput[0](3,0){$x$}
+  \uput[90](0,2){$y$}
+  
+  % Dreieck
+  \psline[linewidth=2pt](-2,-1)(2,-1)(0,1)(-2,-1)
 \end{pspicture}
 \end{center}
 
