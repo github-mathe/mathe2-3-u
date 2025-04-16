@@ -1,68 +1,7 @@
-\input{header}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newboolean{mitLoes}
-\setboolean{mitLoes}{false}
-\setboolean{mitLoes}{true}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\setboolean{mitErg}{false}
-%\setboolean{mitErg}{true}
-
-%\setboolean{WITHPSTRICKS}{false}
-\setboolean{WITHPSTRICKS}{true}
-
-\input{begin}
-\thispagestyle{empty} 
-% Logo
-\begin{center}
-    \vspace*{2cm}
-    \includegraphics[width=0.3\textwidth]{HSU_RGB.eps} % <- Logo-Dateiname hier einfügen
-\end{center}
-
-% Titel
-\begin{center}
-    \vspace{1cm}
-    {\LARGE \textbf{Aufgabensammlung}}\\
-    \vspace{0.5cm}
-    {\LARGE \textbf{Mathematik III/B}} \\
-    \vspace{0.5cm}
-    {\large f\"ur WI/ET} \\
-\end{center}
-
-
-% Universität
-\vfill
-\begin{center}
-    {\large Prof. Dr. Thomas Carraro} \\
-    {\large Fr\"uhjahrstrimester 2025}
-\end{center}
-
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-% Inhaltsverzeichnis
-\tableofcontents
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-
-%\setboolean{mitErg}{false}
-\setboolean{mitErg}{true}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Set the INTRODUCTION section of the sheet here:
-% \input{introduction.tex}
-\renewcommand{\d }{\mathrm{d}}
-%\ruleBig
-\setcounter{page}{1}
-
 \section*{Gew\"ohnliche Differentialgleichungen}
 \addcontentsline{toc}{section}{Gew\"ohnliche Differentialgleichungen}
 \input{Einfuehrung_GewDgl.tex}
+
 %1
 \input{../GewDgln/gewdgl_Anfangswertproblem.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
@@ -94,28 +33,28 @@
 \input{../GewDgln/gewdgl_Anfangswertproblem02.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 %11
-\input{../GewDgln/ode_sep_var_03.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%12
-\input{../GewDgln/ode_sep_var_01.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%13
-\input{../GewDgln/gewdgl_Strm_Lrkr_001.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%14
-\input{../GewDgln/gewdgl_Anfangswertproblem03.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%15
-\input{../GewDgln/gewdgl_GewDgl01.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%16
 \input{../GewDgln/ode_mix_03.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%17
+%12
 \input{../GewDgln/ode_mix_01.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%18
+%13
 \input{../GewDgln/ode_mix_02.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%14
+\input{../GewDgln/ode_sep_var_03.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%15
+\input{../GewDgln/ode_sep_var_01.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%16
+\input{../GewDgln/gewdgl_Strm_Lrkr_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%17
+\input{../GewDgln/gewdgl_Anfangswertproblem03.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%18
+\input{../GewDgln/gewdgl_GewDgl01.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 %19
 \input{../GewDgln/gewdgl_Dgl_Tdv_AWP_099.tex}
@@ -150,7 +89,6 @@
 %29
 \input{../GewDgln/harmonischer_oszillator_inhom.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
 
 %___________________________________________________________________
 \newpage
@@ -256,11 +194,3 @@
 %%53
 %\input{../SysDgl/syst_2D_haupt.tex}
 %\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-
-\newpage
-\section*{Ergebnisse}
-\addcontentsline{toc}{section}{Ergebnisse}
-\ifthenelse{\boolean{mitErg}}{
-\Ergebnisse}{}
-\end{document}

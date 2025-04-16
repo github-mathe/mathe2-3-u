@@ -13,7 +13,11 @@ $$M=\int\limits_{K}\rho(\vec x)\mathrm{d} \vec x.$$
 \Loesung{
 \begin{abc}
 \item
-Es bietet sich die Rechnung in Kugelkoordinaten an. Wegen der Bedingung $z\geq 0$ wird $\theta$ auf
+Es bietet sich die Rechnung in Kugelkoordinaten an. Wir verwenden folgende Kugelkoordinaten:
+$$
+x = r \cos(\varphi) \sin(\theta), \, y= r \sin(\varphi) \sin(\theta), \, z= r \cos(\theta).
+$$
+Wegen der Bedingung $z\geq 0$ wird $\theta$ auf
 das Intervall $[0,\, \pi/2]$ eingeschr\"ankt. 
 \begin{align*}
 M=& \int\limits_{\theta=0}^{\pi/2}\int\limits_{\varphi=0}^{2\pi}\int\limits_{r=0}^a\rho\cdot
@@ -24,7 +28,7 @@ r^2\sin\theta \mathrm{d}  r \mathrm{d} \varphi \mathrm{d} \theta
 =& \frac {a^3}3\cdot 2\pi \int\limits_{\theta=0}^{\pi/2}\cos\theta\mathrm{d} \theta = \frac{2\pi a^3}3.
 \end{align*}
 \item
-Aus der Beziehung $a^2 = r^2 + z^2$ erhalten wir $0 < r < \sqrt{a^-z^2}$.
+Aus der Beziehung $a^2 = r^2 + z^2$ erhalten wir $0 < r < \sqrt{a^2-z^2}$.
 In Zylinderkoordinaten erhalten wir das Integral
 \begin{align*}
 M =& \int_{\varphi = 0}^{2\pi} \int_{z=0}^a \int_{r=0}^{\sqrt{a^2-z^2}} \frac{z}{r}r\mathrm{d}  r \mathrm{d}  z \mathrm{d}  \varphi \\

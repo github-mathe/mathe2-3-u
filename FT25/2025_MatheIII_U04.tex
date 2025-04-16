@@ -10,10 +10,10 @@
 \newcommand{\Kurs}{Mathematik III/C (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
 \newcommand{\BLATT}{3}
-\newcommand{\TOPIC}{Differentiagleichung 1. Ordnung, Zylinderkoordinaten}
+\newcommand{\TOPIC}{lineare Dgl. 1.Ordnung, lineare Dgl. h\"oherer Ordnung}
 \usepackage{pstricks}
 \usepackage{pst-plot}
-
+\usepackage{circuitikz}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
@@ -44,34 +44,29 @@
 
 \ruleBig
 
-%Mathe III Blatt 2
+%Mathe III Blatt 4
 
 
-\input{../A/GewDgln/gewdgl_Dgln_Defb_001.tex}
+\input{../A/GewDgln/gewdgl_Strm_Lrkr_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/GewDgln/gewdgl_Dgln_Erst_001.tex}
+\input{../A/GewDgln/gewdgl_Anfangswertproblem03.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/GewDgln/gewdgl_Ihom_Line_002.tex}
+\input{../A/GewDgln/gewdgl_Dgl_Tdv_AWP_099.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/GewDgln/Logistisches_Wachstum.tex}
+\input{../A/GewDgln/gewdgl_Line_nOrd_004.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/GewDgln/ode_sep_var_02.tex}
+\input{../A/GewDgln/ode_resonanz_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Analysis/analys_Integration_Halbzylinder.tex}
+\input{../A/GewDgln/harmonischer_oszillator.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-%\input{../A/Analysis/analys_Intg_Kuko_001.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-%\input{../A/Analysis/analys_Intg_Kuko_002.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-% \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
 \newpage
 \ifthenelse{\boolean{mitErg}}{
 \ruleBig

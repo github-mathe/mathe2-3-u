@@ -1,0 +1,50 @@
+\renewcommand{\d}{\mathrm{d}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\EH}[1]{\mathrm{e}^{#1}}
+
+\vspace*{+0.25cm}
+Geben Sie die Integrationsgrenzen für die folgenden Körper $K$ in geeigneten Koordinaten an.
+
+\begin{abc}
+\item $K = \left\{\textbf{x}\in  \mathbb{R}^2: 4 \leq x^2+y^2 \leq 9 \right\} $
+\item   $ K = \left\{\textbf{x}\in  \mathbb{R}^2: 4 \leq x^2+y^2 \leq 9, \,  y \leq 0 \right\}$
+
+\item $ K = \left\{\textbf{x}\in  \mathbb{R}^3:  x^2+y^2 \leq 9, \, z \geq 0 \right\} $
+\item $ K = \left\{\textbf{x}\in  \mathbb{R}^3:  x^2+y^2 \leq 9, \, y\geq 0, \, z\geq 0 \right\} $
+\item $ K = \left\{\textbf{x}\in  \mathbb{R}^3:  x^2+y^2 \leq 9, \, 0\leq z\leq24-2x-8y \right\} $
+\item $ K = \left\{\textbf{x}\in  \mathbb{R}^3:  x^2+y^2 \leq 9, \, x \leq 0, \, y\leq0, z\geq 0 \right\} $
+\item $ K = \left\{\textbf{x}\in  \mathbb{R}^3:  x^2+y^2+z^2 \leq 9\right\} $
+\item $K = \left\{\textbf{x}\in  \mathbb{R}^3:  4\leq x^2+y^2+z^2 \leq 9, \, z\geq0\right\} $
+\item $ K = \left\{\textbf{x}\in  \mathbb{R}^3:  4\leq x^2+y^2+z^2 \leq 9, \, z\geq0, y\geq0 \right\} $
+\item $ K = \left\{\textbf{x}\in  \mathbb{R}^3:  x^2+y^2+z^2 \leq 9, \, x\leq0, \, y\geq0 \right\} $
+\item $ K = \left\{\textbf{x}\in  \mathbb{R}^3:  x^2+y^2+z^2 \leq 4, \, x\geq 0, \, y\leq0, z\leq0 \right\} $
+\end{abc}
+
+\vspace*{+0.25cm}
+\newpage
+
+
+\ifthenelse{\boolean{mitLoes}}{
+\textbf{L\"osung:}\\
+\begin{abc}
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^2 :\,0 \leq \varphi \leq 2\pi,\, 
+2\leq r \leq 3 \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^2 :\, \pi \leq \varphi \leq 2\pi,\, 
+2\leq r \leq 3 \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, 0 \leq \varphi \leq 2\pi,\, 
+0\leq r \leq 3, 0\leq z\leq \infty \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, 0 \leq \varphi \leq \pi,\, 
+0\leq r \leq 3, 0\leq z\leq \infty \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, 0 \leq \varphi \leq 2\pi,\, 
+0\leq r \leq 3, 0\leq z\leq 24-2r\cos \varphi -8r \sin \varphi\right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, \pi \leq \varphi \leq \frac{3}{2}\pi,\, 0\leq r \leq 3, 0\leq z\leq \infty \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, 0 \leq \varphi \leq 2\pi,\, 
+0\leq r \leq 3, 0 \leq \theta \leq \pi \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, 0 \leq \varphi \leq 2\pi,\, 
+2\leq r \leq 3, 0\leq \theta \leq \frac{\pi}{2} \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, 0 \leq \varphi \leq \pi,\, 
+2\leq r \leq 3, 0\leq \theta \leq \frac{\pi}{2} \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, \frac{\pi}{2} \leq \varphi \leq \pi,\, 0\leq r \leq 3, 0\leq \theta \leq \pi \right\}$$
+\item $$K=\left\{\textbf{x} \in \mathbb{R}^3 :\, \frac{3}{2} \pi \leq \varphi \leq 2\pi,\, 0\leq r \leq 2, \frac{\pi}{2} \leq \theta \leq \pi \right\}$$
+\end{abc}
+}{}
