@@ -1,0 +1,51 @@
+\Aufgabe[e]{homogene lineare Dgl. h\"oherer Ordnung}
+{
+L\"osen Sie die homogenen Differentialgleichungen mit Hilfe des Exponentialansatzes
+$$
+y(t) = c e^{\lambda t}, \, c, \lambda = \text{const.}. 
+$$
+
+\begin{abc}
+\item $y''-3y'+2y=0$
+\item $y''+4y=0$
+\item $y''+2y'+2y=0$
+\item $y^{(4)}-y=0$
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Einsetzen des Exponentialansatzes in die hom. lin. Dgl. mit konstanten Koeffizienten ergibt das charakteristische Polynom
+$$
+p(\lambda) = \lambda^2-3\lambda+2,
+$$
+das die Nullstellen $\lambda_1=1$ und $\lambda_2=2$ besitzt. Die allgemeine L\"osung ist die Linearkombination der beiden Fundamentall\"osungen $y_1(x)=e^x$ und $y_2(x)=e^{2x}$
+$$
+y(x)=c_1e^{x}+ c_2 e^{2x} \, \text{mit} \, c_1, c_2 \in \mathbb{R}.
+$$
+
+\item Aus $p(\lambda) = \lambda^2+4=0$ erh\"alt man $\lambda_{1,2}= \pm 2i$ und damit die reelle L\"osung
+$$
+y(x) = c_1 \cos(2x) +c_2 \sin(2x) \text{mit} \, c_1, c_2 \in \mathbb{R}.
+$$
+
+\item Aus $p(\lambda) = \lambda^2+2\lambda+2=0$ erh\"alt man $\lambda_{1,2}= -1 \pm i$. Ein reelles Fundamentalsystem ist ${e^{-x}\cos(x), e^{-x}\sin(x)}$. Die allgemeine L\"osung ist eine gedm\"ampfte Schwingung
+$$
+y(x) = (c_1 \cos(2x) +c_2 \sin(2x))e^{-x} \text{mit} \, c_1, c_2 \in \mathbb{R}.
+$$
+
+\item Mit $p(\lambda) = \lambda^4-1=(\lambda^2-1)(\lambda^2+1)=(\lambda-1)(\lambda+1)(\lambda-i)(\lambda+i)$ erh\"alt man die allgemeine reelle L\"osung
+$$
+y(x) = c_1 e^x +c_2 e^{-x} + c_3 \cos(x) + c_4 \sin(x) \text{mit} \, c_1, c_2, c_3, c_4 \in \mathbb{R}.
+$$
+
+\end{abc}
+}
+
+
+\ErgebnisC{gewdgl_homDgl}{
+\begin{abc}
+\item
+\end{abc}
+}
+

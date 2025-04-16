@@ -1,0 +1,48 @@
+\Aufgabe[e]{Anfangswertproblem}
+{
+Gegeben ist die Dgl.
+$$
+y'(x) = \dfrac{1}{y\sqrt{x}}, \, x>0, \, y \neq 0
+$$
+mit der allgemeinen L\"osung
+$$
+y(x) = \pm \sqrt{4\sqrt{x}+C}, \, C\geq 0.
+$$
+\begin{abc}
+\item Geben Sie, falls m\"oglich, die L\"osung der Dgl. an, die die Anfangswertbedingung $y(1)=3$ erf\"ullt.
+\item Geben Sie, falls m\"oglich, die L\"osung der Dgl. an, die die Anfangswertbedingung $y(1)=-4$ erf\"ullt.
+\item Geben Sie, falls m\"oglich, die L\"osung der Dgl. an, die die Anfangswertbedingung $y(-1)=3$ erf\"ullt.
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Die Konstante $C$ muss so bestimmt werden, dass die allgemeine L\"osung $y(x) = \pm \sqrt{4\sqrt{x}+C}$ die Anfangsbedingung $y(1)=3$ erf\"ullt:
+$$
+3 = \pm \sqrt{4\sqrt{1}+C} \Rightarrow 3 = + \sqrt{4+C} \Rightarrow C=5.
+$$
+Die Anfangsbedingung legt also sowohl das Vorzeichen, als auch die Konstante fest. Die spezielle L\"osung des AWP ist also
+$$
+y(x) = \sqrt{4\sqrt{x}+5}, \, x\geq 0.
+$$
+\item Analog zu Aufgabenteil a):
+$$
+-4 = \pm \sqrt{4\sqrt{1}+C} \Rightarrow -4 = - \sqrt{4+C} \Rightarrow C=12.
+$$
+Es ergibt sich die spezielle L\"osung 
+$$
+y(x) = -\sqrt{4\sqrt{x}+12}, \, x\geq 0.
+$$
+\item Es gibt keine L\"osung, da die Dgl. nicht bei $x=-1$ definiert ist
+\end{abc}
+}
+
+
+\ErgebnisC{gewdgl_Anfangswertproblem}{
+\begin{abc}
+\item $y(x) = \sqrt{4\sqrt{x}+5}, \, x\geq 0$
+\item $y(x) = -\sqrt{4\sqrt{x}+12}, \, x\geq 0$
+\item keine L\"osung, da Dgl. nicht bei $x=-1$ definiert ist
+\end{abc}
+}
+

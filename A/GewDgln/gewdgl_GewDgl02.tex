@@ -1,0 +1,44 @@
+\Aufgabe[e]{Gew\"ohnliche Dgl.}
+{
+Bestimmen Sie die allgemeine L\"osung der Dgl.
+$$
+y'(x) = \dfrac{(y-x)e^{y/x}-x}{xe^{y/x}}, \, x \neq 0.
+$$
+}
+
+\Loesung{
+Wir dividieren den Z\"ahler und Nenner durch $x$, sodass eine Funktion abh\"angig von $y/x$ entsteht:
+$$
+y'(x) = g(\frac{y}{x}).
+$$
+Wir substituieren $u= y/x$ und damit ergibt sich
+$$
+g(u) = \dfrac{(u-1)e^{u}-1}{e^u} = u-1-\frac{1}{e^u}.
+$$
+Mit $y(x)= x u(x)$ und der Produktregel ergibt sich
+$$
+y'(x) = xu'+u.
+$$
+Einsetzen in die Dgl. ergibt:
+$$
+xu'+u = u-1-\frac{1}{e^u} \Rightarrow xu' = -(1+e^{-u}).
+$$
+Trennung der Variablen ergibt
+\begin{align*}
+\displaystyle \int \dfrac{e^u}{1+e^u}\mathrm{d}u &= - \displaystyle \dfrac{\mathrm{d}x}{x} \\
+\Rightarrow \ln(1+e^u) &= -\ln(|x|)+\tilde{C}\\
+                       &= \ln\left( \frac{C}{|x|}\right), \, C>0.\\
+\Rightarrow e^u &= \frac{C}{|x|}-1 \\
+\Rightarrow u &= \ln\left( \frac{C}{|x|}-1 \right).            
+\end{align*}
+Daraus ergibt sich die allgemeine L\"osung
+$$
+y(x) = x\ln\left( \frac{C}{|x|}-1 \right), \, C>|x|>0. 
+$$
+}
+
+
+\ErgebnisC{gewdgl_GewDgl01}{
+$y(x) = x\ln\left( \frac{C}{|x|}-1 \right), \, C>|x|>0. $
+}
+

@@ -1,0 +1,74 @@
+\Aufgabe[e]{Zum L\"oesungsbegriff von Dgl.}
+{
+\begin{abc}
+\item Gegeben seien die beiden Differentialgleichungen
+\begin{iii}
+\item $y'(x) = y(x) \cos(x) +\sin(x)  \cos(x)$
+\item $y''(x) + y'(x) = 0$
+\end{iii}
+Welcher der folgenden Funktionen ist L\"osung einer der Differentialgleichungen?
+\begin{align*}
+y_1(x) &= \cos(x), &\quad y_2(x) &=8,\\
+y_3(x) &= e^x, &\quad y_4(x) &= \sin(x)-1,\\
+y_5(x) &= e^{-\sin(x)}, &\quad y_6(x) &= y_4+y_5 = \sin(x)-1+e^{-\sin(x)}.
+\end{align*}
+\item F\"ur welche Werte der Konstanten $A$, $\omega$ und $\varphi_0$ ist
+$$
+u(t) = A \cdot \cos(\omega t+\varphi_0)
+$$
+L\"osung der Schwingungs-Differentialgleichung
+$$
+u''(t)+25u(t)=0.
+$$
+\end{abc}
+}
+
+
+
+\Loesung{
+%\begin{abc}
+\begin{enumerate}[label=\textbf{\alph*)}]
+\item
+\begin{itemize}
+\item $y_1(x)=\cos(x), y'_1(x)=-\sin(x), y''_1(x)=-\cos(x), y'''_1(x)=\sin(x)$.\\
+Einsetzen in die Dgl. i) ergibt:
+$$
+-\sin(x) \neq -\cos^2(x)+\sin(x)\cos(x),
+$$
+d.h. $y_1$ ist keine L\"osung von Dgl. i).\\
+Einsetzen in Dgl. ii) ergibt:
+$$
+ \sin(x) -\sin(x) = 0 \, \text{f\"ur alle}\,  x \in \mathbb{R},
+$$
+d.h. $y_1$ ist auf ganz $\mathbb{R}$ L\"osung von Dgl. ii).
+
+\item $y_2(x) = 8$ ist keine L\"osung von i) aber L\"osung von ii).
+\item $y_3(x) = e^x$ ist werder L\"osung von i) noch von ii).
+\item $y_4(x) =\sin(x)-1$ ist L\"osung von i) und von ii).
+\item $y_5(x) =e^{-\sin(x)}$ ist werder L\"osung von i) noch von ii).
+\item $y_6(x) = \sin(x)-1+e^{-\sin(x)}$ ist L\"osung von i) aber nicht von ii).
+\end{itemize}
+\item 
+\begin{align*}
+u(t) &= A \cos(\omega t +\varphi_0),\\
+u'(t) &= -A \omega \sin(\omega t +\varphi_0), \\
+u''(t) &= -A \omega^2 \cos(\omega t +\varphi_0).
+\end{align*}
+Einsetzen in die Dgl. ergibt:
+$$
+A \omega^2 \cos(\omega t +\varphi_0) = 25 A \cos(\omega t +\varphi_0).
+$$
+$$
+\Rightarrow \omega^2 = 25, \, \text{d.h.} \, \omega = \pm 5 \, \text{und} A,\varphi_0 \in \mathbb{R}.
+$$
+\end{enumerate}
+}
+
+
+\ErgebnisC{gewdgl_Begriff_DGL}{
+\begin{abc}
+\item $y_4(x), y_6(x)$ L\"osung von Dgl. i), $y_1(x), y_2(x), y_4(x)$ L\"osung von Dgl. ii)
+\item $\omega = \pm 5$, $A, \varphi \in \mathbb{R}$
+\end{abc}
+}
+

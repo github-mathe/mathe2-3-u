@@ -1,0 +1,78 @@
+\Aufgabe[e]{Anfangswertproblem}
+{
+Gegeben ist die Differentialgleichung
+$$
+y'(x)+y(x)\sin(x)=\sin(2x).
+$$
+
+\begin{abc}
+\item Bestimmen Sie die allgemeine L\"osung.
+\item Bestimmen Sie die L\"osung f\"ur den Anfangswert $y(0)=1$.
+\end{abc}
+
+}
+
+\Loesung{
+\begin{abc}
+\item Wir l\"osen zun\"achst die hom. lin. Dgl. mit Trennung der Variablen:
+\begin{align*}
+y'+y\sin(x)=0 & \Rightarrow  \int \frac{\mathrm{d}y}{y} =  \int - \sin(x) \mathrm{d}x  \\
+              & \Rightarrow \ln|y(x)| = \cos(x) + \tilde{C} \\
+              & \Rightarrow |y(x)| = e^{\tilde{C}} e^{\cos(x)} \\
+              & \Rightarrow y(x) = \pm e^{\tilde{C}} e^{\cos(x)}
+\end{align*}
+Die allgemeine hom. L\"osung lautet:
+$$
+y_{\text{h}}(x) =  C e^{\cos(x)}.
+$$
+Zur Bestimmung der speziellen L\"osung der inhom. Dgl. verwenden wir den Produktansatz:
+$$
+y(x) = c(x) e^{\cos(x)} \Rightarrow y'(x) = c'(x) e^{\cos(x)}-c \sin(x) e^{\cos(x)}.
+$$
+Einsetzen in die Dgl. ergibt:
+$$
+c'(x) e^{\cos(x)}  -c \sin(x) e^{\cos(x)} +c e^{\cos(x)} \sin(x) = \sin(2x)
+$$
+$$
+\Rightarrow c'(x) = \sin(2x)  e^{-\cos(x)}.
+$$
+Um $c(x)$ zu bestimmen wird die Trennung der Variablen durchgef\"uhrt:
+$$
+\int \mathrm{d}z = \int \sin(2x)  e^{-\cos(x)}  \mathrm{d}x = \int 2 \cos(x)\sin(x)e^{-\cos(x)}   \mathrm{d}x.
+$$
+Das rechte Integral l\"asst sich mit Substitution l\"osen:
+$$
+\Rightarrow c(x) = (2\cos(x)+2) e^{-\cos(x)}.
+$$
+Damit ist die partikul\"are L\"osung:
+$$
+y_{\text{p}}(x) = c(x) e^{\cos(x)} = 2\cos(x)+2.
+$$
+Die allgemeine L\"osung der Dgl. ist damit
+$$
+y(x) = C  e^{\cos(x)} +2\cos(x)+2.
+$$
+
+\item 
+$$
+y(0)=1 = C e^{\cos(1)}+2\cos(1)+2
+$$
+$$
+\Rightarrow C = (-1-2\cos(1))e^{-\cos(1)}
+$$
+Einsetzen in die allgemeine L\"osung ergibt
+$$
+y(x) = -3 e^{\cos(x)-1}+2\cos(x)+2.
+$$
+\end{abc}
+}
+
+
+\ErgebnisC{gewdgl_Anfangswertproblem03}{
+\begin{abc}
+\item $y(x) = C  e^{\cos(x)} +2\cos(x)+2$
+\item $y(x) = -3 e^{\cos(x)-1}+2\cos(x)+2$
+
+\end{abc}
+}
+

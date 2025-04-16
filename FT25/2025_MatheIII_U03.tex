@@ -9,15 +9,15 @@
 \newcommand{\Trimester}{FT}
 \newcommand{\Kurs}{Mathematik III/C (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{2}
-\newcommand{\TOPIC}{Polarkoordinaten und Zylinderkoordinaten, Kugelkoordinaten}
+\newcommand{\BLATT}{3}
+\newcommand{\TOPIC}{Differentiagleichung 1. Ordnung, Zylinderkoordinaten}
 \usepackage{pstricks}
 \usepackage{pst-plot}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-\setboolean{mitLoes}{true}
+%\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -27,7 +27,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
-%\setboolean{mitErg}{true}
+\setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,6 +72,7 @@
 %\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 % \ifthenelse{\boolean{mitLoes}}{\cleardoublepage}{}
+\newpage
 \ifthenelse{\boolean{mitErg}}{
 \ruleBig
 \Ergebnisse}{}
