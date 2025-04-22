@@ -6,17 +6,30 @@ und einer \textbf{expliziten} Darstellung der Differentialgleichung $n$-ter Ordn
 $$
 y^n(x) = f(x, y'(x), y''(x),..., y^{n-1}(x)) 
 $$
-unterschieden. \\
-\noindent
-Eine Differentialgleichung hei\ss t linear, wenn .... und nicht-linear, wenn ..... .
-Variable/konstante Koeffizienten.... \\
+unterschieden. Die Differentialgleichung hei\ss t \textbf{autonom}, wenn $F$ bzw. $f$ nicht explizit von $x$ abh\"angt. \\
 
-Man spricht von einer homogene Dgl., wenn ....
+\noindent
+Eine Differentialgleichung ist \textbf{linear}, wenn sie die Form
+$$
+a_n(x)\, y^{(n)} + a_{n-1}(x)\, y^{(n-1)} + \dots + a_1(x)\, y' + a_0(x)\, y = f(x)
+$$
+besitzt, wobei $a_n(x)$ \textbf{variable Koeffizienten} sind. H\"angen die Koeffizienten nicht von $x$ ab, so handelt es sich um \textbf{konstante Koeffizienten}.
+Man spricht von einer \textbf{homogene} Dgl., wenn $f(x)$=0 ist. Gilt $f(x) \neq 0$, dann handelt es sich um eine \textbf{inhomogene} Differentialgleichung.\\
+
+\noindent
 Eine Differentialgleichung zusammen mit einer Anfangsbedingung hei\ss t \textbf{Anfangswertproblem} (AWP) und haben z.B. die Form
 $$
 y'(x)=f(x,y(x)), \,  y(x_0) = y_0,
 $$
-wobei $x_0$ und $y_0$ gegebene Werte sind.
+wobei $x_0$ und $y_0$ gegebene Werte sind.\\
+
+\noindent
+Beispiele f\"ur \textbf{nichtlineare} Differentialgleichungen sind:
+\begin{align*}
+y' &= y^2, \\
+y'' +y \, y' &= 0,\\
+y' &= \sin(y).
+\end{align*}
 
 \subsection*{Explizite Differentialgleichung 1. Ordnung}
 Eine explizite Dgl. 1. Ordnung besitzt die Form
@@ -35,10 +48,18 @@ $$
 \int \dfrac{\mathrm{d}y}{g(y)} = \int f(x) \, \mathrm{d}x +C.
 $$
 
+\textbf{Typ B: Homogene Differentialgleichung}
 
 
+\textbf{Typ C:$y' = f(ax+by+c)$}
 
-\subsection*{Lineare Differentialgleichung}
+\textbf{Typ D: Lineare Differentialgleichung 1. Ordnung}
+
+\textbf{Typ E: Bernoulli-Differentialgleichung}
+
+\textbf{Typ F: Riccati-Differentialgleichung}
+
+\subsection*{Lineare Differentialgleichung h\"oherer Ordnung}
 
 \subsubsection*{Homogene lineare Differentialgleichung}
 
