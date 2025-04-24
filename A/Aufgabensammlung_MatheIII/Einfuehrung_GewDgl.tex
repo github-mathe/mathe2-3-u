@@ -37,8 +37,9 @@ $$
 \dfrac{\mathrm{d}y}{\mathrm{d}x}:= y' = f(x,y),
 $$
 wobei $f$ im Allgemeinen eine nichtlineare Funktion ist. \\
+
 \noindent
-\textbf{Typ A: Differentialgleichungen mit getrennten Ver\"anderlichen}
+\textbf{Typ A: Differentialgleichungen mit getrennten Ver\"anderlichen}\\
 Liegt die Differentialgleichung in der Form
 $$
 y' =f(x)\cdot g(y)
@@ -48,19 +49,85 @@ $$
 \int \dfrac{\mathrm{d}y}{g(y)} = \int f(x) \, \mathrm{d}x +C.
 $$
 
-\textbf{Typ B: Homogene Differentialgleichung}
+\noindent
+\textbf{Typ B: Homogene Differentialgleichung}\\
+Ist eine Differentialgleichung der Form
+$$
+y' =g \left( \dfrac{y}{x} \right), \, x \neq 0 
+$$
+gegeben, so kann die Dgl. mit der Substitution $u(x) = y(x)/x$ in eine Differentialgleichung mit getrennten Variablen f\"ur $u(x)$ transformiert werden.\\
+
+\textbf{Beispiel:} \\
+
+\noindent
+\textbf{Typ C: $y' = f(ax+by+c)$}\\
+Ist die Differentialgleichung in der Form 
+$$
+y' = f(ax+by+c), \, \text{mit} \, a,b,c \in \mathbb{R}, \, b \neq 0
+$$
+gegeben, so kann die Dgl. mit dem Ansatz $u(x):= ax+by+c$ in eine Dgl. mit getrennten Variablen
+$$
+u' = a +b f(u)
+$$
+transformiert werden. Diese Dgl. kann mit dem Verfahren der Trennung der Ver\"anderlichen gel\"ost werden.\\
+
+\noindent
+\textbf{Typ D: Lineare Differentialgleichung 1. Ordnung}\\
+Handelt es sich um eine lineare Differentialgleichung 1. Ordnung
+$$
+L_1 y:= y' +p(x)y = q(x),
+$$
+so besteht die allgemeine L\"osung der Dgl. aus der L\"osung $y_{\text{h}}(x)$ der homogenen Differentialgleichung
+$$
+L_1 y := y' +p(x)y = 0
+$$
+und einer partikul\"aren L\"osung $y_{\text{p}}$ der inhomogenen Dgl.,
+sodass
+$$
+\mathcal{L}(\text{Dgl.}) = y_{\text{p}} + y_{\text{h}}(x)
+$$
+gilt. \\
+\textbf{Beispiel:} \\
+
+\noindent
+\textbf{Typ E: Bernoulli-Differentialgleichung}\\
+Ist eine Differentialgleichung der Form
+$$
+y' + p(x)y = q(x) y^r
+$$
+gegeben, so spricht man von der Bernoulli-Differentialgleichung.
+Diese kann mit $z(x):= y^{1-r}(x)$ in eine lineare Dgl. 1. Ordnung 
+$$
+z' +(1-r)p(x)z = (1-r)q(x)
+$$
+transformiert werden.  \\
 
 
-\textbf{Typ C:$y' = f(ax+by+c)$}
+\noindent
+\textbf{Typ F: Riccati-Differentialgleichung}\\
+Abgesehen von dem Spezialfall $r=0$ (Bernoulli-Dgl.) hat die Riccati-Dgl. im Allgemeinen nicht geschlossen l\"osbar. In einigen F\"allen kann eine partikul\"are L\"osung geraten werden, sodass eine allgemeine L\"osung angegeben werden kann. \\
 
-\textbf{Typ D: Lineare Differentialgleichung 1. Ordnung}
 
-\textbf{Typ E: Bernoulli-Differentialgleichung}
-
-\textbf{Typ F: Riccati-Differentialgleichung}
-
+\noindent
 \subsection*{Lineare Differentialgleichung h\"oherer Ordnung}
+Eine lineare Differentialgleichung besitzt die Form
+$$
+L_n y :=a_n(x)\, y^{(n)} + a_{n-1}(x)\, y^{(n-1)} + \dots + a_1(x)\, y' + a_0(x)\, y = f(x),
+$$
+wobei $L_n$ ein linearer gew\"ohnlicher Differentialoperator $n$-ter Ordnung ist.  \\
 
 \subsubsection*{Homogene lineare Differentialgleichung}
+Ist $f(x) = 0$, so handelt es sich um eine homogene Differentialgleichung.
+Die allgemeine L\"osung der Dgl. lautet dann
+$$
+y_{\text{h}}(x)= C_1  y_1(x) + C_2 y_2(x) + ... + C_n y_n(x).
+$$
+
 
 \subsubsection*{Inhomogene lineare Differentialgleichung}
+Die allgemeine L\"osung der inhomogenen linearen Differentialgleichung $L_n y = f(x)$ lautet
+\begin{align*}
+y(x) & =y_{\text{p}}(x)+ C_1  y_1(x) + C_2 y_2(x) + ... + C_n y_n(x)\\
+     & =y_{\text{p}}(x)+ C_1  e^{\lambda_1 x} + C_2 e^{\lambda_2 x}  + ... + C_n e^{\lambda_n x} .
+\end{align*}
+Das bedeutet, dass zun\"achst die homogene L\"osung bestimmt wird. F\"ur eine Dgl. mit konstanten Koeffizienten wird dazu der Exponentialansatz $y(x) = e^{\lambda x }$ gew\"ahlt. Der gesuchte Exponent wird ermittelt, indem die Nullstellen des charakteristischen Polynoms $P(\lambda)$ bestimmt werden.
