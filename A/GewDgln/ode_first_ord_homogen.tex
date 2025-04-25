@@ -1,0 +1,173 @@
+\Aufgabe[e]{Homogene lineare Differentialgleichungen}
+{
+Bestimmen Sie die allgemeine Lösung der folgenden linearen Differentialgleichungen
+\begin{abc}
+\item $y'' - y = 0$, 
+\item $y''' + y'' = 0$, 
+\item $y''+y'-2y = 0$, 
+\item $y''+y = 0$.
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item 
+Wir lösen zunächst die homogene Gleichung
+$$
+y'' -y = 0.
+$$
+Das charakteristische Polynom ist
+$$
+\lambda^2 -1 = 0
+$$
+mit den Nullstellen $\lambda_1 = 1$ und $\lambda_2 = -1$.
+Damit ist die homogene Lösung
+$$
+y_h = c_1 \operatorname{e}^x + c_2 \operatorname{e}^{-x}.
+$$
+Für die partikuläre Lösung wählen wir den Ansatz
+$$
+y_p = A.
+$$
+Damit ist 
+$$
+y_p'' = 0.
+$$
+Eingesetzt in die Differentialgleichung erhalten wir
+$$
+0 - A = 1.
+$$
+Also ist $y_p = -1$.
+Die allgemeine Lösung ist dann 
+\begin{align*}
+y &= y_h + y_p\\
+  &= c_1 \operatorname{e}^x + c_2 \operatorname{e}^{-x} -1.
+\end{align*}
+\item
+Wir lösen zunächst die homogene Gleichung
+$$
+y''' + y'' = 1.
+$$
+Das charakteristische Polynom ist
+$$
+\lambda^3 + \lambda^2 = \lambda^2(\lambda +1)= 0
+$$
+mit der doppelten Nullstelle $\lambda = 0$ und der einfachen Nullstelle $\lambda = -1$.
+Damit ist die homogene Lösung
+$$
+y_h = (c_1+c_2x)+ c_3\operatorname{e}^{-x}.
+$$
+Da $\lambda = 0$ eine doppelte Nullstelle ist und die rechte Seite eine Konstante, haben 
+wir hier einen Fall mit Resonanz und wählen für die partikuläre Lösung den Ansatz
+$$
+y_p = Ax^2.
+$$
+Wir bestimmen die Ableitungen
+\begin{align*}
+y_p' &= 2Ax, \\
+y_p'' &= 2A, \\
+y_p''' &= 0
+\end{align*}
+und setzen sie in die Differentialgleichung ein:
+$$
+0 + 2A = 1.
+$$
+Damit ist $A = \frac{1}{2}$ und die partikuläre Lösung
+$$
+y_p = \frac{x^2}{2}.
+$$
+Die allgemeine Lösung ist
+\begin{align*}
+y &= y_h + y_p\\
+  &= (c_1+c_2x)+ c_3\operatorname{e}^{-x} +\frac{x^2}{2}.
+\end{align*}
+\item
+Wir lösen zunächst homogene Gleichung
+$$
+y''+y'-2y = 0.
+$$
+Das charakteristische Polynom ist
+$$
+\lambda^2 + \lambda -2 = 0
+$$
+mit den Nullstellen $\lambda_1 = -2$ und $\lambda_2 = 1$.
+Damit ist die homogene Lösung
+$$
+y_h = c_1 \operatorname{e}^{-2x} + c_2 \operatorname{e}^x.
+$$
+Wir haben hier wieder einen Fall mit Resonanz. Daher wählen wir für die partikuläre 
+Lösung den Ansatz
+$$
+y_p = Ax \operatorname{e}^x.
+$$
+Wir bestimmen die Ableitungen
+\begin{align*}
+y_p' &= A \operatorname{e}^x + Ax\operatorname{e}^x,\\
+y_p'' &= 2A \operatorname{e}^x + Ax\operatorname{e}^x.
+\end{align*}
+In die Gleichung eingesetzt erhalten wir 
+\begin{align*}
+2A \operatorname{e}^x + Ax\operatorname{e}^x + A \operatorname{e}^x + Ax\operatorname{e}^x
+ -2Ax \operatorname{e}^x  &= \operatorname{e}^x \\
+ 3A \operatorname{e}^x &= \operatorname{e}^x.
+\end{align*}
+Wir erhalten dann $A = \frac{1}{3}$.
+Die partikuläre Lösung ist dann also
+$$
+y_p = \frac{x \operatorname{e}^x}{3}.
+$$
+Die allgemeine Lösung ist dann
+\begin{align*}
+y &= y_h + y_p \\
+  &= c_1 \operatorname{e}^{-2x} + c_2 \operatorname{e}^x + \frac{x \operatorname{e}^x}{3}.
+\end{align*}
+\item
+Wir lösen zunächst die homogene Gleichung
+$$
+y'' + y = 0
+$$
+mit dem charakteristischen Polynom
+$$
+\lambda^2 + 1 = 0.
+$$
+Die Nullstellen sind $\lambda = \pm \operatorname{i}$
+Damit ist die homogene Lösung
+$$
+y_h = c_1 \cos(x) + c_2\sin(x).
+$$
+Als Ansatz für die partikuläre Gleichung wählen wir 
+$$
+y_p = x(A \cos(x) + B \sin(x)).
+$$
+Wir erhalten die Ableitungen
+\begin{align*}
+y_p' &= (A+Bx) \cos(x) + (B-Ax)\sin(x),\\
+y_p'' &= (2B-Ax)\cos(x) - (2A+Bx)\sin(x).
+\end{align*}
+Wir setzen die Ableitungen in die Gleichung ein:
+$$
+(2B-Ax)\cos(x) - (2A+Bx)\sin(x) + x(A \cos(x) + B \sin(x)) = \cos(x).
+$$
+Durch Koeffizientenvergleich erhalten wir $A = 0$ und $B = \frac{1}{2}$.
+Die partikuläre Lösung ist damit 
+$$
+y_p = x \frac{1}{2} \sin(x).
+$$
+Die allgemeine Lösung ist
+\begin{align*}
+y &= y_h + y_p \\
+  &=  c_1 \cos(x) + c_2\sin(x) + x \frac{1}{2} \sin(x).
+\end{align*}
+
+\end{abc}
+}
+
+
+\ErgebnisC{oderesonanz001}{
+\begin{abc}
+\item $y(x)= c_1 \operatorname{e}^x + c_2 \operatorname{e}^{-x} -1$
+\item $y(x)= (c_1+c_2x)+ c_3\operatorname{e}^{-x} +\frac{x^2}{2}$
+\item $y(x)= c_1 \operatorname{e}^{-2x} + c_2 \operatorname{e}^x + \frac{x \operatorname{e}^x}{3}$
+\item $y(x)= c_1 \cos(x) + c_2\sin(x) + x \frac{1}{2} \sin(x)$
+\end{abc}
+}
