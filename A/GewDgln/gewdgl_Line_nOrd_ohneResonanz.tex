@@ -3,8 +3,6 @@
 Bestimmen Sie die allgemeinen L\"osungen der folgenden
 Differentialgleichungen. Falls Anfangswerte gegeben sind, ermitteln Sie auch die L\"osung des Anfangswertproblems. 
 \begin{abc}
-\item $y^{\prime\prime} + 6y^\prime + 8y = 0$,
-\item $y^{\prime\prime} + 2 y^\prime + 5 y  = 17 \, \sin (2x)$.
 \item $y^{\prime\prime}(x) - 2 y^\prime(x) - 3y(x) = 4 \EH{x}, \quad y(0) = 0, 
          \quad y'(0) = 6,$
 %\item \textbf{R} $y^{\prime\prime}(x)+4y^\prime(x)+4y(x)=4 \EH{-2x}, \quad y(0)=1 ,\quad
@@ -22,48 +20,7 @@ Differentialgleichungen. Falls Anfangswerte gegeben sind, ermitteln Sie auch die
 
 \Loesung{
 \begin{abc}
-\item Das charakteristische Polynom 
-$p(\lambda) = \lambda^2+6\lambda+8$ hat die Nullstellen $\lambda_1=-2$ und $\lambda_2=-4$.
-Damit ist
-$$ y(x) = c_1 \EH{-2x} + c_2 \EH{-4x} \ \text{ mit } c_1,c_2 \in \R . $$
 
-\item Das charakteristische Polynom 
-$p(\lambda)=\lambda^2+2\lambda+5$ hat die Nullstellen $\lambda_{1/2}=-1\pm\sqrt{1-5}
-=-1\pm 2i$. Damit hat man das reelle Fundamentalsystem
-$$ \big\{ \EH{-x} \cos(2x), \EH{-x} \sin(2x) \big\}. $$
-% Um die Partikul\"arl\"osung der inhomogenen Gleichung zu finden gibt es zwei Möglichkeiten:
-
-\textbf{Reeller Ansatz}\\
-Ein Ansatz f\"ur eine Partikul\"arl\"osung ist 
-$$y_p(x)=A\cos(2x)+B\sin(2x).$$
-Einsetzen in die Differentialgleichung liefert: 
-\begin{align*}
-17\sin(2x)\overset !=& 
--4A\cos(2x)-4B\sin(2x)-4A\sin(2x)+4B\cos(2x)+5A\cos(2x)+5B\sin(2x)\\
-=& (-4A+4B+5A)\cos(2x) + (-4B-4A+5B)\sin(2x).
-\end{align*}
-Koeffizientenvergleich führt dann zum linearen Gleichungssystem f\"ur $A$ und $B$: 
-$$\begin{array}{rrl}
-\cos(2x):&A+4B&=0\\
-\sin(2x):&-4A+B&=17\end{array}
-$$
-Mit der L\"osung $B=1$ und $A=-4$ haben wir die Partikul\"arl\"osung 
-$$y_p(x)=-4\cos(2x)+\sin(2x)$$
- 
-% \textbf{Alternativ: Komplexer Ansatz}: \\
-% Der Ansatz f\"ur eine Partikul\"arl\"osung ist 
-% $$y_p(x)=\operatorname{Im}(b\EH{i2x})$$
-% 
-% Einsetzen in die Differentialgleichung liefert: 
-% $$b((-4)\EH{i2x}+4i\EH{i2x}+5\EH{i2x})\overset != 17\EH{i2x}
-% $$
-% Daraus folgt $b=\dfrac{17}{1+4i}=1-4i.$
-% Damit haben wir die Partikul\"arl\"osung 
-% $$y_p(x)=\operatorname{Im}((1-4i)\cdot(\cos(2x)+i\sin(2x)))=-4\cos(2x)+\sin(2x)$$
-
-
-Die Gesamtl\"osung lautet also
-$$ y(x) = \sin(2x)-4\cos(2x) + c_1 \EH{-x} \cos(2x) + c_2  \EH{-x} \sin(2x). $$
 \item Die Nullstellen des charakteristischen Polynoms
 $p(\lambda)=\lambda^2-2\lambda-3$ sind $\lambda_1=-1$ und $\lambda_2=3$. 
 Eine Partikul\"arl\"osung der inhomogenen Gleichung berechnet man mit
@@ -150,11 +107,9 @@ $$ y(x) = - \EH{-2x} + c_1 \EH{x} + c_2 \EH{-x} + c_3 x \EH{-x}
 }
 
 
-\ErgebnisC{AufggewdglLinenOrd1_3}
+\ErgebnisC{AufggewdglLinenOrdohneResonanz}
 {
 \begin{abc}
-\item $y(x) = c_1 \EH{-2x} + c_2 \EH{-4x}$
-\item $ y(x) = \sin(2x)-4\cos(2x) + c_1 \EH{-x} \cos(2x) + c_2  \EH{-x} \sin(2x)$
 \item $y_{AWP}(x) = -e^x-\EH{-x}+2\EH{3x}$
 \item $y(x) = c_1 \EH{-2x}+c_2\EH{-3x}+\frac{1}{10} \EH{3x}$
 \item $y(x) = c_1 \EH{2x}+c_2\EH{-x}-(2x+1)e^x$

@@ -10,14 +10,14 @@
 \newcommand{\Kurs}{Mathematik III/C (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
 \newcommand{\BLATT}{5}
-\newcommand{\TOPIC}{lineare Dgl. h\"oherer Ordnung}
+\newcommand{\TOPIC}{lineare homogene/inhomogene Dgl. h\"oherer Ordnung}
 \usepackage{pstricks}
 \usepackage{pst-plot}
 \usepackage{circuitikz}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-%\setboolean{mitLoes}{true}
+\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -45,8 +45,22 @@
 \ruleBig
 
 %Mathe III Blatt 5
-
-
+%21
+\input{../A/GewDgln/gewdgl_Line_nOrd_004.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%26 ohne Resonanz
+\input{../A/GewDgln/gewdgl_Line_nOrd_1-3.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%   mit Resonanz
+\input{../A/GewDgln/gewdgl_Line_nOrd_mitResonanz.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%27
+\input{../A/GewDgln/gewdgl_Ihom_Line_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%28
+\input{../A/GewDgln/ode_resonanz_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+%29
 \input{../A/GewDgln/harmonischer_oszillator_inhom.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
