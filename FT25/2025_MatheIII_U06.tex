@@ -9,8 +9,8 @@
 \newcommand{\Trimester}{FT}
 \newcommand{\Kurs}{Mathematik III/C (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{5}
-\newcommand{\TOPIC}{lineare homogene/inhomogene Dgl. h\"oherer Ordnung}
+\newcommand{\BLATT}{6}
+\newcommand{\TOPIC}{lineare Dgl. h\"oherer Ordnung, Laplace-Transformation}
 \usepackage{pstricks}
 \usepackage{pst-plot}
 \usepackage{circuitikz}
@@ -27,7 +27,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
-%\setboolean{mitErg}{true}
+\setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,25 +44,29 @@
 
 \ruleBig
 
-%Mathe III Blatt 5
-%21
-\input{../A/GewDgln/gewdgl_Line_nOrd_004.tex}
+%Mathe III Blatt 6
+%22
+\input{../A/GewDgln/gewdgl_Line_nOrd_003_mod.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%26 ohne Resonanz
-\input{../A/GewDgln/gewdgl_Line_nOrd_1-3.tex}
+
+%17
+\input{../A/GewDgln/ode_mix_01.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%   mit Resonanz
-\input{../A/GewDgln/gewdgl_Line_nOrd_mitResonanz.tex}
+
+%9
+\input{../A/GewDgln/gewdgl_Bern_Dglg_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%27
-\input{../A/GewDgln/gewdgl_Ihom_Line_001.tex}
+
+%30
+\input{../A/Laplace/laplac_Traf_Bere_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%28
-\input{../A/GewDgln/ode_resonanz_001.tex}
+
+%33
+\input{../A/Laplace/laplac_Traf_Bere_01b.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-%29
-\input{../A/GewDgln/harmonischer_oszillator_inhom.tex}
-\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
+
+
+
 
 
 
