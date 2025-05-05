@@ -1,0 +1,48 @@
+\Aufgabe[e]{AWP mit Laplace--Transformation}
+{
+Bestimmen Sie mit Hilfe der Laplace--Transformation die Lösung der Anfangswertaufgabe: 
+$$ y''(t)-3\,y'(t)+2\,y(t)=4\,\text{e}^{2\,t}$$
+mit den Anfangswerten 
+$$y(0)= -3 \text{ und }  y'(0)=5\;.$$
+}
+
+\Loesung{
+% \textbf{i)\ \ }
+Die Laplace--Transformation der AWP lautet mit\ \ $%
+y_{0}= -3, , y_{0}'=5$\ : 
+\begin{align*}
+&  & \left( s^{2}\,Y(s)-s\,y_{0}-y_{0}'\right) -3\cdot \left(
+s\,Y(s)-y_{0}\right) +2\cdot Y(s)\;=\;\dfrac{4}{s-2} \\ 
+&  &  \\ 
+\Rightarrow &  & \left( s^{2}\,Y(s)+3s-5\right) -3\cdot \left(
+s\,Y(s)+3\right) +2\cdot Y(s)\;=\;\dfrac{4}{s-2} \\ 
+&  &  \\ 
+\Rightarrow &  & \left( s^{2}-3\,s+2\right) \cdot Y(s)\;=\;\dfrac{4}{s-2}-3s+14
+\\ 
+&  &  \\ 
+\Rightarrow &  & Y(s)\;=\;\dfrac{4+(14-3s)(s-2)}{\left( s-2\right) \,\left(
+s^{2}-3\,s+2\right) }\;=\;\dfrac{-3s^2+20s-24}{(s-2)(s-2)(s-1)}.
+\end{align*}
+
+Durchf\"uhren einer Partialbruchzerlegung:
+\begin{align*}
+\dfrac{-3s^2+20s-24}{(s-2)(s-2)(s-1)} &= \dfrac{A}{s-2} + \dfrac{B}{(s-2)^2} + \dfrac{C}{s-1} \\
+-3s^2+20s-24 &= A(s-2)(s-1) + B(s-1) + C(s-2)^2
+\end{align*}
+Der Wert $s=1$ f\"uhrt zu $C = -7$, der Wert $s=2$ f\"uhrt zu $B = 4$. Ein Koeffizientenvergleich ergibt $A=4$.
+Damit gilt:
+$$
+Y(s) = \dfrac{4}{s-2} + \dfrac{4}{(s-2)^2} - \dfrac{7}{s-1}
+$$
+
+Die Rücktransformation ergibt die Lösung der AWP\thinspace : 
+\[
+y_{\text{AW}}(t)= 4\,\text{e}^{2\,t}+ 4 t\,\text{e}%
+^{2\,t}-7\,\text{e}^{t};. 
+\]
+}
+
+\ErgebnisC{AufglaplacAnfwAufg002}
+{
+$u_{\text{AW}}(t)=\dfrac{-1}{4}\,\text{e}^{-2\,t}+\dfrac{1}{8}\,\text{e}^{2\,t}+\dfrac{1}{8}\,\text{e}^{-6\,t}$
+}

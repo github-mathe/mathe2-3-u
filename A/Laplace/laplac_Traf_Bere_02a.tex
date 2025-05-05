@@ -1,6 +1,6 @@
 \Aufgabe[e]{Laplace--Transformierte}
 {
-Bestimmen Sie unter Verwendung von \ ${\cal{L}}\big\{\sin(t)\big\} = \dfrac{1}{s^2+1}$ \ und geeigneten Rechenregeln folgende Ausdr\"ucke
+Bestimmen Sie unter Verwendung von ${\cal{L}}\big\{\sin(t)\big\} = \dfrac{1}{s^2+1}$  und geeigneten Rechenregeln folgende Ausdr\"ucke
 	\[
 	\textbf{a)} \ {\cal{L}}\left\{\frac{\sin(t)}{t}\right\}\ ,\quad
 	\textbf{b)} \ {\cal{L}}\left\{\int\limits_0^t\frac{\sin(\tau)}{\tau}\ \text d\tau\right\}\ ,\quad
@@ -27,16 +27,16 @@ Bestimmen Sie unter Verwendung von \ ${\cal{L}}\big\{\sin(t)\big\} = \dfrac{1}{s
 	\[
 	{\cal{L}}\left\{\int\limits_{0}^{t}\frac{\sin(\tau)}{\tau}\ \text d\tau\right\} = \frac 1s\cdot\left(\dfrac \pi2-\arctan(s) \right)
 \]
-
-
+%
+%
 \item
 
 \textbf{1. Lösungsweg}\newline
 Mit Hilfe des Anfangs- und Endwertsatzes ergibt sich 
 \begin{align*}
-\int\limits_{0}^\infty\frac{\sin(t)}{t}\ \text dt
-	   =& \lim_{t\to\infty} \int\limits_{0}^t\frac{\sin\tau}{\tau}\d \tau = \lim_{s\to 0}\left(
-	   s\cdot {\cal{L}}\left\{\int\limits_{0}^t\frac{\sin(\tau)}{\tau}\d \tau\right\}\right) \\
+\int\limits_{0}^\infty\frac{\sin(t)}{t}\, \mathrm{d}t
+	   =& \lim_{t\to\infty} \int\limits_{0}^t\frac{\sin\tau}{\tau} \, \mathrm{d} \tau = \lim_{s\to 0}\left(
+	   s\cdot {\cal{L}}\left\{\int\limits_{0}^t\frac{\sin(\tau)}{\tau} \, \mathrm{d} \tau\right\}\right) \\
 =& \lim_{s\to 0}\left(\dfrac \pi2-\arctan(s) \right) = \dfrac \pi2\ .
 \end{align*}
 
@@ -58,7 +58,7 @@ $$\int\limits_{0}^\infty\frac{\sin(t)}{t}\ \text dt=\int\limits_{0}^\infty\EH{-0
 \]
 \end{abc}
 
-%\textbf{e)} \ Es gilt
+%%\textbf{e)} \ Es gilt
 %$$
 %F(s) = F_1(s) \cdot F_2(s) \quad \mbox{mit} \quad F_1(s) = \dfrac{1}{s+1}\,, \quad F_2(s)= \dfrac{s}{s^2+1}\,.
 %$$

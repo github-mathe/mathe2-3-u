@@ -2,7 +2,7 @@
 {
 \begin{abc}
 \item Berechnen Sie die Laplace-Transformierte 
-$$\mathcal{L}\{f(t)\}=F(s)=\int\limits_{t=0}^\infty \EH{-st}\cdot f(t)\d t$$ der folgenden Funktionen: 
+$$\mathcal{L}\{f(t)\}=F(s)=\int\limits_{t=0}^\infty \EH{-st}\cdot f(t)\, \mathrm{d}  t$$ der folgenden Funktionen: 
 \begin{iii}
 \begin{multicols}{2}
 \item $f(t) = 1$,
@@ -32,54 +32,54 @@ $$\mathcal{L}\{f(t)\}=F(s)=\int\limits_{t=0}^\infty \EH{-st}\cdot f(t)\d t$$ der
 \item Diese Laplace-Transformationen müssen durch Anwendung der Definition und Bestimmung der Integrale berechnet werden. Es wird in der Regel partiell integriert. 
 \begin{iii}
 \item \begin{align*}
-\mathcal{L}\{1\} =& \int\limits_{t=0}^\infty \EH{-st}1 \d t
+\mathcal{L}\{1\} =& \int\limits_{t=0}^\infty \EH{-st}1 \, \mathrm{d}  t
 = \left[\frac{\EH{-st}}{-s}\right]_{t=0}^\infty\\
 =&  \dfrac{1}{s}
 \end{align*}
 \item \begin{align*}
-\mathcal{L}\{t\} =& \int\limits_{t=0}^\infty \EH{-st}t \d t
-= \left[t\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s\int\limits_{t=0}^\infty \EH{-st}\d t\\
+\mathcal{L}\{t\} =& \int\limits_{t=0}^\infty \EH{-st}t \, \mathrm{d} t
+= \left[t\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s\int\limits_{t=0}^\infty \EH{-st}\, \mathrm{d} t\\
 =& 0 - \left.\frac{\EH{-st}}{-s^2}\right|_{t=0}^\infty
 = \dfrac{1}{s^2}
 \end{align*}
 \item \begin{align*}
-\mathcal{L}\{t^2\}  =& \int\limits_{t=0}^\infty t^2\EH{-st} \d t
-= \left[t^2\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s \int\limits_{t=0}^\infty 2t\EH{-st}\d t\\
-=& 0 + \left[\frac{2t\EH{-st}}{-s^2}\right]_{t=0}^\infty + \frac{2}{s^2}\int\limits_{t=0}^\infty \EH{-st}\d t\\
+\mathcal{L}\{t^2\}  =& \int\limits_{t=0}^\infty t^2\EH{-st} \, \mathrm{d} t
+= \left[t^2\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s \int\limits_{t=0}^\infty 2t\EH{-st}\, \mathrm{d} t\\
+=& 0 + \left[\frac{2t\EH{-st}}{-s^2}\right]_{t=0}^\infty + \frac{2}{s^2}\int\limits_{t=0}^\infty \EH{-st}\, \mathrm{d} t\\
 =&  0 +\left.\frac{2\EH{-st}}{-s^3}\right|_{t=0}^\infty= \dfrac{2}{s^3}
 \end{align*}
 
 \item \begin{align*}
-\mathcal{L}\{t^3\}  =& \int\limits_{t=0}^\infty t^3\EH{-st} \d t
-= \left[t^3\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s \int\limits_{t=0}^\infty 3t^2\EH{-st}\d t\\
-=& 0 + \left[\frac{3t^2\EH{-st}}{-s^2}\right]_{t=0}^\infty + \frac{3}{s^2}\int\limits_{t=0}^\infty 2t\EH{-st}\d t\\
-=&  0 +\left.\frac{6t\EH{-st}}{-s^3}\right|_{t=0}^\infty+\int\limits_{t=0}^\infty\frac{6\EH{-st}}{s^3}\d t\\
+\mathcal{L}\{t^3\}  =& \int\limits_{t=0}^\infty t^3\EH{-st} \, \mathrm{d} t
+= \left[t^3\frac{\EH{-st}}{-s}\right]_{t=0}^\infty+\frac 1 s \int\limits_{t=0}^\infty 3t^2\EH{-st}\, \mathrm{d} t\\
+=& 0 + \left[\frac{3t^2\EH{-st}}{-s^2}\right]_{t=0}^\infty + \frac{3}{s^2}\int\limits_{t=0}^\infty 2t\EH{-st}\, \mathrm{d} t\\
+=&  0 +\left.\frac{6t\EH{-st}}{-s^3}\right|_{t=0}^\infty+\int\limits_{t=0}^\infty\frac{6\EH{-st}}{s^3}\, \mathrm{d} t\\
 =& 0 + \left. \frac{6\EH{-st}}{s^4} \right|_{t=0}^\infty = \frac 6{s^4}
 \end{align*}
 
 \item \begin{align*}
-\mathcal{L}\{\EH{-at}\} =& \int\limits_{t=0}^\infty \EH{-st}\EH{-at} \d t
+\mathcal{L}\{\EH{-at}\} =& \int\limits_{t=0}^\infty \EH{-st}\EH{-at} \, \mathrm{d} t
 = \left[\frac{\EH{-(s+a)t}}{-(s+a)}\right]_{t=0}^\infty\\
 =&  \dfrac{1}{s+a}
 \end{align*}
 
 \item \begin{align*}
-\mathcal{L}\{t\EH{-at}\} =& \int\limits_{t=0}^\infty t\EH{-at}\EH{-st} \d t
-= \left[\frac{t\EH{-(s+a)t}}{-(s+a)}\right]_{t=0}^\infty+\frac 1{s+a}\int\limits_{t=0}^\infty \EH{-(s+a)t}\d t \\
+\mathcal{L}\{t\EH{-at}\} =& \int\limits_{t=0}^\infty t\EH{-at}\EH{-st} \, \mathrm{d} t
+= \left[\frac{t\EH{-(s+a)t}}{-(s+a)}\right]_{t=0}^\infty+\frac 1{s+a}\int\limits_{t=0}^\infty \EH{-(s+a)t} \, \mathrm{d} t \\
 =& 0 + \left.\frac{\EH{-(s+a)t}}{-(s+a)^2}\right|_{t=0}^\infty
 =  \dfrac{1}{(s+a)^2}
 \end{align*}
 
 \item \begin{align*}
-\mathcal{L}\{g'(t)\} =& \int\limits_{t=0}^\infty \EH{-st}g'(t) \d t\\
-=& \left[\EH{-st}g(t)\right]_{t=0}^\infty - \int\limits_{t=0}^\infty(-s\EH{-st}g(t))\d t\\
+\mathcal{L}\{g'(t)\} =& \int\limits_{t=0}^\infty \EH{-st}g'(t) \, \mathrm{d} t\\
+=& \left[\EH{-st}g(t)\right]_{t=0}^\infty - \int\limits_{t=0}^\infty(-s\EH{-st}g(t)) \, \mathrm{d} t\\
 =& 0-g(0)+s\mathcal{L}\{g(t)\}
 = sG(s)-g(0)
 \end{align*}
 
 \item \begin{align*}
-\mathcal{L}\{g''(t)\} =& \int\limits_{t=0}^\infty \EH{-st}g''(t) \d t\\
-=&\left[\EH{-st}g'(t)\right]_{t=0}^\infty - \int\limits_{t=0}^\infty(-s\EH{-st}g'(t))\d t\\
+\mathcal{L}\{g''(t)\} =& \int\limits_{t=0}^\infty \EH{-st}g''(t) \, \mathrm{d} t\\
+=&\left[\EH{-st}g'(t)\right]_{t=0}^\infty - \int\limits_{t=0}^\infty(-s\EH{-st}g'(t)) \, \mathrm{d} t\\
 =& 0-g'(0)+s\mathcal{L}\{g'(t)\}\\
 =& s(sG(s)-g(0))-g'(0) = s^2G(s)-g'(0)-sg(0)
 \end{align*}

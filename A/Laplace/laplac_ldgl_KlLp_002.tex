@@ -1,0 +1,105 @@
+\Aufgabe[e]{Lineare Differentialgleichung}
+{
+Gegeben sei das Anfangswertproblem für \ $u(t)$
+$$	u'' +\,u = \sin(t)\cdot\Big(1-h(t-\pi)\Big)\ ,\quad u(0)=u'(0)=0$$
+wobei \ $h(t)$ \ die Heaviside--Funktion ist.
+
+\begin{abc}
+\item Bestimmen Sie zun\"achst die L\"osung im Bereich $0 \leq t \leq \pi$ mit Hilfe des Exponentialansatzes und dann die L\"osung im Bereich $t \geq \pi$.
+
+\item Bestimmen Sie die L\"osung des AWPs mit Hilfe der Laplace-Transformation
+\end{abc}
+}
+
+\Loesung{
+\begin{abc}
+\item Im Bereich $0 \leq t \leq \pi$ gilt f\"ur die homogene lin. Dgl. $u''(t)+u(t)=0$. Das charakteristische Polynom
+$$
+\lambda^2+1=0
+$$
+besitzt die Nullstellen $\lambda_{1,2} = \pm i$. Daraus folgt die allgemeine homogene L\"osung
+$$
+u_{\text{h}}(t) = a \sin(t) + b \cos(t), \, a,b \in \mathbb{R}.
+$$
+F\"ur die partikul\"are L\"osung w\"ahlen wir den Ansatz
+$$
+u_{\text{p}}(t) = A t \sin(t) + B t \cos(t).
+$$
+Bilden der Ableitungen
+\begin{align*}
+u_{\text{p}}'(t)  &= (A-Bt)\sin(t) +(At+B)\cos(t) \\
+u_{\text{p}}''(t) &= (2A-Bt)\cos(t) -(At+2B)\sin(t)
+\end{align*}
+und einsetzen in die Dgl. $u''(t)+u(t)=\sin(t)$ liefert
+$$
+2A\cos(t) -2B\sin(t) = \sin(t).
+$$
+Damit ergibt sich $A=0$ und $B= -1/2$. Damit folgt
+$$
+u_{\text{p}}(t) = - \frac{1}{2}t \cos(t)
+$$
+und damit die allgemeine L\"osung 
+$$
+u(t) = a \sin(t) + b \cos(t) - \frac{1}{2}t \cos(t), \, a,b \in \mathbb{R}.
+$$
+Mit den Anfangswertbedingungen
+\begin{align*}
+u(0) &= 0 = a \sin(0) +b \cos(0) \Rightarrow b = 0\\
+u'(0) &= a \cos(0) -b\sin(0)-\frac{1}{2} \cos(0) +\frac{1}{2}\cdot 0 \cdot \sin(0) \Rightarrow a = \frac{1}{2}
+\end{align*}
+ergibt sich die L\"osung des AWPs
+$$
+u_{\text{AWP}}(t) = \frac{1}{2} \sin(t) -\frac{1}{2} t\cos(t), \, 0\leq t \leq \pi.
+$$
+
+\noindent
+Am Endes des Bereiches bei $t=\pi$ gilt:
+$$
+u_{\text{AWP}}(\pi) = \frac{\pi}{2} \, \text{und} \, u_{\text{AWP}}'(\pi) = 0.
+$$
+Dies sind die Anfangswerte f\"ur den zweiten Bereich. Im zweiten Bereich ist die lin. Dgl. homogen mit der schon bekannten allg. L\"osung
+$$
+u(t)= a \sin(t) +b \cos(t) \Rightarrow  u_{\text{AWP}}(t) = - \frac{\pi}{2} \cos(t), \, t \geq \pi.
+$$
+
+\item 
+F\"ur den Verschiebungssatz 
+$$
+\mathcal{L}\left( f(t-a) h(t-a) \right) = F(s) e^{-as}, a>0,
+$$
+muss die Funktion erst umgeschrieben werden:
+$$
+\sin(t) = - \sin(t-\pi).
+$$
+
+\noindent
+Damit ergibt sich Laplace--Transformation des AWPs ergibt
+	\[
+	u''(t)+u(t)=\sin(t)+h(t-\pi)\sin(t-\pi) \Rightarrow s^2\,U(s) +U(s)= \frac{1}{s^2+1} +\frac{1}{s^2+1} e^{-\pi s} .
+\]
+Die Laplace--Transformierte der Lösung ergibt sich damit zu
+	\[
+	U(s) =  \frac{1}{(s^2+1)^2} \left( 1+ e^{-\pi s} \right).
+\]
+Hier braucht keine Partialbruchzerlegung mehr durchgef\"uhrt werden.
+
+Die Rücktransformation ergibt die gesuchte Lösung
+\begin{align*}
+u(t) 
+  &= \frac{\sin(t) - t\cos(t)}{2}
+     + \left( \frac{\sin(t - \pi) - (t - \pi)\cos(t - \pi)}{2} \right) h(t - \pi) \\
+  &= \frac{\sin(t) - t\cos(t)}{2}
+     + \left( \frac{-\sin(t) + (t - \pi)\cos(t)}{2} \right) h(t - \pi) \\
+  &= 
+     \begin{cases}
+        \dfrac{\sin(t) - t\cos(t)}{2} & \text{f\"ur} \, 0 \leq t \leq \pi \\
+        -\dfrac{\pi}{2} \cos(t) & \text{f\"ur} \,  t> \pi.
+     \end{cases}
+\end{align*}
+
+\end{abc}
+}
+
+\ErgebnisC{AufglaplacldglKlLp002}{
+\text{a),b)} $u_{\text{AWP}}(t) = \frac{1}{2} \sin(t) -\frac{1}{2} t\cos(t), \, 0\leq t \leq \pi$ und $u_{\text{AWP}}(t) = - \frac{\pi}{2} \cos(t), \, t \geq \pi$.
+}
