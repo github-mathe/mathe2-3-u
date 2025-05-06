@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+    \draw
+    (0,0) to[sV, l=$u_\text{in}$] (0,3)
+          to[R, l=$R$] (3,3)
+          to[C, l=$C$] (3,0) -- (0,0)
+    (3,3) -- (4,3)
+          to[open, v^=$u_\text{out}$] (4,0) -- (3,0);
+\end{circuitikz}
+
+\end{document}
+
