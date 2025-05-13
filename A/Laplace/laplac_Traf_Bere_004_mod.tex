@@ -19,7 +19,8 @@ Bestimmen Sie
 &\text{\textbf c)}&&\, &\mathcal{L}^{-1}\left\{ \frac {2s-5}{s^2}\right\}&
 \qquad\qquad\text{\textbf d)}& \, &\mathcal{L}^{-1}\left\{ \frac 1{s^2+2s}\right\}\\
 &\text{\textbf e)}&&\, &\mathcal{L}^{-1}\left\{\frac {5s^2-15s+7}{(s+1)(s-2)^2}\right\}&
-\qquad\qquad\text{\textbf f)}&\, &\mathcal{L}^{-1}\left\{3\operatorname{e}^{-2s}\right\}.
+\qquad\qquad\text{\textbf f)}&\, &\mathcal{L}^{-1}\left\{3\operatorname{e}^{-2s}\right\}\\
+&\text{\textbf g)}&&\, &\mathcal{L}^{-1}\left\{ \frac{s}{(s+2)^2+9}\right\}&.
 \end{align*}
 }
 \Loesung{
@@ -49,6 +50,14 @@ s{s^2+2^2}\right\} - 3 \mathcal{L}^{-1}\left\{\frac 1 {s^2 + 2^2}\right\}\\
 \begin{align*}
 \mathcal{L}^{-1}\left\{3e^{-2s}\right\}=3\delta(t-2)
 \end{align*}
+\item
+\begin{align*}
+\mathcal{L}^{-1}\left\{ \frac{s}{(s+2)^2+9}\right\} 
+&= \mathcal{L}^{-1}\left\{ \frac{s+2-2}{(s+2)^2+9}\right\} \\
+&= \mathcal{L}^{-1}\left\{ \frac{s+2}{(s+2)^2+3^2}\right\}-2 \mathcal{L}^{-1}\left\{ \frac{1}{(s+2)^2+3^2}\right\} \\
+&= e^{-2t} \cos(3t) - \frac{2}{3} e^{-2t} \sin(3t)
+\end{align*}
+
 %\begin{align*}
 %\mathcal{L}^{-1}\left\{\frac{4-5s}{s^{3/2}}\right\}=&4\mathcal{L}^{-1}\left\{\frac{1}{s^{3/2}}\right\}-5 \mathcal{L}^{-1}\left\{\frac{1}{s^{1/2}}\right\}
 %=4\mathcal{L}^{-1}\left\{\dfrac{\frac 1{\sqrt s}}{s}\right\} -5 \mathcal{L}^{-1}\left\{\frac{1}{\sqrt s}\right\}\\

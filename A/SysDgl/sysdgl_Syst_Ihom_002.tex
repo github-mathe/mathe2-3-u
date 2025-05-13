@@ -42,25 +42,27 @@ werden als Nullstellen des charakteristischen Polynoms berechnet:
 Die Eigenvektoren sind L\"osungen der charakteristischen Gleichungssysteme: 
 \begin{iii}
 \item $\lambda_{1/2}=1$ (weiße rechte Seite) 
-$$\begin{array}{rrr|r|r|l}
+$$
+\begin{array}{rrr|r|r|l}
 -1 & 1 & -1 & 0 & \cellcolor{lightgray} 1 &         \\
--2 & 2 & -1 & 0 & \cellcolor{lightgray} 1 &-2\times\text{ 1. Zeile}         \\
--1 & 1 & 0  & 0 & \cellcolor{lightgray} 0 &-\text{ 1. Zeile}         \\\hline
+-2 & 2 & -1 & 0 & \cellcolor{lightgray} 1 &  \text{II'=II-2I}      \\   
+-1 & 1 & 0  & 0 & \cellcolor{lightgray} 0 &   \text{III'=III-I}     \\\hline   
 
 -1 & 1 & -1 & 0 & \cellcolor{lightgray} 1 &         \\
  0 & 0 &  1 & 0 & \cellcolor{lightgray}-1 &   \\
- 0 & 0 & 1  & 0 & \cellcolor{lightgray}-1 &-\text{ 2. Zeile}         \\\hline
+ 0 & 0 & 1  & 0 & \cellcolor{lightgray}-1 &  \text{III''=III'-2II'}      \\\hline   
 
 -1 & 1 & -1 & 0 & \cellcolor{lightgray} 1 &         \\
  0 & 0 &  1 & 0 & \cellcolor{lightgray}-1 &   \\
- 0 & 0 & 0  & 0 & \cellcolor{lightgray} 0 &\\
-\end{array}$$
+ 0 & 0 &  0 & 0 & \cellcolor{lightgray} 0 &  \\
+\end{array}
+$$
 Die einzige (linear unabh\"angige L\"osung ist $\vec v_1=(1,1,0)^\top$. Daher wird noch ein Hauptvektor $\vec v_2$ gesucht. Dieser ist L\"osung desselben Gleichungssystems mit der rechten Seite $\vec v_1$ (graue Spalte). Es ergibt sich $\vec v_2=(0,0,-1)^\top$ als m\"oglicher Hauptvektor. 
 \item $\lambda_3=2$: 
 $$\begin{array}{rrr|r|l}
 -2 & 1 & -1 & 0  &         \\
--2 & 1 & -1 & 0  &-       \text{ 1. Zeile}         \\
--1 & 1 & -1 & 0  &-1/2\times \text{ 1. Zeile}         \\\hline
+-2 & 1 & -1 & 0  &       \text{II'=II-I}         \\
+-1 & 1 & -1 & 0  & \text{III'=III-1/2I}         \\\hline
 
 -2 & 1 & -1 & 0  &         \\
  0 & 0 &  0 & 0  &         \\
@@ -87,17 +89,20 @@ Dabei wird der Ausdruck $\vec Y'(t)-\vec A\vec Y(t)$ Null, da die Spalten von $\
 Auf die Berechnung der inversen Matrix $\vec Y(t)^{-1}$ wird verzichtet, stattdessen l\"osen wir das Gleichungssystem $\vec Y(t) \vec c'=\begin{pmatrix}-1\\2\\1\end{pmatrix}\EH{5t}$: 
 $$\begin{array}{rrr|r|l}
 \EH t & \EH t t & 0       & -1 \EH{5t}  & \\
-\EH t & \EH t t & \EH{2t} &  2 \EH{5t}  & -\text{ 1. Zeile}\\
+\EH t & \EH t t & \EH{2t} &  2 \EH{5t}  & \text{II'=II-I}\\
 0     & -\EH t  & \EH{2t} &  1 \EH{5t} & \\\hline
 
 \EH t & \EH t t & 0       & -1 \EH{5t}   & \\
-   0  &   0     & \EH{2t} &  3 \EH{5t}   & - \text{ 3. Zeile}\\
-0     & -\EH t  & \EH{2t} &  1 \EH{5t}   & \text{ 2. Zeile}\\\hline
+   0  &   0     & \EH{2t} &  3 \EH{5t}   & \text{II''=III}\\
+0     & -\EH t  & \EH{2t} &  1 \EH{5t}   & \text{III'=II'}\\\hline
 
 \EH t & \EH t t & 0       & -1 \EH{5t}   & \\
-   0  & \EH t   &   0     &  2 \EH{5t}   & \\
-0     &  0      & \EH{2t} &  3 \EH{5t}   & \\\hline
-
+0     & -\EH t  & \EH{2t} &  1 \EH{5t}   &  \text{II'''=II''-III'}\\
+   0  &   0     & \EH{2t} &  3 \EH{5t}   & \\\hline
+   
+\EH t & \EH t t & 0       & -1 \EH{5t}   & \\
+0     & -\EH t  & 0       &  -2 \EH{5t}   &  \\
+   0  &   0     & \EH{2t} &  3 \EH{5t}   & \\\hline
 \end{array}$$
 Daraus ergibt sich 
 \begin{align*}

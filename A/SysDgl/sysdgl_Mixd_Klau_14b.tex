@@ -41,18 +41,18 @@ Gleichungssystem:
 \begin{align*}
 \lambda_2=2:&&\begin{array}{rrr|l|l}
 -9&-5 & 6 & 0 \\
-9 & 6 & -9& 0 & + I\\
+9 & 6 & -9& 0 & \text{II' = II+ I}\\
  0& 1 & -3& 0\\\hline
 -9&-5 & 6 & 0 \\
 0 & 1 & -3& 0 &    \\
- 0& 1 & -3& 0&-II\\\hline
+ 0& 1 & -3& 0& \text{III'=III-II'}\\\hline
 -9&-5 & 6 & 0 \\
 0 & 1 & -3& 0 &    \\
  0& 0 &  0& 0&   \\
 \end{array}&\Leftarrow&&\vec v_2= \begin{pmatrix}-1\\ 3\\1\end{pmatrix}\\
 \lambda_1=\lambda_3=-1 :&&\begin{array}{rrr|l|l}
 -6&-5 & 6 & 0 & \\
-9 & 9 & -9& 0 & +3/2\times \,I\\
+9 & 9 & -9& 0 & \text{II'= II+3/2\,I}\\
  0& 1 &  0& 0\\\hline
 -6&-5 & 6 & 0 & \\
 0 &3/2&  0& 0 &\\
@@ -63,7 +63,7 @@ Weitere linear unabh\"angige Eigenvektoren gibt es nicht. Es muss also ein Haupt
 $$(\vec A-(-1)\vec E)\vec w=\vec v_1:$$
 $$\begin{array}{rrr|l|l}
 -6&-5 & 6 & 1 & \\
-9 & 9 & -9& 0 & +3/2\times \,I\\
+9 & 9 & -9& 0 & \text{II'=II+3/2\,I}\\
  0& 1 &  0& 1\\\hline
 -6&-5 & 6 & 1 & \\
 0 &3/2&  0&3/2&\\
@@ -83,66 +83,111 @@ $$\vec Y(x)=\left( \vec y_1,\, \vec y_2,\, \vec y_3\right)
 0       & \EH{-x}  & 3 \EH{2x}\\
 \EH{-x} & (1+x)\EH{-x} & \EH{2x}
   \end{pmatrix}.$$
-An der Stelle $x=0$ hat man
-$$\vec Y(0)=\begin{pmatrix}
-1 & 0 &-1\\
-0 & 1 & 3\\
-1 & 1 & 1\end{pmatrix}
+  
+Damit ergibt sich die homogene L\"osung zu
+$$  
+\vec y_{\text{h}}(x) = \vec Y(x) \begin{pmatrix} C_1 \\C_2 \\ C_3 \end{pmatrix}.
 $$
-Um $\vec Y(0)^{-1}\vec g(t)$ und $\vec Y(0)^{-1}\vec y(0)$ zu ermitteln wird das zugeh\"orige Gleichungssystem gel\"ost: 
-$$\begin{array}{rrr|l|l|l}
-1 & 0 & -1 & t\EH{-t}     & 1       \\
-0 & 1 & 3  & \EH{-t}      & 0      \\
-1 & 1 & 1  & (t+1)\EH{-t} & 2 & - I\\\hline
+Als Ansatz f\"ur die inhomogene L\"osung wird $\vec y_{\text{p}}(x) = \vec Y(x) \vec C(x)$ gew\"ahlt. Um  $\vec C(x)$ zu bestimmen wird das Gleichungssystem $\vec Y(x) \vec C'(x) = \vec g(x)$ gel\"ost:
 
-1 & 0 & -1 & t\EH{-t}     & 1   \\
-0 & 1 & 3  & \EH{-t}      & 0   \\
-0 & 1 & 2  & \EH{-t}      & 1   & - II\\\hline
-
-1 & 0 & -1 & t\EH{-t}     & 1  \\
-0 & 1 & 3  & \EH{-t}      & 0  \\
-0 & 0 &-1  &     0        & 1  & \\
-
-\end{array}$$
-L\"osung des Systems ist 
-$$\vec Y(0)^{-1}\vec g(t)=\begin{pmatrix}
-t\EH{-t}\\
-\EH{-t}\\
-0
-\end{pmatrix}
+$$\begin{array}{rrr|l}
+e^{-x} & xe^{-x}     & -e^{2x}      & xe^{-x}      \\
+0      & e^{-x}      & 3e^{2x}      & e^{-x}     \\
+e^{-x} & (1+x)e^{-x} & e^{2x}       &  (1+x)e^{-x} \\
+\hline
+e^{-x} & xe^{-x}  & -e^{2x}      & xe^{-x}      \\
+0      &  e^{-x}  & 3e^{2x}      & e^{-x}   \\
+0      & 0        & -e^{2x}      & 0 \\
+\end{array}
 $$
-und 
-$$\vec Y(0)^{-t}\vec y(0)=\begin{pmatrix}
-0\\
-3\\
--1\end{pmatrix}.$$
-Damit ergibt sich dann die L\"osung des Anfangswertproblems zu: 
+
+Daraus ergeben sich $C'_1=0$, $C'_2=1$ und $C'_3=0$. Integration f\"uhrt zu $C_1=A$, $C_2=x+B$ und $C_3=D$. Die Konstanten werden zu Null gesetzt
+$$
+\vec C(x)=\begin{pmatrix} 0 \\ x\\0 \end{pmatrix}.
+$$  
+F\"ur die partikul\"are L\"osung ergibt sich
 \begin{align*}
-&\vec y_{AWP}(x)\\
-=&\vec Y(x)\vec Y(0)^{-1}\vec y(0)+\int\limits_{t=0}^x\vec Y(x-t)\vec Y(0)^{-1}\vec g(t)\d t\\
-=& \vec Y(x)\begin{pmatrix}0\\3\\-1\end{pmatrix} + \\
-&+\int\limits_{t=0}^x\begin{pmatrix}
-\EH{-(x-t)} & (x-t)\EH{-(x-t)}    & -\EH{2(x-t)}  \\
-   0        &      \EH{-(x-t)}    & 3\EH{2(x-t)}  \\
-\EH{-(x-t)} & (1+x-t)\EH{-(x-t)}    &  \EH{2(x-t)}
-\end{pmatrix}
-\EH{-t}\begin{pmatrix}
-t\\1\\0\end{pmatrix}\d t\\
-=&3\EH{-x}(\vec w+x\vec v_1) - \EH{2x}\vec v_2 + \\
-&+\EH{-x}\int\limits_{t=0}^x
-\begin{pmatrix}
-x\\
-1\\
-1+x
-\end{pmatrix}\d t\\
-=& \EH{-x}\begin{pmatrix}
-0+x\\
-1+0\\
-1+x\end{pmatrix}-\EH{2x}\begin{pmatrix}
--1\\3\\1\end{pmatrix}
-+ x\EH{-x}\begin{pmatrix}x\\1\\1+x\end{pmatrix}\\
-=& \EH{-x}\begin{pmatrix}x^2+x\\x+1\\x^2+2x+1\end{pmatrix} + \EH{2x}\begin{pmatrix} 1\\-3\\-1\end{pmatrix}
+\vec y_{\text{p}}(x) &= \vec Y(x) \vec C(x) \\
+                     &= \begin{pmatrix} x^2 e^{-x} \\ xe^{-x} \\ (x+x^2)e^{-x} \end{pmatrix}.
 \end{align*}
+Die allgemeine L\"osung ist damit
+$$
+\vec y(x) = \begin{pmatrix}
+C_1 e^{-x} + C_2 x e^{-x} - C_3 e^{2x} +x^2e^{-x} \\
+C_2 e^{-x} + 3 C_3 e^{2x}+xe^{-x} \\
+C_1 e^{-x} + C2(x+1)e^{-x} +C_3 e^{2x}+(x+x^2)e^{-x}
+\end{pmatrix}.
+$$
+
+Mit der Anfangsbedingung
+$$
+\vec y(0) = \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} = \begin{pmatrix} C_1-C_3 \\ C_2+3C_3\\ C_1+C_2+C_3 \end{pmatrix}  
+$$
+ergeben sich $C_1 =0$, $C_2=3$ und $C_3=-1$.
+Damit ergibt sich die L\"osung des Anfangswertproblems 
+$$
+\vec y(x) = e^{-x} \begin{pmatrix} x^2+3x \\ x+3 \\ x^2+4x+3 \end{pmatrix}+e^{2x} \begin{pmatrix} 1 \\ -3 \\ -1 \end{pmatrix}.
+$$
+%An der Stelle $x=0$ hat man
+%$$\vec Y(0)=\begin{pmatrix}
+%1 & 0 &-1\\
+%0 & 1 & 3\\
+%1 & 1 & 1\end{pmatrix}
+%$$
+%Um $\vec Y(0)^{-1}\vec g(t)$ und $\vec Y(0)^{-1}\vec y(0)$ zu ermitteln wird das zugeh\"orige Gleichungssystem gel\"ost: 
+%$$\begin{array}{rrr|l|l|l}
+%1 & 0 & -1 & t\EH{-t}     & 1       \\
+%0 & 1 & 3  & \EH{-t}      & 0      \\
+%1 & 1 & 1  & (t+1)\EH{-t} & 2 & - I\\\hline
+%
+%1 & 0 & -1 & t\EH{-t}     & 1   \\
+%0 & 1 & 3  & \EH{-t}      & 0   \\
+%0 & 1 & 2  & \EH{-t}      & 1   & - II\\\hline
+%
+%1 & 0 & -1 & t\EH{-t}     & 1  \\
+%0 & 1 & 3  & \EH{-t}      & 0  \\
+%0 & 0 &-1  &     0        & 1  & \\
+%
+%\end{array}$$
+%L\"osung des Systems ist 
+%$$\vec Y(0)^{-1}\vec g(t)=\begin{pmatrix}
+%t\EH{-t}\\
+%\EH{-t}\\
+%0
+%\end{pmatrix}
+%$$
+%und 
+%$$\vec Y(0)^{-t}\vec y(0)=\begin{pmatrix}
+%0\\
+%3\\
+%-1\end{pmatrix}.$$
+%Damit ergibt sich dann die L\"osung des Anfangswertproblems zu: 
+%\begin{align*}
+%&\vec y_{AWP}(x)\\
+%=&\vec Y(x)\vec Y(0)^{-1}\vec y(0)+\int\limits_{t=0}^x\vec Y(x-t)\vec Y(0)^{-1}\vec g(t)\d t\\
+%=& \vec Y(x)\begin{pmatrix}0\\3\\-1\end{pmatrix} + \\
+%&+\int\limits_{t=0}^x\begin{pmatrix}
+%\EH{-(x-t)} & (x-t)\EH{-(x-t)}    & -\EH{2(x-t)}  \\
+%   0        &      \EH{-(x-t)}    & 3\EH{2(x-t)}  \\
+%\EH{-(x-t)} & (1+x-t)\EH{-(x-t)}    &  \EH{2(x-t)}
+%\end{pmatrix}
+%\EH{-t}\begin{pmatrix}
+%t\\1\\0\end{pmatrix}\d t\\
+%=&3\EH{-x}(\vec w+x\vec v_1) - \EH{2x}\vec v_2 + \\
+%&+\EH{-x}\int\limits_{t=0}^x
+%\begin{pmatrix}
+%x\\
+%1\\
+%1+x
+%\end{pmatrix}\d t\\
+%=& \EH{-x}\begin{pmatrix}
+%0+x\\
+%1+0\\
+%1+x\end{pmatrix}-\EH{2x}\begin{pmatrix}
+%-1\\3\\1\end{pmatrix}
+%+ x\EH{-x}\begin{pmatrix}x\\1\\1+x\end{pmatrix}\\
+%=& \EH{-x}\begin{pmatrix}x^2+x\\x+1\\x^2+2x+1\end{pmatrix} + \EH{2x}\begin{pmatrix} 1\\-3\\-1\end{pmatrix}
+%\end{align*}
 \end{abc}
 }
 

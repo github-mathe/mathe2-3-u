@@ -9,15 +9,15 @@
 \newcommand{\Trimester}{FT}
 \newcommand{\Kurs}{Mathematik III/C (WI/ET)}
 \newcommand{\TYPE}{Aufgabenblatt}
-\newcommand{\BLATT}{6}
-\newcommand{\TOPIC}{lineare Dgl. h\"oherer Ordnung, Laplace-Transformation}
+\newcommand{\BLATT}{7}
+\newcommand{\TOPIC}{Laplace-Transformation}
 \usepackage{pstricks}
 \usepackage{pst-plot}
 \usepackage{circuitikz}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newboolean{mitLoes}
 \setboolean{mitLoes}{false}
-%\setboolean{mitLoes}{true}
+\setboolean{mitLoes}{true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -27,7 +27,7 @@
 
 \input{begin}
 \setboolean{mitErg}{false}
-\setboolean{mitErg}{true}
+%\setboolean{mitErg}{true}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -45,32 +45,33 @@
 \ruleBig
 
 %Mathe III Blatt 6
-%22
-\input{../A/GewDgln/gewdgl_Line_nOrd_003_mod.tex}
+%31
+\input{../A/Laplace/laplac_Traf_Bere_02a.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-%17
-%\input{../A/GewDgln/ode_mix_01.tex}
-%\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
-
-%9
-\input{../A/GewDgln/gewdgl_Bern_Dglg_001.tex}
+%36
+\input{../A/Laplace/laplac_Traf_Bere_004_mod.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-%30
-\input{../A/Laplace/laplac_Traf_Bere_001.tex}
+%38
+\input{../A/Laplace/laplac_Tran_Heav_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-%33
-\input{../A/Laplace/laplac_Traf_Bere_01b.tex}
+%40
+\input{../A/Laplace/laplace_verschiebung_001.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Laplace/lapac_Transformationen.tex}
+%41
+\input{../A/Laplace/gewdgl_Strm_Lrkr_01c.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
-\input{../A/Laplace/tiefpassfilter_01.tex}
+%43
+\input{../A/Laplace/laplac_ldgl_KlLp_004.tex}
 \ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
+%44
+\input{../A/Laplace/laplac_Anfw_Aufg_001.tex}
+\ifthenelse{\boolean{mitLoes}}{\ruleBig \cleardoublepage}{}
 
 
 \newpage
