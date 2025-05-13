@@ -1,0 +1,65 @@
+Jede lineare Dgl. \emph{n}-ter Ordnung mit konstanten Koeffizienten
+\[ 
+L_n y := y^{(n)} + a_{n-1} y^{(n-1)} + ... + a_1 y'+ a_0 y = g(x)
+\]
+kann in ein Differentialgleichungssystem 1. Ordnung \"uberf\"uhrt werden.
+Dazu werden neue Funktionen definiert:
+\begin{align*}
+  y_1(t) &= y(t) \\
+  y_2(t) &= y'(t) \\
+  y_3(t) &= y''(t) \\
+        &\vdots \\
+  y_n(t) &= y^{(n-1)}(t),
+\end{align*}
+welche sich in einem Vektor $\vec y$ zusammenfassen lassen:
+$$
+\vec y
+$$
+
+Dann erhalten wir ein System erster Ordnung:
+\begin{align*}
+  y_1' &= y_2 \\
+  y_2' &= y_3 \\
+       &\vdots \\
+  y_{n-1}' &= y_n \\
+  y_n' &= f\big(t, y_1, y_2, \dots, y_n\big)
+\end{align*}
+
+\section*{3. Beispiel: DGL zweiter Ordnung}
+
+Gegeben sei die lineare homogene DGL:
+\[ y'' + 4y' + 5y = 0 \]
+
+Definiere:
+\begin{align*}
+  y_1 &= y \\
+  y_2 &= y'
+\end{align*}
+
+Dann gilt:
+\begin{align*}
+  y_1' &= y_2 \\
+  y_2' &= -4y_2 - 5y_1
+\end{align*}
+
+Das resultierende System lautet:
+\[ \begin{cases}
+  y_1' = y_2 \\
+  y_2' = -4y_2 - 5y_1
+\end{cases} \]
+
+\section*{4. Vektorielle Darstellung}
+
+Das System kann in kompakter Vektorform geschrieben werden:
+\[ \vec{y}(t) = \begin{pmatrix} y_1(t) \\ y_2(t) \\ \vdots \\ y_n(t) \end{pmatrix}, \quad \vec{y}\,'(t) = \vec{F}\big(t, \vec{y}(t)\big) \]
+
+Im Beispiel:
+\[ \vec{y} = \begin{pmatrix} y_1 \\ y_2 \end{pmatrix}, \quad \vec{F}(t,\vec{y}) = \begin{pmatrix} y_2 \\ -4y_2 - 5y_1 \end{pmatrix} \]
+
+\section*{5. Anwendungen}
+
+\begin{itemize}
+  \item Numerische Verfahren (z.B. Runge-Kutta) ben\"otigen Systeme erster Ordnung.
+  \item In der Physik: Mechanik (Bewegungsgleichungen), Elektrotechnik (RLC-Schaltungen).
+  \item Modellierung von gekoppelten Prozessen mit mehreren abh\"angigen Variablen.
+\end{itemize}

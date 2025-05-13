@@ -1,9 +1,10 @@
 \Aufgabe[e]{Heaviside-Funktion}
 {
 Gesucht ist die Laplace--Transformierte von
-$$
-	f(t) := h(t-2)\cdot t^2 \ ,
-$$
+\begin{iii}
+\item   $g(t) := h(t-2) \cdot (t-2)^2\, $
+\item	$f(t) := h(t-2)\cdot t^2 \ , $
+\end{iii}
 wobei \ $h$ \ die Heaviside--Funktion ist.
 
 \begin{abc}
@@ -14,7 +15,25 @@ wobei \ $h$ \ die Heaviside--Funktion ist.
 }
 
 \Loesung{
-\textbf{a)}
+\begin{iii}
+\item 
+\textbf{a)} Mit partieller Integration ergibt sich: \\
+	\[
+	F(s) = \int\limits_{2}^{\infty} \EH{-s\,t}\,(t-2)^2\ \text dt = \left[-\left(\frac{(t-2)^2}{s}+\frac{2\,(t-2)}{s^2}+\frac{2}{s^3}\right)\cdot\EH{-s\,t}\right]_2^\infty = \frac{2}{s^3}\cdot\EH{-2\,s}\ .
+\]
+\noindent
+\textbf{b)} \ Es wird der Verschiebungssatz angewendet
+	\[
+	{\cal{L}}\Big( f(t-a)\cdot h(t-a)\Big)= F(s)\cdot\EH{-a\,s}\ ,\ \ a>0\ ,
+	\]
+Damit erhält man die Laplace--Transformierte
+	\[
+	{\cal{L}}\Big( (t-2)^2\cdot h(t-2)\Big) = {\cal{L}}\Big( t^2 \Big) \cdot\EH{-a\,s} = \frac{2}{s^3}\cdot\EH{-2\,s}
+\]
+
+
+\item 
+\textbf{a)} Mit partieller Integration ergibt sich: \\
 	\[
 	F(s) = \int\limits_{2}^{\infty} \EH{-s\,t}\,t^2\ \text dt = \left[-\left(\frac{t^2}{s}+\frac{2\,t}{s^2}+\frac{2}{s^3}\right)\cdot\EH{-s\,t}\right]_2^\infty = \left(\frac{4}{s}+\frac{4}{s^2}+\frac{2}{s^3}\right)\cdot\EH{-2\,s}\ .
 \]
@@ -31,6 +50,7 @@ Damit erhält man die Laplace--Transformierte
 	\[
 	{\cal{L}}\Big(\big( (t-2)^2+4(t-2)+4\big)\cdot h(t-2)\Big) = \left(\frac{2}{s^3}+\frac{4}{s^2}+\frac{4}{s}\right)\cdot\EH{-2\,s}
 \]
+\end{iii}
 }
 
 \ErgebnisC{laplacTranHeav001}{
