@@ -21,7 +21,7 @@ lösen kann.
 \begin{abc}
 \item Wie ist die Laplace-Transformation definiert?
 
-$\mathcal{L}\left\{f(t)\right\} = \int_0^\infty \operatorname{e}^{-st} f(t) \d t$.
+$\mathcal{L}\left\{f(t)\right\} = \int_0^\infty \operatorname{e}^{-st} f(t) \, \mathrm{d} t$.
 
 \item Warum muss die Variable $s$ positiv sein?
 
@@ -87,9 +87,9 @@ lösen kann.
 \item Schreiben Sie die Eigenschaften der Dirac-Delta-Funktion $\delta(t)$ (auch $\delta$-Distribution) auf.
 
 \begin{align*}
-&\int_{-\infty}^\infty \delta(t) \d t = 1, \\
-&\int_{-\infty}^\infty \delta(t-a) \d t = 1, \quad \text{ (beliebig } a)\\
-&\int_{-\infty}^\infty \delta(t-t_0)\, f(t) \d t = f(t_0)\\
+&\int_{-\infty}^\infty \delta(t) \, \mathrm{d} t = 1, \\
+&\int_{-\infty}^\infty \delta(t-a) \, \mathrm{d} t = 1, \quad \text{ (beliebig } a)\\
+&\int_{-\infty}^\infty \delta(t-t_0)\, f(t) \, \mathrm{d} t = f(t_0)\\
 \end{align*}
 
 \end{abc}
@@ -101,7 +101,7 @@ lösen kann.
 
 \ErgebnisC{odemix05}{
 \begin{abc}
-\item $\mathcal{L}\left\{f(t)\right\} = \int_0^\infty \operatorname{e}^{-st} f(t) \d t$
+\item $\mathcal{L}\left\{f(t)\right\} = \int_0^\infty \operatorname{e}^{-st} f(t) \, \mathrm{d} t$
 \item $\operatorname{e}^{-st}$ nur beschränkt ist für 
 $t\rightarrow \infty$, wenn $s>0$.
 \item  $h_{t_0}$: Stufenfunktion, die 0 für $t<t_0$ und 1 für $t\geq t_0$ ist.
@@ -109,6 +109,6 @@ $t\rightarrow \infty$, wenn $s>0$.
 \item Ja
 \item Nein
 \item /
-\item $\int_{-\infty}^\infty \delta(t) \d t = 1, \, \int_{-\infty}^\infty \delta(t-a) \d t = 1, \, \int_{-\infty}^\infty \delta(t-t_0)\, f(t) \d t = f(t_0)$
+\item $\int_{-\infty}^\infty \delta(t) \, \mathrm{d} t = 1, \, \int_{-\infty}^\infty \delta(t-a) \, \mathrm{d} t = 1, \, \int_{-\infty}^\infty \delta(t-t_0)\, f(t) \, \mathrm{d} t = f(t_0)$
 \end{abc}
 }
