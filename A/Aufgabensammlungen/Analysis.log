@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=latex 2022.5.1)  14 APR 2025 13:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=latex 2022.5.1)  21 MAY 2025 10:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1558,6 +1558,10 @@ LaTeX Info: Redefining \nameref on input line 87.
 \@outlinefile=\write4
 \openout4 = `Analysis.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
 (scrartcl)           because of handling of possible bookmark level gaps.
@@ -2113,1049 +2117,918 @@ Overfull \hbox (2.01202pt too wide) detected at line 88
 
 
 ]
-(../Analysis/analys_Intg_Kuko_001.tex
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+(../Analysis/analys_Intg_Kuko_001.tex [44
 
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+]
+\c@AufganalysIntgKuko001=\count421
+) [45
+
+]
+(../Analysis/analys_Intg_Kuko_002.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
+
+ []
+
+\c@AufganalysIntgKuko002=\count422
+) [46
+
+
+
+] (../Analysis/analys_Intg_Kuko_004.tex
+\c@halbkugel=\count423
+) [47
+
+
+]
+(../Analysis/analys_Intg_Ndim_001_1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+
+ []
+
+
+Overfull \hbox (3.6682pt too wide) in paragraph at lines 19--19
+[]\OT1/lmr/m/n/10 Skizzieren Sie den In-te-gra-tions-bere-ich und ver-tauschen 
+Sie die In-te-gra-tionsrei-
+ []
+
+[48
+
+
+]
+\c@AufganalysIntgNdim001=\count424
+) [49] (../Analysis/analys_Intg_Ndim_003.tex [50
+
+
+]
+\c@analysIntgNdim003=\count425
+) [51
+
+]
+(../Analysis/analys_Intg_Ndim_013.tex
+\c@AufganalysIntgNdim013=\count426
+) [52
+
+
+]
+(../Analysis/analys_Intg_Ndim_014.tex
+\c@AufganalysIntgNdim014=\count427
+) [53
+
+
+
+]
+(../Analysis/analys_Intg_Ndim_017.tex
+Overfull \hbox (4.46317pt too wide) in paragraph at lines 35--35
+\OT1/lmr/bx/n/10 Hin-weis\OT1/lmr/m/n/10 : In Bezug auf die Masse be-deutet Ho-
+mogenitat, dass die Massendichte $\OML/lmm/m/it/10 \OT1/lmr/m/n/10 (\OML/lmm/
+m/it/10 x; y; z\OT1/lmr/m/n/10 )$
+ []
+
+\c@AufganalysIntgNdim017=\count428
+) [54
+
+
+] (../Analysis/analys_Intg_Ndim_023.tex
+\c@AufganalysIntgtNdim023=\count429
+) [55
+
+
+
+]
+(../Analysis/analys_Intg_Ndim_040.tex
+Overfull \hbox (1.81973pt too wide) in paragraph at lines 15--15
+[]$[]$\OT1/lmr/m/n/10 ) 
+ []
+
+
+Overfull \hbox (28.31895pt too wide) detected at line 88
+[]
+ []
+
+
+Overfull \hbox (39.04173pt too wide) detected at line 88
+[]
+ []
+
+[56
+
+
+]
+\c@analysIntgNdim040=\count430
+) [57] (../Analysis/analys_Intg_Ndim_20b.tex
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+
+ []
+
+\c@analysIntgNdim020=\count431
+) [58
+
+
+] (../Analysis/analys_Intg_Ndim_21a.tex) [59
+
+
+
+]
+(../Analysis/analys_Intg_Para_001.tex
+Overfull \hbox (4.37416pt too wide) detected at line 210
+[]
+ []
+
+[60
+
+
+] [61]) [62
+
+] (../Analysis/analys_Intg_Traf_001.tex [63
+
+
+] [64]
+\c@analysIntgTraf001=\count432
+) [65]
+(../Analysis/analys_Intg_Traf_003.tex [66
+
+
+] [67]
+Overfull \hbox (41.17183pt too wide) detected at line 219
+[]
+ []
+
+[68]
+\c@analysIntgTraf003=\count433
+) [69] (../Analysis/analys_Intg_Trig_001.tex
+\c@analysIntgTrig001=\count434
+) [70
+
+
+]
+(../Analysis/analys_Intg_Uneg_001.tex
+\c@analysPartBrch006=\count435
+) [71
+
+
+]
+(../Analysis/analys_Intg_Zyln_002.tex
+Overfull \hbox (1.81973pt too wide) in paragraph at lines 9--9
+[]$[]$\OT1/lmr/m/n/10 ) 
+ []
+
+
+Overfull \hbox (20.15425pt too wide) in paragraph at lines 113--113
+\OT1/lmr/m/n/10 liegt. Der In-te-gra-tions-bere-ich fur $\OML/lmm/m/it/10 r$ \
+OT1/lmr/m/n/10 und $\OML/lmm/m/it/10 '$ \OT1/lmr/m/n/10 bleibt wie vorher. Der 
+$\OML/lmm/m/it/10 z\OMS/lmsy/m/n/10  $\OT1/lmr/m/n/10 Integrationsbereich
+ []
+
+[72
+
+
+]
+\c@analysIntgZyln002=\count436
+) [73
+
+] (../Analysis/analys_Intg_Zyln_098.tex
+\c@analysIntgZyln098=\count437
+) [74
+
+
+
+]
+(../Analysis/analys_Intg_Pola_001.tex
+\c@AnalysIntgPola001=\count438
+) [75
+
+
+]
+(../Analysis/analys_Intr_Poly_001.tex
+Overfull \hbox (54.34709pt too wide) detected at line 208
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+
+ []
+
+
+Overfull \hbox (24.77011pt too wide) detected at line 208
+[]
+ []
+
+[76
+
+
+] [77]
+\c@AufganalysIntrPoly001=\count439
+) [78
+
+] (../Analysis/analys_inverse_001.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 225.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 225.
+ [79
+
+
+]
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+[80]
+Overfull \hbox (2.60434pt too wide) in paragraph at lines 225--225
+[]\OT1/lmr/m/n/10 Die Funk-tion $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ ist di
+e Umkehrfunk-tion von $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$, wenn nur der Ha
+uptwert
+ []
+
+
+Overfull \hbox (6.93787pt too wide) in paragraph at lines 225--225
+[]\OT1/lmr/m/n/10 Die Funk-tion $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ ist di
+e Umkehrfunk-tion von $[](\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$, wenn nur der Ha
+uptwert
+ []
+
+) [81] (../Analysis/analys_inverse_002.tex [82
+
+
+]
+\c@InverseFunktion=\count440
+) [83]
+(../Analysis/analys_inverse.tex [84
+
+
+]
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+[85]
+Overfull \hbox (3.28171pt too wide) in paragraph at lines 223--223
+\OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10  []\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 ) \OM
+S/lmsy/m/n/10 ! \OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10  1\OML/lmm/m/it/10 ; \OMS/lms
+y/m/n/10 1\OT1/lmr/m/n/10 )$ it is bi-jec-tive. []
+ []
+
+) [86] (../Analysis/analys_Kett_Ndim_0021.tex
+\c@AufganalysKettNdim0021=\count441
+) [87
+
+
+
+]
+(../Analysis/analys_Kudi_Klau_001.tex) [88
+
+
+]
+(../Analysis/analys_Kurv_Disk_001.tex
+Overfull \hbox (2.46664pt too wide) in paragraph at lines 76--76
+\OT1/lmr/m/n/10 Mit der Sym-me-trie der Funk-tion folgt, dass in $\OML/lmm/m/it
+/10 x \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10  \OT1/lmr/m/n/10 2[]$ ein Min-i-mum $\
+OML/lmm/m/it/10 f\OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10  \OT1/lmr/m/n/10 2[]) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+
+ []
+
+\c@AufganalysKurvDisk001=\count442
+) [89
+
+
+] (../Analysis/analys_Kurv_Disk_002.tex
+Overfull \hbox (5.33467pt too wide) in paragraph at lines 20--20
+\OT1/lmr/m/n/10 Klas-si-fizieren Sie alle kri-tis-chen Punkte als Min-i-mum, Ma
+x-i-mum oder Wen-depunkt. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+
+ []
+
+\c@AufganalysKurvDisk002=\count443
+) [90
+
+
+] (../Analysis/analys_Kurv_Disk_004.tex
+Overfull \hbox (27.17822pt too wide) detected at line 68
+[]
+ []
+
+\c@AufganalysKurvDisk004=\count444
+) [91
+
+
+] (../Analysis/analys_Kurv_Disk_010.tex) [92
+
+
+]
+(../Analysis/analys_Laplace_001.tex
+
+! LaTeX Error: Invalid UTF-8 byte "FC.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
                                                   
-l.62 }
+l.29 }
       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Misplaced alignment tab character &.
-\math@cr@@@ ->&
-               \omit \global \advance \row@ \@ne \ifst@rred \nonumber \fi \i...
-l.62 }
-      
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \omit.
-\math@cr@@@ ->&\omit 
-                     \global \advance \row@ \@ne \ifst@rred \nonumber \fi \i...
-l.62 }
-      
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \cr.
-\math@cr@@@ ... \else \global \@eqnswtrue \fi \cr 
-                                                  
-l.62 }
-      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\@tempa ->\endgroup &
-                     &
-l.62 }
-      
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\@tempa ->\endgroup &&
-                      
-l.62 }
-      
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \cr.
-\measure@ ...olumn@ \z@ \add@amps \maxfields@ \cr 
-                                                  }}\restorecounters@ \ifodd...
-l.62 }
-      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Extra }, or forgotten $.
-\measure@ ...lumn@ \z@ \add@amps \maxfields@ \cr }
-                                                  }\restorecounters@ \ifodd ...
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\measure@ ...umn@ \z@ \add@amps \maxfields@ \cr }}
-                                                  \restorecounters@ \ifodd \...
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Incompatible list can't be unboxed.
-\measure@ ...i \fi \setbox \z@ \vbox {\unvbox \z@ 
-                                                  \unpenalty \global \setbox...
-l.62 }
-      
-Sorry, Pandora. (You sneaky devil.)
-I refuse to unbox an \hbox in vertical mode or vice versa.
-And I can't open any boxes in math mode.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.62 }
-      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.62 }
-      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.62 }
-      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.62 }
-      
-I'm guessing that you meant to end an alignment here.
-
-! Missing { inserted.
-<inserted text> 
-                {
-l.62 }
-      
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing { inserted.
-<inserted text> 
-                {
-l.62 }
-      
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<recently read> }
-                 
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.62 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Misplaced alignment tab character &.
-\@tempa ->\endgroup &
-                     
-l.62 }
-      
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.62 }
-      
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \cr.
-\math@cr@@@ ...wtrue \fi \global \lineht@ \z@ \cr 
-                                                  
-l.62 }
-      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.62 }
-      
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.62 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 }
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.62 }
-      
-(That makes 100 errors; please try again.) 
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+\c@Laplace001=\count445
+) [93
+
+
+
+] (../Analysis/analys_Matr_Fnkt_001.tex
+Overfull \hbox (8.82292pt too wide) detected at line 82
+[]
+ []
+
+\c@AufganalysMatrFnkt001=\count446
+) [94
+
+
+] (../Analysis/analys_maxima_minima_002_DE.tex
+NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+
+ []
+
+NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+[95
+
+
+]
+\c@MaxMin001=\count447
+) [96
+
+] (../Analysis/analys_Mitl_Wrt_Satz_001.tex) [97
+
+
+
+]
+(../Analysis/analys_Newt_Verf_001.tex
+Overfull \hbox (24.77856pt too wide) in paragraph at lines 14--14
+[]\OT1/lmr/m/n/10 Skizzieren Sie die Funk-tio-nen und bes-tim-men Sie Naherun-
+gen fur die Schnittstellen
+ []
+
+
+Overfull \hbox (0.49052pt too wide) in paragraph at lines 14--14
+\OT1/lmr/m/n/10 auf funf Nachkom-mas-tellen genau. Hi-erfur ist die Ver-wen-d
+ung eines Taschen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
+[98
+
+
+]
+Overfull \hbox (2.59854pt too wide) in paragraph at lines 102--102
+[]\OT1/lmr/m/n/10 Fur diesen Fall hat das Ver-fahren bere-its nach zwei Schrit
+-ten die gewunschte Genauigkeit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+
+ []
+
+\c@AufganalysNewtVerf001=\count448
+) [99
+
+] (../Analysis/analys_Newt_Verf_003.tex
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
+
+ []
+
+\c@AufganalysNewtVerf003=\count449
+) [100
+
+
+
+] (../Analysis/analys_Newt_Verf_02a.tex
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+
+ []
+
+\c@analysNewtVerf002=\count450
+) [101
+
+
+] (../Analysis/analys_Opt_Poster.tex
+Overfull \hbox (11.1993pt too wide) detected at line 70
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+\c@AufganalysOptPoster=\count451
+) [102
+
+
+] (../Analysis/analys_Para_Grap_001.tex
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+
+ []
+
+
+Overfull \hbox (1.35461pt too wide) in paragraph at lines 108--108
+[]\OT1/lmr/m/n/10 Die bei-den Funk-tio-nen haben im Punkt $\OML/lmm/m/it/10 x$ 
+\OT1/lmr/m/n/10 par-al-lele Tan-gen-ten, wenn ihre Ableitun-
+ []
+
+[103
+
+
+]
+\c@AufganalysParaGrap001=\count452
+) [104
+
+] (../Analysis/analys_Part_Ablt_001.tex) [105
+
+
+]
+(../Analysis/analys_Part_Brch_005.tex
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+
+ []
+
+[106
+
+
+]
+\c@analysPartBrch005=\count453
+) [107
+
+] (../Analysis/analys_Regl_Lhos_001.tex
+\c@AufganalysReglLhos001=\count454
+) [108
+
+
+]
+(../Analysis/analys_Regl_Lhos_002.tex
+\c@AufganalysReglLhos002=\count455
+) [109
+
+
+
+]
+(../Analysis/analys_Rich_Ablt_003.tex
+\c@AufganalysRichAblt003=\count456
+) [110
+
+
+
+]
+(../Analysis/analys_Satl_Bahn_001.tex
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+
+ []
+
+
+Overfull \hbox (12.83676pt too wide) in paragraph at lines 44--44
+\OT1/lmr/m/n/10 Die Bahn verlauft also asymp-to-tisch in Rich-tung der bei-den
+ Ger-aden $[]\OMS/lmsy/m/n/10 f\OT1/lmr/m/n/10 (1\OML/lmm/m/it/10 ; \OMS/lmsy/m
+/n/10 \OT1/lmr/m/n/10 3)[]\OMS/lmsy/m/n/10 g$\OT1/lmr/m/n/10 . 
+ []
+
+\c@AufganalysSatlBahn001=\count457
+) [111
+
+
+] (../Analysis/analys_Stet_Igkt_01a.tex
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+
+ []
+
+\c@AufganalysStetIgkt01a=\count458
+) [112
+
+
+] (../Analysis/analys_Stet_Igkt_01a.tex
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+
+ []
+
+) [113
+
+
+] (../Analysis/analys_Tang_Ebne_001.tex
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+
+ []
+
+\c@AufganalysTangEbne001=\count459
+) [114
+
+
+] (../Analysis/analys_Tayl_01.tex
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+
+ []
+
+\c@analysTayl01=\count460
+) [115
+
+
+] (../Analysis/analys_Tayl_02.tex
+\c@analysTayl02=\count461
+) [116
+
+
+]
+(../Analysis/analys_Tayl_Entw_001.tex [117
+
+
+]
+\c@AufganalysTaylEntw001=\count462
+) [118
+
+]
+(../Analysis/analys_Tayl_Ndim_002.tex
+\c@AufganalysTaylNdim002=\count463
+) [119
+
+
+]
+(../Analysis/analys_Tayl_Ndim_005.tex
+Overfull \hbox (2.80539pt too wide) detected at line 88
+[]
+ []
+
+\c@AufganalysTaylNdim005=\count464
+) [120
+
+
+] (../Analysis/analys_Tayl_Ndim_02b.tex [121
+
+
+]) [122
+
+]
+(../Analysis/analys_Taylor2D_01.tex)
+Overfull \hbox (2.68869pt too wide) in paragraph at lines 6--303
+   [] 
+ []
+
+[123
+
+
+
+] (../Analysis/analys_Trig_Glei_001.tex [124
+
+
+] [125]) [126]
+(../Analysis/analys_Ueig_Intg_001.tex) [127
+
+
+
+]
+(../Analysis/analys_Umke_Funk_001.tex
+Overfull \hbox (5.92343pt too wide) in paragraph at lines 88--88
+\OT1/lmr/m/n/10 Die Ableitung von $\OML/lmm/m/it/10 f[]\OT1/lmr/m/n/10 (\OML/lm
+m/m/it/10 y\OT1/lmr/m/n/10 ) = [](\OML/lmm/m/it/10 y\OT1/lmr/m/n/10 )$ ergibt s
+ich da-raus mit Hilfe des angegebe-
+ []
+
+[128
+
+
+]
+\c@AufganalysUmkeFunk001=\count465
+) [129
+
+] (../Analysis/analys_Umke_Funk_004.tex) [130
+
+
+]
+(../Analysis/analys_Volumentintegral_099.tex) [131
+
+
+
+]
+(../Analysis/analys_Weg__Ablt_001.tex
+\c@AufganalysWegAblt001=\count466
+) [132
+
+
+
+]
+(../Analysis/analys_Zwis_Wert_001.tex
+\c@AufganalysZwisWert001=\count467
+) [133
+
+
+
+] (../Analysis/aufgabe2.tex
+\c@aufgabe2=\count468
+)
+[134
+
+
+] (../Analysis/b-2011A-K-A4a.tex
+\c@Aufgb-2011A-K-A4a=\count469
+) [135
+
+
+
+] (../Analysis/b-2011A-K-A5a.tex
+Underfull \hbox (badness 5388) in paragraph at lines 12--54
+\OT1/lmr/m/n/10 soll das Newton-Verfahren ange-wandt wer-den. Bes-tim-men Sie m
+it Hilfe
+ []
+
+\c@Aufgb-2011A-K-A5a=\count470
+) [136
+
+
+] (../Analysis/b-2011-K2-A4.tex
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+
+ []
+
+[137
+
+
+]) [138
+
+] (../Analysis/b-2011-K2-A5.tex
+\c@b-2011-K2-A5=\count471
+) [139
+
+
+
+] (../Analysis/b-2011-K-A6.tex) [140
+
+
+
+] (../Analysis/b-2012-K2-A4.tex
+Overfull \hbox (10.44601pt too wide) in paragraph at lines 16--16
+[]\OT1/lmr/m/n/10 Skizzieren Sie die bei-den Kur-ven und lesen Sie aus Ihrer Sk
+izze eine nicht-ganzzahlige
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+
+ []
+
+\c@Aufgb-2011A-K-A3=\count472
+) [141
+
+
+] (../Analysis/b-2013-K-A3.tex) [142
+
+
+
+] (../Analysis/continuity_001_de.tex
+Overfull \hbox (0.44524pt too wide) in paragraph at lines 44--44
+[]\OT1/lmr/m/n/10 Begrunden Sie fur je-den dieser Werte, we-shalb die for-mal
+e Def-i-ni-tion der Stetigkeit
+ []
+
+) [143
+
+
+] (../Analysis/continuity_001.tex) [144
+
+
+]
+(../Analysis/linalg_Posi_Defi_002.tex
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+
+ []
+
+\c@AufglinalgPosiDefi002=\count473
+) [145
+
+
+
+] (../Analysis/wz-2013-2-1p.tex
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+
+ []
+
+\c@wz-2013-2-1p=\count474
+) [146
+
+
+] (../Analysis/wz-2013-3-1.tex
+Overfull \hbox (25.31126pt too wide) detected at line 78
+[]
+ []
+
+
+Overfull \hbox (18.64441pt too wide) detected at line 78
+[]
+ []
+
+\c@Ergwz-2013-3-1=\count475
+) [147
+
+
+] (../Analysis/wz-2013-6-3.tex
+Overfull \hbox (12.71547pt too wide) in paragraph at lines 71--71
+\OT1/lmr/m/n/10 Der Gren-zw-ert  $[](\OML/lmm/m/it/10 x \OT1/lmr/m/n/10 + \OML/
+lmm/m/it/10 y\OT1/lmr/m/n/10 ) [] []$  ex-istiert nicht und damit auch  $[]  []
+$
+ []
+
+) [148
+
+
+] (../Analysis/wz-2013-6-4.tex
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 73.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 73.
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 73.
+
+
+Overfull \hbox (17.95013pt too wide) detected at line 73
+[]
+ []
+
+) [149
+
+
+] (../Analysis/wz-2013-7-6.tex)
+\BKM@file=\write5
+\openout5 = `Analysis.out.ps'.
+
+ [150
+
+
+
+] (../Analysis/wz-2013-8-1.tex)
+[151
+
+
+
+] (../Analysis/wz-2013-8-2.tex
+\c@Aufgwz-2013-8-2=\count476
+) [152
+
+
+] (../Analysis/wz3-2013-1-1.tex)
+[153
+
+
+
+] (../Analysis/Zeuge-2013Nov-K-A4.tex
+\c@Aufgb-Zeuge-2013Nov-K-A4=\count477
+) [154
+
+
+]
+(../Analysis/analys_Monotonie.tex
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+[155
+
+
+]) [156] (../Analysis/analys_Extrema_002.tex
+\c@StationaerePunkte=\count478
+) [157
+
+
+
+]
+(../Analysis/analys_Gren_Wert_007.tex) [158
+
+
+
+] (Analysis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `Analysis.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 43607 strings out of 478660
- 1025891 string characters out of 2844525
- 1655810 words of memory out of 3000000
- 60815 multiletter control sequences out of 15000+600000
- 436492 words of font info for 56 fonts, out of 8000000 for 9000
+ 45401 strings out of 478660
+ 1075318 string characters out of 2844525
+ 1997724 words of memory out of 3000000
+ 62344 multiletter control sequences out of 15000+600000
+ 454408 words of font info for 73 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,22n,120p,10620b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,19n,120p,10620b,2774s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Analysis.dvi (43 pages, 293664 bytes).
+Output written on Analysis.dvi (158 pages, 1754068 bytes).

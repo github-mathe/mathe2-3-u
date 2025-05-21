@@ -10,7 +10,7 @@ $$\vec y'(t) = \begin{pmatrix}
 \begin{abc}
 \item Ermitteln Sie die Fundamentalmatrix $\vec Y(t)$ (des homogenen Systems). 
 \item Berechnen Sie die L\"osung  des Anfangswertproblemes, indem Sie die Schritte der Variation der Konstanten explizit ausf\"uhren. 
-\item Berechnen Sie zus\"atzlich die L\"osung des Anfangswertproblemes unter Nutzung der entsprechenden Formel aus der Vorlesung. 
+%\item Berechnen Sie zus\"atzlich die L\"osung des Anfangswertproblemes unter Nutzung der entsprechenden Formel aus der Vorlesung. 
 \end{abc}
 }
 
@@ -144,88 +144,88 @@ Damit ist dann
 &= \frac {\EH{5t}}8\begin{pmatrix}-1\\7\\4\end{pmatrix}+\frac{\EH t}8\begin{pmatrix}1-12t\\1-12t\\12\end{pmatrix}.
 \end{align*}
 
-\item Mit der Formel 
-$$\vec y_{AWP}(t)=\vec Y(t)\vec Y(0)^{-1}\vec y_0 + \int\limits_0^t\vec Y(t-s)\vec Y(0)^{-1}\vec f(s)\d s$$ 
-ergibt sich 
-mit 
-$$\vec Y(0)^{-1}\vec y_0=\begin{pmatrix}1 & 0 & 0 \\
-1 & 0 & 1 \\
-0 & -1& 1 \end{pmatrix}^{-1}\begin{pmatrix}0\\1\\2\end{pmatrix}
-= \begin{pmatrix}0\\-1\\1\end{pmatrix}$$
-sowie 
-$$\vec Y(0)^{-1}\vec f(s) = \begin{pmatrix}1 & 0 & 0 \\
-1 & 0 & 1 \\
-0 & -1& 1 \end{pmatrix}^{-1}\begin{pmatrix}-1\\2\\1\end{pmatrix}\EH{5s}=
-\begin{pmatrix}
--1\\2 \\3\end{pmatrix}\EH{5s}$$
-die L\"osung des Anfangswertproblems: 
-
-\begin{align*}
-\vec y_{AWP}(t)=&\begin{pmatrix}
-\EH t & \EH t t & 0 \\
-\EH t & \EH t t & \EH{2t}\\
-0     & -\EH t  & \EH{2t}\end{pmatrix}\begin{pmatrix}0\\-1\\1\end{pmatrix} + \int\limits_0^t 
-\begin{pmatrix}
-\EH {t-s} & \EH {t-s} (t-s) & 0 \\
-\EH {t-s} & \EH {t-s} (t-s) & \EH{2(t-s)}\\
-0     & -\EH {t-s}  & \EH{2(t-s)}\end{pmatrix}\begin{pmatrix}-1\\2\\3\end{pmatrix}\EH{5s}\d s\\
-=& \begin{pmatrix}
--\EH t t \\
--\EH t t + \EH{2t}\\
-\EH t + \EH{2t}\end{pmatrix}
-+ \int\limits_0^t\begin{pmatrix}
-\EH{t-s}(-1+2t-2s)\\
-\EH{t-s}(-1+2t-2s)+3\EH{2(t-s)}\\
--2\EH{t-s}+ 3 \EH{2(t-s)}\end{pmatrix}\EH{5s}\d s\\
-=& \begin{pmatrix}
--\EH t t \\
--\EH t t + \EH{2t}\\
-\EH t + \EH{2t}\end{pmatrix}
-+ \int\limits_0^t\begin{pmatrix}
-\EH{t+4s}(-1+2t-2s)\\
-\EH{t+4s}(-1+2t-2s)+3\EH{2t+3s}\\
--2\EH{t+4s}+ 3 \EH{2t+3s}\end{pmatrix}\EH{5s}\d s\\
-=& \begin{pmatrix}
--\EH t t \\
--\EH t t + \EH{2t}\\
-\EH t + \EH{2t}\end{pmatrix}
-+ \left.\frac 14 \EH{t+4s}\begin{pmatrix}-1+2t-2s\\
--1+2t-2s\\
--2
-\end{pmatrix}\right|_{s=0}^t 
-- \frac 14\int\limits_0^t\EH{t+4s}\begin{pmatrix}
--2\\-2\\0\end{pmatrix}\d s \\
-& +\left. \frac 13\EH{ 2t+3s}\begin{pmatrix}
-0\\3\\3\end{pmatrix}\right|_{s=0}^t\\
-=& \begin{pmatrix}
--\EH t t \\
--\EH t t + \EH{2t}\\
-\EH t + \EH{2t}\end{pmatrix}
-+ \frac 14 \EH{5t}\begin{pmatrix}-1\\
--1\\
--2
-\end{pmatrix}
-- \frac 14 \EH{t}\begin{pmatrix}-1+2t\\
--1+2t\\
--2
-\end{pmatrix}
-- \frac 1{16}(\EH{5t}-\EH t)\begin{pmatrix}
--2\\-2\\0\end{pmatrix} \\
-& +\frac 13(\EH{ 5t}-\EH{2t})\begin{pmatrix}
-0\\3\\3\end{pmatrix}\\
-=& \EH t\begin{pmatrix}
--t +\frac 14 - \frac t2-\frac 18\\
--t +\frac 14-\frac t2-\frac 18\\
-1+\frac 12
-\end{pmatrix}
-+\EH{5t}\begin{pmatrix}
--\frac 14+\frac 18\\
--\frac 14+\frac 18+1\\
--\frac 12+1
-\end{pmatrix}\\
-=& \frac{\EH t}8\begin{pmatrix}1-12t\\1-12t\\12\end{pmatrix}
-+ \frac{\EH{5t}}8\begin{pmatrix}-1\\7\\4\end{pmatrix}
-\end{align*}
+%\item Mit der Formel 
+%$$\vec y_{AWP}(t)=\vec Y(t)\vec Y(0)^{-1}\vec y_0 + \int\limits_0^t\vec Y(t-s)\vec Y(0)^{-1}\vec f(s)\d s$$ 
+%ergibt sich 
+%mit 
+%$$\vec Y(0)^{-1}\vec y_0=\begin{pmatrix}1 & 0 & 0 \\
+%1 & 0 & 1 \\
+%0 & -1& 1 \end{pmatrix}^{-1}\begin{pmatrix}0\\1\\2\end{pmatrix}
+%= \begin{pmatrix}0\\-1\\1\end{pmatrix}$$
+%sowie 
+%$$\vec Y(0)^{-1}\vec f(s) = \begin{pmatrix}1 & 0 & 0 \\
+%1 & 0 & 1 \\
+%0 & -1& 1 \end{pmatrix}^{-1}\begin{pmatrix}-1\\2\\1\end{pmatrix}\EH{5s}=
+%\begin{pmatrix}
+%-1\\2 \\3\end{pmatrix}\EH{5s}$$
+%die L\"osung des Anfangswertproblems: 
+%
+%\begin{align*}
+%\vec y_{AWP}(t)=&\begin{pmatrix}
+%\EH t & \EH t t & 0 \\
+%\EH t & \EH t t & \EH{2t}\\
+%0     & -\EH t  & \EH{2t}\end{pmatrix}\begin{pmatrix}0\\-1\\1\end{pmatrix} + \int\limits_0^t 
+%\begin{pmatrix}
+%\EH {t-s} & \EH {t-s} (t-s) & 0 \\
+%\EH {t-s} & \EH {t-s} (t-s) & \EH{2(t-s)}\\
+%0     & -\EH {t-s}  & \EH{2(t-s)}\end{pmatrix}\begin{pmatrix}-1\\2\\3\end{pmatrix}\EH{5s}\d s\\
+%=& \begin{pmatrix}
+%-\EH t t \\
+%-\EH t t + \EH{2t}\\
+%\EH t + \EH{2t}\end{pmatrix}
+%+ \int\limits_0^t\begin{pmatrix}
+%\EH{t-s}(-1+2t-2s)\\
+%\EH{t-s}(-1+2t-2s)+3\EH{2(t-s)}\\
+%-2\EH{t-s}+ 3 \EH{2(t-s)}\end{pmatrix}\EH{5s}\d s\\
+%=& \begin{pmatrix}
+%-\EH t t \\
+%-\EH t t + \EH{2t}\\
+%\EH t + \EH{2t}\end{pmatrix}
+%+ \int\limits_0^t\begin{pmatrix}
+%\EH{t+4s}(-1+2t-2s)\\
+%\EH{t+4s}(-1+2t-2s)+3\EH{2t+3s}\\
+%-2\EH{t+4s}+ 3 \EH{2t+3s}\end{pmatrix}\EH{5s}\d s\\
+%=& \begin{pmatrix}
+%-\EH t t \\
+%-\EH t t + \EH{2t}\\
+%\EH t + \EH{2t}\end{pmatrix}
+%+ \left.\frac 14 \EH{t+4s}\begin{pmatrix}-1+2t-2s\\
+%-1+2t-2s\\
+%-2
+%\end{pmatrix}\right|_{s=0}^t 
+%- \frac 14\int\limits_0^t\EH{t+4s}\begin{pmatrix}
+%-2\\-2\\0\end{pmatrix}\d s \\
+%& +\left. \frac 13\EH{ 2t+3s}\begin{pmatrix}
+%0\\3\\3\end{pmatrix}\right|_{s=0}^t\\
+%=& \begin{pmatrix}
+%-\EH t t \\
+%-\EH t t + \EH{2t}\\
+%\EH t + \EH{2t}\end{pmatrix}
+%+ \frac 14 \EH{5t}\begin{pmatrix}-1\\
+%-1\\
+%-2
+%\end{pmatrix}
+%- \frac 14 \EH{t}\begin{pmatrix}-1+2t\\
+%-1+2t\\
+%-2
+%\end{pmatrix}
+%- \frac 1{16}(\EH{5t}-\EH t)\begin{pmatrix}
+%-2\\-2\\0\end{pmatrix} \\
+%& +\frac 13(\EH{ 5t}-\EH{2t})\begin{pmatrix}
+%0\\3\\3\end{pmatrix}\\
+%=& \EH t\begin{pmatrix}
+%-t +\frac 14 - \frac t2-\frac 18\\
+%-t +\frac 14-\frac t2-\frac 18\\
+%1+\frac 12
+%\end{pmatrix}
+%+\EH{5t}\begin{pmatrix}
+%-\frac 14+\frac 18\\
+%-\frac 14+\frac 18+1\\
+%-\frac 12+1
+%\end{pmatrix}\\
+%=& \frac{\EH t}8\begin{pmatrix}1-12t\\1-12t\\12\end{pmatrix}
+%+ \frac{\EH{5t}}8\begin{pmatrix}-1\\7\\4\end{pmatrix}
+%\end{align*}
 \end{abc}
 
 } 

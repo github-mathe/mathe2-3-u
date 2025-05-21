@@ -26,15 +26,15 @@ Geben Sie hierf\"ur auch die Anfangsbedingung an.
 %\item Zu welchem Zeitpunkt $t_1$ \"uberfliegt der Ball die Torlinie (diese liege bei $x_1=10$)?
 %\item Wie muss die Startgeschwindigkeit $\vec v_0$ gew\"ahlt werden, dass der Ball die Torlinie in der H\"ohe $x_2=2$ genau zwischen Torlatte und Torwarthand der Mannschaft N \"uberfliegt?
 %\end{iii}
-\item Gegeben sei das Differentialgleichungssystem 
-$$\vec y'(x)=\vec A \vec y(x)+\vec b,\qquad \text{ mit }\qquad  \vec
-A=\begin{pmatrix}1&0&0\\3&1&-2\\2&2&1\end{pmatrix}\quad \text{ und }\quad \vec
-b=\begin{pmatrix}4\\-4\\6\end{pmatrix}.$$
-\begin{iii}
-\item Bestimmen Sie ein \textbf{reelles} Fundamentalsystem des zugeh\"origen homogenen Problems. 
-\item Bestimmen Sie die allgemeine Lösung des inhomogenen Differentialgleichungssystems 
-$$\vec y'(x)=\vec A \vec y(x) + \vec b.$$
-\end{iii}
+%%\item Gegeben sei das Differentialgleichungssystem 
+%%$$\vec y'(x)=\vec A \vec y(x)+\vec b,\qquad \text{ mit }\qquad  \vec
+%%A=\begin{pmatrix}1&0&0\\3&1&-2\\2&2&1\end{pmatrix}\quad \text{ und }\quad \vec
+%%b=\begin{pmatrix}4\\-4\\6\end{pmatrix}.$$
+%%\begin{iii}
+%%\item Bestimmen Sie ein \textbf{reelles} Fundamentalsystem des zugeh\"origen homogenen Problems. 
+%%\item Bestimmen Sie die allgemeine Lösung des inhomogenen Differentialgleichungssystems 
+%%$$\vec y'(x)=\vec A \vec y(x) + \vec b.$$
+%%\end{iii}
 \end{abc}
 
 }
@@ -184,44 +184,44 @@ $$
 %\end{align*}
 \end{iii}
 
-\item 
-\begin{iii}
-\item Die Eigenwerte der Matrix $\vec A$ ergeben sich aus dem charakteristischen Polynom: 
-\begin{align*}
-&&0=& \det\begin{pmatrix}1-\lambda & 0 & 0 \\ 3 & 1-\lambda & -2\\ 2 & 2 & 1-\lambda\end{pmatrix} =
-(1-\lambda)((1-\lambda)^2+4)\\
-\Rightarrow&&\lambda_1=&1,\, \lambda_{2/3}=1\pm 2\imag.
-\end{align*}
-Die Eigenvektoren zu $\lambda_1$ und $\lambda_2$ ergeben sich aus dem charakteristischen
-Gleichungssystem: 
-\begin{align*}
-\lambda_1=1:&&\begin{array}{rrr|l}
-0 & 0 & 0 & 0 \\
-3 & 0 & -2& 0 \\
-2 & 2 & 0 & 0\end{array}&\Leftarrow&&\vec v_1= \begin{pmatrix}2\\-2\\3\end{pmatrix}\\
-\lambda_2=1+2\imag :&&\begin{array}{rrr|l}
--2\imag & 0 & 0 & 0 \\
-3 & -2\imag & -2& 0 \\
-2 & 2 & 0 & -2\imag \end{array}&\Leftarrow&&\vec v_2= \begin{pmatrix}0\\\imag\\1\end{pmatrix}
-\end{align*}
-Ein reelles Fundamentalsystem ist damit gegeben durch 
-\begin{align*}
-\vec y_1=&\EH{\lambda_1x}\vec v_1=\EH{x}\begin{pmatrix}2\\-2\\3\end{pmatrix},\,\\
-\vec y_2=&\Re\left( \EH{\lambda_2x}\vec v_2\right)=\EH
-x \begin{pmatrix}0\\-\sin(2x)\\\cos(2x)\end{pmatrix}\\
-\text{ und }\vec y_3=&\Im\left( \EH{\lambda_2x}\vec v_2\right)=\EH
-x\begin{pmatrix}0\\\cos(2x)\\\sin(2x)\end{pmatrix}.
-\end{align*}
-\item Da die Inhomogenit\"at des Differentialgleichungssystems 
-$$\vec b=\begin{pmatrix}4\\-4\\6\end{pmatrix}=2\vec v_1$$
-ein Eigenvektor der Systemmatrix $\vec A$ ist,
-kann man als Partikul\"arl\"osung $\vec y_p(x)=\alpha \vec v_1$ ansetzen. Einsetzen in die Differentialgleichung
-ergibt: 
-$$\vec y_p'(x)=\vec 0\overset!=\alpha \vec A\vec v_1 + 2\vec v_1=\alpha \cdot 1\vec v_1+2\vec
-v_1\,\Rightarrow\, \alpha=-2.$$
-Damit hat man als allgemeine L\"osung der inhomogenen Differentialgleichung: 
-$$\vec y(x)=\vec y_h(x)+\vec y_p(x)=c_1\vec y_1(x) + c_2\vec y_2(x) + c_3\vec y_3(x)-2\vec v_1.$$
-\end{iii}
+%\item 
+%\begin{iii}
+%\item Die Eigenwerte der Matrix $\vec A$ ergeben sich aus dem charakteristischen Polynom: 
+%\begin{align*}
+%&&0=& \det\begin{pmatrix}1-\lambda & 0 & 0 \\ 3 & 1-\lambda & -2\\ 2 & 2 & 1-\lambda\end{pmatrix} =
+%(1-\lambda)((1-\lambda)^2+4)\\
+%\Rightarrow&&\lambda_1=&1,\, \lambda_{2/3}=1\pm 2\imag.
+%\end{align*}
+%Die Eigenvektoren zu $\lambda_1$ und $\lambda_2$ ergeben sich aus dem charakteristischen
+%Gleichungssystem: 
+%\begin{align*}
+%\lambda_1=1:&&\begin{array}{rrr|l}
+%0 & 0 & 0 & 0 \\
+%3 & 0 & -2& 0 \\
+%2 & 2 & 0 & 0\end{array}&\Leftarrow&&\vec v_1= \begin{pmatrix}2\\-2\\3\end{pmatrix}\\
+%\lambda_2=1+2\imag :&&\begin{array}{rrr|l}
+%-2\imag & 0 & 0 & 0 \\
+%3 & -2\imag & -2& 0 \\
+%2 & 2 & 0 & -2\imag \end{array}&\Leftarrow&&\vec v_2= \begin{pmatrix}0\\\imag\\1\end{pmatrix}
+%\end{align*}
+%Ein reelles Fundamentalsystem ist damit gegeben durch 
+%\begin{align*}
+%\vec y_1=&\EH{\lambda_1x}\vec v_1=\EH{x}\begin{pmatrix}2\\-2\\3\end{pmatrix},\,\\
+%\vec y_2=&\Re\left( \EH{\lambda_2x}\vec v_2\right)=\EH
+%x \begin{pmatrix}0\\-\sin(2x)\\\cos(2x)\end{pmatrix}\\
+%\text{ und }\vec y_3=&\Im\left( \EH{\lambda_2x}\vec v_2\right)=\EH
+%x\begin{pmatrix}0\\\cos(2x)\\\sin(2x)\end{pmatrix}.
+%\end{align*}
+%\item Da die Inhomogenit\"at des Differentialgleichungssystems 
+%$$\vec b=\begin{pmatrix}4\\-4\\6\end{pmatrix}=2\vec v_1$$
+%ein Eigenvektor der Systemmatrix $\vec A$ ist,
+%kann man als Partikul\"arl\"osung $\vec y_p(x)=\alpha \vec v_1$ ansetzen. Einsetzen in die Differentialgleichung
+%ergibt: 
+%$$\vec y_p'(x)=\vec 0\overset!=\alpha \vec A\vec v_1 + 2\vec v_1=\alpha \cdot 1\vec v_1+2\vec
+%v_1\,\Rightarrow\, \alpha=-2.$$
+%Damit hat man als allgemeine L\"osung der inhomogenen Differentialgleichung: 
+%$$\vec y(x)=\vec y_h(x)+\vec y_p(x)=c_1\vec y_1(x) + c_2\vec y_2(x) + c_3\vec y_3(x)-2\vec v_1.$$
+%\end{iii}
 \end{abc}
 }
 
@@ -232,13 +232,13 @@ $$\vec y(x)=\vec y_h(x)+\vec y_p(x)=c_1\vec y_1(x) + c_2\vec y_2(x) + c_3\vec y_
 \begin{iii}
 \item $\vec y'(x)=\begin{pmatrix}0&1\\
 16 & 0 \end{pmatrix} \vec y(x) + \begin{pmatrix}0\\16x\end{pmatrix}$ mit $\vec y(0)=(1,4)^\top$
-\item $y(x) =\begin{pmatrix}-x\\-1\end{pmatrix} + \frac{9\EH{4x}}8\begin{pmatrix}1\\4\end{pmatrix}+ \frac{\EH{-4x}}8\begin{pmatrix}-1\\4\end{pmatrix}$
-\item 
+\item $\vec y(x) =  \begin{pmatrix}1/8\\1/2\end{pmatrix} e^{4x} + \begin{pmatrix} -9/8\\9/2\end{pmatrix} e^{-4x} + \begin{pmatrix} -x \\ -1   \end{pmatrix}$
+\item $u(x)= \frac{1}{8} e^{4x} -\frac{9}{8} e^{-4x} -x $
 \end{iii}
-\item 
-\begin{iii}
-\item $\mathcal{F} = \left\lbrace \vec y_1, \vec y_2, \vec y_3 \right\rbrace  ==\left\lbrace \EH{x}\begin{pmatrix}2\\-2\\3\end{pmatrix}, \, \EH x \begin{pmatrix}0\\-\sin(2x)\\\cos(2x)\end{pmatrix}, \, \EH x\begin{pmatrix}0\\\cos(2x)\\\sin(2x)\end{pmatrix}\right\rbrace $
-\item $y(x) = c_1\vec y_1(x) + c_2\vec y_2(x) + c_3\vec y_3(x)-2\vec v_1$ mit $\begin{pmatrix}4\\-4\\6\end{pmatrix}=2\vec v_1$
-\end{iii}
+%\item 
+%\begin{iii}
+%\item $\mathcal{F} = \left\lbrace \vec y_1, \vec y_2, \vec y_3 \right\rbrace  ==\left\lbrace \EH{x}\begin{pmatrix}2\\-2\\3\end{pmatrix}, \, \EH x \begin{pmatrix}0\\-\sin(2x)\\\cos(2x)\end{pmatrix}, \, \EH x\begin{pmatrix}0\\\cos(2x)\\\sin(2x)\end{pmatrix}\right\rbrace $
+%\item $y(x) = c_1\vec y_1(x) + c_2\vec y_2(x) + c_3\vec y_3(x)-2\vec v_1$ mit $\begin{pmatrix}4\\-4\\6\end{pmatrix}=2\vec v_1$
+%\end{iii}
 \end{abc}
 }
