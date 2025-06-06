@@ -1,0 +1,298 @@
+Eine gew\"ohnliche Differentialgleichung (Dgl.) ist eine Gleichung, die aus einer unbekannten Funktion $y(x)$ und ihren Ableitungen $y'(x)$, $y''(x)$,..., $y^m(x)$ besteht, wobei die Funktion $y$ nur von einer Variablen $x$ abh\"angt und nur nach dieser abgeleitet wird. Es wird zwischen einer \textbf{impliziten} Darstellung der Differentialgleichung \textbf{$n$-ter Ordnung}
+$$
+F(x, y'(x), y''(x),..., y^n(x)) =0
+$$
+und einer \textbf{expliziten} Darstellung der Differentialgleichung $n$-ter Ordnung
+$$
+y^n(x) = f(x, y'(x), y''(x),..., y^{n-1}(x)) 
+$$
+unterschieden. Die Differentialgleichung hei\ss t \textbf{autonom}, wenn $F$ bzw. $f$ nicht explizit von $x$ abh\"angt. \\
+
+\noindent
+Eine Differentialgleichung ist \textbf{linear}, wenn sie die Form
+$$
+a_n(x)\, y^{(n)} + a_{n-1}(x)\, y^{(n-1)} + \dots + a_1(x)\, y' + a_0(x)\, y = f(x)
+$$
+besitzt, wobei $a_n(x)$ \textbf{variable Koeffizienten} sind. H\"angen die Koeffizienten nicht von $x$ ab, so handelt es sich um \textbf{konstante Koeffizienten}.
+Man spricht von einer \textbf{homogene} Dgl., wenn $f(x)$=0 ist. Gilt $f(x) \neq 0$, dann handelt es sich um eine \textbf{inhomogene} Differentialgleichung.\\
+
+\noindent
+Eine Differentialgleichung zusammen mit einer Anfangsbedingung hei\ss t \textbf{Anfangswertproblem} (AWP) und hat z.B. die Form
+$$
+y'(x)=f(x,y(x)), \,  y(x_0) = y_0,
+$$
+wobei $x_0$ und $y_0$ gegebene Werte sind.\\
+
+\noindent
+Beispiele f\"ur \textbf{nichtlineare} Differentialgleichungen sind:
+\begin{align*}
+y' &= y^2, \\
+y'' +y \, y' &= 0,\\
+y' &= \sin(y).
+\end{align*}
+
+\subsection*{Explizite Differentialgleichung 1. Ordnung}
+Eine explizite Dgl. 1. Ordnung besitzt die Form
+$$
+\dfrac{\mathrm{d}y}{\mathrm{d}x}:= y' = f(x,y),
+$$
+wobei $f$ im Allgemeinen eine nichtlineare Funktion ist. \\
+
+\noindent
+\textbf{Typ A: Differentialgleichungen mit getrennten Ver\"anderlichen}\\
+Liegt die Differentialgleichung in der Form
+$$
+y' =f(x)\cdot g(y)
+$$
+vor, wobei $f$ und $g$ stetige Funktionen sind, so kann das L\"osungeverfahren der \textbf{Trennung der Ver\"anderlichen} (TdV) angewendet werden. Die L\"osung ist dann gegeben durch
+$$
+\int \dfrac{\mathrm{d}y}{g(y)} = \int f(x) \, \mathrm{d}x +C.
+$$
+\textbf{Beispiel:} 
+\begin{align*}
+y'-x^2y &= 0 \\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= x^2y \\
+\int \frac{1}{y} \, \mathrm{d}y &= \int x^2 \, \mathrm{d}x \\
+\ln(|y|) &= \frac{1}{3} x^3 +C \\
+y        &= e^{\frac{1}{3}x^3+C} = e^{\frac{1}{3}x^3} \, C
+\end{align*}
+
+\noindent
+\textbf{Typ B: Homogene Differentialgleichung}\\
+Ist eine Differentialgleichung der Form
+$$
+y' =g \left( \dfrac{y}{x} \right), \, x \neq 0 
+$$
+gegeben, so kann die Dgl. mit der Substitution $u(x) = y(x)/x$ in eine Differentialgleichung mit getrennten Variablen f\"ur $u(x)$ transformiert werden.\\
+\newpage
+\noindent
+\textbf{Beispiel:} 
+$$
+y' = \left( \frac{y}{x} \right)^2 +\frac{y}{x} \\
+$$
+Mit $u(x) = y(x)/x$ ergibt sich:
+\begin{align*}
+y &= u(x) \, x \\
+y'   &= u' \, x + u 
+\end{align*}
+Einsetzen in die Dgl. ergibt:
+\begin{align*}
+u' x + u &= u^2 +u \\
+u' x &= u^2 \\
+\frac{\mathrm{d}u}{\mathrm{d}x} &= \frac{u^2}{x} \\
+\int \frac{1}{u^2}\, \mathrm{d}u &= \int \frac{1}{x} \, \mathrm{d}x \\
+-\frac{1}{u} &= \ln(|x|)+C \\
+u &= - \frac{1}{\ln(|x| +C)} \\
+y &= - \frac{x}{\ln(|x| +C)}
+\end{align*}
+
+
+
+\noindent
+\textbf{Typ C: $y' = f(ax+by+c)$}\\
+Ist die Differentialgleichung in der Form 
+$$
+y' = f(ax+by+c), \, \text{mit} \, a,b,c \in \mathbb{R}, \, b \neq 0
+$$
+gegeben, so kann die Dgl. mit dem Ansatz $u(x):= ax+by+c$ in eine Dgl. mit getrennten Variablen
+$$
+u' = a +b f(u)
+$$
+transformiert werden. Diese Dgl. kann mit dem Verfahren der Trennung der Ver\"anderlichen gel\"ost werden.\\
+
+\noindent
+\textbf{Typ D: Lineare Differentialgleichung 1. Ordnung}\\
+Handelt es sich um eine lineare Differentialgleichung 1. Ordnung
+$$
+L_1 y:= y' +p(x)y = q(x),
+$$
+so besteht die allgemeine L\"osung der Dgl. aus der L\"osung $y_{\text{h}}(x)$ der homogenen Differentialgleichung
+$$
+L_1 y := y' +p(x)y = 0
+$$
+und einer partikul\"aren L\"osung $y_{\text{p}}$ der inhomogenen Dgl.,
+sodass
+$$
+\mathcal{L}(\text{Dgl.}) = y_{\text{p}}(x) + y_{\text{h}}(x)
+$$
+gilt. Die partikul\"are L\"osung kann mit dem Verfahren der Variation der Konstanten bestimmt werden.\\
+
+\noindent
+\textbf{Beispiel:} \\
+Gegeben sei die Differentialgleichung
+$$
+y'-3y=6.
+$$
+Zun\"achst wird die hom. Dgl. $y'-3y=0$ mit Trennung der Variablen gel\"ost:
+\begin{align*}
+\frac{\mathrm{d}y}{\mathrm{d}x} &= 3x \\
+\int \frac{1}{y} \, \mathrm{d}y &= \int 3 \, \mathrm{d}x \\
+\ln(|y|) &= 3x+C \\
+y &= e^{3x} \, C.
+\end{align*}
+Damit lautet die L\"osung der hom. Dgl. $y_{\text{h}}(x)= e^{3x} \, C$.
+F\"ur die L\"osung der inhomogenen Dgl. wird das Verfahren der Variation der Konstanten angewendet. Damit lautet der Ansatz f\"ur die partikul\"are L\"osung:
+\begin{align*}
+y_{\text{p}} &= C(x) e^{3x} \\
+y'_{\text{p}} &= C' e^{3x} + 3 C e^{3x}.
+\end{align*}
+Einsetzen in die Dgl. ergibt:
+\begin{align*}
+C' e^{3x} + 3 C e^{3x} - 3Ce^{3x}  &= 6 \\
+C' e^{3x} &= 6 \\
+\Rightarrow C' &= 6 e^{-3x}. 
+\end{align*}
+Eine Integration liefert:
+\begin{align*}
+\frac{\mathrm{d}C}{\mathrm{d}x} &= 6 e^{-3x} \\
+\int  \, \mathrm{d}C &= \int 6 e^{-3x} \, \mathrm{d}x \\
+C &= -2 e^{-3x} + C'
+\end{align*}
+Damit gilt:
+$$
+y_{\text{p}}(x) = C(x) e^{3x} = -2 + C' e^{3x}.
+$$
+Damit gilt f\"ur die allgemeine L\"osung der inhomogenen Differentialgleichung:
+\begin{align*}
+y(x) &=  y_{\text{h}}(x) + y_{\text{p}}(x)\\
+     &= C e^{3x} -2.
+\end{align*}
+
+\noindent
+\textbf{Typ E: Bernoulli-Differentialgleichung}\\
+Ist eine Differentialgleichung der Form
+$$
+y' + p(x)y = q(x) y^r
+$$
+gegeben, so spricht man von der Bernoulli-Differentialgleichung.
+Diese kann mit $z(x):= y^{1-r}(x)$ in eine lineare Dgl. 1. Ordnung 
+$$
+z' +(1-r)p(x)z = (1-r)q(x)
+$$
+transformiert werden.  \\
+
+
+\noindent
+\textbf{Typ F: Riccati-Differentialgleichung}\\
+Abgesehen von dem Spezialfall $r=0$ (Bernoulli-Dgl.) hat die Riccati-Dgl. im Allgemeinen nicht geschlossen l\"osbar. In einigen F\"allen kann eine partikul\"are L\"osung geraten werden, sodass eine allgemeine L\"osung angegeben werden kann. \\
+
+
+\newpage
+\subsection*{Lineare Differentialgleichung h\"oherer Ordnung}
+Eine lineare Differentialgleichung besitzt die Form
+$$
+L_n y :=a_n(x)\, y^{(n)} + a_{n-1}(x)\, y^{(n-1)} + \dots + a_1(x)\, y' + a_0(x)\, y = f(x),
+$$
+wobei $L_n$ ein linearer gew\"ohnlicher Differentialoperator $n$-ter Ordnung ist.  \\
+
+
+\subsubsection*{Homogene lineare Differentialgleichung}
+Ist $f(x) = 0$, so handelt es sich um eine homogene Differentialgleichung.
+Die allgemeine L\"osung der homogenen Dgl. lautet dann
+$$
+y_{\text{h}}(x) = C_1  y_1(x) + C_2 y_2(x) + ... + C_n y_n(x).
+$$
+F\"ur eine homogene Dgl. mit konstanten Koeffizienten wird als der Exponentialansatz $y(x) = e^{\lambda x }$ gew\"ahlt. Der gesuchte Exponent wird ermittelt, indem die Nullstellen $\lambda_i$ des charakteristischen Polynoms $P(\lambda)$ bestimmt werden. 
+Liegen nur einfach Nullstellen vor, so ist die allgemeine L\"osung
+$$
+ y_{\text{h}}(x) = C_1  e^{\lambda_1 x} + C_2 e^{\lambda_2 x}  + ... + C_n e^{\lambda_n x},
+$$
+wobei $y_1(x)$, $y_2(x)$,..., $y_n(x)$ ein sogenanntes \textbf{Fundamentalsystem} bilden. \\
+Liegen mehrfache Nullstellen $\lambda_i$ mit Vielfachheiten $k_i$ vor, so sieht das charakteristische Polynom wie folgt aus:
+$$
+P(\lambda) = a_n (\lambda-\lambda_1)^{k_1}(\lambda-\lambda_2)^{k_2}...(\lambda-\lambda_n)^{k_n}.
+$$
+Dann bilden die Funktionen
+\begin{align*}
+& x^{k_1-1}e^{\lambda_1x}, ..., xe^{\lambda_1x}, e^{\lambda_1x} \\
+& x^{k_2-1}e^{\lambda_2x}, ..., xe^{\lambda_2x}, e^{\lambda_2x} \\
+& x^{k_n-1}e^{\lambda_nx}, ..., xe^{\lambda_nx}, e^{\lambda_nx}
+\end{align*}
+ein Fundamentalsystem.\\
+
+
+\noindent
+\textbf{Beispiel f\"ur einfache Nullstellen von $P(\lambda)$:}\\
+Gegeben ist die homogene lineare Differentialgleichung 3. Ordnung
+$$
+y''' -2y''-5y'+6y =0.
+$$
+Das charakteristische Polynom ergibt sich durch Einsetzen des Exponentialansatz $y(x) = e^{\lambda x }$ in die Dgl. und lautet:
+$$
+P(\lambda) = \lambda^3 -2 \lambda^2 -5 \lambda +6 =0.
+$$
+Die Nullstellen von $P(\lambda)$ sind $\lambda_1 = 1$, $\lambda_2=-2$ und $\lambda_3 = 3$.
+Damit ergeben sich $n$ linear unabh\"angige L\"osungen
+$$
+y_1(x) = e^x, \, y_2(x) = e^{-2x}, \, y_3(x)= e^{3x}.
+$$
+Damit lautet die allgemeine L\"osung der homogen Dgl.
+$$
+y(x) = C_1 e^{x} + C_2 e^{-2x} + C_3 e^{3x}.
+$$
+
+\noindent
+\textbf{Beispiel f\"ur Nullstellen von $P(\lambda)$ mit Vielfachheit $\neq$ 1:}\\
+Gegeben sei die Differentialgleichung
+$$
+y'''+3y''+3y'+y =0.
+$$
+Das charakteristische Polynom ist
+$$
+P(\lambda) =  \lambda^3 +3\lambda^2+3\lambda+1 = (\lambda+1)^3.
+$$
+Damit liegt eine dreifache Nullstelle $\lambda_{1,2,3} = -1$ vor. Es ergeben sich die unabh\"angigen L\"osungen
+$$
+y_1(x) = e^{-x}, \, y_2(x) = xe^{-x}, \, y_3(x)= x^2e^{-x}.
+$$
+Damit lautet die allgemeine L\"osung der homogen Dgl.
+$$
+y(x) = C_1 e^{-x} + C_2 xe^{-x} + C_3 x^2e^{-x}.
+$$
+
+\subsubsection*{Inhomogene lineare Differentialgleichung}
+Um die inhomogenen linearen Differentialgleichung $L_n y = f(x)$ zu l\"osen, wird zun\"achst die homogene L\"osung bestimmt. Im Anschluss wird die inhomogene Dgl. betrachtet und ein geeigneter Ansatz f\"ur die partikul\"are L\"osung bestimmt, welcher der St\"orfunktion $f(x)$ \"ahnlich ist. Nach Einsetzen des Ansatzes in die Dgl. und Bestimmung der der Koeffizienten, ergibt sich die allgemeine L\"osung:
+$$
+y(x)   =y_{\text{p}}(x)+ C_1  e^{\lambda_1 x} + C_2 e^{\lambda_2 x}  + ... + C_n e^{\lambda_n x} .
+$$
+\newpage
+\noindent
+\textbf{Beispiel:}\\
+Gegeben sei die Differentialgleichung
+$$
+y'''+y'' = x.
+$$
+Zun\"achst wird die hom. Dgl. $y'''+y'' =0$ gel\"ost.
+Das charakteristische Polynom $P(\lambda) = \lambda^3 +\lambda^2$ besitzt die Nullstellen $\lambda_{1,2} = 0$ und $\lambda_3=-1$. Es liegt also eine doppelte Nullstelle vor, sodass die allgemeine L\"osung der hom. Dgl.
+$$
+y_{\text{h}}(x) = C_1 e^{0x} + C_2 x e^{0x}+ C_3 e^{-x} = C_1 + C_2 x + C_3 e^{-x}
+$$
+lautet.
+Als Ansatz f\"ur die partikul\"are L\"osung wird ein Polynom verwendet:
+$$
+y_{\text{p}}(x) = A_1 + A_2 x.
+$$
+Hier liegt jedoch eine zweifache Resonanz vor, sodass der Ansatz modifiziert wird:
+\begin{align*}
+y_{\text{p}}(x) &= A_1 x^2 + A_2 x^3,\\
+y'_{\text{p}}(x) &= 2 A_1x +3 A_2x^2, \\
+y''_{\text{p}}(x) &= 2 A_1 +6 A_2 x, \\
+y'''_{\text{p}}(x) &= 6 A_2.
+\end{align*}
+Einsetzen in die Dgl. ergibt:
+$$
+6 A_2 +2 A_1 +6 A_2 x = x.
+$$
+Durchf\"uhren eines Koeffizientenvergleiches:
+\begin{align*}
+6 A_2 &= 1 \Rightarrow A_2 = \frac{1}{6}\\
+6A_2+2A_1 &= 0 \Rightarrow A_1 = - \frac{1}{2}
+\end{align*}
+Damit lautet die partikul\"are L\"osung
+$$
+y_{\text{p}}(x) = - \frac{1}{2} x^2 +  \frac{1}{6} x^3.
+$$
+Somit ist die allgemeine L\"osung der inhomogenen Differentialgleichung
+$$
+y(x) = C_1 + C_2 x + C_3 e^{-x}- \frac{1}{2} x^2 +  \frac{1}{6} x^3.
+$$
